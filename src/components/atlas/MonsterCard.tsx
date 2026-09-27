@@ -1,11 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Monster } from '../../services/ai/monsterService';
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
-import { GameIcon, GameIconName } from '../../game_icons';
+import { GameIcon } from '../../game_icons';
 import { DiceText as DiceTextComponent } from '../dice/DiceText';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { resolveMonsterText } from '../../lib/monsterFeatureResolver';
@@ -16,6 +14,13 @@ import { EquipmentCard } from './EquipmentCard';
 import { useUIStore } from '../../store/useUIStore';
 import { normalizeImageUrl, playClickSound } from '../../services/storageService';
 import { inferBackgroundFromMonster, getBackgroundFilename } from '../../lib/backgroundConfigs';
+import {
+  AtlasSheetFrame,
+  AtlasSheetHeader,
+  AtlasSheetMedia,
+  AtlasSheetBody,
+  AtlasSheetFooter
+} from './sheet/AtlasSheetFrame';
 
 interface MonsterCardProps {
   monster: Partial<Monster>;
@@ -149,15 +154,6 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
   const currentRarity = monster.rarity || 'Common';
   const themeColor = monster.card_color || RARITY_THEME_COLORS[currentRarity] || '#8B0000';
 
-  const rarityColors = {
-    Common: 'text-parchment-600',
-    Uncommon: 'text-green-700',
-    Rare: 'text-blue-700',
-    'Very Rare': 'text-purple-700',
-    Legendary: 'text-dragon-gold shadow-[0_0_25px_rgba(212,175,55,0.4)]',
-    Artifact: 'text-red-700 shadow-[0_0_30px_rgba(220,38,38,0.5)] animate-pulse-slow',
-  };
-
   const getBackgroundUrl = (type?: string) => {
     const repo = process.env.GITHUB_REPO || "japiohopman/artificer";
     const branch = process.env.GITHUB_BRANCH || "main";
@@ -189,19 +185,10 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
   };
 
   return (
-    <div 
-      className={cn(
-        "w-[380px] h-[600px] border-[14px] rounded-[24px] p-5 flex flex-col gap-3 relative overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4)] group text-black",
-        rarityColors[currentRarity as keyof typeof rarityColors],
-        className
-      )}
-      style={{ 
-        borderColor: themeColor,
-        backgroundImage: `url('/assets/ui/parchment.jpg')`,
-        backgroundColor: '#f5ebd0',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
+    <AtlasSheetFrame
+      borderColor={themeColor}
+      badgeText={currentRarity}
+      className={cn("w-[380px] sm:w-[380px] max-w-[380px] h-[600px] sm:h-[600px] min-h-[600px] max-h-[600px] hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-all duration-500", className)}
     >
       {/* Item Action Overlay */}
       {inspectingItem && (
@@ -266,24 +253,6 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
         </button>
       )}
 
-      {/* Spells Button for Magic Users */}
-
-      {/* Texture Overlay */}
-      <div className="absolute inset-0 bg-paper-texture opacity-20 mix-blend-multiply pointer-events-none" />
-      
-      {/* Decorative Corners */}
-      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-dragon-gold/50 rounded-tl-lg" />
-      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-dragon-gold/50 rounded-tr-lg" />
-      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-dragon-gold/50 rounded-bl-lg" />
-      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-dragon-gold/50 rounded-br-lg" />
-      
-      {/* Rarity at the bottom center */}
-      <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-        <div className="w-8 h-[1px] bg-dragon-gold/30" />
-        <span className="text-[8px] font-bold text-dragon-red uppercase tracking-[0.2em]">{currentRarity}</span>
-        <div className="w-8 h-[1px] bg-dragon-gold/30" />
-      </div>
-
       {/* CR Badge - Bottom Right (Overflowing) */}
       <div className="absolute -bottom-4 -right-4 z-40 flex items-center justify-center w-16 h-16 group/cr hover:scale-110 transition-transform">
         <div 
@@ -299,30 +268,28 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       </div>
 
       {/* Header */}
-      <div className="flex flex-col relative z-10 pb-1">
-        <h3 
-          className="font-bodoni-sc text-3xl font-black tracking-tighter leading-none text-center text-white transition-colors"
-          style={{ 
-            textShadow: `-1px -1px 0 #8B0000, 1px -1px 0 #8B0000, -1px 1px 0 #8B0000, 1px 1px 0 #8B0000, 0 2px 4px rgba(0,0,0,0.3)` 
-          }}
-        >
-          {formatName(monster.name || 'Unknown Entity')}
-        </h3>
-        
-        {/* Yellow stretching HR */}
-        <div className="h-[2px] w-[calc(100%+40px)] -ml-5 my-2 border-y border-dragon-gold shadow-[0_1px_4px_rgba(212,175,55,0.4)]" style={{ backgroundColor: '#D4AF37' }} />
-
-        <div className="w-full flex justify-between items-center px-1">
-          <div className="flex items-center gap-2">
+      <AtlasSheetHeader
+        title={
+          <span
+            className="font-bodoni-sc text-3xl font-black tracking-tighter leading-none text-center text-white block"
+            style={{
+              textShadow: `-1px -1px 0 #8B0000, 1px -1px 0 #8B0000, -1px 1px 0 #8B0000, 1px 1px 0 #8B0000, 0 2px 4px rgba(0,0,0,0.3)`
+            }}
+          >
+            {formatName(monster.name || 'Unknown Entity')}
+          </span>
+        }
+        subtitle={
+          <div className="w-full flex justify-between items-center px-1">
             <span className="text-[12px] font-black text-dragon-red uppercase tracking-widest">
               {monster.size} {monster.type}
             </span>
+            <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-widest opacity-80">
+              {monster.alignment}
+            </span>
           </div>
-          <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-widest opacity-80">
-            {monster.alignment}
-          </span>
-        </div>
-      </div>
+        }
+      />
 
       {/* Image Area Wrapper (to allow badges to overflow) */}
       <motion.div 
@@ -386,12 +353,9 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
           </div>
         </div>
 
-        <div 
-          className="aspect-[3/2] w-full bg-parchment-200 border-4 rounded-lg overflow-hidden relative shadow-inner"
-          style={{ borderColor: themeColor }}
-        >
+        <AtlasSheetMedia className="aspect-[3/2] h-auto p-0" style={{ borderColor: themeColor }}>
           {/* Background Layer */}
-          <div className="absolute inset-0 bg-parchment-300" /> {/* Base color if image fails */}
+          <div className="absolute inset-0 bg-parchment-300" />
           <img 
             key={monster.background_type}
             src={getBackgroundUrl(monster.background_type)}
@@ -403,7 +367,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
               (e.target as HTMLImageElement).src = DEFAULT_BACKGROUND;
             }}
           />
-          <div className="absolute inset-0 bg-black/20 z-[5]" /> {/* Darken background slightly */}
+          <div className="absolute inset-0 bg-black/20 z-[5]" />
           
           {hasAnyImage ? (
             <div className="absolute inset-0 flex items-center justify-center p-2 z-10">
@@ -419,10 +383,10 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
               Manifesting ethereal form...
             </div>
           )}
-        </div>
+        </AtlasSheetMedia>
       </motion.div>
 
-      {/* Ability Scores - Horizontal, no boxes, Rajdhani labels */}
+      {/* Ability Scores - Horizontal */}
       <motion.div 
         animate={{ 
           height: activeTab === 'actions' ? 0 : 'auto',
@@ -441,13 +405,6 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
         <StatBox label="-WIS-" value={monster.stats?.wis ?? monster.wisdom} />
         <StatBox label="-CHA-" value={monster.stats?.cha ?? monster.charisma} />
       </motion.div>
-
-      <div 
-        className="h-[1px] w-full my-0.5" 
-        style={{ 
-          background: 'linear-gradient(90deg, rgba(139, 0, 0, 0) 0%, rgba(139, 0, 0, 1) 50%, rgba(139, 0, 0, 0) 100%)' 
-        }} 
-      />
 
       {/* Tab Navigation */}
       <div className="flex justify-around border-b border-dragon-gold/20 relative z-10">
@@ -484,185 +441,182 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       </div>
 
       {/* Tab Content */}
-      <div className="flex-1 overflow-hidden relative z-10 bg-parchment-50/30 rounded p-2 border border-dragon-gold/10">
-        <div className="h-full overflow-y-auto custom-scrollbar pr-1">
-          {activeTab === 'stats' && (
-            <div className="space-y-4 animate-in fade-in duration-300 font-playfair">
-              <div className="text-[14px] space-y-3 text-black">
-                <div className="flex items-start gap-2">
-                  <div className="mt-0.5 shrink-0">
-                    <GameIcon name="speed" size={16} color="#8B0000" />
-                  </div>
-                  <p><span className="font-bold uppercase text-dragon-red font-header tracking-wider">Speed:</span> {formatSpeed(monster.speed)}</p>
+      <AtlasSheetBody className="bg-parchment-50/30 rounded p-2 border border-dragon-gold/10">
+        {activeTab === 'stats' && (
+          <div className="space-y-4 animate-in fade-in duration-300 font-playfair">
+            <div className="text-[14px] space-y-3 text-black">
+              <div className="flex items-start gap-2">
+                <div className="mt-0.5 shrink-0">
+                  <GameIcon name="speed" size={16} color="#8B0000" />
                 </div>
-                <div className="flex items-start gap-2">
-                  <div className="mt-0.5 shrink-0">
-                    <GameIcon name="senses" size={16} color="#8B0000" />
-                  </div>
-                  <p><span className="font-bold uppercase text-dragon-red font-header tracking-wider">Senses:</span> <SafeValue value={monster.senses} fallback="None" /></p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <div className="mt-0.5 shrink-0">
-                    <GameIcon name="languages" size={16} color="#8B0000" />
-                  </div>
-                  <p><span className="font-bold uppercase text-dragon-red font-header tracking-wider">Languages:</span> <SafeValue value={monster.languages} fallback="None" /></p>
-                </div>
+                <p><span className="font-bold uppercase text-dragon-red font-header tracking-wider">Speed:</span> {formatSpeed(monster.speed)}</p>
               </div>
-
-              {/* Proficiencies & Skills Section */}
-              {(monster.proficiencies && monster.proficiencies.length > 0) && (
-                <div className="pt-3 border-t border-dragon-gold/10 space-y-2">
-                  <div className="flex items-center gap-1.5 mb-1 text-dragon-red">
-                    <GameIcon name="lore" size={14} color="#8B0000" />
-                    <h4 className="text-[12px] font-bold uppercase tracking-widest font-header">Proficiencies</h4>
-                  </div>
-                  <div className="text-[12px] grid grid-cols-2 gap-x-4 gap-y-1 text-black">
-                    {monster.proficiencies.map((p: any, i: number) => {
-                      const name = p.skill?.name || p.proficiency?.name || (typeof p === 'string' ? p : 'Skill');
-                      const bonus = p.value !== undefined ? (p.value >= 0 ? `+${p.value}` : p.value) : '';
-                      return (
-                        <div key={i} className="flex justify-between border-b border-dragon-gold/5 pb-0.5">
-                          <span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">{name}</span>
-                          <span className="font-mono text-[11px]">{bonus}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
+              <div className="flex items-start gap-2">
+                <div className="mt-0.5 shrink-0">
+                  <GameIcon name="senses" size={16} color="#8B0000" />
                 </div>
-              )}
-
-              {/* Defenses Section */}
-              {(monster.damage_vulnerabilities?.length || monster.damage_resistances?.length || monster.damage_immunities?.length || monster.condition_immunities?.length) && (
-                <div className="pt-3 border-t border-dragon-gold/10 space-y-2">
-                  <div className="flex items-center gap-1.5 mb-1 text-dragon-red">
-                    <GameIcon name="shield" size={14} color="#8B0000" />
-                    <h4 className="text-[12px] font-bold uppercase tracking-widest font-header">Defenses</h4>
-                  </div>
-                  <div className="text-[12px] space-y-1.5 text-black">
-                    {monster.damage_vulnerabilities && monster.damage_vulnerabilities.length > 0 && (
-                      <p><span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Vulnerabilities:</span> {monster.damage_vulnerabilities.map((v: any) => typeof v === 'string' ? v : (v.name || JSON.stringify(v))).join(', ')}</p>
-                    )}
-                    {monster.damage_resistances && monster.damage_resistances.length > 0 && (
-                      <p><span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Resistances:</span> {monster.damage_resistances.map((r: any) => typeof r === 'string' ? r : (r.name || JSON.stringify(r))).join(', ')}</p>
-                    )}
-                    {monster.damage_immunities && monster.damage_immunities.length > 0 && (
-                      <p><span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Damage Immunities:</span> {monster.damage_immunities.map((di: any) => typeof di === 'string' ? di : (di.name || JSON.stringify(di))).join(', ')}</p>
-                    )}
-                    {monster.condition_immunities && monster.condition_immunities.length > 0 && (
-                      <p>
-                        <span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Condition Immunities:</span> {
-                          monster.condition_immunities.map((ci: any) => typeof ci === 'string' ? ci : (ci.name || JSON.stringify(ci))).join(', ')
-                        }
-                      </p>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          {activeTab === 'loot' && (
-            <div className="space-y-4 animate-in fade-in duration-300 font-playfair">
-              <div className="flex items-center gap-2 mb-2 text-dragon-gold">
-                <GameIcon name="package" size={18} color="#D4AF37" />
-                <h4 className="text-[14px] font-bold uppercase tracking-widest font-header">Loot & Materials</h4>
+                <p><span className="font-bold uppercase text-dragon-red font-header tracking-wider">Senses:</span> <SafeValue value={monster.senses} fallback="None" /></p>
               </div>
-              
-              {monster.item_drops && monster.item_drops.length > 0 ? (
-                <div className="grid grid-cols-1 gap-2">
-                  {monster.item_drops.map((drop, i) => (
-                    <button 
-                      key={i} 
-                      onClick={() => {
-                        if (isBookLike(drop)) {
-                          useUIStore.getState().setFocusedItem(drop);
-                        } else {
-                          setInspectingItem(drop);
-                        }
-                      }}
-                      className="w-full flex justify-between items-center text-[12px] bg-parchment-200/50 px-2.5 py-2 rounded border border-dragon-gold/10 hover:bg-dragon-red/5 hover:border-dragon-red/30 transition-all text-left"
-                    >
-                      <div className="flex items-center gap-2.5 overflow-hidden">
-                        {drop.type === 'currency' ? <GameIcon name="coins" size={14} color="#D97706" className="shrink-0" /> : 
-                          drop.type === 'equipment' ? <GameIcon name="sword" size={14} color="#8B0000" className="shrink-0" /> : 
-                          drop.type === 'material' ? <GameIcon name="magic_effect" size={14} color="#D4AF37" className="shrink-0" /> :
-                          <GameIcon name="package" size={14} color="#8B4513" className="shrink-0 opacity-40" />}
-                        <span className="font-medium text-parchment-800 truncate"><SafeValue value={drop.name} /></span>
-                      </div>
-                      <div className="flex gap-4 items-center shrink-0">
-                        <span className="text-[10px] italic text-parchment-500"><SafeValue value={drop.rarity} /></span>
-                        <span className="font-bold text-dragon-red"><SafeValue value={drop.quantity} /></span>
-                      </div>
-                    </button>
-                  ))}
+              <div className="flex items-start gap-2">
+                <div className="mt-0.5 shrink-0">
+                  <GameIcon name="languages" size={16} color="#8B0000" />
                 </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center py-8 text-parchment-400 italic">
-                  <GameIcon name="package" size={32} color="#8B4513" className="opacity-20 mb-2" />
-                  <p className="text-[12px]">No significant materials salvaged.</p>
-                </div>
-              )}
-
-              {/* Mention possible gold drop based on CR */}
-              <div className="mt-4 p-3 bg-dragon-gold/5 border border-dragon-gold/20 rounded text-[12px] text-parchment-700 italic">
-                <p>Expected treasure value: <span className="font-bold text-yellow-600">
-                  {Math.round(Number(monster.challenge_rating || 0) * 50 + Math.random() * 100)} GP
-                </span></p>
+                <p><span className="font-bold uppercase text-dragon-red font-header tracking-wider">Languages:</span> <SafeValue value={monster.languages} fallback="None" /></p>
               </div>
             </div>
-          )}
 
-          {activeTab === 'actions' && (
-            <div className="space-y-5 animate-in fade-in duration-300 text-black font-playfair">
-              {monster.special_abilities && monster.special_abilities.length > 0 && (
-                <div className="space-y-2.5">
-                  <h4 className="text-[14px] font-bold uppercase text-dragon-red border-b border-dragon-red/20 flex items-center gap-1.5 font-header tracking-wider">
-                    <GameIcon name="magic_effect" size={14} color="#8B0000" /> Traits
-                  </h4>
-                  {monster.special_abilities.map((sa, i) => (
-                    <div key={i} className="text-[15px] leading-snug">
-                      <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={sa.name} />.</span> <DiceText text={resolveMonsterText(monster, sa, sa.desc)} />
+            {/* Proficiencies & Skills Section */}
+            {(monster.proficiencies && monster.proficiencies.length > 0) && (
+              <div className="pt-3 border-t border-dragon-gold/10 space-y-2">
+                <div className="flex items-center gap-1.5 mb-1 text-dragon-red">
+                  <GameIcon name="lore" size={14} color="#8B0000" />
+                  <h4 className="text-[12px] font-bold uppercase tracking-widest font-header">Proficiencies</h4>
+                </div>
+                <div className="text-[12px] grid grid-cols-2 gap-x-4 gap-y-1 text-black">
+                  {monster.proficiencies.map((p: any, i: number) => {
+                    const name = p.skill?.name || p.proficiency?.name || (typeof p === 'string' ? p : 'Skill');
+                    const bonus = p.value !== undefined ? (p.value >= 0 ? `+${p.value}` : p.value) : '';
+                    return (
+                      <div key={i} className="flex justify-between border-b border-dragon-gold/5 pb-0.5">
+                        <span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">{name}</span>
+                        <span className="font-mono text-[11px]">{bonus}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Defenses Section */}
+            {(monster.damage_vulnerabilities?.length || monster.damage_resistances?.length || monster.damage_immunities?.length || monster.condition_immunities?.length) && (
+              <div className="pt-3 border-t border-dragon-gold/10 space-y-2">
+                <div className="flex items-center gap-1.5 mb-1 text-dragon-red">
+                  <GameIcon name="shield" size={14} color="#8B0000" />
+                  <h4 className="text-[12px] font-bold uppercase tracking-widest font-header">Defenses</h4>
+                </div>
+                <div className="text-[12px] space-y-1.5 text-black">
+                  {monster.damage_vulnerabilities && monster.damage_vulnerabilities.length > 0 && (
+                    <p><span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Vulnerabilities:</span> {monster.damage_vulnerabilities.map((v: any) => typeof v === 'string' ? v : (v.name || JSON.stringify(v))).join(', ')}</p>
+                  )}
+                  {monster.damage_resistances && monster.damage_resistances.length > 0 && (
+                    <p><span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Resistances:</span> {monster.damage_resistances.map((r: any) => typeof r === 'string' ? r : (r.name || JSON.stringify(r))).join(', ')}</p>
+                  )}
+                  {monster.damage_immunities && monster.damage_immunities.length > 0 && (
+                    <p><span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Damage Immunities:</span> {monster.damage_immunities.map((di: any) => typeof di === 'string' ? di : (di.name || JSON.stringify(di))).join(', ')}</p>
+                  )}
+                  {monster.condition_immunities && monster.condition_immunities.length > 0 && (
+                    <p>
+                      <span className="font-bold uppercase text-dragon-red text-[10px] font-header tracking-wider">Condition Immunities:</span> {
+                        monster.condition_immunities.map((ci: any) => typeof ci === 'string' ? ci : (ci.name || JSON.stringify(ci))).join(', ')
+                      }
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'loot' && (
+          <div className="space-y-4 animate-in fade-in duration-300 font-playfair">
+            <div className="flex items-center gap-2 mb-2 text-dragon-gold">
+              <GameIcon name="package" size={18} color="#D4AF37" />
+              <h4 className="text-[14px] font-bold uppercase tracking-widest font-header">Loot & Materials</h4>
+            </div>
+
+            {monster.item_drops && monster.item_drops.length > 0 ? (
+              <div className="grid grid-cols-1 gap-2">
+                {monster.item_drops.map((drop, i) => (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      if (isBookLike(drop)) {
+                        useUIStore.getState().setFocusedItem(drop);
+                      } else {
+                        setInspectingItem(drop);
+                      }
+                    }}
+                    className="w-full flex justify-between items-center text-[12px] bg-parchment-200/50 px-2.5 py-2 rounded border border-dragon-gold/10 hover:bg-dragon-red/5 hover:border-dragon-red/30 transition-all text-left"
+                  >
+                    <div className="flex items-center gap-2.5 overflow-hidden">
+                      {drop.type === 'currency' ? <GameIcon name="coins" size={14} color="#D97706" className="shrink-0" /> :
+                        drop.type === 'equipment' ? <GameIcon name="sword" size={14} color="#8B0000" className="shrink-0" /> :
+                        drop.type === 'material' ? <GameIcon name="magic_effect" size={14} color="#D4AF37" className="shrink-0" /> :
+                        <GameIcon name="package" size={14} color="#8B4513" className="shrink-0 opacity-40" />}
+                      <span className="font-medium text-parchment-800 truncate"><SafeValue value={drop.name} /></span>
                     </div>
-                  ))}
-                </div>
-              )}
+                    <div className="flex gap-4 items-center shrink-0">
+                      <span className="text-[10px] italic text-parchment-500"><SafeValue value={drop.rarity} /></span>
+                      <span className="font-bold text-dragon-red"><SafeValue value={drop.quantity} /></span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center py-8 text-parchment-400 italic">
+                <GameIcon name="package" size={32} color="#8B4513" className="opacity-20 mb-2" />
+                <p className="text-[12px]">No significant materials salvaged.</p>
+              </div>
+            )}
+
+            {/* Mention possible gold drop based on CR */}
+            <div className="mt-4 p-3 bg-dragon-gold/5 border border-dragon-gold/20 rounded text-[12px] text-parchment-700 italic">
+              <p>Expected treasure value: <span className="font-bold text-yellow-600">
+                {Math.round(Number(monster.challenge_rating || 0) * 50 + Math.random() * 100)} GP
+              </span></p>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'actions' && (
+          <div className="space-y-5 animate-in fade-in duration-300 text-black font-playfair">
+            {monster.special_abilities && monster.special_abilities.length > 0 && (
               <div className="space-y-2.5">
                 <h4 className="text-[14px] font-bold uppercase text-dragon-red border-b border-dragon-red/20 flex items-center gap-1.5 font-header tracking-wider">
-                  <GameIcon name="sword" size={14} color="#8B0000" /> Actions
+                  <GameIcon name="magic_effect" size={14} color="#8B0000" /> Traits
                 </h4>
-                {monster.actions?.map((a, i) => {
-                  const iconName = a.name?.toLowerCase().includes('multiattack') ? 'multiattack' :
-                                  a.name?.toLowerCase().includes('claw') ? 'claw' :
-                                  a.name?.toLowerCase().includes('bite') ? 'bite' :
-                                  a.name?.toLowerCase().includes('slam') ? 'slam' :
-                                  a.name?.toLowerCase().includes('whirlwind') ? 'whirlwind' :
-                                  a.name?.toLowerCase().includes('tail') ? 'tail' : null;
-                  
-                  return (
-                    <div key={i} className="text-[15px] leading-snug">
-                      <div className="flex items-start gap-2">
-                        {iconName && (
-                          <div className="mt-1 shrink-0">
-                            <GameIcon name={iconName as any} size={14} color="#8B0000" />
-                          </div>
-                        )}
-                        <div>
-                          <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={a.name} />.</span> <DiceText text={resolveMonsterText(monster, a, a.desc)} />
+                {monster.special_abilities.map((sa, i) => (
+                  <div key={i} className="text-[15px] leading-snug">
+                    <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={sa.name} />.</span> <DiceText text={resolveMonsterText(monster, sa, sa.desc)} />
+                  </div>
+                ))}
+              </div>
+            )}
+            <div className="space-y-2.5">
+              <h4 className="text-[14px] font-bold uppercase text-dragon-red border-b border-dragon-red/20 flex items-center gap-1.5 font-header tracking-wider">
+                <GameIcon name="sword" size={14} color="#8B0000" /> Actions
+              </h4>
+              {monster.actions?.map((a, i) => {
+                const iconName = a.name?.toLowerCase().includes('multiattack') ? 'multiattack' :
+                                a.name?.toLowerCase().includes('claw') ? 'claw' :
+                                a.name?.toLowerCase().includes('bite') ? 'bite' :
+                                a.name?.toLowerCase().includes('slam') ? 'slam' :
+                                a.name?.toLowerCase().includes('whirlwind') ? 'whirlwind' :
+                                a.name?.toLowerCase().includes('tail') ? 'tail' : null;
+
+                return (
+                  <div key={i} className="text-[15px] leading-snug">
+                    <div className="flex items-start gap-2">
+                      {iconName && (
+                        <div className="mt-1 shrink-0">
+                          <GameIcon name={iconName as any} size={14} color="#8B0000" />
                         </div>
+                      )}
+                      <div>
+                        <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={a.name} />.</span> <DiceText text={resolveMonsterText(monster, a, a.desc)} />
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </div>
-          )}
-        </div>
-      </div>
+          </div>
+        )}
+      </AtlasSheetBody>
 
-      {/* Footer Decoration */}
-      <div className="mt-auto flex justify-center relative z-10">
+      <AtlasSheetFooter className="mt-auto justify-center">
         <div className="w-16 h-1 bg-dragon-gold/30 rounded-full" />
-      </div>
-    </div>
+      </AtlasSheetFooter>
+    </AtlasSheetFrame>
   );
 };

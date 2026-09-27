@@ -5,6 +5,7 @@
 import { soundService } from './soundService';
 import { useGameStore } from '../store/useGameStore';
 import { migrateCharacterV1ToV2 } from '../lib/migrationUtils';
+import { resolveEnemyArtworkUrl } from '../lib/enemyArtworkResolver';
 
 export const REPO = process.env.GITHUB_REPO || "japiohopman/artificer";
 export const BRANCH = process.env.GITHUB_BRANCH || "main";
@@ -1061,15 +1062,9 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
-    const isTokenPath = url && (url.includes('/tokens/') || url.includes('/enemies/tokens/'));
-    if (!isTokenPath) {
-      const filename = ddbIndex + '.webp';
-      if (isLocalhost) {
-        finalUrl = `/assets/atlas/enemies/images/${filename}`;
-      } else {
-        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
-      }
-    }
+    const resolvedEnemyArtwork = resolveEnemyArtworkUrl(url, index, name, isLocalhost, REPO, BRANCH);
+    // Explicitly set finalUrl to resolvedEnemyArtwork (which is empty string for token-only/unmapped inputs)
+    finalUrl = resolvedEnemyArtwork;
   }
 
   // Ensure equipment, materials, and transport image filenames use underscores instead of hyphens
