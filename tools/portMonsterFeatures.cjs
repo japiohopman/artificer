@@ -40,23 +40,14 @@ const INDEX_PATH_14 = path.join(__dirname, '../public/assets/atlas/enemies/monst
 const INDEX_PATH_24 = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/index_24.json');
 const UNIFIED_INDEX_PATH = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/index.json');
 
-// Clean HTML to paragraphs securely, protecting against HTML element injection (CodeQL)
+// Clean HTML to paragraphs securely
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
 
-  // 1. Explicitly remove script tags and their inner content to prevent script execution
-  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-
-  // 2. Explicitly remove any remaining partial or dangling <script tag patterns
-  cleaned = cleaned.replace(/<script/gi, '');
-
-  // 3. Convert paragraph markers to linebreaks
-  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
-
-  // 4. Safely strip all other HTML tag patterns using a secure pattern
-  cleaned = cleaned.replace(/<[^>]+>/g, '');
-
-  // 5. Sanitize HTML entity references to prevent raw markup injection
+  let cleaned = String(html);
+  cleaned = cleaned.replace(/<\/?p\b[^>]*>/gi, '\n')
+                   .replace(/<br\s*\/?>/gi, '\n');
+  cleaned = cleaned.replace(/<[^>]*>/g, '');
   cleaned = cleaned
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
