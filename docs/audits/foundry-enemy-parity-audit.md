@@ -4,6 +4,7 @@
 > **Status:** Completed Audit & Architecture Contract
 > **Owner:** Ruleset & Data Specialist
 > **Target Dataset:** Foundry VTT dnd5e v6.0.x SRD Source
+> **Reproducible Verification Script:** `node tools/auditFoundryParity.cjs`
 
 ---
 
@@ -17,7 +18,7 @@ Artificer's enemy dataset was historically imported flat into `public/assets/atl
 When Foundry v6.0.x introduced the 2024 ruleset under `packs/_source/actors24/`, same-named creatures (such as *Adult Black Dragon*) received distinct stat blocks, distinct 2024 ruleset context (`system.source.rules: '2024'`), and distinct Foundry IDs (`M4eX4Mu5IHCr3TMf` for 2014 vs `mmAdultBlackDrag` for 2024).
 
 This audit establishes:
-- Complete record counts and category trees for both Foundry 2014 and 2024 enemy sources.
+- Complete record counts and category trees for both Foundry 2014 and 2024 enemy sources (reproducible via `node tools/auditFoundryParity.cjs`).
 - Complete classification of all 379 current repository enemy records.
 - Reusable monster feature audit across 2014 (`monsterfeatures`) and 2024 (`monsterfeatures24`) sources.
 - A combat capability matrix comparing Foundry activity semantics against Artificer's runtime combat contract.
@@ -129,19 +130,19 @@ Auditing Foundry's feature packs against Artificer's `public/assets/atlas/enemie
 
 The following matrix compares structured Foundry v6.0.x activity semantics against Artificer's current runtime combat capabilities:
 
-| Foundry Mechanic | Foundry Source Representation | Artificer Target JSON | Currently Supported in Combat? | Missing / Partial Behavior | Required Follow-Up Issue |
+| Foundry Mechanic | Foundry Source Representation | Artificer Target JSON | Currently Supported in Combat? | Missing / Partial Behavior | Required Follow-Up Work |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Activation Economy** | `system.activation.type` (`action`, `bonus`, `reaction`, `legendary`, `lair`) | `activation_type`, `action_cost` | **Yes (Basic)** | Action, Bonus Action, and Reaction tracked per turn. Legendary Action point pools (3/round) not automated. | Follow-Up: Legendary Resource Manager |
+| **Activation Economy** | `system.activation.type` (`action`, `bonus`, `reaction`, `legendary`, `lair`) | `activation_type`, `action_cost` | **Yes (Basic)** | Action, Bonus Action, and Reaction tracked per turn. Legendary Action point pools (3/round) not automated. | Proposed: Legendary Resource Manager |
 | **Melee / Ranged Attack Rolls** | `system.activities.*.type: "attack"`, `attack.type: "melee" \| "ranged"` | `actions[].attack_bonus`, `weapon_range` | **Yes** | `resolveCombatAction()` rolls `1d20 + attack_bonus` against target AC and executes hit/miss. | Fully Supported |
-| **Saving Throw Abilities & DCs** | `system.activities.*.type: "save"`, `save.ability`, `save.dc.formula` | `actions[].dc: { dc_ability, dc_value, success_type }` | **Partial** | Supported for Spells in `spellResolver.ts`. Non-spell monster save abilities (e.g. Dragon Breath) execute flat damage without save prompt. | Follow-Up: Monster Save Action Resolver |
+| **Saving Throw Abilities & DCs** | `system.activities.*.type: "save"`, `save.ability`, `save.dc.formula` | `actions[].dc: { dc_ability, dc_value, success_type }` | **Partial** | Supported for Spells in `spellResolver.ts`. Non-spell monster save abilities (e.g. Dragon Breath) execute flat damage without save prompt. | Proposed: Monster Save Action Resolver |
 | **Damage Dice & Types** | `system.activities.*.damage.parts`: `[{ formula, types }]` | `actions[].damage: [{ damage_dice, damage_type }]` | **Yes** | Rolls damage dice and deducts HP. Supports crits. | Fully Supported |
 | **Range & Reach** | `system.activities.*.range.value`, `units` | `actions[].range` | **Yes** | Evaluates cell distance on `CombatGrid` (5ft = 1 cell). | Fully Supported |
 | **Area of Effect (AOE) Templates** | `target.template`: `{ type: "cone" \| "sphere" \| "cube" \| "line", size }` | `actions[].targetType`, `radius`, `length` | **Yes** | `calculateAOECells()` in `geometry.ts` calculates pure grid cells and highlights targets on `CombatGrid`. | Fully Supported |
-| **Recharge / Usages** | `uses.max`, `recovery: [{ period: "recharge", formula: "5-6" }]` | `actions[].usage: { type: "recharge", recharge_formula: "5-6" }` | **Partial** | Stored in JSON data. Automatic d6 recharge roll at turn start (`executeMonsterTurn()`) is unbuilt. | Follow-Up: Monster Recharge Manager |
-| **Conditions & Status Effects** | `effects`: Active Effects array, `system.traits.ci` | `combatState.activeConditions`, `condition_immunities` | **Partial** | `defending` (+2 AC) and `unconscious` / `dead` supported. Automatic application of `poisoned`, `stunned`, `paralyzed` is unbuilt. | Follow-Up: Condition Engine Integration |
-| **Multiattack Composition** | `system.description.value` text or activity chain | `actions[].multiattack_chain` | **Partial** | `executeMonsterTurn()` chooses one primary action per turn. Sequential multiattack sequence execution is unbuilt. | Follow-Up: Multiattack Chain Execution |
-| **Reactions & Opportunity Attacks** | `system.activation.type: "reaction"` | `reactions[]` | **Partial** | `reactions[]` array preserved in JSON. Automatic trigger detection on grid movement is unbuilt. | Follow-Up: Reaction Trigger Manager |
-| **Legendary Resistance** | `system.details.legendaryResistances` | `special_abilities[]` | **Partial** | Preserved in JSON text. Automatic prompt to pass failed save is unbuilt. | Follow-Up: Legendary Resistance Prompt |
+| **Recharge / Usages** | `uses.max`, `recovery: [{ period: "recharge", formula: "5-6" }]` | `actions[].usage: { type: "recharge", recharge_formula: "5-6" }` | **Partial** | Stored in JSON data. Automatic d6 recharge roll at turn start (`executeMonsterTurn()`) is unbuilt. | Proposed: Monster Recharge Manager |
+| **Conditions & Status Effects** | `effects`: Active Effects array, `system.traits.ci` | `combatState.activeConditions`, `condition_immunities` | **Partial** | `defending` (+2 AC) and `unconscious` / `dead` supported. Automatic application of `poisoned`, `stunned`, `paralyzed` is unbuilt. | Proposed: Condition Engine Integration |
+| **Multiattack Composition** | `system.description.value` text or activity chain | `actions[].multiattack_chain` | **Partial** | `executeMonsterTurn()` chooses one primary action per turn. Sequential multiattack sequence execution is unbuilt. | Proposed: Multiattack Chain Execution |
+| **Reactions & Opportunity Attacks** | `system.activation.type: "reaction"` | `reactions[]` | **Partial** | `reactions[]` array preserved in JSON. Automatic trigger detection on grid movement is unbuilt. | Proposed: Reaction Trigger Manager |
+| **Legendary Resistance** | `system.details.legendaryResistances` | `special_abilities[]` | **Partial** | Preserved in JSON text. Automatic prompt to pass failed save is unbuilt. | Proposed: Legendary Resistance Prompt |
 
 ---
 
@@ -252,13 +253,13 @@ The mass migration (to be executed in a dedicated follow-up issue) shall follow 
 
 ---
 
-## 9. Follow-Up Implementation Issues
+## 9. Proposed Follow-Up Implementation Issues
 
-The following follow-up issues are created to execute the implementation phases identified by this audit:
+The following follow-up issues are proposed to execute the implementation phases identified by this audit:
 
 1. **`feat(data): execute mass Foundry 2014/2024 enemy and feature import migration`**:
    - Update `tools/portFoundryAssets.cjs` and `tools/portMonsterFeatures.cjs`.
-   - Generate `enemies/json/14/`, `enemies/json/24/`, `monsterfeatures/json/14/`, and `monsterfeatures24/json/24/`.
+   - Generate `enemies/json/14/`, `enemies/json/24/`, `monsterfeatures/json/14/`, and `monsterfeatures/json/24/`.
    - Regenerate versioned indexes and category mappings.
 
 2. **`feat(gameplay): implement monster ability saving throws and recharge mechanics in combat`**:

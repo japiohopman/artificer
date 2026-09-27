@@ -36,27 +36,25 @@ jobs:
 
           body="${PR_BODY:-}"
 
-          if grep -Fq "## Phase" <<< "$body"; then
-            required_sections=(
-              "## Phase"
-              "## Goal"
-              "## Scope completed"
-              "## Safety / architecture"
-              "## Verification"
-              "## Data / content integrity"
-              "## Documentation"
-              "## Definition of Done"
-            )
+          required_sections=(
+            "## Phase"
+            "## Goal"
+            "## Scope completed"
+            "## Safety / architecture"
+            "## Verification"
+            "## Data / content integrity"
+            "## Documentation"
+            "## Definition of Done"
+          )
 
-            for section in "${required_sections[@]}"; do
-              if ! grep -Fq "$section" <<< "$body"; then
-                echo "Safety gate failed: missing PR section: $section"
-                exit 1
-              fi
-            done
-          fi
+          for section in "${required_sections[@]}"; do
+            if ! grep -Fq "$section" <<< "$body"; then
+              echo "Safety gate failed: missing PR section: $section"
+              exit 1
+            fi
+          done
 
-          if ! grep -Eq '(Closes|Fixes|Resolves|Refs|Part of|resolving Issue|Issue) #[0-9]+' <<< "$body"; then
+          if ! grep -Eq '(Closes|Fixes|Resolves|Refs|Part of) #[0-9]+' <<< "$body"; then
             echo "Safety gate failed: PR must reference its governing GitHub Issue (for example: Closes #123, Refs #123, or Part of #123)."
             exit 1
           fi
