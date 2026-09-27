@@ -1,0 +1,81 @@
+{
+  "index": "mmrhinoceros0000",
+  "name": "rhinoceros",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Rhinoceros is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 12",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 8,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 6,
+  "stats": {
+    "str": 21,
+    "dex": 8,
+    "con": 15,
+    "int": 2,
+    "wis": 12,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=iBenqFiBu40bUxkH]] creature and the [[lookup @name lowercase]]{monster} moved 20+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 2d8 average type=piercing]] damage and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Rhinoceros.webp",
+  "imageUrl": "/assets/atlas/enemies/images/rhinoceros.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmrhinoceros0000.json",
+  "updated_at": "2026-09-27T13:37:07.091Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

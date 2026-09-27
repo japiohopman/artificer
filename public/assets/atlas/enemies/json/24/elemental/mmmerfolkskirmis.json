@@ -1,0 +1,86 @@
+{
+  "index": "mmmerfolkskirmis",
+  "name": "merfolk skirmisher",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Merfolk Skirmisher is a CR 0.125 elemental.",
+  "size": "Medium",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 10,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 14,
+  "charisma": 12,
+  "stats": {
+    "str": 10,
+    "dex": 13,
+    "con": 12,
+    "int": 11,
+    "wis": 14,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "ocean spear",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, its Speed decreases by 10 feet until the end of its next turn. Hit or Miss: The spear magically returns to the [[lookup @name lowercase]]{monster}'s hand immediately after a ranged attack.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/elemental/mmmerfolkskirmis.json",
+  "updated_at": "2026-09-27T13:37:08.380Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

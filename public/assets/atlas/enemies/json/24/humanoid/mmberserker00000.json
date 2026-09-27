@@ -1,0 +1,88 @@
+{
+  "index": "mmberserker00000",
+  "name": "berserker",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Berserkers@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.rCW1BWWOS7a0ibg1 caption=false cite=false classes=\"no-embed mm\"]\nBerserker@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.W16gTtESSKym2RPY caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 67,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 27",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 17,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 9,
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 17,
+    "int": 9,
+    "wis": 11,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "greataxe",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d12+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bloodied frenzy",
+      "desc": "While &Reference[Bloodied], the [[lookup @name lowercase]]{monster} has Advantage on attack rolls and saving throws.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Berserker.webp",
+  "imageUrl": "/assets/atlas/enemies/images/berserker.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmberserker00000.json",
+  "updated_at": "2026-09-27T13:37:08.881Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

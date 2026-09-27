@@ -11,40 +11,43 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const { execSync } = require('child_process');
 
-// Paths definitions
-const FOUNDRY_ROOT = path.join(__dirname, '../dit is de ttf map waar of naar toe moeten of heel erg van af moeten kijken/dnd5e-6.0.x');
-const TARGET_DIR = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/json');
-const INDEX_PATH = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/index.json');
+const PINNED_RELEASE_TAG = 'release-6.0.4';
+const FOUNDRY_TMP_DIR = '/tmp/f5e_audit_pinned/packs/_source';
 
-const SOURCES = [
-  {
-    path: path.join(FOUNDRY_ROOT, 'packs/_source/monsterfeatures'),
-    flat: true
-  },
-  {
-    path: path.join(FOUNDRY_ROOT, 'packs/_source/monsterfeatures24'),
-    flat: false
+function ensureFoundrySource() {
+  if (process.env.FOUNDRY_SOURCE_DIR && fs.existsSync(process.env.FOUNDRY_SOURCE_DIR)) {
+    return process.env.FOUNDRY_SOURCE_DIR;
   }
-];
+  if (fs.existsSync(FOUNDRY_TMP_DIR)) {
+    return FOUNDRY_TMP_DIR;
+  }
+  console.log(`Downloading pinned Foundry release (${PINNED_RELEASE_TAG}) source tree to /tmp/f5e_audit_pinned...`);
+  fs.mkdirSync('/tmp/f5e_audit_pinned', { recursive: true });
+  try {
+    execSync(`curl -sL https://github.com/foundryvtt/dnd5e/archive/refs/tags/${PINNED_RELEASE_TAG}.tar.gz | tar -xz --strip-components=1 -C /tmp/f5e_audit_pinned "dnd5e-${PINNED_RELEASE_TAG}/packs/_source"`, { stdio: 'inherit' });
+  } catch (e) {
+    console.error('Failed to download Foundry source archive:', e.message);
+  }
+  return FOUNDRY_TMP_DIR;
+}
 
-// Clean HTML to paragraphs securely, protecting against HTML element injection (CodeQL)
+const FOUNDRY_ROOT = ensureFoundrySource();
+const TARGET_DIR_14 = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/json/14');
+const TARGET_DIR_24 = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/json/24');
+const INDEX_PATH_14 = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/index_14.json');
+const INDEX_PATH_24 = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/index_24.json');
+const UNIFIED_INDEX_PATH = path.join(__dirname, '../public/assets/atlas/enemies/monsterfeatures/index.json');
+
+// Clean HTML to paragraphs securely
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
 
-  // 1. Explicitly remove script tags and their inner content to prevent script execution
-  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-
-  // 2. Explicitly remove any remaining partial or dangling <script tag patterns
-  cleaned = cleaned.replace(/<script/gi, '');
-
-  // 3. Convert paragraph markers to linebreaks
-  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
-
-  // 4. Safely strip all other HTML tag patterns using a secure pattern
-  cleaned = cleaned.replace(/<[^>]+>/g, '');
-
-  // 5. Sanitize HTML entity references to prevent raw markup injection
+  let cleaned = String(html);
+  cleaned = cleaned.replace(/<\/?p\b[^>]*>/gi, '\n')
+                   .replace(/<br\s*\/?>/gi, '\n');
+  cleaned = cleaned.replace(/<[^>]*>/g, '');
   cleaned = cleaned
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
@@ -122,7 +125,7 @@ function extractDamage(sourceData) {
     });
   }
 
-  // Check 4: If no damage found, try extracting a dice notation from description (as a last resort fallback)
+  // Check 4: If no damage found, try extracting a dice notation from description
   if (damage.length === 0 && system.description?.value) {
     const desc = system.description.value;
     const diceRegex = /(\d+d\d+)(?:\s*[\+-]\s*(\d+))?\s*(?:<em>)?([a-z]+)?\s*(?:damage)?/gi;
@@ -170,7 +173,7 @@ function extractUsage(sourceData) {
 
   if (uses.max) {
     usage.times = parseInt(uses.max) || 1;
-    usage.type = 'per_day'; // default fallback
+    usage.type = 'per_day';
   }
 
   if (uses.recovery && Array.isArray(uses.recovery)) {
@@ -224,7 +227,7 @@ function extractRange(sourceData) {
   return rangeStr || null;
 }
 
-function mapFeature(sourceData) {
+function mapFeature(sourceData, ruleset, category) {
   const name = sourceData.name || 'Unnamed Feature';
   const index = sourceData._id ? sourceData._id.toLowerCase() : name.toLowerCase().replace(/[^a-z0-9]/g, '_');
   const system = sourceData.system || {};
@@ -235,9 +238,16 @@ function mapFeature(sourceData) {
   const usage = extractUsage(sourceData);
   const range = extractRange(sourceData);
 
+  const versionFolder = ruleset === '2024' ? '24' : '14';
+  const urlPath = category
+    ? `/assets/atlas/enemies/monsterfeatures/json/${versionFolder}/${category}/${index}.json`
+    : `/assets/atlas/enemies/monsterfeatures/json/${versionFolder}/${index}.json`;
+
   return {
     index,
     name: name.toLowerCase(),
+    ruleset,
+    category: category || null,
     type: sourceData.type || 'feat',
     desc: cleanDesc,
     damage,
@@ -245,76 +255,117 @@ function mapFeature(sourceData) {
     usage,
     range,
     image: sourceData.img || '/assets/atlas/features/images/default.webp',
-    url: `/assets/atlas/enemies/monsterfeatures/json/${index}.json`,
+    url: urlPath,
     updated_at: new Date().toISOString()
   };
 }
 
-function processDir(dir, filesArray) {
-  if (!fs.existsSync(dir)) return;
-  const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    const fullPath = path.join(dir, file);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      processDir(fullPath, filesArray);
-    } else if (file.endsWith('.yml') || file.endsWith('.yaml')) {
-      filesArray.push(fullPath);
-    }
-  });
-}
-
-function portAll() {
-  if (!fs.existsSync(TARGET_DIR)) {
-    fs.mkdirSync(TARGET_DIR, { recursive: true });
+function port2014Features() {
+  const sourceDir = path.join(FOUNDRY_ROOT, 'monsterfeatures');
+  if (!fs.existsSync(sourceDir)) {
+    console.warn(`2014 monsterfeatures directory not found: ${sourceDir}`);
+    return [];
   }
-
-  console.log(`Starting porting of monster features to ${TARGET_DIR}...`);
-
-  const filesArray = [];
-  SOURCES.forEach(source => {
-    if (fs.existsSync(source.path)) {
-      processDir(source.path, filesArray);
-    } else {
-      console.warn(`Source folder does not exist: ${source.path}`);
-    }
-  });
+  if (!fs.existsSync(TARGET_DIR_14)) {
+    fs.mkdirSync(TARGET_DIR_14, { recursive: true });
+  }
 
   const indexList = [];
   let count = 0;
-  filesArray.forEach(filePath => {
-    try {
-      const fileContent = fs.readFileSync(filePath, 'utf8');
-      const parsed = yaml.load(fileContent);
+  const files = fs.readdirSync(sourceDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
 
+  files.forEach(f => {
+    try {
+      const content = fs.readFileSync(path.join(sourceDir, f), 'utf8');
+      const parsed = yaml.load(content);
       if (parsed) {
-        const mapped = mapFeature(parsed);
-        const targetPath = path.join(TARGET_DIR, `${mapped.index}.json`);
+        const mapped = mapFeature(parsed, '2014');
+        const targetPath = path.join(TARGET_DIR_14, `${mapped.index}.json`);
         fs.writeFileSync(targetPath, JSON.stringify(mapped, null, 2), 'utf8');
         count++;
 
-        // Add item to indexList
         indexList.push({
           index: mapped.index,
           name: mapped.name,
+          ruleset: '2014',
           type: mapped.type,
           url: mapped.url,
           image: mapped.image
         });
       }
     } catch (err) {
-      console.error(`Failed to port feature file ${filePath}:`, err.message);
+      console.error(`Failed to port 2014 feature ${f}:`, err.message);
     }
   });
 
-  // Write index file
-  const indexDir = path.dirname(INDEX_PATH);
-  if (!fs.existsSync(indexDir)) {
-    fs.mkdirSync(indexDir, { recursive: true });
-  }
-  fs.writeFileSync(INDEX_PATH, JSON.stringify(indexList, null, 2), 'utf8');
+  fs.writeFileSync(INDEX_PATH_14, JSON.stringify(indexList, null, 2), 'utf8');
+  console.log(`Ported ${count} 2014 monster features into ${TARGET_DIR_14}`);
+  return indexList;
+}
 
-  console.log(`Successfully migrated ${count} monster features and wrote index!`);
+function port2024Features() {
+  const sourceDir = path.join(FOUNDRY_ROOT, 'monsterfeatures24');
+  if (!fs.existsSync(sourceDir)) {
+    console.warn(`2024 monsterfeatures24 directory not found: ${sourceDir}`);
+    return [];
+  }
+  if (!fs.existsSync(TARGET_DIR_24)) {
+    fs.mkdirSync(TARGET_DIR_24, { recursive: true });
+  }
+
+  const indexList = [];
+  let count = 0;
+  const categories = fs.readdirSync(sourceDir);
+
+  categories.forEach(cat => {
+    const catSourceDir = path.join(sourceDir, cat);
+    if (!fs.statSync(catSourceDir).isDirectory()) return;
+
+    const catTargetDir = path.join(TARGET_DIR_24, cat);
+    if (!fs.existsSync(catTargetDir)) {
+      fs.mkdirSync(catTargetDir, { recursive: true });
+    }
+
+    const files = fs.readdirSync(catSourceDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+    files.forEach(f => {
+      try {
+        const content = fs.readFileSync(path.join(catSourceDir, f), 'utf8');
+        const parsed = yaml.load(content);
+        if (parsed) {
+          const mapped = mapFeature(parsed, '2024', cat);
+          const targetPath = path.join(catTargetDir, `${mapped.index}.json`);
+          fs.writeFileSync(targetPath, JSON.stringify(mapped, null, 2), 'utf8');
+          count++;
+
+          indexList.push({
+            index: mapped.index,
+            name: mapped.name,
+            ruleset: '2024',
+            category: cat,
+            type: mapped.type,
+            url: mapped.url,
+            image: mapped.image
+          });
+        }
+      } catch (err) {
+        console.error(`Failed to port 2024 feature ${f}:`, err.message);
+      }
+    });
+  });
+
+  fs.writeFileSync(INDEX_PATH_24, JSON.stringify(indexList, null, 2), 'utf8');
+  console.log(`Ported ${count} 2024 monster features into ${TARGET_DIR_24}`);
+  return indexList;
+}
+
+function portAll() {
+  console.log('Starting migration of ruleset-aware monster features...');
+  const list14 = port2014Features();
+  const list24 = port2024Features();
+
+  const unifiedList = [...list14, ...list24];
+  fs.writeFileSync(UNIFIED_INDEX_PATH, JSON.stringify(unifiedList, null, 2), 'utf8');
+  console.log(`Successfully migrated ${unifiedList.length} total monster features and wrote index files!`);
 }
 
 portAll();

@@ -1,0 +1,134 @@
+{
+  "index": "mmoni00000000000",
+  "name": "oni",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Oni@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Z00uEF13gQr3y7sl caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 119,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10 + 42",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 14,
+  "wisdom": 12,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 11,
+    "con": 16,
+    "int": 14,
+    "wis": 12,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "regeneration",
+      "desc": "The [[lookup @name lowercase]]{monster} regains [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] Hit Points at the start of each of its turns if it has at least 1 Hit Point.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmClaw0000000000]] or [[/item .mmNightmareRay00]] attacks. It can replace one attack with a use of [[/item .mmSpellcasting00]].",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "nightmare ray",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Frightened apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "psychic",
+            "name": "psychic",
+            "url": "/assets/atlas/damage_types/json/psychic.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "The [[lookup @name lowercase]]{monster} shape-shifts into a Small or Medium Humanoid or a Large Giant, or it returns to its true form. Other than its size, its game statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCharmPerso]{Charm Person} (level 2 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{Darkness}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGaseousFor]{Gaseous Form}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{Sleep}",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/Oni.webp",
+  "imageUrl": "/assets/atlas/enemies/images/oni.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmoni00000000000.json",
+  "updated_at": "2026-09-27T13:37:08.714Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,88 @@
+{
+  "index": "mmlizard00000000",
+  "name": "lizard",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Lizard is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 3,
+  "stats": {
+    "str": 2,
+    "dex": 11,
+    "con": 10,
+    "int": 1,
+    "wis": 8,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Lizard.webp",
+  "imageUrl": "/assets/atlas/enemies/images/lizard.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmlizard00000000.json",
+  "updated_at": "2026-09-27T13:37:07.023Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

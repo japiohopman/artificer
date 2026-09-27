@@ -1,0 +1,15 @@
+{
+  "index": "mmsunlightsensit",
+  "name": "sunlight sensitivity",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has Disadvantage on ability checks and attack rolls.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/eyes/humanoid-single-blind.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsunlightsensit.json",
+  "updated_at": "2026-09-27T13:37:10.542Z"
+}

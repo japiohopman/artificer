@@ -1,0 +1,109 @@
+{
+  "index": "mmmage0000000000",
+  "name": "mage",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Mages@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.BRPgUa1VGeHBz5BR caption=false cite=false classes=\"no-embed mm\"]\nMage@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.G2fA16d9pkedAKnr caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Wizard",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 81,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 9,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 11,
+  "stats": {
+    "str": 9,
+    "dex": 14,
+    "con": 11,
+    "int": 17,
+    "wis": 12,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Common plus three other languages",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmArcaneBurst000]] attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "arcane burst",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "3d8-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Light}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{Mage Armor} (included in AC), @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{Mage Hand}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{Prestidigitation} 2/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball} (level 4 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplConeofCold]{Cone of Cold}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{Fly}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "misty step",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Misty Step}, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "protective magic",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Counterspell} or @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Shield} in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Mage.webp",
+  "imageUrl": "/assets/atlas/enemies/images/mage.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmmage0000000000.json",
+  "updated_at": "2026-09-27T13:37:08.951Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,15 @@
+{
+  "index": "mmcloakedflight0",
+  "name": "cloaked flight",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili] on itself, and it can fly up to half its Fly Speed. The dragon can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/holy/angel-wings-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcloakedflight0.json",
+  "updated_at": "2026-09-27T13:37:10.322Z"
+}

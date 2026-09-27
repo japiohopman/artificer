@@ -1,0 +1,111 @@
+{
+  "index": "mmotyugh00000000",
+  "name": "otyugh",
+  "ruleset": "2024",
+  "category": "aberration",
+  "desc": "Otyugh is a CR 5 aberration.",
+  "size": "Large",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 104,
+  "hit_dice": "11d10",
+  "hit_points_roll": "11d10 + 44",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 11,
+  "constitution": 19,
+  "intelligence": 6,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 16,
+    "dex": 11,
+    "con": 19,
+    "int": 6,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item Bite]] attack and two [[/item Tentacle]] attacks.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition. Whenever the Poisoned target finishes a Long Rest, it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.formula activity=tKShuY4vDM7tn9aC]]. Failure: The target's Hit Point maximum decreases by [[/damage 1d10 average]] and doesn't return to normal until the Poisoned condition ends on the target. Success: The Poisoned condition ends.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tentacle",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two tentacles.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tentacle slam",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=VC2iSwNPNaZ7M2bT]], [[lookup @target.affects.special activity=VC2iSwNPNaZ7M2bT]] by the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Stunned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Success: Half damage only.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/aberration/Otyugh.webp",
+  "imageUrl": "/assets/atlas/enemies/images/otyugh.webp",
+  "url": "/assets/atlas/enemies/json/24/aberration/mmotyugh00000000.json",
+  "updated_at": "2026-09-27T13:37:06.777Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

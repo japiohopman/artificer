@@ -1,0 +1,138 @@
+{
+  "index": "mmadultbrassdrag",
+  "name": "adult brass dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Adult Brass Dragon is a CR 13 dragon.",
+  "size": "Huge",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 172,
+  "hit_dice": "15d12",
+  "hit_points_roll": "15d12 + 75",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 10,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "stats": {
+    "str": 23,
+    "dex": 10,
+    "con": 21,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Sleep Breath]] or (B) [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplScorchingR]{Scorching Ray}.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot-long, [[lookup @target.template.width activity=bDqgmtLG3zcVuqdi]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sleep breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=6ce9oevQRWomSVSF]], each [[lookup @target.affects.type activity=6ce9oevQRWomSVSF]] in a [[lookup @target.template.size activity=6ce9oevQRWomSVSF]]-foot Cone. Failure: The target has the &Reference[Incapacitated apply=false] condition until the end of its next turn, at which point it repeats the save. Second Failure: The target has the &Reference[Unconscious apply=false] condition for [[lookup @duration.value activity=EZma0lCmQeTuVuAL]] minutes. This effect ends for the target if it takes damage or a creature within 5 feet of it takes an action to wake it.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Minor Illusion}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScorchingR]{Scorching Ray}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShapechang]{Shapechange} (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), @UUID[Compendium.dnd5e.spells24.Item.phbsplSpeakwithA]{Speak with Animals} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplControlWea]{Control Weather}",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "blazing light",
+      "desc": "The [[lookup @name lowercase]]{monster} uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplScorchingR]{Scorching Ray}.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "scorching sands",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=g5fxAWhrpwohtETl]], [[lookup @target.affects.labels.statblock activity=g5fxAWhrpwohtETl]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=g5fxAWhrpwohtETl]] feet. Failure: [[/damage average]] damage, and the target's Speed is halved until the end of its next turn. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/adult_brass_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmadultbrassdrag.json",
+  "updated_at": "2026-09-27T13:37:07.797Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,135 @@
+{
+  "index": "mmwillowisp00000",
+  "name": "will-o'-wisp",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Will-o'-Wisp is a CR 2 undead.",
+  "size": "Tiny",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 19
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "11d4",
+  "hit_points_roll": "11d4",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 1,
+  "dexterity": 28,
+  "constitution": 10,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 11,
+  "stats": {
+    "str": 1,
+    "dex": 28,
+    "con": 10,
+    "int": 13,
+    "wis": 14,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "bludgeoning",
+    "cold",
+    "fire",
+    "necrotic",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "lightning",
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "Common plus one other language",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ephemeral",
+      "desc": "The [[lookup @name lowercase]]{monster} can't wear or carry anything.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illumination",
+      "desc": "The [[lookup @name lowercase]]{monster} sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "incorporeal movement",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were &Reference[Difficult Terrain]. It takes [[/damage 1d10 average type=force]] damage if it ends its turn inside an object.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vanish",
+      "desc": "The [[lookup @name lowercase]]{monster} and its light have the &Reference[Invisible apply=false] condition until the [[lookup @name lowercase]]{monster}'s &Reference[Concentration] ends on this effect, which ends early immediately after the [[lookup @name lowercase]]{monster} makes an attack roll or uses Consume Life.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "consume life",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=1Hy8CdhpwQlLxDPq]], [[lookup @target.affects.special activity=1Hy8CdhpwQlLxDPq]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=1Hy8CdhpwQlLxDPq]] feet. that has 0 Hit Points. Failure: The target dies, and the [[lookup @name lowercase]]{monster} regains [[/healing average activity=1waYTjY3NAIGZgrI]].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shock",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": -3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "lightning",
+            "name": "lightning",
+            "url": "/assets/atlas/damage_types/json/lightning.json"
+          },
+          "damage_dice": "2d8-5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/will_o_wisp.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmwillowisp00000.json",
+  "updated_at": "2026-09-27T13:37:09.856Z",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet13.webp",
+  "background_type": "land_forest",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": {},
+  "last_updated": "18-5-2026"
+}

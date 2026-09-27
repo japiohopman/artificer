@@ -1,0 +1,132 @@
+{
+  "index": "mmnalfeshnee0000",
+  "name": "nalfeshnee",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Nalfeshnee@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.bG2lzFCLqlpghJF8 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 184,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 96",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 21,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 19,
+  "wisdom": 12,
+  "charisma": 15,
+  "stats": {
+    "str": 21,
+    "dex": 10,
+    "con": 22,
+    "int": 19,
+    "wis": 12,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "demonic restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=dnoRMdFzhUUku26D]] feet to an unoccupied space it can see.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "horror nimbus",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=GP5MnIyXCVZ4ZMTQ]], each [[lookup @target.affects.type activity=GP5MnIyXCVZ4ZMTQ]] in a [[lookup @target.template.size activity=GP5MnIyXCVZ4ZMTQ]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Frightened apply=false] condition for [[lookup @duration.value activity=GP5MnIyXCVZ4ZMTQ]] [[lookup @duration.units activity=GP5MnIyXCVZ4ZMTQ]], until it takes damage, or until it ends its turn with the [[lookup @name lowercase]]{monster} out of line of sight. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Horror Nimbus for 24 hours.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pursuit",
+      "desc": "Trigger: Another creature the [[lookup @name lowercase]]{monster} can see ends its move within [[lookup @range.value activity=blUXkjLhs9kD2ofo]] feet of the [[lookup @name lowercase]]{monster}. Response: The [[lookup @name lowercase]]{monster} uses Teleport, but its destination space must be [[lookup @target.affects.special activity=blUXkjLhs9kD2ofo]].",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Nalfeshnee.webp",
+  "imageUrl": "/assets/atlas/enemies/images/nalfeshnee.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmnalfeshnee0000.json",
+  "updated_at": "2026-09-27T13:37:08.691Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

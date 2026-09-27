@@ -1,0 +1,145 @@
+{
+  "index": "mmadultbronzedra",
+  "name": "adult bronze dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Adult Bronze Dragon is a CR 15 dragon.",
+  "size": "Huge",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 212,
+  "hit_dice": "17d12",
+  "hit_points_roll": "17d12 + 102",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 25,
+  "dexterity": 10,
+  "constitution": 23,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 20,
+  "stats": {
+    "str": 25,
+    "dex": 10,
+    "con": 23,
+    "int": 16,
+    "wis": 15,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 15,
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Repulsion Breath]] or (B) [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidingBol]{Guiding Bolt} (level 2 version).",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "repulsion breath",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], each [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]] in a [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]]-foot [[lookup @target.template.type activity=zuf9EEVj4nI1joaH]]. Failure: The target is pushed up to 60 feet straight away from the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +10 to hit with spell attacks): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidingBol]{Guiding Bolt} (level 2 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplShapechang]{Shapechange} (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell), @UUID[Compendium.dnd5e.spells24.Item.phbsplSpeakwithA]{Speak with Animals}, @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{Thaumaturgy} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplWaterBreat]{Water Breathing}",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "guiding light",
+      "desc": "The [[lookup @name lowercase]]{monster} uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidingBol]{Guiding Bolt} (level 2 version).",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "thunderclap",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=Lq6GexegvlEVB6Dh]], each [[lookup @target.affects.type activity=Lq6GexegvlEVB6Dh]] in a [[lookup @target.template.size activity=Lq6GexegvlEVB6Dh]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Lq6GexegvlEVB6Dh]] feet. Failure: [[/damage average]] damage, and the target has the &Reference[Deafened apply=false] condition until the end of its next turn.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/adult_bronze_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmadultbronzedra.json",
+  "updated_at": "2026-09-27T13:37:07.817Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

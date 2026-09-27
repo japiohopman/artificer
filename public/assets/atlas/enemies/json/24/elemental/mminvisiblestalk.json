@@ -1,0 +1,124 @@
+{
+  "index": "mminvisiblestalk",
+  "name": "invisible stalker",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Invisible Stalker is a CR 6 elemental.",
+  "size": "Large",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 14
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 26",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 16,
+  "dexterity": 19,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 15,
+  "charisma": 11,
+  "stats": {
+    "str": 16,
+    "dex": 19,
+    "con": 14,
+    "int": 10,
+    "wis": 15,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "air form",
+      "desc": "The [[lookup @name lowercase]]{monster} can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} has the &Reference[Invisible apply=false] condition.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmWindSwipe00000]] attacks. It can replace one attack with a use of [[/item .mmVortex00000000]].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "wind swipe",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "vortex",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=cZy0VYbCVY8aRB4z]], one [[lookup @target.affects.special activity=cZy0VYbCVY8aRB4z]] in the [[lookup @name lowercase]]{monster}'s space. Failure: [[/damage average activity=cZy0VYbCVY8aRB4z]] damage, and the target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target can't cast spells with a Verbal component and takes [[/damage average activity=kDz92inkRCjGrPiz]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/InvisibleStalker.webp",
+  "imageUrl": "/assets/atlas/enemies/images/invisible_stalker.webp",
+  "url": "/assets/atlas/enemies/json/24/elemental/mminvisiblestalk.json",
+  "updated_at": "2026-09-27T13:37:08.359Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

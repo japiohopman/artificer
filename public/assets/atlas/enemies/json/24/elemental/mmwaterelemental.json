@@ -1,0 +1,123 @@
+{
+  "index": "mmwaterelemental",
+  "name": "water elemental",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Water Elemental is a CR 5 elemental.",
+  "size": "Large",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 48",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 8,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 18,
+    "int": 5,
+    "wis": 10,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "fire"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "freeze",
+      "desc": "If the [[lookup @name lowercase]]{monster} takes Cold damage, its Speed decreases by 20 feet until the end of its next turn.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water form",
+      "desc": "The [[lookup @name lowercase]]{monster} can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmSlam0000000000]] attacks.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &Reference[Prone] condition.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "whelm",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=TQchFj2VXXJgU7Lq]], each [[lookup @target.affects.type activity=TQchFj2VXXJgU7Lq]] in the [[lookup @name lowercase]]{monster}'s space. Failure: [[/damage average activity=TQchFj2VXXJgU7Lq]] damage. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target has the &Reference[Restrained apply=false] condition, is &Reference[suffocating]{suffocating} unless it can breathe water, and takes [[/damage average activity=khxVwH3AB0sx1qRG]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. The [[lookup @name lowercase]]{monster} can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm. As an action, a creature within 5 feet of the [[lookup @name lowercase]]{monster} can pull a creature out of it by succeeding on a [[/check ath dc=@skills.ath.passive format=long]]. Success: Half damage only.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/WaterElemental.webp",
+  "imageUrl": "/assets/atlas/enemies/images/water_elemental.webp",
+  "url": "/assets/atlas/enemies/json/24/elemental/mmwaterelemental.json",
+  "updated_at": "2026-09-27T13:37:08.392Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,111 @@
+{
+  "index": "mmbronzedragonwy",
+  "name": "bronze dragon wyrmling",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Bronze Dragon Wyrmling is a CR 2 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "Metallic",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "stats": {
+    "str": 17,
+    "dex": 10,
+    "con": 15,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide [[lookup @target.template.type capitalize activity=LpjgVwftzGNMgTUJ]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "repulsion breath",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], each [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]] in a [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]]-foot Cone. Failure: The target is pushed up to 30 feet straight away from the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/BronzeDragonWyrmling.webp",
+  "imageUrl": "/assets/atlas/enemies/images/bronze_dragon_wyrmling.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmbronzedragonwy.json",
+  "updated_at": "2026-09-27T13:37:08.156Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

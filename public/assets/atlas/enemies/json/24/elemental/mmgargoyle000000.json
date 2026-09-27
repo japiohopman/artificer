@@ -1,0 +1,101 @@
+{
+  "index": "mmgargoyle000000",
+  "name": "gargoyle",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Gargoyle is a CR 2 elemental.",
+  "size": "Medium",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 67,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 27",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 11,
+  "charisma": 7,
+  "stats": {
+    "str": 15,
+    "dex": 11,
+    "con": 16,
+    "int": 6,
+    "wis": 11,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "flyby",
+      "desc": "The [[lookup @name lowercase]]{monster} doesn't provoke an &Reference[OpportunityAttacks]{Opportunity Attack} when it flies out of an enemy's reach.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmClaw0000000000]] attacks.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/Gargoyle.webp",
+  "imageUrl": "/assets/atlas/enemies/images/gargoyle.webp",
+  "url": "/assets/atlas/enemies/json/24/elemental/mmgargoyle000000.json",
+  "updated_at": "2026-09-27T13:37:08.350Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

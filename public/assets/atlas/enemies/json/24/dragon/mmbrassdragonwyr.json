@@ -1,0 +1,97 @@
+{
+  "index": "mmbrassdragonwyr",
+  "name": "brass dragon wyrmling",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Brass Dragon Wyrmling is a CR 1 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "Metallic",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8 + 4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 13,
+  "stats": {
+    "str": 15,
+    "dex": 10,
+    "con": 13,
+    "int": 10,
+    "wis": 11,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot-long, [[lookup @target.template.width activity=bDqgmtLG3zcVuqdi]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sleep breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=6ce9oevQRWomSVSF]], each [[lookup @target.affects.type activity=6ce9oevQRWomSVSF]] in a [[lookup @target.template.size activity=6ce9oevQRWomSVSF]]-foot Cone. Failure: The target has the &Reference[Incapacitated apply=false] condition until the end of its next turn, at which point it repeats the save. Second Failure: The target has the &Reference[Unconscious apply=false] condition for [[lookup @duration.value activity=EZma0lCmQeTuVuAL]] minute. This effect ends for the target if it takes damage or a creature within 5 feet of it takes an action to wake it.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/BrassDragonWyrmling.webp",
+  "imageUrl": "/assets/atlas/enemies/images/brass_dragon_wyrmling.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmbrassdragonwyr.json",
+  "updated_at": "2026-09-27T13:37:08.153Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

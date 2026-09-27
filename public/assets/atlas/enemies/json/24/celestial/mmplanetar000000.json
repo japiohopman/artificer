@@ -1,0 +1,132 @@
+{
+  "index": "mmplanetar000000",
+  "name": "planetar",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Planetar is a CR 16 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 262,
+  "hit_dice": "21d10",
+  "hit_points_roll": "21d10 + 147",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 24,
+  "dexterity": 20,
+  "constitution": 24,
+  "intelligence": 19,
+  "wisdom": 22,
+  "charisma": 25,
+  "stats": {
+    "str": 24,
+    "dex": 20,
+    "con": 24,
+    "int": 19,
+    "wis": 22,
+    "cha": 25
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 16
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "divine awareness",
+      "desc": "The [[lookup @name lowercase]]{monster} knows if it hears a lie.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "exalted restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Radiant Sword]] attacks or uses [[/item Holy Burst]] twice.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "radiant sword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "holy burst",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=HrgMO1rsQla47fff]], each [[lookup @target.affects.type activity=HrgMO1rsQla47fff]] in a [[lookup @target.template.size activity=HrgMO1rsQla47fff]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=HrgMO1rsQla47fff]] feet. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCommune000]{Commune}, @UUID[Compendium.dnd5e.spells24.Item.phbsplControlWea]{Control Weather}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil]{Dispel Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplRaiseDead0]{Raise Dead}",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "divine aid",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds}, @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{Remove Curse}, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Planetar.webp",
+  "imageUrl": "/assets/atlas/enemies/images/planetar.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmplanetar000000.json",
+  "updated_at": "2026-09-27T13:37:07.217Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

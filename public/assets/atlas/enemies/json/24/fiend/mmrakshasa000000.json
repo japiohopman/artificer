@@ -1,0 +1,116 @@
+{
+  "index": "mmrakshasa000000",
+  "name": "rakshasa",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Rakshasa@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.DMYEpWr3wvK4RLih caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 221,
+  "hit_dice": "26d8",
+  "hit_points_roll": "26d8 + 104",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 14,
+  "dexterity": 17,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 20,
+  "stats": {
+    "str": 14,
+    "dex": 17,
+    "con": 18,
+    "int": 13,
+    "wis": 16,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "greater magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the [[lookup @name lowercase]]{monster}'s permission, no spell can observe the [[lookup @name lowercase]]{monster} remotely or detect its thoughts, creature type, or alignment.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fiendish restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside Gehenna, its body dissolves into ichor, and it gains a new body instantly and revives with all its Hit Points in Gehenna.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmCursedTouch000]] attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cursed touch",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "baleful command",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=SzU2lwdbqgoFMuBM]], each [[lookup @target.affects.type activity=SzU2lwdbqgoFMuBM]] in a [[lookup @target.template.size activity=SzU2lwdbqgoFMuBM]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Frightened apply=false] and &Reference[Incapacitated apply=false] conditions until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{Disguise Self}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{Mage Hand}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Minor Illusion} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{Fly}, @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMajorImage]{Major Image}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPlaneShift]{Plane Shift}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Rakshasa.webp",
+  "imageUrl": "/assets/atlas/enemies/images/rakshasa.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmrakshasa000000.json",
+  "updated_at": "2026-09-27T13:37:08.736Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

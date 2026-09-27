@@ -1,0 +1,95 @@
+{
+  "index": "mmgnollwarrior00",
+  "name": "gnoll warrior",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Gnolls@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.1uUpd2TSpFjkisSO caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nGnoll Warrior@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.LKcAv2xpFiGs8zUr caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 7,
+  "stats": {
+    "str": 14,
+    "dex": 12,
+    "con": 11,
+    "int": 6,
+    "wis": 10,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bone bow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/fiend/mmgnollwarrior00.json",
+  "updated_at": "2026-09-27T13:37:08.642Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

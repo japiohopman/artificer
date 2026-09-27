@@ -1,0 +1,116 @@
+{
+  "index": "mmseahag00000000",
+  "name": "sea hag",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Sea Hag is a CR 2 fey.",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 21",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 16,
+  "intelligence": 12,
+  "wisdom": 12,
+  "charisma": 13,
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 16,
+    "int": 12,
+    "wis": 12,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "coven magic",
+      "desc": "While within 30 feet of at least two hag allies, the [[lookup @name lowercase]]{monster} can cast one of the following spells, requiring no Material components, using the spell's normal casting time, and using Intelligence as the spellcasting ability (spell save DC [[lookup @abilities.int.dc]]): @UUID[Compendium.dnd5e.spells24.Item.phbsplAugury0000]{Augury}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{Find Familiar}, @UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{Identify}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLocateObje]{Locate Object}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Scrying}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplUnseenServ]{Unseen Servant}. The [[lookup @name lowercase]]{monster} must finish a Long Rest before using this trait to cast that spell again.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vile appearance",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=FR0ETDHBas1Z5LfF]], any [[lookup @target.affects.special activity=FR0ETDHBas1Z5LfF]] that starts its turn within [[lookup @range.value activity=FR0ETDHBas1Z5LfF]] feet of the [[lookup @name lowercase]]{monster} and can see the [[lookup @name lowercase]]{monster}'s true form. Failure: The target has the &Reference[Frightened apply=false] condition until the start of its next turn. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Horrific Appearance for 24 hours.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "death glare",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=3uA75vqvubgY300I]], [[lookup @target.affects.special activity=3uA75vqvubgY300I]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=3uA75vqvubgY300I]] feet. Failure: If the target has 20 Hit Points or fewer, it drops to 0 Hit Points. Otherwise, the target takes [[/damage average]] damage.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illusory appearance",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{Disguise Self}, using Constitution as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]). The spell's duration is [[lookup @duration.value activity=qY8e7Xm7QYQDXqsd]] [[lookup @duration.units activity=qY8e7Xm7QYQDXqsd]]s.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/SeaHag.webp",
+  "imageUrl": "/assets/atlas/enemies/images/sea_hag.webp",
+  "url": "/assets/atlas/enemies/json/24/fey/mmseahag00000000.json",
+  "updated_at": "2026-09-27T13:37:08.559Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

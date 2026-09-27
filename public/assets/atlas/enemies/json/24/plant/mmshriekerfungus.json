@@ -1,0 +1,70 @@
+{
+  "index": "mmshriekerfungus",
+  "name": "shrieker fungus",
+  "ruleset": "2024",
+  "category": "plant",
+  "desc": "Shrieker Fungus is a CR 0 plant.",
+  "size": "Medium",
+  "type": "plant",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 5
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 1,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "stats": {
+    "str": 1,
+    "dex": 1,
+    "con": 10,
+    "int": 1,
+    "wis": 3,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 6
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shriek",
+      "desc": "Trigger: A [[lookup @target.affects.type activity=Tlv3gcYk5KfdtV7c]] or a source of Bright Light moves within [[lookup @range.value activity=Tlv3gcYk5KfdtV7c]] feet of the [[lookup @name lowercase]]{monster}. Response: The [[lookup @name lowercase]]{monster} emits a shriek audible within [[lookup @target.template.size activity=Tlv3gcYk5KfdtV7c]] feet of itself for [[lookup @duration.value activity=Tlv3gcYk5KfdtV7c]] minute or until the [[lookup @name lowercase]]{monster} dies.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/plant/mmshriekerfungus.json",
+  "updated_at": "2026-09-27T13:37:09.552Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

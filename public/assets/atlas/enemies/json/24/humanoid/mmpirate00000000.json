@@ -1,0 +1,93 @@
+{
+  "index": "mmpirate00000000",
+  "name": "pirate",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Pirates@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.quXy2WM17LbbHjxu caption=false cite=false classes=\"no-embed mm\"]\nPirate@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.0wZfG9paOUWsIK3C caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 33,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 16,
+  "constitution": 12,
+  "intelligence": 8,
+  "wisdom": 12,
+  "charisma": 14,
+  "stats": {
+    "str": 10,
+    "dex": 16,
+    "con": 12,
+    "int": 8,
+    "wis": 12,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Common plus one other language",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .MC6uJTSfGDW6jSdI]] attacks. It can replace one attack with a use of [[/item .mmEnthrallingPan]].",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "enthralling panache",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=66IPjaLIJqqwvmrL]], [[lookup @target.affects.labels.statblock activity=66IPjaLIJqqwvmrL]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=66IPjaLIJqqwvmrL]] feet. Failure: The target has the &Reference[Charmed apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmpirate00000000.json",
+  "updated_at": "2026-09-27T13:37:08.983Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

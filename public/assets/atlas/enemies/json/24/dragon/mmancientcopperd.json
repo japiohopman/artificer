@@ -1,0 +1,138 @@
+{
+  "index": "mmancientcopperd",
+  "name": "ancient copper dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Copper Dragons@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.1gZk82d5dqtIeB4K caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 367,
+  "hit_dice": "21d20",
+  "hit_points_roll": "21d20 + 147",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 12,
+  "constitution": 25,
+  "intelligence": 20,
+  "wisdom": 17,
+  "charisma": 22,
+  "stats": {
+    "str": 27,
+    "dex": 12,
+    "con": 25,
+    "int": 20,
+    "wis": 17,
+    "cha": 22
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 21000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Rend]] attacks. It can replace one attack with a use of (A) [[/item Slowing Breath]] or (B) [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 5 version).",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "acid breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line. Failure: [[/damage average]] damage. Success: [[lookup @damage.onSave capitalize activity=qNI6W02jCUQbPpYE]] damage.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 5 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Minor Illusion}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShapechang]{Shapechange} (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMajorImage]{Major Image}, @UUID[Compendium.dnd5e.spells24.Item.phbsplProjectIma]{Project Image}",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "giggling magic",
+      "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=Ttrajc4RC5Ut7pkj]], [[lookup @target.affects.labels.statblock activity=Ttrajc4RC5Ut7pkj]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Ttrajc4RC5Ut7pkj]] feet. Failure: [[/damage average]] damage. Until the end of its next turn, the target rolls [[/r 1d8]] whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mind jolt",
+      "desc": "The [[lookup @name lowercase]]{monster} uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 5 version). The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slowing breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=teMMQNDDIE9XkPN3]], each creature in a [[lookup @target.template.size activity=teMMQNDDIE9XkPN3]]-foot Cone. Failure: The target can't take Reactions; its Speed is halved; and it can take either an action or a Bonus Action on its turn, not both. This effect lasts until the end of its next turn.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/ancient_copper_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmancientcopperd.json",
+  "updated_at": "2026-09-27T13:37:08.035Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

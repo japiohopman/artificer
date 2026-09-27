@@ -1,0 +1,110 @@
+{
+  "index": "mmghoul000000000",
+  "name": "ghoul",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Ghoul is a CR 1 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 6,
+  "stats": {
+    "str": 13,
+    "dex": 15,
+    "con": 10,
+    "int": 7,
+    "wis": 10,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mafdXNIx6EIRujnK]] attacks.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.type activity=u64Kjp19EAOJoLeo]] [[lookup @target.affects.special activity=u64Kjp19EAOJoLeo]], it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=u64Kjp19EAOJoLeo]]. Failure: The target has the &Reference[Paralyzed apply=false] condition until the end of its next turn.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Ghoul.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ghoul.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmghoul000000000.json",
+  "updated_at": "2026-09-27T13:37:09.742Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

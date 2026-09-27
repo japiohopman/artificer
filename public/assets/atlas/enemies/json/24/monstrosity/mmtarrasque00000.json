@@ -1,0 +1,189 @@
+{
+  "index": "mmtarrasque00000",
+  "name": "tarrasque",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Tarrasque is a CR 30 monstrosity.",
+  "size": "Gargantuan",
+  "type": "monstrosity",
+  "subtype": "Titan",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 25
+    }
+  ],
+  "hit_points": 697,
+  "hit_dice": "34d20",
+  "hit_points_roll": "34d20 + 340",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 30,
+  "dexterity": 11,
+  "constitution": 30,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 11,
+  "stats": {
+    "str": 30,
+    "dex": 11,
+    "con": 30,
+    "int": 3,
+    "wis": 11,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "deafened",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 30,
+  "proficiency_bonus": 9,
+  "xp": 30000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "reflective carapace",
+      "desc": "If the [[lookup @name lowercase]]{monster} is targeted by a @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile} spell or a spell that requires a ranged attack roll, roll [[/r 1d6]]. On a 1–5, the [[lookup @name lowercase]]{monster} is unaffected. On a 6, the [[lookup @name lowercase]]{monster} is unaffected and reflects the spell, turning the caster into the target.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack and three other attacks, using [[/item .mmClaw0000000000]] or [[/item .mmTail0000000000]] in any combination.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target has the &Reference[Restrained apply=false] condition and can't teleport.",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d12+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d8+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature, it has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d8+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "thunderous bellow",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=RWBqtTjGSlEgQWCl]], [[lookup @target.affects.special activity=RWBqtTjGSlEgQWCl]] in a [[lookup @target.template.size activity=RWBqtTjGSlEgQWCl]]-[[lookup @target.template.units activity=RWBqtTjGSlEgQWCl]]. [[lookup @target.template.type capitalize activity=RWBqtTjGSlEgQWCl]]. Failure: [[/damage average]] damage, and the target has the &Reference[Deafened apply=false] and &Reference[Frightened apply=false] conditions until the end of its next turn. Success: Half damage only.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] by the [[lookup @name lowercase]]{monster} (it can have up to six creatures swallowed at a time). Failure: The target is swallowed, and the Grappled condition ends. A swallowed creature has the &Reference[Blinded apply=false] and &Reference[Restrained apply=false] conditions and can't teleport, it has &Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and takes [[/damage average activity=zrWNjO9mkbN28spL]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. If the [[lookup @name lowercase]]{monster} takes 60 damage or more on a single turn from a creature inside it, the [[lookup @name lowercase]]{monster} must succeed on a [[/save format=long activity=rGeGukkm2t2fXsoy]] at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within [[lookup @range.value activity=rGeGukkm2t2fXsoy]] feet of the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition. If the [[lookup @name lowercase]]{monster} dies, any swallowed creature no longer has the Restrained condition and can escape from the corpse by using 20 feet of movement, exiting Prone.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "onslaught",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item .mmClaw0000000000]] or [[/item .mmTail0000000000]] attack.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "world-shaking movement",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to its Speed. At the end of this movement, the [[lookup @name lowercase]]{monster} creates an instantaneous shock wave in a [[lookup @target.template.size activity=g4W0ovZxBeUrZKb8]]-[[lookup @target.template.units activity=g4W0ovZxBeUrZKb8]]. Emanation originating from itself. Creatures in that area lose &Reference[Concentration] and, if Medium or smaller, have the &Reference[Prone apply=false] condition. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "siege monster",
+      "desc": "The [[lookup @name lowercase]]{monster} deals double damage to objects and structures.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Tarrasque.webp",
+  "imageUrl": "/assets/atlas/enemies/images/tarrasque.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmtarrasque00000.json",
+  "updated_at": "2026-09-27T13:37:09.439Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

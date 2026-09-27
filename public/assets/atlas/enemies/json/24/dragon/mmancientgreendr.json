@@ -1,0 +1,140 @@
+{
+  "index": "mmancientgreendr",
+  "name": "ancient green dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Green Dragons@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.HxHIj9RZWeGNXKxV caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nAncient Green Dragon@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.f6FP49T1ELv3aASd caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nGreen Dragon Lairs@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.kjE0Ff31hZsDdeye caption=false cite=false]",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 402,
+  "hit_dice": "23d20",
+  "hit_points_roll": "23d20 + 161",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 12,
+  "constitution": 25,
+  "intelligence": 20,
+  "wisdom": 17,
+  "charisma": 22,
+  "stats": {
+    "str": 27,
+    "dex": 12,
+    "con": 25,
+    "int": 20,
+    "wis": 17,
+    "cha": 22
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 22,
+  "proficiency_bonus": 7,
+  "xp": 22000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three  [[/item .mmRend0000000000]] attacks. It can replace one attack with a use of Spellcasting to cast [[/item .mmSpellcasting00.Activity.hHQiQYfo3AV5ZW6F]] (level 5 version).",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "poison breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], each creature in a [[lookup @target.template.size activity=lnabW9bM51HoluPp]]-foot [[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 5 version) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplGeas000000]{Geas}, @UUID[Compendium.dnd5e.spells24.Item.phbsplModifyMemo]{Modify Memory}",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mind invasion",
+      "desc": "The dragon uses [[/item Spellcasting]] to cast [[/item .mmSpellcasting00.Activity.hHQiQYfo3AV5ZW6F]] (level 3 version).",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "noxious miasma",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], each [[lookup @target.affects.type activity=Blm8nddvCOH69bL8]] in a [[lookup @target.template.size activity=Blm8nddvCOH69bL8]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Blm8nddvCOH69bL8]] feet. Failure: [[/damage average]] damage, and the target takes a −2 penalty to AC until the end of its next turn. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/ancient_green_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmancientgreendr.json",
+  "updated_at": "2026-09-27T13:37:08.081Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

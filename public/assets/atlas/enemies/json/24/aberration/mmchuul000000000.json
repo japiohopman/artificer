@@ -1,0 +1,113 @@
+{
+  "index": "mmchuul000000000",
+  "name": "chuul",
+  "ruleset": "2024",
+  "category": "aberration",
+  "desc": "Chuul is a CR 4 aberration.",
+  "size": "Large",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 76,
+  "hit_dice": "9d10",
+  "hit_points_roll": "9d10 + 27",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 16,
+  "intelligence": 5,
+  "wisdom": 11,
+  "charisma": 5,
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 16,
+    "int": 5,
+    "wis": 11,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sense magic",
+      "desc": "The [[lookup @name lowercase]]{monster} senses magic within 120 feet of itself. This trait otherwise works like the @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic} spell but isn't itself magical.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes 2 [[/item Pincer]] attacks and uses [[/item Paralyzing Tentacles]].",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "paralyzing tentacles",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=p157Iqz8s0M0VilW]], one [[lookup @target.affects.type activity=p157Iqz8s0M0VilW]] Grappled by the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Poisoned apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While Poisoned, the target has the &Reference[Paralyzed apply=false] condition.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pincer",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two pincers.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/aberration/Chuul.webp",
+  "imageUrl": "/assets/atlas/enemies/images/chuul.webp",
+  "url": "/assets/atlas/enemies/json/24/aberration/mmchuul000000000.json",
+  "updated_at": "2026-09-27T13:37:06.752Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

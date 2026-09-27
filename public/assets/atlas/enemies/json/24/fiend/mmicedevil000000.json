@@ -1,0 +1,131 @@
+{
+  "index": "mmicedevil000000",
+  "name": "ice devil",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Ice Devil@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.sA9Jx5SXPoQvmnOO caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 228,
+  "hit_dice": "24d10",
+  "hit_points_roll": "24d10 + 96",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 21,
+    "dex": 14,
+    "con": 18,
+    "int": 18,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold",
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 14,
+  "proficiency_bonus": 5,
+  "xp": 11500,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "diabolical restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmIceSpear000000]] attacks. It can replace one attack with a [[/item .mmTail0000000000]] attack.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "ice wall",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofIce0]{Wall of Ice} (level 8 version), requiring no spell components and using Intelligence as the spellcasting ability (spell save DC [[lookup @abilities.int.dc]]).",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "ice spear",
+      "desc": "[[/attack extended]]. Hit: [[/damage average]] damage. Until the end of its next turn, the target can't take a &Reference[Bonus Action] or &Reference[Reaction], its Speed decreases by 10 feet, and it can move or take one action on its turn, not both. Hit or Miss: The spear magically returns to the [[lookup @name lowercase]]{monster}'s hand immediately after a ranged attack.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/IceDevil.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ice_devil.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmicedevil000000.json",
+  "updated_at": "2026-09-27T13:37:08.659Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

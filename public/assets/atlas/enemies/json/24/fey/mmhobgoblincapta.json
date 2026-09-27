@@ -1,0 +1,109 @@
+{
+  "index": "mmhobgoblincapta",
+  "name": "hobgoblin captain",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Hobgoblins@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.eFGs6u803PtWG5k7 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nHobgoblin Captain@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.kr2tx1DFAcwGmzKR caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "Goblinoid",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 18",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 12,
+  "wisdom": 10,
+  "charisma": 13,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 14,
+    "int": 12,
+    "wis": 10,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "greatsword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "aura of authority",
+      "desc": "While in a [[lookup @target.template.size activity=dE4lg9tZyXtoCb5x]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}, the [[lookup @name lowercase]]{monster} and its allies have Advantage on attack rolls and saving throws, provided the [[lookup @name lowercase]]{monster} doesn't have the &Reference[Incapacitated apply=false] condition.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .OZvhmmUFMgHZWnGB]] or [[/item .cryc72bvanyjmNdX]] in any combination.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/fey/mmhobgoblincapta.json",
+  "updated_at": "2026-09-27T13:37:08.532Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

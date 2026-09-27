@@ -1,0 +1,116 @@
+{
+  "index": "mmbugbearstalker",
+  "name": "bugbear stalker",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Bugbears@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.gzTUYPi9wHg0WMP0 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nBugbear Stalker@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.lMvm5fxnuHBDhxD2 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "Goblinoid",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 65,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8 + 20",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 11,
+  "stats": {
+    "str": 17,
+    "dex": 14,
+    "con": 14,
+    "int": 11,
+    "wis": 12,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "javelin",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "morningstar",
+      "desc": "Melee Attack Roll: [[/attack]] ([[lookup @activation.condition activity=QIpweawAzbt4xw5h]]), reach [[lookup @range.value activity=QIpweawAzbt4xw5h]] ft. [[/damage average extended]]",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "abduct",
+      "desc": "The [[lookup @name lowercase]]{monster} needn't spend extra movement to move a creature it is grappling.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .dN1CML4smcRrUkzD]] or [[/item .YFpjAATelvlz5oyb]] attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "quick grapple",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=aDWVHpJgsNPPNrDs]], [[lookup @target.affects.special activity=aDWVHpJgsNPPNrDs]] the [[lookup @name lowercase]]{monster} can see within [[lookup @target.template.size activity=aDWVHpJgsNPPNrDs]] [[lookup @target.template.units activity=aDWVHpJgsNPPNrDs]]. Failure: The target has the &Reference[Grappled] condition (escape DC [[lookup @skills.ath.passive]]).",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/fey/mmbugbearstalker.json",
+  "updated_at": "2026-09-27T13:37:08.428Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

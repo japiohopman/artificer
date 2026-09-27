@@ -1,0 +1,24 @@
+{
+  "index": "mmharpoon0000000",
+  "name": "harpoon",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, the [[lookup @name lowercase]]{monster} pulls the target up to 15 feet straight toward itself.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "20 ft",
+  "image": "icons/weapons/polearms/spear-barbed-silver.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmharpoon0000000.json",
+  "updated_at": "2026-09-27T13:37:10.440Z"
+}

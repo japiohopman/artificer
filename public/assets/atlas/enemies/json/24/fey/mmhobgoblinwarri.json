@@ -1,0 +1,102 @@
+{
+  "index": "mmhobgoblinwarri",
+  "name": "hobgoblin warrior",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Hobgoblins@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.eFGs6u803PtWG5k7 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nHobgoblin Warrior@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.qn7hUk5eNskZNKk9 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "Goblinoid",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 18
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 9,
+  "stats": {
+    "str": 13,
+    "dex": 12,
+    "con": 12,
+    "int": 10,
+    "wis": 10,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/fey/mmhobgoblinwarri.json",
+  "updated_at": "2026-09-27T13:37:08.546Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

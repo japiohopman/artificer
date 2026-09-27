@@ -1,0 +1,115 @@
+{
+  "index": "mmochrejelly0000",
+  "name": "ochre jelly",
+  "ruleset": "2024",
+  "category": "ooze",
+  "desc": "Ochre Jelly is a CR 2 ooze.",
+  "size": "Large",
+  "type": "ooze",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 8
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d10",
+  "hit_points_roll": "7d10 + 14",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 15,
+  "dexterity": 6,
+  "constitution": 14,
+  "intelligence": 2,
+  "wisdom": 6,
+  "charisma": 1,
+  "stats": {
+    "str": 15,
+    "dex": 6,
+    "con": 14,
+    "int": 2,
+    "wis": 6,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid"
+  ],
+  "damage_immunities": [
+    "lightning",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "grappled",
+    "prone",
+    "restrained"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "/assets/atlas/damage_types/json/acid.json"
+          },
+          "damage_dice": "3d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "split",
+      "desc": "Trigger: While the [[lookup @name lowercase]]{monster} [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]] Response: The [[lookup @name lowercase]]{monster} splits into two new [[lookup @name capitalize]]{monster}. Each new [[lookup @name lowercase]]{monster} is one size smaller than the original [[lookup @name lowercase]]{monster} and acts on its Initiative. The original [[lookup @name lowercase]]{monster}'s Hit Points are divided evenly between the new [[lookup @name lowercase]]{monster}s (round down).",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/ooze/OchreJelly.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ochre_jelly.webp",
+  "url": "/assets/atlas/enemies/json/24/ooze/mmochrejelly0000.json",
+  "updated_at": "2026-09-27T13:37:09.503Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

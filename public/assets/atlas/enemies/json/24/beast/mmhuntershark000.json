@@ -1,0 +1,88 @@
+{
+  "index": "mmhuntershark000",
+  "name": "hunter shark",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Hunter Shark is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 12",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 4,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 15,
+    "int": 1,
+    "wis": 10,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "water breathing",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe only underwater.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Attack Roll: [[/attack]] ([[lookup @activation.condition activity=xWlMeXFjELfSUWX9]]), reach [[lookup @range.value activity=xWlMeXFjELfSUWX9]] [[lookup @range.units activity=xWlMeXFjELfSUWX9]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/HunterShark.webp",
+  "imageUrl": "/assets/atlas/enemies/images/hunter_shark.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmhuntershark000.json",
+  "updated_at": "2026-09-27T13:37:07.010Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

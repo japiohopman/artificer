@@ -1,0 +1,119 @@
+{
+  "index": "mmbeardeddevil00",
+  "name": "bearded devil",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Bearded Devil@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.PTpNAXCUpaUdNbcx caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 18",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 15,
+  "constitution": 15,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 14,
+  "stats": {
+    "str": 16,
+    "dex": 15,
+    "con": 15,
+    "int": 9,
+    "wis": 11,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBeard000000000]] attack and one [[/item .mmInfernalGlaive]] attack.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "beard",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Until this poison ends, the target can't regain Hit Points.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "infernal glaive",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature and doesn't already have an infernal wound, it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=4qy3fKL086OAE1xR]]. Failure: The target receives an infernal wound. While wounded, the target loses [[/damage average activity=IS4utGV80LpDrjvt]] Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a [[/check format=long activity=KNWa0TFhANjmQCds]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/BeardedDevil.webp",
+  "imageUrl": "/assets/atlas/enemies/images/bearded_devil.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmbeardeddevil00.json",
+  "updated_at": "2026-09-27T13:37:08.604Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

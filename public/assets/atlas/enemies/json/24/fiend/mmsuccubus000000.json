@@ -1,0 +1,120 @@
+{
+  "index": "mmsuccubus000000",
+  "name": "succubus",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Succubus@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Kzvd8PBUBkJG5zSg caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 71,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8 + 13",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 15,
+  "wisdom": 12,
+  "charisma": 20,
+  "stats": {
+    "str": 8,
+    "dex": 17,
+    "con": 13,
+    "int": 15,
+    "wis": 12,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "poison",
+    "psychic"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "incubus form",
+      "desc": "When the [[lookup @name lowercase]]{monster} finishes a Long Rest, it can shape-shift into an @UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Incubus}, using that stat block instead of this one.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmFiendishTouch0]] attack and uses [[/item .mmCharm000000000]] or [[/item .mmDrainingKiss00]].",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fiendish touch",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "psychic",
+            "name": "psychic",
+            "url": "/assets/atlas/damage_types/json/psychic.json"
+          },
+          "damage_dice": "2d10-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "charm",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplDominatePe]{Dominate Person} (level 8 version), requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "draining kiss",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=kFyuof0SS3nohP0f]], one [[lookup @target.affects.type activity=kFyuof0SS3nohP0f]] Charmed by the [[lookup @name lowercase]]{monster} within [[lookup @range.value activity=kFyuof0SS3nohP0f]] feet. Failure: [[/damage average]] damage. Success: Half damage. Failure or Success: The target's Hit Point maximum decreases by an amount equal to the damage taken.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "The [[lookup @name lowercase]]{monster} shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics are the same in each form, except its Fly Speed is available only in its true form. Any equipment it is wearing or carrying isn't transformed.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Succubus.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmsuccubus000000.json",
+  "updated_at": "2026-09-27T13:37:08.764Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

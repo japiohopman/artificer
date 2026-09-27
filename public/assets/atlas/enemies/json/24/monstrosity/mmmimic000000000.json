@@ -1,0 +1,115 @@
+{
+  "index": "mmmimic000000000",
+  "name": "mimic",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Mimic@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.lLRnYAv64F7SfrJd caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 18",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 5,
+  "wisdom": 13,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 12,
+    "con": 15,
+    "int": 5,
+    "wis": 13,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [
+    "prone"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "adhesive (object form only)",
+      "desc": "The [[lookup @name lowercase]]{monster} adheres to anything that touches it. A Huge or smaller creature adhered to the [[lookup @name lowercase]]{monster} has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Ability checks made to escape this grapple have Disadvantage.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Attack Roll: [[/attack]] ([[lookup @activation.condition activity=Hx8Io6Uz1mJDm4Nf]]), reach [[lookup @range.value activity=xWlMeXFjELfSUWX9]] [[lookup @range.units activity=xWlMeXFjELfSUWX9]]. Hit: [[/damage average activity=xWlMeXFjELfSUWX9]] damage—or [[/damage average activity=Hx8Io6Uz1mJDm4Nf]] damage if the target is Grappled by the mimic.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Ability checks made to escape this grapple have Disadvantage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "The [[lookup @name lowercase]]{monster} shape-shifts to resemble a [[lookup @target.affects.special activity=EU2q25V5hIaM1ZlR]] object while retaining its game statistics, or it returns to its true blob form. Any equipment it is wearing or carrying isn't transformed.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Mimic.webp",
+  "imageUrl": "/assets/atlas/enemies/images/mimic.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmmimic000000000.json",
+  "updated_at": "2026-09-27T13:37:09.375Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

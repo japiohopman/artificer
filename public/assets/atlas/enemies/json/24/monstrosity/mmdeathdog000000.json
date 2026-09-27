@@ -1,0 +1,88 @@
+{
+  "index": "mmdeathdog000000",
+  "name": "death dog",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Death Dog is a CR 1 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 12",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 3,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 14,
+    "int": 3,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmBite0000000000]] attacks.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=F0T3hYR3EtUEMhvs]]. First Failure: The target has the &Reference[Poisoned apply=false] condition. While Poisoned, the target's Hit Point maximum doesn't return to normal when finishing a Long Rest, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures: The Poisoned target's Hit Point maximum decreases by 5 ([[/r 1d10]]).",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/DeathDog.webp",
+  "imageUrl": "/assets/atlas/enemies/images/death_dog.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmdeathdog000000.json",
+  "updated_at": "2026-09-27T13:37:09.301Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

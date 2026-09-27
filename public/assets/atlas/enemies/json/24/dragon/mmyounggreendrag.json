@@ -1,0 +1,106 @@
+{
+  "index": "mmyounggreendrag",
+  "name": "young green dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Young Green Dragon is a CR 8 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 12,
+  "constitution": 17,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 12,
+    "con": 17,
+    "int": 16,
+    "wis": 13,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "poison breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], each creature in a [[lookup @target.template.size activity=lnabW9bM51HoluPp]]-foot [[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungGreenDragon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/young_green_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmyounggreendrag.json",
+  "updated_at": "2026-09-27T13:37:08.256Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

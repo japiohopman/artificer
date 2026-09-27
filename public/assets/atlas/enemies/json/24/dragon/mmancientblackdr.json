@@ -1,0 +1,138 @@
+{
+  "index": "mmancientblackdr",
+  "name": "ancient black dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Black Dragons@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.EZn4p80bsBA4HbN8 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 22
+    }
+  ],
+  "hit_points": 367,
+  "hit_dice": "21d20",
+  "hit_points_roll": "21d20 + 147",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 14,
+  "constitution": 25,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 22,
+  "stats": {
+    "str": 27,
+    "dex": 14,
+    "con": 25,
+    "int": 16,
+    "wis": 15,
+    "cha": 22
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 21000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Rend]] attacks. It can replace one attack with a use of [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMelfsAcidA]{Melf's Acid Arrow} (level 4 version).",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "acid breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +13 to hit with spell attacks): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Fear}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMelfsAcidA]{Melf's Acid Arrow} (level 4 version) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCreateUnde]{Create Undead}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSpeakwithD]{Speak with Dead}, @UUID[Compendium.dnd5e.spells24.Item.phbsplVitriolicS]{Vitriolic Sphere} (level 5 version)",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cloud of insects",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=0OkFhjOM80ipoNKy]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=0OkFhjOM80ipoNKy]] feet. Failure: [[/damage average]] damage, and the target has Disadvantage on saving throws to maintain &Reference[Concentration} until the end of its next turn. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Fear}. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 10,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/ancient_black_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmancientblackdr.json",
+  "updated_at": "2026-09-27T13:37:07.950Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

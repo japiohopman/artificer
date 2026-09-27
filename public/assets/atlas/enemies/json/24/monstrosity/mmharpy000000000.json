@@ -1,0 +1,88 @@
+{
+  "index": "mmharpy000000000",
+  "name": "harpy",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Harpy is a CR 1 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 38,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 7",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 12,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 13,
+  "stats": {
+    "str": 12,
+    "dex": 13,
+    "con": 12,
+    "int": 7,
+    "wis": 10,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "luring song",
+      "desc": "The [[lookup @name lowercase]]{monster} sings a magical melody, which lasts until the [[lookup @name lowercase]]{monster}'s Concentration ends on it. Wisdom Saving Throw: DC [[lookup @save.dc.value activity=dxxqZP7Vo01te3QB]], each [[lookup @target.affects.special activity=dxxqZP7Vo01te3QB]] in a [[lookup @target.template.size activity=dxxqZP7Vo01te3QB]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} when the song starts. Failure: The target has the &Reference[Charmed apply=false] condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the &Reference[Incapacitated apply=false] condition and ignores the Luring Song of other harpies. If the target is more than 5 feet from the [[lookup @name lowercase]]{monster}, the target moves on its turn toward the [[lookup @name lowercase]]{monster} by the most direct route, trying to get within 5 feet of the [[lookup @name lowercase]]{monster}. It doesn't avoid &Reference[OpportunityAttacks]; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the [[lookup @name lowercase]]{monster}, the target repeats the save. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Luring Song for 24 hours.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Harpy.webp",
+  "imageUrl": "/assets/atlas/enemies/images/harpy.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmharpy000000000.json",
+  "updated_at": "2026-09-27T13:37:09.330Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

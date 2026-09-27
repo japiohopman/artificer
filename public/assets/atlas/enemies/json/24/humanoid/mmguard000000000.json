@@ -1,0 +1,81 @@
+{
+  "index": "mmguard000000000",
+  "name": "guard",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Guards@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Zh9j3VBgGnsvq9x4 caption=false cite=false classes=\"no-embed mm\"]\nGuard@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.IzCvcbHgZ8uPj9TU caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 16
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 13,
+    "dex": 12,
+    "con": 12,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spear",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Guard.webp",
+  "imageUrl": "/assets/atlas/enemies/images/guard.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmguard000000000.json",
+  "updated_at": "2026-09-27T13:37:08.936Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

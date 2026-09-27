@@ -1,0 +1,24 @@
+{
+  "index": "y18y37f8ppflgulb",
+  "name": "tentacle disease",
+  "ruleset": "2014",
+  "category": null,
+  "type": "feat",
+  "desc": "After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.\nYou feel a surging pain rushing through your body!",
+  "damage": [
+    {
+      "damage_dice": "1d12",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/acid/projectile-glowing-bubbles.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/14/y18y37f8ppflgulb.json",
+  "updated_at": "2026-09-27T13:37:10.286Z"
+}

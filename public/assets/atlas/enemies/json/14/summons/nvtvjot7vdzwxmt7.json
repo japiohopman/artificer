@@ -1,0 +1,88 @@
+{
+  "index": "nvtvjot7vdzwxmt7",
+  "name": "small animated object",
+  "ruleset": "2014",
+  "category": "summons",
+  "desc": "@Embed[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA caption=false]",
+  "size": "Small",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "flat",
+      "value": 16
+    }
+  ],
+  "hit_points": 25,
+  "hit_dice": "25",
+  "hit_points_roll": "25",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 3,
+  "charisma": 1,
+  "stats": {
+    "str": 6,
+    "dex": 14,
+    "con": 10,
+    "int": 3,
+    "wis": 3,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 6
+  },
+  "languages": "Understands the languages you know",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8-2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/14/summons/nvtvjot7vdzwxmt7.json",
+  "updated_at": "2026-09-27T13:37:06.610Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

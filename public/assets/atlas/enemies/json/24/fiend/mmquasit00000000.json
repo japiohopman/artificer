@@ -1,0 +1,117 @@
+{
+  "index": "mmquasit00000000",
+  "name": "quasit",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Quasit@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.5VW4pbLF5nwdO7II caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Tiny",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 25,
+  "hit_dice": "10d4",
+  "hit_points_roll": "10d4",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 5,
+  "dexterity": 17,
+  "constitution": 10,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 10,
+  "stats": {
+    "str": 5,
+    "dex": 17,
+    "con": 10,
+    "int": 7,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "The [[lookup @name lowercase]]{monster} shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn't transformed.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "scare",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=L6pjs2RafI3pF8b3]], one creature within [[lookup @range.value activity=L6pjs2RafI3pF8b3]] feet. Failure: The target has the &Reference[Frightened apply=false] condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Quasit.webp",
+  "imageUrl": "/assets/atlas/enemies/images/quasit.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmquasit00000000.json",
+  "updated_at": "2026-09-27T13:37:08.726Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

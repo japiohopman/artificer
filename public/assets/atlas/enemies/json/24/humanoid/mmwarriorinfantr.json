@@ -1,0 +1,86 @@
+{
+  "index": "mmwarriorinfantr",
+  "name": "warrior infantry",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Warriors@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.3Il3CvacAVpf6Rch caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nWarrior Infantry@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Tg6q9tEwUMz6alIf caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 11,
+  "constitution": 11,
+  "intelligence": 8,
+  "wisdom": 11,
+  "charisma": 8,
+  "stats": {
+    "str": 13,
+    "dex": 11,
+    "con": 11,
+    "int": 8,
+    "wis": 11,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spear",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmwarriorinfantr.json",
+  "updated_at": "2026-09-27T13:37:09.075Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

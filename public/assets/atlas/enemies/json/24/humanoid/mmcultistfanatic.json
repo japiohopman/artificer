@@ -1,0 +1,93 @@
+{
+  "index": "mmcultistfanatic",
+  "name": "cultist fanatic",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Cultists@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.VICfYukXoYkWJ1yn caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nCultist Fanatic@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.DHw4tAz06WzLz07b caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 44,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 13,
+  "stats": {
+    "str": 11,
+    "dex": 14,
+    "con": 12,
+    "int": 10,
+    "wis": 14,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "pact blade",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]], +4 to hit with spell attacks): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Light}, @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{Thaumaturgy} 2/Day: @UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{Command} 1/Day: @UUID[Compendium.dnd5e.spells24.Item.phbsplHoldPerson]{Hold Person}",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spiritual weapon",
+      "desc": "The [[lookup @name lowercase]]{monster} casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplSpiritualW]{Spiritual Weapon} spell, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmcultistfanatic.json",
+  "updated_at": "2026-09-27T13:37:08.902Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

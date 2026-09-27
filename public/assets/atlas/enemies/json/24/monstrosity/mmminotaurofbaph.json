@@ -1,0 +1,95 @@
+{
+  "index": "mmminotaurofbaph",
+  "name": "minotaur of baphomet",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Minotaur of Baphomet@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.jqKn0BtJJlHPShTp caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10 + 30",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 16,
+  "charisma": 9,
+  "stats": {
+    "str": 18,
+    "dex": 11,
+    "con": 16,
+    "int": 6,
+    "wis": 16,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "abyssal glaive",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=iBenqFiBu40bUxkH]] creature and the [[lookup @name lowercase]]{monster} [[lookup @activation.condition activity=iBenqFiBu40bUxkH]] straight toward it immediately before the hit, the target takes an extra [[/damage 3d6 type=piercing average]] damage and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmminotaurofbaph.json",
+  "updated_at": "2026-09-27T13:37:09.390Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

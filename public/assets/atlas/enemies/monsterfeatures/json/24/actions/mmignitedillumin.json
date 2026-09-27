@@ -1,0 +1,15 @@
+{
+  "index": "mmignitedillumin",
+  "name": "ignited illumination",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} sets itself ablaze or extinguishes its flames. While ablaze, the [[lookup @name lowercase]]{monster} sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmignitedillumin.json",
+  "updated_at": "2026-09-27T13:37:10.348Z"
+}

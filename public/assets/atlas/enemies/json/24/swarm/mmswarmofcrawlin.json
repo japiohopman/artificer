@@ -1,0 +1,105 @@
+{
+  "index": "mmswarmofcrawlin",
+  "name": "swarm of crawling claws",
+  "ruleset": "2024",
+  "category": "swarm",
+  "desc": "Swarm of Crawling Claws is a CR 3 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 49,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 4,
+  "stats": {
+    "str": 14,
+    "dex": 14,
+    "con": 11,
+    "int": 5,
+    "wis": 10,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "grappled",
+    "incapacitated",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "swarm",
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny creature. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swarm of grasping hands",
+      "desc": "[[/attack extended activity=rO8NirkWF6w9GXTc]]. [[/damage average extended activity=rO8NirkWF6w9GXTc]], or [[/damage average activity=hzeHzcSKHC4AvIJQ]] damage if [[lookup @activation.condition activity=hzeHzcSKHC4AvIJQ]]. If the target is a Medium or smaller creature, it has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "4d8+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/swarm/mmswarmofcrawlin.json",
+  "updated_at": "2026-09-27T13:37:09.642Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

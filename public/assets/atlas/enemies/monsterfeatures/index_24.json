@@ -1,0 +1,3557 @@
+[
+  {
+    "index": "4t18pevubpmqlzvd",
+    "name": "actions",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "Item",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/4t18pevubpmqlzvd.json",
+    "image": "/assets/atlas/features/images/default.webp"
+  },
+  {
+    "index": "mmacidbreath0000",
+    "name": "acid breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmacidbreath0000.json",
+    "image": "icons/magic/acid/projectile-stream-bubbles.webp"
+  },
+  {
+    "index": "mmacidspray00000",
+    "name": "acid spray",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmacidspray00000.json",
+    "image": "icons/magic/acid/projectile-needles-salvo-green.webp"
+  },
+  {
+    "index": "mmanimatetrees00",
+    "name": "animate trees",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmanimatetrees00.json",
+    "image": "icons/magic/nature/tree-animated-smile.webp"
+  },
+  {
+    "index": "mmantennae000000",
+    "name": "antennae",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmantennae000000.json",
+    "image": "icons/commodities/materials/feather-orange.webp"
+  },
+  {
+    "index": "mmaquaticcharge0",
+    "name": "aquatic charge",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmaquaticcharge0.json",
+    "image": "icons/magic/water/projectile-ice-orb-white.webp"
+  },
+  {
+    "index": "mmarcaneburst000",
+    "name": "arcane burst",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmarcaneburst000.json",
+    "image": "icons/magic/unholy/hands-cloud-light-pink.webp"
+  },
+  {
+    "index": "mmarcaneprowl000",
+    "name": "arcane prowl",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmarcaneprowl000.json",
+    "image": "icons/creatures/magical/humanoid-silhouette-dashing-blue.webp"
+  },
+  {
+    "index": "mmbalefulcommand",
+    "name": "baleful command",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmbalefulcommand.json",
+    "image": "icons/magic/unholy/silhouette-robe-evil-power.webp"
+  },
+  {
+    "index": "mmbanish00000000",
+    "name": "banish",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmbanish00000000.json",
+    "image": "icons/magic/unholy/beam-impact-purple.webp"
+  },
+  {
+    "index": "mmbeguile0000000",
+    "name": "beguile",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmbeguile0000000.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "mmblindingbreath",
+    "name": "blinding breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmblindingbreath.json",
+    "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp"
+  },
+  {
+    "index": "mmblindinggaze00",
+    "name": "blinding gaze",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmblindinggaze00.json",
+    "image": "icons/magic/light/beam-horizon-strike-yellow.webp"
+  },
+  {
+    "index": "mmblindingspittl",
+    "name": "blinding spittle",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmblindingspittl.json",
+    "image": "icons/magic/light/projectile-smoke-yellow.webp"
+  },
+  {
+    "index": "mmbouldertoss000",
+    "name": "boulder toss",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmbouldertoss000.json",
+    "image": "icons/commodities/stone/boulder-black.webp"
+  },
+  {
+    "index": "mmbubbledash0000",
+    "name": "bubble dash",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmbubbledash0000.json",
+    "image": "icons/magic/water/orb-water-bubbles-blue.webp"
+  },
+  {
+    "index": "mmburstofingenui",
+    "name": "burst of ingenuity",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmburstofingenui.json",
+    "image": "icons/magic/light/orb-lightbulb-gray.webp"
+  },
+  {
+    "index": "mmcacophony00000",
+    "name": "cacophony",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcacophony00000.json",
+    "image": "icons/magic/sonic/projectile-sound-rings-wave.webp"
+  },
+  {
+    "index": "mmcaptainscharm0",
+    "name": "captain's charm",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcaptainscharm0.json",
+    "image": "icons/magic/control/control-influence-crown-gold.webp"
+  },
+  {
+    "index": "mmcharge00000000",
+    "name": "charge",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcharge00000000.json",
+    "image": "icons/skills/movement/figure-running-gray.webp"
+  },
+  {
+    "index": "mmcharginghorn00",
+    "name": "charging horn",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcharginghorn00.json",
+    "image": "icons/commodities/bones/tooth-spiked-brown.webp"
+  },
+  {
+    "index": "mmcharm000000000",
+    "name": "charm",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcharm000000000.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  {
+    "index": "mmcloakedflight0",
+    "name": "cloaked flight",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcloakedflight0.json",
+    "image": "icons/magic/holy/angel-wings-gray.webp"
+  },
+  {
+    "index": "mmcloudofinsects",
+    "name": "cloud of insects",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcloudofinsects.json",
+    "image": "icons/creatures/invertebrates/fly-wasp-mosquito-green.webp"
+  },
+  {
+    "index": "mmcoldbreath0000",
+    "name": "cold breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcoldbreath0000.json",
+    "image": "icons/creatures/abilities/dragon-ice-breath-blue.webp"
+  },
+  {
+    "index": "mmconjureinferna",
+    "name": "conjure infernal chain",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmconjureinferna.json",
+    "image": "icons/tools/fasteners/chain-brass-yellow.webp"
+  },
+  {
+    "index": "mmconstrict00000",
+    "name": "constrict",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmconstrict00000.json",
+    "image": "icons/magic/nature/root-vine-entangled-hands.webp"
+  },
+  {
+    "index": "mmconsumelife000",
+    "name": "consume life",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmconsumelife000.json",
+    "image": "icons/magic/life/cross-area-circle-green-white.webp"
+  },
+  {
+    "index": "mmconsumememorie",
+    "name": "consume memories",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmconsumememorie.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye-tan.webp"
+  },
+  {
+    "index": "mmcreatespecter0",
+    "name": "create specter",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcreatespecter0.json",
+    "image": "icons/magic/death/undead-skeleton-lich-armor.webp"
+  },
+  {
+    "index": "mmcreatewhirlwin",
+    "name": "create whirlwind",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcreatewhirlwin.json",
+    "image": "icons/magic/air/wind-tornado-cyclone-white.webp"
+  },
+  {
+    "index": "mmcunningaction0",
+    "name": "cunning action",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmcunningaction0.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-watch.webp"
+  },
+  {
+    "index": "mmdarknessaura00",
+    "name": "darkness aura",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdarknessaura00.json",
+    "image": "icons/magic/unholy/barrier-shield-glowing-pink.webp"
+  },
+  {
+    "index": "mmdeadlyleap0000",
+    "name": "deadly leap",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdeadlyleap0000.json",
+    "image": "icons/skills/movement/arrow-upward-blue.webp"
+  },
+  {
+    "index": "mmdeathglare0000",
+    "name": "death glare",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdeathglare0000.json",
+    "image": "icons/magic/death/skull-energy-light-white.webp"
+  },
+  {
+    "index": "mmdeathlessagili",
+    "name": "deathless agility",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdeathlessagili.json",
+    "image": "icons/skills/movement/figure-running-gray.webp"
+  },
+  {
+    "index": "mmdeflectmissile",
+    "name": "deflect missile",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdeflectmissile.json",
+    "image": "icons/magic/light/beam-impact-deflect-teal.webp"
+  },
+  {
+    "index": "mmdestroymetal00",
+    "name": "destroy metal",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdestroymetal00.json",
+    "image": "icons/tools/smithing/furnace-fire-metal-orange.webp"
+  },
+  {
+    "index": "mmdivineaid00000",
+    "name": "divine aid",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdivineaid00000.json",
+    "image": "icons/magic/life/cross-beam-green.webp"
+  },
+  {
+    "index": "mmdominatemind00",
+    "name": "dominate mind",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdominatemind00.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-watch.webp"
+  },
+  {
+    "index": "mmdragonsbreath0",
+    "name": "dragon's breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdragonsbreath0.json",
+    "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp"
+  },
+  {
+    "index": "mmdrainingkiss00",
+    "name": "draining kiss",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdrainingkiss00.json",
+    "image": "icons/magic/control/mouth-smile-deception-purple.webp"
+  },
+  {
+    "index": "mmdreadfulglare0",
+    "name": "dreadful glare",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmdreadfulglare0.json",
+    "image": "icons/magic/perception/eye-slit-red-orange.webp"
+  },
+  {
+    "index": "mmengulf00000000",
+    "name": "engulf",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmengulf00000000.json",
+    "image": "icons/creatures/slimes/slime-face-skull-green.webp"
+  },
+  {
+    "index": "mmentanglingrope",
+    "name": "entangling rope",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmentanglingrope.json",
+    "image": "icons/magic/control/debuff-chains-ropes-net-red-orange.webp"
+  },
+  {
+    "index": "mmenthrallingpan",
+    "name": "enthralling panache",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmenthrallingpan.json",
+    "image": "icons/commodities/materials/feather-blue-green.webp"
+  },
+  {
+    "index": "mmetherealjaunt0",
+    "name": "ethereal jaunt",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmetherealjaunt0.json",
+    "image": "icons/magic/light/explosion-glow-spiral-teal.webp"
+  },
+  {
+    "index": "mmetherealstride",
+    "name": "ethereal stride",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmetherealstride.json",
+    "image": "icons/magic/control/silhouette-hold-change-green.webp"
+  },
+  {
+    "index": "mmetherealness00",
+    "name": "etherealness",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmetherealness00.json",
+    "image": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  {
+    "index": "mmfetidcloud0000",
+    "name": "fetid cloud",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmfetidcloud0000.json",
+    "image": "icons/magic/air/fog-gas-smoke-dense-orange.webp"
+  },
+  {
+    "index": "mmfirebreath0000",
+    "name": "fire breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmfirebreath0000.json",
+    "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp"
+  },
+  {
+    "index": "mmfling000000000",
+    "name": "fling",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmfling000000000.json",
+    "image": "icons/magic/movement/trail-streak-pink.webp"
+  },
+  {
+    "index": "mmfogcloud000000",
+    "name": "fog cloud",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmfogcloud000000.json",
+    "image": "icons/magic/air/air-wave-gust-blue.webp"
+  },
+  {
+    "index": "mmfrostbreath000",
+    "name": "frost breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmfrostbreath000.json",
+    "image": "icons/magic/light/beam-rays-blue-large.webp"
+  },
+  {
+    "index": "mmhasten00000000",
+    "name": "hasten",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmhasten00000000.json",
+    "image": "icons/skills/movement/figure-running-gray.webp"
+  },
+  {
+    "index": "mmheartsight0000",
+    "name": "heart sight",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmheartsight0000.json",
+    "image": "icons/magic/life/heart-shadow-red.webp"
+  },
+  {
+    "index": "mmhellfirespellc",
+    "name": "hellfire spellcasting",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmhellfirespellc.json",
+    "image": "icons/magic/fire/explosion-flame-lightning-strike.webp"
+  },
+  {
+    "index": "mmholyburst00000",
+    "name": "holy burst",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmholyburst00000.json",
+    "image": "icons/magic/holy/projectiles-blades-salvo-yellow.webp"
+  },
+  {
+    "index": "mmhorrificvisage",
+    "name": "horrific visage",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmhorrificvisage.json",
+    "image": "icons/magic/death/skull-energy-light-purple.webp"
+  },
+  {
+    "index": "mmhorrornimbus00",
+    "name": "horror nimbus",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmhorrornimbus00.json",
+    "image": "icons/magic/unholy/hand-claw-fire-blue.webp"
+  },
+  {
+    "index": "mmicewall0000000",
+    "name": "ice wall",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmicewall0000000.json",
+    "image": "icons/magic/water/barrier-ice-wall-snow.webp"
+  },
+  {
+    "index": "mmignitedillumin",
+    "name": "ignited illumination",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmignitedillumin.json",
+    "image": "icons/magic/fire/explosion-embers-evade-silhouette.webp"
+  },
+  {
+    "index": "mmillusoryappear",
+    "name": "illusory appearance",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmillusoryappear.json",
+    "image": "icons/equipment/head/mask-carved-bird-grey-pink.webp"
+  },
+  {
+    "index": "mminfernaltail00",
+    "name": "infernal tail",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mminfernaltail00.json",
+    "image": "icons/creatures/abilities/tail-strike-bone-orange.webp"
+  },
+  {
+    "index": "mminkcloud000000",
+    "name": "ink cloud",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mminkcloud000000.json",
+    "image": "icons/magic/air/fog-gas-smoke-purple.webp"
+  },
+  {
+    "index": "mminvisibility00",
+    "name": "invisibility",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mminvisibility00.json",
+    "image": "icons/creatures/magical/spirit-undead-ghost-purple.webp"
+  },
+  {
+    "index": "mmleap0000000000",
+    "name": "leap",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmleap0000000000.json",
+    "image": "icons/skills/movement/arrows-up-trio-red.webp"
+  },
+  {
+    "index": "mmlifedrain00000",
+    "name": "life drain",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmlifedrain00000.json",
+    "image": "icons/skills/wounds/injury-pain-body-orange.webp"
+  },
+  {
+    "index": "mmlightningbreat",
+    "name": "lightning breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmlightningbreat.json",
+    "image": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  {
+    "index": "mmlightningstorm",
+    "name": "lightning storm",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmlightningstorm.json",
+    "image": "icons/magic/lightning/bolt-strike-cloud-gray.webp"
+  },
+  {
+    "index": "mmlightningstrik",
+    "name": "lightning strike",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmlightningstrik.json",
+    "image": "icons/magic/lightning/bolt-strike-blue-white.webp"
+  },
+  {
+    "index": "mmluringsong0000",
+    "name": "luring song",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmluringsong0000.json",
+    "image": "icons/skills/trades/music-singing-voice-blue.webp"
+  },
+  {
+    "index": "mmmagicofthespid",
+    "name": "magic of the spider queen",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmmagicofthespid.json",
+    "image": "icons/magic/light/hand-sparks-glow-yellow.webp"
+  },
+  {
+    "index": "mmmindrendingroa",
+    "name": "mind-rending roar",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmmindrendingroa.json",
+    "image": "icons/skills/wounds/injury-eyes-blood-red-pink.webp"
+  },
+  {
+    "index": "mmmistystep00000",
+    "name": "misty step",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmmistystep00000.json",
+    "image": "icons/magic/lightning/orb-ball-spiral-blue.webp"
+  },
+  {
+    "index": "mmmoan0000000000",
+    "name": "moan",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmmoan0000000000.json",
+    "image": "icons/magic/control/fear-fright-white.webp"
+  },
+  {
+    "index": "mmmockery0000000",
+    "name": "mockery",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmmockery0000000.json",
+    "image": "icons/magic/control/mouth-smile-deception-purple.webp"
+  },
+  {
+    "index": "mmmultiattack000",
+    "name": "multiattack",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmmultiattack000.json",
+    "image": "icons/skills/melee/strike-weapons-orange.webp"
+  },
+  {
+    "index": "mmnightmarehaunt",
+    "name": "nightmare haunting",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmnightmarehaunt.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-swirl.webp"
+  },
+  {
+    "index": "mmnightmare00000",
+    "name": "nightmare",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmnightmare00000.json",
+    "image": "icons/magic/control/fear-fright-white.webp"
+  },
+  {
+    "index": "mmnimbleescape00",
+    "name": "nimble escape",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmnimbleescape00.json",
+    "image": "icons/skills/movement/ball-spinning-blue.webp"
+  },
+  {
+    "index": "mmparalyzingbrea",
+    "name": "paralyzing breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmparalyzingbrea.json",
+    "image": "icons/magic/unholy/energy-smoke-pink.webp"
+  },
+  {
+    "index": "mmparalyzingtent",
+    "name": "paralyzing tentacles",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmparalyzingtent.json",
+    "image": "icons/creatures/tentacles/tentacles-thing-green.webp"
+  },
+  {
+    "index": "mmparry000000000",
+    "name": "parry",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmparry000000000.json",
+    "image": "icons/skills/melee/swords-parry-block-blue.webp"
+  },
+  {
+    "index": "mmpetrifyingbrea",
+    "name": "petrifying breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpetrifyingbrea.json",
+    "image": "icons/magic/defensive/armor-stone-skin.webp"
+  },
+  {
+    "index": "mmpetrifyinggaze",
+    "name": "petrifying gaze",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpetrifyinggaze.json",
+    "image": "icons/magic/defensive/armor-stone-skin.webp"
+  },
+  {
+    "index": "mmphantasms00000",
+    "name": "phantasms",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmphantasms00000.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "mmpoisonbreath00",
+    "name": "poison breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpoisonbreath00.json",
+    "image": "icons/magic/light/beam-rays-green-large.webp"
+  },
+  {
+    "index": "mmpoisonousspitt",
+    "name": "poisonous spittle",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpoisonousspitt.json",
+    "image": "icons/magic/acid/dissolve-drip-droplet-smoke.webp"
+  },
+  {
+    "index": "mmpossession0000",
+    "name": "possession",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpossession0000.json",
+    "image": "icons/magic/death/skull-energy-light-white.webp"
+  },
+  {
+    "index": "mmprotection0000",
+    "name": "protection",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmprotection0000.json",
+    "image": "icons/magic/defensive/barrier-shield-dome-pink.webp"
+  },
+  {
+    "index": "mmprotectivemagi",
+    "name": "protective magic",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmprotectivemagi.json",
+    "image": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp"
+  },
+  {
+    "index": "mmprowl000000000",
+    "name": "prowl (tiger or hybrid form only)",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmprowl000000000.json",
+    "image": "icons/creatures/abilities/cougar-pounce-stalk-black.webp"
+  },
+  {
+    "index": "mmpummel00000000",
+    "name": "pummel",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpummel00000000.json",
+    "image": "icons/skills/melee/unarmed-punch-fist-blue.webp"
+  },
+  {
+    "index": "mmpursuit0000000",
+    "name": "pursuit",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmpursuit0000000.json",
+    "image": "icons/skills/movement/figure-running-gray.webp"
+  },
+  {
+    "index": "mmquickgrapple00",
+    "name": "quick grapple",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmquickgrapple00.json",
+    "image": "icons/skills/melee/hand-grip-staff-yellow-brown.webp"
+  },
+  {
+    "index": "mmrampage0000000",
+    "name": "rampage",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmrampage0000000.json",
+    "image": "icons/creatures/abilities/mouth-teeth-human.webp"
+  },
+  {
+    "index": "mmreadthoughts00",
+    "name": "read thoughts",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmreadthoughts00.json",
+    "image": "icons/skills/social/diplomacy-handshake-yellow.webp"
+  },
+  {
+    "index": "mmredirectattack",
+    "name": "redirect attack",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmredirectattack.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "mmreel0000000000",
+    "name": "reel",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmreel0000000000.json",
+    "image": "icons/creatures/tentacles/tentacle-earth-green.webp"
+  },
+  {
+    "index": "mmreflexiveanten",
+    "name": "reflexive antennae",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmreflexiveanten.json",
+    "image": "icons/commodities/biological/antenna-yellow.webp"
+  },
+  {
+    "index": "mmrepulsionbreat",
+    "name": "repulsion breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmrepulsionbreat.json",
+    "image": "icons/magic/light/beam-explosion-orange.webp"
+  },
+  {
+    "index": "mmriposte0000000",
+    "name": "riposte",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmriposte0000000.json",
+    "image": "icons/skills/melee/swords-parry-block-yellow.webp"
+  },
+  {
+    "index": "mmroar0000000000",
+    "name": "roar",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmroar0000000000.json",
+    "image": "icons/creatures/abilities/lion-roar-yellow.webp"
+  },
+  {
+    "index": "mmscare000000000",
+    "name": "scare",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmscare000000000.json",
+    "image": "icons/magic/control/fear-fright-white.webp"
+  },
+  {
+    "index": "mmshadowstealth0",
+    "name": "shadow stealth",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmshadowstealth0.json",
+    "image": "icons/magic/control/silhouette-hold-change-green.webp"
+  },
+  {
+    "index": "mmshapeshift0000",
+    "name": "shape-shift",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmshapeshift0000.json",
+    "image": "icons/magic/control/silhouette-grow-shrink-tan.webp"
+  },
+  {
+    "index": "mmshieldbash0000",
+    "name": "shield bash",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmshieldbash0000.json",
+    "image": "icons/equipment/shield/buckler-iron-cross-gray.webp"
+  },
+  {
+    "index": "mmshriek00000000",
+    "name": "shriek",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmshriek00000000.json",
+    "image": "icons/magic/sonic/explosion-shock-sound-wave.webp"
+  },
+  {
+    "index": "mmslayingbow0000",
+    "name": "slaying bow",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmslayingbow0000.json",
+    "image": "icons/magic/light/projectile-halo-teal.webp"
+  },
+  {
+    "index": "mmsleepbreath000",
+    "name": "sleep breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmsleepbreath000.json",
+    "image": "icons/magic/control/sleep-bubble-purple.webp"
+  },
+  {
+    "index": "mmsleep000000000",
+    "name": "sleep",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmsleep000000000.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-pendulum.webp"
+  },
+  {
+    "index": "mmslow0000000000",
+    "name": "slow",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmslow0000000000.json",
+    "image": "icons/magic/time/clock-stopwatch-white-blue.webp"
+  },
+  {
+    "index": "mmslowingbreath0",
+    "name": "slowing breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmslowingbreath0.json",
+    "image": "icons/magic/movement/abstract-ribbons-red-orange.webp"
+  },
+  {
+    "index": "mmspellcasting00",
+    "name": "spellcasting",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmspellcasting00.json",
+    "image": "icons/magic/symbols/circled-gem-pink.webp"
+  },
+  {
+    "index": "mmspiritualweapo",
+    "name": "spiritual weapon",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmspiritualweapo.json",
+    "image": "icons/weapons/axes/axe-double-gold.webp"
+  },
+  {
+    "index": "mmsplit000000000",
+    "name": "split",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmsplit000000000.json",
+    "image": "icons/creatures/slimes/slime-movement-pseudopod-green.webp"
+  },
+  {
+    "index": "mmspores00000000",
+    "name": "spores",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmspores00000000.json",
+    "image": "icons/magic/air/fog-gas-smoke-orange.webp"
+  },
+  {
+    "index": "mmsteambreath000",
+    "name": "steam breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmsteambreath000.json",
+    "image": "icons/magic/air/fog-gas-smoke-dense-white.webp"
+  },
+  {
+    "index": "mmstormbolt00000",
+    "name": "storm bolt",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmstormbolt00000.json",
+    "image": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  {
+    "index": "mmstunningscreec",
+    "name": "stunning screech",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmstunningscreec.json",
+    "image": "icons/magic/sonic/explosion-shock-sound-wave.webp"
+  },
+  {
+    "index": "mmswallow0000000",
+    "name": "swallow",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmswallow0000000.json",
+    "image": "icons/creatures/abilities/mouth-teeth-rows-needles-purple.webp"
+  },
+  {
+    "index": "mmswoop000000000",
+    "name": "swoop",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmswoop000000000.json",
+    "image": "icons/creatures/claws/claw-talons-glowing-orange.webp"
+  },
+  {
+    "index": "mmteleport000000",
+    "name": "teleport",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmteleport000000.json",
+    "image": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp"
+  },
+  {
+    "index": "mmtentacleslam00",
+    "name": "tentacle slam",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmtentacleslam00.json",
+    "image": "icons/creatures/tentacles/tentacles-thing-green.webp"
+  },
+  {
+    "index": "mmthunderousbell",
+    "name": "thunderous bellow",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmthunderousbell.json",
+    "image": "icons/magic/sonic/explosion-shock-sound-wave.webp"
+  },
+  {
+    "index": "mmtrample0000000",
+    "name": "trample",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmtrample0000000.json",
+    "image": "icons/creatures/abilities/paw-print-pair-purple.webp"
+  },
+  {
+    "index": "mmtramplingcharg",
+    "name": "trampling charge",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmtramplingcharg.json",
+    "image": "icons/magic/earth/projectile-stone-landslide.webp"
+  },
+  {
+    "index": "mmtreestride0000",
+    "name": "tree stride",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmtreestride0000.json",
+    "image": "icons/magic/nature/tree-spirit-glow-black-yellow.webp"
+  },
+  {
+    "index": "mmunicornsblessi",
+    "name": "unicorn's blessing",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmunicornsblessi.json",
+    "image": "icons/magic/life/heart-area-circle-red-green.webp"
+  },
+  {
+    "index": "mmunnervinggaze0",
+    "name": "unnerving gaze",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmunnervinggaze0.json",
+    "image": "icons/magic/perception/eye-slit-red-orange.webp"
+  },
+  {
+    "index": "mmunsettlingvisa",
+    "name": "unsettling visage",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmunsettlingvisa.json",
+    "image": "icons/magic/control/silhouette-hold-change-green.webp"
+  },
+  {
+    "index": "mmvanish00000000",
+    "name": "vanish",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmvanish00000000.json",
+    "image": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  {
+    "index": "mmvortex00000000",
+    "name": "vortex",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmvortex00000000.json",
+    "image": "icons/magic/air/wind-vortex-swirl-blue.webp"
+  },
+  {
+    "index": "mmwarcry00000000",
+    "name": "war cry",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmwarcry00000000.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "mmweakeningbreat",
+    "name": "weakening breath",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmweakeningbreat.json",
+    "image": "icons/magic/fire/beam-strike-whip-red.webp"
+  },
+  {
+    "index": "mmwebstrand00000",
+    "name": "web strand",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmwebstrand00000.json",
+    "image": "icons/creatures/webs/web-spider-casting-caught-purple.webp"
+  },
+  {
+    "index": "mmweb00000000000",
+    "name": "web",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmweb00000000000.json",
+    "image": "icons/creatures/webs/web-thin-pruple.webp"
+  },
+  {
+    "index": "mmwhelm000000000",
+    "name": "whelm",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmwhelm000000000.json",
+    "image": "icons/magic/water/bubbles-air-water-light.webp"
+  },
+  {
+    "index": "mmwhirlwindofsan",
+    "name": "whirlwind of sand",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmwhirlwindofsan.json",
+    "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp"
+  },
+  {
+    "index": "mmwhirlwind00000",
+    "name": "whirlwind",
+    "ruleset": "2024",
+    "category": "actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmwhirlwind00000.json",
+    "image": "icons/magic/air/wind-tornado-wall-blue.webp"
+  },
+  {
+    "index": "pscwwdqmx9euatrj",
+    "name": "attacks",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "Item",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/pscwwdqmx9euatrj.json",
+    "image": "/assets/atlas/features/images/default.webp"
+  },
+  {
+    "index": "mmabyssalglaive0",
+    "name": "abyssal glaive",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmabyssalglaive0.json",
+    "image": "icons/weapons/polearms/trident-jeweled-purple.webp"
+  },
+  {
+    "index": "mmattach00000000",
+    "name": "attach",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmattach00000000.json",
+    "image": "icons/magic/control/orb-web-hold.webp"
+  },
+  {
+    "index": "mmbeak0000000000",
+    "name": "beak",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbeak0000000000.json",
+    "image": "icons/commodities/bones/beak-hooked-red.webp"
+  },
+  {
+    "index": "mmbeaks000000000",
+    "name": "beaks",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbeaks000000000.json",
+    "image": "icons/creatures/birds/corvid-call-sound-glowing.webp"
+  },
+  {
+    "index": "mmbeard000000000",
+    "name": "beard",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbeard000000000.json",
+    "image": "icons/commodities/materials/hair-braid-gold.webp"
+  },
+  {
+    "index": "mmbite0000000000",
+    "name": "bite",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbite0000000000.json",
+    "image": "icons/creatures/abilities/fangs-teeth-bite.webp"
+  },
+  {
+    "index": "mmbites000000000",
+    "name": "bites",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbites000000000.json",
+    "image": "icons/creatures/abilities/mouth-teeth-rows-white.webp"
+  },
+  {
+    "index": "mmbladedarm00000",
+    "name": "bladed arm",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbladedarm00000.json",
+    "image": "icons/commodities/metal/fragments-steel-barbed.webp"
+  },
+  {
+    "index": "mmbonebow0000000",
+    "name": "bone bow",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbonebow0000000.json",
+    "image": "icons/weapons/bows/longbow-recurve-skull-brown.webp"
+  },
+  {
+    "index": "mmbonecudgel0000",
+    "name": "bone cudgel",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbonecudgel0000.json",
+    "image": "icons/weapons/clubs/club-bone-blue.webp"
+  },
+  {
+    "index": "mmboulder0000000",
+    "name": "boulder",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmboulder0000000.json",
+    "image": "icons/commodities/stone/stone-pile-grey.webp"
+  },
+  {
+    "index": "mmburn0000000000",
+    "name": "burn",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmburn0000000000.json",
+    "image": "icons/magic/fire/blast-jet-stream-splash.webp"
+  },
+  {
+    "index": "mmburninghammer0",
+    "name": "burning hammer",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmburninghammer0.json",
+    "image": "icons/weapons/hammers/hammer-double-glowing-yellow.webp"
+  },
+  {
+    "index": "mmchain000000000",
+    "name": "chain",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmchain000000000.json",
+    "image": "icons/tools/fasteners/chain-steel-grey.webp"
+  },
+  {
+    "index": "mmchannelnegativ",
+    "name": "channel negative energy",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmchannelnegativ.json",
+    "image": "icons/magic/death/hand-undead-skeleton-fire-pink.webp"
+  },
+  {
+    "index": "mmchargedtendril",
+    "name": "charged tendril",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmchargedtendril.json",
+    "image": "icons/magic/lightning/bolt-strike-purple.webp"
+  },
+  {
+    "index": "mmclaw0000000000",
+    "name": "claw",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmclaw0000000000.json",
+    "image": "icons/skills/melee/blood-slash-foam-red.webp"
+  },
+  {
+    "index": "mmclaws000000000",
+    "name": "claws",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmclaws000000000.json",
+    "image": "icons/creatures/claws/claw-curved-jagged-gray.webp"
+  },
+  {
+    "index": "mmcorruptingtouc",
+    "name": "corrupting touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmcorruptingtouc.json",
+    "image": "icons/magic/death/hand-withered-gray.webp"
+  },
+  {
+    "index": "mmcrush000000000",
+    "name": "crush",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmcrush000000000.json",
+    "image": "icons/magic/unholy/strike-body-life-soul-purple.webp"
+  },
+  {
+    "index": "mmcursedtouch000",
+    "name": "cursed touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmcursedtouch000.json",
+    "image": "icons/magic/unholy/hand-claw-fire-blue.webp"
+  },
+  {
+    "index": "mmdevilishclaw00",
+    "name": "devilish claw",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmdevilishclaw00.json",
+    "image": "icons/magic/unholy/hand-claw-glow-orange.webp"
+  },
+  {
+    "index": "mmdissolvingpseu",
+    "name": "dissolving pseudopod",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmdissolvingpseu.json",
+    "image": "icons/creatures/slimes/slime-movement-dripping-purple.webp"
+  },
+  {
+    "index": "mmdrainingswipe0",
+    "name": "draining swipe",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmdrainingswipe0.json",
+    "image": "icons/magic/unholy/hand-claw-fire-blue.webp"
+  },
+  {
+    "index": "mmeldritchburst0",
+    "name": "eldritch burst",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmeldritchburst0.json",
+    "image": "icons/magic/lightning/barrier-shield-crackling-orb-pink.webp"
+  },
+  {
+    "index": "mmenchantingbow0",
+    "name": "enchanting bow",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmenchantingbow0.json",
+    "image": "icons/weapons/bows/shortbow-recurve-yellow.webp"
+  },
+  {
+    "index": "mmfiendishtouch0",
+    "name": "fiendish touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmfiendishtouch0.json",
+    "image": "icons/magic/unholy/hand-grasping-green.webp"
+  },
+  {
+    "index": "mmfierybolt00000",
+    "name": "fiery bolt",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmfierybolt00000.json",
+    "image": "icons/magic/fire/projectile-fireball-orange-yellow.webp"
+  },
+  {
+    "index": "mmfierymace00000",
+    "name": "fiery mace",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmfierymace00000.json",
+    "image": "icons/magic/fire/barrier-shield-explosion-yellow.webp"
+  },
+  {
+    "index": "mmfist0000000000",
+    "name": "fist",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmfist0000000000.json",
+    "image": "icons/skills/melee/unarmed-punch-fist.webp"
+  },
+  {
+    "index": "mmflamespear0000",
+    "name": "flame spear",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmflamespear0000.json",
+    "image": "icons/magic/fire/projectile-arrow-fire-orange.webp"
+  },
+  {
+    "index": "mmflamesword0000",
+    "name": "flame sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmflamesword0000.json",
+    "image": "icons/magic/fire/dagger-rune-enchant-flame-strong-red.webp"
+  },
+  {
+    "index": "mmflamewhip00000",
+    "name": "flame whip",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmflamewhip00000.json",
+    "image": "icons/weapons/misc/whip-red-yellow.webp"
+  },
+  {
+    "index": "mmflyingsword000",
+    "name": "flying sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmflyingsword000.json",
+    "image": "icons/skills/melee/strike-sword-slashing-red.webp"
+  },
+  {
+    "index": "mmforcebolt00000",
+    "name": "force bolt",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmforcebolt00000.json",
+    "image": "icons/magic/light/projectile-smoke-blue-light.webp"
+  },
+  {
+    "index": "mmforeleg0000000",
+    "name": "foreleg",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmforeleg0000000.json",
+    "image": "icons/creatures/claws/claw-curved-poison-purple.webp"
+  },
+  {
+    "index": "mmfrostaxe000000",
+    "name": "frost axe",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmfrostaxe000000.json",
+    "image": "icons/weapons/axes/axe-battle-worn.webp"
+  },
+  {
+    "index": "mmgore0000000000",
+    "name": "gore",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmgore0000000000.json",
+    "image": "icons/skills/wounds/bone-broken-tooth-fang-red.webp"
+  },
+  {
+    "index": "mmgouge000000000",
+    "name": "gouge",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmgouge000000000.json",
+    "image": "icons/commodities/bones/beak-orange-green.webp"
+  },
+  {
+    "index": "mmgrab0000000000",
+    "name": "grab",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmgrab0000000000.json",
+    "image": "icons/magic/unholy/hand-claw-glow-orange.webp"
+  },
+  {
+    "index": "mmgreatbow000000",
+    "name": "great bow",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmgreatbow000000.json",
+    "image": "icons/weapons/bows/shortbow-recurve-blue.webp"
+  },
+  {
+    "index": "mmhailofbark0000",
+    "name": "hail of bark",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmhailofbark0000.json",
+    "image": "icons/magic/nature/tree-animated-strike.webp"
+  },
+  {
+    "index": "mmhammerthrow000",
+    "name": "hammer throw",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmhammerthrow000.json",
+    "image": "icons/weapons/hammers/hammer-double-glowing-yellow.webp"
+  },
+  {
+    "index": "mmharpoon0000000",
+    "name": "harpoon",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmharpoon0000000.json",
+    "image": "icons/weapons/polearms/spear-barbed-silver.webp"
+  },
+  {
+    "index": "mmheatedblade000",
+    "name": "heated blade",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmheatedblade000.json",
+    "image": "icons/skills/melee/blade-tip-orange.webp"
+  },
+  {
+    "index": "mmholymace000000",
+    "name": "holy mace",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmholymace000000.json",
+    "image": "icons/weapons/maces/mace-flanged-steel.webp"
+  },
+  {
+    "index": "mmhooves00000000",
+    "name": "hooves",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmhooves00000000.json",
+    "image": "icons/commodities/bones/hooves-cloven-brown.webp"
+  },
+  {
+    "index": "mmhurlflame00000",
+    "name": "hurl flame",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmhurlflame00000.json",
+    "image": "icons/magic/fire/flame-burning-earth-yellow.webp"
+  },
+  {
+    "index": "mmicespear000000",
+    "name": "ice spear",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmicespear000000.json",
+    "image": "icons/magic/water/projectile-arrow-water-ice-blue.webp"
+  },
+  {
+    "index": "mminfernalglaive",
+    "name": "infernal glaive",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mminfernalglaive.json",
+    "image": "icons/weapons/polearms/glaive-hooked-steel.webp"
+  },
+  {
+    "index": "mminfernalsting0",
+    "name": "infernal sting",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mminfernalsting0.json",
+    "image": "icons/commodities/biological/stinger-insect-brown.webp"
+  },
+  {
+    "index": "mmlightningblade",
+    "name": "lightning blade",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmlightningblade.json",
+    "image": "icons/weapons/swords/sword-flanged-lightning.webp"
+  },
+  {
+    "index": "mmnecroticbow000",
+    "name": "necrotic bow",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmnecroticbow000.json",
+    "image": "icons/weapons/bows/bow-recurve-black.webp"
+  },
+  {
+    "index": "mmnecroticray000",
+    "name": "necrotic ray",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmnecroticray000.json",
+    "image": "icons/magic/unholy/beam-impact-purple.webp"
+  },
+  {
+    "index": "mmnecroticsword0",
+    "name": "necrotic sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmnecroticsword0.json",
+    "image": "icons/weapons/swords/sword-guard-serrated.webp"
+  },
+  {
+    "index": "mmneedlesword000",
+    "name": "needle sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmneedlesword000.json",
+    "image": "icons/skills/melee/blade-tip-orange.webp"
+  },
+  {
+    "index": "mmnightmareray00",
+    "name": "nightmare ray",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmnightmareray00.json",
+    "image": "icons/magic/unholy/energy-smoke-pink.webp"
+  },
+  {
+    "index": "mmoceanspear0000",
+    "name": "ocean spear",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmoceanspear0000.json",
+    "image": "icons/weapons/polearms/spear-barbed-silver.webp"
+  },
+  {
+    "index": "mmpactblade00000",
+    "name": "pact blade",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpactblade00000.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "mmparalyzingtouc",
+    "name": "paralyzing touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmparalyzingtouc.json",
+    "image": "icons/magic/death/hand-withered-gray.webp"
+  },
+  {
+    "index": "mmpetrifyingbite",
+    "name": "petrifying bite",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpetrifyingbite.json",
+    "image": "icons/magic/defensive/armor-stone-skin.webp"
+  },
+  {
+    "index": "mmpincer00000000",
+    "name": "pincer",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpincer00000000.json",
+    "image": "icons/commodities/claws/claw-pincer-grey.webp"
+  },
+  {
+    "index": "mmpoisonburst000",
+    "name": "poison burst",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpoisonburst000.json",
+    "image": "icons/magic/acid/projectile-faceted-glob.webp"
+  },
+  {
+    "index": "mmpoisonray00000",
+    "name": "poison ray",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpoisonray00000.json",
+    "image": "icons/magic/light/beam-rays-green.webp"
+  },
+  {
+    "index": "mmproboscis00000",
+    "name": "proboscis",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmproboscis00000.json",
+    "image": "icons/commodities/bones/tooth-spiked-brown.webp"
+  },
+  {
+    "index": "mmpseudopod00000",
+    "name": "pseudopod",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpseudopod00000.json",
+    "image": "icons/creatures/slimes/slime-movement-pseudopods-blue.webp"
+  },
+  {
+    "index": "mmradiantflame00",
+    "name": "radiant flame",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmradiantflame00.json",
+    "image": "icons/magic/fire/blast-jet-stream-embers-red.webp"
+  },
+  {
+    "index": "mmradianthorn000",
+    "name": "radiant horn",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmradianthorn000.json",
+    "image": "icons/creatures/mammals/unicorn-horned-white.webp"
+  },
+  {
+    "index": "mmradiantsword00",
+    "name": "radiant sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmradiantsword00.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "mmrake0000000000",
+    "name": "rake",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrake0000000000.json",
+    "image": "icons/magic/nature/root-vine-hand-strike.webp"
+  },
+  {
+    "index": "mmram00000000000",
+    "name": "ram",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmram00000000000.json",
+    "image": "icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp"
+  },
+  {
+    "index": "mmrend0000000000",
+    "name": "rend",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrend0000000000.json",
+    "image": "icons/skills/melee/shield-damaged-broken-orange.webp"
+  },
+  {
+    "index": "mmrestlesstouch0",
+    "name": "restless touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrestlesstouch0.json",
+    "image": "icons/commodities/biological/hand-clawed-blue.webp"
+  },
+  {
+    "index": "mmritualsickle00",
+    "name": "ritual sickle",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmritualsickle00.json",
+    "image": "icons/weapons/sickles/sickle-hooked-silver.webp"
+  },
+  {
+    "index": "mmrocklaunch0000",
+    "name": "rock launch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrocklaunch0000.json",
+    "image": "icons/magic/earth/projectile-boulder-debris.webp"
+  },
+  {
+    "index": "mmrock0000000000",
+    "name": "rock",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrock0000000000.json",
+    "image": "icons/commodities/stone/rock-chunk-brown.webp"
+  },
+  {
+    "index": "mmrottingfist000",
+    "name": "rotting fist",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrottingfist000.json",
+    "image": "icons/magic/lightning/claws-unarmed-strike-teal.webp"
+  },
+  {
+    "index": "mmrottingtouch00",
+    "name": "rotting touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmrottingtouch00.json",
+    "image": "icons/magic/nature/beam-hand-leaves-green.webp"
+  },
+  {
+    "index": "mmscratch0000000",
+    "name": "scratch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmscratch0000000.json",
+    "image": "icons/skills/melee/blood-slash-foam-red.webp"
+  },
+  {
+    "index": "mmsearingfork000",
+    "name": "searing fork",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmsearingfork000.json",
+    "image": "icons/weapons/polearms/trident-ice-blue.webp"
+  },
+  {
+    "index": "mmshock000000000",
+    "name": "shock",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmshock000000000.json",
+    "image": "icons/magic/lightning/orb-ball-purple.webp"
+  },
+  {
+    "index": "mmshred000000000",
+    "name": "shred",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmshred000000000.json",
+    "image": "icons/magic/unholy/strike-beam-blood-large-red-teal.webp"
+  },
+  {
+    "index": "mmslam0000000000",
+    "name": "slam",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmslam0000000000.json",
+    "image": "icons/magic/sonic/explosion-impact-shock-wave.webp"
+  },
+  {
+    "index": "mmslash000000000",
+    "name": "slash",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmslash000000000.json",
+    "image": "icons/skills/melee/strike-sword-steel-yellow.webp"
+  },
+  {
+    "index": "mmsmother0000000",
+    "name": "smother",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmsmother0000000.json",
+    "image": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp"
+  },
+  {
+    "index": "mmsnakehair00000",
+    "name": "snake hair",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmsnakehair00000.json",
+    "image": "icons/creatures/reptiles/snake-fangs-bite-green.webp"
+  },
+  {
+    "index": "mmsting000000000",
+    "name": "sting",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmsting000000000.json",
+    "image": "icons/creatures/abilities/stinger-poison-green.webp"
+  },
+  {
+    "index": "mmstoneclub00000",
+    "name": "stone club",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmstoneclub00000.json",
+    "image": "icons/weapons/clubs/club-simple-stone.webp"
+  },
+  {
+    "index": "mmstormblade0000",
+    "name": "storm blade",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmstormblade0000.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "mmstormsword0000",
+    "name": "storm sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmstormsword0000.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "mmswarmofgraspin",
+    "name": "swarm of grasping hands",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmswarmofgraspin.json",
+    "image": "icons/magic/death/hand-withered-gray.webp"
+  },
+  {
+    "index": "mmtailspike00000",
+    "name": "tail spike",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtailspike00000.json",
+    "image": "icons/commodities/biological/tentacle-thorned-green.webp"
+  },
+  {
+    "index": "mmtailstinger000",
+    "name": "tail stinger",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtailstinger000.json",
+    "image": "icons/commodities/biological/stinger-insect-grey.webp"
+  },
+  {
+    "index": "mmtail0000000000",
+    "name": "tail",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtail0000000000.json",
+    "image": "icons/creatures/abilities/tail-swipe-green.webp"
+  },
+  {
+    "index": "mmtalons00000000",
+    "name": "talons",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtalons00000000.json",
+    "image": "icons/creatures/claws/claw-talons-yellow-red.webp"
+  },
+  {
+    "index": "mmtentacle000000",
+    "name": "tentacle",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtentacle000000.json",
+    "image": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp"
+  },
+  {
+    "index": "mmtentacles00000",
+    "name": "tentacles",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtentacles00000.json",
+    "image": "icons/creatures/tentacles/tentacles-suctioncups-pink.webp"
+  },
+  {
+    "index": "mmthornburst0000",
+    "name": "thorn burst",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmthornburst0000.json",
+    "image": "icons/magic/nature/root-vine-spiral-thorns-teal.webp"
+  },
+  {
+    "index": "mmthunderbolt000",
+    "name": "thunderbolt",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmthunderbolt000.json",
+    "image": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  {
+    "index": "mmthundercloud00",
+    "name": "thundercloud",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmthundercloud00.json",
+    "image": "icons/magic/lightning/bolt-strike-creature-pink.webp"
+  },
+  {
+    "index": "mmthunderousmace",
+    "name": "thunderous mace",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmthunderousmace.json",
+    "image": "icons/weapons/maces/mace-flanged-steel.webp"
+  },
+  {
+    "index": "mmthunderousslam",
+    "name": "thunderous slam",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmthunderousslam.json",
+    "image": "icons/skills/wounds/injury-pain-body-orange.webp"
+  },
+  {
+    "index": "mmtouch000000000",
+    "name": "touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtouch000000000.json",
+    "image": "icons/magic/fire/flame-burning-hand-white.webp"
+  },
+  {
+    "index": "mmtrashlob000000",
+    "name": "trash lob",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtrashlob000000.json",
+    "image": "icons/commodities/materials/material-cotton-white.webp"
+  },
+  {
+    "index": "mmtreeclub000000",
+    "name": "tree club",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmtreeclub000000.json",
+    "image": "icons/weapons/clubs/club-simple-black.webp"
+  },
+  {
+    "index": "mmumbraldagger00",
+    "name": "umbral dagger",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmumbraldagger00.json",
+    "image": "icons/weapons/daggers/dagger-magical-glowing-blue.webp"
+  },
+  {
+    "index": "mmverdantwisp000",
+    "name": "verdant wisp",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmverdantwisp000.json",
+    "image": "icons/magic/nature/root-vines-silhouette-teal.webp"
+  },
+  {
+    "index": "mmvileslime00000",
+    "name": "vile slime",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmvileslime00000.json",
+    "image": "icons/creatures/slimes/slime-movement-splashing-yellow.webp"
+  },
+  {
+    "index": "mmvinelash000000",
+    "name": "vine lash",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmvinelash000000.json",
+    "image": "icons/magic/nature/root-vine-sword-broken.webp"
+  },
+  {
+    "index": "mmvinestaff00000",
+    "name": "vine staff",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmvinestaff00000.json",
+    "image": "icons/weapons/staves/staff-forest-green.webp"
+  },
+  {
+    "index": "mmwindswipe00000",
+    "name": "wind swipe",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmwindswipe00000.json",
+    "image": "icons/magic/air/air-wave-gust-blue.webp"
+  },
+  {
+    "index": "mmwitheringsword",
+    "name": "withering sword",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmwitheringsword.json",
+    "image": "icons/weapons/swords/sword-flanged-lightning.webp"
+  },
+  {
+    "index": "mmwitheringtouch",
+    "name": "withering touch",
+    "ruleset": "2024",
+    "category": "attacks",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmwitheringtouch.json",
+    "image": "icons/magic/death/hand-withered-gray.webp"
+  },
+  {
+    "index": "aehe0l1erkzycvjw",
+    "name": "legendary actions",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "Item",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/aehe0l1erkzycvjw.json",
+    "image": "/assets/atlas/features/images/default.webp"
+  },
+  {
+    "index": "mmblazinglight00",
+    "name": "blazing light",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmblazinglight00.json",
+    "image": "icons/magic/fire/projectiles-salvo-trio-orange.webp"
+  },
+  {
+    "index": "mmchill000000000",
+    "name": "chill",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmchill000000000.json",
+    "image": "icons/magic/water/ice-snowman.webp"
+  },
+  {
+    "index": "mmcoldgale000000",
+    "name": "cold gale",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmcoldgale000000.json",
+    "image": "icons/magic/water/projectile-icecicle-glowing.webp"
+  },
+  {
+    "index": "mmcommandingpres",
+    "name": "commanding presence",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmcommandingpres.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "mmdeathlessstrik",
+    "name": "deathless strike",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmdeathlessstrik.json",
+    "image": "icons/skills/wounds/injury-pain-body-orange.webp"
+  },
+  {
+    "index": "mmdeathlytelepor",
+    "name": "deathly teleport",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmdeathlytelepor.json",
+    "image": "icons/skills/wounds/injury-pain-body-orange.webp"
+  },
+  {
+    "index": "mmdisruptlife000",
+    "name": "disrupt life",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmdisruptlife000.json",
+    "image": "icons/magic/life/heart-broken-red.webp"
+  },
+  {
+    "index": "mmdreadcommand00",
+    "name": "dread command",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmdreadcommand00.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "mmfieryrays00000",
+    "name": "fiery rays",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmfieryrays00000.json",
+    "image": "icons/magic/fire/beam-jet-stream-trails-orange.webp"
+  },
+  {
+    "index": "mmfreezingburst0",
+    "name": "freezing burst",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmfreezingburst0.json",
+    "image": "icons/magic/water/projectile-ice-chunk-blue.webp"
+  },
+  {
+    "index": "mmfrighteninggaz",
+    "name": "frightening gaze",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmfrighteninggaz.json",
+    "image": "icons/magic/unholy/silhouette-robe-evil-glow.webp"
+  },
+  {
+    "index": "mmfrightfulprese",
+    "name": "frightful presence",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmfrightfulprese.json",
+    "image": "icons/magic/unholy/silhouette-robe-evil-glow.webp"
+  },
+  {
+    "index": "mmgigglingmagic0",
+    "name": "giggling magic",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmgigglingmagic0.json",
+    "image": "icons/magic/control/mouth-smile-deception-purple.webp"
+  },
+  {
+    "index": "mmglare000000000",
+    "name": "glare",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmglare000000000.json",
+    "image": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp"
+  },
+  {
+    "index": "mmguidinglight00",
+    "name": "guiding light",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmguidinglight00.json",
+    "image": "icons/magic/light/projectile-flare-blue.webp"
+  },
+  {
+    "index": "mmlash0000000000",
+    "name": "lash",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmlash0000000000.json",
+    "image": "icons/creatures/tentacles/tentacle-earth-green.webp"
+  },
+  {
+    "index": "mmmindinvasion00",
+    "name": "mind invasion",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmmindinvasion00.json",
+    "image": "icons/magic/unholy/beam-ringed-impact-purple.webp"
+  },
+  {
+    "index": "mmmindjolt000000",
+    "name": "mind jolt",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmmindjolt000000.json",
+    "image": "icons/magic/unholy/beam-ringed-impact-purple.webp"
+  },
+  {
+    "index": "mmnecroticstrike",
+    "name": "necrotic strike",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmnecroticstrike.json",
+    "image": "icons/magic/unholy/hand-claw-fire-blue.webp"
+  },
+  {
+    "index": "mmnoxiousmiasma0",
+    "name": "noxious miasma",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmnoxiousmiasma0.json",
+    "image": "icons/magic/air/fog-gas-smoke-dense-green.webp"
+  },
+  {
+    "index": "mmonslaught00000",
+    "name": "onslaught",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmonslaught00000.json",
+    "image": "icons/skills/wounds/injury-pain-body-orange.webp"
+  },
+  {
+    "index": "mmpounce00000000",
+    "name": "pounce",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmpounce00000000.json",
+    "image": "icons/skills/movement/arrow-upward-yellow.webp"
+  },
+  {
+    "index": "mmpsychicdrain00",
+    "name": "psychic drain",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmpsychicdrain00.json",
+    "image": "icons/magic/control/silhouette-aura-energy.webp"
+  },
+  {
+    "index": "mmradianttelepor",
+    "name": "radiant teleport",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmradianttelepor.json",
+    "image": "icons/magic/light/explosion-star-glow-silhouette.webp"
+  },
+  {
+    "index": "mmscorchingsands",
+    "name": "scorching sands",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmscorchingsands.json",
+    "image": "icons/environment/wilderness/cave-entrance-mountain.webp"
+  },
+  {
+    "index": "mmshimmeringshie",
+    "name": "shimmering shield",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmshimmeringshie.json",
+    "image": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp"
+  },
+  {
+    "index": "mmsonicboom00000",
+    "name": "sonic boom",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmsonicboom00000.json",
+    "image": "icons/magic/sonic/explosion-shock-wave-teal.webp"
+  },
+  {
+    "index": "mmtailswipe00000",
+    "name": "tail swipe",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmtailswipe00000.json",
+    "image": "icons/creatures/abilities/tail-swipe-green.webp"
+  },
+  {
+    "index": "mmthunderclap000",
+    "name": "thunderclap",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmthunderclap000.json",
+    "image": "icons/magic/lightning/bolts-salvo-clouds-sky.webp"
+  },
+  {
+    "index": "mmtoxicink000000",
+    "name": "toxic ink",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmtoxicink000000.json",
+    "image": "icons/magic/unholy/strike-beam-blood-small-red-purple.webp"
+  },
+  {
+    "index": "mmweightofyears0",
+    "name": "weight of years",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmweightofyears0.json",
+    "image": "icons/magic/death/hand-withered-gray.webp"
+  },
+  {
+    "index": "mmworldshakingmo",
+    "name": "world-shaking movement",
+    "ruleset": "2024",
+    "category": "legendary-actions",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmworldshakingmo.json",
+    "image": "icons/magic/earth/barrier-stone-brown-green.webp"
+  },
+  {
+    "index": "l9zgr8qapc3ngkhb",
+    "name": "traits",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "Item",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/l9zgr8qapc3ngkhb.json",
+    "image": "/assets/atlas/features/images/default.webp"
+  },
+  {
+    "index": "mmabduct00000000",
+    "name": "abduct",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmabduct00000000.json",
+    "image": "icons/magic/movement/portal-vortex-orange.webp"
+  },
+  {
+    "index": "mmaberrantground",
+    "name": "aberrant ground",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmaberrantground.json",
+    "image": "icons/magic/earth/barrier-stone-explosion-red.webp"
+  },
+  {
+    "index": "mmacidabsorption",
+    "name": "acid absorption",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmacidabsorption.json",
+    "image": "icons/magic/acid/orb-bubble-smoke-drip.webp"
+  },
+  {
+    "index": "mmadhesive000000",
+    "name": "adhesive (object form only)",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmadhesive000000.json",
+    "image": "icons/creatures/slimes/slime-movement-pseudopods-blue.webp"
+  },
+  {
+    "index": "mmagile000000000",
+    "name": "agile",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmagile000000000.json",
+    "image": "icons/creatures/mammals/rodent-rat-green.webp"
+  },
+  {
+    "index": "mmairform0000000",
+    "name": "air form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmairform0000000.json",
+    "image": "icons/magic/air/weather-wind-gust.webp"
+  },
+  {
+    "index": "mmamorphous00000",
+    "name": "amorphous",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmamorphous00000.json",
+    "image": "icons/creatures/slimes/slime-face-hollow-green.webp"
+  },
+  {
+    "index": "mmamphibious0000",
+    "name": "amphibious",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmamphibious0000.json",
+    "image": "icons/creatures/amphibians/bullfrog-glass-teal.webp"
+  },
+  {
+    "index": "mmauraofauthorit",
+    "name": "aura of authority",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmauraofauthorit.json",
+    "image": "icons/sundries/flags/banner-skull-red.webp"
+  },
+  {
+    "index": "mmaversiontofire",
+    "name": "aversion to fire",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmaversiontofire.json",
+    "image": "icons/magic/fire/flame-burning-skull-orange.webp"
+  },
+  {
+    "index": "mmbarbedhide0000",
+    "name": "barbed hide",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmbarbedhide0000.json",
+    "image": "icons/creatures/abilities/stinger-spine-horn-blood.webp"
+  },
+  {
+    "index": "mmbeastofburden0",
+    "name": "beast of burden",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmbeastofburden0.json",
+    "image": "icons/containers/bags/pack-leather-brown.webp"
+  },
+  {
+    "index": "mmberserk0000000",
+    "name": "berserk",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmberserk0000000.json",
+    "image": "icons/magic/movement/abstract-ribbons-red-orange.webp"
+  },
+  {
+    "index": "mmbloodfrenzy000",
+    "name": "blood frenzy",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmbloodfrenzy000.json",
+    "image": "icons/skills/wounds/blood-drip-droplet-red.webp"
+  },
+  {
+    "index": "mmbloodiedfrenzy",
+    "name": "bloodied frenzy",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmbloodiedfrenzy.json",
+    "image": "icons/skills/wounds/injury-hand-blood-red.webp"
+  },
+  {
+    "index": "mmbloodiedfury00",
+    "name": "bloodied fury",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmbloodiedfury00.json",
+    "image": "icons/creatures/abilities/fang-tooth-blood-red.webp"
+  },
+  {
+    "index": "mmblurredform000",
+    "name": "blurred form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmblurredform000.json",
+    "image": "icons/creatures/magical/spirit-fear-energy-pink.webp"
+  },
+  {
+    "index": "mmbound000000000",
+    "name": "bound",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmbound000000000.json",
+    "image": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp"
+  },
+  {
+    "index": "mmcelestialresto",
+    "name": "celestial restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmcelestialresto.json",
+    "image": "icons/magic/holy/chalice-glowing-yellow-blue.webp"
+  },
+  {
+    "index": "mmcompression000",
+    "name": "compression",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmcompression000.json",
+    "image": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp"
+  },
+  {
+    "index": "mmconferfireresi",
+    "name": "confer fire resistance",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmconferfireresi.json",
+    "image": "icons/magic/fire/barrier-shield-explosion-yellow.webp"
+  },
+  {
+    "index": "mmcorrosiveform0",
+    "name": "corrosive form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmcorrosiveform0.json",
+    "image": "icons/skills/melee/sword-damaged-broken-purple.webp"
+  },
+  {
+    "index": "mmcovenmagic0000",
+    "name": "coven magic",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmcovenmagic0000.json",
+    "image": "icons/skills/toxins/cauldron-bubbles-overflow-green.webp"
+  },
+  {
+    "index": "mmdeathburst0000",
+    "name": "death burst",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmdeathburst0000.json",
+    "image": "icons/magic/death/skull-humanoid-white-blue.webp"
+  },
+  {
+    "index": "mmdeaththroes000",
+    "name": "death throes",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmdeaththroes000.json",
+    "image": "icons/magic/death/skeleton-skull-soul-blue.webp"
+  },
+  {
+    "index": "mmdemonicrestora",
+    "name": "demonic restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmdemonicrestora.json",
+    "image": "icons/creatures/slimes/bubbling-purple.webp"
+  },
+  {
+    "index": "mmdiabolicalrest",
+    "name": "diabolical restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmdiabolicalrest.json",
+    "image": "icons/magic/fire/blast-jet-stream-embers-yellow.webp"
+  },
+  {
+    "index": "mmdivineawarenes",
+    "name": "divine awareness",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmdivineawarenes.json",
+    "image": "icons/magic/holy/prayer-hands-glowing-yellow.webp"
+  },
+  {
+    "index": "mmdraconicorigin",
+    "name": "draconic origin",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmdraconicorigin.json",
+    "image": "icons/creatures/abilities/dragon-breath-purple.webp"
+  },
+  {
+    "index": "mmearthglide0000",
+    "name": "earth glide",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmearthglide0000.json",
+    "image": "icons/magic/earth/projectile-stone-landslide.webp"
+  },
+  {
+    "index": "mmeldritchrestor",
+    "name": "eldritch restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmeldritchrestor.json",
+    "image": "icons/magic/light/explosion-glow-spiral-teal.webp"
+  },
+  {
+    "index": "mmelementalresto",
+    "name": "elemental restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmelementalresto.json",
+    "image": "icons/magic/light/explosion-star-glow-silhouette.webp"
+  },
+  {
+    "index": "mmephemeral00000",
+    "name": "ephemeral",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmephemeral00000.json",
+    "image": "icons/magic/light/orb-shadow-blue.webp"
+  },
+  {
+    "index": "mmetherealsight0",
+    "name": "ethereal sight",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmetherealsight0.json",
+    "image": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp"
+  },
+  {
+    "index": "mmevasion0000000",
+    "name": "evasion",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmevasion0000000.json",
+    "image": "icons/skills/movement/figure-running-gray.webp"
+  },
+  {
+    "index": "mmexaltedrestora",
+    "name": "exalted restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmexaltedrestora.json",
+    "image": "icons/magic/light/explosion-star-glow-silhouette.webp"
+  },
+  {
+    "index": "mmfearaura000000",
+    "name": "fear aura",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmfearaura000000.json",
+    "image": "icons/creatures/unholy/demon-horned-winged-laughing.webp"
+  },
+  {
+    "index": "mmfiendishrestor",
+    "name": "fiendish restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmfiendishrestor.json",
+    "image": "icons/creatures/unholy/demon-fire-horned-clawed.webp"
+  },
+  {
+    "index": "mmfireabsorption",
+    "name": "fire absorption",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmfireabsorption.json",
+    "image": "icons/magic/fire/flame-burning-earth-orange.webp"
+  },
+  {
+    "index": "mmfireaura000000",
+    "name": "fire aura",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmfireaura000000.json",
+    "image": "icons/magic/fire/barrier-wall-flame-ring-yellow.webp"
+  },
+  {
+    "index": "mmfireform000000",
+    "name": "fire form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmfireform000000.json",
+    "image": "icons/magic/fire/flame-burning-embers-yellow.webp"
+  },
+  {
+    "index": "mmflyby000000000",
+    "name": "flyby",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmflyby000000000.json",
+    "image": "icons/creatures/abilities/wings-birdlike-blue.webp"
+  },
+  {
+    "index": "mmfreeze00000000",
+    "name": "freeze",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmfreeze00000000.json",
+    "image": "icons/magic/water/barrier-ice-water-cube.webp"
+  },
+  {
+    "index": "mmgibbering00000",
+    "name": "gibbering",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmgibbering00000.json",
+    "image": "icons/creatures/slimes/slime-face-teeth-purple.webp"
+  },
+  {
+    "index": "mmgreatermagicre",
+    "name": "greater magic resistance",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmgreatermagicre.json",
+    "image": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp"
+  },
+  {
+    "index": "mmheataura000000",
+    "name": "heat aura",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmheataura000000.json",
+    "image": "icons/magic/fire/barrier-wall-flame-ring-yellow.webp"
+  },
+  {
+    "index": "mmhellishrestora",
+    "name": "hellish restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmhellishrestora.json",
+    "image": "icons/creatures/unholy/demon-fire-imp.webp"
+  },
+  {
+    "index": "mmholdbreath0000",
+    "name": "hold breath",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmholdbreath0000.json",
+    "image": "icons/magic/water/bubbles-air-water-light.webp"
+  },
+  {
+    "index": "mmicewalk0000000",
+    "name": "ice walk",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmicewalk0000000.json",
+    "image": "icons/magic/water/water-iceberg-bubbles.webp"
+  },
+  {
+    "index": "mmillumination00",
+    "name": "illumination",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmillumination00.json",
+    "image": "icons/magic/light/orb-lightbulb-gray.webp"
+  },
+  {
+    "index": "mmimmutableform0",
+    "name": "immutable form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmimmutableform0.json",
+    "image": "icons/magic/unholy/orb-hands-pink.webp"
+  },
+  {
+    "index": "mmincorporealmov",
+    "name": "incorporeal movement",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmincorporealmov.json",
+    "image": "icons/magic/death/undead-ghost-scream-teal.webp"
+  },
+  {
+    "index": "mmincubusform000",
+    "name": "incubus form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmincubusform000.json",
+    "image": "icons/creatures/unholy/demon-horned-winged-laughing.webp"
+  },
+  {
+    "index": "mminscrutable000",
+    "name": "inscrutable",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mminscrutable000.json",
+    "image": "icons/magic/control/fear-fright-white.webp"
+  },
+  {
+    "index": "mmironscent00000",
+    "name": "iron scent",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmironscent00000.json",
+    "image": "icons/magic/air/fog-gas-smoke-dense-orange.webp"
+  },
+  {
+    "index": "mmjumper00000000",
+    "name": "jumper",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmjumper00000000.json",
+    "image": "icons/skills/movement/arrow-upward-blue.webp"
+  },
+  {
+    "index": "mmlegendaryresis",
+    "name": "legendary resistance",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmlegendaryresis.json",
+    "image": "icons/equipment/shield/heater-steel-crystal-red.webp"
+  },
+  {
+    "index": "mmlightsensitivi",
+    "name": "light sensitivity",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmlightsensitivi.json",
+    "image": "icons/magic/light/explosion-star-glow-yellow.webp"
+  },
+  {
+    "index": "mmlightningabsor",
+    "name": "lightning absorption",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmlightningabsor.json",
+    "image": "icons/magic/lightning/barrier-shield-orb-pink.webp"
+  },
+  {
+    "index": "mmlimitedamphibi",
+    "name": "limited amphibiousness",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmlimitedamphibi.json",
+    "image": "icons/creatures/amphibians/treefrog-underneath-teal.webp"
+  },
+  {
+    "index": "mmloathsomelimbs",
+    "name": "loathsome limbs",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmloathsomelimbs.json",
+    "image": "icons/magic/death/hand-withered-gray.webp"
+  },
+  {
+    "index": "mmmagicresistanc",
+    "name": "magic resistance",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmmagicresistanc.json",
+    "image": "icons/magic/light/orbs-hand-gray.webp"
+  },
+  {
+    "index": "mmmagicrope00000",
+    "name": "magic rope",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmmagicrope00000.json",
+    "image": "icons/sundries/survival/rope-wrapped-purple.webp"
+  },
+  {
+    "index": "mmmimicry0000000",
+    "name": "mimicry",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmmimicry0000000.json",
+    "image": "icons/creatures/birds/corvid-call-sound-blue.webp"
+  },
+  {
+    "index": "mmmistyescape000",
+    "name": "misty escape",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmmistyescape000.json",
+    "image": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp"
+  },
+  {
+    "index": "mmmucuscloud0000",
+    "name": "mucus cloud",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmmucuscloud0000.json",
+    "image": "icons/magic/acid/dissolve-pool-bubbles.webp"
+  },
+  {
+    "index": "mmmultipleheads0",
+    "name": "multiple heads",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmmultipleheads0.json",
+    "image": "icons/creatures/abilities/dragon-breath-purple.webp"
+  },
+  {
+    "index": "mmoozecube000000",
+    "name": "ooze cube",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmoozecube000000.json",
+    "image": "icons/commodities/materials/glass-cube.webp"
+  },
+  {
+    "index": "mmpacktactics000",
+    "name": "pack tactics",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmpacktactics000.json",
+    "image": "icons/creatures/abilities/wolf-heads-swirl-purple.webp"
+  },
+  {
+    "index": "mmprobingtelepat",
+    "name": "probing telepathy",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmprobingtelepat.json",
+    "image": "icons/magic/sonic/projectile-sound-rings-wave.webp"
+  },
+  {
+    "index": "mmreactiveheads0",
+    "name": "reactive heads",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmreactiveheads0.json",
+    "image": "icons/creatures/abilities/wolf-heads-swirl-purple.webp"
+  },
+  {
+    "index": "mmreactive000000",
+    "name": "reactive",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmreactive000000.json",
+    "image": "icons/creatures/abilities/wolf-heads-swirl-purple.webp"
+  },
+  {
+    "index": "mmreflectivecara",
+    "name": "reflective carapace",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmreflectivecara.json",
+    "image": "icons/commodities/biological/shell-tan.webp"
+  },
+  {
+    "index": "mmregeneration00",
+    "name": "regeneration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmregeneration00.json",
+    "image": "icons/skills/wounds/injury-stitched-flesh-red.webp"
+  },
+  {
+    "index": "mmrunningleap000",
+    "name": "running leap",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmrunningleap000.json",
+    "image": "icons/skills/movement/feet-winged-boots-glowing-yellow.webp"
+  },
+  {
+    "index": "mmsensemagic0000",
+    "name": "sense magic",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsensemagic0000.json",
+    "image": "icons/magic/light/hand-sparks-smoke-green.webp"
+  },
+  {
+    "index": "mmsharktelepathy",
+    "name": "shark telepathy",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsharktelepathy.json",
+    "image": "icons/magic/sonic/explosion-shock-sound-wave.webp"
+  },
+  {
+    "index": "mmshieldedmind00",
+    "name": "shielded mind",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmshieldedmind00.json",
+    "image": "icons/magic/defensive/barrier-shield-dome-pink.webp"
+  },
+  {
+    "index": "mmsiegemonster00",
+    "name": "siege monster",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsiegemonster00.json",
+    "image": "icons/creatures/magical/construct-iron-stomping-yellow.webp"
+  },
+  {
+    "index": "mmsoulbag0000000",
+    "name": "soul bag",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsoulbag0000000.json",
+    "image": "icons/containers/bags/sack-twisted-skull-purple.webp"
+  },
+  {
+    "index": "mmspeakwithbeast",
+    "name": "speak with beasts and plants",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmspeakwithbeast.json",
+    "image": "icons/magic/nature/lotus-glow-pink.webp"
+  },
+  {
+    "index": "mmspellstoring00",
+    "name": "spell storing",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmspellstoring00.json",
+    "image": "icons/magic/light/orb-container-orange.webp"
+  },
+  {
+    "index": "mmspiderclimb000",
+    "name": "spider climb",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmspiderclimb000.json",
+    "image": "icons/creatures/invertebrates/spider-pink-purple.webp"
+  },
+  {
+    "index": "mmspiritjar00000",
+    "name": "spirit jar",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmspiritjar00000.json",
+    "image": "icons/consumables/drinks/clay-jar-glowing-orange-blue.webp"
+  },
+  {
+    "index": "mmstandingleap00",
+    "name": "standing leap",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmstandingleap00.json",
+    "image": "icons/skills/movement/arrow-upward-blue.webp"
+  },
+  {
+    "index": "mmstench00000000",
+    "name": "stench",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmstench00000000.json",
+    "image": "icons/magic/air/fog-gas-smoke-swirling-orange.webp"
+  },
+  {
+    "index": "mmsuccubusform00",
+    "name": "succubus form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsuccubusform00.json",
+    "image": "icons/magic/unholy/silhouette-light-fire-blue.webp"
+  },
+  {
+    "index": "mmsunlightsensit",
+    "name": "sunlight sensitivity",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsunlightsensit.json",
+    "image": "icons/creatures/eyes/humanoid-single-blind.webp"
+  },
+  {
+    "index": "mmsunlightweakne",
+    "name": "sunlight weakness",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmsunlightweakne.json",
+    "image": "icons/magic/light/explosion-star-glow-yellow.webp"
+  },
+  {
+    "index": "mmswarm000000000",
+    "name": "swarm",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmswarm000000000.json",
+    "image": "icons/creatures/invertebrates/bee-yellow.webp"
+  },
+  {
+    "index": "mmtelepathicbond",
+    "name": "telepathic bond",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtelepathicbond.json",
+    "image": "icons/magic/control/energy-stream-link-teal.webp"
+  },
+  {
+    "index": "mmtraining000000",
+    "name": "training",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtraining000000.json",
+    "image": "icons/magic/control/buff-strength-muscle-damage-red.webp"
+  },
+  {
+    "index": "mmtransparent000",
+    "name": "transparent",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtransparent000.json",
+    "image": "icons/magic/water/orb-water-transparent.webp"
+  },
+  {
+    "index": "mmtreasuresense0",
+    "name": "treasure sense",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtreasuresense0.json",
+    "image": "icons/containers/chest/chest-reinforced-box-brown.webp"
+  },
+  {
+    "index": "mmtrollspawn0000",
+    "name": "troll spawn",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtrollspawn0000.json",
+    "image": "icons/magic/unholy/hand-claw-fog-green.webp"
+  },
+  {
+    "index": "mmtunneler000000",
+    "name": "tunneler",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtunneler000000.json",
+    "image": "icons/magic/earth/projectile-stone-landslide.webp"
+  },
+  {
+    "index": "mmundeadfortitud",
+    "name": "undead fortitude",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmundeadfortitud.json",
+    "image": "icons/magic/death/skull-flames-white-blue.webp"
+  },
+  {
+    "index": "mmundeadrestorat",
+    "name": "undead restoration",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmundeadrestorat.json",
+    "image": "icons/magic/death/hand-dirt-undead-zombie.webp"
+  },
+  {
+    "index": "mmvampireweaknes",
+    "name": "vampire weakness",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmvampireweaknes.json",
+    "image": "icons/sundries/survival/stake-rough-heavy-brown.webp"
+  },
+  {
+    "index": "mmvampiricconnec",
+    "name": "vampiric connection",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmvampiricconnec.json",
+    "image": "icons/magic/control/energy-stream-link-teal.webp"
+  },
+  {
+    "index": "mmvileappearance",
+    "name": "vile appearance",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmvileappearance.json",
+    "image": "icons/magic/control/fear-fright-monster-purple-blue.webp"
+  },
+  {
+    "index": "mmwaterbreathing",
+    "name": "water breathing",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmwaterbreathing.json",
+    "image": "icons/creatures/fish/fish-bluefin-yellow-blue.webp"
+  },
+  {
+    "index": "mmwaterform00000",
+    "name": "water form",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmwaterform00000.json",
+    "image": "icons/magic/water/elemental-water.webp"
+  },
+  {
+    "index": "mmwatersusceptib",
+    "name": "water susceptibility",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmwatersusceptib.json",
+    "image": "icons/magic/water/orb-water-bubbles-blue.webp"
+  },
+  {
+    "index": "mmwebwalker00000",
+    "name": "web walker",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmwebwalker00000.json",
+    "image": "icons/creatures/webs/web-spider-glowing-purple.webp"
+  },
+  {
+    "index": "mmwishes00000000",
+    "name": "wishes",
+    "ruleset": "2024",
+    "category": "traits",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmwishes00000000.json",
+    "image": "icons/magic/symbols/star-solid-gold.webp"
+  }
+]

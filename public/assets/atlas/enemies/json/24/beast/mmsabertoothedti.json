@@ -1,0 +1,101 @@
+{
+  "index": "mmsabertoothedti",
+  "name": "saber-toothed tiger",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Saber-Toothed Tiger is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d10",
+  "hit_points_roll": "7d10 + 14",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 17,
+  "constitution": 15,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 8,
+  "stats": {
+    "str": 18,
+    "dex": 17,
+    "con": 15,
+    "int": 3,
+    "wis": 12,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "running leap",
+      "desc": "With a 10-foot running start, the [[lookup @name lowercase]]{monster} can Long Jump up to 25 feet.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "nimble escape",
+      "desc": "The [[lookup @name lowercase]]{monster} takes the &Reference[Disengage] or &Reference[Hide] action.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/saber_toothed_tiger.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmsabertoothedti.json",
+  "updated_at": "2026-09-27T13:37:07.109Z",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet10.0webp",
+  "background_type": "snowy2",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "27-6-2026"
+}

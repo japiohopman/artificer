@@ -1,0 +1,95 @@
+{
+  "index": "mmgorgon00000000",
+  "name": "gorgon",
+  "ruleset": "2024",
+  "category": "construct",
+  "desc": "Gorgon is a CR 5 construct.",
+  "size": "Large",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "dexterity": 11,
+  "constitution": 18,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 20,
+    "dex": 11,
+    "con": 18,
+    "int": 2,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a Large or smaller creature and the [[lookup @name lowercase]]{monster} moved 20+ feet straight toward it immediately before the hit, the target has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "petrifying breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=reU3RXAk0MdPmKCl]], each [[lookup @target.affects.type activity=reU3RXAk0MdPmKCl]] in a [[lookup @target.template.size activity=reU3RXAk0MdPmKCl]]-foot Cone. First Failure: The target has the &Reference[Restrained apply=false] condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. Second Failure: The target has the &Reference[Petrified apply=false] condition instead of the Restrained condition.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "trample",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]], [[lookup @target.affects.labels.statblock activity=QckCIpsC3BdEHycI]] within [[lookup @range.value activity=QckCIpsC3BdEHycI]] feet that has the Prone condition. Failure: [[/damage average]] damage. Success: [[lookup @damage.onSave capitalize activity=QckCIpsC3BdEHycI]] damage.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Gorgon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/gorgon.webp",
+  "url": "/assets/atlas/enemies/json/24/construct/mmgorgon00000000.json",
+  "updated_at": "2026-09-27T13:37:07.698Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

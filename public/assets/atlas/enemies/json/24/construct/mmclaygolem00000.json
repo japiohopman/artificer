@@ -1,0 +1,138 @@
+{
+  "index": "mmclaygolem00000",
+  "name": "clay golem",
+  "ruleset": "2024",
+  "category": "construct",
+  "desc": "Clay Golem is a CR 9 construct.",
+  "size": "Large",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 123,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 52",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 20,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 3,
+  "wisdom": 8,
+  "charisma": 1,
+  "stats": {
+    "str": 20,
+    "dex": 9,
+    "con": 18,
+    "int": 3,
+    "wis": 8,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "acid",
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "plus one other language;",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "acid absorption",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to &Reference[Acid] damage, it takes no damage and instead regains a number of Hit Points equal to the Acid damage dealt.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "berserk",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} starts its turn &Reference[Bloodied], roll [[/r 1d6]]. On a 6, the [[lookup @name lowercase]]{monster} goes berserk. On each of its turns while berserk, the [[lookup @name lowercase]]{monster} attacks the nearest creature it can see. If no creature is near enough to move to and attack, the [[lookup @name lowercase]]{monster} attacks an object. Once the [[lookup @name lowercase]]{monster} goes berserk, it remains so until it is destroyed or it is no longer Bloodied.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "immutable form",
+      "desc": "The [[lookup @name lowercase]]{monster} can't shape-shift.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item Slam]] attacks, or it makes three Slam attacks if it used Hasten this turn.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target's Hit Point maximum decreases by an amount equal to the Acid damage taken.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hasten",
+      "desc": "The [[lookup @name lowercase]]{monster} takes the &Reference[Dash] and &Reference[Disengage] actions.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/ClayGolem.webp",
+  "imageUrl": "/assets/atlas/enemies/images/clay_golem.webp",
+  "url": "/assets/atlas/enemies/json/24/construct/mmclaygolem00000.json",
+  "updated_at": "2026-09-27T13:37:07.690Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

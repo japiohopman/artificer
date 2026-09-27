@@ -1,0 +1,118 @@
+{
+  "index": "mmarchmage000000",
+  "name": "archmage",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Mages@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.BRPgUa1VGeHBz5BR caption=false cite=false classes=\"no-embed mm\"]\nToken artwork by Forgotten Adventures.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Wizard",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 17
+    }
+  ],
+  "hit_points": 170,
+  "hit_dice": "31d8",
+  "hit_points_roll": "31d8 + 31",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 20,
+  "wisdom": 15,
+  "charisma": 16,
+  "stats": {
+    "str": 10,
+    "dex": 14,
+    "con": 12,
+    "int": 20,
+    "wis": 15,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "psychic"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "Common plus five other languages",
+  "challenge_rating": 12,
+  "proficiency_bonus": 4,
+  "xp": 8400,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes four [[/item .mmArcaneBurst000]] attacks.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "arcane burst",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "4d10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "misty step",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Misty Step}, requiring no spell components and using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "protective magic",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Counterspell} or @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Shield} in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{Disguise Self}, @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Light}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{Mage Armor} (included in AC), @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{Mage Hand}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{Prestidigitation} 2/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{Fly}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt} (level 7 version) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplConeofCold]{Cone of Cold} (level 9 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplMindBlank0]{Mind Blank} (cast before combat), @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Scrying}, @UUID[Compendium.dnd5e.spells24.Item.phbsplTeleport00]{Teleport}",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Archmage.webp",
+  "imageUrl": "/assets/atlas/enemies/images/archmage.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmarchmage000000.json",
+  "updated_at": "2026-09-27T13:37:08.865Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

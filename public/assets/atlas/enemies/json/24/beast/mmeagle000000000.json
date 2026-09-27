@@ -1,0 +1,81 @@
+{
+  "index": "mmeagle000000000",
+  "name": "eagle",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Eagle is a CR 0 beast.",
+  "size": "Small",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6 + 1",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 14,
+  "charisma": 7,
+  "stats": {
+    "str": 6,
+    "dex": 15,
+    "con": 12,
+    "int": 2,
+    "wis": 14,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Eagle.webp",
+  "imageUrl": "/assets/atlas/enemies/images/eagle.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmeagle000000000.json",
+  "updated_at": "2026-09-27T13:37:06.902Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

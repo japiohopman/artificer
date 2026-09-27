@@ -1,0 +1,24 @@
+{
+  "index": "mmeldritchrestor",
+  "name": "eldritch restoration",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "If destroyed, the [[lookup @name lowercase]]{monster} gains a new body in [[/r 5d10]] days, reviving with all its Hit Points in the Far Realm or another location chosen by the DM.",
+  "damage": [
+    {
+      "damage_dice": "5d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/light/explosion-glow-spiral-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmeldritchrestor.json",
+  "updated_at": "2026-09-27T13:37:10.517Z"
+}

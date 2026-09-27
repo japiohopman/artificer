@@ -1,0 +1,81 @@
+{
+  "index": "mmwarhorse000000",
+  "name": "warhorse",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Warhorse is a CR 0.5 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 3",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 18,
+    "dex": 12,
+    "con": 13,
+    "int": 2,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature and the horse moved 20+ feet straight toward it immediately before the hit, the target takes an extra 5 (2d4) Bludgeoning damage and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d4+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Warhorse.webp",
+  "imageUrl": "/assets/atlas/enemies/images/warhorse.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmwarhorse000000.json",
+  "updated_at": "2026-09-27T13:37:07.148Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

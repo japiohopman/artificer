@@ -1,0 +1,106 @@
+{
+  "index": "mmswarmofravens0",
+  "name": "swarm of ravens",
+  "ruleset": "2024",
+  "category": "swarm",
+  "desc": "Swarm of Ravens is a CR 0.25 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 6,
+  "stats": {
+    "str": 6,
+    "dex": 14,
+    "con": 12,
+    "int": 5,
+    "wis": 12,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "swarm",
+      "desc": "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny creature. The swarm can't regain Hit Points or gain Temporary Hit Points.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "beaks",
+      "desc": "[[/attack extended]]. [[/damage average extended]], or [[/damage average activity=3m1SLqBeMGQF3UaQ]] if [[lookup @activation.condition activity=3m1SLqBeMGQF3UaQ]]",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "cacophony",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=pyvvXqoxJsjkkP38]], one creature in the [[lookup @name lowercase]]{monster}'s space. Failure: The target has the &Reference[Deafened apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. While Deafened, the target also has Disadvantage on ability checks and attack rolls.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/swarm/mmswarmofravens0.json",
+  "updated_at": "2026-09-27T13:37:09.697Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

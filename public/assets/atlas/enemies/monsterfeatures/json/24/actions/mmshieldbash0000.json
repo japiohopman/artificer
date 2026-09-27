@@ -1,0 +1,21 @@
+{
+  "index": "mmshieldbash0000",
+  "name": "shield bash",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=eIErvLccVVCXiCSl]], one [[lookup @target.affects.type activity=eIErvLccVVCXiCSl]] within [[lookup @range.value activity=eIErvLccVVCXiCSl]] [[lookup @range.units activity=eIErvLccVVCXiCSl]]. that the [[lookup @name lowercase]]{monster} can see. Failure: [[/damage average]] damage. If the target is a Medium or smaller creature, it has the &Reference[Prone apply=false] condition.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/equipment/shield/buckler-iron-cross-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmshieldbash0000.json",
+  "updated_at": "2026-09-27T13:37:10.377Z"
+}

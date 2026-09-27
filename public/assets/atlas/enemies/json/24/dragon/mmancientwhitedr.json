@@ -1,0 +1,131 @@
+{
+  "index": "mmancientwhitedr",
+  "name": "ancient white dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Ancient White Dragon is a CR 20 dragon.",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 333,
+  "hit_dice": "18d20",
+  "hit_points_roll": "18d20 + 144",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 26,
+  "dexterity": 10,
+  "constitution": 26,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 18,
+  "stats": {
+    "str": 26,
+    "dex": 10,
+    "con": 26,
+    "int": 10,
+    "wis": 13,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 20,
+  "proficiency_bonus": 6,
+  "xp": 25000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ice walk",
+      "desc": "The [[lookup @name lowercase]]{monster} can move across and climb icy surfaces without needing to make an ability check. Additionally, &Reference[Difficult Terrain] composed of ice or snow doesn't cost it extra movement.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "cold breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]], each [[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]] in a [[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]-foot Cone. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "freezing burst",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=U2i9u4ELjeLQfePP]], each [[lookup @target.affects.type activity=U2i9u4ELjeLQfePP]] in a [[lookup @target.template.size activity=U2i9u4ELjeLQfePP]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=U2i9u4ELjeLQfePP]] feet. Failure: [[/damage average]] damage, and the target's Speed is 0 until the end of the target's next turn. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Fear}, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]). The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/ancient_white_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmancientwhitedr.json",
+  "updated_at": "2026-09-27T13:37:08.142Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

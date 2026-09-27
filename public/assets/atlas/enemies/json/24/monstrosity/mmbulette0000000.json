@@ -1,0 +1,102 @@
+{
+  "index": "mmbulette0000000",
+  "name": "bulette",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Bulette is a CR 5 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 94,
+  "hit_dice": "9d10",
+  "hit_points_roll": "9d10 + 45",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 11,
+  "constitution": 21,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 19,
+    "dex": 11,
+    "con": 21,
+    "int": 2,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmBite0000000000]] attacks.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "deadly leap",
+      "desc": "The [[lookup @name lowercase]]{monster} spends 5 feet of movement to jump to a space within 15 feet that contains one or more Large or smaller creatures. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=IPCXEQoTuaAG5l52]], each [[lookup @target.affects.type activity=IPCXEQoTuaAG5l52]] in the [[lookup @name lowercase]]{monster}'s destination space. Failure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition. Success: Half damage, and the target is pushed 5 feet straight away from the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "leap",
+      "desc": "The [[lookup @name lowercase]]{monster} jumps up to [[lookup @range.value activity=C28C43DeD8iFtZMe]] feet by [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Bulette.webp",
+  "imageUrl": "/assets/atlas/enemies/images/bulette.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmbulette0000000.json",
+  "updated_at": "2026-09-27T13:37:09.287Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

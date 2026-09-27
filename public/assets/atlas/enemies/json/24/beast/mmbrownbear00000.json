@@ -1,0 +1,104 @@
+{
+  "index": "mmbrownbear00000",
+  "name": "brown bear",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Brown Bear is a CR 1 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 6",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 13,
+  "charisma": 7,
+  "stats": {
+    "str": 17,
+    "dex": 12,
+    "con": 15,
+    "int": 2,
+    "wis": 13,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack and one [[/item .mmClaw0000000000]] attack.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/BrownBear.webp",
+  "imageUrl": "/assets/atlas/enemies/images/brown_bear.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmbrownbear00000.json",
+  "updated_at": "2026-09-27T13:37:06.854Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

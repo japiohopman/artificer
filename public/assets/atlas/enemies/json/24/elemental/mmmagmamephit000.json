@@ -1,0 +1,103 @@
+{
+  "index": "mmmagmamephit000",
+  "name": "magma mephit",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Mephits@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.C5AnYUB2Vhu0urqS caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Small",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 18,
+  "hit_dice": "4d6",
+  "hit_points_roll": "4d6 + 4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 10,
+  "stats": {
+    "str": 8,
+    "dex": 12,
+    "con": 12,
+    "int": 7,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "cold"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "death burst",
+      "desc": "The [[lookup @name lowercase]]{monster} explodes [[lookup @activation.condition activity=1SfqWSp7RSyHgG4b]]. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]], each [[lookup @target.affects.type activity=1SfqWSp7RSyHgG4b]] in a [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot-long, [[lookup @target.template.width activity=bDqgmtLG3zcVuqdi]]-foot-wide Cone. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/MagmaMephit.webp",
+  "imageUrl": "/assets/atlas/enemies/images/magma_mephit.webp",
+  "url": "/assets/atlas/enemies/json/24/elemental/mmmagmamephit000.json",
+  "updated_at": "2026-09-27T13:37:08.363Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

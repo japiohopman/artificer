@@ -1,0 +1,109 @@
+{
+  "index": "mmpriestacolyte0",
+  "name": "priest acolyte",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Priest Acolyte is a CR 0.25 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Cleric",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 11,
+  "stats": {
+    "str": 14,
+    "dex": 10,
+    "con": 12,
+    "int": 10,
+    "wis": 14,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "mace",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "radiant flame",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "/assets/atlas/damage_types/json/radiant.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, using Wisdom as the spellcasting ability: At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Light}, @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{Thaumaturgy}",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "divine aid",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Bless}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHealingWor]{Healing Word}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration}, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmpriestacolyte0.json",
+  "updated_at": "2026-09-27T13:37:09.001Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

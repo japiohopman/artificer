@@ -1,0 +1,122 @@
+{
+  "index": "mmtreant00000000",
+  "name": "treant",
+  "ruleset": "2024",
+  "category": "plant",
+  "desc": "Treant is a CR 9 plant.",
+  "size": "Huge",
+  "type": "plant",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 138,
+  "hit_dice": "12d12",
+  "hit_points_roll": "12d12 + 60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 23,
+  "dexterity": 8,
+  "constitution": 21,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 12,
+  "stats": {
+    "str": 23,
+    "dex": 8,
+    "con": 21,
+    "int": 12,
+    "wis": 16,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "siege monster",
+      "desc": "The [[lookup @name lowercase]]{monster} deals double damage to objects and structures.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item mmSlam0000000000]] attacks.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hail of bark",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "animate trees",
+      "desc": "The [[lookup @name]]{monster} magically animates up to two trees it can see within [[lookup @range.value activity=EceTNjzjKWdrMNAy]] feet of itself. Each tree uses the Treant stat block, except it has Intelligence and Charisma scores of 1, it can't speak, and it lacks this action. The tree takes its turn immediately after the treant on the same initiative count, and it obeys the treant. A tree remains animate for 1 day or until it dies, the treant dies, or it is more than 120 feet from the treant. The tree then takes root if possible.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/plant/Treant.webp",
+  "url": "/assets/atlas/enemies/json/24/plant/mmtreant00000000.json",
+  "updated_at": "2026-09-27T13:37:09.557Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

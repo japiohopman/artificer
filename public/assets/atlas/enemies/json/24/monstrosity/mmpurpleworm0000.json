@@ -1,0 +1,117 @@
+{
+  "index": "mmpurpleworm0000",
+  "name": "purple worm",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Purple Worm is a CR 15 monstrosity.",
+  "size": "Gargantuan",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 247,
+  "hit_dice": "15d20",
+  "hit_points_roll": "15d20 + 90",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 28,
+  "dexterity": 7,
+  "constitution": 22,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 4,
+  "stats": {
+    "str": 28,
+    "dex": 7,
+    "con": 22,
+    "int": 1,
+    "wis": 8,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 15,
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack and one [[/item .mmTailStinger000]] attack.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tunneler",
+      "desc": "The [[lookup @name lowercase]]{monster} can burrow through solid rock at half its Burrow Speed and leaves a 10-foot-diameter tunnel in its wake.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=xWlMeXFjELfSUWX9]] creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d8+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail stinger",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] by the [[lookup @name lowercase]]{monster} (it can have up to three creatures swallowed at a time). Failure: The target is swallowed by the [[lookup @name lowercase]]{monster}, and the Grappled conditions end. A swallowed creature has the &Reference[Blinded apply=false] and &Reference[Restrained apply=false] conditions, has &Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and takes [[/damage average activity=zrWNjO9mkbN28spL]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. If the [[lookup @name lowercase]]{monster} takes 30 damage or more on a single turn from a creature inside it, the [[lookup @name lowercase]]{monster} must succeed on a [[/save format=long activity=rGeGukkm2t2fXsoy]] at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within [[lookup @range.value activity=rGeGukkm2t2fXsoy]] feet of the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition. If the [[lookup @name lowercase]]{monster} dies, any swallowed creature no longer has the Restrained and can escape from the corpse by using 20 feet of movement, exiting Prone.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/purple_worm.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmpurpleworm0000.json",
+  "updated_at": "2026-09-27T13:37:09.414Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

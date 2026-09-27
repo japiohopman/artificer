@@ -1,0 +1,88 @@
+{
+  "index": "mmconstrictorsna",
+  "name": "constrictor snake",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Constrictor Snake is a CR 0.25 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "2d10",
+  "hit_points_roll": "2d10 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 3,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 12,
+    "int": 1,
+    "wis": 10,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "constrict",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]], one [[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]] creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=IgOMjRxAt7UISkJq]] feet. Failure: [[/damage average]] damage, and the target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/ConstrictorSnake.webp",
+  "imageUrl": "/assets/atlas/enemies/images/constrictor_snake.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmconstrictorsna.json",
+  "updated_at": "2026-09-27T13:37:06.874Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

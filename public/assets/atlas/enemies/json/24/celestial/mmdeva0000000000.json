@@ -1,0 +1,118 @@
+{
+  "index": "mmdeva0000000000",
+  "name": "deva",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Deva is a CR 10 celestial.",
+  "size": "Medium",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 229,
+  "hit_dice": "27d8",
+  "hit_points_roll": "27d8 + 108",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 20,
+  "charisma": 20,
+  "stats": {
+    "str": 18,
+    "dex": 18,
+    "con": 18,
+    "int": 17,
+    "wis": 20,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 15
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "exalted restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item Holy Mace]] attacks.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "holy mace",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShapechang]{Shapechange} (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCommune000]{Commune}, @UUID[Compendium.dnd5e.spells24.Item.phbsplRaiseDead0]{Raise Dead}",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "divine aid",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{Remove Curse} using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Deva.webp",
+  "imageUrl": "/assets/atlas/enemies/images/deva.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmdeva0000000000.json",
+  "updated_at": "2026-09-27T13:37:07.187Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

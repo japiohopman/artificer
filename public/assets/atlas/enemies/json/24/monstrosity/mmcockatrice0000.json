@@ -1,0 +1,81 @@
+{
+  "index": "mmcockatrice0000",
+  "name": "cockatrice",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Cockatrice is a CR 0.5 monstrosity.",
+  "size": "Small",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6 + 5",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 6,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 13,
+  "charisma": 5,
+  "stats": {
+    "str": 6,
+    "dex": 12,
+    "con": 12,
+    "int": 2,
+    "wis": 13,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "petrifying bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=udF9lrpAQMvL0b9J]]. First Failure: The target has the &Reference[Restrained apply=false] condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. Second Failure: The target has the &Reference[Petrified apply=false] condition instead of the Restrained condition.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Cockatrice.webp",
+  "imageUrl": "/assets/atlas/enemies/images/cockatrice.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmcockatrice0000.json",
+  "updated_at": "2026-09-27T13:37:09.296Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

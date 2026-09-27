@@ -1,0 +1,15 @@
+{
+  "index": "mmfieryrays00000",
+  "name": "fiery rays",
+  "ruleset": "2024",
+  "category": "legendary-actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplScorchingR]{Scorching Ray}. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/beam-jet-stream-trails-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmfieryrays00000.json",
+  "updated_at": "2026-09-27T13:37:10.489Z"
+}

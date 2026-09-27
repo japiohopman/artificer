@@ -1,0 +1,24 @@
+{
+  "index": "mmelementalresto",
+  "name": "elemental restoration",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} [[lookup @item.requirements]], its body dissolves into dirt, and it gains a new body in [[/r 1d4#Days]] days, reviving with all its Hit Points somewhere on the Plane of Earth.",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmelementalresto.json",
+  "updated_at": "2026-09-27T13:37:10.518Z"
+}

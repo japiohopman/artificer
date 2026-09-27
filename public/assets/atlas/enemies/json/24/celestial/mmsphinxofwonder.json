@@ -1,0 +1,97 @@
+{
+  "index": "mmsphinxofwonder",
+  "name": "sphinx of wonder",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Sphinxes@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.JPdmXY7WGZdIPlJo caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nSphinx of Wonder@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.knvt7pCk5slbRRf0 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Tiny",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 24,
+  "hit_dice": "7d4",
+  "hit_points_roll": "7d4 + 7",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 6,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 15,
+  "wisdom": 12,
+  "charisma": 11,
+  "stats": {
+    "str": 6,
+    "dex": 17,
+    "con": 13,
+    "int": 15,
+    "wis": 12,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic",
+    "psychic",
+    "radiant"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "burst of ingenuity",
+      "desc": "Trigger: The [[lookup @name]]{monster} or another creature within [[lookup @range.value activity=AyYipNx3cFaXA0LU]] feet makes an ability check or a saving throw. Response: The sphinx adds 2 to the roll.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/celestial/mmsphinxofwonder.json",
+  "updated_at": "2026-09-27T13:37:07.287Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

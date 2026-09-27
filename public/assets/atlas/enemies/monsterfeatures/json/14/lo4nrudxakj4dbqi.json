@@ -1,0 +1,15 @@
+{
+  "index": "lo4nrudxakj4dbqi",
+  "name": "channel negative energy",
+  "ruleset": "2014",
+  "category": null,
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically unleashes negative energy. Creatures within 60 feet of the [[lookup @name lowercase]]{monster}, including ones behind barriers and around corners, can't regain hit points until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "60-foot radius",
+  "image": "icons/magic/unholy/beam-impact-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/14/lo4nrudxakj4dbqi.json",
+  "updated_at": "2026-09-27T13:37:10.172Z"
+}

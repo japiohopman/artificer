@@ -1,0 +1,95 @@
+{
+  "index": "dmgavatarofdeath",
+  "name": "avatar of death",
+  "ruleset": "2024",
+  "category": "magic-items",
+  "desc": "@Embed[Compendium.dnd5e.equipment24.Item.dmgDmtSkull00000]{Skull (Deck of Many Things)}",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "flat",
+      "value": 20
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 16,
+  "charisma": 16,
+  "stats": {
+    "str": 16,
+    "dex": 16,
+    "con": 16,
+    "int": 16,
+    "wis": 16,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "All languages known to its summoner",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "incorporeal movement",
+      "desc": "The avatar can move through other creatures and objects as if they were &Reference[DifficultTerrain]. It takes 5 (1d10) Force damage if it ends its turn inside an object.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The avatar makes a number of [[/item .dmgaoiReapingScy]]{Reaping Scythe} attacks equal to half the summoner's Proficiency Bonus (rounded up). [[ceil(@prof/2)]]{Number of Attacks}",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "reaping scythe",
+      "desc": "Melee Attack Roll: Automatic hit, reach 5 ft. Hit: 7 ( 1d8 + 3 ) Slashing damage plus 4 (1d8) Necrotic damage.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/magic-items/dmgavatarofdeath.json",
+  "updated_at": "2026-09-27T13:37:09.131Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}
