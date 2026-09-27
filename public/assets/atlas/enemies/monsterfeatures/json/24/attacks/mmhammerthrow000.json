@@ -1,0 +1,24 @@
+{
+  "index": "mmhammerthrow000",
+  "name": "hammer throw",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target is pushed up to 15 feet straight away from the [[lookup @name lowercase]]{monster} and has Disadvantage on the next attack roll it makes before the end of its next turn.",
+  "damage": [
+    {
+      "damage_dice": "3d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmhammerthrow000.json",
+  "updated_at": "2026-09-27T13:37:10.440Z"
+}

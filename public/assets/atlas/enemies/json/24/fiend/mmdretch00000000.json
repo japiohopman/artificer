@@ -1,0 +1,96 @@
+{
+  "index": "mmdretch00000000",
+  "name": "dretch",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Dretches@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Tp3r2uMnilo9SUIu caption=false cite=false classes=\"no-embed mm\"]\nDretch@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.YeZoNZxhdDHR3iC2 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Small",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 18,
+  "hit_dice": "4d6",
+  "hit_points_roll": "4d6 + 4",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 12,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 5,
+  "wisdom": 8,
+  "charisma": 3,
+  "stats": {
+    "str": 12,
+    "dex": 11,
+    "con": 12,
+    "int": 5,
+    "wis": 8,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fetid cloud",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=vRnhmBCQqIwIlfS4]], each creature in a [[lookup @target.template.size activity=vRnhmBCQqIwIlfS4]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Poisoned apply=false] condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can't take Reactions.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Dretch.webp",
+  "imageUrl": "/assets/atlas/enemies/images/dretch.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmdretch00000000.json",
+  "updated_at": "2026-09-27T13:37:08.616Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

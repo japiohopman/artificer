@@ -1,0 +1,143 @@
+{
+  "index": "mmirongolem00000",
+  "name": "iron golem",
+  "ruleset": "2024",
+  "category": "construct",
+  "desc": "Iron Golem is a CR 16 construct.",
+  "size": "Large",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 252,
+  "hit_dice": "24d10",
+  "hit_points_roll": "24d10 + 120",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 24,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "stats": {
+    "str": 24,
+    "dex": 9,
+    "con": 20,
+    "int": 3,
+    "wis": 11,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "plus two other languages;",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fire absorption",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "immutable form",
+      "desc": "The [[lookup @name lowercase]]{monster} can't shape-shift.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attack, using [[/item Bladed Arm]] or [[/item Fiery Bolt]] in any combination.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fiery bolt",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bladed arm",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "3d8+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "poison breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], each creature in a [[lookup @target.template.size activity=lnabW9bM51HoluPp]]-foot [[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/IronGolem.webp",
+  "imageUrl": "/assets/atlas/enemies/images/iron_golem.webp",
+  "url": "/assets/atlas/enemies/json/24/construct/mmirongolem00000.json",
+  "updated_at": "2026-09-27T13:37:07.715Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

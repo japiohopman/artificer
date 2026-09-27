@@ -1,0 +1,24 @@
+{
+  "index": "mmshred000000000",
+  "name": "shred",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/strike-beam-blood-large-red-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmshred000000000.json",
+  "updated_at": "2026-09-27T13:37:10.465Z"
+}

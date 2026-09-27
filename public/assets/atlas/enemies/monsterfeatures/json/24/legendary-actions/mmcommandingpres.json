@@ -1,0 +1,15 @@
+{
+  "index": "mmcommandingpres",
+  "name": "commanding presence",
+  "ruleset": "2024",
+  "category": "legendary-actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{Command} (level 2 version). The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmcommandingpres.json",
+  "updated_at": "2026-09-27T13:37:10.487Z"
+}

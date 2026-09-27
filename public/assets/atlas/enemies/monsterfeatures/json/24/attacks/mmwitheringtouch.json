@@ -1,0 +1,24 @@
+{
+  "index": "mmwitheringtouch",
+  "name": "withering touch",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "3d10",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "/assets/atlas/damage_types/json/necrotic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/death/hand-withered-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmwitheringtouch.json",
+  "updated_at": "2026-09-27T13:37:10.484Z"
+}

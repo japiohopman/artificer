@@ -1,0 +1,116 @@
+{
+  "index": "mmguardiannaga00",
+  "name": "guardian naga",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Guardian Naga is a CR 10 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 18,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 19,
+  "charisma": 18,
+  "stats": {
+    "str": 19,
+    "dex": 18,
+    "con": 16,
+    "int": 16,
+    "wis": 19,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "paralyzed",
+    "poisoned",
+    "restrained"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "celestial restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies, it returns to life in [[/r 1d6#Days]] days and regains all its Hit Points unless @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil] is cast on its remains.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item Bite]] attacks. It can replace any attack with a use of [[/item Poisonous Spittle]].",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "poisonous spittle",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=r4plP8QiJxzFZZO7]], [[lookup @target.affects.labels.statblock activity=r4plP8QiJxzFZZO7]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=r4plP8QiJxzFZZO7]] feet. Failure: 31 (7d8) Poison damage, and the target has the &Reference[Blinded apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Success: Half damage only.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Somatic or Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{Thaumaturgy} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplClairvoyan]{Clairvoyance}, @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds} (level 6 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplFlameStrik]{Flame Strike} (level 6 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplGeas000000]{Geas}, @UUID[Compendium.dnd5e.spells24.Item.phbsplTrueSeeing]{True Seeing}",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/GuardianNaga.webp",
+  "imageUrl": "/assets/atlas/enemies/images/guardian_naga.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmguardiannaga00.json",
+  "updated_at": "2026-09-27T13:37:07.203Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

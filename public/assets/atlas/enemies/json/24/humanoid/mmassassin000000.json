@@ -1,0 +1,120 @@
+{
+  "index": "mmassassin000000",
+  "name": "assassin",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Assassin is a CR 8 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 14
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "15d8",
+  "hit_points_roll": "15d8 + 30",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 18,
+  "constitution": 14,
+  "intelligence": 16,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 11,
+    "dex": 18,
+    "con": 14,
+    "int": 16,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "poison"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the assassin's next turn.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "light crossbow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "evasion",
+      "desc": "If the [[lookup @name lowercase]]{monster} is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the [[lookup @name lowercase]]{monster} instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the Incapacitated condition.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks, using [[/item .jLa5l9pntsTVrMKH]] or [[/item .dL4668G7zXeC5zyY]] in any combination.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cunning action",
+      "desc": "The [[lookup @name lowercase]]{monster} takes the &Reference[Dash apply=false], the &Reference[Disengage apply=false], or &Reference[Hide apply=false] action.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Assassin.webp",
+  "imageUrl": "/assets/atlas/enemies/images/assassin.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmassassin000000.json",
+  "updated_at": "2026-09-27T13:37:08.869Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

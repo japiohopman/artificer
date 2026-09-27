@@ -1,0 +1,15 @@
+{
+  "index": "mmreel0000000000",
+  "name": "reel",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} pulls [[lookup @target.affects.labels.statblock activity=jWkEQYHBd7aht1kG]] within [[lookup @range.value activity=jWkEQYHBd7aht1kG]] feet of itself that is Restrained by its Web Strand up to 25 feet straight toward itself.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "25-foot line",
+  "image": "icons/creatures/tentacles/tentacle-earth-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmreel0000000000.json",
+  "updated_at": "2026-09-27T13:37:10.371Z"
+}

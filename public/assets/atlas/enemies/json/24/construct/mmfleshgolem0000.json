@@ -1,0 +1,133 @@
+{
+  "index": "mmfleshgolem0000",
+  "name": "flesh golem",
+  "ruleset": "2024",
+  "category": "construct",
+  "desc": "Flesh Golem is a CR 5 construct.",
+  "size": "Medium",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 9
+    }
+  ],
+  "hit_points": 127,
+  "hit_dice": "15d8",
+  "hit_points_roll": "15d8 + 60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 19,
+    "dex": 9,
+    "con": 18,
+    "int": 6,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "plus one other language;",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "aversion to fire",
+      "desc": "If the [[lookup @name lowercase]]{monster} takes Fire damage, it has Disadvantage on attack rolls and ability checks until the end of its next turn.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "berserk",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} starts its turn &Reference[Bloodied], roll [[/r 1d6]]. On a 6, the [[lookup @name lowercase]]{monster} goes berserk. On each of its turns while berserk, the [[lookup @name lowercase]]{monster} attacks the nearest creature it can see. If no creature is near enough to move to and attack, the [[lookup @name lowercase]]{monster} attacks an object. Once the [[lookup @name lowercase]]{monster} goes berserk, it remains so until it is destroyed or it is no longer Bloodied. The [[lookup @name lowercase]]{monster}'s creator, if within [[lookup @range.value activity=tnkOsrSwEElO2kZM]] feet of the berserk [[lookup @name lowercase]]{monster}, can try to calm it by taking an action to make a [[/check ability=cha skill=per dc=@abilities.str.dc]] DC 15 Charisma (Persuasion) check; the golem must be able to hear its creator. If this check succeeds, the golem ceases being berserk until the start of its next turn, at which point it resumes rolling for the Berserk trait again if it is still Bloodied.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "immutable form",
+      "desc": "The [[lookup @name lowercase]]{monster} can't shape-shift.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "lightning absorption",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item Slam]] attacks.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/FleshGolem.webp",
+  "imageUrl": "/assets/atlas/enemies/images/flesh_golem.webp",
+  "url": "/assets/atlas/enemies/json/24/construct/mmfleshgolem0000.json",
+  "updated_at": "2026-09-27T13:37:07.694Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

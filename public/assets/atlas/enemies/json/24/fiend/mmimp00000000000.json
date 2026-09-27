@@ -1,0 +1,109 @@
+{
+  "index": "mmimp00000000000",
+  "name": "imp",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Imp@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.6c0Aa15WAeqtY3hl caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Tiny",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 21,
+  "hit_dice": "6d4",
+  "hit_points_roll": "6d4 + 6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 6,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 14,
+  "stats": {
+    "str": 6,
+    "dex": 17,
+    "con": 13,
+    "int": 11,
+    "wis": 12,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sting",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "The [[lookup @name lowercase]]{monster} shape-shifts to resemble a rat (Speed 20 ft.), a raven (20 ft., Fly 60 ft.), or a spider (20 ft., Climb 20 ft.), or it returns to its true form. Its game statistics are the same in each form, except for its Speed. Any equipment it is wearing or carrying isn't transformed.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Imp.webp",
+  "imageUrl": "/assets/atlas/enemies/images/imp.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmimp00000000000.json",
+  "updated_at": "2026-09-27T13:37:08.664Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

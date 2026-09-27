@@ -1,0 +1,70 @@
+{
+  "index": "phbsplmordsword0",
+  "name": "arcane sword",
+  "ruleset": "2024",
+  "category": "conjurations",
+  "desc": "@Embed[Compendium.dnd5e.spells24.Item.phbswdMordenkain caption=false]",
+  "size": "Tiny",
+  "type": "custom",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "flat",
+      "value": 10
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1",
+  "hit_points_roll": "1",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "move and attack",
+      "desc": "On your later turns, you can take a Bonus Action to move the sword up to 30 feet to a spot you can see and repeat the attack against the same target or a different one. On a hit, the target takes Force damage equal to 4d12 plus your spellcasting ability modifier.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/conjurations/phbsplmordsword0.json",
+  "updated_at": "2026-09-27T13:37:07.368Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

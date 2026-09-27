@@ -1,0 +1,104 @@
+{
+  "index": "mmvampirefamilia",
+  "name": "vampire familiar",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Vampires@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nVampire Familiar@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.iWbAQD1GN6bn7JeU caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 65,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8 + 20",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 16,
+  "constitution": 15,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 14,
+  "stats": {
+    "str": 17,
+    "dex": 16,
+    "con": 15,
+    "int": 10,
+    "wis": 10,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Common plus one other language",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "vampiric connection",
+      "desc": "While the [[lookup @name lowercase]]{monster} and its vampire master are on the same plane of existence, the vampire can communicate with the [[lookup @name lowercase]]{monster} telepathically, and the vampire can perceive through the [[lookup @name lowercase]]{monster}'s senses.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmUmbralDagger00]] attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "umbral dagger",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the &Reference[Poisoned apply=false] condition for 1 hour. While it has the Poisoned condition, the target has the &Reference[Paralyzed apply=false] condition.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "deathless agility",
+      "desc": "The [[lookup @name lowercase]]{monster} takes the &Reference[Dash] or &Reference[Disengage] action.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmvampirefamilia.json",
+  "updated_at": "2026-09-27T13:37:09.061Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

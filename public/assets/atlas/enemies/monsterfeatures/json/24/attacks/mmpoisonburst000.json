@@ -1,0 +1,24 @@
+{
+  "index": "mmpoisonburst000",
+  "name": "poison burst",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "poison",
+        "name": "poison",
+        "url": "/assets/atlas/damage_types/json/poison.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/acid/projectile-faceted-glob.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmpoisonburst000.json",
+  "updated_at": "2026-09-27T13:37:10.454Z"
+}

@@ -1,0 +1,102 @@
+{
+  "index": "mmgladiator00000",
+  "name": "gladiator",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Gladiator is a CR 5 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 16
+    }
+  ],
+  "hit_points": 112,
+  "hit_dice": "15d8",
+  "hit_points_roll": "15d8 + 45",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 15,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 12,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spear",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .vTZW4dSRGXTDWvRd]] attacks. It can replace one attack with a use of [[/item .mmShieldBash0000]].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shield bash",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=eIErvLccVVCXiCSl]], one [[lookup @target.affects.type activity=eIErvLccVVCXiCSl]] within [[lookup @range.value activity=eIErvLccVVCXiCSl]] [[lookup @range.units activity=eIErvLccVVCXiCSl]]. that the [[lookup @name lowercase]]{monster} can see. Failure: [[/damage average]] damage. If the target is a Medium or smaller creature, it has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "parry",
+      "desc": "Trigger: The [[lookup @name lowercase]]{monster} is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. Response: The [[lookup @name lowercase]]{monster} adds [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] to its AC against that attack, possibly causing it to miss.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Gladiator.webp",
+  "imageUrl": "/assets/atlas/enemies/images/gladiator.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmgladiator00000.json",
+  "updated_at": "2026-09-27T13:37:08.918Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,123 @@
+{
+  "index": "mmspiritnaga0000",
+  "name": "spirit naga",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Spirit Naga@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.SYPUI0R76sVilXaV caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 135,
+  "hit_dice": "18d10",
+  "hit_points_roll": "18d10 + 36",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 17,
+  "constitution": 14,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 17,
+    "con": 14,
+    "int": 16,
+    "wis": 15,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fiendish restoration",
+      "desc": "If it dies, the [[lookup @name lowercase]]{monster} returns to life in [[/r 1d6]] days and regains all its Hit Points. Only a @UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish} spell can prevent this trait from functioning.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks, using [[/item .mmBite0000000000]] or [[/item .mmNecroticRay000]] in any combination.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "necrotic ray",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "6d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{Mage Hand}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Minor Illusion}, @UUID[Compendium.dnd5e.spells24.Item.phbsplWaterBreat]{Water Breathing} 2/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDimensionD]{Dimension Door}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHoldPerson]{Hold Person} (level 3), @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt} (level 4)",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/SpiritNaga.webp",
+  "imageUrl": "/assets/atlas/enemies/images/spirit_naga.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmspiritnaga0000.json",
+  "updated_at": "2026-09-27T13:37:08.759Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

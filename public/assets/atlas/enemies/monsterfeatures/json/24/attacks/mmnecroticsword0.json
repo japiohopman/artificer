@@ -1,0 +1,24 @@
+{
+  "index": "mmnecroticsword0",
+  "name": "necrotic sword",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d8",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/swords/sword-guard-serrated.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmnecroticsword0.json",
+  "updated_at": "2026-09-27T13:37:10.448Z"
+}

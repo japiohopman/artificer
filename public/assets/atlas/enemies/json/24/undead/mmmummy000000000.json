@@ -1,0 +1,106 @@
+{
+  "index": "mmmummy000000000",
+  "name": "mummy",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Mummy is a CR 3 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 18",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 12,
+  "charisma": 12,
+  "stats": {
+    "str": 16,
+    "dex": 8,
+    "con": 15,
+    "int": 6,
+    "wis": 12,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Common plus two other languages",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The mummy makes two [[/item .mmRottingFist000]] attacks and uses [[/item .mmDreadfulGlare0]].",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rotting fist",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target can't regain Hit Points, its Hit Point maximum doesn't return to normal when finishing a Long Rest, and its Hit Point maximum decreases by [[/r 3d6#HP Max Decrease]]{10 (3d6)} every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dreadful glare",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=8LmlZfevSQkOxGSN]], one [[lookup @target.affects.type activity=8LmlZfevSQkOxGSN]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=8LmlZfevSQkOxGSN]] feet. Failure: The target has the &Reference[Frightened apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Dreadful Glare for 24 hours.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Mummy.webp",
+  "imageUrl": "/assets/atlas/enemies/images/mummy.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmmummy000000000.json",
+  "updated_at": "2026-09-27T13:37:09.784Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

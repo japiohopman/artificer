@@ -1,0 +1,109 @@
+{
+  "index": "mmcouatl00000000",
+  "name": "couatl",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Couatl is a CR 4 celestial.",
+  "size": "Medium",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 60,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 24",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 20,
+  "constitution": 17,
+  "intelligence": 18,
+  "wisdom": 20,
+  "charisma": 18,
+  "stats": {
+    "str": 16,
+    "dex": 20,
+    "con": 17,
+    "int": 18,
+    "wis": 20,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "psychic",
+    "radiant"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 15
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shielded mind",
+      "desc": "The [[lookup @name lowercase]]{monster}'s thoughts can't be read by any means, and other creatures can communicate with it telepathically only if it allows them.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d12+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "constrict",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]], one [[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]] creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=IgOMjRxAt7UISkJq]] feet. Failure: [[/damage average]] damage. The target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShapechang]{Shapechange} (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCreateFood]{Create Food and Water}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDream00000]{Dream}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Scrying}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{Sleep}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Couatl.webp",
+  "imageUrl": "/assets/atlas/enemies/images/couatl.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmcouatl00000000.json",
+  "updated_at": "2026-09-27T13:37:07.178Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

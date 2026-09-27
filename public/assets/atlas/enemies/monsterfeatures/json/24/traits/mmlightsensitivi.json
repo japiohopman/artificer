@@ -1,0 +1,15 @@
+{
+  "index": "mmlightsensitivi",
+  "name": "light sensitivity",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "While in Bright Light, the [[lookup @name lowercase]]{monster} has Disadvantage on attack rolls.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/light/explosion-star-glow-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmlightsensitivi.json",
+  "updated_at": "2026-09-27T13:37:10.529Z"
+}

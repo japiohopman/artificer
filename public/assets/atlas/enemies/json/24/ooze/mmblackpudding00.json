@@ -1,0 +1,122 @@
+{
+  "index": "mmblackpudding00",
+  "name": "black pudding",
+  "ruleset": "2024",
+  "category": "ooze",
+  "desc": "Black Pudding is a CR 4 ooze.",
+  "size": "Large",
+  "type": "ooze",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 7
+    }
+  ],
+  "hit_points": 68,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10 + 24",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 16,
+  "dexterity": 5,
+  "constitution": 16,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 1,
+  "stats": {
+    "str": 16,
+    "dex": 5,
+    "con": 16,
+    "int": 1,
+    "wis": 6,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid",
+    "cold",
+    "lightning",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "grappled",
+    "prone",
+    "restrained"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "corrosive form",
+      "desc": "A creature that hits the [[lookup @name lowercase]]{monster} with a melee attack roll takes [[/damage average]] damage. Nonmagical ammunition is destroyed immediately after hitting the [[lookup @name lowercase]]{monster} and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the [[lookup @name lowercase]]{monster} and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending} spell on the weapon. In 1 minute, the [[lookup @name lowercase]]{monster} can eat through 2 feet of nonmagical wood or metal. Foundry Note This feature provides an Attack Penalty active effect that will modify a targeted weapon. Since this penalty can be applied multiple times to multiple nonmagical weapons, this active effect needs to be dragged from this item's Effect tab onto the target Item's weapons.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "split",
+      "desc": "Trigger: While the [[lookup @name lowercase]]{monster} [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]] Response: The [[lookup @name lowercase]]{monster} splits into two new [[lookup @name capitalize]]{monster}. Each new [[lookup @name lowercase]]{monster} is one size smaller than the original [[lookup @name lowercase]]{monster} and acts on its Initiative. The original [[lookup @name lowercase]]{monster}'s Hit Points are divided evenly between the new [[lookup @name lowercase]]{monster}s (round down).",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "dissolving pseudopod",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. Nonmagical armor worn by the target takes a -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending} spell on the armor.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "/assets/atlas/damage_types/json/acid.json"
+          },
+          "damage_dice": "4d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/ooze/BlackPudding.webp",
+  "imageUrl": "/assets/atlas/enemies/images/black_pudding.webp",
+  "url": "/assets/atlas/enemies/json/24/ooze/mmblackpudding00.json",
+  "updated_at": "2026-09-27T13:37:09.488Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

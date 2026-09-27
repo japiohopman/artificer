@@ -1,0 +1,125 @@
+{
+  "index": "mmwight000000000",
+  "name": "wight",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Wight is a CR 3 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 82,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8 + 33",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 15,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 16,
+    "int": 10,
+    "wis": 13,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Common plus one other language",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has Disadvantage on ability checks and attack rolls.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .mmNecroticSword0]] or [[/item .mmNecroticBow000]] in any combination. It can replace one attack with a use of [[/item .mmLifeDrain00000]].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "necrotic sword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "life drain",
+      "desc": "Life Drain. Constitution Saving Throw: DC [[lookup @save.dc.value activity=FA4Mt9cXsYfHDDcs]], one [[lookup @target.affects.type activity=FA4Mt9cXsYfHDDcs]] within [[lookup @range.value activity=FA4Mt9cXsYfHDDcs]] feet. Failure: [[/damage average]] damage, and the target's Hit Point maximum decreases by an amount equal to the damage taken. A Humanoid slain by this attack rises 24 hours later as a @UUID[Compendium.dnd5e.actors24.Actor.mmZombie00000000]{Zombie} under the [[lookup @name lowercase]]{monster}'s control, unless the Humanoid is restored to life or its body is destroyed. The [[lookup @name lowercase]]{monster} can have no more than twelve zombies under its control at a time.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "necrotic bow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Wight.webp",
+  "imageUrl": "/assets/atlas/enemies/images/wight.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmwight000000000.json",
+  "updated_at": "2026-09-27T13:37:09.842Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

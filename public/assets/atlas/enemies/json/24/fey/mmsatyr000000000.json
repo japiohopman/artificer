@@ -1,0 +1,95 @@
+{
+  "index": "mmsatyr000000000",
+  "name": "satyr",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Satyr is a CR 0.5 fey.",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Chaotic Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 31,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 12,
+  "wisdom": 10,
+  "charisma": 14,
+  "stats": {
+    "str": 12,
+    "dex": 16,
+    "con": 11,
+    "int": 12,
+    "wis": 10,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage average extended]].  If the target is a Medium or smaller creature, the [[lookup @name lowercase]]{monster} pushes the target up to 10 feet straight away from itself.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "mockery",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=s5CMus4LOXBkt1Wn]], [[lookup @target.affects.labels.statblock activity=s5CMus4LOXBkt1Wn]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=s5CMus4LOXBkt1Wn]] feet. Failure: [[/damage average]] damage.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/Satyr.webp",
+  "imageUrl": "/assets/atlas/enemies/images/satyr.webp",
+  "url": "/assets/atlas/enemies/json/24/fey/mmsatyr000000000.json",
+  "updated_at": "2026-09-27T13:37:08.550Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

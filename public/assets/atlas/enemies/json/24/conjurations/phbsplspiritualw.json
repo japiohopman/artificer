@@ -1,0 +1,70 @@
+{
+  "index": "phbsplspiritualw",
+  "name": "spiritual weapon",
+  "ruleset": "2024",
+  "category": "conjurations",
+  "desc": "@Embed[Compendium.dnd5e.spells24.Item.phbsplSpiritualW caption=false]",
+  "size": "Tiny",
+  "type": "custom",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "flat",
+      "value": 10
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1",
+  "hit_points_roll": "1",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "move and attack",
+      "desc": "As a Bonus Action on your later turns, you can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it. On a hit, the target takes Force damage equal to 1d8 plus your spellcasting ability modifier. Using a Higher-Level Spell Slot. The damage increases by 1d8 for every slot level above 2.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/conjurations/phbsplspiritualw.json",
+  "updated_at": "2026-09-27T13:37:07.630Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

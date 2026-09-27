@@ -1,0 +1,108 @@
+{
+  "index": "mmsteammephit000",
+  "name": "steam mephit",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Mephits@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.C5AnYUB2Vhu0urqS caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nSteam Mephit@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.G3d4GDT0FWo30AdL caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Small",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 17,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 11,
+  "constitution": 10,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 12,
+  "stats": {
+    "str": 5,
+    "dex": 11,
+    "con": 10,
+    "int": 11,
+    "wis": 10,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "blurred form",
+      "desc": "Attack rolls against the [[lookup @name lowercase]]{monster} are made with Disadvantage unless the [[lookup @name lowercase]]{monster} has the Incapacitated condition.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "death burst",
+      "desc": "The [[lookup @name lowercase]]{monster} explodes [[lookup @activation.condition activity=1SfqWSp7RSyHgG4b]]. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]], each [[lookup @target.affects.type activity=1SfqWSp7RSyHgG4b]] in a [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "steam breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=5iI1KQRWrdMGh9sy]], each creature in a [[lookup @target.template.size activity=5iI1KQRWrdMGh9sy]]-foot Cone. Failure: [[/damage average]] damage, and the target's Speed decreases by 10 feet until the end of the [[lookup @name lowercase]]{monster} next turn.. Success: Half damage. Failure or Success: Being underwater doesn't grant Resistance to this Fire damage.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/SteamMephit.webp",
+  "imageUrl": "/assets/atlas/enemies/images/steam_mephit.webp",
+  "url": "/assets/atlas/enemies/json/24/elemental/mmsteammephit000.json",
+  "updated_at": "2026-09-27T13:37:08.388Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

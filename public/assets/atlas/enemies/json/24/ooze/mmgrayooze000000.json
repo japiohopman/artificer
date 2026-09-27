@@ -1,0 +1,99 @@
+{
+  "index": "mmgrayooze000000",
+  "name": "gray ooze",
+  "ruleset": "2024",
+  "category": "ooze",
+  "desc": "Gray Oozes@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.IMrvogdwbM9y1eDJ caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nGray Ooze@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.3CtaZvXT0QtPFi3T caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "ooze",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 9
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8 + 9",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 12,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 2,
+  "stats": {
+    "str": 12,
+    "dex": 6,
+    "con": 16,
+    "int": 1,
+    "wis": 6,
+    "cha": 2
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "corrosive form",
+      "desc": "Nonmagical ammunition is destroyed immediately after hitting the [[lookup @name lowercase]]{monster} and dealing any damage. Any nonmagical weapon takes a cumulative −1 penalty to attack rolls immediately after dealing damage to the [[lookup @name lowercase]]{monster} and coming into contact with it. The weapon is destroyed if the penalty reaches −5. The penalty can be removed by casting the @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending} spell on the weapon. The [[lookup @name lowercase]]{monster} can eat through 2-inch-thick, nonmagical metal or wood in 1 round. Foundry Note This feature provides an Attack Penalty active effect that will modify a targeted weapon. Since this penalty can be applied multiple times to multiple nonmagical weapons, this active effect needs to be dragged from this item's Effect tab onto the target Item's weapons.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. Nonmagical armor worn by the target takes a −1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending} spell on the armor. Foundry Note This feature provides an AC Penalty enchantment that will modify a targeted armor. Since this penalty can be applied multiple times, this enchantment needs to be dragged from this item's Effect tab onto the target armor item.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "/assets/atlas/damage_types/json/acid.json"
+          },
+          "damage_dice": "2d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/ooze/GrayOoze.webp",
+  "imageUrl": "/assets/atlas/enemies/images/gray_ooze.webp",
+  "url": "/assets/atlas/enemies/json/24/ooze/mmgrayooze000000.json",
+  "updated_at": "2026-09-27T13:37:09.499Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

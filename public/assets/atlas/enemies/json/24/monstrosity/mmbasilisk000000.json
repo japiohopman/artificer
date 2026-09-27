@@ -1,0 +1,88 @@
+{
+  "index": "mmbasilisk000000",
+  "name": "basilisk",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Basilisk is a CR 3 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 16",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 7,
+  "stats": {
+    "str": 16,
+    "dex": 8,
+    "con": 15,
+    "int": 2,
+    "wis": 8,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "petrifying gaze",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=mN9aF1WkHQWLIN4B]], each [[lookup @target.affects.type activity=mN9aF1WkHQWLIN4B]] in a [[lookup @target.template.size activity=mN9aF1WkHQWLIN4B]]-foot [[lookup @target.template.type capitalize activity=mN9aF1WkHQWLIN4B]]. If the [[lookup @name lowercase]]{monster} sees its reflection in the [[lookup @target.template.type capitalize activity=mN9aF1WkHQWLIN4B]], the [[lookup @name lowercase]]{monster} must make this save. First Failure: The target has the &Reference[Restrained apply=false] condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success. Second Failure: The target has the &Reference[Petrified apply=false] condition instead of the Restrained condition.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Basilisk.webp",
+  "imageUrl": "/assets/atlas/enemies/images/basilisk.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmbasilisk000000.json",
+  "updated_at": "2026-09-27T13:37:09.277Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -17,22 +17,46 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const { execSync } = require('child_process');
 
-// Paths definitions
-const FOUNDRY_ROOT = path.join(__dirname, '../dit is de ttf map waar of naar toe moeten of heel erg van af moeten kijken/dnd5e-6.0.x');
+const PINNED_RELEASE_TAG = 'release-6.0.4';
+const FOUNDRY_TMP_DIR = '/tmp/f5e_audit_pinned/packs/_source';
+
+function ensureFoundrySource() {
+  if (process.env.FOUNDRY_SOURCE_DIR && fs.existsSync(process.env.FOUNDRY_SOURCE_DIR)) {
+    return process.env.FOUNDRY_SOURCE_DIR;
+  }
+  if (fs.existsSync(FOUNDRY_TMP_DIR)) {
+    return FOUNDRY_TMP_DIR;
+  }
+  console.log(`Downloading pinned Foundry release (${PINNED_RELEASE_TAG}) source tree to /tmp/f5e_audit_pinned...`);
+  fs.mkdirSync('/tmp/f5e_audit_pinned', { recursive: true });
+  try {
+    execSync(`curl -sL https://github.com/foundryvtt/dnd5e/archive/refs/tags/${PINNED_RELEASE_TAG}.tar.gz | tar -xz --strip-components=1 -C /tmp/f5e_audit_pinned "dnd5e-${PINNED_RELEASE_TAG}/packs/_source"`, { stdio: 'inherit' });
+  } catch (e) {
+    console.error('Failed to download Foundry source archive:', e.message);
+  }
+  return FOUNDRY_TMP_DIR;
+}
+
+const FOUNDRY_ROOT = ensureFoundrySource();
 const TARGET_ROOT = path.join(__dirname, '../public/assets/atlas');
 
 const PATHS = {
-  actors: {
-    source: path.join(FOUNDRY_ROOT, 'packs/_source/monsters'),
-    target: path.join(TARGET_ROOT, 'enemies/json')
+  actors14: {
+    source: path.join(FOUNDRY_ROOT, 'monsters'),
+    target: path.join(TARGET_ROOT, 'enemies/json/14')
+  },
+  actors24: {
+    source: path.join(FOUNDRY_ROOT, 'actors24'),
+    target: path.join(TARGET_ROOT, 'enemies/json/24')
   },
   items: {
-    source: path.join(FOUNDRY_ROOT, 'packs/_source/items'),
+    source: path.join(FOUNDRY_ROOT, 'items'),
     target: path.join(TARGET_ROOT, 'equipment/json')
   },
   spells: {
-    source: path.join(FOUNDRY_ROOT, 'packs/_source/spells'),
+    source: path.join(FOUNDRY_ROOT, 'spells'),
     target: path.join(TARGET_ROOT, 'spell/json')
   }
 };
@@ -59,23 +83,14 @@ const SCHOOL_MAP = {
   tra: { index: 'transmutation', name: 'Transmutation', url: '/assets/atlas/magic_schools/json/transmutation.json' }
 };
 
-// Clean HTML to paragraphs securely, protecting against HTML element injection (CodeQL)
+// Clean HTML to paragraphs securely
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
 
-  // 1. Explicitly remove script tags and their inner content to prevent script execution
-  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-
-  // 2. Explicitly remove any remaining partial or dangling <script tag patterns
-  cleaned = cleaned.replace(/<script/gi, '');
-
-  // 3. Convert paragraph markers to linebreaks
-  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
-
-  // 4. Safely strip all other HTML tag patterns using a secure pattern
-  cleaned = cleaned.replace(/<[^>]+>/g, '');
-
-  // 5. Sanitize HTML entity references to prevent raw markup injection
+  let cleaned = String(html);
+  cleaned = cleaned.replace(/<\/?p\b[^>]*>/gi, '\n')
+                   .replace(/<br\s*\/?>/gi, '\n');
+  cleaned = cleaned.replace(/<[^>]*>/g, '');
   cleaned = cleaned
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
@@ -133,34 +148,30 @@ function getSpellLevelDirName(level) {
 }
 
 // Load and preserve existing data for smart merge
-function getPreservedData(targetPath, fallbackPath) {
-  let finalPath = null;
-  if (fs.existsSync(targetPath)) {
-    finalPath = targetPath;
-  } else if (fallbackPath && fs.existsSync(fallbackPath)) {
-    finalPath = fallbackPath;
-  }
-
-  if (finalPath) {
-    try {
-      const content = fs.readFileSync(finalPath, 'utf8');
-      const parsed = JSON.parse(content);
-      return {
-        image: parsed.image,
-        imageUrl: parsed.imageUrl,
-        sprite_sheet: parsed.sprite_sheet,
-        sprite_index: parsed.sprite_index,
-        item_drops: parsed.item_drops,
-        background_type: parsed.background_type,
-        forms: parsed.forms,
-        wikiData: parsed.wikiData,
-        last_updated: parsed.last_updated
-      };
-    } catch (e) {
-      console.warn(`Could not parse existing asset at ${finalPath} for smart merge: ${e.message}`);
+function getPreservedData(targetPath, fallbackPaths = []) {
+  const candidates = [targetPath, ...fallbackPaths];
+  for (const p of candidates) {
+    if (p && fs.existsSync(p)) {
+      try {
+        const content = fs.readFileSync(p, 'utf8');
+        const parsed = JSON.parse(content);
+        return {
+          image: parsed.image,
+          imageUrl: parsed.imageUrl,
+          sprite_sheet: parsed.sprite_sheet,
+          sprite_index: parsed.sprite_index,
+          item_drops: parsed.item_drops,
+          background_type: parsed.background_type,
+          forms: parsed.forms,
+          wikiData: parsed.wikiData,
+          last_updated: parsed.last_updated
+        };
+      } catch (e) {
+        console.warn(`Could not parse existing asset at ${p} for smart merge: ${e.message}`);
+      }
     }
   }
-  return null;
+  return {};
 }
 
 // Recursive search for token image
@@ -178,7 +189,6 @@ function findTokenImage(baseDir, filenameNoExt) {
       if (['.webp', '.png', '.jpg', '.jpeg'].includes(ext)) {
         const name = path.basename(file, ext).toLowerCase();
         if (name === filenameNoExt.toLowerCase()) {
-          // Return relative path for web
           const relative = path.relative(path.join(__dirname, '../public'), fullPath);
           return '/' + relative.replace(/\\/g, '/');
         }
@@ -188,11 +198,29 @@ function findTokenImage(baseDir, filenameNoExt) {
   return null;
 }
 
+// Check if non-grid artwork WebP file exists under public/assets/atlas/enemies/images/
+function findCuratedArtworkImage(nameNorm) {
+  const imagesDir = path.join(__dirname, '../public/assets/atlas/enemies/images');
+  if (!fs.existsSync(imagesDir)) return null;
+
+  const slugUnderscore = nameNorm.replace(/[^a-z0-9]/g, '_').replace(/_+/g, '_');
+  const slugHyphen = nameNorm.replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-');
+
+  if (fs.existsSync(path.join(imagesDir, `${slugUnderscore}.webp`))) {
+    return `/assets/atlas/enemies/images/${slugUnderscore}.webp`;
+  }
+  if (fs.existsSync(path.join(imagesDir, `${slugHyphen}.webp`))) {
+    return `/assets/atlas/enemies/images/${slugHyphen}.webp`;
+  }
+  return null;
+}
+
 // Map a single actor/monster to Artificer enemy JSON
-function mapActor(sourceData, targetPath) {
+function mapActor(sourceData, targetPath, ruleset, category) {
   const system = sourceData.system || {};
   const name = sourceData.name || 'Unnamed NPC';
   const index = sourceData._id ? sourceData._id.toLowerCase() : name.toLowerCase().replace(/[^a-z0-9]/g, '_');
+  const nameNorm = name.toLowerCase().trim();
 
   const abilities = system.abilities || {};
   const stats = {
@@ -227,7 +255,6 @@ function mapActor(sourceData, targetPath) {
       const itemDesc = cleanHtmlToParagraphs(itemSystem.description?.value).join(' ');
 
       if (isWeapon || (isFeat && itemSystem.activities)) {
-        // Calculate attack bonus
         let attackBonus = 0;
         const abilityKey = itemSystem.ability || (isWeapon ? 'str' : 'int');
         const abilityMod = Math.floor(((stats[abilityKey] || 10) - 10) / 2);
@@ -260,27 +287,40 @@ function mapActor(sourceData, targetPath) {
   }
 
   // Load existing data for image and custom content preservation
-  const preserved = getPreservedData(targetPath) || {};
+  const slugUnderscore = nameNorm.replace(/[^a-z0-9]/g, '_').replace(/_+/g, '_');
+  const fallbackPaths = [
+    path.join(__dirname, '../public/assets/atlas/enemies/json', `${index}.json`),
+    path.join(__dirname, '../public/assets/atlas/enemies/json', `${slugUnderscore}.json`)
+  ];
+  const preserved = getPreservedData(targetPath, fallbackPaths);
 
-  // Check for dynamic token image in public/assets/atlas/enemies/tokens/
-  let enemyImage = preserved.image;
-  if (!enemyImage) {
-    const tokensDir = path.join(__dirname, '../public/assets/atlas/enemies/tokens');
-    // Try by name first, then by index
-    enemyImage = findTokenImage(tokensDir, name.replace(/\s+/g, '')) || findTokenImage(tokensDir, index);
+  // Artwork resolution
+  let imageUrl = findCuratedArtworkImage(nameNorm);
+  if (!imageUrl && preserved.imageUrl && preserved.imageUrl.includes('/enemies/images/')) {
+    const checkAbs = path.join(__dirname, '../public', preserved.imageUrl);
+    if (fs.existsSync(checkAbs)) {
+      imageUrl = preserved.imageUrl;
+    }
   }
-  
-  if (!enemyImage) {
-    enemyImage = `/assets/atlas/enemies/${index}.webp`;
+
+  // Token resolution
+  let tokenImage = preserved.image && preserved.image.includes('/enemies/tokens/') ? preserved.image : null;
+  if (!tokenImage) {
+    const tokensDir = path.join(__dirname, '../public/assets/atlas/enemies/tokens');
+    tokenImage = findTokenImage(tokensDir, name.replace(/\s+/g, '')) || findTokenImage(tokensDir, index) || findTokenImage(tokensDir, slugUnderscore);
   }
 
   // Improved AC calculation
   let finalAc = ac.value || (10 + Math.floor((stats.dex - 10) / 2));
   if (ac.flat) finalAc = ac.flat;
-  
+
+  const versionFolder = ruleset === '2024' ? '24' : '14';
+
   return {
     index,
     name: name.toLowerCase(),
+    ruleset,
+    category,
     desc: cleanHtmlToParagraphs(system.details?.biography?.value).join('\n') || `${name} is a CR ${cr} ${type}.`,
     size,
     type,
@@ -321,8 +361,9 @@ function mapActor(sourceData, targetPath) {
     actions,
     legendary_actions: [],
     reactions: [],
-    image: enemyImage,
-    url: `/assets/atlas/enemies/json/${index}.json`,
+    image: tokenImage || undefined,
+    imageUrl: imageUrl || undefined,
+    url: `/assets/atlas/enemies/json/${versionFolder}/${category}/${index}.json`,
     updated_at: new Date().toISOString(),
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
     sprite_sheet: preserved.sprite_sheet || '/assets/atlas/enemies/sprites/enemies_sheet1.webp',
@@ -349,7 +390,7 @@ function mapSpell(sourceData, targetPath, fallbackPath) {
   if (properties.includes('somatic')) components.push('S');
   if (properties.includes('material')) components.push('M');
 
-  const preserved = getPreservedData(targetPath, fallbackPath) || {};
+  const preserved = getPreservedData(targetPath, [fallbackPath]) || {};
 
   const level = system.level || 0;
   const levelDir = getSpellLevelDirName(level);
@@ -414,6 +455,14 @@ function mapItem(sourceData, targetPath) {
 
 // Main runner for a category
 function portCategory(type) {
+  if (type === 'actors') {
+    portActors('2014');
+    portActors('2024');
+    // Regenerate enemy indexes
+    execSync('node tools/generateEnemyIndex.cjs', { stdio: 'inherit' });
+    return;
+  }
+
   const config = PATHS[type];
   if (!config) {
     console.error(`Unknown porting category: ${type}`);
@@ -460,14 +509,11 @@ function portCategory(type) {
           }
 
           let output = null;
-          if (type === 'actors') output = mapActor(parsed, targetPath);
-          else if (type === 'spells') output = mapSpell(parsed, targetPath, fallbackPath);
+          if (type === 'spells') output = mapSpell(parsed, targetPath, fallbackPath);
           else if (type === 'items') output = mapItem(parsed, targetPath);
 
           if (output) {
             fs.writeFileSync(targetPath, JSON.stringify(output, null, 2), 'utf8');
-            
-            // Delete the old flat JSON file if we successfully wrote the new nested one
             if (type === 'spells' && fallbackPath && fs.existsSync(fallbackPath) && fallbackPath !== targetPath) {
               try {
                 fs.unlinkSync(fallbackPath);
@@ -488,6 +534,54 @@ function portCategory(type) {
   console.log(`Successfully migrated ${count} files to ${config.target}!`);
 }
 
+function portActors(ruleset) {
+  const configKey = ruleset === '2024' ? 'actors24' : 'actors14';
+  const config = PATHS[configKey];
+
+  if (!fs.existsSync(config.source)) {
+    console.warn(`Actor source folder does not exist: ${config.source}. Skipping ruleset ${ruleset}.`);
+    return;
+  }
+
+  console.log(`Starting migration of [Actor ${ruleset}] from ${config.source} to ${config.target}...`);
+
+  let count = 0;
+  const categories = fs.readdirSync(config.source);
+
+  categories.forEach(cat => {
+    const catSourceDir = path.join(config.source, cat);
+    if (!fs.statSync(catSourceDir).isDirectory()) return;
+
+    const catTargetDir = path.join(config.target, cat);
+    if (!fs.existsSync(catTargetDir)) {
+      fs.mkdirSync(catTargetDir, { recursive: true });
+    }
+
+    const files = fs.readdirSync(catSourceDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+    files.forEach(file => {
+      const fullPath = path.join(catSourceDir, file);
+      try {
+        const fileContent = fs.readFileSync(fullPath, 'utf8');
+        const parsed = yaml.load(fileContent);
+        if (!parsed || !parsed._id) return;
+
+        const indexName = parsed._id.toLowerCase();
+        const targetPath = path.join(catTargetDir, `${indexName}.json`);
+
+        const output = mapActor(parsed, targetPath, ruleset, cat);
+        if (output) {
+          fs.writeFileSync(targetPath, JSON.stringify(output, null, 2), 'utf8');
+          count++;
+        }
+      } catch (err) {
+        console.error(`Failed to port actor file ${fullPath}:`, err.message);
+      }
+    });
+  });
+
+  console.log(`Successfully migrated ${count} ${ruleset} enemy records to ${config.target}!`);
+}
+
 // Command CLI parsing
 const args = process.argv.slice(2);
 if (args.length === 0 || args.includes('--help')) {
@@ -495,9 +589,9 @@ if (args.length === 0 || args.includes('--help')) {
 🤖 Foundry to Artificer Asset Porting Tool (Smart Merge Version)
 ================================================================
 Options:
-  --actors   Migrate NPCs/Monsters from packs/monsters/ to enemies/json/ (preserves custom sprites/item drops)
-  --items    Migrate Weapons & Gear from packs/items/ to equipment/json/ (preserves manual images)
-  --spells   Migrate Spells from packs/spells/ to spell/json/ (preserves customized entries)
+  --actors   Migrate NPCs/Monsters from monsters/ and actors24/ to ruleset-aware enemies/json/14/ and /24/
+  --items    Migrate Weapons & Gear from items/ to equipment/json/
+  --spells   Migrate Spells from spells/ to spell/json/
   --all      Migrate all categories
   `);
   process.exit(0);

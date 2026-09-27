@@ -1,0 +1,165 @@
+{
+  "index": "mmlich0000000000",
+  "name": "lich",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Lich is a CR 21 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "Wizard",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 315,
+  "hit_dice": "42d8",
+  "hit_points_roll": "42d8 + 126",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 21,
+  "wisdom": 14,
+  "charisma": 16,
+  "stats": {
+    "str": 11,
+    "dex": 16,
+    "con": 16,
+    "int": 21,
+    "wis": 14,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 21000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spirit jar",
+      "desc": "If destroyed, the [[lookup @name lowercase]]{monster} reforms in [[/r 1d10]] days if it has a spirit jar, reviving with all its Hit Points. The new body appears in an unoccupied space within the [[lookup @name lowercase]]{monster}'s lair.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks, using [[/item .6qvUZeTimud7ekV8]] or [[/item .9p8yotv4r7nt3NWl]] in any combination.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball} (level 5 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt} (level 5 version), @UUID[Compendium.dnd5e.actors24.Actor.phbsplMageHand00]{Mage Hand}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{Prestidigitation} 2/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplAnimateDea]{Animate Dead}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDimensionD]{Dimension Door}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPlaneShift]{Plane Shift} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplChainLight]{Chain Lightning}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFingerofDe]{Finger of Death}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPowerWordK]{Power Word Kill}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Scrying}",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "protective magic",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Counterspell} or @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Shield} in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "deathly teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=zvj61Na7MlcIN2xw]] [[lookup @range.units activity=zvj61Na7MlcIN2xw]]. [[lookup @range.special activity=zvj61Na7MlcIN2xw]], and each [[lookup @target.affects.type activity=zvj61Na7MlcIN2xw]] within [[lookup @target.template.size activity=zvj61Na7MlcIN2xw]] [[lookup @target.template.units activity=zvj61Na7MlcIN2xw]]. of the space it left takes [[/damage average]] damage.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "disrupt life",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=qSz7l1czwIc5j9gP]], each [[lookup @target.affects.type activity=qSz7l1czwIc5j9gP]] that isn't an Undead in a [[lookup @target.template.size activity=qSz7l1czwIc5j9gP]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: Half damage. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightening gaze",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Fear}, using the same spellcasting ability as Spellcasting. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "eldritch burst",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "4d12"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "paralyzing touch",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Paralyzed apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Lich.webp",
+  "imageUrl": "/assets/atlas/enemies/images/lich.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmlich0000000000.json",
+  "updated_at": "2026-09-27T13:37:09.760Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

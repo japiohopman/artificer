@@ -1,0 +1,15 @@
+{
+  "index": "mmgreatermagicre",
+  "name": "greater magic resistance",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} automatically succeeds on saving throws against spells and other magical effects, and the attack rolls of spells automatically miss it. Without the [[lookup @name lowercase]]{monster}'s permission, no spell can observe the [[lookup @name lowercase]]{monster} remotely or detect its thoughts, creature type, or alignment.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmgreatermagicre.json",
+  "updated_at": "2026-09-27T13:37:10.523Z"
+}

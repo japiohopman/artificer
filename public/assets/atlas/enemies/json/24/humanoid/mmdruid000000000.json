@@ -1,0 +1,111 @@
+{
+  "index": "mmdruid000000000",
+  "name": "druid",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Druid is a CR 2 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Druid",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 44,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 11,
+  "stats": {
+    "str": 10,
+    "dex": 12,
+    "con": 13,
+    "int": 12,
+    "wis": 16,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .mmVineStaff00000]] or [[/item .mmVerdantWisp000]] in any combination.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vine staff",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "verdant wisp",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDruidcraft]{Druidcraft}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSpeakwithA]{Speak with Animals} 2/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplEntangle00]{Entangle}, @UUID[Compendium.dnd5e.spells24.Item.phbsplThunderwav]{Thunderwave} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplAnimalMess]{Animal Messenger}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLongstride]{Longstrider}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMoonbeam00]{Moonbeam}",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Druid.webp",
+  "imageUrl": "/assets/atlas/enemies/images/druid.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmdruid000000000.json",
+  "updated_at": "2026-09-27T13:37:08.914Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

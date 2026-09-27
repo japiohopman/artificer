@@ -1,0 +1,95 @@
+{
+  "index": "mmankheg00000000",
+  "name": "ankheg",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Ankheg is a CR 2 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 11,
+  "constitution": 14,
+  "intelligence": 1,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 17,
+    "dex": 11,
+    "con": 14,
+    "int": 1,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "tunneler",
+      "desc": "The [[lookup @name lowercase]]{monster} can burrow through solid rock at half its Burrow Speed and leaves a 10-foot-diameter tunnel in its wake.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "Melee Attack Roll: [[/attack]] ([[lookup @activation.condition activity=xWlMeXFjELfSUWX9]]), reach [[lookup @range.value activity=xWlMeXFjELfSUWX9]] ft. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "acid spray",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=20GU2JBM5zJfNPD1]], each [[lookup @target.affects.type activity=20GU2JBM5zJfNPD1]] in a [[lookup @target.template.size activity=20GU2JBM5zJfNPD1]]-[[lookup @target.template.units activity=20GU2JBM5zJfNPD1]]-long, [[lookup @target.template.width activity=20GU2JBM5zJfNPD1]]-[[lookup @target.template.units activity=20GU2JBM5zJfNPD1]]-wide [[lookup @target.template.type capitalize activity=20GU2JBM5zJfNPD1]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Ankheg.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ankheg.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmankheg00000000.json",
+  "updated_at": "2026-09-27T13:37:09.270Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

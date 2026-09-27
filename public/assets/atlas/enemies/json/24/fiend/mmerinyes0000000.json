@@ -1,0 +1,130 @@
+{
+  "index": "mmerinyes0000000",
+  "name": "erinyes",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Erinyes@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.YXZP2A00UrCViGCe caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 178,
+  "hit_dice": "21d8",
+  "hit_points_roll": "21d8 + 84",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 14,
+  "wisdom": 14,
+  "charisma": 18,
+  "stats": {
+    "str": 18,
+    "dex": 16,
+    "con": 18,
+    "int": 14,
+    "wis": 14,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 12,
+  "proficiency_bonus": 4,
+  "xp": 8400,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "diabolical restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic rope",
+      "desc": "The [[lookup @name lowercase]]{monster} has a magic rope. While bearing it, the [[lookup @name lowercase]]{monster} can use the [[/item .mmEntanglingRope]] action. The rope has AC 20, HP 90, and Immunity to Poison and Psychic damage. The rope turns to dust if reduced to 0 Hit Points, if it is 5+ feet away from the [[lookup @name lowercase]]{monster} for 1 hour or more, or if the [[lookup @name lowercase]]{monster} dies. If the rope is damaged or destroyed, the [[lookup @name lowercase]]{monster} can fully restore it when finishing a Short or Long Rest.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmWitheringSword]] attacks and can use [[/item .mmEntanglingRope]].",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "parry",
+      "desc": "Trigger: The [[lookup @name lowercase]]{monster} is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. Response: The [[lookup @name lowercase]]{monster} adds [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] to its AC against that attack, possibly causing it to miss.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "withering sword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "entangling rope",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=n8nEah4vbrEPphNF]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=n8nEah4vbrEPphNF]] feet. Failure: [[/damage average]] damage, and the target has the &Reference[Restrained apply=false] condition until the rope is destroyed, the [[lookup @name lowercase]]{monster} uses a Bonus Action to release the target, or the [[lookup @name lowercase]]{monster} uses Entangling Rope again.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Erinyes.webp",
+  "imageUrl": "/assets/atlas/enemies/images/erinyes.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmerinyes0000000.json",
+  "updated_at": "2026-09-27T13:37:08.621Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

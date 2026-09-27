@@ -1,0 +1,126 @@
+{
+  "index": "mmwerebear000000",
+  "name": "werebear",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Werebear is a CR 5 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "Lycanthrope",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 135,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8 + 54",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 12,
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 17,
+    "int": 11,
+    "wis": 12,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "can’t speak in bear form",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "handaxe (humanoid or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "3d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .JIRP6xpVCOyZotXc]]{Handaxe} or [[/item .mmRend0000000000]]{Rend} in any combination. It can replace one attack with a [[/item .mmBite0000000000]]{Bite} attack.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite (bear or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Humanoid, it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=q7leyHRdAkccDyqG]]. Failure: The target is cursed. If the cursed target drops to 0 Hit Points, it instead becomes a @UUID[Compendium.dnd5e.actors24.Actor.mmWerebear000000]{Werebear} under the DM's control and has 10 Hit Points. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s' curse for 24 hours.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rend (bear or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "The [[lookup @name lowercase]]{monster} shape-shifts into a Large bear-humanoid hybrid form or a Large bear, or it returns to its true humanoid form, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. Foundry Note This feature also provides an Active Effect (AE) that will modify this creature's speed in bear form. You can enable the AE in the effects tab of the character sheet.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Werebear.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmwerebear000000.json",
+  "updated_at": "2026-09-27T13:37:09.444Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

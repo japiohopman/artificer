@@ -1,0 +1,107 @@
+{
+  "index": "mmhalfdragon0000",
+  "name": "half-dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Half-Dragon is a CR 5 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 105,
+  "hit_dice": "14d8",
+  "hit_points_roll": "14d8 + 42",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 14,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 15,
+  "charisma": 14,
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 16,
+    "int": 10,
+    "wis": 15,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "draconic origin",
+      "desc": "The [[lookup @name lowercase]]{monster} is related to a type of dragon associated with one of the following damage types (DM's choice): Acid, Cold, Fire, Lightning, or Poison. This choice affects other aspects of the stat block. Foundry Note This feature provides an Active Effect to manage Damage Resistances in the character sheet's Effects tab. The resistances outlined will need to be manually enabled/disabled.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmClaw0000000000]] attacks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dragon's breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=YfxQb5tcONgLb2nD]], each [[lookup @target.affects.type activity=YfxQb5tcONgLb2nD]] in a [[lookup @target.template.size activity=YfxQb5tcONgLb2nD]]-foot Cone. Failure: [[/damage average]] damage of the type chosen for the Draconic Origin trait. Success: Half damage.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "leap",
+      "desc": "The [[lookup @name lowercase]]{monster} jumps up to [[lookup @range.value activity=C28C43DeD8iFtZMe]] feet by [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/dragon/mmhalfdragon0000.json",
+  "updated_at": "2026-09-27T13:37:08.197Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

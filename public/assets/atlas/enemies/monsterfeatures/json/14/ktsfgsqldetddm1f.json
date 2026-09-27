@@ -1,0 +1,15 @@
+{
+  "index": "ktsfgsqldetddm1f",
+  "name": "lightning absorption",
+  "ruleset": "2014",
+  "category": null,
+  "type": "feat",
+  "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/lightning/bolt-strike-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/14/ktsfgsqldetddm1f.json",
+  "updated_at": "2026-09-27T13:37:10.231Z"
+}

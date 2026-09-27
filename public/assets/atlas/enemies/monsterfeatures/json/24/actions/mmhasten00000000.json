@@ -1,0 +1,19 @@
+{
+  "index": "mmhasten00000000",
+  "name": "hasten",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} takes the &Reference[Dash] and &Reference[Disengage] actions.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/skills/movement/figure-running-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmhasten00000000.json",
+  "updated_at": "2026-09-27T13:37:10.343Z"
+}

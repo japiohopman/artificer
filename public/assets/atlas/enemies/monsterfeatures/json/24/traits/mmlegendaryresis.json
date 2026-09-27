@@ -1,0 +1,15 @@
+{
+  "index": "mmlegendaryresis",
+  "name": "legendary resistance",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/equipment/shield/heater-steel-crystal-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmlegendaryresis.json",
+  "updated_at": "2026-09-27T13:37:10.529Z"
+}

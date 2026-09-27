@@ -1,0 +1,97 @@
+{
+  "index": "mmlemure00000000",
+  "name": "lemure",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Lemures@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.StGSoy9GntE0mCiY caption=false cite=false classes=\"no-embed mm\"]\nLemure@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.HJOkVF1j68fs3m7Y caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 9
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 10,
+  "dexterity": 5,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 11,
+  "charisma": 3,
+  "stats": {
+    "str": 10,
+    "dex": 5,
+    "con": 11,
+    "int": 1,
+    "wis": 11,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Understands Infernal but can’t speak",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hellish restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies in the Nine Hells, it revives with all its Hit Points in [[/r 1d10]] days unless it is killed by a creature under the effects of a @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Bless} spell or its remains are sprinkled with Holy Water.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vile slime",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "poison",
+            "url": "/assets/atlas/damage_types/json/poison.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Lemure.webp",
+  "imageUrl": "/assets/atlas/enemies/images/lemure.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmlemure00000000.json",
+  "updated_at": "2026-09-27T13:37:08.683Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

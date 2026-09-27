@@ -1,0 +1,15 @@
+{
+  "index": "mmconferfireresi",
+  "name": "confer fire resistance",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} can grant Resistance to Fire damage to a rider while it is on the [[lookup @name lowercase]]{monster}.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/barrier-shield-explosion-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmconferfireresi.json",
+  "updated_at": "2026-09-27T13:37:10.511Z"
+}

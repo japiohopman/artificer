@@ -1,0 +1,15 @@
+{
+  "index": "mmtransparent000",
+  "name": "transparent",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "Even when the [[lookup @name lowercase]]{monster} is in plain sight, a creature must succeed on a [[/check dc=15 ability=wis skill=prc format=long]] to notice the [[lookup @name lowercase]]{monster} if the creature hasn't witnessed the [[lookup @name lowercase]]{monster} move or otherwise act.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/water/orb-water-transparent.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmtransparent000.json",
+  "updated_at": "2026-09-27T13:37:10.545Z"
+}

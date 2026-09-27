@@ -1,0 +1,159 @@
+{
+  "index": "mmsolar000000000",
+  "name": "solar",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Solar is a CR 21 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 297,
+  "hit_dice": "22d10",
+  "hit_points_roll": "22d10 + 176",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 26,
+  "dexterity": 22,
+  "constitution": 26,
+  "intelligence": 25,
+  "wisdom": 25,
+  "charisma": 30,
+  "stats": {
+    "str": 26,
+    "dex": 22,
+    "con": 26,
+    "int": 25,
+    "wis": 25,
+    "cha": 30
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "radiant"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 17
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 21000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "divine awareness",
+      "desc": "The [[lookup @name lowercase]]{monster} knows if it hears a lie.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "exalted restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside Mount Celestia, its body disappears, and it gains a new body instantly, reviving with all its Hit Points somewhere in Mount Celestia.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item Flying Sword]] attacks. It can replace one attack with a use of [[/item Slaying Bow]].",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slaying bow",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=C7BMf8hIfCjxRSWC]], one [[lookup @target.affects.type activity=C7BMf8hIfCjxRSWC]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=C7BMf8hIfCjxRSWC]] [[lookup @range.units activity=C7BMf8hIfCjxRSWC]]. Failure: If the [[lookup @target.affects.type activity=C7BMf8hIfCjxRSWC]] has 100 Hit Points or fewer, it dies. It otherwise takes [[/damage average]] damage.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "flying sword",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. Hit or Miss: The sword magically returns to the [[lookup @name lowercase]]{monster}'s hand or hovers within 5 feet of the [[lookup @name lowercase]]{monster} immediately after a ranged attack.",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCommune000]{Commune}, @UUID[Compendium.dnd5e.spells24.Item.phbsplControlWea]{Control Weather}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil]{Dispel Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplResurrecti]{Resurrection}",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "blinding gaze",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=B6xM8C2pABIb5o7y]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=B6xM8C2pABIb5o7y]] feet. Failure: The target has the &Reference[Blinded apply=false] condition for 1 minute. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "radiant teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=HtsFBK1PYKjvy9mn]] feet to an unoccupied space it can see. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=HtsFBK1PYKjvy9mn]], each creature in a [[lookup @target.template.size activity=HtsFBK1PYKjvy9mn]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} at its destination space. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "divine aid",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds} (level 2 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{Remove Curse}, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Solar.webp",
+  "imageUrl": "/assets/atlas/enemies/images/solar.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmsolar000000000.json",
+  "updated_at": "2026-09-27T13:37:07.226Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

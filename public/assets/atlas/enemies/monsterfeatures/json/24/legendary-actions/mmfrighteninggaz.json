@@ -1,0 +1,15 @@
+{
+  "index": "mmfrighteninggaz",
+  "name": "frightening gaze",
+  "ruleset": "2024",
+  "category": "legendary-actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Fear}, using the same spellcasting ability as Spellcasting. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmfrighteninggaz.json",
+  "updated_at": "2026-09-27T13:37:10.490Z"
+}

@@ -1,0 +1,24 @@
+{
+  "index": "mmcelestialresto",
+  "name": "celestial restoration",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} dies, it returns to life in [[/r 1d6#Days]] days and regains all its Hit Points unless @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil] is cast on its remains.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/holy/chalice-glowing-yellow-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmcelestialresto.json",
+  "updated_at": "2026-09-27T13:37:10.510Z"
+}
