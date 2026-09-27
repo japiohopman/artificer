@@ -1063,9 +1063,8 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
     const resolvedEnemyArtwork = resolveEnemyArtworkUrl(url, index, name, isLocalhost, REPO, BRANCH);
-    if (resolvedEnemyArtwork) {
-      finalUrl = resolvedEnemyArtwork;
-    }
+    // Explicitly set finalUrl to resolvedEnemyArtwork (which is empty string for token-only/unmapped inputs)
+    finalUrl = resolvedEnemyArtwork;
   }
 
   // Ensure equipment, materials, and transport image filenames use underscores instead of hyphens
