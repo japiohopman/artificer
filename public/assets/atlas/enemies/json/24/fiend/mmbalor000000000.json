@@ -1,0 +1,149 @@
+{
+  "index": "mmbalor000000000",
+  "name": "balor",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Balor@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.dstDspmI7LdrCsxy caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Huge",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 287,
+  "hit_dice": "23d12",
+  "hit_points_roll": "23d12 + 138",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 26,
+  "dexterity": 15,
+  "constitution": 22,
+  "intelligence": 20,
+  "wisdom": 16,
+  "charisma": 22,
+  "stats": {
+    "str": 26,
+    "dex": 15,
+    "con": 22,
+    "int": 20,
+    "wis": 16,
+    "cha": 22
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 19,
+  "proficiency_bonus": 6,
+  "xp": 22000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "death throes",
+      "desc": "The [[lookup @name lowercase]]{monster} explodes when it dies. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=jTq2czA8KQITUK4c]], each creature in a [[lookup @target.template.size activity=jTq2czA8KQITUK4c]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Failure or Success: If the [[lookup @name lowercase]]{monster} dies outside the Abyss, it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fire aura",
+      "desc": "At the end of each of the [[lookup @name lowercase]]{monster}'s turns, each [[lookup @target.affects.type activity=15VgJKVXwYBOFSqJ]] of the [[lookup @name lowercase]]{monster}'s choice in a [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} takes [[/damage average]] damage.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmFlameWhip00000]] attack and one [[/item .mmLightningBlade]] attack.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "flame whip",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature, the [[lookup @name lowercase]]{monster} pulls the target up to 25 feet straight toward itself, and the target has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "3d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} teleports [[lookup @target.affects.special activity=dnoRMdFzhUUku26D]] of itself up to [[lookup @range.value activity=dnoRMdFzhUUku26D]] feet to an unoccupied space the  [[lookup @name lowercase]]{monster} can see.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "lightning blade",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target can't take &Reference[Reaction] until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "3d8+8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Balor.webp",
+  "imageUrl": "/assets/atlas/enemies/images/balor.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmbalor000000000.json",
+  "updated_at": "2026-09-27T13:37:08.586Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

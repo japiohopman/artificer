@@ -1,0 +1,81 @@
+{
+  "index": "mmgiantcentipede",
+  "name": "giant centipede",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Giant Centipede is a CR 0.25 beast.",
+  "size": "Small",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 3,
+  "stats": {
+    "str": 5,
+    "dex": 14,
+    "con": 12,
+    "int": 1,
+    "wis": 7,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false]  condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantCentipede.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_centipede.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmgiantcentipede.json",
+  "updated_at": "2026-09-27T13:37:06.921Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

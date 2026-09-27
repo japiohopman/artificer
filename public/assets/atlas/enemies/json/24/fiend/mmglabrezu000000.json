@@ -1,0 +1,124 @@
+{
+  "index": "mmglabrezu000000",
+  "name": "glabrezu",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Glabrezu@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.ywxoKSaj2hlvewVQ caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 189,
+  "hit_dice": "18d10",
+  "hit_points_roll": "18d10 + 90",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "dexterity": 15,
+  "constitution": 21,
+  "intelligence": 19,
+  "wisdom": 17,
+  "charisma": 16,
+  "stats": {
+    "str": 20,
+    "dex": 15,
+    "con": 21,
+    "int": 19,
+    "wis": 17,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "demonic restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmPincer00000000]] attacks and uses [[/item .mmPummel00000000]] or [[/item .mmSpellcasting00]].",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pincer",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two pincers.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pummel",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=aae828c0Hue0XOMP]], one creature Grappled by the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{Darkness}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplConfusion0]{Confusion}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{Fly}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPowerWordS]{Power Word Stun}",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Glabrezu.webp",
+  "imageUrl": "/assets/atlas/enemies/images/glabrezu.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmglabrezu000000.json",
+  "updated_at": "2026-09-27T13:37:08.628Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,111 @@
+{
+  "index": "mmyounggolddrago",
+  "name": "young gold dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Young Gold Dragon is a CR 10 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "Metallic",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10 + 85",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 21,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 20,
+  "stats": {
+    "str": 23,
+    "dex": 14,
+    "con": 21,
+    "int": 16,
+    "wis": 13,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.  It can replace one attack with a use of [[/item .mmWeakeningBreat]].",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot Cone. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "weakening breath",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=EGZ4bS4HpJkfNG9s]], each creature that isn't currently affected by this breath in a [[lookup @target.template.size activity=EGZ4bS4HpJkfNG9s]]-foot Cone. Failure: The target has Disadvantage on Strength-based D20 Tests and subtracts 3 ([[/r 1d6]]) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=EGZ4bS4HpJkfNG9s]] minute, it succeeds automatically.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungGoldDragon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/young_gold_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmyounggolddrago.json",
+  "updated_at": "2026-09-27T13:37:08.252Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

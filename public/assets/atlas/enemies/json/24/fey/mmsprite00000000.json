@@ -1,0 +1,111 @@
+{
+  "index": "mmsprite00000000",
+  "name": "sprite",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Sprite@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.V6OhuMIts22zPe8X caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Tiny",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "4d4",
+  "hit_points_roll": "4d4",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 3,
+  "dexterity": 18,
+  "constitution": 10,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 11,
+  "stats": {
+    "str": 3,
+    "dex": 18,
+    "con": 10,
+    "int": 14,
+    "wis": 13,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "needle sword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "enchanting bow",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Charmed apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "heart sight",
+      "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=NqVrZShDV1L3zBA3]], one [[lookup @target.affects.type activity=NqVrZShDV1L3zBA3]] within [[lookup @range.value activity=NqVrZShDV1L3zBA3]] feet the [[lookup @name lowercase]]{monster} can see (Celestials, Fiends, and Undead automatically fail the save). Failure: The [[lookup @name lowercase]]{monster} knows the target's emotions and alignment.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} on itself, requiring no spell components and using Charisma as the spellcasting ability.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/Sprite.webp",
+  "imageUrl": "/assets/atlas/enemies/images/sprite.webp",
+  "url": "/assets/atlas/enemies/json/24/fey/mmsprite00000000.json",
+  "updated_at": "2026-09-27T13:37:08.563Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

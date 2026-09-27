@@ -1,0 +1,88 @@
+{
+  "index": "mmgiantrat000000",
+  "name": "giant rat",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Giant Rat is a CR 0.125 beast.",
+  "size": "Small",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 4,
+  "stats": {
+    "str": 7,
+    "dex": 16,
+    "con": 11,
+    "int": 2,
+    "wis": 10,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantRat.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_rat.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmgiantrat000000.json",
+  "updated_at": "2026-09-27T13:37:06.948Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

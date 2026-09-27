@@ -1,0 +1,111 @@
+{
+  "index": "mmpseudodragon00",
+  "name": "pseudodragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Pseudodragon@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.NhqYPD69TqlVJpKV caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Tiny",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "3d4",
+  "hit_points_roll": "3d4 + 3",
+  "speed": {
+    "walk": "15 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 10,
+  "stats": {
+    "str": 6,
+    "dex": 15,
+    "con": 13,
+    "int": 10,
+    "wis": 12,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Understands Common and Draconic but can’t speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmBite0000000000]] attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sting",
+      "desc": "Constitution Saving Throw: DC 12, one creature the pseudodragon can see within 5 feet. Failure: 5 (2d4) Poison damage, and the target has the Poisoned condition for 1 hour. Failure by 5 or More: While Poisoned, the target also has the Unconscious condition, which ends early if the target takes damage or a creature within 5 feet of it takes an action to wake it.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/Pseudodragon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/pseudodragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmpseudodragon00.json",
+  "updated_at": "2026-09-27T13:37:08.216Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

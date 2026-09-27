@@ -1,0 +1,109 @@
+{
+  "index": "mmtoughboss00000",
+  "name": "tough boss",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Toughs@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.UqOqk409VNapbgEM caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nTough Boss@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.T47eTnRd4tadGFU9 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 82,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8 + 33",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 14,
+  "constitution": 16,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 17,
+    "dex": 14,
+    "con": 16,
+    "int": 11,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Common plus one other language",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "warhammer",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, the [[lookup @name lowercase]]{monster} pushes the target up to 10 feet straight away from itself.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "heavy crossbow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .iD5121TXziB6ZcSt]] or [[/item .7MS7v84QoTYESVax]] in any combination.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmtoughboss00000.json",
+  "updated_at": "2026-09-27T13:37:09.032Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

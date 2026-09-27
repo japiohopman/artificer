@@ -1,0 +1,118 @@
+{
+  "index": "mmlamia000000000",
+  "name": "lamia",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Lamia@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Lawk1h1Wf49rxX8U caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 26",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 15,
+  "intelligence": 14,
+  "wisdom": 15,
+  "charisma": 16,
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 15,
+    "int": 14,
+    "wis": 15,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmClaw0000000000]] attacks. It can replace one attack with a use of [[/item .mmCorruptingTouc]].",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "corrupting touch",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=F4cByCi1IEouN08a]], [[lookup @target.affects.labels.statblock activity=F4cByCi1IEouN08a]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=F4cByCi1IEouN08a]] feet. Failure: [[/damage average]] damage, and the target is cursed for 1 hour. Until the curse ends, the target has the &Reference[Charmed apply=false] and &Reference[Poisoned apply=false] conditions.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{Disguise Self} (can appear as a Large or Medium biped), @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Minor Illusion} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplGeas000000]{Geas}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMajorImage]{Major Image}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Scrying}",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "leap",
+      "desc": "The [[lookup @name lowercase]]{monster} jumps up to [[lookup @range.value activity=C28C43DeD8iFtZMe]] feet by [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Lamia.webp",
+  "imageUrl": "/assets/atlas/enemies/images/lamia.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmlamia000000000.json",
+  "updated_at": "2026-09-27T13:37:08.679Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

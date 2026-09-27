@@ -1,0 +1,92 @@
+{
+  "index": "mmhomunculus0000",
+  "name": "homunculus",
+  "ruleset": "2024",
+  "category": "construct",
+  "desc": "Homunculus is a CR 0 construct.",
+  "size": "Tiny",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4 + 2",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 4,
+  "dexterity": 15,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 7,
+  "stats": {
+    "str": 4,
+    "dex": 15,
+    "con": 14,
+    "int": 10,
+    "wis": 10,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "plus one other language;",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "telepathic bond",
+      "desc": "While the [[lookup @name lowercase]]{monster} is on the same plane of existence as its master, the two of them can communicate telepathically with each other.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. Hit: [[/damage]] damage, and the target is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=zINRP55nQzeLTh4x]]. Failure: The target has the Poisoned condition until the end of the homunculus's next turn. Failure by 5 or More: The target has the &Reference[Poisoned apply=false] condition for 1 minute. While Poisoned, the target has the &Reference[Unconscious apply=false] condition, which ends early if the target takes any damage.",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/homunculus.webp",
+  "url": "/assets/atlas/enemies/json/24/construct/mmhomunculus0000.json",
+  "updated_at": "2026-09-27T13:37:07.712Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

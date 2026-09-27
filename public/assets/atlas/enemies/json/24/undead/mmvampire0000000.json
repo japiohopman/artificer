@@ -1,0 +1,161 @@
+{
+  "index": "mmvampire0000000",
+  "name": "vampire",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Vampires@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.y4ooBM6PNZfWH3Tv caption=false cite=false classes=\"no-embed mm\"]",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 195,
+  "hit_dice": "23d8",
+  "hit_points_roll": "23d8 + 92",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 18,
+    "dex": 18,
+    "con": 18,
+    "int": 17,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "Common plus two other languages",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "misty escape",
+      "desc": "If the [[lookup @name lowercase]]{monster} drops to 0 Hit Points outside its resting place, the [[lookup @name lowercase]]{monster} uses Shape-Shift to become mist (no action required). If it can't use Shape-Shift, it is destroyed. While it has 0 Hit Points in mist form, it can't return to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it returns to its vampire form and has the &Reference[Paralyzed apply=false] condition until it regains any Hit Points, and it regains 1 Hit Point after spending 1 hour there.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack (vampire form only)",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmGraveStrike000]]{Grave Strike} attacks and uses [[/item .mmBite0000000000]]{Bite}.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "grave strike (vampire form only)",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two hands.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bite (bat or vampire form only)",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=ngPzlEI5pVSdBv86]], one [[lookup @target.affects.type activity=ngPzlEI5pVSdBv86]] within [[lookup @range.value activity=ngPzlEI5pVSdBv86]] feet [[lookup @target.affects.special activity=ngPzlEI5pVSdBv86]]. Failure: [[/damage average]] damage. The target's Hit Point maximum decreases by an amount equal to the Necrotic damage taken, and the [[lookup @name lowercase]]{monster} regains Hit Points equal to that amount. A Humanoid reduced to 0 Hit Points by this damage and then buried rises the following sunset as a @UUID[Compendium.dnd5e.actors24.Actor.mmVampireSpawn00]{Vampire Spawn} under the [[lookup @name lowercase]]{monster}'s control.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "charm",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCharmPerso], requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @abilities.cha.dc]]), and the duration is [[lookup @duration.value activity=fcRXSTOlFJShCl52]] hours. The &Reference[Charmed apply=false] target is a willing recipient of the [[lookup @name lowercase]]{monster}'s [[/item .mmBite0000000000]]{Bite}, the damage of which doesn't end the spell. When the spell ends, the target is unaware it was Charmed by the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shape-shift",
+      "desc": "If the [[lookup @name lowercase]]{monster} isn't in sunlight or running water, it shape-shifts into a Tiny @UUID[Compendium.dnd5e.actors24.Actor.mmBat00000000000]{bat} (Speed 5 ft., Fly Speed 30 ft.) or a Medium cloud of mist (Speed 5 ft., Fly Speed 20 ft. [hover]), or it returns to its vampire form. Anything it is wearing transforms with it. While in bat form, the [[lookup @name lowercase]]{monster} can't speak. Its game statistics, other than its size and Speed, are unchanged. While in mist form, the [[lookup @name lowercase]]{monster} can't take any actions, speak, or manipulate objects. It is weightless and can enter an enemy's space and stop there. If air can pass through a space, the mist can do so, but it can't pass through liquid. It has Resistance to all damage, except the damage it takes from sunlight.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "beguile",
+      "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000], requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @abilities.cha.dc]]). The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "deathless strike",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item .mmGraveStrike000]]{Grave Strike} attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vampire weakness",
+      "desc": "The [[lookup @name lowercase]]{monster} has these weaknesses: Forbiddance. The [[lookup @name lowercase]]{monster} can't enter a residence without an invitation from an occupant. Running Water. The [[lookup @name lowercase]]{monster} takes 20 Acid damage if it ends its turn in running water. Stake to the Heart. The [[lookup @name lowercase]]{monster} is destroyed if a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]{monster}'s heart while the [[lookup @name lowercase]]{monster} has the Incapacitated condition. Sunlight. The [[lookup @name lowercase]]{monster} takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Vampire.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmvampire0000000.json",
+  "updated_at": "2026-09-27T13:37:09.829Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

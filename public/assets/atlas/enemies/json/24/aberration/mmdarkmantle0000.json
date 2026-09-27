@@ -1,0 +1,87 @@
+{
+  "index": "mmdarkmantle0000",
+  "name": "darkmantle",
+  "ruleset": "2024",
+  "category": "aberration",
+  "desc": "Darkmantle@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.DmKKsAs8j6WW7lQ2 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Small",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6 + 5",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "crush",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the [[lookup @name lowercase]]{monster} attaches to the target. If the target is a Medium or smaller creature and the [[lookup @name lowercase]]{monster} had Advantage on the attack roll, it covers the target, which has the &Reference[Blinded apply=false] condition and is &Reference[suffocating apply=false]{suffocating} while the [[lookup @name lowercase]]{monster} is attached in this way. While attached to a target, the [[lookup @name lowercase]]{monster} can attack only the target but has Advantage on its attack rolls. Its Speed becomes 0, it can't benefit from any bonus to its Speed, and it moves with the target. A creature can take an action to try to detach the [[lookup @name lowercase]]{monster} from itself, doing so with a successful [[/check format=long]]. On its turn, the [[lookup @name lowercase]]{monster} can detach itself by using 5 feet of movement.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "darkness aura",
+      "desc": "Magical Darkness fills a [[lookup @target.template.size activity=amat5Ii4NydseA0h]]-foot Emanation originating from the [[lookup @name]]{monster}. This effect lasts while the [[lookup @name]]{monster} maintains Concentration on it, up to [[lookup @duration.value activity=amat5Ii4NydseA0h]] minutes. Darkvision can't penetrate this area, and no light can illuminate it.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Darkmantle.webp",
+  "url": "/assets/atlas/enemies/json/24/aberration/mmdarkmantle0000.json",
+  "updated_at": "2026-09-27T13:37:06.761Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

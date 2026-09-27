@@ -1,0 +1,95 @@
+{
+  "index": "mmmammoth0000000",
+  "name": "mammoth",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Mammoth is a CR 6 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 126,
+  "hit_dice": "11d12",
+  "hit_points_roll": "11d12 + 55",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 24,
+  "dexterity": 9,
+  "constitution": 21,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 6,
+  "stats": {
+    "str": 24,
+    "dex": 9,
+    "con": 21,
+    "int": 3,
+    "wis": 11,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two  [[/item .mmGore0000000000]] attacks.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a Huge or smaller creature and the [[lookup @name lowercase]]{monster} moved 20+ feet straight toward it immediately before the hit, the target has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "trample",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]], [[lookup @target.affects.labels.statblock activity=QckCIpsC3BdEHycI]] within [[lookup @range.value activity=QckCIpsC3BdEHycI]] feet that has the Prone condition. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Mammoth.webp",
+  "imageUrl": "/assets/atlas/enemies/images/mammoth.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmmammoth0000000.json",
+  "updated_at": "2026-09-27T13:37:07.025Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

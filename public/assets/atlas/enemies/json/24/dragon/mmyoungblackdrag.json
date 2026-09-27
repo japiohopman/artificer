@@ -1,0 +1,104 @@
+{
+  "index": "mmyoungblackdrag",
+  "name": "young black dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Black Dragons@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.EZn4p80bsBA4HbN8 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 127,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10 + 45",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 14,
+  "constitution": 17,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 17,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "acid breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=qNI6W02jCUQbPpYE]], each [[lookup @target.affects.type activity=qNI6W02jCUQbPpYE]] in a [[lookup @target.template.size activity=qNI6W02jCUQbPpYE]]-foot-long, [[lookup @target.template.width activity=qNI6W02jCUQbPpYE]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungBlackDragon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/young_black_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmyoungblackdrag.json",
+  "updated_at": "2026-09-27T13:37:08.233Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

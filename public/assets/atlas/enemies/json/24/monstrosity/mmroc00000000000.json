@@ -1,0 +1,111 @@
+{
+  "index": "mmroc00000000000",
+  "name": "roc",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Roc is a CR 11 monstrosity.",
+  "size": "Gargantuan",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 248,
+  "hit_dice": "16d20",
+  "hit_points_roll": "16d20 + 80",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 28,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 10,
+  "charisma": 9,
+  "stats": {
+    "str": 28,
+    "dex": 10,
+    "con": 20,
+    "int": 3,
+    "wis": 10,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster}  makes two  [[/item .mmBeak0000000000]] attacks. It can replace one attack with a  [[/item .mmTalons00000000]] attack.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "beak",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d12+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=xdrDC5kFs6sCOFiE]] creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from both talons, and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d6+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "swoop",
+      "desc": "If the [[lookup @name lowercase]]{monster} has a creature Grappled, the [[lookup @name lowercase]]{monster} flies up to half its Fly Speed without provoking &Reference[OpportunityAttacks] and drops that creature.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Roc.webp",
+  "imageUrl": "/assets/atlas/enemies/images/roc.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmroc00000000000.json",
+  "updated_at": "2026-09-27T13:37:09.424Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

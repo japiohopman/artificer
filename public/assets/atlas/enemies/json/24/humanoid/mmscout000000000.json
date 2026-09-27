@@ -1,0 +1,104 @@
+{
+  "index": "mmscout000000000",
+  "name": "scout",
+  "ruleset": "2024",
+  "category": "humanoid",
+  "desc": "Scouts@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Ia0dhEMIJJ7PVLVn caption=false cite=false classes=\"no-embed mm\"]\nScout@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.AXb6rgRnpN7qGWWX caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8 + 3",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 13,
+  "charisma": 11,
+  "stats": {
+    "str": 11,
+    "dex": 14,
+    "con": 12,
+    "int": 11,
+    "wis": 13,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Common plus one other language",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .jdOlqVzYs89JuqTB]] and [[/item .qhM3PIWgXdyRCeul]] in any combination.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Scout.webp",
+  "imageUrl": "/assets/atlas/enemies/images/scout.webp",
+  "url": "/assets/atlas/enemies/json/24/humanoid/mmscout000000000.json",
+  "updated_at": "2026-09-27T13:37:09.013Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

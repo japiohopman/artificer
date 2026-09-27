@@ -1,0 +1,123 @@
+{
+  "index": "mmshadow00000000",
+  "name": "shadow",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Shadow@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.VYmVmSUznIAKRkCf caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 5",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 13,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "stats": {
+    "str": 6,
+    "dex": 14,
+    "con": 13,
+    "int": 6,
+    "wis": 10,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "radiant"
+  ],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "thunder"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch without expending extra movement to do so.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sunlight weakness",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has Disadvantage on D20 Tests.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "draining swipe",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target's Strength score decreases by [[/r 1d4]]. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a @UUID[Compendium.dnd5e.actors24.Actor.mmShadow00000000]{Shadow} rises from the corpse [[/r 1d4]] hours later. Foundry Note This feature also provides an Active Effect (AE) to modify the target's Strength Score. When the target roll's their d4 to determine the loss, you can apply the respective AE to the target's sheet.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "1d6-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shadow stealth",
+      "desc": "While in Dim Light or Darkness, the [[lookup @name lowercase]]{monster} takes the &Reference[Hide] action.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Shadow.webp",
+  "imageUrl": "/assets/atlas/enemies/images/shadow.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmshadow00000000.json",
+  "updated_at": "2026-09-27T13:37:09.798Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,152 @@
+{
+  "index": "mmunicorn0000000",
+  "name": "unicorn",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Unicorn is a CR 5 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 26",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 11,
+  "wisdom": 17,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 15,
+    "int": 11,
+    "wis": 17,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item Hooves]] attack and one [[/item Radiant Horn]] attack.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "radiant horn",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "radiant",
+            "url": "/assets/atlas/damage_types/json/radiant.json"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDruidcraft]{Druidcraft} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplCalmEmotio]{Calm Emotions}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil]{Dispel Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplEntangle00]{Entangle}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPasswithou]{Pass without Trace}, @UUID[Compendium.dnd5e.spells24.Item.phbsplWordofReca]{Word of Recall}",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "charging horn",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed without provoking &Reference[Opportunity Attacks], and it makes one [[/item Radiant Horn]] attack.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shimmering shield",
+      "desc": "The [[lookup @name lowercase]]{monster} targets itself or one [[lookup @target.affects.type activity=sl8NoPhB0e5z6jmK]] it can see within [[lookup @range.value activity=sl8NoPhB0e5z6jmK]] feet of itself. The target gains [[/healing average temp]], and its AC increases by 2 until the end of the [[lookup @name lowercase]]{monster}'s' next turn. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "unicorn's blessing",
+      "desc": "The [[lookup @name]]{monster} touches another creature with its horn and casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds} or @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration} on that creature, using the same spellcasting ability as Spellcasting.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Unicorn.webp",
+  "imageUrl": "/assets/atlas/enemies/images/unicorn.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmunicorn0000000.json",
+  "updated_at": "2026-09-27T13:37:07.297Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

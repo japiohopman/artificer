@@ -1,0 +1,101 @@
+{
+  "index": "phbmobdraconicsp",
+  "name": "draconic spirit",
+  "ruleset": "2024",
+  "category": "summons",
+  "desc": "@Embed[Compendium.dnd5e.spells24.Item.phbsplSummonDrag caption=false]",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 50,
+  "hit_dice": "50",
+  "hit_points_roll": "50",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 14,
+  "constitution": 17,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 14,
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 17,
+    "int": 10,
+    "wis": 14,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "poison"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "understands the languages you know",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shared resistances",
+      "desc": "When you summon the spirit, choose one of its Resistances. You have &Reference[damageresistance]{Resistance} to the chosen damage type until the spell ends. Foundry Note Active effects and activities applying those effects on this item are provided for optional application of the chosen resistance.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The spirit makes a number of [[/item Rend]] attacks equal to half the spell's level (round down), and it uses [[/item Breath Weapon]]. [[floor(@flags.dnd5e.summon.level / 2)]]{Number of attacks}",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "Melee Attack: Bonus equals your spell attack modifier, reach 10 feet. Hit: 1d6 + 4 + the spell's level Piercing damage.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "breath weapon",
+      "desc": "Dexterity Saving Throw: DC equals your spell save DC, each creature in a 30-foot Cone. Failure: 2d6 damage of a type this spirit has Resistance to (your choice when you cast the spell). Success: Half damage.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/summons/phbmobdraconicsp.json",
+  "updated_at": "2026-09-27T13:37:09.601Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

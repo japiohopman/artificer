@@ -1,0 +1,24 @@
+{
+  "index": "mmbonebow0000000",
+  "name": "bone bow",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "150 ft",
+  "image": "icons/weapons/bows/longbow-recurve-skull-brown.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmbonebow0000000.json",
+  "updated_at": "2026-09-27T13:37:10.409Z"
+}

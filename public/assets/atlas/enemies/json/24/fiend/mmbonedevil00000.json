@@ -1,0 +1,125 @@
+{
+  "index": "mmbonedevil00000",
+  "name": "bone devil",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Bone Devil@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.LhlUSSOMbbHHTi5e caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 161,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10 + 68",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 16,
+    "con": 18,
+    "int": 13,
+    "wis": 14,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "diabolical restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmClaw0000000000]] attacks and one [[/item .mmInfernalSting0]] attack.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "infernal sting",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. While Poisoned, the target can't regain Hit Points.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/BoneDevil.webp",
+  "imageUrl": "/assets/atlas/enemies/images/bone_devil.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmbonedevil00000.json",
+  "updated_at": "2026-09-27T13:37:08.608Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

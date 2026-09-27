@@ -1,0 +1,15 @@
+{
+  "index": "mmleap0000000000",
+  "name": "leap",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} jumps up to [[lookup @range.value activity=C28C43DeD8iFtZMe]] feet by [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/skills/movement/arrows-up-trio-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmleap0000000000.json",
+  "updated_at": "2026-09-27T13:37:10.350Z"
+}

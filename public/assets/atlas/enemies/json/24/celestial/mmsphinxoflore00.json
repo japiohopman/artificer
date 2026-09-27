@@ -1,0 +1,136 @@
+{
+  "index": "mmsphinxoflore00",
+  "name": "sphinx of lore",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Sphinxes@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.JPdmXY7WGZdIPlJo caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 170,
+  "hit_dice": "20d10",
+  "hit_points_roll": "20d10 + 60",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 18,
+  "wisdom": 18,
+  "charisma": 18,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 18,
+    "wis": 18,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic",
+    "radiant"
+  ],
+  "damage_immunities": [
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "inscrutable",
+      "desc": "No magic can observe the [[lookup @name lowercase]]{monster} remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Claw]] attacks.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "3d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "mind-rending roar",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=zPMfwwIoTFzIrN5H]], each [[lookup @target.affects.type activity=zPMfwwIoTFzIrN5H]] in a [[lookup @target.template.size activity=zPMfwwIoTFzIrN5H]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Incapacitated apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{Identify}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{Mage Hand}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Minor Illusion}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{Prestidigitation} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{Legend Lore}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLocateObje]{Locate Object}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPlaneShift]{Plane Shift}, @UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{Remove Curse}, @UUID[Compendium.dnd5e.spells24.Item.phbsplTongues000]{Tongues}",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "arcane prowl",
+      "desc": "The [[lookup @name lowercase]]{monster} can teleport up to [[lookup @range.value activity=a3RqyzU0UqzLJif0]] feet to an unoccupied space it can see, and it makes one [[/item Claw]] attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "weight of years",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=xZul1ImCP658OBv3]], one [[lookup @target.affects.type activity=xZul1ImCP658OBv3]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=xZul1ImCP658OBv3]] feet. Failure: The target gains 1 &Reference[Exhaustion apply=false] level. While the target has any Exhaustion levels, it appears [[/r 3d10]] years older. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/celestial/mmsphinxoflore00.json",
+  "updated_at": "2026-09-27T13:37:07.250Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

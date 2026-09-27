@@ -1,0 +1,132 @@
+{
+  "index": "mmettercap000000",
+  "name": "ettercap",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Ettercap is a CR 2 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 44,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 8,
+  "stats": {
+    "str": 14,
+    "dex": 15,
+    "con": 13,
+    "int": 7,
+    "wis": 12,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores movement restrictions caused by webs, and the [[lookup @name lowercase]]{monster} knows the location of any other creature in contact with the same web.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web strand",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=Ln5NXBaHGKlwdoiP]], one Large or smaller [[lookup @target.affects.type activity=Ln5NXBaHGKlwdoiP]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Ln5NXBaHGKlwdoiP]] feet. Failure: The target has the &Reference[Restrained apply=false] condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Bludgeoning, Poison, and Psychic damage).",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack and one [[/item .mmClaw0000000000]] attack.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "reel",
+      "desc": "The [[lookup @name lowercase]]{monster} pulls [[lookup @target.affects.labels.statblock activity=jWkEQYHBd7aht1kG]] within [[lookup @range.value activity=jWkEQYHBd7aht1kG]] feet of itself that is Restrained by its Web Strand up to 25 feet straight toward itself.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Ettercap.webp",
+  "imageUrl": "/assets/atlas/enemies/images/ettercap.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmettercap000000.json",
+  "updated_at": "2026-09-27T13:37:09.318Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

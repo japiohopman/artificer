@@ -1,0 +1,104 @@
+{
+  "index": "mmtyrannosaurusr",
+  "name": "tyrannosaurus rex",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Tyrannosaurus Rex is a CR 8 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "13d12",
+  "hit_points_roll": "13d12 + 52",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 25,
+  "dexterity": 10,
+  "constitution": 19,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 9,
+  "stats": {
+    "str": 25,
+    "dex": 10,
+    "con": 19,
+    "int": 2,
+    "wis": 12,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack and one [[/item .mmTail0000000000]] attack.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]])). While Grappled, the target has the &Reference[Restrained apply=falsse] condition and can't be targeted by the [[lookup @name lowercase]]{monster}'s Tail.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d12+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature, it has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d8+7"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/TyrannosaurusRex.webp",
+  "imageUrl": "/assets/atlas/enemies/images/tyrannosaurus_rex.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmtyrannosaurusr.json",
+  "updated_at": "2026-09-27T13:37:07.127Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

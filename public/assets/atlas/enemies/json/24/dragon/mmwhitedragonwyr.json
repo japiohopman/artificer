@@ -1,0 +1,104 @@
+{
+  "index": "mmwhitedragonwyr",
+  "name": "white dragon wyrmling",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "White Dragon Wyrmling is a CR 2 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 10",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 10,
+  "constitution": 14,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 14,
+    "dex": 10,
+    "con": 14,
+    "int": 5,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ice walk",
+      "desc": "The [[lookup @name lowercase]]{monster} can move across and climb icy surfaces without needing to make an ability check. Additionally, &Reference[Difficult Terrain] composed of ice or snow doesn't cost it extra movement.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cold breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]], each [[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]] in a [[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]-foot Cone. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/WhiteDragonWyrmling.webp",
+  "imageUrl": "/assets/atlas/enemies/images/white_dragon_wyrmling.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmwhitedragonwyr.json",
+  "updated_at": "2026-09-27T13:37:08.226Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

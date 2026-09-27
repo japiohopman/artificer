@@ -1,0 +1,136 @@
+{
+  "index": "mmsphinxofvalor0",
+  "name": "sphinx of valor",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Sphinxes@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.JPdmXY7WGZdIPlJo caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 199,
+  "hit_dice": "19d10",
+  "hit_points_roll": "19d10 + 95",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 22,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 16,
+  "wisdom": 23,
+  "charisma": 18,
+  "stats": {
+    "str": 22,
+    "dex": 10,
+    "con": 20,
+    "int": 16,
+    "wis": 23,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic",
+    "radiant"
+  ],
+  "damage_immunities": [
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened"
+  ],
+  "senses": {
+    "passive_perception": 16
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 17,
+  "proficiency_bonus": 6,
+  "xp": 18000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "inscrutable",
+      "desc": "No magic can observe the [[lookup @name lowercase]]{monster} remotely or detect its thoughts without its permission. Wisdom (Insight) checks made to ascertain its intentions or sincerity are made with Disadvantage.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item Claw]] attacks and uses [[/item Roar]].",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "roar",
+      "desc": "The sphinx emits a magical roar. Whenever it roars, the roar has a different effect, as detailed below (the sequence resets when it takes a Long Rest): First Roar. Wisdom Saving Throw: DC [[lookup @save.dc.value activity=Igeu89TALGlNPXDg]], each enemy in a [[lookup @target.template.size activity=Igeu89TALGlNPXDg]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Frightened apply=false] condition for [[lookup @duration.value activity=Igeu89TALGlNPXDg]] [[lookup @duration.units activity=Igeu89TALGlNPXDg]]. Second Roar. Wisdom Saving Throw: DC [[lookup @save.dc.value activity=uFTndQPvULZVHT9R]], each [[lookup @target.affects.type activity=uFTndQPvULZVHT9R]] in a [[lookup @target.template.size activity=uFTndQPvULZVHT9R]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Paralyzed apply=false] condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=uFTndQPvULZVHT9R]] [[lookup @duration.units activity=uFTndQPvULZVHT9R]], it succeeds automatically. Third Roar. Constitution Saving Throw: DC [[lookup @save.dc.value activity=Td8ArIMDfxWDLbE9]], each [[lookup @target.affects.type activity=Td8ArIMDfxWDLbE9]] in a [[lookup @target.template.size activity=Td8ArIMDfxWDLbE9]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition. Success: [[lookup @damage.onSave capitalize activity=Td8ArIMDfxWDLbE9]] damage only.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{Thaumaturgy} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHeroesFeas]{Heroes' Feast}, @UUID[Compendium.dnd5e.spells24.Item.phbsplZoneofTrut]{Zone of Truth}",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "arcane prowl",
+      "desc": "The [[lookup @name lowercase]]{monster} can teleport up to [[lookup @range.value activity=a3RqyzU0UqzLJif0]] feet to an unoccupied space it can see, and it makes one [[/item Claw]] attack.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "weight of years",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=xZul1ImCP658OBv3]], one [[lookup @target.affects.type activity=xZul1ImCP658OBv3]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=xZul1ImCP658OBv3]] feet. Failure: The target gains 1 &Reference[Exhaustion apply=false] level. While the target has any Exhaustion levels, it appears [[/r 3d10]] years older. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/celestial/mmsphinxofvalor0.json",
+  "updated_at": "2026-09-27T13:37:07.272Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

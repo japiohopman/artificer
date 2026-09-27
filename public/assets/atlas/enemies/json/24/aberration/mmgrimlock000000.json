@@ -1,0 +1,81 @@
+{
+  "index": "mmgrimlock000000",
+  "name": "grimlock",
+  "ruleset": "2024",
+  "category": "aberration",
+  "desc": "Grimlock is a CR 0.25 aberration.",
+  "size": "Medium",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 9,
+  "wisdom": 8,
+  "charisma": 6,
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 12,
+    "int": 9,
+    "wis": 8,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bone cudgel",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Grimlock.webp",
+  "imageUrl": "/assets/atlas/enemies/images/grimlock.webp",
+  "url": "/assets/atlas/enemies/json/24/aberration/mmgrimlock000000.json",
+  "updated_at": "2026-09-27T13:37:06.774Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

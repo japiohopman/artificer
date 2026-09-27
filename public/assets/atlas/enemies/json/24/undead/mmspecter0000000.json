@@ -1,0 +1,108 @@
+{
+  "index": "mmspecter0000000",
+  "name": "specter",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Specter is a CR 1 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 1,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 1,
+    "dex": 14,
+    "con": 11,
+    "int": 10,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing",
+    "thunder"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Understands Common plus one other language but can’t speak",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "incorporeal movement",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were &Reference[Difficult Terrain]. It takes [[/damage 1d10 average type=force]] damage if it ends its turn inside an object.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has Disadvantage on ability checks and attack rolls.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "life drain",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, its Hit Point maximum decreases by an amount equal to the damage taken.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Specter.webp",
+  "imageUrl": "/assets/atlas/enemies/images/specter.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmspecter0000000.json",
+  "updated_at": "2026-09-27T13:37:09.813Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

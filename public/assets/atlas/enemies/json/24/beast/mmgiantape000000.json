@@ -1,0 +1,102 @@
+{
+  "index": "mmgiantape000000",
+  "name": "giant ape",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Giant Ape is a CR 7 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 168,
+  "hit_dice": "16d12",
+  "hit_points_roll": "16d12 + 64",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 23,
+    "dex": 14,
+    "con": 18,
+    "int": 5,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmFist0000000000]] attacks.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fist",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "boulder toss",
+      "desc": "The [[lookup @name lowercase]]{monster} hurls a boulder at a point it can see within [[lookup @range.value activity=jpC3fk7LJlhH4CDr]] feet. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=jpC3fk7LJlhH4CDr]], each creature in a [[lookup @target.template.size activity=jpC3fk7LJlhH4CDr]]-foot-radius Sphere centered on that point. Failure: [[/damage average]]. If the target is a Large or smaller creature, it has the &Reference[Prone] condition. Success: Half damage only.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "leap",
+      "desc": "The [[lookup @name lowercase]]{monster} jumps up to [[lookup @range.value activity=C28C43DeD8iFtZMe]] feet by [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantApe.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_ape.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmgiantape000000.json",
+  "updated_at": "2026-09-27T13:37:06.912Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

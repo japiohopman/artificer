@@ -1,0 +1,2018 @@
+[
+  {
+    "index": "kobgbikb2tmzv0ch",
+    "name": "aberrant ground",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kobgbikb2tmzv0ch.json",
+    "image": "icons/magic/air/wind-tornado-funnel-damage-blue.webp"
+  },
+  {
+    "index": "tvpqmocolnfbumyg",
+    "name": "acid absorption",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/tvpqmocolnfbumyg.json",
+    "image": "icons/magic/unholy/orb-smoking-green.webp"
+  },
+  {
+    "index": "zjcgly9p3gn9mxt7",
+    "name": "acid breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zjcgly9p3gn9mxt7.json",
+    "image": "icons/magic/acid/projectile-smoke-glowing.webp"
+  },
+  {
+    "index": "kzpl32dbmqxlregx",
+    "name": "acid spray",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kzpl32dbmqxlregx.json",
+    "image": "icons/magic/acid/projectile-smoke-glowing.webp"
+  },
+  {
+    "index": "8h0t1us0zvnpwtq9",
+    "name": "adhesive",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/8h0t1us0zvnpwtq9.json",
+    "image": "icons/creatures/slimes/slime-movement-dripping-pseudopods-green.webp"
+  },
+  {
+    "index": "7nml6skyvosz17iq",
+    "name": "aggressive",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/7nml6skyvosz17iq.json",
+    "image": "icons/creatures/abilities/mouth-teeth-tongue-purple.webp"
+  },
+  {
+    "index": "tydsfytjekv7c8lb",
+    "name": "air form",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/tydsfytjekv7c8lb.json",
+    "image": "icons/magic/control/debuff-energy-hold-levitate-yellow.webp"
+  },
+  {
+    "index": "emyguh5urujwafyk",
+    "name": "ambusher",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/emyguh5urujwafyk.json",
+    "image": "icons/magic/nature/stealth-hide-eyes-green.webp"
+  },
+  {
+    "index": "3ldp8dtwwndhsvxx",
+    "name": "amorphous",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/3ldp8dtwwndhsvxx.json",
+    "image": "icons/creatures/slimes/slime-movement-dripping-purple.webp"
+  },
+  {
+    "index": "4fap14hgvawtazud",
+    "name": "amphibious",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/4fap14hgvawtazud.json",
+    "image": "icons/environment/creatures/frog-spotted-green.webp"
+  },
+  {
+    "index": "cz1luaixg8gshgu9",
+    "name": "angelic weapons",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/cz1luaixg8gshgu9.json",
+    "image": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue-yellow.webp"
+  },
+  {
+    "index": "6ej6jlwh8rydezlb",
+    "name": "animate chains",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/6ej6jlwh8rydezlb.json",
+    "image": "icons/equipment/neck/choker-chain-thin-gold.webp"
+  },
+  {
+    "index": "j6f0v4guyhrywddt",
+    "name": "animate trees",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/j6f0v4guyhrywddt.json",
+    "image": "icons/magic/nature/tree-spirit-green.webp"
+  },
+  {
+    "index": "6hjpljxctqdmleub",
+    "name": "antennae",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/6hjpljxctqdmleub.json",
+    "image": "icons/magic/nature/tree-bare-glow-yellow.webp"
+  },
+  {
+    "index": "kmqagnxbcahrd2ju",
+    "name": "antimagic susceptibility",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kmqagnxbcahrd2ju.json",
+    "image": "icons/magic/lightning/orb-ball-purple.webp"
+  },
+  {
+    "index": "iwqutwqdgrkevohr",
+    "name": "assassinate",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/iwqutwqdgrkevohr.json",
+    "image": "icons/weapons/swords/sword-broad-crystal-paired.webp"
+  },
+  {
+    "index": "uxfq3txo3isw5wkk",
+    "name": "aversion of fire",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/uxfq3txo3isw5wkk.json",
+    "image": "icons/magic/fire/projectile-wave-arrow.webp"
+  },
+  {
+    "index": "qmgbv7osnxqwldhr",
+    "name": "barbed hide",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/qmgbv7osnxqwldhr.json",
+    "image": "icons/skills/wounds/injury-pain-impaled-hand-blood.webp"
+  },
+  {
+    "index": "muwzfxioyao1xuxt",
+    "name": "beast of burden",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/muwzfxioyao1xuxt.json",
+    "image": "icons/creatures/mammals/ox-bull-horned-glowing-orange.webp"
+  },
+  {
+    "index": "qowoa60swvsqjifn",
+    "name": "berserk",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/qowoa60swvsqjifn.json",
+    "image": "icons/creatures/reptiles/lizard-mouth-glowing-red.webp"
+  },
+  {
+    "index": "wdpsegqhzpptz37y",
+    "name": "bite",
+    "ruleset": "2014",
+    "type": "weapon",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/wdpsegqhzpptz37y.json",
+    "image": "icons/creatures/abilities/mouth-teeth-long-red.webp"
+  },
+  {
+    "index": "xwj2gpqtxngs0j2l",
+    "name": "blasphemous word",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xwj2gpqtxngs0j2l.json",
+    "image": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  {
+    "index": "7nbokvwfsckl2iwz",
+    "name": "blind senses",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/7nbokvwfsckl2iwz.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  {
+    "index": "thvajb8txsrivxrm",
+    "name": "blinding breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/thvajb8txsrivxrm.json",
+    "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp"
+  },
+  {
+    "index": "ao6mxtjvyy7wavgw",
+    "name": "blinding dust",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ao6mxtjvyy7wavgw.json",
+    "image": "icons/magic/fire/barrier-wall-explosion-orange.webp"
+  },
+  {
+    "index": "8c6hkmxwleymmj5c",
+    "name": "blinding gaze",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/8c6hkmxwleymmj5c.json",
+    "image": "icons/magic/perception/third-eye-blue-red.webp"
+  },
+  {
+    "index": "0awyzx05onvlf4k2",
+    "name": "blinding spittle",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/0awyzx05onvlf4k2.json",
+    "image": "icons/magic/nature/root-vine-thorned-fire-purple.webp"
+  },
+  {
+    "index": "b2kzoyrb7pob4lir",
+    "name": "blood frenzy",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/b2kzoyrb7pob4lir.json",
+    "image": "icons/skills/wounds/blood-spurt-spray-red.webp"
+  },
+  {
+    "index": "twriauz79yn5qpml",
+    "name": "bound",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/twriauz79yn5qpml.json",
+    "image": "icons/equipment/neck/choker-chain-thick-silver.webp"
+  },
+  {
+    "index": "108q5fjnnbrolkfe",
+    "name": "brave",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/108q5fjnnbrolkfe.json",
+    "image": "icons/skills/social/intimidation-impressing.webp"
+  },
+  {
+    "index": "kcujvqixzi3app5a",
+    "name": "breath weapons",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kcujvqixzi3app5a.json",
+    "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp"
+  },
+  {
+    "index": "q8w1uf9wozdgiwvs",
+    "name": "brute",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/q8w1uf9wozdgiwvs.json",
+    "image": "icons/skills/melee/unarmed-punch-fist.webp"
+  },
+  {
+    "index": "7hpc39yg8oyshjos",
+    "name": "cast a spell",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/7hpc39yg8oyshjos.json",
+    "image": "icons/magic/light/hand-sparks-glow-yellow.webp"
+  },
+  {
+    "index": "jsays4rsgi4ln5jy",
+    "name": "change shape",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jsays4rsgi4ln5jy.json",
+    "image": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  {
+    "index": "lo4nrudxakj4dbqi",
+    "name": "channel negative energy",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lo4nrudxakj4dbqi.json",
+    "image": "icons/magic/unholy/beam-impact-purple.webp"
+  },
+  {
+    "index": "wqrzbokpg0am6ahb",
+    "name": "charge",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/wqrzbokpg0am6ahb.json",
+    "image": "icons/creatures/mammals/ox-bull-horned-glowing-orange.webp"
+  },
+  {
+    "index": "ykoo88ojodfyh7mh",
+    "name": "charm",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ykoo88ojodfyh7mh.json",
+    "image": "icons/magic/air/wind-tornado-spiral-pink-purple.webp"
+  },
+  {
+    "index": "dm2g9huphzbzrvnm",
+    "name": "children of the night",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/dm2g9huphzbzrvnm.json",
+    "image": "icons/magic/death/skull-trio-badge-purple.webp"
+  },
+  {
+    "index": "5rr8ydsgtl8wxeue",
+    "name": "chomp",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/5rr8ydsgtl8wxeue.json",
+    "image": "icons/creatures/abilities/mouth-teeth-long-red.webp"
+  },
+  {
+    "index": "dpro7evvxikd8qwd",
+    "name": "claw attack",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/dpro7evvxikd8qwd.json",
+    "image": "icons/skills/melee/blood-slash-foam-red.webp"
+  },
+  {
+    "index": "ihoaioqwuwifcljj",
+    "name": "cold breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ihoaioqwuwifcljj.json",
+    "image": "icons/creatures/abilities/dragon-ice-breath-blue.webp"
+  },
+  {
+    "index": "wzggjyvfgicj1xab",
+    "name": "confer fire resistance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/wzggjyvfgicj1xab.json",
+    "image": "icons/magic/fire/explosion-mushroom-nuke-orange.webp"
+  },
+  {
+    "index": "r2nm5i77lnsvklvd",
+    "name": "consume life",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/r2nm5i77lnsvklvd.json",
+    "image": "icons/magic/life/heart-glowing-red.webp"
+  },
+  {
+    "index": "0z5v1bfmqql5z7uw",
+    "name": "corrode metal",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/0z5v1bfmqql5z7uw.json",
+    "image": "icons/magic/earth/orb-stone-smoke-teal.webp"
+  },
+  {
+    "index": "czm13dxoe9lzygft",
+    "name": "corrosive form",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/czm13dxoe9lzygft.json",
+    "image": "icons/magic/earth/orb-stone-smoke-teal.webp"
+  },
+  {
+    "index": "slaf2ae4zkouvqql",
+    "name": "create specter",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/slaf2ae4zkouvqql.json",
+    "image": "icons/creatures/abilities/dragon-breath-purple.webp"
+  },
+  {
+    "index": "1xef2vmmpw7qyffo",
+    "name": "create whirlwind",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/1xef2vmmpw7qyffo.json",
+    "image": "icons/magic/air/wind-tornado-cyclone-white.webp"
+  },
+  {
+    "index": "j36uxdwfbkflpv7k",
+    "name": "cunning action",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/j36uxdwfbkflpv7k.json",
+    "image": "icons/magic/unholy/silhouette-robe-evil-power.webp"
+  },
+  {
+    "index": "0npeecwmivmdwgmv",
+    "name": "damage transfer",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/0npeecwmivmdwgmv.json",
+    "image": "icons/magic/water/strike-ice-blades.webp"
+  },
+  {
+    "index": "xfvk6ywwzwtkmmqr",
+    "name": "dark devotion",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xfvk6ywwzwtkmmqr.json",
+    "image": "icons/magic/control/control-influence-rally-purple.webp"
+  },
+  {
+    "index": "jhau6pb5gvbjwtx7",
+    "name": "darkness aura",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jhau6pb5gvbjwtx7.json",
+    "image": "icons/magic/perception/eye-ringed-glow-angry-red.webp"
+  },
+  {
+    "index": "bg5z45jj4wz0n3t6",
+    "name": "deadly leap",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/bg5z45jj4wz0n3t6.json",
+    "image": "icons/magic/fire/projectile-wave-arrow.webp"
+  },
+  {
+    "index": "net3ybkqoxl8bz4r",
+    "name": "death burst",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/net3ybkqoxl8bz4r.json",
+    "image": "icons/magic/light/explosion-star-glow-yellow.webp"
+  },
+  {
+    "index": "o8g8bnpjowockzr5",
+    "name": "death glare",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/o8g8bnpjowockzr5.json",
+    "image": "icons/magic/death/skull-humanoid-worn-teal.webp"
+  },
+  {
+    "index": "emle1a0rhuck2ut1",
+    "name": "death throes",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/emle1a0rhuck2ut1.json",
+    "image": "icons/magic/fire/explosion-fireball-large-red-orange.webp"
+  },
+  {
+    "index": "nmwsgqxpyfhrvqkq",
+    "name": "detect (legendary)",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nmwsgqxpyfhrvqkq.json",
+    "image": "icons/creatures/eyes/lizard-single-slit-blue.webp"
+  },
+  {
+    "index": "ujbgbond6ltjagzm",
+    "name": "devil sight",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ujbgbond6ltjagzm.json",
+    "image": "icons/magic/perception/eye-slit-pink.webp"
+  },
+  {
+    "index": "eguim3u5kkopywem",
+    "name": "disrupt life",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/eguim3u5kkopywem.json",
+    "image": "icons/magic/death/projectile-skull-fire-purple.webp"
+  },
+  {
+    "index": "lojk48atlicfyppb",
+    "name": "divine awareness",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lojk48atlicfyppb.json",
+    "image": "icons/magic/perception/third-eye-blue-red.webp"
+  },
+  {
+    "index": "lvrnjqbrv90vh96d",
+    "name": "divine eminence",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lvrnjqbrv90vh96d.json",
+    "image": "icons/magic/symbols/cog-shield-white-blue.webp"
+  },
+  {
+    "index": "iq0j225dcbhyu2hu",
+    "name": "draining kiss",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/iq0j225dcbhyu2hu.json",
+    "image": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  {
+    "index": "h306eluih47wfr0u",
+    "name": "dreadful glare",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/h306eluih47wfr0u.json",
+    "image": "icons/magic/perception/hand-eye-pink.webp"
+  },
+  {
+    "index": "whnljraxfiw7z28t",
+    "name": "duergar resilience",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/whnljraxfiw7z28t.json",
+    "image": "icons/magic/control/control-influence-rally-purple.webp"
+  },
+  {
+    "index": "yrpqazohqi4bryw4",
+    "name": "earth glide",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/yrpqazohqi4bryw4.json",
+    "image": "icons/environment/wilderness/cave-entrance-mountain-blue.webp"
+  },
+  {
+    "index": "ruongiwd51zoprk2",
+    "name": "echolocation",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ruongiwd51zoprk2.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  {
+    "index": "wbakh3nla3mvylfm",
+    "name": "elemental demise",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/wbakh3nla3mvylfm.json",
+    "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp"
+  },
+  {
+    "index": "eh80lkzhieojp8fi",
+    "name": "engulf",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/eh80lkzhieojp8fi.json",
+    "image": "icons/magic/water/pseudopod-swirl-blue.webp"
+  },
+  {
+    "index": "jzgehxcr8pf6fomq",
+    "name": "enlarge",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jzgehxcr8pf6fomq.json",
+    "image": "icons/magic/control/energy-stream-link-large-blue.webp"
+  },
+  {
+    "index": "gbcy9myuf06iuc88",
+    "name": "enslave",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gbcy9myuf06iuc88.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-watch.webp"
+  },
+  {
+    "index": "vrpyfe3hhjh0qjio",
+    "name": "ephemeral",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/vrpyfe3hhjh0qjio.json",
+    "image": "icons/magic/water/orb-ice-web.webp"
+  },
+  {
+    "index": "3ilxiqhhogxommg7",
+    "name": "ethereal jaunt",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/3ilxiqhhogxommg7.json",
+    "image": "icons/magic/lightning/orb-ball-purple.webp"
+  },
+  {
+    "index": "we6r4thwkydrylec",
+    "name": "ethereal sight",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/we6r4thwkydrylec.json",
+    "image": "icons/magic/perception/eye-tendrils-web-purple.webp"
+  },
+  {
+    "index": "nftcxq8errqjhvao",
+    "name": "ethereal stride",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nftcxq8errqjhvao.json",
+    "image": "icons/magic/lightning/orb-ball-purple.webp"
+  },
+  {
+    "index": "rdonjnkdy47x8md4",
+    "name": "etherealness",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/rdonjnkdy47x8md4.json",
+    "image": "icons/magic/unholy/barrier-shield-glowing-pink.webp"
+  },
+  {
+    "index": "xogrn5qxzsp4qn6v",
+    "name": "evasion",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xogrn5qxzsp4qn6v.json",
+    "image": "icons/magic/water/pseudopod-teal.webp"
+  },
+  {
+    "index": "kyvgqnsa12loxvvr",
+    "name": "false appearance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kyvgqnsa12loxvvr.json",
+    "image": "icons/magic/nature/stealth-hide-eyes-green.webp"
+  },
+  {
+    "index": "e8sida7z3ybd6wt0",
+    "name": "faultless tracker",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/e8sida7z3ybd6wt0.json",
+    "image": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp"
+  },
+  {
+    "index": "mlveya7vcwu9uxqv",
+    "name": "fear aura",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/mlveya7vcwu9uxqv.json",
+    "image": "icons/magic/water/elemental-water.webp"
+  },
+  {
+    "index": "xwcfk21am2bthgsk",
+    "name": "fetid cloud",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xwcfk21am2bthgsk.json",
+    "image": "icons/magic/acid/projectile-glowing-bubbles.webp"
+  },
+  {
+    "index": "lvsbjrkocakaanqy",
+    "name": "fey ancestry",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lvsbjrkocakaanqy.json",
+    "image": "icons/creatures/mammals/elk-moose-marked-green.webp"
+  },
+  {
+    "index": "sggvxdzbmsstfegb",
+    "name": "fey charm",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/sggvxdzbmsstfegb.json",
+    "image": "icons/consumables/plants/leaf-veins-glowing-green.webp"
+  },
+  {
+    "index": "uh57ltstgdxl2os6",
+    "name": "fire absorption",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/uh57ltstgdxl2os6.json",
+    "image": "icons/magic/fire/flame-burning-campfire-rocks.webp"
+  },
+  {
+    "index": "ljty3nl1cp9go4et",
+    "name": "fire aura",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ljty3nl1cp9go4et.json",
+    "image": "icons/magic/air/fog-gas-smoke-swirling-orange.webp"
+  },
+  {
+    "index": "bgsw8iuwurwiwtxr",
+    "name": "fire breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/bgsw8iuwurwiwtxr.json",
+    "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp"
+  },
+  {
+    "index": "0yugss8e8elhlryb",
+    "name": "fire form",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/0yugss8e8elhlryb.json",
+    "image": "icons/magic/earth/lava-explosion-orange.webp"
+  },
+  {
+    "index": "t25irj66yuqi2f1m",
+    "name": "first roar",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/t25irj66yuqi2f1m.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "hxxzd3kcfnqnt89w",
+    "name": "fling",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/hxxzd3kcfnqnt89w.json",
+    "image": "icons/creatures/webs/webthin-blue.webp"
+  },
+  {
+    "index": "7wfehv27l7dmcutg",
+    "name": "flyby",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/7wfehv27l7dmcutg.json",
+    "image": "icons/creatures/mammals/bats-movement-flying-purple.webp"
+  },
+  {
+    "index": "ouvju0y3soyb5emr",
+    "name": "flying sword",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ouvju0y3soyb5emr.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "fumy4b9snsikl30e",
+    "name": "freedom of movement",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/fumy4b9snsikl30e.json",
+    "image": "icons/skills/movement/feet-winged-boots-brown.webp"
+  },
+  {
+    "index": "m0fa3um62hltpvsa",
+    "name": "freeze",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/m0fa3um62hltpvsa.json",
+    "image": "icons/magic/water/ice-crystal-white.webp"
+  },
+  {
+    "index": "cpnrdgqrqgplsmwr",
+    "name": "frightening gaze",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/cpnrdgqrqgplsmwr.json",
+    "image": "icons/magic/perception/silhouette-stealth-shadow.webp"
+  },
+  {
+    "index": "nb6zomwiijblz4it",
+    "name": "frightful presence",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nb6zomwiijblz4it.json",
+    "image": "icons/creatures/unholy/demons-horned-glowing-pink.webp"
+  },
+  {
+    "index": "z7u6z4hd1orlktij",
+    "name": "frost breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/z7u6z4hd1orlktij.json",
+    "image": "icons/magic/air/wind-tornado-wall-blue.webp"
+  },
+  {
+    "index": "dpplbo3unu3tqzrs",
+    "name": "gibbering",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/dpplbo3unu3tqzrs.json",
+    "image": "icons/skills/toxins/cup-goblet-poisoned-spilled.webp"
+  },
+  {
+    "index": "0gl43ac57cvjaw7d",
+    "name": "gnome cunning",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/0gl43ac57cvjaw7d.json",
+    "image": "icons/commodities/currency/coin-engraved-sun-smile-copper.webp"
+  },
+  {
+    "index": "kp9t6maeuvbbmom3",
+    "name": "grappler",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kp9t6maeuvbbmom3.json",
+    "image": "icons/skills/melee/unarmed-punch-fist.webp"
+  },
+  {
+    "index": "lkeprn2rp3hp4ory",
+    "name": "grasping tendrils",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lkeprn2rp3hp4ory.json",
+    "image": "icons/magic/nature/root-vine-entangle-foot-green.webp"
+  },
+  {
+    "index": "zigtg2qhkj54jek4",
+    "name": "haste",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zigtg2qhkj54jek4.json",
+    "image": "icons/skills/movement/feet-winged-boots-brown.webp"
+  },
+  {
+    "index": "gklxiu0pkysm7rwv",
+    "name": "heal self",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gklxiu0pkysm7rwv.json",
+    "image": "icons/magic/life/ankh-gold-blue.webp"
+  },
+  {
+    "index": "r3ugp8f5ckw2euhl",
+    "name": "healing touch",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/r3ugp8f5ckw2euhl.json",
+    "image": "icons/magic/light/explosion-star-glow-blue-purple.webp"
+  },
+  {
+    "index": "icae1idxhvrmjegi",
+    "name": "heart sight",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/icae1idxhvrmjegi.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  {
+    "index": "ifnpsemjt66eloat",
+    "name": "heated body",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ifnpsemjt66eloat.json",
+    "image": "icons/magic/earth/volcano-explosion-lava-yellow.webp"
+  },
+  {
+    "index": "i3viktkcsvewljfj",
+    "name": "heated weapons",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/i3viktkcsvewljfj.json",
+    "image": "icons/skills/melee/strike-sword-blood-red.webp"
+  },
+  {
+    "index": "xmluhzyd9wncwblu",
+    "name": "hellish rejuvenation",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xmluhzyd9wncwblu.json",
+    "image": "icons/skills/wounds/anatomy-organ-heart-red.webp"
+  },
+  {
+    "index": "uqoqqj9npmcpra6p",
+    "name": "hellish weapons",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/uqoqqj9npmcpra6p.json",
+    "image": "icons/weapons/axes/axe-battle-eyes-red.webp"
+  },
+  {
+    "index": "lwc6jwy9bxberywo",
+    "name": "hold breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lwc6jwy9bxberywo.json",
+    "image": "icons/magic/water/pseudopod-swirl-blue.webp"
+  },
+  {
+    "index": "re3oxq3xg4z3fr6o",
+    "name": "hooves",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/re3oxq3xg4z3fr6o.json",
+    "image": "icons/commodities/bones/hooves-cloven-brown.webp"
+  },
+  {
+    "index": "yshgyidij4slpyzf",
+    "name": "horrific appearance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/yshgyidij4slpyzf.json",
+    "image": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp"
+  },
+  {
+    "index": "lbn86btocjgkakl3",
+    "name": "horrifying visage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lbn86btocjgkakl3.json",
+    "image": "icons/magic/death/projectile-skull-fire-purple.webp"
+  },
+  {
+    "index": "hu2pgys1rd7hglvg",
+    "name": "horror nimbus",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/hu2pgys1rd7hglvg.json",
+    "image": "icons/creatures/unholy/demons-horned-glowing-pink.webp"
+  },
+  {
+    "index": "ykc7pwykjskn1vuw",
+    "name": "ice walk",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ykc7pwykjskn1vuw.json",
+    "image": "icons/magic/water/water-iceberg-bubbles.webp"
+  },
+  {
+    "index": "uvy7vla2ehysftl0",
+    "name": "ignited illumination",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/uvy7vla2ehysftl0.json",
+    "image": "icons/magic/fire/explosion-mushroom-nuke-orange.webp"
+  },
+  {
+    "index": "f3gzbbcw7u14zkbf",
+    "name": "illumination",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/f3gzbbcw7u14zkbf.json",
+    "image": "icons/magic/light/explosion-star-glow-blue-purple.webp"
+  },
+  {
+    "index": "s7kqggp9vldb39nu",
+    "name": "illusory appearance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/s7kqggp9vldb39nu.json",
+    "image": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp"
+  },
+  {
+    "index": "mfuiimivlzya3osc",
+    "name": "immutable form",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/mfuiimivlzya3osc.json",
+    "image": "icons/magic/unholy/orb-beam-pink.webp"
+  },
+  {
+    "index": "luhmtidd1vtrefqi",
+    "name": "incorporeal movement",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/luhmtidd1vtrefqi.json",
+    "image": "icons/magic/air/air-wave-gust-blue.webp"
+  },
+  {
+    "index": "bojuxmnoz2rjvujd",
+    "name": "ink cloud",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/bojuxmnoz2rjvujd.json",
+    "image": "icons/magic/unholy/orb-swirling-teal.webp"
+  },
+  {
+    "index": "hkmtek6klt6ql4k4",
+    "name": "innate spellcasting",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/hkmtek6klt6ql4k4.json",
+    "image": "icons/magic/light/projectiles-star-purple.webp"
+  },
+  {
+    "index": "fhrfojefkdrm4u43",
+    "name": "inscrutable",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/fhrfojefkdrm4u43.json",
+    "image": "icons/magic/perception/third-eye-blue-red.webp"
+  },
+  {
+    "index": "qfwkoh5aawhmnswl",
+    "name": "intoxicating touch",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/qfwkoh5aawhmnswl.json",
+    "image": "icons/magic/nature/beam-hand-leaves-green.webp"
+  },
+  {
+    "index": "da5x2equothywpqf",
+    "name": "invisibility",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/da5x2equothywpqf.json",
+    "image": "icons/creatures/webs/webthin-blue.webp"
+  },
+  {
+    "index": "friasnssihfmtz7q",
+    "name": "invisible passage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/friasnssihfmtz7q.json",
+    "image": "icons/magic/perception/silhouette-stealth-shadow.webp"
+  },
+  {
+    "index": "gh5upts0l16fhywb",
+    "name": "iron scent",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gh5upts0l16fhywb.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "jnln0rz60whxk2fr",
+    "name": "keen senses",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jnln0rz60whxk2fr.json",
+    "image": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp"
+  },
+  {
+    "index": "1w6k5ihv8qsz5w46",
+    "name": "labyrinthine recall",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/1w6k5ihv8qsz5w46.json",
+    "image": "icons/magic/air/wind-vortex-swirl-blue.webp"
+  },
+  {
+    "index": "p0dmm1rgpoiboddt",
+    "name": "lair actions",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/p0dmm1rgpoiboddt.json",
+    "image": "icons/magic/nature/stealth-hide-eyes-green.webp"
+  },
+  {
+    "index": "cl5sukaiejoag4gh",
+    "name": "leadership",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/cl5sukaiejoag4gh.json",
+    "image": "icons/sundries/documents/document-sealed-red-yellow.webp"
+  },
+  {
+    "index": "tereuqr148hqbkiq",
+    "name": "legendary actions",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/tereuqr148hqbkiq.json",
+    "image": "icons/magic/light/hand-sparks-glow-yellow.webp"
+  },
+  {
+    "index": "j1nxntj2qi05iaff",
+    "name": "legendary resistance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/j1nxntj2qi05iaff.json",
+    "image": "icons/equipment/shield/kite-wooden-oak-glow.webp"
+  },
+  {
+    "index": "2l557y06401lwsqs",
+    "name": "light sensitivity",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/2l557y06401lwsqs.json",
+    "image": "icons/magic/time/day-night-sunset-sunrise.webp"
+  },
+  {
+    "index": "ktsfgsqldetddm1f",
+    "name": "lightning absorption",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ktsfgsqldetddm1f.json",
+    "image": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  {
+    "index": "lvnd9fq9cqj7rr0q",
+    "name": "lightning breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lvnd9fq9cqj7rr0q.json",
+    "image": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  {
+    "index": "gm767ahu36b6lugu",
+    "name": "lightning storm",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gm767ahu36b6lugu.json",
+    "image": "icons/magic/lightning/bolts-forked-large-blue-yellow.webp"
+  },
+  {
+    "index": "boo7lj0rrinowhyt",
+    "name": "limited amphibiousness",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/boo7lj0rrinowhyt.json",
+    "image": "icons/environment/creatures/frog-spotted-green.webp"
+  },
+  {
+    "index": "mboiqsnmr02wupen",
+    "name": "limited magic immunity",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/mboiqsnmr02wupen.json",
+    "image": "icons/magic/defensive/shield-barrier-glowing-blue.webp"
+  },
+  {
+    "index": "xna3utd4eflczmt9",
+    "name": "limited telepathy",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xna3utd4eflczmt9.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "ialpdtyyddozmdb5",
+    "name": "luring song",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ialpdtyyddozmdb5.json",
+    "image": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  {
+    "index": "hc6mqlqhpti1kovm",
+    "name": "magic resistance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/hc6mqlqhpti1kovm.json",
+    "image": "icons/magic/defensive/shield-barrier-glowing-blue.webp"
+  },
+  {
+    "index": "nahrrxck9r5gvvfs",
+    "name": "magic weapons",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nahrrxck9r5gvvfs.json",
+    "image": "icons/weapons/swords/sword-runed-glowing.webp"
+  },
+  {
+    "index": "zg0rzmanckjqipax",
+    "name": "martial advantage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zg0rzmanckjqipax.json",
+    "image": "icons/skills/melee/weapons-crossed-swords-yellow-teal.webp"
+  },
+  {
+    "index": "zzkntl97hn1p6ojc",
+    "name": "mimicry",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zzkntl97hn1p6ojc.json",
+    "image": "icons/creatures/birds/corvid-flying-wings-purple.webp"
+  },
+  {
+    "index": "hmc7xckdbzvmz0qg",
+    "name": "misty escape",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/hmc7xckdbzvmz0qg.json",
+    "image": "icons/magic/air/fog-gas-smoke-swirling-gray.webp"
+  },
+  {
+    "index": "vvxrtnb2fscxqbg3",
+    "name": "moan",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/vvxrtnb2fscxqbg3.json",
+    "image": "icons/magic/death/projectile-skull-flaming-green.webp"
+  },
+  {
+    "index": "fzbcxxflzvpcea4t",
+    "name": "move (legendary)",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/fzbcxxflzvpcea4t.json",
+    "image": "icons/skills/movement/feet-winged-boots-brown.webp"
+  },
+  {
+    "index": "hmoozrxolmmv91xm",
+    "name": "mucous cloud",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/hmoozrxolmmv91xm.json",
+    "image": "icons/magic/water/bubbles-air-water-blue.webp"
+  },
+  {
+    "index": "eqolg8t8ehvhjgke",
+    "name": "multiattack",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/eqolg8t8ehvhjgke.json",
+    "image": "icons/skills/melee/blade-tips-triple-steel.webp"
+  },
+  {
+    "index": "dvsoaf3boeueirxf",
+    "name": "multiple heads",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/dvsoaf3boeueirxf.json",
+    "image": "icons/skills/melee/strike-sword-stabbed-brown.webp"
+  },
+  {
+    "index": "vbbhypdc0elwbsne",
+    "name": "nightmare haunting",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/vbbhypdc0elwbsne.json",
+    "image": "icons/commodities/tech/smoke-bomb-purple.webp"
+  },
+  {
+    "index": "pqvffnyopmecrs7n",
+    "name": "nimble escape",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/pqvffnyopmecrs7n.json",
+    "image": "icons/skills/movement/feet-winged-boots-brown.webp"
+  },
+  {
+    "index": "cvtgj6yimguzdrhb",
+    "name": "ooze cube",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/cvtgj6yimguzdrhb.json",
+    "image": "icons/magic/water/barrier-ice-water-cube.webp"
+  },
+  {
+    "index": "v1lw1vnrtpvtdr6o",
+    "name": "pack tactics",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/v1lw1vnrtpvtdr6o.json",
+    "image": "icons/creatures/abilities/paw-print-orange.webp"
+  },
+  {
+    "index": "biascppnsaavkzij",
+    "name": "paralyzing breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/biascppnsaavkzij.json",
+    "image": "icons/magic/acid/projectile-smoke-glowing.webp"
+  },
+  {
+    "index": "ebcmg4m5lsuycqee",
+    "name": "paralyzing touch",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ebcmg4m5lsuycqee.json",
+    "image": "icons/magic/water/water-hand.webp"
+  },
+  {
+    "index": "kfi26jy0vlxv9ttm",
+    "name": "parry",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kfi26jy0vlxv9ttm.json",
+    "image": "icons/skills/melee/weapons-crossed-swords-yellow-teal.webp"
+  },
+  {
+    "index": "xmxybevj0kupa3fo",
+    "name": "petrifying breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/xmxybevj0kupa3fo.json",
+    "image": "icons/magic/air/fog-gas-smoke-orange.webp"
+  },
+  {
+    "index": "wkin7wtex8ebbjtv",
+    "name": "petrifying gaze",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/wkin7wtex8ebbjtv.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  {
+    "index": "t0ojypolkebppync",
+    "name": "phantasms",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/t0ojypolkebppync.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "jaeclghgot24pqd9",
+    "name": "poison breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jaeclghgot24pqd9.json",
+    "image": "icons/magic/acid/projectile-smoke-glowing.webp"
+  },
+  {
+    "index": "ni3fpb5jqsepdlvl",
+    "name": "possession",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ni3fpb5jqsepdlvl.json",
+    "image": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp"
+  },
+  {
+    "index": "mqavpliarakzpnxb",
+    "name": "pounce",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/mqavpliarakzpnxb.json",
+    "image": "icons/creatures/claws/claw-talons-glowing-orange.webp"
+  },
+  {
+    "index": "idem2vv36trkzux0",
+    "name": "probing telepathy",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/idem2vv36trkzux0.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "oejkd6litlurecxp",
+    "name": "psychic drain",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/oejkd6litlurecxp.json",
+    "image": "icons/magic/death/projectile-skull-flaming-green.webp"
+  },
+  {
+    "index": "bnudkgcoegvaoyhy",
+    "name": "rampage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/bnudkgcoegvaoyhy.json",
+    "image": "icons/skills/melee/strike-axe-blood-red.webp"
+  },
+  {
+    "index": "miijsa984tz0mil6",
+    "name": "reactive heads",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/miijsa984tz0mil6.json",
+    "image": "icons/magic/death/skull-trio-badge-purple.webp"
+  },
+  {
+    "index": "lhtqjslkyuzt2gv5",
+    "name": "reactive",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lhtqjslkyuzt2gv5.json",
+    "image": "icons/magic/symbols/rune-sigil-black-pink.webp"
+  },
+  {
+    "index": "w5mfttfsdkc7txgg",
+    "name": "read thoughts",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/w5mfttfsdkc7txgg.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-watch.webp"
+  },
+  {
+    "index": "of2dtsnpwmhr52o7",
+    "name": "reaping scythe",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/of2dtsnpwmhr52o7.json",
+    "image": "icons/skills/melee/strike-scythe-fire-green.webp"
+  },
+  {
+    "index": "4v3xxn1jeemrzlbg",
+    "name": "reckless",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/4v3xxn1jeemrzlbg.json",
+    "image": "icons/skills/social/intimidation-impressing.webp"
+  },
+  {
+    "index": "iwqrhctgcfaadyt8",
+    "name": "reel",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/iwqrhctgcfaadyt8.json",
+    "image": "icons/magic/control/sihouette-hold-beam-green.webp"
+  },
+  {
+    "index": "plbui1fcqusleqyi",
+    "name": "reflective carapace",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/plbui1fcqusleqyi.json",
+    "image": "icons/magic/defensive/shield-barrier-flaming-pentagon-purple-orange.webp"
+  },
+  {
+    "index": "av7h0ymgdpetsnwv",
+    "name": "regeneration",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/av7h0ymgdpetsnwv.json",
+    "image": "icons/skills/wounds/anatomy-organ-heart-red.webp"
+  },
+  {
+    "index": "l7myj23x3pfpunh6",
+    "name": "regional effects",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/l7myj23x3pfpunh6.json",
+    "image": "icons/environment/wilderness/cave-entrance-mountain-blue.webp"
+  },
+  {
+    "index": "jcfhlacfwswnt7ud",
+    "name": "rejuvenation",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jcfhlacfwswnt7ud.json",
+    "image": "icons/magic/control/debuff-energy-hold-levitate-green.webp"
+  },
+  {
+    "index": "8fx2klwybakeygzs",
+    "name": "relentless",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/8fx2klwybakeygzs.json",
+    "image": "icons/magic/water/heart-ice-freeze.webp"
+  },
+  {
+    "index": "zrderbe0lmbwygwn",
+    "name": "repulsion breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zrderbe0lmbwygwn.json",
+    "image": "icons/magic/air/air-wave-gust-blue.webp"
+  },
+  {
+    "index": "qcnjd2guozstt4wt",
+    "name": "roar",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/qcnjd2guozstt4wt.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "bpwxjvma7mfvq7i6",
+    "name": "rock catching",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/bpwxjvma7mfvq7i6.json",
+    "image": "icons/skills/melee/unarmed-punch-fist.webp"
+  },
+  {
+    "index": "ozz1xvw2ydiw4ijp",
+    "name": "running leap",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ozz1xvw2ydiw4ijp.json",
+    "image": "icons/skills/movement/feet-winged-boots-brown.webp"
+  },
+  {
+    "index": "gsgfxl9dyda3gd0n",
+    "name": "rust metal",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gsgfxl9dyda3gd0n.json",
+    "image": "icons/skills/melee/blade-tip-chipped-blood-red.webp"
+  },
+  {
+    "index": "gqrkcfwxhhmwrp2q",
+    "name": "scare",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gqrkcfwxhhmwrp2q.json",
+    "image": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp"
+  },
+  {
+    "index": "5oyruoi92fxtolts",
+    "name": "searing burst",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/5oyruoi92fxtolts.json",
+    "image": "icons/magic/light/explosion-star-glow-yellow.webp"
+  },
+  {
+    "index": "lwnuawbpfjf9wupm",
+    "name": "second roar",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/lwnuawbpfjf9wupm.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "janmheqgfhklf2et",
+    "name": "sense magic",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/janmheqgfhklf2et.json",
+    "image": "icons/magic/water/projectile-ice-snowball.webp"
+  },
+  {
+    "index": "nuvfugykk7fmqafh",
+    "name": "shadow stealth",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nuvfugykk7fmqafh.json",
+    "image": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp"
+  },
+  {
+    "index": "vhbyyxhjn7mnqjrd",
+    "name": "shapechanger",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/vhbyyxhjn7mnqjrd.json",
+    "image": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  {
+    "index": "uyorz1zrfuotrknp",
+    "name": "shark telepathy",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/uyorz1zrfuotrknp.json",
+    "image": "icons/magic/unholy/orb-swirling-teal.webp"
+  },
+  {
+    "index": "yhcr3vlkmtinelj2",
+    "name": "shield",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/yhcr3vlkmtinelj2.json",
+    "image": "icons/equipment/shield/oval-wooden-boss-steel.webp"
+  },
+  {
+    "index": "srmr5uflmfxtertp",
+    "name": "shielded mind",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/srmr5uflmfxtertp.json",
+    "image": "icons/magic/control/control-influence-rally-purple.webp"
+  },
+  {
+    "index": "8l0r2miyxwxyjt6o",
+    "name": "shimmering shield",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/8l0r2miyxwxyjt6o.json",
+    "image": "icons/magic/light/explosion-star-large-blue-yellow.webp"
+  },
+  {
+    "index": "oqrnkl4703rures1",
+    "name": "shriek",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/oqrnkl4703rures1.json",
+    "image": "icons/creatures/abilities/mouth-teeth-human.webp"
+  },
+  {
+    "index": "csa0ebjlxcbst4gj",
+    "name": "siege monster",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/csa0ebjlxcbst4gj.json",
+    "image": "icons/creatures/magical/construct-iron-stomping-yellow.webp"
+  },
+  {
+    "index": "43bnuqkqgg5l1nfh",
+    "name": "sleep breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/43bnuqkqgg5l1nfh.json",
+    "image": "icons/magic/perception/third-eye-blue-red.webp"
+  },
+  {
+    "index": "jry507rs9wxt3gbh",
+    "name": "slowing breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jry507rs9wxt3gbh.json",
+    "image": "icons/creatures/abilities/dragon-ice-breath-blue.webp"
+  },
+  {
+    "index": "9ukshqfua73duqst",
+    "name": "sneak attack",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/9ukshqfua73duqst.json",
+    "image": "icons/skills/melee/blade-tip-chipped-blood-red.webp"
+  },
+  {
+    "index": "jnkouieu2uo1xhht",
+    "name": "snow camouflage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/jnkouieu2uo1xhht.json",
+    "image": "icons/magic/water/barrier-ice-crystal-wall-faceted.webp"
+  },
+  {
+    "index": "59duudzet1j4pila",
+    "name": "speak with beasts and plants",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/59duudzet1j4pila.json",
+    "image": "icons/commodities/currency/coin-engraved-sun-smile-copper.webp"
+  },
+  {
+    "index": "ksgbb9r1tcfdimy0",
+    "name": "spell storing",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ksgbb9r1tcfdimy0.json",
+    "image": "icons/magic/defensive/shield-barrier-blades-teal.webp"
+  },
+  {
+    "index": "fdmzhw875ezpxm2a",
+    "name": "spellcasting",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/fdmzhw875ezpxm2a.json",
+    "image": "icons/magic/light/projectiles-star-purple.webp"
+  },
+  {
+    "index": "fxhec39g2d19opue",
+    "name": "spider climb",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/fxhec39g2d19opue.json",
+    "image": "icons/creatures/invertebrates/spider-beetle-runed-green.webp"
+  },
+  {
+    "index": "nzhwreuknkxz4ntp",
+    "name": "split",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nzhwreuknkxz4ntp.json",
+    "image": "icons/creatures/slimes/slime-movement-pseudopod-green.webp"
+  },
+  {
+    "index": "ihwvcwsnfqw2hfla",
+    "name": "spores",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ihwvcwsnfqw2hfla.json",
+    "image": "icons/magic/earth/orb-stone-smoke-teal.webp"
+  },
+  {
+    "index": "f4yvsah35ixqoswd",
+    "name": "standing leap",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/f4yvsah35ixqoswd.json",
+    "image": "icons/environment/creatures/frog-spotted-green.webp"
+  },
+  {
+    "index": "4n7s29kdroq932pg",
+    "name": "steadfast",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/4n7s29kdroq932pg.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "4uuuukjattixrzgp",
+    "name": "steam breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/4uuuukjattixrzgp.json",
+    "image": "icons/creatures/abilities/dragon-ice-breath-blue.webp"
+  },
+  {
+    "index": "ospht7ja5llvua6e",
+    "name": "stench",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ospht7ja5llvua6e.json",
+    "image": "icons/commodities/tech/smoke-bomb-purple.webp"
+  },
+  {
+    "index": "j1cpfwfnvxgoex9z",
+    "name": "stone camouflage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/j1cpfwfnvxgoex9z.json",
+    "image": "icons/environment/settlement/stone-stairs.webp"
+  },
+  {
+    "index": "bdnjs1sqi2pdarh8",
+    "name": "stone golem - slow",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/bdnjs1sqi2pdarh8.json",
+    "image": "icons/tools/navigation/watch-simple-blue.webp"
+  },
+  {
+    "index": "ad3hkobnjtzl6cdj",
+    "name": "stunning screech",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ad3hkobnjtzl6cdj.json",
+    "image": "icons/skills/toxins/cup-goblet-poisoned-spilled.webp"
+  },
+  {
+    "index": "f14aw2ke3i5ztsg4",
+    "name": "sunlight sensitivity",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/f14aw2ke3i5ztsg4.json",
+    "image": "icons/magic/light/explosion-star-glow-blue-purple.webp"
+  },
+  {
+    "index": "u1tt4l4mczgt3wos",
+    "name": "sunlight weakness",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/u1tt4l4mczgt3wos.json",
+    "image": "icons/magic/time/day-night-sunset-sunrise.webp"
+  },
+  {
+    "index": "njhx2fudyhzeexdp",
+    "name": "sure-footed",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/njhx2fudyhzeexdp.json",
+    "image": "icons/commodities/bones/hooves-cloven-brown.webp"
+  },
+  {
+    "index": "5djyfjgqcz5asl5e",
+    "name": "surprise attack",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/5djyfjgqcz5asl5e.json",
+    "image": "icons/magic/water/elemental-water.webp"
+  },
+  {
+    "index": "ah5ncm30tp8tpq24",
+    "name": "swallow",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ah5ncm30tp8tpq24.json",
+    "image": "icons/creatures/abilities/mouth-teeth-tongue-purple.webp"
+  },
+  {
+    "index": "el3ojmc4fuetizko",
+    "name": "swarm",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/el3ojmc4fuetizko.json",
+    "image": "icons/creatures/mammals/bats-movement-flying-purple.webp"
+  },
+  {
+    "index": "ivoxckt9448v7ho5",
+    "name": "tail spike regrowth",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ivoxckt9448v7ho5.json",
+    "image": "icons/creatures/mammals/wolf-shadow-black.webp"
+  },
+  {
+    "index": "kx011zsoyhqeumh5",
+    "name": "tail swipe (legendary)",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kx011zsoyhqeumh5.json",
+    "image": "icons/skills/wounds/injury-pain-impaled-hand-blood.webp"
+  },
+  {
+    "index": "evkgo2130oijqsjy",
+    "name": "telepathic bond",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/evkgo2130oijqsjy.json",
+    "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  {
+    "index": "ppzvd90vab60fqct",
+    "name": "teleport",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ppzvd90vab60fqct.json",
+    "image": "icons/magic/symbols/runes-star-pentagon-magenta.webp"
+  },
+  {
+    "index": "czkwbo1qw5o2gcny",
+    "name": "tentacle attack or fling",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/czkwbo1qw5o2gcny.json",
+    "image": "icons/creatures/tentacles/tentacles-thing-green.webp"
+  },
+  {
+    "index": "y18y37f8ppflgulb",
+    "name": "tentacle disease",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/y18y37f8ppflgulb.json",
+    "image": "icons/magic/acid/projectile-glowing-bubbles.webp"
+  },
+  {
+    "index": "qim1nbpzblzknfmp",
+    "name": "tentacle slam",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/qim1nbpzblzknfmp.json",
+    "image": "icons/magic/death/undead-skeleton-deformed-red.webp"
+  },
+  {
+    "index": "nkplmxs9e10tsghu",
+    "name": "tentacles",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/nkplmxs9e10tsghu.json",
+    "image": "icons/creatures/tentacles/tentacles-thing-green.webp"
+  },
+  {
+    "index": "wtqhjfwufrsyens3",
+    "name": "third roar",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/wtqhjfwufrsyens3.json",
+    "image": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  {
+    "index": "yd51x4dihnbhwfsj",
+    "name": "trampling charge",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/yd51x4dihnbhwfsj.json",
+    "image": "icons/creatures/abilities/cougar-pounce-stalk-black.webp"
+  },
+  {
+    "index": "cueelxq3w8gkhilq",
+    "name": "transparent",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/cueelxq3w8gkhilq.json",
+    "image": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  {
+    "index": "enhb3xowxpmsvapw",
+    "name": "treasure sense",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/enhb3xowxpmsvapw.json",
+    "image": "icons/skills/social/theft-pickpocket-bribery-brown.webp"
+  },
+  {
+    "index": "g4v02wjbestupwi9",
+    "name": "tree stride",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/g4v02wjbestupwi9.json",
+    "image": "icons/magic/nature/tree-spirit-green.webp"
+  },
+  {
+    "index": "3mrpxaxaljxpxvrv",
+    "name": "tunneler",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/3mrpxaxaljxpxvrv.json",
+    "image": "icons/magic/unholy/orb-glowing-yellow-purple.webp"
+  },
+  {
+    "index": "oi1sikvsw463lqlp",
+    "name": "turn defiance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/oi1sikvsw463lqlp.json",
+    "image": "icons/creatures/abilities/dragon-breath-purple.webp"
+  },
+  {
+    "index": "arwpuy82jh0dasda",
+    "name": "turn immunity",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/arwpuy82jh0dasda.json",
+    "image": "icons/magic/fire/flame-burning-creature-skeleton.webp"
+  },
+  {
+    "index": "r9amlz7f3gsrlgrr",
+    "name": "turn resistance",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/r9amlz7f3gsrlgrr.json",
+    "image": "icons/magic/fire/flame-burning-creature-skeleton.webp"
+  },
+  {
+    "index": "zsblyp5vm1cav5vo",
+    "name": "two-headed",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zsblyp5vm1cav5vo.json",
+    "image": "icons/creatures/unholy/demons-horned-glowing-pink.webp"
+  },
+  {
+    "index": "gwpp0n06hvs937go",
+    "name": "two heads",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/gwpp0n06hvs937go.json",
+    "image": "icons/magic/death/skull-horned-goat-pentagram-red.webp"
+  },
+  {
+    "index": "9w2bayps2ahnyhjb",
+    "name": "unarmed strike (legendary)",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/9w2bayps2ahnyhjb.json",
+    "image": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp"
+  },
+  {
+    "index": "vyanjjigb5npxfrr",
+    "name": "undead fortitude",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/vyanjjigb5npxfrr.json",
+    "image": "icons/magic/acid/pouring-gas-smoke-liquid.webp"
+  },
+  {
+    "index": "m9xqzzgotkawascl",
+    "name": "underwater camouflage",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/m9xqzzgotkawascl.json",
+    "image": "icons/magic/water/orb-ice-web.webp"
+  },
+  {
+    "index": "ueystokpfr0okkrd",
+    "name": "unnerving mask",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ueystokpfr0okkrd.json",
+    "image": "icons/magic/life/heart-shadow-red.webp"
+  },
+  {
+    "index": "ervkb8h99e2beiae",
+    "name": "vampire weaknesses",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ervkb8h99e2beiae.json",
+    "image": "icons/magic/control/encase-creature-monster-hold.webp"
+  },
+  {
+    "index": "iqgawiinmyfprf94",
+    "name": "variable illumination",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/iqgawiinmyfprf94.json",
+    "image": "icons/magic/light/explosion-star-glow-blue-purple.webp"
+  },
+  {
+    "index": "t2glbbjrhtbltdgc",
+    "name": "wakeful",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/t2glbbjrhtbltdgc.json",
+    "image": "icons/creatures/eyes/lizard-single-slit-blue.webp"
+  },
+  {
+    "index": "kwt8ydibhg6jo2v2",
+    "name": "wall of ice",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kwt8ydibhg6jo2v2.json",
+    "image": "icons/magic/water/barrier-ice-crystal-wall-jagged-blue.webp"
+  },
+  {
+    "index": "c4q6ndcljsncnc9t",
+    "name": "water breathing",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/c4q6ndcljsncnc9t.json",
+    "image": "icons/magic/water/projectile-water-ice-orb.webp"
+  },
+  {
+    "index": "afyr2ezavzqubznb",
+    "name": "water form",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/afyr2ezavzqubznb.json",
+    "image": "icons/magic/water/orb-water-bubbles.webp"
+  },
+  {
+    "index": "5v7scabxvibnk2zn",
+    "name": "water susceptibility",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/5v7scabxvibnk2zn.json",
+    "image": "icons/magic/water/pseudopod-swirl-blue.webp"
+  },
+  {
+    "index": "ihh6n8uzbgqyrfzz",
+    "name": "weakening breath",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ihh6n8uzbgqyrfzz.json",
+    "image": "icons/magic/acid/projectile-smoke-glowing.webp"
+  },
+  {
+    "index": "kjf0btamyhuaqgot",
+    "name": "web sense",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/kjf0btamyhuaqgot.json",
+    "image": "icons/magic/control/debuff-chains-ropes-net-white.webp"
+  },
+  {
+    "index": "zitrvwmnpplobzi1",
+    "name": "web walker",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/zitrvwmnpplobzi1.json",
+    "image": "icons/magic/nature/tree-bare-glow-yellow.webp"
+  },
+  {
+    "index": "i8wdjw4j1gjwqmqg",
+    "name": "web",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/i8wdjw4j1gjwqmqg.json",
+    "image": "icons/creatures/webs/web-spider-glowing-purple.webp"
+  },
+  {
+    "index": "smgkjtbclnsx7v80",
+    "name": "whelm",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/smgkjtbclnsx7v80.json",
+    "image": "icons/magic/water/vortex-water-whirlpool.webp"
+  },
+  {
+    "index": "x96xsqjiolyhtv91",
+    "name": "whirlwind of sand",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/x96xsqjiolyhtv91.json",
+    "image": "icons/magic/fire/explosion-mushroom-nuke-orange.webp"
+  },
+  {
+    "index": "ocmsrmy2nx3e43un",
+    "name": "whirlwind",
+    "ruleset": "2014",
+    "type": "feat",
+    "url": "/assets/atlas/enemies/monsterfeatures/json/14/ocmsrmy2nx3e43un.json",
+    "image": "icons/magic/air/wind-tornado-cyclone-white.webp"
+  }
+]

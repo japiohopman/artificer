@@ -1,0 +1,81 @@
+{
+  "index": "mmgiantgoat00000",
+  "name": "giant goat",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Giant Goat is a CR 0.5 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 3",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 6,
+  "stats": {
+    "str": 17,
+    "dex": 13,
+    "con": 12,
+    "int": 3,
+    "wis": 12,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ram",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=z58sUDUmqxECJgT3]] creature and the [[lookup @name lowercase]]{monster} moved 20+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 2d4 bludgeoning average]] damage and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantGoat.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_goat.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmgiantgoat00000.json",
+  "updated_at": "2026-09-27T13:37:06.937Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

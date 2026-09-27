@@ -1,0 +1,97 @@
+{
+  "index": "mmreddragonwyrml",
+  "name": "red dragon wyrmling",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Red Dragons@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Rx08X1mW6m5uYldI caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nRed Dragon Wyrmling@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.u7L682ldreJy4PlC caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 75,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8 + 30",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 17,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot Cone. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/RedDragonWyrmling.webp",
+  "imageUrl": "/assets/atlas/enemies/images/red_dragon_wyrmling.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmreddragonwyrml.json",
+  "updated_at": "2026-09-27T13:37:08.219Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

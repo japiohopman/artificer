@@ -1,0 +1,109 @@
+{
+  "index": "mmcentaurtrooper",
+  "name": "centaur trooper",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Centaur Trooper is a CR 2 fey.",
+  "size": "Large",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 12",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 9,
+  "wisdom": 13,
+  "charisma": 11,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 14,
+    "int": 9,
+    "wis": 13,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "pike",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .XMKFiS5XUEC4fLCr]] or [[/item .4C5jy0VkmoTdrbTC]] in any combination.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "trampling charge",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to its Speed without provoking &Reference[OpportunityAttacks] and can move through the spaces of [[lookup @target.affects.special activity=FG9rAj3Q8UTxbGLF]]. Each [[lookup @target.affects.type activity=FG9rAj3Q8UTxbGLF]] whose space the [[lookup @name lowercase]]{monster} enters is targeted once by the following effect. Strength Saving Throw: DC [[lookup @save.dc.value activity=FG9rAj3Q8UTxbGLF]]. Failure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/fey/mmcentaurtrooper.json",
+  "updated_at": "2026-09-27T13:37:08.457Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

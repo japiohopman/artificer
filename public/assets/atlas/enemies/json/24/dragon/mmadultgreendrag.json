@@ -1,0 +1,140 @@
+{
+  "index": "mmadultgreendrag",
+  "name": "adult green dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Adult Green Dragon is a CR 15 dragon.",
+  "size": "Huge",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 207,
+  "hit_dice": "18d12",
+  "hit_points_roll": "18d12 + 90",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 12,
+  "constitution": 21,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 23,
+    "dex": 12,
+    "con": 21,
+    "int": 18,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 15,
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item Rend]] attacks. It can replace one attack with a use of [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 3 version).",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "poison breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], each creature in a [[lookup @target.template.size activity=lnabW9bM51HoluPp]]-foot [[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]]. Failure: [[/damage average]] damage. Success: [[lookup @damage.onSave capitalize activity=lnabW9bM51HoluPp]] damage.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 3 version) 1/Day: @UUID[Compendium.dnd5e.spells24.Item.phbsplGeas000000]{Geas}",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mind invasion",
+      "desc": "The dragon uses [[/item Spellcasting]] to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 3 version).",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "noxious miasma",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], each [[lookup @target.affects.type activity=Blm8nddvCOH69bL8]] in a [[lookup @target.template.size activity=Blm8nddvCOH69bL8]]-foot-Radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Blm8nddvCOH69bL8]] feet. Failure: [[/damage average]] damage, and the target takes a −2 penalty to AC until the end of its next turn. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/adult_green_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmadultgreendrag.json",
+  "updated_at": "2026-09-27T13:37:07.874Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

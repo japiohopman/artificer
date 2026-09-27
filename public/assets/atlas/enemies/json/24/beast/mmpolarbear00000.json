@@ -1,0 +1,88 @@
+{
+  "index": "mmpolarbear00000",
+  "name": "polar bear",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Polar Bear is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 42,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10 + 15",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "dexterity": 14,
+  "constitution": 16,
+  "intelligence": 2,
+  "wisdom": 13,
+  "charisma": 7,
+  "stats": {
+    "str": 20,
+    "dex": 14,
+    "con": 16,
+    "int": 2,
+    "wis": 13,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/PolarBear.webp",
+  "imageUrl": "/assets/atlas/enemies/images/polar_bear.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmpolarbear00000.json",
+  "updated_at": "2026-09-27T13:37:07.062Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

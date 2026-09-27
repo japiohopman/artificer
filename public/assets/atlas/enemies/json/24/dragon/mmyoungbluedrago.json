@@ -1,0 +1,97 @@
+{
+  "index": "mmyoungbluedrago",
+  "name": "young blue dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Young Blue Dragon is a CR 9 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "Chromatic",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 152,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 64",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 10,
+  "constitution": 19,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "stats": {
+    "str": 21,
+    "dex": 10,
+    "con": 19,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide [[lookup @target.template.type capitalize activity=LpjgVwftzGNMgTUJ]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungBlueDragon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/young_blue_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmyoungbluedrago.json",
+  "updated_at": "2026-09-27T13:37:08.236Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

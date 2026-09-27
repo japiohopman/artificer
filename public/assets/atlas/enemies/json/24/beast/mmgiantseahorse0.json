@@ -1,0 +1,94 @@
+{
+  "index": "mmgiantseahorse0",
+  "name": "giant seahorse",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Giant Seahorse is a CR 0.5 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 15,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "stats": {
+    "str": 15,
+    "dex": 12,
+    "con": 11,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ram",
+      "desc": "[[/attack extended]]. [[/damage average extended]], or [[/damage average activity=YI7aqJ7iiFSYAT7z]] damage if the seahorse moved 20+ feet straight toward the target immediately before the hit.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bubble dash",
+      "desc": "While underwater, the [[lookup @name lowercase]]{monster} moves up to half its Swim Speed without provoking &Reference[Opportunity Attacks].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe only underwater.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantSeaHorse.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmgiantseahorse0.json",
+  "updated_at": "2026-09-27T13:37:06.953Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

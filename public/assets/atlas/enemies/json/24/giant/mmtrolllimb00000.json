@@ -1,0 +1,93 @@
+{
+  "index": "mmtrolllimb00000",
+  "name": "troll limb",
+  "ruleset": "2024",
+  "category": "giant",
+  "desc": "Troll Limb is a CR 0.5 giant.",
+  "size": "Small",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 14,
+  "hit_dice": "4d6",
+  "hit_points_roll": "4d6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 9,
+  "charisma": 1,
+  "stats": {
+    "str": 18,
+    "dex": 12,
+    "con": 10,
+    "int": 1,
+    "wis": 9,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "regeneration",
+      "desc": "The [[lookup @name lowercase]]{monster} regains [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] Hit Points at the start of each of its turns if it has at least 1 Hit Point.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "troll spawn",
+      "desc": "The limb uncannily has the same senses as a whole [[lookup @name lowercase]]{monster}. If the limb isn't destroyed within 24 hours, roll [[/r 1d12#On a 12, the limb turns into a troll]]{roll 1d12}. On a 12, the limb turns into a @UUID[Compendium.dnd5e.actors24.Actor.mmTroll000000000]{Troll}. Otherwise, the limb withers away.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/giant/mmtrolllimb00000.json",
+  "updated_at": "2026-09-27T13:37:08.834Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

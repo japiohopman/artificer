@@ -1,0 +1,95 @@
+{
+  "index": "mmgiantowl000000",
+  "name": "giant owl",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Giant Owl is a CR 0.25 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 3",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 13,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 10,
+  "stats": {
+    "str": 13,
+    "dex": 15,
+    "con": 12,
+    "int": 10,
+    "wis": 14,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "flyby",
+      "desc": "The [[lookup @name lowercase]]{monster} doesn't provoke an &Reference[OpportunityAttacks]{Opportunity Attack} when it flies out of an enemy's reach.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability: At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplClairvoyan]{Clairvoyance}",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantOwl.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_owl.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmgiantowl000000.json",
+  "updated_at": "2026-09-27T13:37:07.195Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

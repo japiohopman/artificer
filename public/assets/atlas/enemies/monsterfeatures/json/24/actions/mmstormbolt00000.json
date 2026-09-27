@@ -1,0 +1,15 @@
+{
+  "index": "mmstormbolt00000",
+  "name": "storm bolt",
+  "ruleset": "2024",
+  "category": "actions",
+  "type": "feat",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Prone apply=false] condition.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/lightning/bolt-strike-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/actions/mmstormbolt00000.json",
+  "updated_at": "2026-09-27T13:37:10.384Z"
+}

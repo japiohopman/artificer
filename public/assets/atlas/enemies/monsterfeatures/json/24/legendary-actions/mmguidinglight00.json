@@ -1,0 +1,15 @@
+{
+  "index": "mmguidinglight00",
+  "name": "guiding light",
+  "ruleset": "2024",
+  "category": "legendary-actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} uses Spellcasting to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidingBol]{Guiding Bolt} (level 2 version).",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/light/projectile-flare-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmguidinglight00.json",
+  "updated_at": "2026-09-27T13:37:10.493Z"
+}

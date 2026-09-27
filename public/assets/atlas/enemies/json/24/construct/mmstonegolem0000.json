@@ -1,0 +1,135 @@
+{
+  "index": "mmstonegolem0000",
+  "name": "stone golem",
+  "ruleset": "2024",
+  "category": "construct",
+  "desc": "Stone Golem@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.XW2WF8vjTcmnKF17 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 220,
+  "hit_dice": "21d10",
+  "hit_points_roll": "21d10 + 105",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "stats": {
+    "str": 22,
+    "dex": 9,
+    "con": 20,
+    "int": 3,
+    "wis": 11,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "plus two other languages;",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "immutable form",
+      "desc": "The [[lookup @name lowercase]]{monster} can't shape-shift.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item Slam]] or [[/item Force Bolt]] in any combination.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "force bolt",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "4d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "slow",
+      "desc": "The [[lookup @name lowercase]]{monster} casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{Slow} spell, requiring no spell components and using Constitution as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/StoneGolem.webp",
+  "imageUrl": "/assets/atlas/enemies/images/stone_golem.webp",
+  "url": "/assets/atlas/enemies/json/24/construct/mmstonegolem0000.json",
+  "updated_at": "2026-09-27T13:37:07.724Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,81 @@
+{
+  "index": "mmbadger00000000",
+  "name": "badger",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Badger is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4 + 3",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 10,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "stats": {
+    "str": 10,
+    "dex": 11,
+    "con": 16,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Badger.webp",
+  "imageUrl": "/assets/atlas/enemies/images/badger.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmbadger00000000.json",
+  "updated_at": "2026-09-27T13:37:06.843Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,111 @@
+{
+  "index": "mmbehir000000000",
+  "name": "behir",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Behir is a CR 11 monstrosity.",
+  "size": "Huge",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 168,
+  "hit_dice": "16d12",
+  "hit_points_roll": "16d12 + 64",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 23,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 7,
+  "wisdom": 14,
+  "charisma": 12,
+  "stats": {
+    "str": 23,
+    "dex": 16,
+    "con": 18,
+    "int": 7,
+    "wis": 14,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack and uses [[/item .mmConstrict00000]].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "constrict",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=IgOMjRxAt7UISkJq]], one [[lookup @target.affects.special activity=IgOMjRxAt7UISkJq]] [[lookup @target.affects.type activity=IgOMjRxAt7UISkJq]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=IgOMjRxAt7UISkJq]] [[lookup @range.units activity=IgOMjRxAt7UISkJq]]. Failure: [[/damage average]] damage. The target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] by the [[lookup @name lowercase]]{monster} (the [[lookup @name lowercase]]{monster} can have only one creature swallowed at a time). Failure: The [[lookup @name lowercase]]{monster} swallows the target, which is no longer &Reference[Grappled apply=false]. While swallowed, a creature has the &Reference[Blinded apply=false] and &Reference[Restrained apply=false] conditions, has Total Cover against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and takes [[/damage average activity=zrWNjO9mkbN28spL]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. If the [[lookup @name lowercase]]{monster} takes 30 damage or more on a single turn from the swallowed creature, the [[lookup @name lowercase]]{monster} must succeed on a [[/save format=long activity=rGeGukkm2t2fXsoy]] at the end of that turn or regurgitate the creature, which falls in a space within [[lookup @range.value activity=rGeGukkm2t2fXsoy]] [[lookup @range.units activity=rGeGukkm2t2fXsoy]]. of the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition. If the [[lookup @name lowercase]]{monster} dies, a swallowed creature is no longer Restrained and can escape from the corpse by using 15 feet of movement, exiting Prone.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "lightning breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide [[lookup @target.template.type capitalize activity=LpjgVwftzGNMgTUJ]]. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Behir.webp",
+  "imageUrl": "/assets/atlas/enemies/images/behir.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmbehir000000000.json",
+  "updated_at": "2026-09-27T13:37:09.283Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

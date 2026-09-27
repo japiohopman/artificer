@@ -1,0 +1,124 @@
+{
+  "index": "mmvrock000000000",
+  "name": "vrock",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Vrock@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.yqpU1D8Hjb3YzIHu caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 152,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 64",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 18,
+  "intelligence": 8,
+  "wisdom": 13,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 18,
+    "int": 8,
+    "wis": 13,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "demonic restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Abyss, its body dissolves into ichor, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmShred000000000]] attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shred",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spores",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=voqQeTnihpy3BTFf]], each creature in a [[lookup @target.template.size activity=voqQeTnihpy3BTFf]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Poisoned apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes [[/damage average activity=ukZveNVmvvtwbDj0]] at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "stunning screech",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=eoIikvnPayaj02oN]], each creature in a [[lookup @target.template.size activity=eoIikvnPayaj02oN]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} (demons succeed automatically). Failure: [[/damage average]] damage, and the target has the &Reference[Stunned apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Vrock.webp",
+  "imageUrl": "/assets/atlas/enemies/images/vrock.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmvrock000000000.json",
+  "updated_at": "2026-09-27T13:37:08.769Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

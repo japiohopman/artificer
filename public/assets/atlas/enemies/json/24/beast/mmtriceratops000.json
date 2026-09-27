@@ -1,0 +1,88 @@
+{
+  "index": "mmtriceratops000",
+  "name": "triceratops",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Triceratops is a CR 5 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d12",
+  "hit_points_roll": "12d12 + 36",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 2,
+  "wisdom": 11,
+  "charisma": 5,
+  "stats": {
+    "str": 22,
+    "dex": 9,
+    "con": 17,
+    "int": 2,
+    "wis": 11,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmGore0000000000]] attacks.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=iBenqFiBu40bUxkH]] creature and the [[lookup @name lowercase]]{monster} moved 20+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 2d8 average type=piercing]] damage and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Triceratops.webp",
+  "imageUrl": "/assets/atlas/enemies/images/triceratops.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmtriceratops000.json",
+  "updated_at": "2026-09-27T13:37:07.124Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

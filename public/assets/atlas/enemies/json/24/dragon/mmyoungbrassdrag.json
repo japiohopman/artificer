@@ -1,0 +1,104 @@
+{
+  "index": "mmyoungbrassdrag",
+  "name": "young brass dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Young Brass Dragon is a CR 6 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "Metallic",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 110,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 39",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 17,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .mmRend0000000000]] attacks.  It can replace two attacks with a use of [[/item .mmSleepBreath000]].",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot-long, [[lookup @target.template.width activity=bDqgmtLG3zcVuqdi]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sleep breath",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=6ce9oevQRWomSVSF]], each [[lookup @target.affects.type activity=6ce9oevQRWomSVSF]] in a [[lookup @target.template.size activity=6ce9oevQRWomSVSF]]-foot Cone. Failure: The target has the &Reference[Incapacitated apply=false] condition until the end of its next turn, at which point it repeats the save. Second Failure: The target has the &Reference[Unconscious apply=false] condition for [[lookup @duration.value activity=EZma0lCmQeTuVuAL]] minute. This effect ends for the target if it takes damage or a creature within 5 feet of it takes an action to wake it.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungBrassDragon.webp",
+  "imageUrl": "/assets/atlas/enemies/images/young_brass_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmyoungbrassdrag.json",
+  "updated_at": "2026-09-27T13:37:08.241Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

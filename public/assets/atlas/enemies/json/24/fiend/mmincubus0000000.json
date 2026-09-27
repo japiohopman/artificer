@@ -1,0 +1,113 @@
+{
+  "index": "mmincubus0000000",
+  "name": "incubus",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Incubus@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.Eqctro3hPZWecGfP caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 66,
+  "hit_dice": "12d8",
+  "hit_points_roll": "12d8 + 12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 15,
+  "wisdom": 12,
+  "charisma": 20,
+  "stats": {
+    "str": 8,
+    "dex": 17,
+    "con": 13,
+    "int": 15,
+    "wis": 12,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "poison",
+    "psychic"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "succubus form",
+      "desc": "When the [[lookup @name lowercase]]{monster} finishes a Long Rest, it can shape-shift into a @UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Succubus}, using that stat block instead of this one. Any equipment it is wearing or carrying isn't transformed.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "restless touch",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target is cursed for 24 hours or until the [[lookup @name lowercase]]{monster} dies. Until the curse ends, the target gains no benefit from finishing Short Rests.",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "psychic",
+            "name": "psychic",
+            "url": "/assets/atlas/damage_types/json/psychic.json"
+          },
+          "damage_dice": "3d6-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmRestlessTouch0]] attacks.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{Disguise Self}, @UUID[Compendium.dnd5e.spells24.Item.phbsplEtherealne]{Etherealness} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplDream00000]{Dream}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHypnoticPa]{Hypnotic Pattern}",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "nightmare",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=Y9H9ImnMcffBZlH3]], one [[lookup @target.affects.type activity=Y9H9ImnMcffBZlH3]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Y9H9ImnMcffBZlH3]] feet. Failure: If the target has 20 Hit Points or fewer, it has the &Reference[Unconscious apply=false] condition for [[lookup @duration.value activity=Y9H9ImnMcffBZlH3]] [[lookup @duration.units activity=Y9H9ImnMcffBZlH3]], until it takes damage, or until a creature within 5 feet of it takes an action to wake it. Otherwise, the target takes [[/damage average]] damage.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Incubus.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmincubus0000000.json",
+  "updated_at": "2026-09-27T13:37:08.670Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

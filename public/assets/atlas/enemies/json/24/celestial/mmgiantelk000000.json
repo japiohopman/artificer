@@ -1,0 +1,81 @@
+{
+  "index": "mmgiantelk000000",
+  "name": "giant elk",
+  "ruleset": "2024",
+  "category": "celestial",
+  "desc": "Giant Elk is a CR 2 celestial.",
+  "size": "Huge",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 14
+    }
+  ],
+  "hit_points": 42,
+  "hit_dice": "5d12",
+  "hit_points_roll": "5d12 + 10",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 19,
+  "dexterity": 18,
+  "constitution": 14,
+  "intelligence": 7,
+  "wisdom": 14,
+  "charisma": 10,
+  "stats": {
+    "str": 19,
+    "dex": 18,
+    "con": 14,
+    "int": 7,
+    "wis": 14,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ram",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature and the elk moved 20+ feet straight it immediately before the hit, the target takes an extra [[/damage average activity=i9cI4yuGrjw1or1q]] and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantElk.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_elk.webp",
+  "url": "/assets/atlas/enemies/json/24/celestial/mmgiantelk000000.json",
+  "updated_at": "2026-09-27T13:37:07.191Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

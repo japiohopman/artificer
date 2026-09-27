@@ -1,0 +1,15 @@
+{
+  "index": "mmmindjolt000000",
+  "name": "mind jolt",
+  "ruleset": "2024",
+  "category": "legendary-actions",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} uses Spellcasting to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Mind Spike} (level 4 version). The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/beam-ringed-impact-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/legendary-actions/mmmindjolt000000.json",
+  "updated_at": "2026-09-27T13:37:10.494Z"
+}

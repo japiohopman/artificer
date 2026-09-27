@@ -1,0 +1,132 @@
+{
+  "index": "mmdryad000000000",
+  "name": "dryad",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Dryad is a CR 1 fey.",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 14,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 10,
+    "dex": 12,
+    "con": 11,
+    "int": 14,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "speak with beasts and plants",
+      "desc": "The [[lookup @name lowercase]]{monster} can communicate with Beasts and Plants as if they shared a language.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmVineLash000000]] or [[/item .mmThornBurst0000]] attack, and it can use Spellcasting to cast [[/item .mmSpellcasting00.Activity.bAmZSyK4cn33HwwI]].",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vine lash",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "thorn burst",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplAnimalFrie]{Animal Friendship}, @UUID[Compendium.dnd5e.spells24.Item.phbsplCharmMonst]{Charm Monster} (lasts 24 hours; ends early if the dryad casts the spell again), @UUID[Compendium.dnd5e.spells24.Item.phbsplDruidcraft]{Druidcraft} 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplEntangle00]{Entangle}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPasswithou]{Pass without Trace}",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tree stride",
+      "desc": "If within [[lookup @range.value activity=8av8Lh1jNLCrOJny]] feet of a [[lookup @range.special activity=8av8Lh1jNLCrOJny]], the [[lookup @name lowercase]]{monster} teleports to an unoccupied space within [[lookup @range.value activity=8av8Lh1jNLCrOJny]] feet of a second [[lookup @target.affects.special activity=8av8Lh1jNLCrOJny]] that is within 60 feet of the previous tree.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/Dryad.webp",
+  "imageUrl": "/assets/atlas/enemies/images/dryad.webp",
+  "url": "/assets/atlas/enemies/json/24/fey/mmdryad000000000.json",
+  "updated_at": "2026-09-27T13:37:08.463Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

@@ -1,0 +1,104 @@
+{
+  "index": "mmminotaurskelet",
+  "name": "minotaur skeleton",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Skeletons@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.w1RMyPzpjolhQMVX caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 12",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 11,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 8,
+  "charisma": 5,
+  "stats": {
+    "str": 18,
+    "dex": 11,
+    "con": 15,
+    "int": 6,
+    "wis": 8,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "bludgeoning"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "Understands Abyssal but can’t speak",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=iBenqFiBu40bUxkH]] creature and the [[lookup @name lowercase]]{monster} moved 20+ feet straight towardit immediately before the hit, the target takes an extra [[/damage 2d8 piercing average]] damage and has the &Reference[Prone apply=false] condition.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/MinotaurSkeleton.webp",
+  "imageUrl": "/assets/atlas/enemies/images/minotaur_skeleton.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmminotaurskelet.json",
+  "updated_at": "2026-09-27T13:37:09.766Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

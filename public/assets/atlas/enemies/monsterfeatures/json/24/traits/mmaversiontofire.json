@@ -1,0 +1,15 @@
+{
+  "index": "mmaversiontofire",
+  "name": "aversion to fire",
+  "ruleset": "2024",
+  "category": "traits",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} takes Fire damage, it has Disadvantage on attack rolls and ability checks until the end of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/flame-burning-skull-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/traits/mmaversiontofire.json",
+  "updated_at": "2026-09-27T13:37:10.506Z"
+}

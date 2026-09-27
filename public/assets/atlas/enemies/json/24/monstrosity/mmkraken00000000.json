@@ -1,0 +1,151 @@
+{
+  "index": "mmkraken00000000",
+  "name": "kraken",
+  "ruleset": "2024",
+  "category": "monstrosity",
+  "desc": "Kraken is a CR 23 monstrosity.",
+  "size": "Gargantuan",
+  "type": "monstrosity",
+  "subtype": "Titan",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 481,
+  "hit_dice": "26d20",
+  "hit_points_roll": "26d20 + 208",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 30,
+  "dexterity": 11,
+  "constitution": 26,
+  "intelligence": 22,
+  "wisdom": 18,
+  "charisma": 20,
+  "stats": {
+    "str": 30,
+    "dex": 11,
+    "con": 26,
+    "int": 22,
+    "wis": 18,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold",
+    "lightning"
+  ],
+  "condition_immunities": [
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "restrained"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Understands Abyssal, Celestial, Infernal, and Primordial but can’t speak",
+  "challenge_rating": 23,
+  "proficiency_bonus": 7,
+  "xp": 23000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "siege monster",
+      "desc": "The [[lookup @name lowercase]]{monster} deals double damage to objects and structures.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster}  makes two  [[/item .mmTentacle000000]] attacks and uses  [[/item .mmFling000000000]], [[/item .mmLightningStrik]], or  [[/item .mmSwallow0000000]].",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tentacle",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. The target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of ten tentacles, and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d6+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fling",
+      "desc": "The [[lookup @name lowercase]]{monster} throws a [[lookup @target.affects.special activity=E7YKnUIWsavrnNzK]] Grappled by it to a space it can see within [[lookup @range.value activity=E7YKnUIWsavrnNzK]] feet of itself [[lookup @range.special activity=E7YKnUIWsavrnNzK]]. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=E7YKnUIWsavrnNzK]], the creature thrown and each creature in the destination space. Failure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition. Success: Half damage.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "lightning strike",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=v39JwGqgfaKiA4vc]], one [[lookup @target.affects.type activity=v39JwGqgfaKiA4vc]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=v39JwGqgfaKiA4vc]] feet. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.labels.statblock activity=YorssyWMumAsvzx3]] Grappled by the [[lookup @name lowercase]]{monster} (it can have up to four creatures swallowed at a time). Failure: [[/damage average activity=YorssyWMumAsvzx3]] damage. If the target is Large or smaller, it is swallowed and no longer Grappled. A swallowed creature has the &Reference[Restrained apply=false] condition, has &Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and takes [[/damage average activity=zrWNjO9mkbN28spL]] damage at the start of each of its turns. If the [[lookup @name lowercase]]{monster} takes 50 damage or more on a single turn from a creature inside it, the [[lookup @name lowercase]]{monster} must succeed on a [[/save format=long activity=rGeGukkm2t2fXsoy]] at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within 10 feet of the [[lookup @name lowercase]]{monster} with the &Reference[Prone apply=false] condition. If the [[lookup @name lowercase]]{monster} dies, any swallowed creature no longer has the Restrained condition and can escape from the corpse using 15 feet of movement, exiting Prone.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "storm bolt",
+      "desc": "The [[lookup @name lowercase]]{monster} uses [[/item .mmLightningStrik]].",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "toxic ink",
+      "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=Kquf9zADg0jtKBqw]], each [[lookup @target.affects.type activity=Kquf9zADg0jtKBqw]] in a [[lookup @target.template.size activity=Kquf9zADg0jtKBqw]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} while it is underwater. Failure: The target has the &Reference[Blinded apply=false] and &Reference[Poisoned apply=false] conditions until the end of the [[lookup @name lowercase]]{monster}'s next turn. The [[lookup @name lowercase]]{monster} then moves up to its Speed. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+      "attack_bonus": 13,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/kraken.webp",
+  "url": "/assets/atlas/enemies/json/24/monstrosity/mmkraken00000000.json",
+  "updated_at": "2026-09-27T13:37:09.356Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

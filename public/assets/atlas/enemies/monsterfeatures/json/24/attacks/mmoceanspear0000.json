@@ -1,0 +1,24 @@
+{
+  "index": "mmoceanspear0000",
+  "name": "ocean spear",
+  "ruleset": "2024",
+  "category": "attacks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, its Speed decreases by 10 feet until the end of its next turn. Hit or Miss: The spear magically returns to the [[lookup @name lowercase]]{monster}'s hand immediately after a ranged attack.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "20 ft",
+  "image": "icons/weapons/polearms/spear-barbed-silver.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/24/attacks/mmoceanspear0000.json",
+  "updated_at": "2026-09-27T13:37:10.450Z"
+}

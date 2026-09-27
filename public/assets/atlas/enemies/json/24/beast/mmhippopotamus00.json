@@ -1,0 +1,93 @@
+{
+  "index": "mmhippopotamus00",
+  "name": "hippopotamus",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Hippopotamus is a CR 4 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 82,
+  "hit_dice": "11d10",
+  "hit_points_roll": "11d10 + 22",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 21,
+  "dexterity": 7,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "stats": {
+    "str": 21,
+    "dex": 7,
+    "con": 15,
+    "int": 2,
+    "wis": 12,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hold breath",
+      "desc": "The [[lookup @name lowercase]]{monster} can hold its breath for 10 minutes.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmBite0000000000]] attacks.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/beast/mmhippopotamus00.json",
+  "updated_at": "2026-09-27T13:37:07.007Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

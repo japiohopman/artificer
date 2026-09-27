@@ -1,0 +1,132 @@
+{
+  "index": "mmfireelemental0",
+  "name": "fire elemental",
+  "ruleset": "2024",
+  "category": "elemental",
+  "desc": "Fire Elemental@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.M6gKJjmLDllg2rjI caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 93,
+  "hit_dice": "11d10",
+  "hit_points_roll": "11d10 + 33",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 10,
+  "dexterity": 17,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 7,
+  "stats": {
+    "str": 10,
+    "dex": 17,
+    "con": 16,
+    "int": 6,
+    "wis": 10,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fire aura",
+      "desc": "At the end of each of the [[lookup @name lowercase]]{monster}'s turns, each [[lookup @target.affects.type activity=15VgJKVXwYBOFSqJ]] of the [[lookup @name lowercase]]{monster}'s choice in a [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} takes [[/damage average]] damage. Creatures and flammable objects in the Emanation start burning.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fire form",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes [[/damage average]] damage.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illumination",
+      "desc": "The [[lookup @name lowercase]]{monster} sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water susceptibility",
+      "desc": "The [[lookup @name lowercase]]{monster} takes 3 (1d6) Cold damage damage for every 5 feet the [[lookup @name lowercase]]{monster} moves in water or for every gallon of water splashed on it. Foundry Note Scaling is configured to roll the correct number of dice based on the distance traveled through water. 1 is default for 5 feet, 2 is for 10 feet, and so forth.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmBurn0000000000]] attacks.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "burn",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature or a flammable object, it starts &Reference[burning].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/FireElemental.webp",
+  "imageUrl": "/assets/atlas/enemies/images/fire_elemental.webp",
+  "url": "/assets/atlas/enemies/json/24/elemental/mmfireelemental0.json",
+  "updated_at": "2026-09-27T13:37:08.346Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

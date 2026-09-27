@@ -1,0 +1,86 @@
+{
+  "index": "mmgoblinminion00",
+  "name": "goblin minion",
+  "ruleset": "2024",
+  "category": "fey",
+  "desc": "Goblins@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.TwMrfWrYo0ZAnWB3 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]\nGoblin Minion@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.x4VLvBATmEBnTTxK caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Small",
+  "type": "fey",
+  "subtype": "Goblinoid",
+  "alignment": "Chaotic Neutral",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 8,
+  "charisma": 8,
+  "stats": {
+    "str": 8,
+    "dex": 15,
+    "con": 10,
+    "int": 10,
+    "wis": 8,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "nimble escape",
+      "desc": "The [[lookup @name lowercase]]{monster} takes the &Reference[Disengage] or &Reference[Hide] action.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "url": "/assets/atlas/enemies/json/24/fey/mmgoblinminion00.json",
+  "updated_at": "2026-09-27T13:37:08.492Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

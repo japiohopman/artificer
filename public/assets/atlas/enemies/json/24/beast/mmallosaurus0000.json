@@ -1,0 +1,96 @@
+{
+  "index": "mmallosaurus0000",
+  "name": "allosaurus",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Allosaurus is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "Dinosaur",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 51,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 18",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 19,
+  "dexterity": 13,
+  "constitution": 17,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "stats": {
+    "str": 19,
+    "dex": 13,
+    "con": 17,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature and the [[lookup @name lowercase]]{monster} moved 30+ feet straight toward it immediately before the hit, the target has the &Reference[Prone apply=false] condition, and the [[lookup @name lowercase]]{monster} can make one [[/item .mmBite0000000000]] attack against it.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Allosaurus.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmallosaurus0000.json",
+  "updated_at": "2026-09-27T13:37:06.802Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

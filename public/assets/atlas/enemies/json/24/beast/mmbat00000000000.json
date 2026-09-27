@@ -1,0 +1,81 @@
+{
+  "index": "mmbat00000000000",
+  "name": "bat",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Bat is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4 - 1",
+  "hit_points_roll": "1d4 - 1",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 2,
+  "dexterity": 15,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "stats": {
+    "str": 2,
+    "dex": 15,
+    "con": 8,
+    "int": 2,
+    "wis": 12,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Bat.webp",
+  "imageUrl": "/assets/atlas/enemies/images/bat.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmbat00000000000.json",
+  "updated_at": "2026-09-27T13:37:06.845Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

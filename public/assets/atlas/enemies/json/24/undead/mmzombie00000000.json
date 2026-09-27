@@ -1,0 +1,93 @@
+{
+  "index": "mmzombie00000000",
+  "name": "zombie",
+  "ruleset": "2024",
+  "category": "undead",
+  "desc": "Zombies@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.2xCqDBEM46bLXD4q caption=false cite=false classes=\"no-embed mm\"]\nZombie@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.WuSY8kEg0E7DusN5 caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 8
+    }
+  ],
+  "hit_points": 15,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 13,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "stats": {
+    "str": 13,
+    "dex": 6,
+    "con": 16,
+    "int": 3,
+    "wis": 6,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "Understands Common plus one other language but can’t speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "undead fortitude",
+      "desc": "If damage reduces the [[lookup @name lowercase]]{monster} to 0 Hit Points, it makes a Constitution saving throw (DC 5 plus the damage taken) unless the damage is Radiant or from a Critical Hit. On a successful save, the [[lookup @name lowercase]]{monster} drops to 1 Hit Point instead.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Zombie.webp",
+  "imageUrl": "/assets/atlas/enemies/images/zombie.webp",
+  "url": "/assets/atlas/enemies/json/24/undead/mmzombie00000000.json",
+  "updated_at": "2026-09-27T13:37:09.867Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

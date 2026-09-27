@@ -1,0 +1,113 @@
+{
+  "index": "mmfrostgiant0000",
+  "name": "frost giant",
+  "ruleset": "2024",
+  "category": "giant",
+  "desc": "Frost Giant is a CR 8 giant.",
+  "size": "Huge",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 149,
+  "hit_dice": "13d12",
+  "hit_points_roll": "13d12 + 65",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 9,
+  "constitution": 21,
+  "intelligence": 9,
+  "wisdom": 10,
+  "charisma": 12,
+  "stats": {
+    "str": 23,
+    "dex": 9,
+    "con": 21,
+    "int": 9,
+    "wis": 10,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, using [[/item .mmFrostAxe000000]] or [[/item .mmGreatBow000000]] in any combination.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frost axe",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d12+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "great bow",
+      "desc": "[[/attack extended]]. [[/damage average extended]], and the target's Speed decreases by 10 feet until the end of its next turn.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "war cry",
+      "desc": "The [[lookup @name lowercase]]{monster} or one [[lookup @target.affects.type activity=uN0VTW2Fqig7YAs9]] of its choice that can see or hear it gains [[/healing average temp]] and has Advantage on attack rolls until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/FrostGiant.webp",
+  "imageUrl": "/assets/atlas/enemies/images/frost_giant.webp",
+  "url": "/assets/atlas/enemies/json/24/giant/mmfrostgiant0000.json",
+  "updated_at": "2026-09-27T13:37:08.802Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

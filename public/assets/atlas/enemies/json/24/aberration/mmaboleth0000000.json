@@ -1,0 +1,151 @@
+{
+  "index": "mmaboleth0000000",
+  "name": "aboleth",
+  "ruleset": "2024",
+  "category": "aberration",
+  "desc": "Aboleth is a CR 10 aberration.",
+  "size": "Large",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 150,
+  "hit_dice": "20d10",
+  "hit_points_roll": "20d10 + 40",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 21,
+  "dexterity": 9,
+  "constitution": 15,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 21,
+    "dex": 9,
+    "con": 15,
+    "int": 18,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "telepathy 120 ft.",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "eldritch restoration",
+      "desc": "If destroyed, the [[lookup @name lowercase]]{monster} gains a new body in [[/r 5d10]] days, reviving with all its Hit Points in the Far Realm or another location chosen by the DM.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mucus cloud",
+      "desc": "While underwater, the [[lookup @name lowercase]]{monster} is surrounded by mucus. Constitution Saving Throw: DC 14, each [[lookup @target.affects.type activity=clFFG8uDBSFzxIo8]] in a [[lookup @target.template.size activity=clFFG8uDBSFzxIo8]]-[[lookup @target.template.units activity=clFFG8uDBSFzxIo8]] Emanation originating from the [[lookup @name lowercase]]{monster} at the end of the [[lookup @name lowercase]]{monster}'s turn. Failure: The target is cursed. Until the curse ends, the target's skin becomes slimy, the target can breathe air and water, and it can't regain Hit Points unless it is underwater. While the cursed creature is outside a body of water, the creature takes [[/damage average activity=JrxCVyCOsBAMVZS7]] damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "probing telepathy",
+      "desc": "If a creature the [[lookup @name lowercase]]{monster} can see communicates telepathically with the [[lookup @name lowercase]]{monster}, the [[lookup @name lowercase]]{monster} learns the creature's greatest desires.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tentacle",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of four tentacles.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mmTentacle000000]] attacks and uses either [[/item .7gP0oX3L1RKRaBGH]] or [[/item .yiiKNaJ2svcUWqLi]] if available.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "dominate mind",
+      "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=zdXAMnjaOcsVmLZP]], one [[lookup @target.affects.type activity=zdXAMnjaOcsVmLZP]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=zdXAMnjaOcsVmLZP]] feet. Failure: The target has the &Reference[Charmed apply=false] condition until the [[lookup @name lowercase]]{monster} dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the [[lookup @name lowercase]]{monster} and is under its control while within [[lookup @target.template.size activity=zdXAMnjaOcsVmLZP]] feet of it. In addition, the [[lookup @name lowercase]]{monster} and the target can communicate telepathically with each other over any distance. The target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the [[lookup @name lowercase]]{monster}, ending the effect on itself on a success.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "consume memories",
+      "desc": "Intelligence Saving Throw: DC [[lookup @save.dc.value activity=uI3HDQ1grN123Or3]], [[lookup @target.affects.labels.statblock activity=uI3HDQ1grN123Or3]] within [[lookup @range.value activity=uI3HDQ1grN123Or3]] feet. [[lookup @target.affects.special activity=uI3HDQ1grN123Or3]] by the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: [[lookup @damage.onSave capitalize activity=uI3HDQ1grN123Or3]] damage. Failure or Success: The [[lookup @name lowercase]]{monster} gains the target's memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "lash",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one Tentacle attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "psychic drain",
+      "desc": "If the [[lookup @name lowercase]]{monster} has at least one creature Charmed or Grappled, it uses [[/item .7gP0oX3L1RKRaBGH]] and regains [[/healing average]].",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/aberration/Aboleth.webp",
+  "imageUrl": "/assets/atlas/enemies/images/aboleth.webp",
+  "url": "/assets/atlas/enemies/json/24/aberration/mmaboleth0000000.json",
+  "updated_at": "2026-09-27T13:37:06.749Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

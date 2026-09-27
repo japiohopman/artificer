@@ -1,0 +1,162 @@
+{
+  "index": "mmpitfiend000000",
+  "name": "pit fiend",
+  "ruleset": "2024",
+  "category": "fiend",
+  "desc": "Pit Fiend@Embed[Compendium.dnd5e.content24.JournalEntry.mmAppendixMonste.JournalEntryPage.bBzXVjiSjkZzn8oA caption=false cite=false classes=\"no-embed mm free-rules-embed\"]",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 337,
+  "hit_dice": "27d10",
+  "hit_points_roll": "27d10 + 189",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 26,
+  "dexterity": 14,
+  "constitution": 24,
+  "intelligence": 22,
+  "wisdom": 18,
+  "charisma": 24,
+  "stats": {
+    "str": 26,
+    "dex": 14,
+    "con": 24,
+    "int": 22,
+    "wis": 18,
+    "cha": 24
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 20,
+  "proficiency_bonus": 6,
+  "xp": 25000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "diabolical restoration",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies outside the Nine Hells, its body disappears in sulfurous smoke, and it gains a new body instantly, reviving with all its Hit Points somewhere in the Nine Hells.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fear aura",
+      "desc": "The [[lookup @name lowercase]]{monster} emanates an aura in a [[lookup @target.template.size activity=oT8238p9jXwVy76c]]-foot Emanation while it doesn't have the Incapacitated condition. Wisdom Saving Throw: DC [[lookup @save.dc.value activity=oT8238p9jXwVy76c]], [[lookup @target.affects.special activity=oT8238p9jXwVy76c]]. Failure: The target has the &Reference[Frightened apply=false] condition until the start of its next turn. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s aura for 24 hours.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has Advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .mmBite0000000000]] attack, two [[/item .mmDevilishClaw00]] attacks, and one [[/item .mmFieryMace00000]] attack.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it must make the following saving throw. Constitution Saving Throw: DC [[lookup @save.dc.value activity=fM7YmQ4hBtRXJkMe]]. Failure: The target has the &Reference[Poisoned apply=false] condition. While Poisoned, the target can't regain Hit Points and takes [[/damage average activity=aa2GUeTEVLOdmfrB]] damage at the start of each of its turns, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "devilish claw",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "4d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fiery mace",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "4d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hellfire spellcasting",
+      "desc": "The pit fiend casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball} (level 5 version) twice, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @abilities.cha.dc]]).. It can replace one Fireball with @UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{Hold Monster} (level 7 version) or @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofFire]{Wall of Fire}.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/PitFiend.webp",
+  "imageUrl": "/assets/atlas/enemies/images/pit_fiend.webp",
+  "url": "/assets/atlas/enemies/json/24/fiend/mmpitfiend000000.json",
+  "updated_at": "2026-09-27T13:37:08.721Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

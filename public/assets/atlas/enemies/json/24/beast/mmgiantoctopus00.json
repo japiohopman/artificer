@@ -1,0 +1,95 @@
+{
+  "index": "mmgiantoctopus00",
+  "name": "giant octopus",
+  "ruleset": "2024",
+  "category": "beast",
+  "desc": "Giant Octopus is a CR 1 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "7d10",
+  "hit_points_roll": "7d10 + 7",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 17,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 4,
+  "stats": {
+    "str": 17,
+    "dex": 13,
+    "con": 13,
+    "int": 5,
+    "wis": 10,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "water breathing",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe only underwater. It can hold its breath for 1 hour outside water.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tentacles",
+      "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from all eight tentacles. While Grappled, the target has the &Reference[Restrained apply=false] condition.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "ink cloud",
+      "desc": "Trigger: The [[lookup @name lowercase]]{monster} takes damage while underwater. Response: The [[lookup @name lowercase]]{monster} releases ink that fills a [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]]-foot Cube centered on itself, and the [[lookup @name lowercase]]{monster} moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantOctopus.webp",
+  "imageUrl": "/assets/atlas/enemies/images/giant_octopus.webp",
+  "url": "/assets/atlas/enemies/json/24/beast/mmgiantoctopus00.json",
+  "updated_at": "2026-09-27T13:37:06.945Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}

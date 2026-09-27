@@ -1,0 +1,145 @@
+{
+  "index": "mmancientgolddra",
+  "name": "ancient gold dragon",
+  "ruleset": "2024",
+  "category": "dragon",
+  "desc": "Ancient Gold Dragon is a CR 24 dragon.",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "Metallic",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 22
+    }
+  ],
+  "hit_points": 546,
+  "hit_dice": "28d20",
+  "hit_points_roll": "28d20 + 252",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 30,
+  "dexterity": 14,
+  "constitution": 29,
+  "intelligence": 18,
+  "wisdom": 17,
+  "charisma": 28,
+  "stats": {
+    "str": 30,
+    "dex": 14,
+    "con": 29,
+    "int": 18,
+    "wis": 17,
+    "cha": 28
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 24,
+  "proficiency_bonus": 7,
+  "xp": 24000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes {count} [[/item]] attacks and uses [[/item]].",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rend",
+      "desc": "[[/attack extended]]. [[/damage average extended]].",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot-long, [[lookup @target.template.width activity=bDqgmtLG3zcVuqdi]]-foot-wide Line. Failure: [[/damage average]] damage. Success: Half damage.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]): At Will: @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidingBol]{Guiding Bolt} (level 4 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplShapechang]{Shapechange} (Beast or Humanoid form only, no Temporary Hit Points gained from the spell, and no Concentration or Temporary Hit Points required to maintain the spell) 1/Day Each: @UUID[Compendium.dnd5e.spells24.Item.phbsplFlameStrik]{Flame Strike} (level 6 version), @UUID[Compendium.dnd5e.spells24.Item.phbsplWordofReca]{Word of Recall}, @UUID[Compendium.dnd5e.spells24.Item.phbsplZoneofTrut]{Zone of Truth}",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "weakening breath",
+      "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=EGZ4bS4HpJkfNG9s]], each creature that isn't currently affected by this breath in a [[lookup @target.template.size activity=EGZ4bS4HpJkfNG9s]]-foot Cone. Failure: The target has Disadvantage on Strength-based D20 Tests and subtracts 5 ([[/r 1d10]]) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=EGZ4bS4HpJkfNG9s]] minute, it succeeds automatically.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "banish",
+      "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=kWKwiAYgyeKBLMNJ]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] feet. Failure: [[/damage average]] damage, and the target has the &Reference[Incapacitated apply=false] condition and is transported to a harmless demiplane until the start of the [[lookup @name lowercase]]{monster}'s next turn, at which point it re­appears in an unoccupied space of the [[lookup @name lowercase]]{monster}'s choice within [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] feet of the [[lookup @name lowercase]]{monster}. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again [[lookup @duration.special activity=kWKwiAYgyeKBLMNJ]].",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "guiding light",
+      "desc": "The [[lookup @name lowercase]]{monster} uses Spellcasting to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidingBol]{Guiding Bolt} (level 2 version).",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one [[/item Rend]] attack.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "imageUrl": "/assets/atlas/enemies/images/ancient_gold_dragon.webp",
+  "url": "/assets/atlas/enemies/json/24/dragon/mmancientgolddra.json",
+  "updated_at": "2026-09-27T13:37:08.058Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "9/27/2026"
+}
