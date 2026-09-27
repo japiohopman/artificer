@@ -434,15 +434,15 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Dependencies:** `storageService.ts`
 
 #### E4. Monsters Catalog
-- **Current Canonical Module:** `/public/assets/atlas/rules/24/json/monsters/monsters.json` (and ruleset-scoped paths under `/public/assets/atlas/rules/` and `/public/assets/atlas/enemies/`), `src/services/storageService.ts`
-- **Primary Functions / Hooks / Selectors:** `fetchMonsterData()`, `loadEnemy()`.
-- **Source-of-Truth Data:** Ruleset-scoped monster catalog JSON files (`public/assets/atlas/rules/24/json/monsters/monsters.json`, `public/assets/atlas/enemies/index.json`).
-- **Derived / Presentation Consumers:** `useGameStore.spawnMonster()`, `CombatTester.tsx`, `enemy-image_generator.tsx`.
-- **Current Status:** `Implemented`
-- **Known Architectural Debt:** Monster JSON records are loaded via `fetchMonsterData()` using index lookup (`/assets/atlas/enemies/index.json`) and ruleset resolution.
-- **Related GitHub Issues:** #298, #313
+- **Current Canonical Module:** `/public/assets/atlas/enemies/`, `src/services/storageService.ts`, `docs/audits/foundry-enemy-parity-audit.md`
+- **Primary Functions / Hooks / Selectors:** `fetchMonsterData()`, `fetchMonsterList()`, `loadEnemy()`.
+- **Source-of-Truth Data:** Versioned ruleset-first monster catalog JSON files (`public/assets/atlas/enemies/json/14/` and `24/`), versioned indexes (`index_14.json`, `index_24.json`), and monster features (`monsterfeatures/json/14/` and `24/`).
+- **Derived / Presentation Consumers:** `useGameStore.spawnMonster()`, `CombatTester.tsx`, `ActiveContextPanel.tsx`, `MonsterCard.tsx`, `MonsterProfile.tsx`.
+- **Current Status:** `Audited & Architecture Contracted (#358)`
+- **Known Architectural Debt:** Historical imports placed 2014 records flat in `enemies/json/`. Issue #358 established the complete Foundry v6.0.x source parity audit (352 2014 records vs 392 2024 records), combat capability matrix, media reconciliation (309 verified artwork assets under `enemies/images/`), and the ruleset-first target hierarchy (`enemies/json/14/` vs `24/`).
+- **Related GitHub Issues:** #298, #313, #358
 - **Intended Specialist Agent:** Ruleset & Data Specialist
-- **Dependencies:** `storageService.ts`, `atlasService.ts`
+- **Dependencies:** `storageService.ts`, `atlasService.ts`, `docs/audits/foundry-enemy-parity-audit.md`
 
 #### E5. Gods & Lore Catalog
 - **Current Canonical Module:** `/public/assets/atlas/gods/all_gods.json`, `/public/assets/ui/official/`
