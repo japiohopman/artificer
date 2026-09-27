@@ -5,6 +5,7 @@ Central navigation for Artificer documentation. This page points agents and deve
 ## 📌 Start here
 
 - [Operating Model & Workflow](./WORKFLOW.md) - 🛠️ Authoritative workflow, role contracts, and repository autonomy guide.
+- [ChatGPT Durable Memory](../CHATGPT.md) - 🧠 ChatGPT-maintained advisory project memory & working context (non-authoritative).
 - [Architecture & Capability Map](./ARCHITECTURE_CAPABILITY_MAP.md) - 🏛️ Authoritative domain, capability, gameplay-gap, and specialist-agent map.
 - [Architecture Status](./ARCHITECTURE_STATUS.md) - 🧭 Current architectural boundaries and runtime ownership.
 - [Project Progress](./PROGRESS.md) - 📈 High-level implementation status.
@@ -76,6 +77,7 @@ Legacy named-agent documents are retained as migration/history material only.
 - The assigned GitHub Issue is the execution contract for implementation work.
 - `ROADMAP.md` expresses current priority/order, not detailed task instructions.
 - `docs/TASK_BOARD.md` is a historical migration/reference document, not an execution queue.
+- `CHATGPT.md` is advisory project memory maintained by ChatGPT; implementation agents must treat it as read-only and must not edit it.
 - Specialist contracts define domain boundaries and routing constraints.
 - Planned work must not be presented as implemented capability.
 - `PROGRESS.md` contains project-level status and should have a current update date.

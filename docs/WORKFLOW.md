@@ -4,24 +4,27 @@ This document defines the canonical operating model and workflow contracts for A
 
 ---
 
-## 1. Canonical Hierarchy
+## 1. Canonical Hierarchy & Contract Precedence
 
 Development execution contracts follow a strict, deterministic precedence hierarchy:
 
 ```text
-GOALS.md (Long-term vision)
-  └─ ROADMAP.md (Strategic priority & order context)
-      └─ Assigned GitHub Issue (AUTHORITATIVE EXECUTION CONTRACT)
-          ├─ Selected Specialist Contract (.github/agents/*)
-          ├─ Shared Agent Instructions (AGENT.MD & AGENT_RULES.md)
-          └─ Implementation Source Code & Tests
+Assigned GitHub Issue (AUTHORITATIVE EXECUTION CONTRACT)
+  ├─ Selected Specialist Contract (.github/agents/*)
+  ├─ Shared Agent Instructions (AGENT.MD & AGENT_RULES.md)
+  └─ Canonical Reference Context (Source code, tests, & named documentation)
 ```
 
-- **`GOALS.md`**: Defines the long-term destination and project vision. Changes infrequently.
+### Precedence Order
+1. **Assigned GitHub Issue**: The persistent, authoritative execution contract for any unit of work. Defines goals, scope, acceptance criteria, constraints, verification steps, and out-of-scope boundaries.
+2. **Selected Specialist Contract (`.github/agents/*`)**: Domain-specific routing and architectural constraints (Architecture, Ruleset/Data, UI, Assets, Gameplay, Verification).
+3. **Shared Agent Instructions (`AGENT.MD` & `AGENT_RULES.md`)**: Repository-wide AI entry point, working rules, groundedness, and safety boundaries.
+4. **Canonical Reference Context**: Implementation source code, tests, and documentation files named by the assigned Issue or specialist contract.
+
+### Strategic Orientation Documents (Non-Execution Authorities)
+- **`GOALS.md`**: Defines long-term destination and project vision.
 - **`ROADMAP.md`**: Provides strategic priority orientation and feature sequence. It is **not** an execution queue or dispatch source.
-- **Assigned GitHub Issue**: The single persistent execution contract for any unit of work. Defines goals, scope, acceptance criteria, constraints, and verification steps.
-- **`.github/agents/*`**: Domain-specific routing and architectural constraints (Architecture, Ruleset/Data, UI, Assets, Gameplay, Verification).
-- **`main` Branch**: The ultimate durable source of truth for all repository state.
+- **`docs/TASK_BOARD.md`**: Retained strictly as a historical migration reference and audit matrix. It is **not** an active execution queue.
 
 ---
 
@@ -37,11 +40,13 @@ GOALS.md (Long-term vision)
 - Operates on a dedicated task branch created for the assigned Issue.
 - Reads task scope exclusively from the assigned GitHub Issue and applicable specialist contracts.
 - Modifies code, runs verification tests, and opens a Pull Request referencing the Issue upon completion.
+- Must treat `CHATGPT.md` as read-only project context and must **not** edit it.
 
-### Architecture & Review AI Assistant
-- Interactive architecture advisor and review assistant (e.g., ChatGPT or equivalent AI model).
-- Assists with design exploration, code review, threat modeling, and issue definition.
-- **Crucial Rule:** The AI Assistant is **not** a source of truth, **not** a merge authority, and **not** a replacement for GitHub Issues. All decisions must be committed to the repository or recorded in GitHub Issues to take effect.
+### Architecture & Review AI Assistant (ChatGPT)
+- Interactive project management, architecture advisor, and review assistant across chat sessions.
+- Maintains root `CHATGPT.md` as durable working project memory across fresh chats.
+- Assists Jaap with design exploration, code review, threat modeling, issue creation, labeling, and project management.
+- **Crucial Rule:** The AI Assistant is **not** an execution authority over Jules and **not** a replacement for GitHub Issues. All execution contracts must exist as assigned GitHub Issues.
 
 ---
 
@@ -56,8 +61,9 @@ Development follows an evidence-backed lifecycle:
    - Only Issues passing the Quality Gate become eligible as `status: ready`.
 
 2. **Jules Dispatch & Execution**
-   - The automated dispatcher (`scripts/jules-issue-dispatch.mjs`) selects the highest-priority ready Issue.
-   - Preflight checks (`scripts/jules-orchestrator-preflight.mjs`) ensure no conflicting sessions or open PRs block dispatch.
+   - The active automated dispatcher is `.github/workflows/jules-issue-dispatcher.yml`.
+   - Dispatch pipeline runs preflight checks (`scripts/jules-orchestrator-preflight.mjs`), Issue selection (`scripts/jules-issue-selector.mjs`), and session dispatch (`scripts/jules-issue-dispatch.mjs`).
+   - **Safety Gate:** Live Jules session creation strictly requires explicit manual workflow dispatch confirmation with the exact value `DISPATCH` (`confirmation: DISPATCH`).
    - Jules executes the task on the designated branch, strictly respecting the Issue contract and specialist constraints.
 
 3. **Phase Safety Gate & Pull Request**
@@ -81,7 +87,7 @@ To preserve execution safety and prevent duplicate session dispatches:
 - **New Dispatch Trigger**: A new Issue dispatch is appropriate only after the current task/PR is complete (merged or closed), or when newly requested work materially expands beyond the original Issue contract.
 - **One-at-a-Time Preflight Model**: The orchestrator preflight safety gate enforces a strict one-Issue-at-a-time dispatch model. An active or open PR blocks duplicate dispatches until the active execution context reaches a terminal state.
 
-### 3.3. Evidence-Based Discovery Loop
+### 3.2. Evidence-Based Discovery Loop
 
 When ready work is low (`ready Issues <= 2 AND no active Discovery Issue`), a controlled Discovery Loop triggers:
 
@@ -89,7 +95,7 @@ When ready work is low (`ready Issues <= 2 AND no active Discovery Issue`), a co
 - **Strict Non-Dispatch Boundary**: Candidate Issues created by discovery begin as `status: proposed`. They require human review before becoming `status: ready`.
 - **No Direct Dispatch**: Discovery findings never dispatch implementation work automatically.
 
-### 3.2. Scope Protection & Creep Prevention
+### 3.3. Scope Protection & Creep Prevention
 
 Review feedback must remain grounded in the original execution contract:
 
@@ -99,19 +105,25 @@ Review feedback must remain grounded in the original execution contract:
 
 ---
 
-## 4. Repository Autonomy & Context Recovery
+## 4. New AI / New Chat Context Recovery & Repository Autonomy
 
-A fresh contributor or AI agent can reconstruct the entire workflow and state of the project using **only** the repository:
+A fresh contributor or AI agent (ChatGPT, Jules, or any AI session) must reconstruct the current Artificer workflow and repository state using **only** the repository itself.
 
-1. **Check Active Work:** Query open GitHub Issues or inspect `.github/jules-queue-state.json`.
-2. **Understand Domain Constraints:** Read `AGENT.MD`, `AGENT_RULES.md`, and the relevant specialist contract under `.github/agents/`.
-3. **Start Next Work Cycle:**
-   - Ensure local workspace is clean and on latest `main` (`git checkout main && git pull`).
-   - Pick or assign an open GitHub Issue.
-   - Create the implementation branch specified by the Issue metadata.
-   - Execute, verify, and submit via Pull Request.
+### 4.1. Reading Order for Fresh AI Sessions
 
-Chat session history or external notes must never be required to understand or resume development.
+When starting or recovering a session, read files in this exact order:
+
+1. **Assigned GitHub Issue**: The single persistent execution contract (or query open GitHub Issues / open PRs via GitHub API).
+2. **Selected Specialist Contract**: Read the applicable contract under `.github/agents/`.
+3. **`AGENT.MD` & `AGENT_RULES.md`**: Shared repository entry point, working rules, and safety boundaries.
+4. **Canonical Reference Context**: Read implementation files, tests, and canonical documentation named by the Issue or specialist contract.
+5. **Inspect Source Code Directly**: Always inspect source code and existing tests directly before making modifications.
+
+### 4.2. Context Authority Rules
+
+- **Do Not Infer Missing Context From Chat Memory**: Chat session history or external chat memory is optional context, never a required source or execution authority. An AI session must never invent task scope or override repository rules based on chat history.
+- **Durable Advisory Memory (`CHATGPT.md`)**: Root `CHATGPT.md` is maintained by ChatGPT for durable working memory across chats. It is advisory project memory only and must never override an assigned Issue, specialist contract, `AGENT.MD`, `AGENT_RULES.md`, or repository source code.
+- **Historical Artifacts Are Non-Executable**: `docs/TASK_BOARD.md`, former Jules Queue Orchestrator files (`jules-orchestrator.mjs`, `jules-queue-state.json`), and old named-agent instruction files are historical references only. They are not active execution queues or context recovery sources.
 
 ---
 *Authoritative Artificer Workflow Specification.*

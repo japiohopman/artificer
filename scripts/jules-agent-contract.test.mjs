@@ -9,6 +9,7 @@ const projectHub = readFileSync(new URL('../docs/PROJECT_HUB.md', import.meta.ur
 const workflowDoc = readFileSync(new URL('../docs/WORKFLOW.md', import.meta.url), 'utf8');
 const roadmapDoc = readFileSync(new URL('../ROADMAP.md', import.meta.url), 'utf8');
 const taskBoardDoc = readFileSync(new URL('../docs/TASK_BOARD.md', import.meta.url), 'utf8');
+const chatgptDoc = readFileSync(new URL('../CHATGPT.md', import.meta.url), 'utf8');
 
 test('shared agent entry point is Issue-first', () => {
   assert.match(agentEntry, /## Execution hierarchy/);
@@ -27,29 +28,33 @@ test('shared agent rules do not define a TASK_BOARD execution queue', () => {
   assert.doesNotMatch(agentRules, /Each named agent owns a domain/);
 });
 
-test('documentation index identifies specialist contracts and authoritative workflow', () => {
+test('documentation index identifies specialist contracts, CHATGPT.md, and authoritative workflow', () => {
   assert.match(docsIndex, /Specialist agent contracts/);
   assert.match(docsIndex, /WORKFLOW\.md/);
+  assert.match(docsIndex, /CHATGPT\.md/);
   assert.match(docsIndex, /TASK_BOARD\.md.*not.*active execution queue/i);
   assert.match(docsIndex, /architecture-specialist\.agent\.md/);
   assert.match(docsIndex, /verification-specialist\.agent\.md/);
 });
 
-test('project hub links to WORKFLOW.md and does not present TASK_BOARD as active workflow', () => {
+test('project hub links to WORKFLOW.md and CHATGPT.md and does not present TASK_BOARD as active workflow', () => {
   assert.match(projectHub, /Operating Model & Workflow/);
+  assert.match(projectHub, /ChatGPT Durable Memory/);
   assert.match(projectHub, /assigned GitHub Issue is the execution contract/);
   assert.match(projectHub, /TASK_BOARD\.md.*migration\/reference document/);
   assert.match(projectHub, /Active Issue-first routing/);
   assert.match(projectHub, /Legacy named-agent documents are retained as migration\/history material only/);
 });
 
-test('WORKFLOW.md defines canonical hierarchy and role boundaries', () => {
+test('WORKFLOW.md defines canonical hierarchy, role boundaries, and DISPATCH safety gate', () => {
   assert.match(workflowDoc, /Canonical Hierarchy/);
-  assert.match(workflowDoc, /AUTHORITATIVE EXECUTION CONTRACT/);
+  assert.match(workflowDoc, /Assigned GitHub Issue \(AUTHORITATIVE EXECUTION CONTRACT\)/);
   assert.match(workflowDoc, /Human Project Owner/);
   assert.match(workflowDoc, /AI Implementation Engineer \(Jules\)/);
   assert.match(workflowDoc, /Architecture & Review AI Assistant/);
-  assert.match(workflowDoc, /Repository Autonomy & Context Recovery/);
+  assert.match(workflowDoc, /confirmation: DISPATCH/);
+  assert.match(workflowDoc, /New AI \/ New Chat Context Recovery/);
+  assert.doesNotMatch(workflowDoc, /\.github\/jules-queue-state\.json/);
 });
 
 test('WORKFLOW.md defines review loop, dispatch boundaries, and scope protection', () => {
@@ -58,6 +63,16 @@ test('WORKFLOW.md defines review loop, dispatch boundaries, and scope protection
   assert.match(workflowDoc, /Scope Protection & Creep Prevention/);
   assert.match(workflowDoc, /One-at-a-Time Preflight Model/);
   assert.match(workflowDoc, /Sequential Dispatch Constraint/);
+});
+
+test('CHATGPT.md exists as durable, non-authoritative project memory', () => {
+  assert.equal(existsSync(new URL('../CHATGPT.md', import.meta.url)), true);
+  assert.match(chatgptDoc, /Maintained by ChatGPT/);
+  assert.match(chatgptDoc, /Read-Only for Implementation Agents/);
+  assert.match(chatgptDoc, /Non-Authoritative \/ Advisory Only/);
+  assert.match(chatgptDoc, /GitHub Project Management Boundary/);
+  assert.match(chatgptDoc, /Precedence Boundary/);
+  assert.match(chatgptDoc, /NOT.*an execution queue/i);
 });
 
 test('ROADMAP.md is strictly strategic context without legacy dispatch queues', () => {

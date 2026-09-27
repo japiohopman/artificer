@@ -2,36 +2,26 @@
 
 Welcome to the central documentation index for the Artificer project. This file is the navigation layer for humans and AI agents; it is not an execution queue.
 
-## 🧭 Workflow hierarchy
+## 🧭 Workflow hierarchy & contract precedence
 
-The active workflow is:
+Development execution contracts follow a strict precedence hierarchy:
 
-`GOALS.md`
-→ long-term direction
+1. **Assigned GitHub Issue** → authoritative execution contract
+2. **Specialist contract (`.github/agents/*`)** → domain constraints and routing
+3. **`AGENT.MD` & `AGENT_RULES.md`** → shared agent guidance and safety rules
+4. **Canonical reference context** → source code, tests, and named documentation
+5. **`GOALS.md` & `ROADMAP.md`** → strategic priority and long-term vision context (non-execution authorities)
 
-`ROADMAP.md`
-→ current priority/order
+`docs/WORKFLOW.md` defines the authoritative operating model.
 
-**GitHub Issue**
-→ execution contract
+`docs/TASK_BOARD.md` is retained strictly as a historical migration/reference document and is **not** an active execution queue.
 
-`.github/agents/*`
-→ specialist constraints and routing
-
-**Jules**
-→ implementation
-
-**PR + CI + Phase Safety Gate**
-→ evidence and human review
-
-`docs/WORKFLOW.md`
-→ authoritative operating model
-
-`docs/TASK_BOARD.md` is retained as a historical migration/reference document and is **not** an active execution queue.
+`CHATGPT.md` is advisory working memory maintained by ChatGPT; implementation agents treat it as read-only.
 
 ## 🗺️ Navigation
 
 - **[Operating Model & Workflow](./docs/WORKFLOW.md)** - 🛠️ **Authoritative workflow, role contracts, and repository autonomy guide.**
+- **[ChatGPT Project Memory](./CHATGPT.md)** - 🧠 **ChatGPT-maintained advisory project memory & working context (non-authoritative).**
 - **[Master Project Goals](./GOALS.md)** - 🎯 Long-term project direction.
 - **[Project Hub](./docs/PROJECT_HUB.md)** - Main documentation navigation and system index.
 - **[Phase Safety Gate](./docs/PHASE_SAFETY_GATE.md)** - 🛡️ Persistent issue/PR contract and automated safety checks.
