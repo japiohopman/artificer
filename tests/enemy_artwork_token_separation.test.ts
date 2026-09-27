@@ -20,24 +20,24 @@ describe('Enemy Artwork vs Token Resolution Separation (#311)', () => {
 
     assert.equal(source.includes("if (folder === 'enemies')"), true);
     assert.equal(source.includes("resolveEnemyArtworkUrl("), true);
+    assert.equal(source.includes("finalUrl = resolvedEnemyArtwork;"), true);
   });
 
-  test('executes resolveEnemyArtworkUrl on real canonical examples (Gargoyle)', () => {
-    // Gargoyle record has token 'image' and canonical 'imageUrl'
+  test('behavioral test: resolveEnemyArtworkUrl on real Gargoyle contract', () => {
     const gargoyleRecord = {
       name: 'gargoyle',
       image: '/assets/atlas/enemies/tokens/elemental/Gargoyle.webp',
       imageUrl: '/assets/atlas/enemies/images/gargoyle.webp'
     };
 
-    // 1. Non-grid presentation resolves canonical imageUrl
+    // 1. Canonical imageUrl resolves to /assets/atlas/enemies/images/gargoyle.webp
     const resolvedArtwork = resolveEnemyArtworkUrl(gargoyleRecord.imageUrl, '0m8qydn52qw9zzom', gargoyleRecord.name);
     assert.equal(resolvedArtwork, '/assets/atlas/enemies/images/gargoyle.webp');
 
-    // 2. Passing token image URL to non-grid artwork resolver yields no token path leak
+    // 2. Token-only input returns explicit missing/empty artwork and NEVER contains /enemies/tokens/
     const tokenResolved = resolveEnemyArtworkUrl(gargoyleRecord.image, '0m8qydn52qw9zzom', gargoyleRecord.name);
-    assert.equal(tokenResolved.includes('/tokens/'), false);
-    assert.equal(tokenResolved, ''); // Unmapped token URL returns empty string without inventing artwork filenames
+    assert.equal(tokenResolved.includes('/enemies/tokens/'), false);
+    assert.equal(tokenResolved, '');
   });
 
   test('verifies non-grid components consume getEnemyArtworkUrl or non-token artwork resolution', () => {
