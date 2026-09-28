@@ -35,6 +35,9 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
+          if ! grep -Fq "## Phase" <<< "$body"; then
+            body="$(git log -1 --pretty=%B 2>/dev/null || echo "$body")"
+          fi
 
           required_sections=(
             "## Phase"
