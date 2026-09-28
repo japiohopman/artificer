@@ -258,29 +258,53 @@ export function calculateInitiative(dex: number): number {
   return getModifier(dex);
 }
 
+export const PRIMARY_ABILITIES_2024: Record<string, string[]> = {
+  'barbarian': ['str', 'con'],
+  'bard': ['cha', 'dex'],
+  'cleric': ['wis', 'con', 'str'],
+  'druid': ['wis', 'con'],
+  'fighter': ['str', 'dex', 'con'],
+  'monk': ['dex', 'wis'],
+  'paladin': ['str', 'cha'],
+  'ranger': ['dex', 'wis'],
+  'rogue': ['dex', 'int'],
+  'sorcerer': ['cha', 'con'],
+  'warlock': ['cha', 'con'],
+  'wizard': ['int', 'wis']
+};
+
 export function resolveStartingEquipment(options: any[]): any[] {
+  if (!Array.isArray(options)) return [];
   const items: any[] = [];
-  const randomFromList = (list: any[]) => list[Math.floor(Math.random() * list.length)];
 
   options.forEach(option => {
     const chooseCount = option.choose || 1;
-    const fromOptions = option.from?.options || [];
+    const fromOptions = option.from?.options || option.from?.equipment?.options || [];
 
     for (let i = 0; i < chooseCount; i++) {
         if (fromOptions.length === 0) continue;
-        const selection = randomFromList(fromOptions);
-        if (selection.option_type === 'multiple') {
-            selection.items.forEach((it: any) => items.push(it.item || it));
-        } else if (selection.item) {
-            items.push(selection.item);
-        } else if (selection.of) {
-            items.push(selection.of);
+        const selection = fromOptions[i % fromOptions.length];
+        if (!selection) continue;
+
+        if (selection.option_type === 'multiple' && Array.isArray(selection.items)) {
+          selection.items.forEach((it: any) => {
+            const idx = it.item?.index || it.of?.index || it.equipment?.index || it.index;
+            if (idx) items.push({ index: idx, quantity: it.quantity || it.count || 1 });
+            else if (it.item || it) items.push(it.item || it);
+          });
+        } else {
+          const idx = selection.item?.index || selection.of?.index || selection.equipment?.index || selection.index;
+          if (idx) items.push({ index: idx, quantity: selection.quantity || selection.count || 1 });
+          else if (selection.item) items.push(selection.item);
+          else if (selection.of) items.push(selection.of);
         }
     }
   });
 
   return items;
 }
+
+export const resolveStartingEquipmentOptions = resolveStartingEquipment;
 
 export const DND_TRAITS = [
   "Speaks in riddles.", "Always checking their pockets.", "Obsessed with hygiene.", "Collects unusual stones.",
@@ -431,6 +455,8 @@ export function generateNPC(partial: any): any {
     primaryList = [rawPrimary.toLowerCase()];
   } else if (rawPrimary && typeof rawPrimary === 'object') {
     primaryList = [String(rawPrimary.index || rawPrimary.name || 'str').toLowerCase()];
+  } else if (ruleset === '2024') {
+    primaryList = PRIMARY_ABILITIES_2024[className.toLowerCase()] || ['str', 'dex'];
   } else {
     primaryList = classInfo.primaryStats || ['str', 'dex'];
   }
@@ -535,7 +561,10 @@ export function generateNPC(partial: any): any {
   });
 
   // Class Gear
-  const classEquipment = partial.classData?.starting_equipment || classInfo.startingEquipment || [];
+  const rawClassEquip = partial.classData?.starting_equipment || [];
+  const classOptEquip = resolveStartingEquipmentOptions(partial.classData?.starting_equipment_options || []);
+  const classEquipment = rawClassEquip.length > 0 ? rawClassEquip : (classOptEquip.length > 0 ? classOptEquip : (ruleset === '2014' ? classInfo.startingEquipment || [] : []));
+
   classEquipment.forEach((item: any) => {
     const itemIndex = item.equipment?.index || item.index;
     if (!itemIndex) return;
@@ -556,7 +585,10 @@ export function generateNPC(partial: any): any {
   });
 
   // Background Gear
-  const bgEquipment = partial.backgroundData?.starting_equipment || BACKGROUND_DATA[background]?.equipment || [];
+  const rawBgEquip = partial.backgroundData?.starting_equipment || [];
+  const bgOptEquip = resolveStartingEquipmentOptions(partial.backgroundData?.starting_equipment_options || []);
+  const bgEquipment = rawBgEquip.length > 0 ? rawBgEquip : (bgOptEquip.length > 0 ? bgOptEquip : (BACKGROUND_DATA[background]?.equipment || []));
+
   bgEquipment.forEach((item: any) => {
     const itemIndex = item.equipment?.index || item.index;
     if (!itemIndex) return;
@@ -570,10 +602,29 @@ export function generateNPC(partial: any): any {
     }
   });
 
+  // Class Proficiency Choices
+  const classProfChoices: string[] = [];
+  if (Array.isArray(partial.classData?.proficiency_choices)) {
+    for (const pChoice of partial.classData.proficiency_choices) {
+      const chooseCount = pChoice.choose || 1;
+      const options = pChoice.from?.options || pChoice.from?.proficiencies || [];
+      for (let c = 0; c < chooseCount && c < options.length; c++) {
+        const pOpt = options[c];
+        const pName = pOpt?.item?.name || pOpt?.item?.index || pOpt?.name || pOpt?.index || pOpt;
+        if (pName) {
+          const cleanName = String(pName).replace(/^skill_/, '').replace(/^skill:/i, '').trim();
+          const formatted = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+          classProfChoices.push(`Skill: ${formatted}`);
+        }
+      }
+    }
+  }
+
   const derivedProficiencies = [
     ...(partial.proficiencies || []),
     ...(partial.classData?.proficiencies || []).map((p: any) => p.name || p.index || p),
     ...(partial.classData?.saving_throws || []).map((s: any) => 'Saving Throw: ' + String(s.name || s.index || s).toUpperCase()),
+    ...classProfChoices,
     ...(partial.backgroundData?.starting_proficiencies || []).map((p: any) => p.name || p.index || p)
   ];
   const uniqueProficiencies = Array.from(new Set(derivedProficiencies));

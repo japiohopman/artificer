@@ -148,7 +148,7 @@ export const CharacterCreator: React.FC = () => {
     useGameStore.getState().setRuleset(ruleset);
     if (newChar.ruleset === ruleset) return;
     soundService.playEffect('UI_CLICK_LIGHT');
-    // Reset rules-sensitive selections on ruleset change to prevent mixed data
+    // Reset rules-sensitive selections and V2 equipment state on ruleset change to prevent mixed data
     setNewChar(prev => ({
       ...prev,
       ruleset,
@@ -164,6 +164,9 @@ export const CharacterCreator: React.FC = () => {
       preparedSpells: [],
       backpack: [],
       inventory: {},
+      items: {},
+      containers: {},
+      equipment: { containerId: '', slots: [] },
       choices: {}
     }));
   };

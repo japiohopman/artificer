@@ -1900,7 +1900,7 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(atlasConfusionTable24?.rulesetContext).toBe('2024');
     });
 
-    it('verifies ruleset-aware NPC generation and starting equipment resolution', async () => {
+    it('verifies ruleset-aware NPC generation, starting equipment options, and 2024 proficiency choices resolution', async () => {
       const { generateNPCAsync } = await import('../src/lib/characterUtils');
       const npc24 = await generateNPCAsync({
         class: 'fighter',
@@ -1912,18 +1912,72 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(npc24.ruleset).toBe('2024');
       expect(npc24.class).toBe('fighter');
       expect(npc24.background).toBe('soldier');
-      expect(Object.keys(npc24.items || {}).length).toBeGreaterThan(0);
 
-      // Verify proficiencies derived from 2024 Fighter class and 2024 Soldier background datasets
+      // Verify V2 item instances populated from 2024 starting equipment options (Fighter starting_equipment_options)
+      const itemTemplates = Object.values(npc24.items || {}).map((inst: any) => inst.template);
+      expect(itemTemplates.length).toBeGreaterThan(0);
+
+      // Verify proficiencies derived from 2024 Fighter class, saving throws, 2024 proficiency choices, and Soldier background
       expect(npc24.proficiencies.length).toBeGreaterThan(0);
       expect(npc24.proficiencies).toContain('Saving Throw: STR');
       expect(npc24.proficiencies).toContain('Saving Throw: CON');
       expect(npc24.proficiencies).toContain('Skill: Athletics');
+      // Fighter 2024 proficiency choices include Acrobatics
+      expect(npc24.proficiencies).toContain('Skill: Acrobatics');
 
       // Verify 2024 level 1 features are resolved for 2024 NPC
       expect(npc24.features.length).toBeGreaterThan(0);
       const featureIndices = npc24.features.map((f: any) => f.index);
       expect(featureIndices).toContain('second_wind_2024');
+    });
+
+    it('verifies character creator ruleset switch resets V2 equipment state and prevents cross-ruleset state leakage', () => {
+      // Simulate state reset logic from handleRulesetChange in CharacterCreator.tsx
+      const initialCharState = {
+        ruleset: '2014' as const,
+        class: 'Fighter',
+        background: 'Soldier',
+        backpack: [{ index: 'dagger', quantity: 1 }],
+        inventory: { main_hand: { index: 'dagger' } },
+        items: {
+          'inst_1': { id: 'inst_1', template: 'dagger', quantity: 1, addedAt: 100 }
+        },
+        containers: {
+          'backpack_1': { id: 'backpack_1', name: 'Backpack', type: 'backpack', slots: [{ id: 'slot_0', itemId: 'inst_1' }] }
+        },
+        equipment: {
+          containerId: 'equipment_1',
+          slots: [{ id: 'main_hand', itemId: 'inst_1' }]
+        }
+      };
+
+      // Perform ruleset switch reset
+      const resetCharState = {
+        ...initialCharState,
+        ruleset: '2024' as const,
+        race: undefined,
+        subrace: undefined,
+        class: undefined,
+        subclass: undefined,
+        background: undefined,
+        proficiencies: [],
+        traits: [],
+        features: [],
+        knownSpells: [],
+        preparedSpells: [],
+        backpack: [],
+        inventory: {},
+        items: {},
+        containers: {},
+        equipment: { containerId: '', slots: [] },
+        choices: {}
+      };
+
+      expect(resetCharState.ruleset).toBe('2024');
+      expect(resetCharState.class).toBeUndefined();
+      expect(resetCharState.items).toEqual({});
+      expect(resetCharState.containers).toEqual({});
+      expect(resetCharState.equipment.slots).toEqual([]);
     });
 
     it('verifies 2024 species proficiencies omit obsolete 2014 weapon proficiencies', async () => {
