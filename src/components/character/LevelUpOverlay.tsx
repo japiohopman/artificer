@@ -81,11 +81,13 @@ export const LevelUpOverlay: React.FC = () => {
   const rolledHpGain = rolledHpValue !== null ? Math.max(1, rolledHpValue + conModifier) : fixedHpGain;
   const finalHpGain = hpMethod === 'roll' ? rolledHpGain : fixedHpGain;
 
-  const handleRollHp = () => {
-    // Generate fast pseudo-random roll matching character class hit die size
-    const roll = Math.floor(Math.random() * classHitDie) + 1;
-    setRolledHpValue(roll);
-    soundService.playEffect('DICE_ROLL');
+  const handleSelectHpMethod = (method: 'fixed' | 'roll') => {
+    setHpMethod(method);
+    if (method === 'roll' && rolledHpValue === null) {
+      const roll = Math.floor(Math.random() * classHitDie) + 1;
+      setRolledHpValue(roll);
+      soundService.playEffect('DICE_ROLL');
+    }
   };
 
   useEffect(() => {
@@ -519,24 +521,22 @@ export const LevelUpOverlay: React.FC = () => {
                          </div>
                          <div className="grid grid-cols-2 gap-2">
                             <button
-                              onClick={() => { setHpMethod('fixed'); setRolledHpValue(null); }}
+                              onClick={() => handleSelectHpMethod('fixed')}
                               className={cn(
-                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-hpMethod === 'fixed'
+                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer",
+                                hpMethod === 'fixed'
                                   ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
-
                                   : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
                               )}
                             >
                                Standard (Avg)
                             </button>
                             <button
-                              onClick={() => { setHpMethod('roll'); }}
+                              onClick={() => handleSelectHpMethod('roll')}
                               className={cn(
-                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-hpMethod === 'roll'
+                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer",
+                                hpMethod === 'roll'
                                   ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
-
                                   : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
                               )}
                             >
@@ -544,25 +544,12 @@ hpMethod === 'roll'
                             </button>
                          </div>
 
-                         {hpMethod === 'roll' && (
-                            <div className="pt-2 flex flex-col items-center justify-center gap-2 border-t border-dragon-gold/10">
-                               {rolledHpValue !== null ? (
-                                  <div className="text-center">
-                                     <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest block">ROLLED VALUE</span>
-                                     <span className="text-4xl font-header font-black text-dragon-gold leading-none tabular-nums animate-scaleIn">
-                                        {rolledHpValue} <span className="text-lg text-parchment-400 font-medium font-body">+ {conModifier} Con = +{rolledHpGain} HP</span>
-                                     </span>
-                                  </div>
-                               ) : (
-                                  <span className="text-[10px] font-bold text-parchment-500 italic block py-1">Awaiting active roll seed...</span>
-                                )}
-                                <button
-                                  onClick={handleRollHp}
-                                  className="w-full py-2 bg-dragon-red hover:bg-dragon-darkRed text-white rounded-sm text-[10px] font-black uppercase tracking-widest shadow-md flex items-center justify-center gap-2 active:scale-95 transition-all"
-                                >
-                                   <GameIcon name="dice" size={14} />
-                                   {rolledHpValue !== null ? 'Re-roll HP' : 'Roll HP Matrix'}
-                                </button>
+                         {hpMethod === 'roll' && rolledHpValue !== null && (
+                            <div className="pt-2 flex flex-col items-center justify-center gap-1 border-t border-dragon-gold/10">
+                               <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest block">AUTOMATIC DIE RESULT</span>
+                               <span className="text-3xl font-header font-black text-dragon-gold leading-none tabular-nums animate-scaleIn">
+                                  {rolledHpValue} <span className="text-sm text-parchment-400 font-medium font-body">+ {conModifier} Con = +{rolledHpGain} HP</span>
+                               </span>
                             </div>
                          )}
                       </div>

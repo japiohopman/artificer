@@ -263,42 +263,113 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  it('9. Stale active session cannot commit if live character level or XP eligibility changes', async () => {
+  it('9. Stale active session cannot commit if live character level or XP eligibility changes, with 0 canonical mutation', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300); // 300 XP = eligible for level 2
     await store.startLevelUpSession('test-fighter-1'); // Active session created for Lvl 1 -> 2
 
-    // Simulate canonical character update altering level or dropping XP below eligibility threshold
-    store.updateCharacter('test-fighter-1', { level: 2 }); // Manually set to level 2
+    const charBeforeStale = JSON.parse(JSON.stringify(useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')));
 
-    // Attempting to commit the stale level 1 -> 2 session must be rejected with 0 mutation
-    const commitResult = await store.commitLevelUpSession({
+    // Invalidation Case A: Live character level changes manually
+    store.updateCharacter('test-fighter-1', { level: 2 });
+
+    const commitResultA = await store.commitLevelUpSession({
       characterId: 'test-fighter-1',
       targetLevel: 2,
       finalHpGain: 8
     });
 
-    expect(commitResult).toBe(false);
+    expect(commitResultA).toBe(false);
+
+    // Invalidation Case B: XP drops below target threshold
+    store.updateCharacter('test-fighter-1', { level: 1, xp: 100 }); // Drops below 300
+
+    const commitResultB = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8
+    });
+
+    expect(commitResultB).toBe(false);
+
+    // Verify ZERO canonical mutation occurs
+    const charAfterRejections = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
+    expect(charAfterRejections.level).toBe(1);
+    expect(charAfterRejections.xp).toBe(100);
+    expect(charAfterRejections.hp).toBe(charBeforeStale.hp);
+    expect(charAfterRejections.maxHp).toBe(charBeforeStale.maxHp);
+    expect(charAfterRejections.stats).toEqual(charBeforeStale.stats);
+    expect(charAfterRejections.features).toEqual(charBeforeStale.features);
   });
 
-  it('10. evaluateNextLevelStep fails closed when canonical level progression data is missing', async () => {
-    // Fighter level 1 eligible for level 2, but simulate loadLevelData returning null for Fighter level 2
+  it('10. evaluateNextLevelStep and startLevelUpSession fail closed when canonical level progression data is missing', async () => {
     const { atlasService } = await import('../src/services/atlasService');
     const originalLoadLevelData = atlasService.loadLevelData;
     atlasService.loadLevelData = async () => null;
 
     try {
-      const eligibleChar = {
-        ...testCharacter,
-        id: 'test-missing-leveldata',
-        level: 1,
-        xp: 300
-      };
+      const store = useCharacterStore.getState();
+      await store.addXp('test-fighter-1', 300);
 
-      const session = await evaluateNextLevelStep(eligibleChar);
-      expect(session).toBeNull(); // Fails closed without empty feature or targetLevel % 4 ASI fallback
+      // Verify direct helper fails closed
+      const eligibleChar = store.characters.find(c => c.id === 'test-fighter-1')!;
+      const helperSession = await evaluateNextLevelStep(eligibleChar);
+      expect(helperSession).toBeNull();
+
+      // Verify store action entrypoint fails closed and activeLevelUpSession remains null
+      const storeSession = await store.startLevelUpSession('test-fighter-1');
+      expect(storeSession).toBeNull();
+      expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
     } finally {
       atlasService.loadLevelData = originalLoadLevelData;
     }
+  });
+
+  it('11. Unlocked spell slots are staged and committed to canonical character spellSlots state', async () => {
+    const wizardChar: Character = {
+      ...testCharacter,
+      id: 'test-wizard-slots-1',
+      class: 'Wizard',
+      level: 2,
+      xp: 900, // Eligible for Level 3
+      knownSpells: [{ index: 'magic_missile', name: 'Magic Missile' }],
+      preparedSpells: ['magic_missile'],
+      spellSlots: {
+        '1': { current: 1, max: 3 } // Spent 2 1st-level slots (1 remaining)
+      }
+    };
+
+    useCharacterStore.setState({
+      characters: [wizardChar],
+      activeCharacterId: 'test-wizard-slots-1',
+      activeLevelUpSession: null
+    });
+
+    const store = useCharacterStore.getState();
+    const session = await store.startLevelUpSession('test-wizard-slots-1');
+    expect(session).not.toBeNull();
+    expect(session?.targetLevel).toBe(3);
+
+    const commitSuccess = await store.commitLevelUpSession({
+      characterId: 'test-wizard-slots-1',
+      targetLevel: 3,
+      finalHpGain: 5
+    });
+
+    expect(commitSuccess).toBe(true);
+
+    const updatedWizard = useCharacterStore.getState().characters.find(c => c.id === 'test-wizard-slots-1')!;
+    expect(updatedWizard.level).toBe(3);
+
+    // Verify 1st level max increased to 4 and existing current slot (1) increased by 1 to 2
+    expect(updatedWizard.spellSlots['1']).toEqual({ current: 2, max: 4 });
+
+    // Verify 2nd level slots unlocked automatically (max 2, current 2)
+    expect(updatedWizard.spellSlots['2']).toEqual({ current: 2, max: 2 });
+
+    // Verify castSpell works for newly unlocked 2nd level slot
+    const canCastLvl2 = useCharacterStore.getState().castSpell('magic_missile', 2);
+    expect(canCastLvl2).toBe(true);
+    expect(useCharacterStore.getState().characters.find(c => c.id === 'test-wizard-slots-1')!.spellSlots['2'].current).toBe(1);
   });
 });

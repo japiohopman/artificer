@@ -362,6 +362,26 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     });
 
+    const { calculateMaxSpellSlots } = await import('../lib/statCalculations');
+    const tempCharForSlots = {
+      ...char,
+      level: payload.targetLevel,
+      subclass: payload.subclass || char.subclass,
+      stats: mergedStats,
+      choices: mergedChoices
+    };
+    const maxSlotsMap = calculateMaxSpellSlots(tempCharForSlots as any);
+    const updatedSpellSlots: Record<string, { current: number; max: number }> = { ...(char.spellSlots || {}) };
+
+    Object.entries(maxSlotsMap).forEach(([lvlStr, maxCount]) => {
+      const existingSlot = updatedSpellSlots[lvlStr];
+      const prevMax = existingSlot?.max ?? 0;
+      const prevCurrent = existingSlot?.current ?? 0;
+      const addedMax = maxCount - prevMax;
+      const newCurrent = Math.min(maxCount, prevCurrent + Math.max(0, addedMax));
+      updatedSpellSlots[lvlStr] = { current: newCurrent, max: maxCount };
+    });
+
     const updatedChar: Character = {
       ...char,
       level: payload.targetLevel,
@@ -370,7 +390,8 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       stats: mergedStats,
       choices: mergedChoices,
       features: existingFeatures,
-      subclass: payload.subclass || char.subclass
+      subclass: payload.subclass || char.subclass,
+      spellSlots: updatedSpellSlots
     };
 
     set((state) => ({
