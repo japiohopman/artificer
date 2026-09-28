@@ -667,7 +667,43 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(orcTraitIndices).toContain('adrenaline_rush');
 
     const gnome24 = await fetchSpeciesData('gnome', '2024');
-    expect(gnome24).toBeNull();
+    expect(gnome24).not.toBeNull();
+    expect(gnome24?.rulesetContext).toBe('2024');
+
+    const dragonborn24 = await fetchSpeciesData('dragonborn', '2024');
+    expect(dragonborn24).not.toBeNull();
+    expect(dragonborn24?.rulesetContext).toBe('2024');
+
+    const goliath24 = await fetchSpeciesData('goliath', '2024');
+    expect(goliath24).not.toBeNull();
+    expect(goliath24?.rulesetContext).toBe('2024');
+
+    const tiefling24 = await fetchSpeciesData('tiefling', '2024');
+    expect(tiefling24).not.toBeNull();
+    expect(tiefling24?.rulesetContext).toBe('2024');
+
+    // Verify lineage resolution
+    const abyssalTiefling = await fetchSpeciesData('tiefling_abyssal', '2024');
+    expect(abyssalTiefling).not.toBeNull();
+    expect(abyssalTiefling?.rulesetContext).toBe('2024');
+
+    const drowElf = await fetchSpeciesData('elf_drow', '2024');
+    expect(drowElf).not.toBeNull();
+    expect(drowElf?.rulesetContext).toBe('2024');
+
+    const forestGnome = await fetchSpeciesData('gnome_forest', '2024');
+    expect(forestGnome).not.toBeNull();
+    expect(forestGnome?.rulesetContext).toBe('2024');
+  });
+
+  it('verifies 2024 species list includes all 9 top-level PHB species without duplicate lineages', async () => {
+    const { fetchSpeciesList } = await import('../src/services/storageService');
+    const species24 = await fetchSpeciesList('2024');
+    const indices24 = species24.map(s => s.index).sort();
+    const EXPECTED_2024_SPECIES = [
+      'dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'
+    ].sort();
+    expect(indices24).toEqual(EXPECTED_2024_SPECIES);
   });
 
   it('verifies atlasService species loading with explicit ruleset', async () => {

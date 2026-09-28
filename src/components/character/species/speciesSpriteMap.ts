@@ -44,6 +44,8 @@ export const SPECIES_SPRITE_MAP: Record<string, SpeciesSpriteCoord> = {
   'elf': { speciesId: 'elf', spriteRow: 0, spriteColumn: 4 }, // High Elf
   'gnome': { speciesId: 'gnome', spriteRow: 0, spriteColumn: 6 }, // Forest Gnome
   'halfling': { speciesId: 'halfling', spriteRow: 1, spriteColumn: 3 }, // Lightfoot Halfling
+  'orc': { speciesId: 'orc', spriteRow: 1, spriteColumn: 2 }, // Half-Orc frame
+  'goliath': { speciesId: 'goliath', spriteRow: 0, spriteColumn: 2 }, // Mountain Dwarf frame
 };
 
 export function getSpeciesSpriteCoord(speciesKey: string): SpeciesSpriteCoord | null {

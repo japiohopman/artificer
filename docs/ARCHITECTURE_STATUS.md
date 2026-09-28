@@ -29,7 +29,7 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Canonical Resolution Boundary:** `getActiveRulesetContext(explicitRuleset?)` and `getRulesetVersionFolder(explicitRuleset?)` in `src/services/storageService.ts` form the single resolution boundary.
 - **Ruleset Selection Rule:** *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
 - **Versioned Domain Coverage:**
-  - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: Human, Dwarf, Elf, Halfling, Orc)
+  - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: All 9 PHB 2024 species and lineages: Dragonborn, Dwarf, Elf [Lineages: Drow, High Elf, Wood Elf], Gnome [Lineages: Forest, Rock], Goliath, Halfling, Human, Orc, Tiefling [Lineages: Abyssal, Chthonic, Infernal])
   - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: All 12 core classes)
   - 2024 Class Levels / Features (`14/` vs `24/` — levels 1–20 implemented / verified for all 12 core classes)
   - 2024 Subclasses & Features (`14/` vs `24/` — 48/48 canonical subclasses fully audited and verified across all 12 core classes)

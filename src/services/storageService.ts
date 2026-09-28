@@ -1826,19 +1826,56 @@ export async function fetchMagicSchools(): Promise<{ name: string; index: string
   }
 }
 
-export async function fetchSpeciesList(): Promise<{ name: string; index: string }[]> {
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json?ref=${BRANCH}&t=${Date.now()}`;
+export async function fetchSpeciesList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+
+  const TOP_LEVEL_2024_SPECIES = ['dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'];
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/species/json/${versionFolder}`);
+      let files: string[] = [];
+      if (fs.existsSync(dirPath)) {
+        files = fs.readdirSync(dirPath).filter((f: string) => f.endsWith('.json'));
+      } else if (activeRuleset === '2014') {
+        const rootDir = pathModule.resolve(process.cwd(), 'public/assets/atlas/species/json');
+        if (fs.existsSync(rootDir)) {
+          files = fs.readdirSync(rootDir).filter((f: string) => f.endsWith('.json') && f !== 'index.json');
+        }
+      }
+
+      let list = files.map((f: string) => ({
+        name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+        index: f.replace('.json', '')
+      }));
+
+      if (activeRuleset === '2024') {
+        list = list.filter(item => TOP_LEVEL_2024_SPECIES.includes(item.index));
+      }
+      return list;
+    } catch (e) {}
+  }
+
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
     if (!files || !Array.isArray(files)) return [];
-    return files
+    let list = files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
         name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
+    if (activeRuleset === '2024') {
+      list = list.filter(item => TOP_LEVEL_2024_SPECIES.includes(item.index));
+    }
+    return list;
   } catch (e) {
     return [];
   }
