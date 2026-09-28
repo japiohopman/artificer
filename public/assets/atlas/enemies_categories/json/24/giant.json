@@ -1,0 +1,127 @@
+{
+  "name": "Giant",
+  "index": "giant",
+  "monsters": [
+    {
+      "name": "cloud giant",
+      "index": "mmcloudgiant0000",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Neutral",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmcloudgiant0000.json",
+      "image_url": "/assets/atlas/enemies/images/cloud_giant.webp"
+    },
+    {
+      "name": "ettin",
+      "index": "mmettin000000000",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmettin000000000.json",
+      "image_url": "/assets/atlas/enemies/images/ettin.webp"
+    },
+    {
+      "name": "fire giant",
+      "index": "mmfiregiant00000",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Lawful Evil",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmfiregiant00000.json",
+      "image_url": "/assets/atlas/enemies/images/fire_giant.webp"
+    },
+    {
+      "name": "frost giant",
+      "index": "mmfrostgiant0000",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Neutral Evil",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmfrostgiant0000.json",
+      "image_url": "/assets/atlas/enemies/images/frost_giant.webp"
+    },
+    {
+      "name": "hill giant",
+      "index": "mmhillgiant00000",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmhillgiant00000.json",
+      "image_url": "/assets/atlas/enemies/images/hill_giant.webp"
+    },
+    {
+      "name": "ogre",
+      "index": "mmogre0000000000",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmogre0000000000.json",
+      "image_url": "/assets/atlas/enemies/images/ogre.webp"
+    },
+    {
+      "name": "stone giant",
+      "index": "mmstonegiant0000",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Neutral",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmstonegiant0000.json",
+      "image_url": "/assets/atlas/enemies/images/stone_giant.webp"
+    },
+    {
+      "name": "storm giant",
+      "index": "mmstormgiant0000",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Chaotic Good",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmstormgiant0000.json",
+      "image_url": "/assets/atlas/enemies/images/storm_giant.webp"
+    },
+    {
+      "name": "troll",
+      "index": "mmtroll000000000",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmtroll000000000.json",
+      "image_url": "/assets/atlas/enemies/images/troll.webp"
+    },
+    {
+      "name": "troll limb",
+      "index": "mmtrolllimb00000",
+      "size": "Small",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/giant/mmtrolllimb00000.json",
+      "image_url": null
+    },
+    {
+      "name": "giant",
+      "index": "uzfjtr3kdzzswp3v",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/giant/uzfjtr3kdzzswp3v.json",
+      "image_url": null
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Aberration",
+  "index": "aberration",
+  "monsters": [
+    {
+      "name": "gibbering mouther",
+      "index": "8px2jhwuptnnrbvx",
+      "size": "Medium",
+      "type": "aberration",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/14/aberration/8px2jhwuptnnrbvx.json",
+      "image_url": "/assets/atlas/enemies/images/gibbering_mouther.webp"
+    },
+    {
+      "name": "aberration",
+      "index": "chmylff3thtzhvyb",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/aberration/chmylff3thtzhvyb.json",
+      "image_url": null
+    },
+    {
+      "name": "cloaker",
+      "index": "hpuo3weiwrqnql0d",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Chaotic Neutral",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/14/aberration/hpuo3weiwrqnql0d.json",
+      "image_url": "/assets/atlas/enemies/images/cloaker.webp"
+    },
+    {
+      "name": "otyugh",
+      "index": "jczblj6lqtw0epxe",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/14/aberration/jczblj6lqtw0epxe.json",
+      "image_url": "/assets/atlas/enemies/images/otyugh.webp"
+    },
+    {
+      "name": "chuul",
+      "index": "p6qc8jb3pneh0tie",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Chaotic Evil",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/14/aberration/p6qc8jb3pneh0tie.json",
+      "image_url": "/assets/atlas/enemies/images/chuul.webp"
+    },
+    {
+      "name": "aboleth",
+      "index": "shhhte7b92pefcwb",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Lawful Evil",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_path": "/assets/atlas/enemies/json/14/aberration/shhhte7b92pefcwb.json",
+      "image_url": "/assets/atlas/enemies/images/aboleth.webp"
+    }
+  ]
+}

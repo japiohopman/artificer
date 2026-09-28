@@ -1,0 +1,215 @@
+{
+  "name": "Undead",
+  "index": "undead",
+  "monsters": [
+    {
+      "name": "undead",
+      "index": "fsnertz6wosjk4f8",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/undead/fsnertz6wosjk4f8.json",
+      "image_url": null
+    },
+    {
+      "name": "ghast",
+      "index": "mmghast000000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmghast000000000.json",
+      "image_url": "/assets/atlas/enemies/images/ghast.webp"
+    },
+    {
+      "name": "ghost",
+      "index": "mmghost000000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmghost000000000.json",
+      "image_url": "/assets/atlas/enemies/images/ghost.webp"
+    },
+    {
+      "name": "ghoul",
+      "index": "mmghoul000000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Chaotic Evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmghoul000000000.json",
+      "image_url": "/assets/atlas/enemies/images/ghoul.webp"
+    },
+    {
+      "name": "lich",
+      "index": "mmlich0000000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 21000,
+      "challenge_rating": 21,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmlich0000000000.json",
+      "image_url": "/assets/atlas/enemies/images/lich.webp"
+    },
+    {
+      "name": "minotaur skeleton",
+      "index": "mmminotaurskelet",
+      "size": "Large",
+      "type": "undead",
+      "alignment": "Lawful Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmminotaurskelet.json",
+      "image_url": "/assets/atlas/enemies/images/minotaur_skeleton.webp"
+    },
+    {
+      "name": "mummy",
+      "index": "mmmummy000000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Lawful Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmmummy000000000.json",
+      "image_url": "/assets/atlas/enemies/images/mummy.webp"
+    },
+    {
+      "name": "mummy lord",
+      "index": "mmmummylord00000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Lawful Evil",
+      "xp": 13000,
+      "challenge_rating": 15,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmmummylord00000.json",
+      "image_url": "/assets/atlas/enemies/images/mummy_lord.webp"
+    },
+    {
+      "name": "ogre zombie",
+      "index": "mmogrezombie0000",
+      "size": "Large",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmogrezombie0000.json",
+      "image_url": "/assets/atlas/enemies/images/ogre_zombie.webp"
+    },
+    {
+      "name": "shadow",
+      "index": "mmshadow00000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Chaotic Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmshadow00000000.json",
+      "image_url": "/assets/atlas/enemies/images/shadow.webp"
+    },
+    {
+      "name": "skeleton",
+      "index": "mmskeleton000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Lawful Evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmskeleton000000.json",
+      "image_url": "/assets/atlas/enemies/images/skeleton.webp"
+    },
+    {
+      "name": "specter",
+      "index": "mmspecter0000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Chaotic Evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmspecter0000000.json",
+      "image_url": "/assets/atlas/enemies/images/specter.webp"
+    },
+    {
+      "name": "vampire",
+      "index": "mmvampire0000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Lawful Evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmvampire0000000.json",
+      "image_url": "/assets/atlas/enemies/tokens/undead/Vampire.webp"
+    },
+    {
+      "name": "vampire spawn",
+      "index": "mmvampirespawn00",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmvampirespawn00.json",
+      "image_url": "/assets/atlas/enemies/images/vampire_spawn.webp"
+    },
+    {
+      "name": "warhorse skeleton",
+      "index": "mmwarhorseskelet",
+      "size": "Large",
+      "type": "undead",
+      "alignment": "Lawful Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmwarhorseskelet.json",
+      "image_url": "/assets/atlas/enemies/images/warhorse_skeleton.webp"
+    },
+    {
+      "name": "wight",
+      "index": "mmwight000000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmwight000000000.json",
+      "image_url": "/assets/atlas/enemies/images/wight.webp"
+    },
+    {
+      "name": "will-o'-wisp",
+      "index": "mmwillowisp00000",
+      "size": "Tiny",
+      "type": "undead",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmwillowisp00000.json",
+      "image_url": "/assets/atlas/enemies/images/will_o_wisp.webp"
+    },
+    {
+      "name": "wraith",
+      "index": "mmwraith00000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmwraith00000000.json",
+      "image_url": "/assets/atlas/enemies/images/wraith.webp"
+    },
+    {
+      "name": "zombie",
+      "index": "mmzombie00000000",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/undead/mmzombie00000000.json",
+      "image_url": "/assets/atlas/enemies/images/zombie.webp"
+    }
+  ]
+}

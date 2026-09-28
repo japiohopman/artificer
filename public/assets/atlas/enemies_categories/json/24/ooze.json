@@ -1,0 +1,61 @@
+{
+  "name": "Ooze",
+  "index": "ooze",
+  "monsters": [
+    {
+      "name": "ooze",
+      "index": "m38naywzbwqdnnhn",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/ooze/m38naywzbwqdnnhn.json",
+      "image_url": null
+    },
+    {
+      "name": "black pudding",
+      "index": "mmblackpudding00",
+      "size": "Large",
+      "type": "ooze",
+      "alignment": "Unaligned",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/ooze/mmblackpudding00.json",
+      "image_url": "/assets/atlas/enemies/images/black_pudding.webp"
+    },
+    {
+      "name": "gelatinous cube",
+      "index": "mmgelatinouscube",
+      "size": "Large",
+      "type": "ooze",
+      "alignment": "Unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/ooze/mmgelatinouscube.json",
+      "image_url": "/assets/atlas/enemies/images/gelatinous_cube.webp"
+    },
+    {
+      "name": "gray ooze",
+      "index": "mmgrayooze000000",
+      "size": "Medium",
+      "type": "ooze",
+      "alignment": "Unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/ooze/mmgrayooze000000.json",
+      "image_url": "/assets/atlas/enemies/images/gray_ooze.webp"
+    },
+    {
+      "name": "ochre jelly",
+      "index": "mmochrejelly0000",
+      "size": "Large",
+      "type": "ooze",
+      "alignment": "Unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/ooze/mmochrejelly0000.json",
+      "image_url": "/assets/atlas/enemies/images/ochre_jelly.webp"
+    }
+  ]
+}

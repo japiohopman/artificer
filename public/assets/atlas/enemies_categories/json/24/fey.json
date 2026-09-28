@@ -1,0 +1,182 @@
+{
+  "name": "Fey",
+  "index": "fey",
+  "monsters": [
+    {
+      "name": "fey",
+      "index": "eyplbrzz5hphlv5m",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/fey/eyplbrzz5hphlv5m.json",
+      "image_url": null
+    },
+    {
+      "name": "blink dog",
+      "index": "mmblinkdog000000",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Lawful Good",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmblinkdog000000.json",
+      "image_url": "/assets/atlas/enemies/images/blink_dog.webp"
+    },
+    {
+      "name": "bugbear stalker",
+      "index": "mmbugbearstalker",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Chaotic Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmbugbearstalker.json",
+      "image_url": null
+    },
+    {
+      "name": "bugbear warrior",
+      "index": "mmbugbearwarrior",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Chaotic Evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmbugbearwarrior.json",
+      "image_url": null
+    },
+    {
+      "name": "centaur trooper",
+      "index": "mmcentaurtrooper",
+      "size": "Large",
+      "type": "fey",
+      "alignment": "Neutral Good",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmcentaurtrooper.json",
+      "image_url": null
+    },
+    {
+      "name": "dryad",
+      "index": "mmdryad000000000",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Neutral",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmdryad000000000.json",
+      "image_url": "/assets/atlas/enemies/images/dryad.webp"
+    },
+    {
+      "name": "goblin boss",
+      "index": "mmgoblinboss0000",
+      "size": "Small",
+      "type": "fey",
+      "alignment": "Chaotic Neutral",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmgoblinboss0000.json",
+      "image_url": null
+    },
+    {
+      "name": "goblin minion",
+      "index": "mmgoblinminion00",
+      "size": "Small",
+      "type": "fey",
+      "alignment": "Chaotic Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmgoblinminion00.json",
+      "image_url": null
+    },
+    {
+      "name": "goblin warrior",
+      "index": "mmgoblinwarrior0",
+      "size": "Small",
+      "type": "fey",
+      "alignment": "Chaotic Neutral",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmgoblinwarrior0.json",
+      "image_url": null
+    },
+    {
+      "name": "green hag",
+      "index": "mmgreenhag000000",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Neutral Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmgreenhag000000.json",
+      "image_url": "/assets/atlas/enemies/images/green_hag.webp"
+    },
+    {
+      "name": "hobgoblin captain",
+      "index": "mmhobgoblincapta",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Lawful Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmhobgoblincapta.json",
+      "image_url": null
+    },
+    {
+      "name": "hobgoblin warrior",
+      "index": "mmhobgoblinwarri",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Lawful Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmhobgoblinwarri.json",
+      "image_url": null
+    },
+    {
+      "name": "satyr",
+      "index": "mmsatyr000000000",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Chaotic Neutral",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmsatyr000000000.json",
+      "image_url": "/assets/atlas/enemies/images/satyr.webp"
+    },
+    {
+      "name": "sea hag",
+      "index": "mmseahag00000000",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmseahag00000000.json",
+      "image_url": "/assets/atlas/enemies/images/sea_hag.webp"
+    },
+    {
+      "name": "sprite",
+      "index": "mmsprite00000000",
+      "size": "Tiny",
+      "type": "fey",
+      "alignment": "Neutral Good",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmsprite00000000.json",
+      "image_url": "/assets/atlas/enemies/images/sprite.webp"
+    },
+    {
+      "name": "worg",
+      "index": "mmworg0000000000",
+      "size": "Large",
+      "type": "fey",
+      "alignment": "Neutral Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/fey/mmworg0000000000.json",
+      "image_url": "/assets/atlas/enemies/images/worg.webp"
+    }
+  ]
+}

@@ -310,27 +310,71 @@ export async function fetchRecruitNPCData(index: string): Promise<any> {
   return data ? migrateCharacterV1ToV2(data) : null;
 }
 
-export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {
-  if (monsterCategoriesCache) return monsterCategoriesCache;
+export async function fetchMonsterCategories(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string; monsters: any[] }[]> {
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const cacheKey = ruleset || 'default';
+  if (monsterCategoriesCache && (monsterCategoriesCache as any)[cacheKey]) return (monsterCategoriesCache as any)[cacheKey];
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const indexFile = `index_${versionFolder}.json`;
+      const catIndexPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies_categories/${indexFile}`);
+      let catList: any[] = [];
+      if (fs.existsSync(catIndexPath)) {
+        catList = JSON.parse(fs.readFileSync(catIndexPath, 'utf8'));
+      } else {
+        const rootIndexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/enemies_categories/index.json');
+        if (fs.existsSync(rootIndexPath)) {
+          catList = JSON.parse(fs.readFileSync(rootIndexPath, 'utf8'));
+        }
+      }
+
+      if (Array.isArray(catList)) {
+        const categories = catList.map((f: any) => {
+          const catPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies_categories/json/${versionFolder}/${f.index}.json`);
+          if (fs.existsSync(catPath)) {
+            return JSON.parse(fs.readFileSync(catPath, 'utf8'));
+          }
+          const altPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies_categories/json/${f.index}.json`);
+          if (fs.existsSync(altPath)) {
+            return JSON.parse(fs.readFileSync(altPath, 'utf8'));
+          }
+          return null;
+        }).filter((c: any) => c !== null);
+
+        return categories;
+      }
+    } catch (e) {}
+  }
+
   try {
-    const localRes = await fetch('/assets/atlas/enemies_categories/index.json');
+    const indexFile = `index_${versionFolder}.json`;
+    let localRes = await fetch(`/assets/atlas/enemies_categories/${indexFile}`);
+    if (!localRes.ok) {
+      localRes = await fetch('/assets/atlas/enemies_categories/index.json');
+    }
     if (localRes.ok) {
       const fileList = await localRes.json();
       if (Array.isArray(fileList)) {
         const categories = await Promise.all(
           fileList.map(async (f: any) => {
-            const res = await fetch(`/assets/atlas/enemies_categories/json/${f.index}.json`);
+            let res = await fetch(`/assets/atlas/enemies_categories/json/${versionFolder}/${f.index}.json`);
+            if (!res.ok) {
+              res = await fetch(`/assets/atlas/enemies_categories/json/${f.index}.json`);
+            }
             return res.ok ? await res.json() : null;
           })
         );
         const filtered = categories.filter(c => c !== null);
-        monsterCategoriesCache = filtered;
         return filtered;
       }
     }
   } catch (e) {}
 
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json?ref=${BRANCH}`;
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json/${versionFolder}?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -355,10 +399,9 @@ export async function fetchMonsterCategories(): Promise<{ name: string; index: s
   }
 }
 
-export async function fetchMonsterCategoryMapping(): Promise<Record<string, string>> {
-  if (monsterMappingCache) return monsterMappingCache;
+export async function fetchMonsterCategoryMapping(ruleset?: '2014' | '2024'): Promise<Record<string, string>> {
   try {
-    const categories = await fetchMonsterCategories();
+    const categories = await fetchMonsterCategories(ruleset);
     const mapping: Record<string, string> = {};
     categories.forEach(data => {
       if (data && data.monsters && data.name) {
@@ -368,7 +411,6 @@ export async function fetchMonsterCategoryMapping(): Promise<Record<string, stri
       }
     });
     if (Object.keys(mapping).length > 0) {
-      monsterMappingCache = mapping;
       return mapping;
     }
   } catch (e) {}
@@ -488,10 +530,19 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
       const fs = await import('fs');
       const pathModule = await import('path');
 
-      // 1. Try resolving via local index.json first
+      // 1. Try resolving via version-specific index (index_14.json or index_24.json) first
+      const indexFileName = `index_${versionFolder}.json`;
+      const versionIndexPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies/${indexFileName}`);
       const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/enemies/index.json');
-      if (fs.existsSync(indexPath)) {
-        const enemyIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+
+      let enemyIndex: any[] = [];
+      if (fs.existsSync(versionIndexPath)) {
+        enemyIndex = JSON.parse(fs.readFileSync(versionIndexPath, 'utf8'));
+      } else if (fs.existsSync(indexPath)) {
+        enemyIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+      }
+
+      if (enemyIndex.length > 0) {
         const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
         const matching = enemyIndex.filter((e: any) =>
           e.index.toLowerCase() === index.toLowerCase() ||
@@ -504,16 +555,22 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
         }
       }
 
-      // 2. Direct folder fallback
+      // 2. Direct category subfolder search or direct path
       if (!resolvedPath) {
-        const subfolders = [versionFolder, altFolder, ''];
+        const subfolders = [versionFolder, altFolder];
         for (const sub of subfolders) {
-          const candidate = sub ? `/assets/atlas/enemies/json/${sub}/${index}.json` : `/assets/atlas/enemies/json/${index}.json`;
-          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
-          if (fs.existsSync(fullFsPath)) {
-            resolvedPath = candidate;
-            break;
+          const subDir = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies/json/${sub}`);
+          if (fs.existsSync(subDir)) {
+            const cats = fs.readdirSync(subDir);
+            for (const cat of cats) {
+              const cand = pathModule.resolve(subDir, cat, `${index}.json`);
+              if (fs.existsSync(cand)) {
+                resolvedPath = `/assets/atlas/enemies/json/${sub}/${cat}/${index}.json`;
+                break;
+              }
+            }
           }
+          if (resolvedPath) break;
         }
       }
 
@@ -527,11 +584,19 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
     } catch (e) {}
   }
 
-  // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
+  // Browser / Network resolution: sub-directory from versioned index first
     try {
-      const indexRes = await fetch('/assets/atlas/enemies/index.json');
+      const indexFileName = `index_${versionFolder}.json`;
+      let enemyIndex: any[] = [];
+      const indexRes = await fetch(`/assets/atlas/enemies/${indexFileName}`);
       if (indexRes.ok) {
-        const enemyIndex = await indexRes.json();
+        enemyIndex = await indexRes.json();
+      } else {
+        const fallbackRes = await fetch('/assets/atlas/enemies/index.json');
+        if (fallbackRes.ok) enemyIndex = await fallbackRes.json();
+      }
+
+      if (enemyIndex.length > 0) {
         const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
         const matchingEntries = enemyIndex.filter((e: any) =>
           e.index.toLowerCase() === index.toLowerCase() ||
@@ -571,7 +636,7 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
       }
     } catch (e) {}
 
-  if (!data && resolvedPath) {
+  if (!data && resolvedPath && typeof window !== 'undefined') {
     // Fallback to GitHub
     const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\/enemies\/json\//, '').replace(/^\/?public\/assets\/atlas\/enemies\/json\//, '');
     const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/json/${cleanSubpath}?t=${Date.now()}`;
@@ -877,7 +942,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   const timestamp = Date.now();
   let finalUrl = "";
 
-  const isLocalhost = typeof window !== 'undefined' && (
+  const isLocalhost = typeof window === 'undefined' || (
     window.location.hostname === 'localhost' || 
     window.location.hostname === '127.0.0.1' || 
     window.location.hostname.startsWith('192.168.') ||

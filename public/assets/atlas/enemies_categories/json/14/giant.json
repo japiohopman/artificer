@@ -1,0 +1,127 @@
+{
+  "name": "Giant",
+  "index": "giant",
+  "monsters": [
+    {
+      "name": "fire giant",
+      "index": "45z5kogzehawx1ey",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Lawful Evil",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/14/giant/45z5kogzehawx1ey.json",
+      "image_url": "/assets/atlas/enemies/images/fire_giant.webp"
+    },
+    {
+      "name": "storm giant",
+      "index": "68bamipe4jvder9g",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Chaotic Good",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_path": "/assets/atlas/enemies/json/14/giant/68bamipe4jvder9g.json",
+      "image_url": "/assets/atlas/enemies/images/storm_giant.webp"
+    },
+    {
+      "name": "hill giant",
+      "index": "9g4n9sjyh8ql46to",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/14/giant/9g4n9sjyh8ql46to.json",
+      "image_url": "/assets/atlas/enemies/images/hill_giant.webp"
+    },
+    {
+      "name": "cloud giant",
+      "index": "aw2wmqgiatxe2imi",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Neutral Good Evil(50%) or Neutral Evil(50%)",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/14/giant/aw2wmqgiatxe2imi.json",
+      "image_url": "/assets/atlas/enemies/images/cloud_giant.webp"
+    },
+    {
+      "name": "frost giant",
+      "index": "buxe6ddk5mw7kxe6",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Neutral Evil",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/14/giant/buxe6ddk5mw7kxe6.json",
+      "image_url": "/assets/atlas/enemies/images/frost_giant.webp"
+    },
+    {
+      "name": "ogre",
+      "index": "eigowktkebc9guzx",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/14/giant/eigowktkebc9guzx.json",
+      "image_url": "/assets/atlas/enemies/images/ogre.webp"
+    },
+    {
+      "name": "ettin",
+      "index": "klckhep28hbfdsky",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/14/giant/klckhep28hbfdsky.json",
+      "image_url": "/assets/atlas/enemies/images/ettin.webp"
+    },
+    {
+      "name": "oni",
+      "index": "l1w8ybkinmscfj3f",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Lawful Evil",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_path": "/assets/atlas/enemies/json/14/giant/l1w8ybkinmscfj3f.json",
+      "image_url": "/assets/atlas/enemies/images/oni.webp"
+    },
+    {
+      "name": "stone giant",
+      "index": "soin81nwijhrvxfk",
+      "size": "Huge",
+      "type": "giant",
+      "alignment": "Neutral",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_path": "/assets/atlas/enemies/json/14/giant/soin81nwijhrvxfk.json",
+      "image_url": "/assets/atlas/enemies/images/stone_giant.webp"
+    },
+    {
+      "name": "giant",
+      "index": "v8gfgdeluefqdrqg",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/giant/v8gfgdeluefqdrqg.json",
+      "image_url": null
+    },
+    {
+      "name": "troll",
+      "index": "zhafrncwcz17dmlc",
+      "size": "Large",
+      "type": "giant",
+      "alignment": "Chaotic Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/14/giant/zhafrncwcz17dmlc.json",
+      "image_url": "/assets/atlas/enemies/images/troll.webp"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Fey",
+  "index": "fey",
+  "monsters": [
+    {
+      "name": "fey",
+      "index": "5tsd0woze1l5i3ej",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/fey/5tsd0woze1l5i3ej.json",
+      "image_url": null
+    },
+    {
+      "name": "satyr",
+      "index": "8xhujxymnlqd7lf6",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Chaotic Neutral",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/14/fey/8xhujxymnlqd7lf6.json",
+      "image_url": "/assets/atlas/enemies/images/satyr.webp"
+    },
+    {
+      "name": "blink dog",
+      "index": "joane6m0my6ujf4e",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Lawful Good",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/14/fey/joane6m0my6ujf4e.json",
+      "image_url": "/assets/atlas/enemies/images/blink_dog.webp"
+    },
+    {
+      "name": "dryad",
+      "index": "kohvwl5ru9xbr8jb",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Neutral",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/14/fey/kohvwl5ru9xbr8jb.json",
+      "image_url": "/assets/atlas/enemies/images/dryad.webp"
+    },
+    {
+      "name": "sprite",
+      "index": "mupbndojer09blao",
+      "size": "Tiny",
+      "type": "fey",
+      "alignment": "Neutral Good",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/14/fey/mupbndojer09blao.json",
+      "image_url": "/assets/atlas/enemies/images/sprite.webp"
+    },
+    {
+      "name": "sea hag",
+      "index": "oqqybzomedfn5afd",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/14/fey/oqqybzomedfn5afd.json",
+      "image_url": "/assets/atlas/enemies/images/sea_hag.webp"
+    },
+    {
+      "name": "green hag",
+      "index": "saq6wm959pkhuaqp",
+      "size": "Medium",
+      "type": "fey",
+      "alignment": "Neutral Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/14/fey/saq6wm959pkhuaqp.json",
+      "image_url": "/assets/atlas/enemies/images/green_hag.webp"
+    }
+  ]
+}

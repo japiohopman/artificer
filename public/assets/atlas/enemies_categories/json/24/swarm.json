@@ -1,0 +1,94 @@
+{
+  "name": "Swarm",
+  "index": "swarm",
+  "monsters": [
+    {
+      "name": "swarm",
+      "index": "lk5iex8w2y5yxdhm",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/lk5iex8w2y5yxdhm.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of bats",
+      "index": "mmswarmofbats000",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofbats000.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of crawling claws",
+      "index": "mmswarmofcrawlin",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofcrawlin.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of insects",
+      "index": "mmswarmofinsects",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofinsects.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of piranhas",
+      "index": "mmswarmofpiranha",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofpiranha.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of rats",
+      "index": "mmswarmofrats000",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofrats000.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of ravens",
+      "index": "mmswarmofravens0",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofravens0.json",
+      "image_url": null
+    },
+    {
+      "name": "swarm of venomous snakes",
+      "index": "mmswarmofvenomou",
+      "size": "Medium",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/swarm/mmswarmofvenomou.json",
+      "image_url": null
+    }
+  ]
+}
