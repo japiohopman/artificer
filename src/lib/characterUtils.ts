@@ -258,29 +258,91 @@ export function calculateInitiative(dex: number): number {
   return getModifier(dex);
 }
 
+export const PRIMARY_ABILITIES_2024: Record<string, string[]> = {
+  'barbarian': ['str', 'con'],
+  'bard': ['cha', 'dex'],
+  'cleric': ['wis', 'con', 'str'],
+  'druid': ['wis', 'con'],
+  'fighter': ['str', 'dex', 'con'],
+  'monk': ['dex', 'wis'],
+  'paladin': ['str', 'cha'],
+  'ranger': ['dex', 'wis'],
+  'rogue': ['dex', 'int'],
+  'sorcerer': ['cha', 'con'],
+  'warlock': ['cha', 'con'],
+  'wizard': ['int', 'wis']
+};
+
+export const CATEGORY_DEFAULT_EQUIPMENT: Record<string, string[]> = {
+  'martial_weapons': ['longsword', 'greatsword', 'rapier', 'shortsword', 'battleaxe'],
+  'simple_weapons': ['dagger', 'shortbow', 'mace', 'quarterstaff', 'light_crossbow'],
+  'musical_instruments': ['lute', 'flute', 'lyre'],
+  'artisans_tools': ['smiths_tools', 'tinkers_tools'],
+  'gaming_sets': ['dice_set'],
+  'holy_symbols': ['holy_symbol']
+};
+
+export function extractItemFromChoice(choice: any): any[] {
+  if (!choice) return [];
+  const results: any[] = [];
+  const type = choice.option_type;
+
+  if (type === 'multiple' && Array.isArray(choice.items)) {
+    choice.items.forEach((subItem: any) => {
+      results.push(...extractItemFromChoice(subItem));
+    });
+  } else if (type === 'choice' && choice.choice) {
+    const ch = choice.choice;
+    const chooseCount = ch.choose || 1;
+    const fromSetType = ch.from?.option_set_type;
+
+    if (fromSetType === 'equipment_category' && ch.from?.equipment_category?.index) {
+      const catKey = ch.from.equipment_category.index.toLowerCase().replace(/-/g, '_');
+      const defaultPool = CATEGORY_DEFAULT_EQUIPMENT[catKey] || ['longsword'];
+      for (let c = 0; c < chooseCount; c++) {
+        const selectedIndex = defaultPool[c % defaultPool.length];
+        results.push({ index: selectedIndex, quantity: 1 });
+      }
+    } else if (ch.from?.options && Array.isArray(ch.from.options)) {
+      for (let c = 0; c < chooseCount && c < ch.from.options.length; c++) {
+        results.push(...extractItemFromChoice(ch.from.options[c]));
+      }
+    }
+  } else if (type === 'counted_reference' && choice.of) {
+    const idx = choice.of.index || choice.of.id;
+    if (idx) results.push({ index: idx, quantity: choice.count || 1 });
+  } else if (type === 'reference' && choice.item) {
+    const idx = choice.item.index || choice.item.id;
+    if (idx) results.push({ index: idx, quantity: choice.quantity || choice.count || 1 });
+  } else {
+    const idx = choice.item?.index || choice.of?.index || choice.equipment?.index || choice.index;
+    if (idx) results.push({ index: idx, quantity: choice.quantity || choice.count || 1 });
+  }
+
+  return results;
+}
+
 export function resolveStartingEquipment(options: any[]): any[] {
+  if (!Array.isArray(options)) return [];
   const items: any[] = [];
-  const randomFromList = (list: any[]) => list[Math.floor(Math.random() * list.length)];
 
   options.forEach(option => {
     const chooseCount = option.choose || 1;
-    const fromOptions = option.from?.options || [];
+    const fromOptions = option.from?.options || option.from?.equipment?.options || [];
 
     for (let i = 0; i < chooseCount; i++) {
-        if (fromOptions.length === 0) continue;
-        const selection = randomFromList(fromOptions);
-        if (selection.option_type === 'multiple') {
-            selection.items.forEach((it: any) => items.push(it.item || it));
-        } else if (selection.item) {
-            items.push(selection.item);
-        } else if (selection.of) {
-            items.push(selection.of);
-        }
+      if (fromOptions.length === 0) continue;
+      const selection = fromOptions[i % fromOptions.length];
+      if (selection) {
+        items.push(...extractItemFromChoice(selection));
+      }
     }
   });
 
   return items;
 }
+
+export const resolveStartingEquipmentOptions = resolveStartingEquipment;
 
 export const DND_TRAITS = [
   "Speaks in riddles.", "Always checking their pockets.", "Obsessed with hygiene.", "Collects unusual stones.",
@@ -357,7 +419,57 @@ export const BACKGROUND_DATA: Record<string, any> = {
   }
 };
 
+export async function generateNPCAsync(partial: any): Promise<any> {
+  const { fetchClassData, fetchBackgroundData, fetchSpeciesData } = await import('../services/storageService');
+  const { atlasService } = await import('../services/atlasService');
+  const ruleset: '2014' | '2024' = partial.ruleset || '2014';
+  const className = partial.class || randomFromList(DND_CLASSES);
+  const background = partial.background || randomFromList(DND_BACKGROUNDS);
+  const race = partial.race || randomFromList(DND_RACES);
+
+  let classData = partial.classData;
+  let backgroundData = partial.backgroundData;
+  let speciesData = partial.speciesData;
+
+  if (!classData && className) {
+    classData = await fetchClassData(className, ruleset);
+  }
+  if (!backgroundData && background) {
+    backgroundData = await fetchBackgroundData(background, ruleset);
+  }
+  if (!speciesData && race) {
+    speciesData = await fetchSpeciesData(race, ruleset);
+  }
+
+  // Load level 1 class features if ruleset is 2024 and class features array is empty
+  if (ruleset === '2024' && classData && (!classData.features || classData.features.length === 0)) {
+    const level1Data = await atlasService.loadLevelData(className, 1, '2024');
+    if (level1Data?.features) {
+      const resolvedFeatures: any[] = [];
+      for (const fRef of level1Data.features) {
+        const fData = await atlasService.loadFeature(fRef.index);
+        if (fData) {
+          resolvedFeatures.push({ ...fData, source: 'Class' });
+        }
+      }
+      classData = { ...classData, features: resolvedFeatures };
+    }
+  }
+
+  return generateNPC({
+    ...partial,
+    class: className,
+    background,
+    race,
+    ruleset,
+    classData,
+    backgroundData,
+    speciesData
+  });
+}
+
 export function generateNPC(partial: any): any {
+  const ruleset: '2014' | '2024' = partial.ruleset || '2014';
   const className = partial.class || randomFromList(DND_CLASSES);
   const race = partial.race || randomFromList(DND_RACES);
   const alignment = partial.alignment || randomFromList(DND_ALIGNMENTS);
@@ -366,13 +478,28 @@ export function generateNPC(partial: any): any {
   const gender = partial.gender || randomFromList(['Male', 'Female']);
 
   const classInfo = CLASS_DATA[className] || CLASS_DATA['Fighter'];
+  const hitDie = partial.classData?.hit_die || classInfo.hitDie || 8;
   
   // 1. STATS: Assign based on class priority
   const rolls = generateStandardStats();
   const pooledStats = Object.values(rolls).sort((a, b) => b - a);
   const stats: any = {};
   
-  const priorities = [...(classInfo.primaryStats || ['str', 'dex'])];
+  const rawPrimary = partial.classData?.primary_ability;
+  let primaryList: string[] = [];
+  if (Array.isArray(rawPrimary)) {
+    primaryList = rawPrimary.map((a: any) => String(a.index || a).toLowerCase());
+  } else if (typeof rawPrimary === 'string') {
+    primaryList = [rawPrimary.toLowerCase()];
+  } else if (rawPrimary && typeof rawPrimary === 'object') {
+    primaryList = [String(rawPrimary.index || rawPrimary.name || 'str').toLowerCase()];
+  } else if (ruleset === '2024') {
+    primaryList = PRIMARY_ABILITIES_2024[className.toLowerCase()] || ['str', 'dex'];
+  } else {
+    primaryList = classInfo.primaryStats || ['str', 'dex'];
+  }
+
+  const priorities = [...primaryList];
   const others = Object.keys(rolls).filter(s => !priorities.includes(s)).sort(() => Math.random() - 0.5);
   const finalOrder = [...priorities, ...others];
   
@@ -380,7 +507,7 @@ export function generateNPC(partial: any): any {
     stats[ability] = pooledStats[i];
   });
 
-  const hp = calculateHP(level, stats.con, classInfo.hitDie || 8);
+  const hp = calculateHP(level, stats.con, hitDie);
 
   // 2. FLAVOR: Randomized traits
   const traits = partial.traits && partial.traits.length > 0 ? partial.traits : [randomFromList(DND_TRAITS)];
@@ -402,11 +529,17 @@ export function generateNPC(partial: any): any {
 
   // 4. CHOICES (Level 1)
   const choices: Record<string, string[]> = {};
-  if (className === 'Ranger') {
-    choices['favored-enemy-1-type'] = [randomFromList(['beasts', 'fey', 'humanoids', 'monstrosities', 'undead'])];
-    choices['natural-explorer-1-terrain-type'] = [randomFromList(['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp'])];
-  } else if (className === 'Fighter') {
-    choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
+  if (ruleset === '2014') {
+    if (className === 'Ranger') {
+      choices['favored-enemy-1-type'] = [randomFromList(['beasts', 'fey', 'humanoids', 'monstrosities', 'undead'])];
+      choices['natural-explorer-1-terrain-type'] = [randomFromList(['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp'])];
+    } else if (className === 'Fighter') {
+      choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
+    }
+  } else {
+    if (['fighter', 'paladin', 'ranger'].includes(className.toLowerCase())) {
+      choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
+    }
   }
 
   // 5. EQUIPMENT: Slot-aware distribution
@@ -466,9 +599,16 @@ export function generateNPC(partial: any): any {
   });
 
   // Class Gear
-  (classInfo.startingEquipment || []).forEach((item: any) => {
-    const itemObj = createItem(item);
-    addItemToRegistry(item, item.slot);
+  const rawClassEquip = partial.classData?.starting_equipment || [];
+  const classOptEquip = resolveStartingEquipmentOptions(partial.classData?.starting_equipment_options || []);
+  const classEquipment = rawClassEquip.length > 0 ? rawClassEquip : (classOptEquip.length > 0 ? classOptEquip : (ruleset === '2014' ? classInfo.startingEquipment || [] : []));
+
+  classEquipment.forEach((item: any) => {
+    const itemIndex = item.equipment?.index || item.index;
+    if (!itemIndex) return;
+    const itemWithIndex = { ...item, index: itemIndex };
+    const itemObj = createItem(itemWithIndex);
+    addItemToRegistry(itemWithIndex, item.slot);
     if (item.slot) {
       if (!inventory[item.slot]) {
         inventory[item.slot] = { ...itemObj, slot: item.slot };
@@ -483,24 +623,53 @@ export function generateNPC(partial: any): any {
   });
 
   // Background Gear
-  const bg = BACKGROUND_DATA[background];
-  if (bg) {
-    bg.equipment.forEach((item: any) => {
-      const itemObj = createItem(item);
-      addItemToRegistry(item, item.slot);
-      if (item.slot && !inventory[item.slot]) {
-        inventory[item.slot] = { ...itemObj, slot: item.slot };
-      } else {
-        backpack.push(itemObj);
+  const rawBgEquip = partial.backgroundData?.starting_equipment || [];
+  const bgOptEquip = resolveStartingEquipmentOptions(partial.backgroundData?.starting_equipment_options || []);
+  const bgEquipment = rawBgEquip.length > 0 ? rawBgEquip : (bgOptEquip.length > 0 ? bgOptEquip : (BACKGROUND_DATA[background]?.equipment || []));
+
+  bgEquipment.forEach((item: any) => {
+    const itemIndex = item.equipment?.index || item.index;
+    if (!itemIndex) return;
+    const itemWithIndex = { ...item, index: itemIndex };
+    const itemObj = createItem(itemWithIndex);
+    addItemToRegistry(itemWithIndex, item.slot);
+    if (item.slot && !inventory[item.slot]) {
+      inventory[item.slot] = { ...itemObj, slot: item.slot };
+    } else {
+      backpack.push(itemObj);
+    }
+  });
+
+  // Class Proficiency Choices
+  const classProfChoices: string[] = [];
+  if (Array.isArray(partial.classData?.proficiency_choices)) {
+    for (const pChoice of partial.classData.proficiency_choices) {
+      const chooseCount = pChoice.choose || 1;
+      const options = pChoice.from?.options || pChoice.from?.proficiencies || [];
+      for (let c = 0; c < chooseCount && c < options.length; c++) {
+        const pOpt = options[c];
+        const pName = pOpt?.item?.name || pOpt?.item?.index || pOpt?.name || pOpt?.index || pOpt;
+        if (pName) {
+          const cleanName = String(pName).replace(/^skill_/, '').replace(/^skill:/i, '').trim();
+          const formatted = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+          classProfChoices.push(`Skill: ${formatted}`);
+        }
       }
-    });
+    }
   }
 
-  const npcIdPlaceholder = partial.id || `npc-${Date.now()}`;
-  // Removed duplicate npcId declaration below
+  const derivedProficiencies = [
+    ...(partial.proficiencies || []),
+    ...(partial.classData?.proficiencies || []).map((p: any) => p.name || p.index || p),
+    ...(partial.classData?.saving_throws || []).map((s: any) => 'Saving Throw: ' + String(s.name || s.index || s).toUpperCase()),
+    ...classProfChoices,
+    ...(partial.backgroundData?.starting_proficiencies || []).map((p: any) => p.name || p.index || p)
+  ];
+  const uniqueProficiencies = Array.from(new Set(derivedProficiencies));
 
   return {
     id: npcId,
+    ruleset: ruleset,
     saveVersion: 2,
     name: partial.name || `NPC ${Math.floor(Math.random() * 1000)}`,
     class: className,
@@ -511,9 +680,9 @@ export function generateNPC(partial: any): any {
     alignment,
     background,
     stats,
-    proficiencies: partial.proficiencies || [],
+    proficiencies: uniqueProficiencies,
     traits,
-    features: classInfo.features || [],
+    features: partial.classData?.features || (ruleset === '2014' ? classInfo.features || [] : []),
     flaws,
     ideals,
     bonds,
@@ -529,7 +698,7 @@ export function generateNPC(partial: any): any {
     choices,
     hp,
     maxHp: hp,
-    money: { cp: 0, sp: 0, gp: bg?.gold || 10, pp: 0 },
+    money: { cp: 0, sp: 0, gp: partial.backgroundData?.gold || BACKGROUND_DATA[background]?.gold || 10, pp: 0 },
     isNpc: true,
     isRecruitable: true,
     dataPath: `${githubBase}public/assets/atlas/character/npc_character_profiles/json/${npcIndex}.json`

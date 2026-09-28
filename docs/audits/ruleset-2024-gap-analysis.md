@@ -43,9 +43,16 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc), 2024 Class Found
 
 2024 Spells Integration & Refinement Complete
 ✓ 323/323 canonical SRD Spells in /spell/json/24/ audited and synchronized with index_24.json. Note: The 323 spells represent Artificer's canonical SRD spell catalogue across 2014 and 2024 rulesets, rather than the entire printed 2024 PHB expansion list. Ruleset-aware loaders in storageService.ts, atlasService.ts, and useAtlasStore.ts enforce strict 2014 vs 2024 resolution without cross-ruleset fallbacks. Visual sprite resolution in spriteManifest.ts and canonical AOE geometry in geometry.ts verified.
+
+2024 Equipment, Starting Equipment, Proficiencies, Derived Calculations, Rules & Tables Complete
+✓ 679/679 equipment records in /equipment/json/24/ across 9 categories (adventuring-gear, armor, consumables, containers, equipment, supplemental, tools, traps, weapons) with strict ruleset-isolated loaders in storageService.ts and atlasService.ts (zero silent cross-ruleset fallbacks).
+✓ Starting equipment resolved dynamically from versioned 2024 class and background records across Character Creator and generateNPC/generateNPCAsync.
+✓ Proficiencies (weapon, armor, tool, saving throw) derived from versioned 2024 datasets and enforced in equipment compatibility and attack bonus calculations.
+✓ Derived calculations (AC, Initiative, HP, Attack Bonuses, Spell DC, background ASI choices) evaluated dynamically without silent 2014 fallbacks.
+✓ SRD Rules (/rules/24/) and Tables (/tables/json/24/) backed by fetchRuleData and fetchTableData loaders in storageService.ts and atlasService.ts.
 ```
 
-Spells, Backgrounds, Subclasses, Species, Subraces, Feats, and Base Classes resolve versioned `/24/` data with full ruleset-aware loaders.
+Equipment, Spells, Backgrounds, Subclasses, Species, Subraces, Feats, Base Classes, Rules, and Tables resolve versioned `/24/` data with full ruleset-aware loaders.
 
 Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Subclasses (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
 
@@ -66,12 +73,13 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | **Subclasses & Subclass Features** | Supported | **Implemented (48/48)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). All 48 canonical 2024 subclasses audited and implemented across all 12 core classes (4 per class) with ruleset-aware resolution. |
 | **Backgrounds / Origins** | Supported | **Implemented (16/16)** | Versioned directories exist (`/backgrounds/json/14/` vs `/24/`). All 16 2024 PHB Origin Backgrounds implemented with allowed ability scores, canonical Origin Feats, proficiencies, equipment, and official markdown guides in `/ui/official/backgrounds/*.md`. Loader returns `rulesetContext`. |
 | **Feats** | Supported | **Implemented (75/75)** | Versioned directories exist (`/feats/json/14/` vs `/24/`). Complete 2024 PHB feat catalogue (75 total: 10 Origin, 10 Fighting Style, 12 Epic Boon, 43 General) implemented in `/assets/atlas/feats/json/24/` with synchronized `index_24.json` catalogue and ruleset-aware resolution. |
-| **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
+| **Equipment** | Supported | **Implemented (679 Records)** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). `fetchEquipmentData` and `loadEquipment` enforce strict ruleset boundaries with zero silent cross-ruleset fallback. |
 | **Spells** | Supported | **Implemented (323 SRD Spells)** | Versioned directories exist (`/spell/json/14/` vs `/24/`). 323 canonical SRD spells versioned with 2024 spell text/scaling updates (e.g. cure_wounds 2d8 base, chill_touch 1d10 scaling, true_strike radiant weapon scaling) with ruleset-aware loaders (`index_14.json` vs `index_24.json`) and zero silent cross-ruleset fallbacks. |
 | **Spellcasting Rules** | Supported | **Supported** | Embedded in versioned 2024 class and level JSON records. |
-| **Starting Equipment** | Supported | **Not Supported** | Hardcoded in `CLASS_DATA` (`characterUtils.ts`) and 2014 background JSON records. |
-| **Proficiencies** | Supported | **Not Supported** | Derived from 2014 `CLASS_DATA` and 2014 background templates. |
-| **Derived Calculations** | Supported | **Not Supported** | Standard 2014 formulas (HP, AC, Initiative). |
+| **Starting Equipment** | Supported | **Implemented** | Resolved dynamically from versioned class (`/class/json/24/`) and background (`/backgrounds/json/24/`) records across Character Creator (`EquipmentStep.tsx`) and character generation (`generateNPC` / `generateNPCAsync`). |
+| **Proficiencies** | Supported | **Implemented** | Derived from versioned 2024 species, class, and background datasets. Enforced in `equipmentCompatibility.ts` and `statCalculations.ts`. |
+| **Derived Calculations** | Supported | **Implemented** | Evaluated dynamically in `statCalculations.ts` using character ruleset context and active proficiencies/stats (AC, Initiative, HP, Attack Bonuses, Spell DC, background ASI choices). |
+| **Rules & Tables** | Supported | **Implemented** | SRD Rules (`/rules/24/`) and Tables (`/tables/json/24/`) backed by `fetchRuleData` and `fetchTableData` loaders in `storageService.ts` and `atlasService.ts`. |
 
 ---
 
@@ -86,10 +94,13 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 - `fetchClassData(index, ruleset)`: Checks `/assets/atlas/class/json/14/` vs `/24/`.
 - `fetchClassLevels(classIndex, ruleset)`: Checks `/assets/atlas/class/levels/14/` vs `/24/`.
 - `fetchSpeciesData(index, ruleset)`: Checks `/assets/atlas/species/json/14/` vs `/24/`.
-- `fetchEquipmentData(index, ruleset)`: Checks `/assets/atlas/equipment/json/14/` vs `/24/`.
+- `fetchEquipmentData(index, ruleset)`: Checks `/assets/atlas/equipment/json/14/` vs `/24/` with strict ruleset isolation and no silent fallback.
+- `fetchEquipmentList(ruleset)`: Filters `/assets/atlas/equipment/index.json` by version folder (`/14/` vs `/24/`).
 - `fetchFeatData(index, ruleset)`: Checks `/assets/atlas/feats/json/14/` vs `/24/`.
 - `fetchMonsterData(index, ruleset)`: Checks `/assets/atlas/enemies/json/14/` vs `/24/`.
 - `fetchSubclassData(index, ruleset)`: Checks `/assets/atlas/subclasses/json/14/` vs `/24/`.
 - `fetchSubraceData(index, ruleset)`: Resolves 2014 subraces and returns `null` for 2024 ruleset without cross-ruleset fallback.
 - `fetchBackgroundData(index, ruleset)`: Checks `/assets/atlas/backgrounds/json/14/` vs `/24/`.
 - `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `bend_luck_wild_magic_2024`, `elemental_epitome_elements_2024`, `quivering_palm_open_hand_2024`).
+- `fetchRuleData(index, ruleset)`: Checks `/assets/atlas/rules/14/` vs `/24/`.
+- `fetchTableData(index, ruleset)`: Checks `/assets/atlas/tables/json/14/` vs `/24/`.

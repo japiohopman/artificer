@@ -145,9 +145,10 @@ export const CharacterCreator: React.FC = () => {
 
   const handleRulesetChange = (ruleset: '2014' | '2024') => {
     setIsRulesetExplicitlySelected(true);
+    useGameStore.getState().setRuleset(ruleset);
     if (newChar.ruleset === ruleset) return;
     soundService.playEffect('UI_CLICK_LIGHT');
-    // Reset rules-sensitive selections on ruleset change to prevent mixed data
+    // Reset rules-sensitive selections and V2 equipment state on ruleset change to prevent mixed data
     setNewChar(prev => ({
       ...prev,
       ruleset,
@@ -163,6 +164,9 @@ export const CharacterCreator: React.FC = () => {
       preparedSpells: [],
       backpack: [],
       inventory: {},
+      items: {},
+      containers: {},
+      equipment: { containerId: '', slots: [] },
       choices: {}
     }));
   };
@@ -295,7 +299,7 @@ export const CharacterCreator: React.FC = () => {
                 }
             }
             if (newChar.subrace) {
-                const subData = await fetchSubraceData(newChar.subrace);
+                const subData = await fetchSubraceData(newChar.subrace, newChar.ruleset);
                 if (subData?.racial_traits) {
                     await Promise.all(subData.racial_traits.map(resolveTrait));
                 }
@@ -317,7 +321,7 @@ export const CharacterCreator: React.FC = () => {
                 }
             }
             if (newChar.background) {
-               const bgData = await atlasService.loadBackground(newChar.background);
+               const bgData = await atlasService.loadBackground(newChar.background, newChar.ruleset);
                if (bgData?.languages) {
                   const lList = bgData.languages.map((l: any) => (l.index || l.name || l).toLowerCase());
                   langs.push(...lList);
