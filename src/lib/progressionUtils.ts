@@ -53,7 +53,17 @@ export async function evaluateNextLevelStep(character: any): Promise<ActiveLevel
   const targetLevel = currentLevel + 1;
   const { atlasService } = await import('../services/atlasService');
   const classData = await atlasService.loadClass(character.class, character.ruleset);
-  const hitDie = classData?.hit_die || CLASS_DATA[character.class]?.hitDie || 8;
+
+  // Fail-closed ruleset boundary: enforce classData resolution when ruleset is specified
+  let hitDie: number | undefined = classData?.hit_die;
+  if (!hitDie && !character.ruleset) {
+    hitDie = CLASS_DATA[character.class]?.hitDie;
+  }
+
+  if (!hitDie) {
+    return null;
+  }
+
   const levelData = await atlasService.loadLevelData(character.class, targetLevel, character.ruleset);
 
   const features = levelData?.features || [];

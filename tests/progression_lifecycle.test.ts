@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { useCharacterStore, Character } from '../src/store/useCharacterStore';
 import { getXPForLevel } from '../src/lib/characterUtils';
+import { evaluateNextLevelStep } from '../src/lib/progressionUtils';
 
 describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => {
   const testCharacter: Character = {
@@ -127,22 +128,41 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(reloadedSession?.targetLevel).toBe(2);
   });
 
-  it('4. Guard prevents overwriting an existing active session for another character', async () => {
+  it('4. Guard prevents overwriting an existing active session for another character or same character', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
     await store.addXp('test-wizard-2', 300);
 
     // Active session started for fighter
-    await store.startLevelUpSession('test-fighter-1');
+    const originalSession = await store.startLevelUpSession('test-fighter-1');
+    expect(originalSession).not.toBeNull();
     expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test-fighter-1');
 
-    // Attempting to start session for wizard while fighter session is active returns null
+    // Attempting to start session again for the SAME character returns null without replacing active session
+    const repeatSameCharacterSession = await store.startLevelUpSession('test-fighter-1');
+    expect(repeatSameCharacterSession).toBeNull();
+    expect(useCharacterStore.getState().activeLevelUpSession).toBe(originalSession);
+
+    // Attempting to start session for wizard while fighter session is active also returns null
     const secondSession = await store.startLevelUpSession('test-wizard-2');
     expect(secondSession).toBeNull();
-    expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test-fighter-1');
+    expect(useCharacterStore.getState().activeLevelUpSession).toBe(originalSession);
   });
 
-  it('5. Commit rejects invalid targetLevel or malformed payloads without mutating character state', async () => {
+  it('5. Ruleset fail-closed boundary rejects progression when ruleset class data is missing', async () => {
+    const invalidRulesetChar = {
+      ...testCharacter,
+      id: 'test-custom-1',
+      class: 'NonExistentClass',
+      ruleset: '2024' as const,
+      xp: 500
+    };
+
+    const session = await evaluateNextLevelStep(invalidRulesetChar);
+    expect(session).toBeNull(); // Fails closed without falling back to legacy CLASS_DATA
+  });
+
+  it('6. Commit rejects invalid targetLevel or malformed payloads without mutating character state', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
     await store.startLevelUpSession('test-fighter-1'); // Active session for targetLevel 2
@@ -169,7 +189,7 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(char.hp).toBe(12);
   });
 
-  it('6. Completing level-up commits new level, HP, features, and choices atomically', async () => {
+  it('7. Completing level-up commits new level, HP, features, and choices atomically', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
     await store.startLevelUpSession('test-fighter-1');
@@ -197,7 +217,7 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  it('7. Multi-level eligibility leaves the next level pending rather than automatically starting it', async () => {
+  it('8. Multi-level eligibility leaves the next level pending rather than automatically starting it', async () => {
     const store = useCharacterStore.getState();
     // Give enough XP for Level 3 immediately (900 XP)
     await store.addXp('test-fighter-1', 900);

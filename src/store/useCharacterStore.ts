@@ -277,8 +277,8 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
 
   startLevelUpSession: async (characterId: string) => {
     const { activeLevelUpSession, characters } = get();
-    // Guard against overwriting an active session for another character or in-progress session
-    if (activeLevelUpSession && activeLevelUpSession.characterId !== characterId) {
+    // Guard against overwriting ANY active session (even for the same character)
+    if (activeLevelUpSession) {
       return null;
     }
 
