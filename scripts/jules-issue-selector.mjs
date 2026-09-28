@@ -26,6 +26,48 @@ export {
   persistDiscoveryReportIssue
 };
 
+export function parseRoadmapSequence(markdown) {
+  if (!markdown || typeof markdown !== 'string') return [];
+
+  const section = extractSection(markdown, [
+    '## ChatGPT-Curated Execution Sequence',
+    '## Execution Sequence',
+    '## Roadmap Sequence'
+  ]);
+  const textToParse = section || markdown;
+
+  const lines = textToParse.split('\n');
+  const sequence = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith('|')) continue;
+
+    const cells = trimmed.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+    if (cells.length < 4) continue;
+
+    const orderNum = parseInt(cells[0], 10);
+    if (isNaN(orderNum)) continue;
+
+    const itemText = cells[1];
+    const purposeText = cells[2];
+    const stateText = cells[3];
+
+    const issueMatch = itemText.match(/#(\d+)/);
+    const issueNumber = issueMatch ? parseInt(issueMatch[1], 10) : null;
+
+    sequence.push({
+      order: orderNum,
+      rawItem: itemText,
+      issueNumber,
+      purpose: purposeText,
+      currentState: stateText
+    });
+  }
+
+  return sequence.sort((a, b) => a.order - b.order);
+}
+
 export function isCandidateIssue(issue, options = {}) {
   if (!issue || issue.state !== 'open' || issue.pull_request) {
     return false;
@@ -101,33 +143,125 @@ export function selectDispatchableIssue(issues, options = {}) {
     });
   }
 
+  const roadmapSequence = options.roadmapSequence || (options.roadmapContent ? parseRoadmapSequence(options.roadmapContent) : []);
+
   let selectedCandidate = null;
 
-  for (const candidate of sortDispatchCandidates(candidates)) {
-    const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
-    if (existingPr) {
-      rejected.push({
-        issueNumber: candidate.issue.number,
-        reason: 'Open implementation PR #' + existingPr.number + ' already exists.'
-      });
-      continue;
-    }
+  if (roadmapSequence.length > 0) {
+    for (const seq of roadmapSequence) {
+      if (seq.issueNumber !== null) {
+        // Check state of sequence issue
+        const depState = dependencyStates instanceof Map
+          ? dependencyStates.get(seq.issueNumber)
+          : dependencyStates[seq.issueNumber];
 
-    let blocked = false;
-    for (const dependency of candidate.metadata.dependsOn) {
-      const state = dependencyStates instanceof Map
-        ? dependencyStates.get(dependency)
-        : dependencyStates[dependency];
-      const decision = dependencyBlocks(dependency, state);
-      if (decision.blocked) {
-        rejected.push({ issueNumber: candidate.issue.number, reason: decision.reason });
-        blocked = true;
-        break;
+        const isClosedInDepStates = depState && (
+          (depState.type === 'issue' && depState.state === 'closed') ||
+          (depState.type === 'pull_request' && depState.merged)
+        );
+
+        const isOpenInIssues = issues.some(i => i && i.number === seq.issueNumber && i.state === 'open' && !i.pull_request);
+        const isOpenInDepStates = depState && depState.state === 'open';
+
+        // If explicitly closed or merged, this sequence step is complete
+        if (isClosedInDepStates || (!isOpenInIssues && !isOpenInDepStates && depState && depState.state === 'closed')) {
+          continue; // Move to next item in sequence
+        }
+
+        // If it's open or in issues list, test if it is dispatchable
+        const candidate = candidates.find(c => c.issue.number === seq.issueNumber);
+        if (candidate) {
+          const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
+          if (existingPr) {
+            rejected.push({
+              issueNumber: candidate.issue.number,
+              reason: 'Open implementation PR #' + existingPr.number + ' already exists.'
+            });
+            break;
+          }
+
+          let blocked = false;
+          for (const dependency of candidate.metadata.dependsOn) {
+            const state = dependencyStates instanceof Map
+              ? dependencyStates.get(dependency)
+              : dependencyStates[dependency];
+            const decision = dependencyBlocks(dependency, state);
+            if (decision.blocked) {
+              rejected.push({ issueNumber: candidate.issue.number, reason: decision.reason });
+              blocked = true;
+              break;
+            }
+          }
+
+          if (!blocked) {
+            selectedCandidate = candidate;
+            break;
+          } else {
+            break;
+          }
+        } else {
+          // Open issue in sequence is NOT a valid ready candidate
+          break;
+        }
+      } else {
+        // Non-issue named checkpoint
+        const isComplete = /complete|completed|done|passed/i.test(seq.currentState || '');
+        if (isComplete) {
+          continue;
+        } else {
+          break;
+        }
       }
     }
-    if (!blocked) {
-      selectedCandidate = candidate;
-      break;
+
+    if (selectedCandidate) {
+      for (const candidate of candidates) {
+        if (candidate.issue.number !== selectedCandidate.issue.number) {
+          if (!rejected.some(r => r.issueNumber === candidate.issue.number)) {
+            rejected.push({
+              issueNumber: candidate.issue.number,
+              reason: `Skipped by roadmap sequence selection (selected #${selectedCandidate.issue.number}).`
+            });
+          }
+        }
+      }
+    } else {
+      for (const candidate of candidates) {
+        if (!rejected.some(r => r.issueNumber === candidate.issue.number)) {
+          rejected.push({
+            issueNumber: candidate.issue.number,
+            reason: 'Blocked by earlier incomplete roadmap sequence item or checkpoint.'
+          });
+        }
+      }
+    }
+  } else {
+    for (const candidate of sortDispatchCandidates(candidates)) {
+      const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
+      if (existingPr) {
+        rejected.push({
+          issueNumber: candidate.issue.number,
+          reason: 'Open implementation PR #' + existingPr.number + ' already exists.'
+        });
+        continue;
+      }
+
+      let blocked = false;
+      for (const dependency of candidate.metadata.dependsOn) {
+        const state = dependencyStates instanceof Map
+          ? dependencyStates.get(dependency)
+          : dependencyStates[dependency];
+        const decision = dependencyBlocks(dependency, state);
+        if (decision.blocked) {
+          rejected.push({ issueNumber: candidate.issue.number, reason: decision.reason });
+          blocked = true;
+          break;
+        }
+      }
+      if (!blocked) {
+        selectedCandidate = candidate;
+        break;
+      }
     }
   }
 
@@ -231,10 +365,12 @@ async function main() {
 
   const results = await Promise.all([
     github('issues?state=open&per_page=100'),
-    github('pulls?state=open&base=main&per_page=100')
+    github('pulls?state=open&base=main&per_page=100'),
+    fileOrNull('ROADMAP.md')
   ]);
   const issues = results[0];
   const prs = results[1];
+  const roadmapContent = results[2];
 
   const candidateEntries = issues
     .filter(issue => !issue.pull_request)
@@ -244,11 +380,18 @@ async function main() {
     }))
     .filter(entry => entry.validation.valid);
 
-  const dependencyNumbers = [...new Set(candidateEntries.flatMap(entry => entry.validation.metadata.dependsOn))];
+  const roadmapSequence = parseRoadmapSequence(roadmapContent);
+  const sequenceIssueNumbers = roadmapSequence.map(s => s.issueNumber).filter(Boolean);
+
+  const dependencyNumbers = [...new Set([
+    ...candidateEntries.flatMap(entry => entry.validation.metadata.dependsOn),
+    ...sequenceIssueNumbers
+  ])];
   const dependencyStates = await dependencies(dependencyNumbers);
   const decision = selectDispatchableIssue(issues, {
     openPullRequests: prs,
-    dependencyStates
+    dependencyStates,
+    roadmapSequence
   });
 
   // If discovery is triggered, persist the discovery report issue.

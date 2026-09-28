@@ -12,7 +12,7 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 
 | Order | Issue / checkpoint | Purpose | Current state |
 |---|---|---|---|
-| 1 | #387 | Establish roadmap sequencing and automatic readiness handoff | **ready — next workflow task** |
+| 1 | #387 | Establish roadmap sequencing and automatic readiness handoff | **completed in PR #387** |
 | 2 | #365 | Complete Foundry 2024 species source parity | queued after #387 |
 | 3 | #376 | Close remaining 2024 runtime ruleset gaps | blocked by #365 |
 | 4 | Character Creator stability checkpoint | Verify full Continue/creator flow on the corrected foundation | after #376 |

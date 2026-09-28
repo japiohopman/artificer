@@ -56,7 +56,7 @@ They are **not** active Jules routing targets.
 - **Documentation:** Update documentation when the change alters an established architectural or workflow contract. Keep it factual rather than aspirational.
 - **Repository hygiene:** Do not add vendored/reference repositories or unverified binary bloat. Follow `AGENT_RULES.md` and the asset registry for asset changes.
 - **Issue/PR linkage:** Keep the GitHub Issue, implementation branch, PR, and verification evidence aligned.
-- **Workflow integrity:** Do not create a parallel task database, revive TASK_BOARD-driven dispatch, or bypass the Issue-first Jules workflow.
+- **Workflow integrity:** Do not create a parallel task database, revive TASK_BOARD-driven dispatch, or bypass the Issue-first Jules workflow. Jules may update factual completion progress in `ROADMAP.md` for its assigned Issue in its PR without altering task sequence order or inventing new tasks.
 
 ---
 *Happy building.*

@@ -23,7 +23,7 @@ Assigned GitHub Issue (AUTHORITATIVE EXECUTION CONTRACT)
 
 ### Strategic Orientation Documents (Non-Execution Authorities)
 - **`GOALS.md`**: Defines long-term destination and project vision.
-- **`ROADMAP.md`**: Provides strategic priority orientation and feature sequence. It is **not** an execution queue or dispatch source.
+- **`ROADMAP.md`**: Provides ChatGPT-curated strategic priority orientation and feature sequence. It defines execution order while GitHub Issues remain authoritative for implementation scope.
 - **`docs/TASK_BOARD.md`**: Retained strictly as a historical migration reference and audit matrix. It is **not** an active execution queue.
 
 ---
@@ -102,6 +102,15 @@ Review feedback must remain grounded in the original execution contract:
 - **Scope Boundary**: If review feedback or architectural discussion identifies changes that materially expand beyond the assigned Issue contract, stop expanding the active task.
 - **Decomposition**: Record adjacent or material expansion items as separate, dedicated GitHub Issues rather than allowing PR review iterations to become unbounded scope creep.
 - **Sequential Dispatch Constraint**: Review feedback that materially exceeds the current Issue contract requires a separate GitHub Issue. That new Issue must **NOT** be dispatched while the current Jules task or PR is still active or open. The next Issue becomes dispatchable only after the current execution context is terminal (merged or closed).
+
+### 3.4. ChatGPT-Curated Roadmap Sequencing & Handoff
+
+To prevent premature dispatch of strategically dependent work, dispatch candidates are evaluated against the `ChatGPT-Curated Execution Sequence` in `ROADMAP.md`:
+
+- **Sequence Enforcement**: ChatGPT defines the sequence in `ROADMAP.md`. The Issue selector selects candidates in sequence order, blocking later sequence items when an earlier sequence item or checkpoint is incomplete.
+- **Authoritative Scope**: `ROADMAP.md` provides sequence order; implementation scope, acceptance criteria, and specialist routing belong exclusively in the assigned GitHub Issue.
+- **Factual Handoff Reporting**: Upon completing an assigned Issue, Jules may update the factual progress status of its completed task in `ROADMAP.md` within its PR. Jules must not reorder tasks, alter other sequence items, or invent new tasks.
+- **Automatic Readiness Advancement**: Merging or closing a completed task permits automation to evaluate the next sequence candidate, which becomes dispatchable only if it is marked `status: ready` and satisfies all Quality Gate and dependency checks.
 
 ---
 

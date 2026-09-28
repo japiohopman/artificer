@@ -8,6 +8,7 @@ import {
   isCandidateIssue,
   parseCanonicalReferences,
   parseDispatchMetadata,
+  parseRoadmapSequence,
   selectDispatchableIssue,
   sortDispatchCandidates,
   specialistPath
@@ -145,6 +146,92 @@ test('specialist path is repository-local', () => {
 
 test('canonical references parse', () => {
   assert.deepEqual(parseCanonicalReferences(meta), ['AGENT.MD', 'AGENT_RULES.md']);
+});
+
+test('parseRoadmapSequence extracts markdown table sequence items', () => {
+  const markdown = [
+    '# Strategic Roadmap',
+    '',
+    '## ChatGPT-Curated Execution Sequence',
+    '',
+    '| Order | Issue / checkpoint | Purpose | Current state |',
+    '|---|---|---|---|',
+    '| 1 | #387 | Establish roadmap sequencing | **ready — next workflow task** |',
+    '| 2 | #365 | Complete Foundry 2024 species | queued after #387 |',
+    '| 3 | #376 | Close remaining 2024 gaps | blocked by #365 |',
+    '| 4 | Character Creator stability | Verify creator flow | after #376 |'
+  ].join('\n');
+
+  const seq = parseRoadmapSequence(markdown);
+  assert.equal(seq.length, 4);
+  assert.equal(seq[0].order, 1);
+  assert.equal(seq[0].issueNumber, 387);
+  assert.equal(seq[1].order, 2);
+  assert.equal(seq[1].issueNumber, 365);
+  assert.equal(seq[3].order, 4);
+  assert.equal(seq[3].issueNumber, null);
+});
+
+test('roadmap sequence selection selects first incomplete sequence candidate', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'ready' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'queued' }
+  ];
+
+  const issue387 = issue(387);
+  const issue365 = issue(365, meta.replace('**priority:** 100', '**priority:** 200'));
+
+  const result = selectDispatchableIssue(
+    [issue387, issue365],
+    {
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected.issue.number, 387);
+  assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Skipped by roadmap sequence selection')));
+});
+
+test('roadmap sequence selection blocks later items when earlier roadmap item is incomplete', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'in progress' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'open' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected, null);
+  assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Blocked by earlier incomplete roadmap sequence item')));
+});
+
+test('roadmap sequence selection advances after earlier item is merged/closed', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'merged' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected.issue.number, 365);
 });
 
 test('dry-run prompt contains required context', () => {
