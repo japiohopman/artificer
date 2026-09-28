@@ -12,13 +12,14 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 
 | Order | Issue / checkpoint | Purpose | Current state |
 |---|---|---|---|
-| 1 | #387 | Establish roadmap sequencing and automatic readiness handoff | **ready — next workflow task** |
-| 2 | #365 | Complete Foundry 2024 species source parity | queued after #387 |
-| 3 | #376 | Close remaining 2024 runtime ruleset gaps | blocked by #365 |
-| 4 | Character Creator stability checkpoint | Verify full Continue/creator flow on the corrected foundation | after #376 |
-| 5 | #381 | Resume player-controlled level-up lifecycle | parked until foundation is stable |
-| 6 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
-| 7 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |
+| 1 | #387 | Establish roadmap sequencing and automatic readiness handoff | **completed — merged** |
+| 2 | #389 | Repair canonical directory-reference handling in the live Jules selector | **blocking dispatcher hotfix** |
+| 3 | #365 | Complete Foundry 2024 species source parity | ready after #389 |
+| 4 | #376 | Close remaining 2024 runtime ruleset gaps | blocked by #365 |
+| 5 | Character Creator stability checkpoint | Verify full Continue/creator flow on the corrected foundation | after #376 |
+| 6 | #381 | Resume player-controlled level-up lifecycle | parked until foundation is stable |
+| 7 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
+| 8 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |
 
 This order is intentionally not a raw priority sort. It is the current foundation sequence chosen from repository evidence and dependency risk. Implementation scope belongs in each Issue.
 
