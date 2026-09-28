@@ -273,19 +273,16 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     set((state) => ({
       characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
     }));
-
-    // Check if level up session should automatically be proposed/started if none is active
-    const updatedChar = get().characters.find(c => c.id === id);
-    if (updatedChar && !get().activeLevelUpSession) {
-      const session = await evaluateNextLevelStep(updatedChar);
-      if (session) {
-        set({ activeLevelUpSession: session });
-      }
-    }
   },
 
   startLevelUpSession: async (characterId: string) => {
-    const char = get().characters.find(c => c.id === characterId);
+    const { activeLevelUpSession, characters } = get();
+    // Guard against overwriting an active session for another character or in-progress session
+    if (activeLevelUpSession && activeLevelUpSession.characterId !== characterId) {
+      return null;
+    }
+
+    const char = characters.find(c => c.id === characterId);
     if (!char) return null;
 
     const session = await evaluateNextLevelStep(char);
@@ -302,12 +299,40 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
 
   commitLevelUpSession: async (payload: LevelUpCommitPayload) => {
     const { activeLevelUpSession, characters } = get();
-    if (!activeLevelUpSession || activeLevelUpSession.characterId !== payload.characterId) {
+    // Strict session validation
+    if (
+      !activeLevelUpSession ||
+      activeLevelUpSession.characterId !== payload.characterId ||
+      activeLevelUpSession.targetLevel !== payload.targetLevel
+    ) {
+      return false;
+    }
+
+    // Validate HP gain
+    if (typeof payload.finalHpGain !== 'number' || payload.finalHpGain < 1 || !Number.isFinite(payload.finalHpGain)) {
       return false;
     }
 
     const char = characters.find(c => c.id === payload.characterId);
     if (!char) return false;
+
+    // Validate ASI stat allocation if applicable
+    if (activeLevelUpSession.hasASI && payload.stats) {
+      const origStats = char.stats || {};
+      let allocatedPoints = 0;
+      for (const [key, val] of Object.entries(payload.stats)) {
+        const origVal = (origStats as any)[key] || 10;
+        if (typeof val === 'number' && val < origVal) {
+          return false; // Stat reduction not allowed
+        }
+        if (typeof val === 'number') {
+          allocatedPoints += (val - origVal);
+        }
+      }
+      if (allocatedPoints > 2) {
+        return false; // Cannot allocate more than 2 ASI points
+      }
+    }
 
     const oldMaxHp = char.maxHp || char.hp || 10;
     const oldHp = char.hp || 10;
@@ -346,12 +371,6 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       activeLevelUpSession: null,
       levelUpQueue: []
     }));
-
-    // If character still has enough XP for subsequent levels, auto-initialize next step
-    const nextSession = await evaluateNextLevelStep(updatedChar);
-    if (nextSession) {
-      set({ activeLevelUpSession: nextSession });
-    }
 
     return true;
   },

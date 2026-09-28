@@ -52,16 +52,26 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     money: { cp: 0, sp: 0, ep: 0, gp: 10, pp: 0 }
   };
 
+  const secondaryCharacter: Character = {
+    ...testCharacter,
+    id: 'test-wizard-2',
+    name: 'Ezren',
+    class: 'Wizard'
+  };
+
   beforeEach(() => {
     useCharacterStore.setState({
-      characters: [JSON.parse(JSON.stringify(testCharacter))],
+      characters: [
+        JSON.parse(JSON.stringify(testCharacter)),
+        JSON.parse(JSON.stringify(secondaryCharacter))
+      ],
       activeCharacterId: 'test-fighter-1',
       activeLevelUpSession: null,
       levelUpQueue: []
     });
   });
 
-  it('1. Gaining XP creates level-up eligibility WITHOUT silently changing character level or HP', async () => {
+  it('1. Gaining XP creates level-up eligibility WITHOUT auto-creating an active session or mutating character level/HP', async () => {
     const store = useCharacterStore.getState();
     const targetXp = getXPForLevel(2); // 300 XP for Level 2
 
@@ -76,10 +86,12 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(updatedChar.level).toBe(1);
     expect(updatedChar.hp).toBe(12);
     expect(updatedChar.maxHp).toBe(12);
-    expect(updatedChar.features).toHaveLength(1);
+
+    // Active session must remain null until explicitly started by player
+    expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  it('2. Starting a level-up creates a progression session targeting the exact next level', async () => {
+  it('2. Explicit player start creates a progression session targeting currentLevel + 1', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
 
@@ -89,32 +101,78 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(session?.characterId).toBe('test-fighter-1');
     expect(session?.currentLevel).toBe(1);
     expect(session?.targetLevel).toBe(2);
-    expect(session?.classHitDie).toBe(10); // Fighter hit die
+    expect(session?.classHitDie).toBe(10);
   });
 
-  it('3. Dismissing/cancelling an incomplete level-up leaves canonical character state completely unchanged', async () => {
+  it('3. Cancelling a level-up clears active session, but character remains eligible to start again', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
     await store.startLevelUpSession('test-fighter-1');
 
     expect(useCharacterStore.getState().activeLevelUpSession).not.toBeNull();
 
-    // Player cancels level up
+    // Player cancels level up session
     store.cancelLevelUpSession();
 
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
 
+    // Canonical character state remains unchanged
     const charAfterCancel = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
     expect(charAfterCancel.level).toBe(1);
     expect(charAfterCancel.hp).toBe(12);
-    expect(charAfterCancel.maxHp).toBe(12);
-    expect(charAfterCancel.features).toHaveLength(1);
+
+    // Player can start level-up session again!
+    const reloadedSession = await store.startLevelUpSession('test-fighter-1');
+    expect(reloadedSession).not.toBeNull();
+    expect(reloadedSession?.targetLevel).toBe(2);
   });
 
-  it('4. Completing level-up commits new level, HP, features, and choices atomically', async () => {
+  it('4. Guard prevents overwriting an existing active session for another character', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
-    const session = await store.startLevelUpSession('test-fighter-1');
+    await store.addXp('test-wizard-2', 300);
+
+    // Active session started for fighter
+    await store.startLevelUpSession('test-fighter-1');
+    expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test-fighter-1');
+
+    // Attempting to start session for wizard while fighter session is active returns null
+    const secondSession = await store.startLevelUpSession('test-wizard-2');
+    expect(secondSession).toBeNull();
+    expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test-fighter-1');
+  });
+
+  it('5. Commit rejects invalid targetLevel or malformed payloads without mutating character state', async () => {
+    const store = useCharacterStore.getState();
+    await store.addXp('test-fighter-1', 300);
+    await store.startLevelUpSession('test-fighter-1'); // Active session for targetLevel 2
+
+    // Mismatched targetLevel
+    const wrongTargetCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 5,
+      finalHpGain: 8
+    });
+    expect(wrongTargetCommit).toBe(false);
+
+    // Invalid HP gain (0 or negative)
+    const invalidHpCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 0
+    });
+    expect(invalidHpCommit).toBe(false);
+
+    // Character state remains untouched after rejected commits
+    const char = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
+    expect(char.level).toBe(1);
+    expect(char.hp).toBe(12);
+  });
+
+  it('6. Completing level-up commits new level, HP, features, and choices atomically', async () => {
+    const store = useCharacterStore.getState();
+    await store.addXp('test-fighter-1', 300);
+    await store.startLevelUpSession('test-fighter-1');
 
     const commitSuccess = await store.commitLevelUpSession({
       characterId: 'test-fighter-1',
@@ -139,17 +197,18 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  it('5. Multiple consecutive eligible levels are handled deterministically step-by-step', async () => {
+  it('7. Multi-level eligibility leaves the next level pending rather than automatically starting it', async () => {
     const store = useCharacterStore.getState();
     // Give enough XP for Level 3 immediately (900 XP)
     await store.addXp('test-fighter-1', 900);
 
     let char = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
     expect(char.level).toBe(1);
+    expect(useCharacterStore.getState().activeLevelUpSession).toBeNull(); // Pending, not auto-started
 
-    // Active session should automatically target level 2
-    let session = useCharacterStore.getState().activeLevelUpSession;
-    expect(session?.targetLevel).toBe(2);
+    // Explicitly start level 2
+    await store.startLevelUpSession('test-fighter-1');
+    expect(useCharacterStore.getState().activeLevelUpSession?.targetLevel).toBe(2);
 
     // Commit Level 2
     await store.commitLevelUpSession({
@@ -161,11 +220,14 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     char = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
     expect(char.level).toBe(2);
 
-    // Because character has 900 XP (enough for Lvl 3), active session automatically advances to target level 3!
-    session = useCharacterStore.getState().activeLevelUpSession;
-    expect(session).not.toBeNull();
-    expect(session?.currentLevel).toBe(2);
-    expect(session?.targetLevel).toBe(3);
+    // After commit, Level 3 remains pending (activeLevelUpSession is null until explicit start)
+    expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
+
+    // Player explicitly starts Level 3
+    const level3Session = await store.startLevelUpSession('test-fighter-1');
+    expect(level3Session).not.toBeNull();
+    expect(level3Session?.currentLevel).toBe(2);
+    expect(level3Session?.targetLevel).toBe(3);
 
     // Commit Level 3
     await store.commitLevelUpSession({
