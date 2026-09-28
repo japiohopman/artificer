@@ -728,14 +728,24 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(infernalTiefling?.damage_resistances).toContain('fire');
     expect(infernalTiefling?.spells?.cantrip).toBe('fire_bolt');
 
-    // Verify Goliath trait source-parity details
+    // Verify Goliath and Dragonborn trait source-parity details
     const powerfulBuild = await fetchTraitData('powerful_build');
     expect(powerfulBuild).not.toBeNull();
-    expect(powerfulBuild?.desc.join(' ')).toContain('Advantage on Ability Checks made to end or avoid the Grappled condition');
+    const pbDesc = powerfulBuild?.desc.join(' ');
+    expect(pbDesc).toContain('Advantage on Ability Checks made to end the Grappled condition');
+    expect(pbDesc).not.toContain('or avoid');
 
     const largeForm = await fetchTraitData('large_form');
     expect(largeForm).not.toBeNull();
-    expect(largeForm?.desc.join(' ')).toContain("can't use it again until you finish a Long Rest");
+    const lfDesc = largeForm?.desc.join(' ');
+    expect(lfDesc).toContain("in a space large enough");
+    expect(lfDesc).toContain("can't use it again until you finish a Long Rest");
+
+    const draconicFlight = await fetchTraitData('draconic_flight');
+    expect(draconicFlight).not.toBeNull();
+    const dfDesc = draconicFlight?.desc.join(' ');
+    expect(dfDesc).toContain("retract them (no action required)");
+    expect(dfDesc).toContain("can't use it again until you finish a Long Rest");
 
     const giantAncestry = await fetchTraitData('giant_ancestry');
     expect(giantAncestry).not.toBeNull();
