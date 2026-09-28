@@ -128,17 +128,16 @@ async function runAsyncUnitTests() {
   }
   useGameStore.getState().setRuleset('2014'); // restore default
 
-  // Test monster fallback behavior: shhhte7b92pefcwb (Aboleth 2014) exists in 2014 monsters.
+  // Test monster fail-closed ruleset isolation: shhhte7b92pefcwb (Aboleth 2014) exists in 2014 monsters.
   // A 2014 request loads 2014 data -> rulesetContext = '2014'
   const mon2014 = await fetchMonsterData('shhhte7b92pefcwb', '2014');
   if (!mon2014 || !mon2014.name || mon2014.rulesetContext !== '2014') {
     throw new Error(`fetchMonsterData for 2014 failed to resolve with canonical 2014 context. Got: ${mon2014?.rulesetContext}`);
   }
-  // A 2024 request for 2014-only ID shhhte7b92pefcwb falls back to 2014 data.
-  // The returned rulesetContext MUST truthfully report '2014' (the version actually loaded), NOT '2024'.
+  // A 2024 request for 2014-only ID shhhte7b92pefcwb MUST return null (fail-closed, NO cross-ruleset fallback).
   const mon2024 = await fetchMonsterData('shhhte7b92pefcwb', '2024');
-  if (!mon2024 || !mon2024.name || mon2024.rulesetContext !== '2014') {
-    throw new Error(`fetchMonsterData for 2024 with 2014 fallback failed to truthfully report actual loaded ruleset '2014'. Got: ${mon2024?.rulesetContext}`);
+  if (mon2024 !== null) {
+    throw new Error(`fetchMonsterData for 2024 with 2014-only ID shhhte7b92pefcwb expected null (fail-closed), got: ${JSON.stringify(mon2024)}`);
   }
 }
 

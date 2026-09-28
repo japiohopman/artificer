@@ -93,4 +93,41 @@ describe('Enemy Ruleset Migration Audits & Isolation', () => {
     expect(monster.imageUrl).not.toContain('/enemies/tokens/');
     expect(monster.image).toBe('/assets/atlas/enemies/tokens/aberration/Aboleth.webp');
   });
+
+  it('should enforce fail-closed behavior when requesting a 2014-only monster ID under 2024 ruleset', async () => {
+    const mon2024 = await fetchMonsterData('shhhte7b92pefcwb', '2024');
+    expect(mon2024).toBeNull();
+  });
+
+  it('should return strictly ruleset-local records when calling fetchMonsterList', async () => {
+    const list14 = await fetchMonsterList('2014');
+    expect(list14.length).toBe(352);
+    list14.forEach(m => {
+      expect(m.path).toContain('/14/');
+      expect(m.path).not.toContain('/24/');
+    });
+
+    const list24 = await fetchMonsterList('2024');
+    expect(list24.length).toBe(392);
+    list24.forEach(m => {
+      expect(m.path).toContain('/24/');
+      expect(m.path).not.toContain('/14/');
+    });
+  });
+
+  it('should verify no _folder metadata records exist in enemy indexes or category files', () => {
+    const index14 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies/index_14.json'), 'utf8'));
+    const index24 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies/index_24.json'), 'utf8'));
+    const indexUnified = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies/index.json'), 'utf8'));
+
+    const catIndex14 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies_categories/index_14.json'), 'utf8'));
+    const catIndex24 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies_categories/index_24.json'), 'utf8'));
+
+    [index14, index24, indexUnified, catIndex14, catIndex24].forEach(list => {
+      list.forEach((item: any) => {
+        expect(item.index).not.toContain('_folder');
+        if (item.name) expect(item.name).not.toContain('_folder');
+      });
+    });
+  });
 });
