@@ -34,7 +34,10 @@ export function parseRoadmapSequence(markdown) {
     '## Execution Sequence',
     '## Roadmap Sequence'
   ]);
-  const textToParse = section || markdown;
+
+  if (!section) return [];
+
+  const textToParse = section;
 
   const lines = textToParse.split('\n');
   const sequence = [];
@@ -87,8 +90,82 @@ export function findOpenImplementationPr(issueNumber, prs) {
   return prs.find(pr =>
     pr.state === 'open'
     && !pr.merged
-    && new RegExp('(Closes|Fixes|Resolves|Refs|Part of)\\s+' + needle + '\\b', 'i').test(pr.body || '')
+    && (
+      new RegExp('(Closes|Fixes|Resolves|Refs|Part of)\\s+' + needle + '\\b', 'i').test(pr.body || '') ||
+      new RegExp('\\(#' + issueNumber + '\\)', 'i').test(pr.title || '') ||
+      new RegExp('\\(#' + issueNumber + '\\)', 'i').test(pr.body || '')
+    )
   ) || null;
+}
+
+export function advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates, options = {}) {
+  const fileExistFn = options.fileExistFn;
+  if (!roadmapSequence || roadmapSequence.length === 0) return null;
+
+  for (let i = 0; i < roadmapSequence.length; i++) {
+    const seq = roadmapSequence[i];
+    if (seq.issueNumber === null) {
+      const isComplete = /complete|completed|done|passed/i.test(seq.currentState || '');
+      if (!isComplete) break;
+      continue;
+    }
+
+    const depState = dependencyStates instanceof Map
+      ? dependencyStates.get(seq.issueNumber)
+      : dependencyStates[seq.issueNumber];
+
+    const isClosedInDepStates = depState && (
+      (depState.type === 'issue' && depState.state === 'closed') ||
+      (depState.type === 'pull_request' && depState.merged)
+    );
+
+    const isOpenInIssues = issues.some(idx => idx && idx.number === seq.issueNumber && idx.state === 'open' && !idx.pull_request);
+    const isOpenInDepStates = depState && depState.state === 'open';
+
+    if (isClosedInDepStates || (!isOpenInIssues && !isOpenInDepStates && depState && depState.state === 'closed')) {
+      // Completed, continue to check next item
+      continue;
+    }
+
+    // Found the first uncompleted sequence issue!
+    const targetIssue = issues.find(idx => idx && idx.number === seq.issueNumber && idx.state === 'open' && !idx.pull_request);
+    if (!targetIssue) break;
+
+    // Check if it's currently status: proposed
+    const dispatchMeta = parseDispatchMetadata(targetIssue.body || '');
+    if (dispatchMeta.status === 'proposed') {
+      // Validate quality gate with status overridden to ready to check if quality gate passes
+      const updatedBody = targetIssue.body.replace('- **status:** proposed', '- **status:** ready');
+      const quality = validateIssueQualityGate(updatedBody, { fileExistFn });
+
+      if (quality.valid) {
+        // Check dependencies
+        let depsBlocked = false;
+        for (const dep of quality.metadata.dependsOn) {
+          const state = dependencyStates instanceof Map ? dependencyStates.get(dep) : dependencyStates[dep];
+          const decision = dependencyBlocks(dep, state);
+          if (decision.blocked) {
+            depsBlocked = true;
+            break;
+          }
+        }
+
+        if (!depsBlocked) {
+          return {
+            promoted: true,
+            issueNumber: targetIssue.number,
+            updatedBody,
+            targetIssue
+          };
+        }
+      }
+    }
+
+    // Stop searching once we encounter the first uncompleted issue
+    break;
+  }
+
+  return null;
 }
 
 export function dependencyBlocks(number, state) {
@@ -388,6 +465,26 @@ async function main() {
     ...sequenceIssueNumbers
   ])];
   const dependencyStates = await dependencies(dependencyNumbers);
+
+  // Check for automatic readiness handoff if the current candidate is not ready but eligible for promotion
+  const promotion = advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates);
+  if (promotion && promotion.promoted) {
+    console.error(`Automatic readiness handoff: Promoting Issue #${promotion.issueNumber} to status: ready ...`);
+    const patchResponse = await fetch('https://api.github.com/repos/' + REPO + '/issues/' + promotion.issueNumber, {
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Bearer ' + TOKEN,
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ body: promotion.updatedBody })
+    });
+    if (patchResponse.ok) {
+      console.error(`Successfully promoted Issue #${promotion.issueNumber} to status: ready.`);
+      promotion.targetIssue.body = promotion.updatedBody;
+    }
+  }
+
   const decision = selectDispatchableIssue(issues, {
     openPullRequests: prs,
     dependencyStates,

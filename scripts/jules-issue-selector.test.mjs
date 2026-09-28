@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
+  advanceNextCuratedIssueReadiness,
   buildJulesPrompt,
   dependencyBlocks,
   findOpenImplementationPr,
@@ -94,6 +95,9 @@ test('pull requests are never candidates', () => {
 test('open implementation PR blocks an issue', () => {
   const pr = { number: 55, state: 'open', merged: false, body: 'Part of #42' };
   assert.equal(findOpenImplementationPr(42, [pr]).number, 55);
+
+  const generatedPr = { number: 388, title: 'feat(workflow): roadmap sequencing (#387)', state: 'open', merged: false, body: 'Establishes roadmap sequencing (#387)' };
+  assert.equal(findOpenImplementationPr(387, [generatedPr]).number, 388);
 });
 
 test('dependency PR must be merged', () => {
@@ -148,7 +152,7 @@ test('canonical references parse', () => {
   assert.deepEqual(parseCanonicalReferences(meta), ['AGENT.MD', 'AGENT_RULES.md']);
 });
 
-test('parseRoadmapSequence extracts markdown table sequence items', () => {
+test('parseRoadmapSequence extracts markdown table sequence items and fails closed if section missing', () => {
   const markdown = [
     '# Strategic Roadmap',
     '',
@@ -170,6 +174,31 @@ test('parseRoadmapSequence extracts markdown table sequence items', () => {
   assert.equal(seq[1].issueNumber, 365);
   assert.equal(seq[3].order, 4);
   assert.equal(seq[3].issueNumber, null);
+
+  // Fails closed if dedicated section is missing
+  assert.deepEqual(parseRoadmapSequence('## Other Section\n| 1 | #100 | Purpose | state |'), []);
+});
+
+test('advanceNextCuratedIssueReadiness promotes next proposed issue in sequence if Quality Gate passes', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'merged' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'proposed' }
+  ];
+
+  const proposedBody = meta.replace('- **status:** ready', '- **status:** proposed');
+  const issue365 = issue(365, proposedBody);
+
+  const promotion = advanceNextCuratedIssueReadiness(
+    [issue365],
+    seq,
+    new Map([[387, { type: 'issue', state: 'closed' }]]),
+    { fileExistFn }
+  );
+
+  assert.ok(promotion);
+  assert.equal(promotion.promoted, true);
+  assert.equal(promotion.issueNumber, 365);
+  assert.match(promotion.updatedBody, /- \*\*status:\*\* ready/);
 });
 
 test('roadmap sequence selection selects first incomplete sequence candidate', () => {
@@ -277,12 +306,12 @@ test('all specialist contracts are repository-local and present', () => {
   }
 });
 
-test('selector source never reads legacy queue files', () => {
+test('selector reads ROADMAP.md strictly for sequence parsing and never reads legacy queue files', () => {
   const source = readFileSync(new URL('./jules-issue-selector.mjs', import.meta.url), 'utf8');
-  assert.equal(source.includes("file('ROADMAP.md')"), false);
   assert.equal(source.includes("file('docs/TASK_BOARD.md')"), false);
-  assert.equal(source.includes("contents/ROADMAP.md"), false);
   assert.equal(source.includes("contents/docs/TASK_BOARD.md"), false);
+  assert.ok(source.includes("fileOrNull('ROADMAP.md')"));
+  assert.ok(source.includes("parseRoadmapSequence"));
 });
 
 test('executable selector stdout is strictly valid JSON even when Discovery persistence triggers diagnostics', async () => {
