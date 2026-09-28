@@ -5,7 +5,9 @@ import {
   advanceNextCuratedIssueReadiness,
   buildJulesPrompt,
   dependencyBlocks,
+  file,
   findOpenImplementationPr,
+  formatDirectoryListing,
   isCandidateIssue,
   parseCanonicalReferences,
   parseDispatchMetadata,
@@ -475,6 +477,120 @@ test('selector reads ROADMAP.md strictly for sequence parsing and never reads le
   assert.equal(source.includes("contents/docs/TASK_BOARD.md"), false);
   assert.ok(source.includes("fileOrNull('ROADMAP.md')"));
   assert.ok(source.includes("parseRoadmapSequence"));
+});
+
+test('formatDirectoryListing formats directory entries deterministically and bounds output', () => {
+  const items = [
+    { name: 'b.json', type: 'file', size: 100 },
+    { name: 'a_dir', type: 'dir' },
+    { name: 'c.json', type: 'file', size: 250 }
+  ];
+
+  const listing = formatDirectoryListing('public/assets/atlas/species/', items, 2);
+  assert.match(listing, /Directory listing for public\/assets\/atlas\/species\/ \(3 items\):/);
+  assert.match(listing, /- \[DIR\] a_dir/);
+  assert.match(listing, /- \[FILE\] b\.json \(100 bytes\)/);
+  assert.match(listing, /... and 1 more entries \(truncated\)\./);
+});
+
+test('file function formats directory array without crashing', async () => {
+  const globalFetch = globalThis.fetch;
+  try {
+    globalThis.fetch = async (url) => {
+      const u = new URL(url);
+      if (u.pathname.includes('/contents/public/assets/atlas/species/')) {
+        return new Response(JSON.stringify([
+          { name: 'elf.json', type: 'file', size: 500 },
+          { name: 'subfolder', type: 'dir' }
+        ]), { status: 200 });
+      }
+      return new Response(JSON.stringify({ content: Buffer.from('file content').toString('base64') }), { status: 200 });
+    };
+
+    const result = await file('public/assets/atlas/species/');
+    assert.match(result, /Directory listing for public\/assets\/atlas\/species\//);
+    assert.match(result, /- \[FILE\] elf\.json \(500 bytes\)/);
+    assert.match(result, /- \[DIR\] subfolder/);
+  } finally {
+    globalThis.fetch = globalFetch;
+  }
+});
+
+test('regression: executable selector constructs payload for issue with directory canonical reference without ERR_INVALID_ARG_TYPE', async () => {
+  const { spawnSync } = await import('node:child_process');
+  const runnerScript = `
+    globalThis.fetch = async (url, options = {}) => {
+      const u = new URL(url);
+      const tick = String.fromCharCode(96);
+      const metaWithDirRef = [
+        '## Problem / Desired Outcome', 'Problem',
+        '## Goal', 'Goal',
+        '## Current Repository Facts', '- ' + tick + 'public/assets/atlas/species/' + tick + ' exists.',
+        '## Investigation Required', 'Investigation',
+        '## Canonical Ownership', 'Ownership',
+        '## Known Risks / Invariants', 'Risks',
+        '## Scope', '- ' + tick + 'public/assets/atlas/species/' + tick,
+        '## Acceptance Criteria', '1. Criterion',
+        '## Verification Plan', '- Verification',
+        '## Canonical References',
+        '- ' + tick + 'AGENT.MD' + tick,
+        '- ' + tick + 'public/assets/atlas/species/' + tick,
+        '## Out of Scope', 'Out of scope',
+        '## Jules Dispatch Metadata',
+        '- **status:** ready',
+        '- **priority:** 100',
+        '- **specialist:** architecture',
+        '- **depends-on:** none',
+        '- **dispatch-policy:** one issue at a time',
+        '- **implementation-branch:** required'
+      ].join('\\n');
+
+      if (u.pathname.endsWith('/issues')) {
+        return new Response(JSON.stringify([
+          { number: 365, title: 'Complete Foundry 2024 species', body: metaWithDirRef, state: 'open' }
+        ]), { status: 200 });
+      }
+      if (u.pathname.endsWith('/pulls')) {
+        return new Response(JSON.stringify([]), { status: 200 });
+      }
+      if (u.pathname.includes('/contents/')) {
+        if (u.pathname.includes('public/assets/atlas/species/')) {
+          return new Response(JSON.stringify([
+            { name: 'elf.json', type: 'file', size: 1024 },
+            { name: 'dwarf.json', type: 'file', size: 2048 }
+          ]), { status: 200 });
+        }
+        return new Response(JSON.stringify({ content: Buffer.from('mock content').toString('base64') }), { status: 200 });
+      }
+      return new Response(JSON.stringify({}), { status: 200 });
+    };
+
+    const scriptUrl = new URL('./scripts/jules-issue-selector.mjs', 'file://' + process.cwd() + '/');
+    process.argv[1] = scriptUrl.pathname;
+    await import(scriptUrl.href);
+  `;
+
+  const child = spawnSync(process.execPath, ['--input-type=module', '-e', runnerScript], {
+    env: {
+      ...process.env,
+      GITHUB_REPOSITORY: 'japiohopman/artificer',
+      GITHUB_TOKEN: 'mock-token'
+    },
+    encoding: 'utf8'
+  });
+
+  assert.equal(child.status, 0, 'Child process failed: ' + child.stderr);
+
+  let parsed;
+  assert.doesNotThrow(() => {
+    parsed = JSON.parse(child.stdout);
+  }, 'Selector stdout must be valid JSON');
+
+  assert.equal(parsed.dispatchable, true);
+  assert.equal(parsed.issueNumber, 365);
+  assert.match(parsed.prompt, /Directory listing for public\/assets\/atlas\/species\//);
+  assert.match(parsed.prompt, /- \[FILE\] dwarf\.json \(2048 bytes\)/);
+  assert.match(parsed.prompt, /- \[FILE\] elf\.json \(1024 bytes\)/);
 });
 
 test('executable selector stdout is strictly valid JSON even when Discovery persistence triggers diagnostics', async () => {
