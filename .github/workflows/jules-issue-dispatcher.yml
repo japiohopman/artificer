@@ -77,6 +77,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          JULES_DISPATCH_CONFIRMATION: ${{ inputs.confirmation }}
         run: |
           node scripts/jules-issue-selector.mjs > "$RUNNER_TEMP/jules-selector.json"
           cat "$RUNNER_TEMP/jules-selector.json"

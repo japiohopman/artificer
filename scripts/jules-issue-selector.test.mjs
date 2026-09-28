@@ -2,12 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
+  advanceNextCuratedIssueReadiness,
   buildJulesPrompt,
   dependencyBlocks,
   findOpenImplementationPr,
   isCandidateIssue,
   parseCanonicalReferences,
   parseDispatchMetadata,
+  parseRoadmapSequence,
   selectDispatchableIssue,
   sortDispatchCandidates,
   specialistPath
@@ -93,6 +95,9 @@ test('pull requests are never candidates', () => {
 test('open implementation PR blocks an issue', () => {
   const pr = { number: 55, state: 'open', merged: false, body: 'Part of #42' };
   assert.equal(findOpenImplementationPr(42, [pr]).number, 55);
+
+  const generatedPr = { number: 388, title: 'feat(workflow): roadmap sequencing (#387)', state: 'open', merged: false, body: 'Establishes roadmap sequencing (#387)' };
+  assert.equal(findOpenImplementationPr(387, [generatedPr]).number, 388);
 });
 
 test('dependency PR must be merged', () => {
@@ -147,6 +152,280 @@ test('canonical references parse', () => {
   assert.deepEqual(parseCanonicalReferences(meta), ['AGENT.MD', 'AGENT_RULES.md']);
 });
 
+test('parseRoadmapSequence extracts markdown table sequence items and fails closed if section missing', () => {
+  const markdown = [
+    '# Strategic Roadmap',
+    '',
+    '## ChatGPT-Curated Execution Sequence',
+    '',
+    '| Order | Issue / checkpoint | Purpose | Current state |',
+    '|---|---|---|---|',
+    '| 1 | #387 | Establish roadmap sequencing | **ready — next workflow task** |',
+    '| 2 | #365 | Complete Foundry 2024 species | queued after #387 |',
+    '| 3 | #376 | Close remaining 2024 gaps | blocked by #365 |',
+    '| 4 | Character Creator stability | Verify creator flow | after #376 |'
+  ].join('\n');
+
+  const seq = parseRoadmapSequence(markdown);
+  assert.equal(seq.length, 4);
+  assert.equal(seq[0].order, 1);
+  assert.equal(seq[0].issueNumber, 387);
+  assert.equal(seq[1].order, 2);
+  assert.equal(seq[1].issueNumber, 365);
+  assert.equal(seq[3].order, 4);
+  assert.equal(seq[3].issueNumber, null);
+
+  // Fails closed if dedicated section is missing
+  assert.deepEqual(parseRoadmapSequence('## Other Section\n| 1 | #100 | Purpose | state |'), []);
+});
+
+test('advanceNextCuratedIssueReadiness promotes next proposed issue in sequence if Quality Gate passes', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'merged' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'proposed' }
+  ];
+
+  const proposedBody = meta.replace('- **status:** ready', '- **status:** proposed');
+  const issue365 = issue(365, proposedBody);
+
+  const promotion = advanceNextCuratedIssueReadiness(
+    [issue365],
+    seq,
+    new Map([[387, { type: 'issue', state: 'closed', stateReason: 'completed' }]]),
+    { fileExistFn }
+  );
+
+  assert.ok(promotion);
+  assert.equal(promotion.promoted, true);
+  assert.equal(promotion.issueNumber, 365);
+  assert.match(promotion.updatedBody, /- \*\*status:\*\* ready/);
+});
+
+test('executable selector throws error fail-closed if GitHub API PATCH fails during promotion', async () => {
+  const { spawnSync } = await import('node:child_process');
+  const runnerScript = `
+    globalThis.fetch = async (url, options = {}) => {
+      const u = new URL(url);
+      if (options.method === 'PATCH' && u.pathname.endsWith('/issues/365')) {
+        return new Response('Internal Server Error', { status: 500 });
+      }
+      if (u.pathname.endsWith('/issues/387')) {
+        return new Response(JSON.stringify({ number: 387, state: 'closed', state_reason: 'completed' }), { status: 200 });
+      }
+      if (options.method === 'PATCH') {
+        return new Response('Internal Server Error', { status: 500 });
+      }
+      if (u.pathname.endsWith('/issues/387')) {
+        return new Response(JSON.stringify({ number: 387, state: 'closed' }), { status: 200 });
+      }
+      if (u.pathname.endsWith('/issues/365')) {
+        const tick = String.fromCharCode(96);
+        const metaProposed = [
+          '## Problem / Desired Outcome', 'Problem',
+          '## Goal', 'Goal',
+          '## Current Repository Facts', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick + ' exists.',
+          '## Investigation Required', 'Investigation',
+          '## Canonical Ownership', 'Ownership',
+          '## Known Risks / Invariants', 'Risks',
+          '## Scope', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick,
+          '## Acceptance Criteria', '1. Criterion',
+          '## Verification Plan', '- Verification',
+          '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
+          '## Out of Scope', 'Out of scope',
+          '## Jules Dispatch Metadata',
+          '- **status:** proposed',
+          '- **priority:** 100',
+          '- **specialist:** architecture',
+          '- **depends-on:** none',
+          '- **dispatch-policy:** one issue at a time',
+          '- **implementation-branch:** required'
+        ].join('\\n');
+        return new Response(JSON.stringify({ number: 365, title: 'Issue 365', body: metaProposed, state: 'open' }), { status: 200 });
+      }
+      if (u.pathname.endsWith('/issues')) {
+        const tick = String.fromCharCode(96);
+        const metaProposed = [
+          '## Problem / Desired Outcome', 'Problem',
+          '## Goal', 'Goal',
+          '## Current Repository Facts', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick + ' exists.',
+          '## Investigation Required', 'Investigation',
+          '## Canonical Ownership', 'Ownership',
+          '## Known Risks / Invariants', 'Risks',
+          '## Scope', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick,
+          '## Acceptance Criteria', '1. Criterion',
+          '## Verification Plan', '- Verification',
+          '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
+          '## Out of Scope', 'Out of scope',
+          '## Jules Dispatch Metadata',
+          '- **status:** proposed',
+          '- **priority:** 100',
+          '- **specialist:** architecture',
+          '- **depends-on:** none',
+          '- **dispatch-policy:** one issue at a time',
+          '- **implementation-branch:** required'
+        ].join('\\n');
+        return new Response(JSON.stringify([
+          { number: 365, title: 'Issue 365', body: metaProposed, state: 'open' }
+        ]), { status: 200 });
+      }
+      if (u.pathname.endsWith('/pulls')) {
+        return new Response(JSON.stringify([]), { status: 200 });
+      }
+      if (u.pathname.includes('/contents/')) {
+        if (u.pathname.includes('ROADMAP.md')) {
+          const roadmap = [
+            '## ChatGPT-Curated Execution Sequence',
+            '| Order | Issue / checkpoint | Purpose | Current state |',
+            '|---|---|---|---|',
+            '| 1 | #387 | Purpose 1 | completed |',
+            '| 2 | #365 | Purpose 2 | proposed |'
+          ].join('\\n');
+          return new Response(JSON.stringify({ content: Buffer.from(roadmap).toString('base64') }), { status: 200 });
+        }
+        return new Response(JSON.stringify({ content: Buffer.from('mock content').toString('base64') }), { status: 200 });
+      }
+      return new Response(JSON.stringify({}), { status: 200 });
+    };
+
+    const scriptUrl = new URL('./scripts/jules-issue-selector.mjs', 'file://' + process.cwd() + '/');
+    process.argv[1] = scriptUrl.pathname;
+    await import(scriptUrl.href);
+  `;
+
+  const child = spawnSync(process.execPath, ['--input-type=module', '-e', runnerScript], {
+    env: {
+      ...process.env,
+      GITHUB_REPOSITORY: 'japiohopman/artificer',
+      GITHUB_TOKEN: 'mock-token',
+      ALLOW_READINESS_MUTATION: 'true'
+    },
+    encoding: 'utf8'
+  });
+
+  assert.notEqual(child.status, 0, 'Child process must fail when PATCH fails');
+  assert.ok(child.stderr.includes('Automatic readiness handoff failed'), 'Diagnostics must report promotion failure');
+});
+
+test('roadmap sequence selection selects first incomplete sequence candidate', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'ready' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'queued' }
+  ];
+
+  const issue387 = issue(387);
+  const issue365 = issue(365, meta.replace('**priority:** 100', '**priority:** 200'));
+
+  const result = selectDispatchableIssue(
+    [issue387, issue365],
+    {
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected.issue.number, 387);
+  assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Skipped by roadmap sequence selection')));
+});
+
+test('roadmap sequence selection blocks later items when earlier roadmap item is incomplete', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'in progress' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'open' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected, null);
+  assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Blocked by earlier incomplete roadmap sequence item')));
+});
+
+test('roadmap sequence selection advances after earlier item is merged/closed', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'merged' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: 'completed' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected.issue.number, 365);
+});
+
+test('sequence issue is not complete if roadmap says complete but issue is open in repository', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'completed in PR #387' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'open' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected, null);
+  assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Blocked by earlier incomplete roadmap sequence item')));
+});
+
+test('sequence issue closed as not_planned, duplicate, or null/unknown stateReason does not count as completed terminal state', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'closed' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  // null stateReason
+  const resultNull = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: null }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+  assert.equal(resultNull.selected, null);
+
+  // not_planned stateReason
+  const resultNotPlanned = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: 'not_planned' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+  assert.equal(resultNotPlanned.selected, null);
+});
+
+test('dependencyBlocks requires explicit stateReason completed for closed issues', () => {
+  assert.equal(dependencyBlocks(99, { type: 'issue', state: 'closed', stateReason: 'completed' }).blocked, false);
+  assert.equal(dependencyBlocks(99, { type: 'issue', state: 'closed', stateReason: 'not_planned' }).blocked, true);
+  assert.equal(dependencyBlocks(99, { type: 'issue', state: 'closed', stateReason: null }).blocked, true);
+});
+
 test('dry-run prompt contains required context', () => {
   const prompt = buildJulesPrompt(
     issue(42),
@@ -190,12 +469,12 @@ test('all specialist contracts are repository-local and present', () => {
   }
 });
 
-test('selector source never reads legacy queue files', () => {
+test('selector reads ROADMAP.md strictly for sequence parsing and never reads legacy queue files', () => {
   const source = readFileSync(new URL('./jules-issue-selector.mjs', import.meta.url), 'utf8');
-  assert.equal(source.includes("file('ROADMAP.md')"), false);
   assert.equal(source.includes("file('docs/TASK_BOARD.md')"), false);
-  assert.equal(source.includes("contents/ROADMAP.md"), false);
   assert.equal(source.includes("contents/docs/TASK_BOARD.md"), false);
+  assert.ok(source.includes("fileOrNull('ROADMAP.md')"));
+  assert.ok(source.includes("parseRoadmapSequence"));
 });
 
 test('executable selector stdout is strictly valid JSON even when Discovery persistence triggers diagnostics', async () => {
@@ -211,11 +490,11 @@ test('executable selector stdout is strictly valid JSON even when Discovery pers
         const meta = [
           '## Problem / Desired Outcome', 'Problem',
           '## Goal', 'Goal',
-          '## Current Repository Facts', '- Fact',
+          '## Current Repository Facts', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick + ' exists.',
           '## Investigation Required', 'Investigation',
           '## Canonical Ownership', 'Ownership',
           '## Known Risks / Invariants', 'Risks',
-          '## Scope', '- Scope',
+          '## Scope', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick,
           '## Acceptance Criteria', '1. Criterion',
           '## Verification Plan', '- Verification',
           '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
@@ -231,6 +510,9 @@ test('executable selector stdout is strictly valid JSON even when Discovery pers
         return new Response(JSON.stringify([
           { number: 1, title: 'Issue 1', body: meta, state: 'open' }
         ]), { status: 200 });
+      }
+      if (u.pathname.endsWith('/issues/387') || u.pathname.endsWith('/issues/365')) {
+        return new Response(JSON.stringify({ number: 365, state: 'open' }), { status: 200 });
       }
       if (u.pathname.endsWith('/pulls')) {
         return new Response(JSON.stringify([]), { status: 200 });
