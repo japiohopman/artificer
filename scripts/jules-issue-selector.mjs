@@ -467,8 +467,8 @@ async function main() {
   if (!REPO || !TOKEN) throw new Error('GITHUB_REPOSITORY and GITHUB_TOKEN are required.');
 
   const results = await Promise.all([
-    github('issues?state=open&per_page=100'),
-    github('pulls?state=open&base=main&per_page=100'),
+    github('issues?state=all&per_page=100'),
+    github('pulls?state=all&base=main&per_page=100'),
     fileOrNull('ROADMAP.md')
   ]);
   const issues = results[0];
