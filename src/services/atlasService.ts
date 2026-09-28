@@ -271,9 +271,14 @@ class AtlasService {
   }
 
   async loadEquipment(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
-    const { fetchEquipmentData } = await import('./storageService');
+    const { fetchEquipmentData, getActiveRulesetContext } = await import('./storageService');
+    const activeRuleset = getActiveRulesetContext(ruleset);
     const data = await fetchEquipmentData(index, ruleset);
     if (data) return data;
+
+    if (activeRuleset === '2024') {
+      return null;
+    }
 
     let resolvedPath: string | null = null;
     try {
@@ -281,8 +286,9 @@ class AtlasService {
       if (Array.isArray(equipmentIndex)) {
         const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
         const entry = equipmentIndex.find((e: any) =>
-          e.index.toLowerCase() === index.toLowerCase() ||
-          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+          e.json_path?.includes('/14/') &&
+          (e.index.toLowerCase() === index.toLowerCase() ||
+          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch))
         );
         if (entry && entry.json_path) {
           resolvedPath = entry.json_path;
@@ -292,7 +298,7 @@ class AtlasService {
 
     if (resolvedPath) {
       const data = await this.fetchAtlasData(resolvedPath);
-      if (data) return data;
+      if (data) return { ...data, rulesetContext: '2014' };
     }
 
     const slug = index.toLowerCase().replace(/[\s-]/g, '_').replace(/'/g, '');
@@ -305,9 +311,19 @@ class AtlasService {
 
     for (const p of paths) {
       const data = await this.fetchAtlasData(p);
-      if (data) return data;
+      if (data) return { ...data, rulesetContext: '2014' };
     }
     return null;
+  }
+
+  async loadRule(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchRuleData } = await import('./storageService');
+    return fetchRuleData(index, ruleset);
+  }
+
+  async loadTable(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchTableData } = await import('./storageService');
+    return fetchTableData(index, ruleset);
   }
 
   async loadEquipmentPack(packName: string): Promise<any | null> {

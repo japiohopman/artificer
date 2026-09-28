@@ -357,7 +357,34 @@ export const BACKGROUND_DATA: Record<string, any> = {
   }
 };
 
+export async function generateNPCAsync(partial: any): Promise<any> {
+  const { fetchClassData, fetchBackgroundData } = await import('../services/storageService');
+  const ruleset: '2014' | '2024' = partial.ruleset || '2014';
+  const className = partial.class || randomFromList(DND_CLASSES);
+  const background = partial.background || randomFromList(DND_BACKGROUNDS);
+
+  let classData = partial.classData;
+  let backgroundData = partial.backgroundData;
+
+  if (!classData && className) {
+    classData = await fetchClassData(className, ruleset);
+  }
+  if (!backgroundData && background) {
+    backgroundData = await fetchBackgroundData(background, ruleset);
+  }
+
+  return generateNPC({
+    ...partial,
+    class: className,
+    background,
+    ruleset,
+    classData,
+    backgroundData
+  });
+}
+
 export function generateNPC(partial: any): any {
+  const ruleset: '2014' | '2024' = partial.ruleset || '2014';
   const className = partial.class || randomFromList(DND_CLASSES);
   const race = partial.race || randomFromList(DND_RACES);
   const alignment = partial.alignment || randomFromList(DND_ALIGNMENTS);
@@ -466,9 +493,13 @@ export function generateNPC(partial: any): any {
   });
 
   // Class Gear
-  (classInfo.startingEquipment || []).forEach((item: any) => {
-    const itemObj = createItem(item);
-    addItemToRegistry(item, item.slot);
+  const classEquipment = partial.classData?.starting_equipment || classInfo.startingEquipment || [];
+  classEquipment.forEach((item: any) => {
+    const itemIndex = item.equipment?.index || item.index;
+    if (!itemIndex) return;
+    const itemWithIndex = { ...item, index: itemIndex };
+    const itemObj = createItem(itemWithIndex);
+    addItemToRegistry(itemWithIndex, item.slot);
     if (item.slot) {
       if (!inventory[item.slot]) {
         inventory[item.slot] = { ...itemObj, slot: item.slot };
@@ -483,24 +514,23 @@ export function generateNPC(partial: any): any {
   });
 
   // Background Gear
-  const bg = BACKGROUND_DATA[background];
-  if (bg) {
-    bg.equipment.forEach((item: any) => {
-      const itemObj = createItem(item);
-      addItemToRegistry(item, item.slot);
-      if (item.slot && !inventory[item.slot]) {
-        inventory[item.slot] = { ...itemObj, slot: item.slot };
-      } else {
-        backpack.push(itemObj);
-      }
-    });
-  }
-
-  const npcIdPlaceholder = partial.id || `npc-${Date.now()}`;
-  // Removed duplicate npcId declaration below
+  const bgEquipment = partial.backgroundData?.starting_equipment || BACKGROUND_DATA[background]?.equipment || [];
+  bgEquipment.forEach((item: any) => {
+    const itemIndex = item.equipment?.index || item.index;
+    if (!itemIndex) return;
+    const itemWithIndex = { ...item, index: itemIndex };
+    const itemObj = createItem(itemWithIndex);
+    addItemToRegistry(itemWithIndex, item.slot);
+    if (item.slot && !inventory[item.slot]) {
+      inventory[item.slot] = { ...itemObj, slot: item.slot };
+    } else {
+      backpack.push(itemObj);
+    }
+  });
 
   return {
     id: npcId,
+    ruleset: ruleset,
     saveVersion: 2,
     name: partial.name || `NPC ${Math.floor(Math.random() * 1000)}`,
     class: className,
@@ -529,7 +559,7 @@ export function generateNPC(partial: any): any {
     choices,
     hp,
     maxHp: hp,
-    money: { cp: 0, sp: 0, gp: bg?.gold || 10, pp: 0 },
+    money: { cp: 0, sp: 0, gp: BACKGROUND_DATA[background]?.gold || 10, pp: 0 },
     isNpc: true,
     isRecruitable: true,
     dataPath: `${githubBase}public/assets/atlas/character/npc_character_profiles/json/${npcIndex}.json`

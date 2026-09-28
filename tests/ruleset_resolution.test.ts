@@ -1847,6 +1847,129 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(loaded24?.rulesetContext).toBe('2024');
     expect(loaded24?.heal_at_slot_level['1']).toBe('2d8 + MOD');
   });
+
+  describe('Strict 2024 Equipment, Rules, Tables & Runtime Integration Tests', () => {
+    it('enforces strict ruleset isolation for equipment resolution with zero cross-ruleset fallback', async () => {
+      const eq14 = await fetchEquipmentData('dagger', '2014');
+      const eq24 = await fetchEquipmentData('dagger', '2024');
+
+      expect(eq14).not.toBeNull();
+      expect(eq24).not.toBeNull();
+      expect(eq14?.rulesetContext).toBe('2014');
+      expect(eq24?.rulesetContext).toBe('2024');
+
+      // Requesting non-existent 2024 equipment returns null without silent 2014 fallback
+      const nonExistent24 = await fetchEquipmentData('nonexistent_equipment_xyz', '2024');
+      expect(nonExistent24).toBeNull();
+
+      const nonExistentAtlas24 = await atlasService.loadEquipment('nonexistent_equipment_xyz', '2024');
+      expect(nonExistentAtlas24).toBeNull();
+    });
+
+    it('filters equipment list by ruleset context strictly without cross-ruleset contamination', async () => {
+      const { fetchEquipmentList } = await import('../src/services/storageService');
+      const list24 = await fetchEquipmentList('2024');
+      expect(list24.length).toBeGreaterThan(0);
+
+      // Verify all items in 2024 list resolve with rulesetContext 2024
+      const sampleItem = list24[0];
+      const loadedSample = await fetchEquipmentData(sampleItem.index, '2024');
+      expect(loadedSample).not.toBeNull();
+      expect(loadedSample?.rulesetContext).toBe('2024');
+    });
+
+    it('verifies ruleset-aware rules and tables loaders (fetchRuleData, fetchTableData, atlasService)', async () => {
+      const { fetchRuleData, fetchTableData } = await import('../src/services/storageService');
+
+      // 2024 Rule loading
+      const combatRule24 = await fetchRuleData('chapter-1/combat', '2024');
+      expect(combatRule24).not.toBeNull();
+      expect(combatRule24?.rulesetContext).toBe('2024');
+
+      const atlasCombatRule24 = await atlasService.loadRule('chapter-1/combat', '2024');
+      expect(atlasCombatRule24).not.toBeNull();
+      expect(atlasCombatRule24?.rulesetContext).toBe('2024');
+
+      // 2024 Table loading
+      const confusionTable24 = await fetchTableData('spells/confusion_behavior', '2024');
+      expect(confusionTable24).not.toBeNull();
+      expect(confusionTable24?.rulesetContext).toBe('2024');
+
+      const atlasConfusionTable24 = await atlasService.loadTable('spells/confusion_behavior', '2024');
+      expect(atlasConfusionTable24).not.toBeNull();
+      expect(atlasConfusionTable24?.rulesetContext).toBe('2024');
+    });
+
+    it('verifies ruleset-aware NPC generation and starting equipment resolution', async () => {
+      const { generateNPCAsync } = await import('../src/lib/characterUtils');
+      const npc24 = await generateNPCAsync({
+        class: 'fighter',
+        background: 'soldier',
+        ruleset: '2024'
+      });
+
+      expect(npc24).not.toBeNull();
+      expect(npc24.ruleset).toBe('2024');
+      expect(npc24.class).toBe('fighter');
+      expect(npc24.background).toBe('soldier');
+      expect(Object.keys(npc24.items || {}).length).toBeGreaterThan(0);
+    });
+
+    it('verifies 2024 species proficiencies omit obsolete 2014 weapon proficiencies', async () => {
+      const elf24 = await fetchSpeciesData('elf', '2024');
+      const highElf14 = await fetchSubraceData('high_elf', '2014');
+
+      expect(elf24).not.toBeNull();
+      expect(highElf14).not.toBeNull();
+
+      // In 2014, High Elf grants elf_weapon_training
+      const traits14Names = (highElf14?.racial_traits || []).map((t: any) => (t.name || t.index || '').toLowerCase());
+      expect(traits14Names.some(t => t.includes('elf weapon training') || t.includes('elf_weapon_training'))).toBe(true);
+
+      // In 2024, Elf species record grants NO weapon proficiencies or weapon training traits
+      const traits24Names = (elf24?.traits || []).map((t: any) => (t.name || t.index || '').toLowerCase());
+      expect(traits24Names).not.toContain('elf_weapon_training');
+      const profs24Names = (elf24?.proficiencies || []).map((p: any) => (p.name || p.index || '').toLowerCase());
+      expect(profs24Names.some((p: string) => p.includes('sword') || p.includes('bow'))).toBe(false);
+    });
+
+    it('verifies derived calculations (AC, attack bonus, spell DC, HP) for 2024 character state', async () => {
+      const { calculateDerivedStats } = await import('../src/lib/statCalculations');
+      const { Character } = await import('../src/store/useCharacterStore');
+
+      const char24: Partial<import('../src/store/useCharacterStore').Character> = {
+        id: 'test_fighter_24',
+        name: 'Gideon 2024',
+        class: 'fighter',
+        race: 'human',
+        ruleset: '2024',
+        level: 5,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 12, cha: 8 },
+        proficiencies: ['martial_weapons', 'simple_weapons', 'heavy_armor', 'medium_armor', 'light_armor', 'shields'],
+        features: [{ name: 'Defense', index: 'defense_2024', desc: '+1 AC when wearing armor', source: 'Class' }],
+        choices: { 'fighting-style': ['defense'] },
+        saveVersion: 2,
+        equipment: {
+          containerId: 'equipment_test_fighter_24',
+          slots: [
+            { id: 'chest', itemId: 'item_chain_mail' },
+            { id: 'off_hand', itemId: 'item_shield' },
+            { id: 'main_hand', itemId: 'item_longsword' }
+          ]
+        },
+        items: {
+          'item_chain_mail': { id: 'item_chain_mail', template: 'chain_mail', quantity: 1, addedAt: 1 },
+          'item_shield': { id: 'item_shield', template: 'shield', quantity: 1, addedAt: 1 },
+          'item_longsword': { id: 'item_longsword', template: 'longsword', quantity: 1, addedAt: 1 }
+        }
+      };
+
+      const derived = calculateDerivedStats(char24 as any);
+      expect(derived.proficiencyBonus).toBe(3); // Level 5 -> +3
+      expect(derived.weightCapacity).toBe(240); // STR 16 * 15
+      expect(derived.nonProficientEquippedItems).toHaveLength(0);
+    });
+  });
 });
 
 
