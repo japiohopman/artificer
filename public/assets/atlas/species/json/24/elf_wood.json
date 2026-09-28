@@ -1,0 +1,21 @@
+{
+  "index": "elf_wood",
+  "name": "Wood Elf",
+  "rulesetContext": "2024",
+  "speed": 35,
+  "size": "Medium",
+  "parent_species": "elf",
+  "desc": "Wood Elves carry the swiftness and stealth of primeval forests. Your Speed increases to 35 feet, and you possess druidic innate magic.",
+  "traits": [
+    {
+      "index": "wood_elf_lineage",
+      "name": "Wood Elf Lineage",
+      "desc": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip. At level 3, you can cast Longstrider. At level 5, you can cast Pass Without Trace. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
+    }
+  ],
+  "spells": {
+    "cantrip": "druidcraft",
+    "level_3": "longstrider",
+    "level_5": "pass_without_trace"
+  }
+}

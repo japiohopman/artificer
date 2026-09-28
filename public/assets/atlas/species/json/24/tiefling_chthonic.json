@@ -1,0 +1,22 @@
+{
+  "index": "tiefling_chthonic",
+  "name": "Chthonic Tiefling",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Medium",
+  "parent_species": "tiefling",
+  "desc": "Your bloodline traces to Carceri, Gehenna, or Hades, giving you affinity with grave energies.",
+  "damage_resistances": ["necrotic"],
+  "traits": [
+    {
+      "index": "fiendish_legacy_chthonic",
+      "name": "Chthonic Fiendish Legacy",
+      "desc": "You have Resistance to Necrotic damage. You know the Chill Touch cantrip. At level 3, you can cast False Life. At level 5, you can cast Ray of Enfeeblement. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
+    }
+  ],
+  "spells": {
+    "cantrip": "chill_touch",
+    "level_3": "false_life",
+    "level_5": "ray_of_enfeeblement"
+  }
+}

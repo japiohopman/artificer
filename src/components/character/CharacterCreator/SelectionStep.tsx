@@ -84,38 +84,51 @@ export const SelectionStep: React.FC<{
     }
   }, [category]);
 
-  // Fetch available subraces for selected parent species
+  // Fetch available subraces / lineages for selected parent species
   useEffect(() => {
     if (category === 'species' && selected) {
       const loadSubraces = async () => {
         try {
-          const allSubraces = await fetchSubraceList();
-          const matching = await Promise.all(allSubraces.map(async (sub) => {
-            const data = await fetchSubraceData(sub.index);
-            if (data?.race?.index === selected || (data?.race as any) === selected) {
-              return { name: data.name || sub.name, index: sub.index };
+          if (ruleset === '2024') {
+            const parentData = await fetchSpeciesData(selected, '2024');
+            if (parentData && Array.isArray(parentData.lineage_options) && parentData.lineage_options.length > 0) {
+              const lineages = parentData.lineage_options.map((l: any) => ({
+                name: l.name || l.index.replace(/_/g, ' '),
+                index: l.index
+              }));
+              setAvailableSubraces(lineages);
+            } else {
+              setAvailableSubraces([]);
             }
-            const normSub = sub.index.toLowerCase();
-            const normParent = selected.toLowerCase();
-            if (normParent === 'elf' && (normSub.includes('elf') || normSub.includes('drow')) && !normSub.includes('half')) {
-              return { name: data?.name || sub.name, index: sub.index };
-            }
-            if (normParent === 'dwarf' && normSub.includes('dwarf')) {
-              return { name: data?.name || sub.name, index: sub.index };
-            }
-            if (normParent === 'halfling' && normSub.includes('halfling')) {
-              return { name: data?.name || sub.name, index: sub.index };
-            }
-            if (normParent === 'gnome' && normSub.includes('gnome')) {
-              return { name: data?.name || sub.name, index: sub.index };
-            }
-            return null;
-          }));
+          } else {
+            const allSubraces = await fetchSubraceList('2014');
+            const matching = await Promise.all(allSubraces.map(async (sub) => {
+              const data = await fetchSubraceData(sub.index, '2014');
+              if (data?.race?.index === selected || (data?.race as any) === selected) {
+                return { name: data.name || sub.name, index: sub.index };
+              }
+              const normSub = sub.index.toLowerCase();
+              const normParent = selected.toLowerCase();
+              if (normParent === 'elf' && (normSub.includes('elf') || normSub.includes('drow')) && !normSub.includes('half')) {
+                return { name: data?.name || sub.name, index: sub.index };
+              }
+              if (normParent === 'dwarf' && normSub.includes('dwarf')) {
+                return { name: data?.name || sub.name, index: sub.index };
+              }
+              if (normParent === 'halfling' && normSub.includes('halfling')) {
+                return { name: data?.name || sub.name, index: sub.index };
+              }
+              if (normParent === 'gnome' && normSub.includes('gnome')) {
+                return { name: data?.name || sub.name, index: sub.index };
+              }
+              return null;
+            }));
 
-          const validSubraces = matching.filter((s): s is { name: string; index: string } => s !== null);
-          setAvailableSubraces(validSubraces);
+            const validSubraces = matching.filter((s): s is { name: string; index: string } => s !== null);
+            setAvailableSubraces(validSubraces);
+          }
         } catch (err) {
-          console.error("Failed to load subraces for species:", selected, err);
+          console.error("Failed to load subraces/lineages for species:", selected, err);
           setAvailableSubraces([]);
         }
       };
@@ -124,17 +137,19 @@ export const SelectionStep: React.FC<{
       setAvailableSubraces([]);
       setSubraceData(null);
     }
-  }, [selected, category]);
+  }, [selected, category, ruleset]);
 
-  // Fetch subrace detail data when selectedSubrace is active
+  // Fetch subrace / lineage detail data when selectedSubrace is active
   useEffect(() => {
     if (category === 'species' && selectedSubrace) {
       const loadSubData = async () => {
         try {
-          const sData = await fetchSubraceData(selectedSubrace);
+          const sData = ruleset === '2024'
+            ? await fetchSpeciesData(selectedSubrace, '2024')
+            : await fetchSubraceData(selectedSubrace, '2014');
           setSubraceData(sData);
         } catch (e) {
-          console.error("Failed to load subrace data:", selectedSubrace, e);
+          console.error("Failed to load subrace/lineage data:", selectedSubrace, e);
           setSubraceData(null);
         }
       };
@@ -142,7 +157,7 @@ export const SelectionStep: React.FC<{
     } else {
       setSubraceData(null);
     }
-  }, [selectedSubrace, category]);
+  }, [selectedSubrace, category, ruleset]);
 
   // Fetch detail data when item selected
   useEffect(() => {
@@ -543,19 +558,24 @@ export const SelectionStep: React.FC<{
 
                         {subraceData.desc && (
                           <p className="text-xs font-body text-parchment-900 leading-relaxed italic">
-                            {subraceData.desc}
+                            {Array.isArray(subraceData.desc) ? subraceData.desc.join(' ') : subraceData.desc}
                           </p>
                         )}
 
-                        {subraceData.racial_traits && subraceData.racial_traits.length > 0 && (
+                        {(subraceData.traits || subraceData.racial_traits) && (subraceData.traits || subraceData.racial_traits).length > 0 && (
                           <div className="space-y-2 pt-1">
-                            <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider block">Subrace Granted Traits</span>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                              {subraceData.racial_traits.map((t: any, i: number) => (
-                                <div key={i} className="p-2 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm">
+                            <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider block">Lineage Granted Traits & Mechanics</span>
+                            <div className="grid grid-cols-1 gap-2">
+                              {(subraceData.traits || subraceData.racial_traits).map((t: any, i: number) => (
+                                <div key={i} className="p-2.5 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm space-y-1">
                                   <span className="text-xs font-header font-black text-dragon-red uppercase block">
                                     {t.name || t.index || t}
                                   </span>
+                                  {t.desc && (
+                                    <p className="text-[11px] font-body text-parchment-800 leading-relaxed">
+                                      {Array.isArray(t.desc) ? t.desc.join(' ') : t.desc}
+                                    </p>
+                                  )}
                                 </div>
                               ))}
                             </div>

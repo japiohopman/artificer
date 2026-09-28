@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData, fetchSubraceList, fetchSubraceData } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData, fetchSubraceList, fetchSubraceData, fetchTraitData } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 import { validate2024BackgroundAbilityScores, calculate2024BackgroundBonuses } from '../src/lib/backgroundUtils';
 import fs from 'fs';
@@ -667,7 +667,104 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(orcTraitIndices).toContain('adrenaline_rush');
 
     const gnome24 = await fetchSpeciesData('gnome', '2024');
-    expect(gnome24).toBeNull();
+    expect(gnome24).not.toBeNull();
+    expect(gnome24?.rulesetContext).toBe('2024');
+
+    const dragonborn24 = await fetchSpeciesData('dragonborn', '2024');
+    expect(dragonborn24).not.toBeNull();
+    expect(dragonborn24?.rulesetContext).toBe('2024');
+
+    const goliath24 = await fetchSpeciesData('goliath', '2024');
+    expect(goliath24).not.toBeNull();
+    expect(goliath24?.rulesetContext).toBe('2024');
+
+    const tiefling24 = await fetchSpeciesData('tiefling', '2024');
+    expect(tiefling24).not.toBeNull();
+    expect(tiefling24?.rulesetContext).toBe('2024');
+
+    // Verify detailed lineage resolution and source parity mechanics
+    const drowElf = await fetchSpeciesData('elf_drow', '2024');
+    expect(drowElf).not.toBeNull();
+    expect(drowElf?.rulesetContext).toBe('2024');
+    expect(drowElf?.darkvision_range).toBe(120);
+    expect(drowElf?.spells?.cantrip).toBe('dancing_lights');
+
+    const highElf = await fetchSpeciesData('elf_high', '2024');
+    expect(highElf).not.toBeNull();
+    expect(highElf?.rulesetContext).toBe('2024');
+    expect(highElf?.spells?.cantrip).toBe('prestidigitation');
+
+    const woodElf = await fetchSpeciesData('elf_wood', '2024');
+    expect(woodElf).not.toBeNull();
+    expect(woodElf?.rulesetContext).toBe('2024');
+    expect(woodElf?.speed).toBe(35);
+    expect(woodElf?.spells?.cantrip).toBe('druidcraft');
+
+    const forestGnome = await fetchSpeciesData('gnome_forest', '2024');
+    expect(forestGnome).not.toBeNull();
+    expect(forestGnome?.rulesetContext).toBe('2024');
+    expect(forestGnome?.spells?.cantrip).toBe('minor_illusion');
+
+    const rockGnome = await fetchSpeciesData('gnome_rock', '2024');
+    expect(rockGnome).not.toBeNull();
+    expect(rockGnome?.rulesetContext).toBe('2024');
+    expect(rockGnome?.spells?.cantrip).toContain('mending');
+
+    const abyssalTiefling = await fetchSpeciesData('tiefling_abyssal', '2024');
+    expect(abyssalTiefling).not.toBeNull();
+    expect(abyssalTiefling?.rulesetContext).toBe('2024');
+    expect(abyssalTiefling?.damage_resistances).toContain('poison');
+    expect(abyssalTiefling?.spells?.cantrip).toBe('poison_spray');
+
+    const chthonicTiefling = await fetchSpeciesData('tiefling_chthonic', '2024');
+    expect(chthonicTiefling).not.toBeNull();
+    expect(chthonicTiefling?.rulesetContext).toBe('2024');
+    expect(chthonicTiefling?.damage_resistances).toContain('necrotic');
+    expect(chthonicTiefling?.spells?.cantrip).toBe('chill_touch');
+
+    const infernalTiefling = await fetchSpeciesData('tiefling_infernal', '2024');
+    expect(infernalTiefling).not.toBeNull();
+    expect(infernalTiefling?.rulesetContext).toBe('2024');
+    expect(infernalTiefling?.damage_resistances).toContain('fire');
+    expect(infernalTiefling?.spells?.cantrip).toBe('fire_bolt');
+
+    // Verify Goliath and Dragonborn trait source-parity details
+    const powerfulBuild = await fetchTraitData('powerful_build');
+    expect(powerfulBuild).not.toBeNull();
+    const pbDesc = powerfulBuild?.desc.join(' ');
+    expect(pbDesc).toContain('Advantage on Ability Checks made to end the Grappled condition');
+    expect(pbDesc).not.toContain('or avoid');
+
+    const largeForm = await fetchTraitData('large_form');
+    expect(largeForm).not.toBeNull();
+    const lfDesc = largeForm?.desc.join(' ');
+    expect(lfDesc).toContain("in a space large enough");
+    expect(lfDesc).toContain("can't use it again until you finish a Long Rest");
+
+    const draconicFlight = await fetchTraitData('draconic_flight');
+    expect(draconicFlight).not.toBeNull();
+    const dfDesc = draconicFlight?.desc.join(' ');
+    expect(dfDesc).toContain("retract them (no action required)");
+    expect(dfDesc).toContain("can't use it again until you finish a Long Rest");
+
+    const giantAncestry = await fetchTraitData('giant_ancestry');
+    expect(giantAncestry).not.toBeNull();
+    expect(giantAncestry?.desc.join(' ')).toContain("Cloud's Jaunt");
+    expect(giantAncestry?.desc.join(' ')).toContain("Fire's Burn");
+    expect(giantAncestry?.desc.join(' ')).toContain("Frost's Chill");
+    expect(giantAncestry?.desc.join(' ')).toContain("Hill's Tumble");
+    expect(giantAncestry?.desc.join(' ')).toContain("Stone's Endurance");
+    expect(giantAncestry?.desc.join(' ')).toContain("Storm's Thunder");
+  });
+
+  it('verifies 2024 species list includes all 9 top-level PHB species without duplicate lineages', async () => {
+    const { fetchSpeciesList } = await import('../src/services/storageService');
+    const species24 = await fetchSpeciesList('2024');
+    const indices24 = species24.map(s => s.index).sort();
+    const EXPECTED_2024_SPECIES = [
+      'dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'
+    ].sort();
+    expect(indices24).toEqual(EXPECTED_2024_SPECIES);
   });
 
   it('verifies atlasService species loading with explicit ruleset', async () => {

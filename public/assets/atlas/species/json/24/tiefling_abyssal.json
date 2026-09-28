@@ -1,0 +1,22 @@
+{
+  "index": "tiefling_abyssal",
+  "name": "Abyssal Tiefling",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Medium",
+  "parent_species": "tiefling",
+  "desc": "Your bloodline traces to the chaotic, corrosive depths of the Abyss.",
+  "damage_resistances": ["poison"],
+  "traits": [
+    {
+      "index": "fiendish_legacy_abyssal",
+      "name": "Abyssal Fiendish Legacy",
+      "desc": "You have Resistance to Poison damage. You know the Poison Spray cantrip. At level 3, you can cast Ray of Sickness. At level 5, you can cast Hold Person. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
+    }
+  ],
+  "spells": {
+    "cantrip": "poison_spray",
+    "level_3": "ray_of_sickness",
+    "level_5": "hold_person"
+  }
+}

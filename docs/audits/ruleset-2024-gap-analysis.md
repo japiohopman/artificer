@@ -23,8 +23,8 @@ Select 2024 ruleset -> Human resolves /public/assets/atlas/species/json/24/human
 The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc), 2024 Class Foundation, Progressions, Feature Definitions, and Subclasses for all 12 core classes are fully implemented with ruleset-aware resolution derived from official 2024 D&D Player's Handbook mechanics:
 
 ```text
-2024 Species Foundation
-✓ 5/10 species (Human, Dwarf, Elf, Halfling, Orc)
+2024 Species Parity Complete
+✓ 9/9 PHB 2024 species and 14/14 Foundry 6.0.x source records (Dragonborn, Dwarf, Elf [Lineages: Drow, High Elf, Wood Elf], Gnome [Lineages: Forest, Rock], Goliath, Halfling, Human, Orc, Tiefling [Lineages: Abyssal, Chthonic, Infernal] fully reconciled in /species/json/24/)
 
 2024 Base Class Definitions
 ✓ 12/12 core base class JSONs in /assets/atlas/class/json/24/
@@ -58,7 +58,7 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 
 | Domain | 2014 Status | 2024 Status | Resolution Path / Current State |
 | :--- | :--- | :--- | :--- |
-| **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species foundation dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. |
+| **Species** | Supported | **Implemented (9/9 PHB species & 14 source records)** | Versioned directories exist (`/species/json/14/` vs `/24/`). Complete 2024 species & lineage dataset implemented in `/assets/atlas/species/json/24/` with ruleset-aware resolution (`rulesetContext`). |
 | **Subraces** | Supported | **Audited / N/A in 2024** | 2014 subraces resolve `/subraces/json/`. Requesting subraces in 2024 mode returns empty array / null without cross-ruleset fallback. |
 | **Classes (Base)** | Supported | **Implemented (12/12)** | Versioned directories exist (`/class/json/14/` vs `/24/`). All 12 core 2024 base class definitions implemented in `/assets/atlas/class/json/24/`. |
 | **Class Progressions (1-20)** | Supported | **Implemented (12/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for all 12 core classes. |

@@ -1,0 +1,19 @@
+{
+  "index": "gnome_rock",
+  "name": "Rock Gnome",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Small",
+  "parent_species": "gnome",
+  "desc": "Rock Gnomes possess a natural curiosity and inventiveness regarding mechanical marvels.",
+  "traits": [
+    {
+      "index": "rock_gnome_lineage",
+      "name": "Rock Gnome Lineage",
+      "desc": "You know the Mending and Prestidigitation cantrips. In addition, using Prestidigitation, you can spend 10 minutes creating a Tiny clockwork device (such as a toy, firestarter, or music box) that functions for 8 hours or until dismantled."
+    }
+  ],
+  "spells": {
+    "cantrip": ["mending", "prestidigitation"]
+  }
+}

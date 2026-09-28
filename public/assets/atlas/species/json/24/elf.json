@@ -48,6 +48,11 @@
       "url": "/assets/atlas/traits/json/trance.json"
     }
   ],
+  "lineage_options": [
+    { "index": "elf_drow", "name": "Drow" },
+    { "index": "elf_high", "name": "High Elf" },
+    { "index": "elf_wood", "name": "Wood Elf" }
+  ],
   "subraces": [],
   "url": "/assets/atlas/species/json/24/elf.json",
   "image": "/assets/ui/official/races/elf.webp"

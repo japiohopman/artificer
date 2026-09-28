@@ -67,7 +67,8 @@ const ALL_STEPS: { id: CreationStep; label: string; icon: any }[] = [
 
 const CHARACTER_MIRROR_START_STEP: CreationStep = 'species';
 
-const PLAYABLE_SPECIES = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
+const PLAYABLE_SPECIES_2014 = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
+const PLAYABLE_SPECIES_2024 = ['dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'];
 
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
@@ -497,17 +498,18 @@ export const CharacterCreator: React.FC = () => {
     try {
       const { fetchLanguagesList } = await import('../../services/storageService');
       const [s, sub, c, b, a, l] = await Promise.all([
-        fetchSpeciesList(),
-        fetchSubraceList(),
+        fetchSpeciesList(newChar.ruleset),
+        fetchSubraceList(newChar.ruleset),
         fetchClassesList(newChar.ruleset),
         fetchBackgroundsList(newChar.ruleset),
         fetchAlignmentsList(),
         fetchLanguagesList()
       ]);
       
+      const allowedSpecies = newChar.ruleset === '2024' ? PLAYABLE_SPECIES_2024 : PLAYABLE_SPECIES_2014;
       setAvailableSpecies(s.filter(item => {
         const normalized = item.index.toLowerCase().replace(/_/g, '-');
-        return PLAYABLE_SPECIES.includes(normalized);
+        return allowedSpecies.includes(normalized) || allowedSpecies.includes(item.index.toLowerCase());
       }));
       
       setAvailableSubraces(sub);

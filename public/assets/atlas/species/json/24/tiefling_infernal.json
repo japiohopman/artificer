@@ -1,0 +1,22 @@
+{
+  "index": "tiefling_infernal",
+  "name": "Infernal Tiefling",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Medium",
+  "parent_species": "tiefling",
+  "desc": "Your bloodline traces to the Nine Hells, granting you hellish fire resistance and fiendish magic.",
+  "damage_resistances": ["fire"],
+  "traits": [
+    {
+      "index": "fiendish_legacy_infernal",
+      "name": "Infernal Fiendish Legacy",
+      "desc": "You have Resistance to Fire damage. You know the Fire Bolt cantrip. At level 3, you can cast Hellish Rebuke. At level 5, you can cast Darkness. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
+    }
+  ],
+  "spells": {
+    "cantrip": "fire_bolt",
+    "level_3": "hellish_rebuke",
+    "level_5": "darkness"
+  }
+}
