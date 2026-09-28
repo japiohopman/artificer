@@ -1,0 +1,17 @@
+{
+  "name": "Summons",
+  "index": "summons",
+  "monsters": [
+    {
+      "name": "draconic spirit",
+      "index": "phbmobdraconicsp",
+      "size": "Large",
+      "type": "dragon",
+      "alignment": "Neutral",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/summons/phbmobdraconicsp.json",
+      "image_url": null
+    }
+  ]
+}

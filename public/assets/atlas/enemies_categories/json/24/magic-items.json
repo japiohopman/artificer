@@ -1,0 +1,127 @@
+{
+  "name": "Magic items",
+  "index": "magic-items",
+  "monsters": [
+    {
+      "name": "carpet of flying (3 by 5 ft.)",
+      "index": "dmg3x5carpetoffl",
+      "size": "Small",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmg3x5carpetoffl.json",
+      "image_url": null
+    },
+    {
+      "name": "carpet of flying (4 by 6 ft.)",
+      "index": "dmg4x6carpetoffl",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmg4x6carpetoffl.json",
+      "image_url": null
+    },
+    {
+      "name": "carpet of flying (5 by 7 ft.)",
+      "index": "dmg5x7carpetoffl",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmg5x7carpetoffl.json",
+      "image_url": null
+    },
+    {
+      "name": "carpet of flying (6 by 9 ft.)",
+      "index": "dmg6x9carpetoffl",
+      "size": "Large",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmg6x9carpetoffl.json",
+      "image_url": null
+    },
+    {
+      "name": "apparatus of the crab",
+      "index": "dmgapparatusofkw",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmgapparatusofkw.json",
+      "image_url": null
+    },
+    {
+      "name": "avatar of death",
+      "index": "dmgavatarofdeath",
+      "size": "Medium",
+      "type": "undead",
+      "alignment": "Neutral Evil",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmgavatarofdeath.json",
+      "image_url": null
+    },
+    {
+      "name": "giant fly",
+      "index": "dmggiantfly00000",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmggiantfly00000.json",
+      "image_url": null
+    },
+    {
+      "name": "goat of traveling",
+      "index": "dmggoatoftraveli",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmggoatoftraveli.json",
+      "image_url": null
+    },
+    {
+      "name": "dancing sword",
+      "index": "dmggwsdancingswo",
+      "size": "Small",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmggwsdancingswo.json",
+      "image_url": null
+    },
+    {
+      "name": "illusory creature",
+      "index": "dmgillusorycreat",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmgillusorycreat.json",
+      "image_url": null
+    },
+    {
+      "name": "floating whip",
+      "index": "dmgqftfloatingwh",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/magic-items/dmgqftfloatingwh.json",
+      "image_url": null
+    }
+  ]
+}

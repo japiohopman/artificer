@@ -1,0 +1,149 @@
+{
+  "name": "Summons",
+  "index": "summons",
+  "monsters": [
+    {
+      "name": "huge animated object",
+      "index": "abg4qrbhqzehlvyz",
+      "size": "Huge",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/abg4qrbhqzehlvyz.json",
+      "image_url": null
+    },
+    {
+      "name": "medium animated object",
+      "index": "bimoect97ri3nkmg",
+      "size": "Medium",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/bimoect97ri3nkmg.json",
+      "image_url": null
+    },
+    {
+      "name": "unseen servant",
+      "index": "btqz2q4jjvqn8w5w",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/btqz2q4jjvqn8w5w.json",
+      "image_url": null
+    },
+    {
+      "name": "large animated object",
+      "index": "ci49duvhgcpfmnk3",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/ci49duvhgcpfmnk3.json",
+      "image_url": null
+    },
+    {
+      "name": "guardian of faith",
+      "index": "corg225xazf4ewlf",
+      "size": "Large",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/corg225xazf4ewlf.json",
+      "image_url": null
+    },
+    {
+      "name": "arcane hand",
+      "index": "ihj5tkm6hrgxuawp",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/ihj5tkm6hrgxuawp.json",
+      "image_url": null
+    },
+    {
+      "name": "dancing lights (medium)",
+      "index": "jnmhqtwkwayvkh37",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/jnmhqtwkwayvkh37.json",
+      "image_url": null
+    },
+    {
+      "name": "small animated object",
+      "index": "nvtvjot7vdzwxmt7",
+      "size": "Small",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/nvtvjot7vdzwxmt7.json",
+      "image_url": null
+    },
+    {
+      "name": "tiny animated object",
+      "index": "ot08gcxhkvnkjtda",
+      "size": "Tiny",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/ot08gcxhkvnkjtda.json",
+      "image_url": null
+    },
+    {
+      "name": "arcane sword",
+      "index": "tac7eq0axjco0nml",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/tac7eq0axjco0nml.json",
+      "image_url": null
+    },
+    {
+      "name": "arcane eye",
+      "index": "tuhyepq9gazmtyc0",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/tuhyepq9gazmtyc0.json",
+      "image_url": null
+    },
+    {
+      "name": "dancing lights (tiny)",
+      "index": "urxp9o9n7dvdh9nl",
+      "size": "Tiny",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/urxp9o9n7dvdh9nl.json",
+      "image_url": null
+    },
+    {
+      "name": "mage hand",
+      "index": "zwt2wjwo7ctm2631",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/summons/zwt2wjwo7ctm2631.json",
+      "image_url": null
+    }
+  ]
+}

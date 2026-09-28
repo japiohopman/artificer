@@ -1,0 +1,149 @@
+{
+  "name": "Celestial",
+  "index": "celestial",
+  "monsters": [
+    {
+      "name": "couatl",
+      "index": "mmcouatl00000000",
+      "size": "Medium",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmcouatl00000000.json",
+      "image_url": "/assets/atlas/enemies/images/couatl.webp"
+    },
+    {
+      "name": "deva",
+      "index": "mmdeva0000000000",
+      "size": "Medium",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmdeva0000000000.json",
+      "image_url": "/assets/atlas/enemies/images/deva.webp"
+    },
+    {
+      "name": "giant eagle",
+      "index": "mmgianteagle0000",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Neutral Good",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmgianteagle0000.json",
+      "image_url": "/assets/atlas/enemies/images/giant_eagle.webp"
+    },
+    {
+      "name": "giant elk",
+      "index": "mmgiantelk000000",
+      "size": "Huge",
+      "type": "celestial",
+      "alignment": "Neutral Good",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmgiantelk000000.json",
+      "image_url": "/assets/atlas/enemies/images/giant_elk.webp"
+    },
+    {
+      "name": "giant owl",
+      "index": "mmgiantowl000000",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Neutral",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmgiantowl000000.json",
+      "image_url": "/assets/atlas/enemies/images/giant_owl.webp"
+    },
+    {
+      "name": "guardian naga",
+      "index": "mmguardiannaga00",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmguardiannaga00.json",
+      "image_url": "/assets/atlas/enemies/images/guardian_naga.webp"
+    },
+    {
+      "name": "pegasus",
+      "index": "mmpegasus0000000",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Chaotic Good",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmpegasus0000000.json",
+      "image_url": "/assets/atlas/enemies/images/pegasus.webp"
+    },
+    {
+      "name": "planetar",
+      "index": "mmplanetar000000",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 15000,
+      "challenge_rating": 16,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmplanetar000000.json",
+      "image_url": "/assets/atlas/enemies/images/planetar.webp"
+    },
+    {
+      "name": "solar",
+      "index": "mmsolar000000000",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 21000,
+      "challenge_rating": 21,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmsolar000000000.json",
+      "image_url": "/assets/atlas/enemies/images/solar.webp"
+    },
+    {
+      "name": "sphinx of lore",
+      "index": "mmsphinxoflore00",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Neutral",
+      "xp": 7200,
+      "challenge_rating": 11,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmsphinxoflore00.json",
+      "image_url": null
+    },
+    {
+      "name": "sphinx of valor",
+      "index": "mmsphinxofvalor0",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Neutral",
+      "xp": 18000,
+      "challenge_rating": 17,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmsphinxofvalor0.json",
+      "image_url": null
+    },
+    {
+      "name": "sphinx of wonder",
+      "index": "mmsphinxofwonder",
+      "size": "Tiny",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmsphinxofwonder.json",
+      "image_url": null
+    },
+    {
+      "name": "unicorn",
+      "index": "mmunicorn0000000",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/celestial/mmunicorn0000000.json",
+      "image_url": "/assets/atlas/enemies/images/unicorn.webp"
+    }
+  ]
+}

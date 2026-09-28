@@ -1,0 +1,116 @@
+{
+  "name": "Construct",
+  "index": "construct",
+  "monsters": [
+    {
+      "name": "animated armor",
+      "index": "mmanimatedarmor0",
+      "size": "Medium",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmanimatedarmor0.json",
+      "image_url": "/assets/atlas/enemies/images/animated_armor.webp"
+    },
+    {
+      "name": "animated flying sword",
+      "index": "mmanimatedflying",
+      "size": "Small",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmanimatedflying.json",
+      "image_url": null
+    },
+    {
+      "name": "animated rug of smothering",
+      "index": "mmanimatedrugofs",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmanimatedrugofs.json",
+      "image_url": null
+    },
+    {
+      "name": "clay golem",
+      "index": "mmclaygolem00000",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmclaygolem00000.json",
+      "image_url": "/assets/atlas/enemies/images/clay_golem.webp"
+    },
+    {
+      "name": "flesh golem",
+      "index": "mmfleshgolem0000",
+      "size": "Medium",
+      "type": "construct",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmfleshgolem0000.json",
+      "image_url": "/assets/atlas/enemies/images/flesh_golem.webp"
+    },
+    {
+      "name": "gorgon",
+      "index": "mmgorgon00000000",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmgorgon00000000.json",
+      "image_url": "/assets/atlas/enemies/images/gorgon.webp"
+    },
+    {
+      "name": "homunculus",
+      "index": "mmhomunculus0000",
+      "size": "Tiny",
+      "type": "construct",
+      "alignment": "Neutral",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmhomunculus0000.json",
+      "image_url": "/assets/atlas/enemies/images/homunculus.webp"
+    },
+    {
+      "name": "iron golem",
+      "index": "mmirongolem00000",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 15000,
+      "challenge_rating": 16,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmirongolem00000.json",
+      "image_url": "/assets/atlas/enemies/images/iron_golem.webp"
+    },
+    {
+      "name": "shield guardian",
+      "index": "mmshieldguardian",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 2900,
+      "challenge_rating": 7,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmshieldguardian.json",
+      "image_url": "/assets/atlas/enemies/images/shield_guardian.webp"
+    },
+    {
+      "name": "stone golem",
+      "index": "mmstonegolem0000",
+      "size": "Large",
+      "type": "construct",
+      "alignment": "Unaligned",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_path": "/assets/atlas/enemies/json/24/construct/mmstonegolem0000.json",
+      "image_url": "/assets/atlas/enemies/images/stone_golem.webp"
+    }
+  ]
+}

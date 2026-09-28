@@ -1,0 +1,193 @@
+{
+  "name": "Elemental",
+  "index": "elemental",
+  "monsters": [
+    {
+      "name": "air elemental",
+      "index": "mmairelemental00",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmairelemental00.json",
+      "image_url": "/assets/atlas/enemies/images/air_elemental.webp"
+    },
+    {
+      "name": "azer sentinel",
+      "index": "mmazersentinel00",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "Lawful Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmazersentinel00.json",
+      "image_url": null
+    },
+    {
+      "name": "djinni",
+      "index": "mmdjinni00000000",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 7200,
+      "challenge_rating": 11,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmdjinni00000000.json",
+      "image_url": "/assets/atlas/enemies/images/djinni.webp"
+    },
+    {
+      "name": "dust mephit",
+      "index": "mmdustmephit0000",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "Neutral Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmdustmephit0000.json",
+      "image_url": "/assets/atlas/enemies/tokens/elemental/DustMephit.webp"
+    },
+    {
+      "name": "earth elemental",
+      "index": "mmearthelemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmearthelemental.json",
+      "image_url": "/assets/atlas/enemies/images/earth_elemental.webp"
+    },
+    {
+      "name": "efreeti",
+      "index": "mmefreeti0000000",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 7200,
+      "challenge_rating": 11,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmefreeti0000000.json",
+      "image_url": "/assets/atlas/enemies/images/efreeti.webp"
+    },
+    {
+      "name": "fire elemental",
+      "index": "mmfireelemental0",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmfireelemental0.json",
+      "image_url": "/assets/atlas/enemies/images/fire_elemental.webp"
+    },
+    {
+      "name": "gargoyle",
+      "index": "mmgargoyle000000",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "Chaotic Evil",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmgargoyle000000.json",
+      "image_url": "/assets/atlas/enemies/images/gargoyle.webp"
+    },
+    {
+      "name": "ice mephit",
+      "index": "mmicemephit00000",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "Neutral Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmicemephit00000.json",
+      "image_url": "/assets/atlas/enemies/images/ice_mephit.webp"
+    },
+    {
+      "name": "invisible stalker",
+      "index": "mminvisiblestalk",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mminvisiblestalk.json",
+      "image_url": "/assets/atlas/enemies/images/invisible_stalker.webp"
+    },
+    {
+      "name": "magma mephit",
+      "index": "mmmagmamephit000",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "Neutral Evil",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmmagmamephit000.json",
+      "image_url": "/assets/atlas/enemies/images/magma_mephit.webp"
+    },
+    {
+      "name": "magmin",
+      "index": "mmmagmin00000000",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "Chaotic Neutral",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmmagmin00000000.json",
+      "image_url": "/assets/atlas/enemies/images/magmin.webp"
+    },
+    {
+      "name": "merfolk skirmisher",
+      "index": "mmmerfolkskirmis",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmmerfolkskirmis.json",
+      "image_url": null
+    },
+    {
+      "name": "salamander",
+      "index": "mmsalamander0000",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmsalamander0000.json",
+      "image_url": "/assets/atlas/enemies/images/salamander.webp"
+    },
+    {
+      "name": "steam mephit",
+      "index": "mmsteammephit000",
+      "size": "Small",
+      "type": "elemental",
+      "alignment": "Neutral Evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmsteammephit000.json",
+      "image_url": "/assets/atlas/enemies/images/steam_mephit.webp"
+    },
+    {
+      "name": "water elemental",
+      "index": "mmwaterelemental",
+      "size": "Large",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmwaterelemental.json",
+      "image_url": "/assets/atlas/enemies/images/water_elemental.webp"
+    },
+    {
+      "name": "xorn",
+      "index": "mmxorn0000000000",
+      "size": "Medium",
+      "type": "elemental",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/elemental/mmxorn0000000000.json",
+      "image_url": "/assets/atlas/enemies/images/xorn.webp"
+    }
+  ]
+}

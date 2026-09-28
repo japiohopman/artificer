@@ -1,0 +1,248 @@
+{
+  "name": "Conjurations",
+  "index": "conjurations",
+  "monsters": [
+    {
+      "name": "duplicate",
+      "index": "phbduplicate0000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbduplicate0000.json",
+      "image_url": null
+    },
+    {
+      "name": "illusory creature",
+      "index": "phbilucreature00",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbilucreature00.json",
+      "image_url": null
+    },
+    {
+      "name": "illusory object",
+      "index": "phbiluobject0000",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbiluobject0000.json",
+      "image_url": null
+    },
+    {
+      "name": "illusory phenomenon",
+      "index": "phbilusensory000",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbilusensory000.json",
+      "image_url": null
+    },
+    {
+      "name": "invisible sensor",
+      "index": "phbinvisiblesens",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbinvisiblesens.json",
+      "image_url": null
+    },
+    {
+      "name": "faithful hound",
+      "index": "phbmobfaithfulho",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbmobfaithfulho.json",
+      "image_url": null
+    },
+    {
+      "name": "conjured animals",
+      "index": "phbspectralanima",
+      "size": "Large",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbspectralanima.json",
+      "image_url": null
+    },
+    {
+      "name": "arcane eye",
+      "index": "phbsplarcaneeye0",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplarcaneeye0.json",
+      "image_url": null
+    },
+    {
+      "name": "arcane hand",
+      "index": "phbsplbigbyshand",
+      "size": "Large",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplbigbyshand.json",
+      "image_url": null
+    },
+    {
+      "name": "conjured fey",
+      "index": "phbsplconjuredfe",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplconjuredfe.json",
+      "image_url": null
+    },
+    {
+      "name": "flaming sphere",
+      "index": "phbsplflamingsph",
+      "size": "Small",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplflamingsph.json",
+      "image_url": null
+    },
+    {
+      "name": "floating disk",
+      "index": "phbsplfloatingdi",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplfloatingdi.json",
+      "image_url": null
+    },
+    {
+      "name": "guardian of faith",
+      "index": "phbsplguardianof",
+      "size": "Large",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplguardianof.json",
+      "image_url": null
+    },
+    {
+      "name": "light",
+      "index": "phbspllight00000",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbspllight00000.json",
+      "image_url": null
+    },
+    {
+      "name": "mage hand",
+      "index": "phbsplmagehand00",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplmagehand00.json",
+      "image_url": null
+    },
+    {
+      "name": "dancing light (medium)",
+      "index": "phbsplmediumdanc",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplmediumdanc.json",
+      "image_url": null
+    },
+    {
+      "name": "arcane sword",
+      "index": "phbsplmordsword0",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplmordsword0.json",
+      "image_url": null
+    },
+    {
+      "name": "secret chest",
+      "index": "phbsplsecretches",
+      "size": "Small",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplsecretches.json",
+      "image_url": null
+    },
+    {
+      "name": "spiritual weapon",
+      "index": "phbsplspiritualw",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplspiritualw.json",
+      "image_url": null
+    },
+    {
+      "name": "dancing light (tiny)",
+      "index": "phbspltinydancin",
+      "size": "Tiny",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbspltinydancin.json",
+      "image_url": null
+    },
+    {
+      "name": "unseen servant",
+      "index": "phbsplunseenserv",
+      "size": "Medium",
+      "type": "custom",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsplunseenserv.json",
+      "image_url": null
+    },
+    {
+      "name": "phantom steed",
+      "index": "phbsumphantomste",
+      "size": "Large",
+      "type": "beast",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/conjurations/phbsumphantomste.json",
+      "image_url": null
+    }
+  ]
+}

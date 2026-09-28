@@ -1,0 +1,72 @@
+{
+  "name": "Celestial",
+  "index": "celestial",
+  "monsters": [
+    {
+      "name": "pegasus",
+      "index": "eigaw1dwvppywluh",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Chaotic Good",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/14/celestial/eigaw1dwvppywluh.json",
+      "image_url": "/assets/atlas/enemies/images/pegasus.webp"
+    },
+    {
+      "name": "unicorn",
+      "index": "g9peny6nw0xrxcjw",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/14/celestial/g9peny6nw0xrxcjw.json",
+      "image_url": "/assets/atlas/enemies/images/unicorn.webp"
+    },
+    {
+      "name": "solar",
+      "index": "loyt73eajojbdxav",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 21000,
+      "challenge_rating": 21,
+      "json_path": "/assets/atlas/enemies/json/14/celestial/loyt73eajojbdxav.json",
+      "image_url": "/assets/atlas/enemies/images/solar.webp"
+    },
+    {
+      "name": "deva",
+      "index": "m4h3hjambnmh09s9",
+      "size": "Medium",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_path": "/assets/atlas/enemies/json/14/celestial/m4h3hjambnmh09s9.json",
+      "image_url": "/assets/atlas/enemies/images/deva.webp"
+    },
+    {
+      "name": "planetar",
+      "index": "xebybleokdgl3mrr",
+      "size": "Large",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 15000,
+      "challenge_rating": 16,
+      "json_path": "/assets/atlas/enemies/json/14/celestial/xebybleokdgl3mrr.json",
+      "image_url": "/assets/atlas/enemies/images/planetar.webp"
+    },
+    {
+      "name": "couatl",
+      "index": "zap1h91t4fzbrqr5",
+      "size": "Medium",
+      "type": "celestial",
+      "alignment": "Lawful Good",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/14/celestial/zap1h91t4fzbrqr5.json",
+      "image_url": "/assets/atlas/enemies/images/couatl.webp"
+    }
+  ]
+}

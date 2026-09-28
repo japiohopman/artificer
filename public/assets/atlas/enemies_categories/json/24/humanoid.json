@@ -1,0 +1,292 @@
+{
+  "name": "Humanoid",
+  "index": "humanoid",
+  "monsters": [
+    {
+      "name": "archmage",
+      "index": "mmarchmage000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 8400,
+      "challenge_rating": 12,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmarchmage000000.json",
+      "image_url": "/assets/atlas/enemies/images/archmage.webp"
+    },
+    {
+      "name": "assassin",
+      "index": "mmassassin000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmassassin000000.json",
+      "image_url": "/assets/atlas/enemies/images/assassin.webp"
+    },
+    {
+      "name": "bandit",
+      "index": "mmbandit00000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmbandit00000000.json",
+      "image_url": "/assets/atlas/enemies/images/bandit.webp"
+    },
+    {
+      "name": "bandit captain",
+      "index": "mmbanditcaptain0",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmbanditcaptain0.json",
+      "image_url": "/assets/atlas/enemies/images/bandit_captain.webp"
+    },
+    {
+      "name": "berserker",
+      "index": "mmberserker00000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmberserker00000.json",
+      "image_url": "/assets/atlas/enemies/images/berserker.webp"
+    },
+    {
+      "name": "commoner",
+      "index": "mmcommoner000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmcommoner000000.json",
+      "image_url": "/assets/atlas/enemies/images/commoner.webp"
+    },
+    {
+      "name": "cultist",
+      "index": "mmcultist0000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmcultist0000000.json",
+      "image_url": "/assets/atlas/enemies/images/cultist.webp"
+    },
+    {
+      "name": "cultist fanatic",
+      "index": "mmcultistfanatic",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmcultistfanatic.json",
+      "image_url": null
+    },
+    {
+      "name": "druid",
+      "index": "mmdruid000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmdruid000000000.json",
+      "image_url": "/assets/atlas/enemies/images/druid.webp"
+    },
+    {
+      "name": "gladiator",
+      "index": "mmgladiator00000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmgladiator00000.json",
+      "image_url": "/assets/atlas/enemies/images/gladiator.webp"
+    },
+    {
+      "name": "guard",
+      "index": "mmguard000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmguard000000000.json",
+      "image_url": "/assets/atlas/enemies/images/guard.webp"
+    },
+    {
+      "name": "guard captain",
+      "index": "mmguardcaptain00",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmguardcaptain00.json",
+      "image_url": null
+    },
+    {
+      "name": "knight",
+      "index": "mmknight00000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmknight00000000.json",
+      "image_url": "/assets/atlas/enemies/images/knight.webp"
+    },
+    {
+      "name": "mage",
+      "index": "mmmage0000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmmage0000000000.json",
+      "image_url": "/assets/atlas/enemies/images/mage.webp"
+    },
+    {
+      "name": "noble",
+      "index": "mmnoble000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmnoble000000000.json",
+      "image_url": "/assets/atlas/enemies/images/noble.webp"
+    },
+    {
+      "name": "pirate",
+      "index": "mmpirate00000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmpirate00000000.json",
+      "image_url": null
+    },
+    {
+      "name": "pirate captain",
+      "index": "mmpiratecaptain0",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmpiratecaptain0.json",
+      "image_url": null
+    },
+    {
+      "name": "priest",
+      "index": "mmpriest00000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmpriest00000000.json",
+      "image_url": "/assets/atlas/enemies/images/priest.webp"
+    },
+    {
+      "name": "priest acolyte",
+      "index": "mmpriestacolyte0",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmpriestacolyte0.json",
+      "image_url": null
+    },
+    {
+      "name": "scout",
+      "index": "mmscout000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmscout000000000.json",
+      "image_url": "/assets/atlas/enemies/images/scout.webp"
+    },
+    {
+      "name": "spy",
+      "index": "mmspy00000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmspy00000000000.json",
+      "image_url": "/assets/atlas/enemies/images/spy.webp"
+    },
+    {
+      "name": "tough",
+      "index": "mmtough000000000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmtough000000000.json",
+      "image_url": null
+    },
+    {
+      "name": "tough boss",
+      "index": "mmtoughboss00000",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmtoughboss00000.json",
+      "image_url": null
+    },
+    {
+      "name": "vampire familiar",
+      "index": "mmvampirefamilia",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmvampirefamilia.json",
+      "image_url": null
+    },
+    {
+      "name": "warrior infantry",
+      "index": "mmwarriorinfantr",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 25,
+      "challenge_rating": 0.125,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmwarriorinfantr.json",
+      "image_url": null
+    },
+    {
+      "name": "warrior veteran",
+      "index": "mmwarriorveteran",
+      "size": "Medium",
+      "type": "humanoid",
+      "alignment": "Neutral",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/24/humanoid/mmwarriorveteran.json",
+      "image_url": null
+    }
+  ]
+}

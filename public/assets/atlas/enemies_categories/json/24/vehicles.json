@@ -1,0 +1,83 @@
+{
+  "name": "Vehicles",
+  "index": "vehicles",
+  "monsters": [
+    {
+      "name": "galley",
+      "index": "phbmobgalley0000",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/phbmobgalley0000.json",
+      "image_url": null
+    },
+    {
+      "name": "keelboat",
+      "index": "phbmobkeelboat00",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/phbmobkeelboat00.json",
+      "image_url": null
+    },
+    {
+      "name": "longship",
+      "index": "phbmoblongship00",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/phbmoblongship00.json",
+      "image_url": null
+    },
+    {
+      "name": "rowboat",
+      "index": "phbmobrowboat000",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/phbmobrowboat000.json",
+      "image_url": null
+    },
+    {
+      "name": "sailing ship",
+      "index": "phbmobsailingshi",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/phbmobsailingshi.json",
+      "image_url": null
+    },
+    {
+      "name": "warship",
+      "index": "phbmobwarship000",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/phbmobwarship000.json",
+      "image_url": null
+    },
+    {
+      "name": "airship",
+      "index": "vbttg9kjhnqstg0a",
+      "size": "Large",
+      "type": "humanoid",
+      "alignment": "any alignment",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/vehicles/vbttg9kjhnqstg0a.json",
+      "image_url": null
+    }
+  ]
+}

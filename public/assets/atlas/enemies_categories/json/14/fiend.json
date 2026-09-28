@@ -1,0 +1,259 @@
+{
+  "name": "Fiend",
+  "index": "fiend",
+  "monsters": [
+    {
+      "name": "ice devil",
+      "index": "1zzrqps9jzdlzgqi",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 11500,
+      "challenge_rating": 14,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/1zzrqps9jzdlzgqi.json",
+      "image_url": "/assets/atlas/enemies/images/ice_devil.webp"
+    },
+    {
+      "name": "erinyes",
+      "index": "3o2rqbqpzjihmrbw",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 8400,
+      "challenge_rating": 12,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/3o2rqbqpzjihmrbw.json",
+      "image_url": "/assets/atlas/enemies/images/erinyes.webp"
+    },
+    {
+      "name": "nightmare",
+      "index": "5sgvghqbswgwrwsf",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Neutral Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/5sgvghqbswgwrwsf.json",
+      "image_url": "/assets/atlas/enemies/images/nightmare.webp"
+    },
+    {
+      "name": "vrock",
+      "index": "6oc29m5uzzzb0pk3",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 2300,
+      "challenge_rating": 6,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/6oc29m5uzzzb0pk3.json",
+      "image_url": "/assets/atlas/enemies/images/vrock.webp"
+    },
+    {
+      "name": "bearded devil",
+      "index": "9ggqbmakxraotz7s",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/9ggqbmakxraotz7s.json",
+      "image_url": "/assets/atlas/enemies/images/bearded_devil.webp"
+    },
+    {
+      "name": "bone devil",
+      "index": "anseln7hwup97grf",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/anseln7hwup97grf.json",
+      "image_url": "/assets/atlas/enemies/images/bone_devil.webp"
+    },
+    {
+      "name": "quasit",
+      "index": "bwtkdzavdnhisgp4",
+      "size": "Tiny",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/bwtkdzavdnhisgp4.json",
+      "image_url": "/assets/atlas/enemies/images/quasit.webp"
+    },
+    {
+      "name": "imp",
+      "index": "dlqiesmsfsxijd5c",
+      "size": "Tiny",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 200,
+      "challenge_rating": 1,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/dlqiesmsfsxijd5c.json",
+      "image_url": "/assets/atlas/enemies/images/imp.webp"
+    },
+    {
+      "name": "hezrou",
+      "index": "ec3lhsnv1zru7qaq",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/ec3lhsnv1zru7qaq.json",
+      "image_url": "/assets/atlas/enemies/images/hezrou.webp"
+    },
+    {
+      "name": "marilith",
+      "index": "egssdybqolcelb0j",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 15000,
+      "challenge_rating": 16,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/egssdybqolcelb0j.json",
+      "image_url": "/assets/atlas/enemies/images/marilith.webp"
+    },
+    {
+      "name": "hell hound",
+      "index": "iscl4q82ivnyelzc",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 700,
+      "challenge_rating": 3,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/iscl4q82ivnyelzc.json",
+      "image_url": "/assets/atlas/enemies/images/hell_hound.webp"
+    },
+    {
+      "name": "chain devil",
+      "index": "ktm6iv9i5l1mwudk",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/ktm6iv9i5l1mwudk.json",
+      "image_url": "/assets/atlas/enemies/images/chain_devil.webp"
+    },
+    {
+      "name": "dretch",
+      "index": "kz2fw9xb5ccvxlx4",
+      "size": "Small",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/kz2fw9xb5ccvxlx4.json",
+      "image_url": "/assets/atlas/enemies/images/dretch.webp"
+    },
+    {
+      "name": "horned devil",
+      "index": "madgs8pwmvyyfof1",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 7200,
+      "challenge_rating": 11,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/madgs8pwmvyyfof1.json",
+      "image_url": "/assets/atlas/enemies/images/horned_devil.webp"
+    },
+    {
+      "name": "glabrezu",
+      "index": "ogphf4scvoai87tu",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/ogphf4scvoai87tu.json",
+      "image_url": "/assets/atlas/enemies/images/glabrezu.webp"
+    },
+    {
+      "name": "rakshasa",
+      "index": "qxzmsrtheodqo8l2",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/qxzmsrtheodqo8l2.json",
+      "image_url": "/assets/atlas/enemies/images/rakshasa.webp"
+    },
+    {
+      "name": "pit fiend",
+      "index": "rcv5y7iwlfnxkinx",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 25000,
+      "challenge_rating": 20,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/rcv5y7iwlfnxkinx.json",
+      "image_url": "/assets/atlas/enemies/images/pit_fiend.webp"
+    },
+    {
+      "name": "nalfeshnee",
+      "index": "rug5jmnknnznbaq9",
+      "size": "Large",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 10000,
+      "challenge_rating": 13,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/rug5jmnknnznbaq9.json",
+      "image_url": "/assets/atlas/enemies/images/nalfeshnee.webp"
+    },
+    {
+      "name": "barbed devil",
+      "index": "sldpiuazf8lujjqy",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/sldpiuazf8lujjqy.json",
+      "image_url": "/assets/atlas/enemies/images/barbed_devil.webp"
+    },
+    {
+      "name": "lemure",
+      "index": "tubco7kaq4w0soxs",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Lawful Evil",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/tubco7kaq4w0soxs.json",
+      "image_url": "/assets/atlas/enemies/images/lemure.webp"
+    },
+    {
+      "name": "balor",
+      "index": "uz8nrrenwyz4qnf6",
+      "size": "Huge",
+      "type": "fiend",
+      "alignment": "Chaotic Evil",
+      "xp": 22000,
+      "challenge_rating": 19,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/uz8nrrenwyz4qnf6.json",
+      "image_url": "/assets/atlas/enemies/images/balor.webp"
+    },
+    {
+      "name": "succubus/incubus",
+      "index": "vmdyzdjqac8vdncy",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "neutral evil",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/vmdyzdjqac8vdncy.json",
+      "image_url": "/assets/atlas/enemies/images/succubus_incubus.webp"
+    },
+    {
+      "name": "night hag",
+      "index": "xvh2uokv1bh03gih",
+      "size": "Medium",
+      "type": "fiend",
+      "alignment": "Neutral Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/14/fiend/xvh2uokv1bh03gih.json",
+      "image_url": "/assets/atlas/enemies/images/night_hag.webp"
+    }
+  ]
+}

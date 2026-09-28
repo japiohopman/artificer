@@ -1,0 +1,72 @@
+{
+  "name": "Plant",
+  "index": "plant",
+  "monsters": [
+    {
+      "name": "awakened shrub",
+      "index": "mmawakenedshrub0",
+      "size": "Small",
+      "type": "plant",
+      "alignment": "Neutral",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/plant/mmawakenedshrub0.json",
+      "image_url": "/assets/atlas/enemies/images/awakened_shrub.webp"
+    },
+    {
+      "name": "awakened tree",
+      "index": "mmawakenedtree00",
+      "size": "Huge",
+      "type": "plant",
+      "alignment": "Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/plant/mmawakenedtree00.json",
+      "image_url": "/assets/atlas/enemies/images/awakened_tree.webp"
+    },
+    {
+      "name": "shambling mound",
+      "index": "mmshamblingmound",
+      "size": "Large",
+      "type": "plant",
+      "alignment": "Unaligned",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/plant/mmshamblingmound.json",
+      "image_url": "/assets/atlas/enemies/tokens/plant/ShamblingMound.webp"
+    },
+    {
+      "name": "shrieker fungus",
+      "index": "mmshriekerfungus",
+      "size": "Medium",
+      "type": "plant",
+      "alignment": "Unaligned",
+      "xp": 10,
+      "challenge_rating": 0,
+      "json_path": "/assets/atlas/enemies/json/24/plant/mmshriekerfungus.json",
+      "image_url": null
+    },
+    {
+      "name": "treant",
+      "index": "mmtreant00000000",
+      "size": "Huge",
+      "type": "plant",
+      "alignment": "Chaotic Good",
+      "xp": 5000,
+      "challenge_rating": 9,
+      "json_path": "/assets/atlas/enemies/json/24/plant/mmtreant00000000.json",
+      "image_url": "/assets/atlas/enemies/tokens/plant/Treant.webp"
+    },
+    {
+      "name": "violet fungus",
+      "index": "mmvioletfungus00",
+      "size": "Medium",
+      "type": "plant",
+      "alignment": "Unaligned",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/plant/mmvioletfungus00.json",
+      "image_url": "/assets/atlas/enemies/images/violet_fungus.webp"
+    }
+  ]
+}

@@ -310,27 +310,76 @@ export async function fetchRecruitNPCData(index: string): Promise<any> {
   return data ? migrateCharacterV1ToV2(data) : null;
 }
 
-export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {
-  if (monsterCategoriesCache) return monsterCategoriesCache;
+export async function fetchMonsterCategories(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string; monsters: any[] }[]> {
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const cacheKey = ruleset || 'default';
+  if (!monsterCategoriesCache) monsterCategoriesCache = {} as any;
+  if ((monsterCategoriesCache as any)[cacheKey]) return (monsterCategoriesCache as any)[cacheKey];
+
+  let result: any[] = [];
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const indexFile = `index_${versionFolder}.json`;
+      const catIndexPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies_categories/${indexFile}`);
+      let catList: any[] = [];
+      if (fs.existsSync(catIndexPath)) {
+        catList = JSON.parse(fs.readFileSync(catIndexPath, 'utf8'));
+      } else {
+        const rootIndexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/enemies_categories/index.json');
+        if (fs.existsSync(rootIndexPath)) {
+          catList = JSON.parse(fs.readFileSync(rootIndexPath, 'utf8'));
+        }
+      }
+
+      if (Array.isArray(catList)) {
+        result = catList.map((f: any) => {
+          const catPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies_categories/json/${versionFolder}/${f.index}.json`);
+          if (fs.existsSync(catPath)) {
+            return JSON.parse(fs.readFileSync(catPath, 'utf8'));
+          }
+          const altPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies_categories/json/${f.index}.json`);
+          if (fs.existsSync(altPath)) {
+            return JSON.parse(fs.readFileSync(altPath, 'utf8'));
+          }
+          return null;
+        }).filter((c: any) => c !== null);
+
+        (monsterCategoriesCache as any)[cacheKey] = result;
+        return result;
+      }
+    } catch (e) {}
+  }
+
   try {
-    const localRes = await fetch('/assets/atlas/enemies_categories/index.json');
+    const indexFile = `index_${versionFolder}.json`;
+    let localRes = await fetch(`/assets/atlas/enemies_categories/${indexFile}`);
+    if (!localRes.ok) {
+      localRes = await fetch('/assets/atlas/enemies_categories/index.json');
+    }
     if (localRes.ok) {
       const fileList = await localRes.json();
       if (Array.isArray(fileList)) {
         const categories = await Promise.all(
           fileList.map(async (f: any) => {
-            const res = await fetch(`/assets/atlas/enemies_categories/json/${f.index}.json`);
+            let res = await fetch(`/assets/atlas/enemies_categories/json/${versionFolder}/${f.index}.json`);
+            if (!res.ok) {
+              res = await fetch(`/assets/atlas/enemies_categories/json/${f.index}.json`);
+            }
             return res.ok ? await res.json() : null;
           })
         );
-        const filtered = categories.filter(c => c !== null);
-        monsterCategoriesCache = filtered;
-        return filtered;
+        result = categories.filter(c => c !== null);
+        (monsterCategoriesCache as any)[cacheKey] = result;
+        return result;
       }
     }
   } catch (e) {}
 
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json?ref=${BRANCH}`;
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json/${versionFolder}?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -348,17 +397,22 @@ export async function fetchMonsterCategories(): Promise<{ name: string; index: s
         })
     );
     
-    return categories.filter(c => c !== null);
+    result = categories.filter(c => c !== null);
+    (monsterCategoriesCache as any)[cacheKey] = result;
+    return result;
   } catch (e) {
     console.error("Error fetching monster categories:", e);
     return [];
   }
 }
 
-export async function fetchMonsterCategoryMapping(): Promise<Record<string, string>> {
-  if (monsterMappingCache) return monsterMappingCache;
+export async function fetchMonsterCategoryMapping(ruleset?: '2014' | '2024'): Promise<Record<string, string>> {
+  const cacheKey = ruleset || 'default';
+  if (!monsterMappingCache) monsterMappingCache = {} as any;
+  if ((monsterMappingCache as any)[cacheKey]) return (monsterMappingCache as any)[cacheKey];
+
   try {
-    const categories = await fetchMonsterCategories();
+    const categories = await fetchMonsterCategories(ruleset);
     const mapping: Record<string, string> = {};
     categories.forEach(data => {
       if (data && data.monsters && data.name) {
@@ -368,7 +422,7 @@ export async function fetchMonsterCategoryMapping(): Promise<Record<string, stri
       }
     });
     if (Object.keys(mapping).length > 0) {
-      monsterMappingCache = mapping;
+      (monsterMappingCache as any)[cacheKey] = mapping;
       return mapping;
     }
   } catch (e) {}
@@ -427,49 +481,64 @@ export function getRulesetVersionFolder(ruleset?: '2014' | '2024'): '14' | '24' 
   return active === '2024' ? '24' : '14';
 }
 
-export async function fetchMonsterList(): Promise<{ name: string; path: string; index: string }[]> {
-  const versionFolder = getRulesetVersionFolder();
+export async function fetchMonsterList(ruleset?: '2014' | '2024'): Promise<{ name: string; path: string; index: string; ruleset: string }[]> {
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const indexFileName = `index_${versionFolder}.json`;
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const indexPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies/${indexFileName}`);
+      if (fs.existsSync(indexPath)) {
+        const data = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        if (Array.isArray(data)) {
+          return data.map((item: any) => ({
+            ...item,
+            name: item.name || item.index.replace(/_/g, ' '),
+            path: item.json_path || `/assets/atlas/enemies/json/${versionFolder}/${item.category || ''}/${item.index}.json`,
+            index: item.index
+          }));
+        }
+      }
+    } catch (e) {}
+  }
+
   try {
-    // Try local index first
-    const localRes = await fetch('/assets/atlas/enemies/index.json');
+    const localRes = await fetch(`/assets/atlas/enemies/${indexFileName}`);
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
         return data.map((item: any) => ({
           ...item,
           name: item.name || item.index.replace(/_/g, ' '),
-          path: item.json_path || `public/assets/atlas/enemies/json/${versionFolder}/${item.index}.json`,
+          path: item.json_path || `/assets/atlas/enemies/json/${versionFolder}/${item.category || ''}/${item.index}.json`,
           index: item.index
         }));
       }
     }
   } catch (e) {
-    console.warn("Local monster index not found, trying GitHub fallback...");
+    console.warn(`Local monster index ${indexFileName} not found, trying GitHub fallback...`);
   }
 
-  // Fallback to GitHub API (recursively scanning rulesets 14 and 24 if index fails)
-  const results: any[] = [];
-  const rulesets = ['14', '24'];
-  for (const r of rulesets) {
-    const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies/json/${r}?ref=${BRANCH}&t=${Date.now()}`;
-    const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
+  if (typeof window !== 'undefined') {
+    const githubIndexUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/${indexFileName}?t=${Date.now()}`;
     try {
-      const res = await fetch(url);
-      const files = await safeJson(res);
-      if (files && Array.isArray(files)) {
-        files
-          .filter((f: any) => f.name.endsWith('.json'))
-          .forEach((f: any) => {
-            results.push({
-              name: f.name.replace('.json', '').replace(/_/g, ' '),
-              path: f.path,
-              index: f.name.replace('.json', '')
-            });
-          });
+      const res = await fetch(`/api/raw?url=${encodeURIComponent(githubIndexUrl)}`);
+      const data = await safeJson(res);
+      if (data && Array.isArray(data)) {
+        return data.map((item: any) => ({
+          ...item,
+          name: item.name || item.index.replace(/_/g, ' '),
+          path: item.json_path || `/assets/atlas/enemies/json/${versionFolder}/${item.category || ''}/${item.index}.json`,
+          index: item.index
+        }));
       }
     } catch (e) {}
   }
-  return results;
+
+  return [];
 }
 
 export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
@@ -480,7 +549,6 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
   let data: any = null;
   let resolvedPath: string | null = null;
   const versionFolder = getRulesetVersionFolder(ruleset);
-  const altFolder = versionFolder === '24' ? '14' : '24';
 
   // Node CLI local filesystem fallback for test environments
   if (typeof window === 'undefined') {
@@ -488,10 +556,16 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
       const fs = await import('fs');
       const pathModule = await import('path');
 
-      // 1. Try resolving via local index.json first
-      const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/enemies/index.json');
-      if (fs.existsSync(indexPath)) {
-        const enemyIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+      // 1. Try resolving via version-specific index strictly
+      const indexFileName = `index_${versionFolder}.json`;
+      const versionIndexPath = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies/${indexFileName}`);
+
+      let enemyIndex: any[] = [];
+      if (fs.existsSync(versionIndexPath)) {
+        enemyIndex = JSON.parse(fs.readFileSync(versionIndexPath, 'utf8'));
+      }
+
+      if (enemyIndex.length > 0) {
         const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
         const matching = enemyIndex.filter((e: any) =>
           e.index.toLowerCase() === index.toLowerCase() ||
@@ -504,15 +578,17 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
         }
       }
 
-      // 2. Direct folder fallback
+      // 2. Direct category subfolder search strictly under versionFolder
       if (!resolvedPath) {
-        const subfolders = [versionFolder, altFolder, ''];
-        for (const sub of subfolders) {
-          const candidate = sub ? `/assets/atlas/enemies/json/${sub}/${index}.json` : `/assets/atlas/enemies/json/${index}.json`;
-          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
-          if (fs.existsSync(fullFsPath)) {
-            resolvedPath = candidate;
-            break;
+        const subDir = pathModule.resolve(process.cwd(), `public/assets/atlas/enemies/json/${versionFolder}`);
+        if (fs.existsSync(subDir)) {
+          const cats = fs.readdirSync(subDir);
+          for (const cat of cats) {
+            const cand = pathModule.resolve(subDir, cat, `${index}.json`);
+            if (fs.existsSync(cand)) {
+              resolvedPath = `/assets/atlas/enemies/json/${versionFolder}/${cat}/${index}.json`;
+              break;
+            }
           }
         }
       }
@@ -527,11 +603,17 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
     } catch (e) {}
   }
 
-  // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
+  // Browser / Network resolution: strictly versioned index first
+  if (!data) {
     try {
-      const indexRes = await fetch('/assets/atlas/enemies/index.json');
+      const indexFileName = `index_${versionFolder}.json`;
+      let enemyIndex: any[] = [];
+      const indexRes = await fetch(`/assets/atlas/enemies/${indexFileName}`);
       if (indexRes.ok) {
-        const enemyIndex = await indexRes.json();
+        enemyIndex = await indexRes.json();
+      }
+
+      if (enemyIndex.length > 0) {
         const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
         const matchingEntries = enemyIndex.filter((e: any) =>
           e.index.toLowerCase() === index.toLowerCase() ||
@@ -545,18 +627,14 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
       }
     } catch (e) {}
 
-    // Iterative fallbacks prioritizing current ruleset version folder
+    // Iterative fallbacks strictly within current ruleset version folder
     if (!resolvedPath) {
-      const subfolders = [versionFolder, altFolder];
-      for (const sub of subfolders) {
-        try {
-          const checkRes = await fetch(`/assets/atlas/enemies/json/${sub}/${index}.json`, { method: 'HEAD' });
-          if (checkRes.ok) {
-            resolvedPath = `/assets/atlas/enemies/json/${sub}/${index}.json`;
-            break;
-          }
-        } catch (e) {}
-      }
+      try {
+        const checkRes = await fetch(`/assets/atlas/enemies/json/${versionFolder}/${index}.json`, { method: 'HEAD' });
+        if (checkRes.ok) {
+          resolvedPath = `/assets/atlas/enemies/json/${versionFolder}/${index}.json`;
+        }
+      } catch (e) {}
     }
 
     if (!resolvedPath) {
@@ -570,8 +648,9 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
         data = await res.json();
       }
     } catch (e) {}
+  }
 
-  if (!data && resolvedPath) {
+  if (!data && resolvedPath && typeof window !== 'undefined') {
     // Fallback to GitHub
     const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\/enemies\/json\//, '').replace(/^\/?public\/assets\/atlas\/enemies\/json\//, '');
     const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/json/${cleanSubpath}?t=${Date.now()}`;
@@ -586,6 +665,18 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
   }
 
   if (!data) return null;
+
+  // Determine actual ruleset of the loaded monster record based on resolved path or record URL
+  const actualPath = resolvedPath || data.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+  // Strict safety check: if ruleset requested was 2024 but loaded record is not 2024, return null!
+  if (activeRuleset === '2024' && actualRuleset !== '2024') {
+    return null;
+  }
+  if (activeRuleset === '2014' && actualRuleset !== '2014') {
+    return null;
+  }
 
   // Normalize Data Structure
   const normalized = { ...data };
@@ -630,10 +721,6 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
        }
      } catch(e) {}
   }
-
-  // Determine actual ruleset of the loaded monster record based on resolved path or record URL
-  const actualPath = resolvedPath || normalized.url || '';
-  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
 
   const finalResult = {
     ...normalized,
@@ -877,7 +964,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   const timestamp = Date.now();
   let finalUrl = "";
 
-  const isLocalhost = typeof window !== 'undefined' && (
+  const isLocalhost = typeof window === 'undefined' || (
     window.location.hostname === 'localhost' || 
     window.location.hostname === '127.0.0.1' || 
     window.location.hostname.startsWith('192.168.') ||

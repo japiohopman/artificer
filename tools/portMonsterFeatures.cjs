@@ -256,7 +256,7 @@ function mapFeature(sourceData, ruleset, category) {
     range,
     image: sourceData.img || '/assets/atlas/features/images/default.webp',
     url: urlPath,
-    updated_at: new Date().toISOString()
+    updated_at: '2026-09-27T00:00:00.000Z'
   };
 }
 
@@ -272,7 +272,7 @@ function port2014Features() {
 
   const indexList = [];
   let count = 0;
-  const files = fs.readdirSync(sourceDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+  const files = fs.readdirSync(sourceDir).filter(f => (f.endsWith('.yml') || f.endsWith('.yaml')) && !f.startsWith('_folder') && !f.startsWith('.'));
 
   files.forEach(f => {
     try {
@@ -281,6 +281,12 @@ function port2014Features() {
       if (parsed) {
         const mapped = mapFeature(parsed, '2014');
         const targetPath = path.join(TARGET_DIR_14, `${mapped.index}.json`);
+        if (fs.existsSync(targetPath)) {
+          try {
+            const existing = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+            if (existing.updated_at) mapped.updated_at = existing.updated_at;
+          } catch (e) {}
+        }
         fs.writeFileSync(targetPath, JSON.stringify(mapped, null, 2), 'utf8');
         count++;
 
@@ -298,6 +304,7 @@ function port2014Features() {
     }
   });
 
+  indexList.sort((a, b) => a.index.localeCompare(b.index));
   fs.writeFileSync(INDEX_PATH_14, JSON.stringify(indexList, null, 2), 'utf8');
   console.log(`Ported ${count} 2014 monster features into ${TARGET_DIR_14}`);
   return indexList;
@@ -315,7 +322,7 @@ function port2024Features() {
 
   const indexList = [];
   let count = 0;
-  const categories = fs.readdirSync(sourceDir);
+  const categories = fs.readdirSync(sourceDir).filter(c => !c.startsWith('_folder') && !c.startsWith('.'));
 
   categories.forEach(cat => {
     const catSourceDir = path.join(sourceDir, cat);
@@ -326,7 +333,7 @@ function port2024Features() {
       fs.mkdirSync(catTargetDir, { recursive: true });
     }
 
-    const files = fs.readdirSync(catSourceDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+    const files = fs.readdirSync(catSourceDir).filter(f => (f.endsWith('.yml') || f.endsWith('.yaml')) && !f.startsWith('_folder') && !f.startsWith('.'));
     files.forEach(f => {
       try {
         const content = fs.readFileSync(path.join(catSourceDir, f), 'utf8');
@@ -334,6 +341,12 @@ function port2024Features() {
         if (parsed) {
           const mapped = mapFeature(parsed, '2024', cat);
           const targetPath = path.join(catTargetDir, `${mapped.index}.json`);
+          if (fs.existsSync(targetPath)) {
+            try {
+              const existing = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+              if (existing.updated_at) mapped.updated_at = existing.updated_at;
+            } catch (e) {}
+          }
           fs.writeFileSync(targetPath, JSON.stringify(mapped, null, 2), 'utf8');
           count++;
 
@@ -353,6 +366,7 @@ function port2024Features() {
     });
   });
 
+  indexList.sort((a, b) => a.index.localeCompare(b.index));
   fs.writeFileSync(INDEX_PATH_24, JSON.stringify(indexList, null, 2), 'utf8');
   console.log(`Ported ${count} 2024 monster features into ${TARGET_DIR_24}`);
   return indexList;

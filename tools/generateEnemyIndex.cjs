@@ -11,13 +11,13 @@ function scanEnemyVersionDir(versionFolder) {
   if (!fs.existsSync(versionPath)) return [];
 
   const index = [];
-  const categories = fs.readdirSync(versionPath);
+  const categories = fs.readdirSync(versionPath).filter(c => !c.startsWith('.') && !c.startsWith('_folder')).sort();
 
   categories.forEach(cat => {
     const catPath = path.join(versionPath, cat);
     if (!fs.statSync(catPath).isDirectory()) return;
 
-    const files = fs.readdirSync(catPath).filter(f => f.endsWith('.json'));
+    const files = fs.readdirSync(catPath).filter(f => f.endsWith('.json') && !f.startsWith('.') && !f.startsWith('_folder')).sort();
     files.forEach(file => {
       try {
         const filePath = path.join(catPath, file);
@@ -44,6 +44,7 @@ function scanEnemyVersionDir(versionFolder) {
     });
   });
 
+  index.sort((a, b) => a.index.localeCompare(b.index));
   return index;
 }
 

@@ -364,14 +364,14 @@ function mapActor(sourceData, targetPath, ruleset, category) {
     image: tokenImage || undefined,
     imageUrl: imageUrl || undefined,
     url: `/assets/atlas/enemies/json/${versionFolder}/${category}/${index}.json`,
-    updated_at: new Date().toISOString(),
+    updated_at: preserved.updated_at || '2026-09-27T00:00:00.000Z',
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
     sprite_sheet: preserved.sprite_sheet || '/assets/atlas/enemies/sprites/enemies_sheet1.webp',
     background_type: preserved.background_type || 'generic',
     item_drops: preserved.item_drops || [],
     forms: preserved.forms || [],
     wikiData: preserved.wikiData || null,
-    last_updated: preserved.last_updated || new Date().toLocaleDateString()
+    last_updated: preserved.last_updated || '9/27/2026'
   };
 }
 
@@ -412,7 +412,7 @@ function mapSpell(sourceData, targetPath, fallbackPath) {
     subclasses: [],
     url: `/assets/atlas/spell/json/${levelDir}/${index}.json`,
     image: preserved.image || `/assets/atlas/spell/images/${index}.webp`,
-    updated_at: new Date().toISOString(),
+    updated_at: preserved.updated_at || '2026-09-27T00:00:00.000Z',
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
     sprite_sheet: preserved.sprite_sheet || ''
   };
@@ -549,6 +549,7 @@ function portActors(ruleset) {
   const categories = fs.readdirSync(config.source);
 
   categories.forEach(cat => {
+    if (cat.startsWith('_folder') || cat.startsWith('.')) return;
     const catSourceDir = path.join(config.source, cat);
     if (!fs.statSync(catSourceDir).isDirectory()) return;
 
@@ -557,7 +558,7 @@ function portActors(ruleset) {
       fs.mkdirSync(catTargetDir, { recursive: true });
     }
 
-    const files = fs.readdirSync(catSourceDir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+    const files = fs.readdirSync(catSourceDir).filter(f => (f.endsWith('.yml') || f.endsWith('.yaml')) && !f.startsWith('_folder') && !f.startsWith('.'));
     files.forEach(file => {
       const fullPath = path.join(catSourceDir, file);
       try {
@@ -570,6 +571,16 @@ function portActors(ruleset) {
 
         const output = mapActor(parsed, targetPath, ruleset, cat);
         if (output) {
+          // Preserve updated_at timestamp if file exists and content has not changed
+          if (fs.existsSync(targetPath)) {
+            try {
+              const existingObj = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+              if (existingObj.updated_at) {
+                output.updated_at = existingObj.updated_at;
+              }
+            } catch (e) {}
+          }
+
           fs.writeFileSync(targetPath, JSON.stringify(output, null, 2), 'utf8');
           count++;
         }

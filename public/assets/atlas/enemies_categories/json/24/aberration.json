@@ -1,0 +1,105 @@
+{
+  "name": "Aberration",
+  "index": "aberration",
+  "monsters": [
+    {
+      "name": "aboleth",
+      "index": "mmaboleth0000000",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Lawful Evil",
+      "xp": 5900,
+      "challenge_rating": 10,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmaboleth0000000.json",
+      "image_url": "/assets/atlas/enemies/images/aboleth.webp"
+    },
+    {
+      "name": "chuul",
+      "index": "mmchuul000000000",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Chaotic Evil",
+      "xp": 1100,
+      "challenge_rating": 4,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmchuul000000000.json",
+      "image_url": "/assets/atlas/enemies/images/chuul.webp"
+    },
+    {
+      "name": "cloaker",
+      "index": "mmcloaker0000000",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Chaotic Neutral",
+      "xp": 3900,
+      "challenge_rating": 8,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmcloaker0000000.json",
+      "image_url": "/assets/atlas/enemies/images/cloaker.webp"
+    },
+    {
+      "name": "darkmantle",
+      "index": "mmdarkmantle0000",
+      "size": "Small",
+      "type": "aberration",
+      "alignment": "Unaligned",
+      "xp": 100,
+      "challenge_rating": 0.5,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmdarkmantle0000.json",
+      "image_url": "/assets/atlas/enemies/tokens/monstrosity/Darkmantle.webp"
+    },
+    {
+      "name": "gibbering mouther",
+      "index": "mmgibberingmouth",
+      "size": "Medium",
+      "type": "aberration",
+      "alignment": "Chaotic Neutral",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmgibberingmouth.json",
+      "image_url": "/assets/atlas/enemies/images/gibbering_mouther.webp"
+    },
+    {
+      "name": "grick",
+      "index": "mmgrick000000000",
+      "size": "Medium",
+      "type": "aberration",
+      "alignment": "Unaligned",
+      "xp": 450,
+      "challenge_rating": 2,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmgrick000000000.json",
+      "image_url": "/assets/atlas/enemies/images/grick.webp"
+    },
+    {
+      "name": "grimlock",
+      "index": "mmgrimlock000000",
+      "size": "Medium",
+      "type": "aberration",
+      "alignment": "Neutral Evil",
+      "xp": 50,
+      "challenge_rating": 0.25,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmgrimlock000000.json",
+      "image_url": "/assets/atlas/enemies/images/grimlock.webp"
+    },
+    {
+      "name": "otyugh",
+      "index": "mmotyugh00000000",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Neutral",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmotyugh00000000.json",
+      "image_url": "/assets/atlas/enemies/images/otyugh.webp"
+    },
+    {
+      "name": "roper",
+      "index": "mmroper000000000",
+      "size": "Large",
+      "type": "aberration",
+      "alignment": "Neutral Evil",
+      "xp": 1800,
+      "challenge_rating": 5,
+      "json_path": "/assets/atlas/enemies/json/24/aberration/mmroper000000000.json",
+      "image_url": "/assets/atlas/enemies/images/roper.webp"
+    }
+  ]
+}
