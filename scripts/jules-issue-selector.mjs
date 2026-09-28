@@ -23,7 +23,8 @@ export {
   parseCanonicalReferences,
   specialistPath,
   validateIssueQualityGate,
-  persistDiscoveryReportIssue
+  persistDiscoveryReportIssue,
+  file
 };
 
 export function parseRoadmapSequence(markdown) {
@@ -431,9 +432,36 @@ async function github(path) {
   return response.json();
 }
 
+export function formatDirectoryListing(path, items, maxItems = 50) {
+  if (!Array.isArray(items)) {
+    throw new Error('Invalid directory listing for ' + path);
+  }
+  const sorted = [...items].sort((a, b) => (a.name || a.path || '').localeCompare(b.name || b.path || ''));
+  const count = sorted.length;
+  const sliced = sorted.slice(0, maxItems);
+  const lines = sliced.map(entry => {
+    const typeLabel = entry.type === 'dir' ? '[DIR]' : '[FILE]';
+    const name = entry.name || entry.path || 'unknown';
+    const sizeLabel = entry.type === 'file' && typeof entry.size === 'number' ? ' (' + entry.size + ' bytes)' : '';
+    return '- ' + typeLabel + ' ' + name + sizeLabel;
+  });
+
+  let result = 'Directory listing for ' + path + ' (' + count + ' item' + (count === 1 ? '' : 's') + '):\n' + lines.join('\n');
+  if (count > maxItems) {
+    result += '\n... and ' + (count - maxItems) + ' more entries (truncated).';
+  }
+  return result;
+}
+
 async function file(path) {
   const item = await github('contents/' + path + '?ref=main');
-  return Buffer.from(item.content, 'base64').toString('utf8');
+  if (Array.isArray(item)) {
+    return formatDirectoryListing(path, item);
+  }
+  if (item && typeof item.content === 'string') {
+    return Buffer.from(item.content, 'base64').toString('utf8');
+  }
+  throw new Error('GitHub API contents/' + path + ' response did not contain content or directory items.');
 }
 
 async function fileOrNull(path) {
