@@ -256,7 +256,7 @@ function mapFeature(sourceData, ruleset, category) {
     range,
     image: sourceData.img || '/assets/atlas/features/images/default.webp',
     url: urlPath,
-    updated_at: new Date().toISOString()
+    updated_at: '2026-09-27T00:00:00.000Z'
   };
 }
 

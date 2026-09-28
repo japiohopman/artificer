@@ -364,14 +364,14 @@ function mapActor(sourceData, targetPath, ruleset, category) {
     image: tokenImage || undefined,
     imageUrl: imageUrl || undefined,
     url: `/assets/atlas/enemies/json/${versionFolder}/${category}/${index}.json`,
-    updated_at: new Date().toISOString(),
+    updated_at: preserved.updated_at || '2026-09-27T00:00:00.000Z',
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
     sprite_sheet: preserved.sprite_sheet || '/assets/atlas/enemies/sprites/enemies_sheet1.webp',
     background_type: preserved.background_type || 'generic',
     item_drops: preserved.item_drops || [],
     forms: preserved.forms || [],
     wikiData: preserved.wikiData || null,
-    last_updated: preserved.last_updated || new Date().toLocaleDateString()
+    last_updated: preserved.last_updated || '9/27/2026'
   };
 }
 
@@ -412,7 +412,7 @@ function mapSpell(sourceData, targetPath, fallbackPath) {
     subclasses: [],
     url: `/assets/atlas/spell/json/${levelDir}/${index}.json`,
     image: preserved.image || `/assets/atlas/spell/images/${index}.webp`,
-    updated_at: new Date().toISOString(),
+    updated_at: preserved.updated_at || '2026-09-27T00:00:00.000Z',
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
     sprite_sheet: preserved.sprite_sheet || ''
   };
