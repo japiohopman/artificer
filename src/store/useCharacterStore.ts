@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { useWorldStore } from './useWorldStore';
+import { ActiveLevelUpSession, LevelUpCommitPayload, evaluateNextLevelStep } from '../lib/progressionUtils';
 
 export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
 
@@ -149,6 +150,7 @@ interface CharacterState {
     hpIncrease: number;
     hasASI: boolean;
   }[];
+  activeLevelUpSession: ActiveLevelUpSession | null;
   xpGain: {
     characterId: string;
     amount: number;
@@ -164,6 +166,9 @@ interface CharacterState {
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   addXp: (id: string, amount: number) => Promise<void>;
   addPartyXp: (amount: number) => Promise<void>;
+  startLevelUpSession: (characterId: string) => Promise<ActiveLevelUpSession | null>;
+  cancelLevelUpSession: () => void;
+  commitLevelUpSession: (payload: LevelUpCommitPayload) => Promise<boolean>;
   dismissLevelUp: () => void;
   updateCharacterStats: (id: string, stats: Partial<Character['stats']>) => void;
   setEmotion: (emotion: Emotion) => void;
@@ -206,6 +211,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   beastRegistry: {},
   testAnimalInteraction: null,
   levelUpQueue: [],
+  activeLevelUpSession: null,
   xpGain: null,
   classLevelingData: {},
   isLoadingSaves: false,
@@ -264,28 +270,90 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }, 2000);
 
     const newXp = char.xp + amount;
-    const { processLevelUp } = await import('../lib/characterUtils');
-    const levelUpData = await processLevelUp({ ...char, xp: newXp });
+    set((state) => ({
+      characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
+    }));
 
-    if (levelUpData) {
-      set((state) => ({
-        characters: state.characters.map(c => c.id === id ? levelUpData.updatedCharacter : c),
-        levelUpQueue: [
-          ...state.levelUpQueue,
-          ...levelUpData.results.map((r: any) => ({
-            characterId: id,
-            newLevel: r.newLevel,
-            features: r.newFeatures,
-            hpIncrease: r.hpIncrease,
-            hasASI: r.hasASI
-          }))
-        ]
-      }));
-    } else {
-      set((state) => ({
-        characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
-      }));
+    // Check if level up session should automatically be proposed/started if none is active
+    const updatedChar = get().characters.find(c => c.id === id);
+    if (updatedChar && !get().activeLevelUpSession) {
+      const session = await evaluateNextLevelStep(updatedChar);
+      if (session) {
+        set({ activeLevelUpSession: session });
+      }
     }
+  },
+
+  startLevelUpSession: async (characterId: string) => {
+    const char = get().characters.find(c => c.id === characterId);
+    if (!char) return null;
+
+    const session = await evaluateNextLevelStep(char);
+    if (session) {
+      set({ activeLevelUpSession: session });
+      return session;
+    }
+    return null;
+  },
+
+  cancelLevelUpSession: () => {
+    set({ activeLevelUpSession: null, levelUpQueue: [] });
+  },
+
+  commitLevelUpSession: async (payload: LevelUpCommitPayload) => {
+    const { activeLevelUpSession, characters } = get();
+    if (!activeLevelUpSession || activeLevelUpSession.characterId !== payload.characterId) {
+      return false;
+    }
+
+    const char = characters.find(c => c.id === payload.characterId);
+    if (!char) return false;
+
+    const oldMaxHp = char.maxHp || char.hp || 10;
+    const oldHp = char.hp || 10;
+    const finalCalculatedMaxHp = Math.max(1, oldMaxHp + payload.finalHpGain);
+    const finalCalculatedHp = Math.max(1, oldHp + payload.finalHpGain);
+
+    const mergedStats = payload.stats ? { ...char.stats, ...payload.stats } : char.stats;
+    const mergedChoices = payload.choices ? { ...(char.choices || {}), ...payload.choices } : (char.choices || {});
+
+    const existingFeatures = [...(char.features || [])];
+    const incomingFeatures = payload.features || activeLevelUpSession.features || [];
+    incomingFeatures.forEach((feat: any) => {
+      if (!existingFeatures.some(f => f.index === feat.index)) {
+        existingFeatures.push({
+          name: feat.name,
+          index: feat.index,
+          desc: Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || ''),
+          source: feat.source || 'Level'
+        });
+      }
+    });
+
+    const updatedChar: Character = {
+      ...char,
+      level: payload.targetLevel,
+      hp: finalCalculatedHp,
+      maxHp: finalCalculatedMaxHp,
+      stats: mergedStats,
+      choices: mergedChoices,
+      features: existingFeatures,
+      subclass: payload.subclass || char.subclass
+    };
+
+    set((state) => ({
+      characters: state.characters.map(c => c.id === payload.characterId ? updatedChar : c),
+      activeLevelUpSession: null,
+      levelUpQueue: []
+    }));
+
+    // If character still has enough XP for subsequent levels, auto-initialize next step
+    const nextSession = await evaluateNextLevelStep(updatedChar);
+    if (nextSession) {
+      set({ activeLevelUpSession: nextSession });
+    }
+
+    return true;
   },
 
   addPartyXp: async (amount) => {
@@ -302,9 +370,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
   },
 
-  dismissLevelUp: () => set((state) => ({ 
-    levelUpQueue: state.levelUpQueue.slice(1) 
-  })),
+  dismissLevelUp: () => set({ activeLevelUpSession: null, levelUpQueue: [] }),
 
   updateCharacterStats: (id, newStats) => set((state) => ({
     characters: state.characters.map(c => {

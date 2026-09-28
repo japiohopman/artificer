@@ -46,17 +46,28 @@ import { useAudioStore } from '../../store/useAudioStore';
 
 export const LevelUpOverlay: React.FC = () => {
   const { 
+    activeLevelUpSession,
+    cancelLevelUpSession,
+    commitLevelUpSession,
     levelUpQueue, 
-    dismissLevelUp, 
     characters, 
-    updateCharacterStats,
-    updateCharacter,
   } = useCharacterStore();
 
   const { updateLayerVolume } = useAudioStore();
   
-  const levelUpResult = levelUpQueue[0];
-  
+  // Active session taking precedence over legacy queue structure
+  const session = activeLevelUpSession || (levelUpQueue[0] ? {
+    characterId: levelUpQueue[0].characterId,
+    currentLevel: (characters.find(c => c.id === levelUpQueue[0].characterId)?.level || 1),
+    targetLevel: levelUpQueue[0].newLevel,
+    classHitDie: (CLASS_DATA[characters.find(c => c.id === levelUpQueue[0].characterId)?.class || 'Fighter']?.hitDie || 8),
+    features: levelUpQueue[0].features || [],
+    hpIncrease: levelUpQueue[0].hpIncrease || 6,
+    hasASI: levelUpQueue[0].hasASI || false
+  } : null);
+
+  const character = characters.find(c => c.id === session?.characterId);
+
   const [points, setPoints] = useState(2);
   const [tempStats, setTempStats] = useState<Record<string, number>>({});
   const [originalStats, setOriginalStats] = useState<Record<string, number>>({});
@@ -69,13 +80,12 @@ export const LevelUpOverlay: React.FC = () => {
   // Fast HP Rolling states
   const [hpMethod, setHpMethod] = useState<'fixed' | 'roll'>('fixed');
   const [rolledHpValue, setRolledHpValue] = useState<number | null>(null);
-  
-  const character = characters.find(c => c.id === levelUpResult?.characterId);
-  const proficiencyBonus = Math.floor(2 + ((levelUpResult?.newLevel || 1) - 1) / 4);
+
+  const proficiencyBonus = Math.floor(2 + ((session?.targetLevel || 1) - 1) / 4);
 
   // Calculated HP Increase (Fixed / Average method)
   const conModifier = Math.floor(((tempStats.con || (character ? character.stats?.con : 10) || 10) - 10) / 2);
-  const classHitDie = character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8; // fallback to 8
+  const classHitDie = session?.classHitDie || (character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8);
   const fixedHpGain = Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
   const rolledHpGain = rolledHpValue !== null ? Math.max(1, rolledHpValue + conModifier) : fixedHpGain;
   const finalHpGain = hpMethod === 'roll' ? rolledHpGain : fixedHpGain;
@@ -88,10 +98,10 @@ export const LevelUpOverlay: React.FC = () => {
   };
 
   useEffect(() => {
-    if (levelUpResult && character) {
+    if (session && character) {
       setOriginalStats(character.stats || {});
       setTempStats(character.stats || {});
-      setPoints(2);
+      setPoints(session.hasASI ? 2 : 0);
       setFeatureChoices({});
       setOptionDetails({});
       setAnimationsComplete(false);
@@ -102,7 +112,7 @@ export const LevelUpOverlay: React.FC = () => {
       
       // Load full feature data for main features
       const loadMainFeatures = async () => {
-        const expanded = await Promise.all(levelUpResult.features.map(async (feat) => {
+        const expanded = await Promise.all((session.features || []).map(async (feat: any) => {
           if (feat.choice || feat.feature_specific) return feat;
           const full = await atlasService.loadFeature(feat.index);
           return full ? { ...feat, ...full } : feat;
@@ -129,7 +139,7 @@ export const LevelUpOverlay: React.FC = () => {
       loadMainFeatures();
       
       // Delay button appearance to let animations play
-      const timer = setTimeout(() => setAnimationsComplete(true), 2500);
+      const timer = setTimeout(() => setAnimationsComplete(true), 1200);
       
       // Audio transition
       updateLayerVolume(1, 0);
@@ -138,10 +148,10 @@ export const LevelUpOverlay: React.FC = () => {
 
       return () => clearTimeout(timer);
     }
-  }, [levelUpResult?.characterId, levelUpResult?.newLevel]); // More specific triggers
+  }, [session?.characterId, session?.targetLevel]);
 
   useEffect(() => {
-    if (!levelUpResult) return;
+    if (!session) return;
 
     const subclassEntries = Object.entries(featureChoices).filter(([key]) => 
       key.toLowerCase().includes('archetype') || 
@@ -159,7 +169,7 @@ export const LevelUpOverlay: React.FC = () => {
       if (subclassIndex) {
         atlasService.loadSubclass(subclassIndex, character?.ruleset).then(async (subData) => {
           if (subData && subData.subclass_levels) {
-            const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === levelUpResult.newLevel);
+            const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === session.targetLevel);
             const currentLevelFeatures = currentLevelGroup?.features || [];
             
             // Expand subclass features
@@ -186,7 +196,7 @@ export const LevelUpOverlay: React.FC = () => {
       // If character already has a subclass, check it for new features at this level
       atlasService.loadSubclass(character.subclass, character?.ruleset).then(async (subData) => {
         if (subData && subData.subclass_levels) {
-          const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === levelUpResult.newLevel);
+          const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === session.targetLevel);
           const currentLevelFeatures = currentLevelGroup?.features || [];
           
           // Expand subclass features
@@ -199,9 +209,9 @@ export const LevelUpOverlay: React.FC = () => {
         }
       });
     }
-  }, [featureChoices, levelUpResult?.newLevel, character?.subclass]);
+  }, [featureChoices, session?.targetLevel, character?.subclass]);
 
-  if (!levelUpResult || !character) return null;
+  if (!session || !character) return null;
 
   const handleStatChange = (statId: string, delta: number) => {
     const currentVal = tempStats[statId] || 10;
@@ -216,8 +226,8 @@ export const LevelUpOverlay: React.FC = () => {
     setPoints(prev => prev - delta);
   };
 
-  const handleComplete = () => {
-    if (levelUpResult.hasASI && points > 0) return false; // Must spend all points
+  const handleComplete = async () => {
+    if (session.hasASI && points > 0) return false;
     
     const allFeatures = [...expandedMainFeatures, ...subclassFeatures];
     const featuresWithChoices = allFeatures.filter(f => 
@@ -230,44 +240,16 @@ export const LevelUpOverlay: React.FC = () => {
       
       let limit = getChoiceLimit(feat);
       if (limit === 0 && isExpertise(feat)) {
-        limit = 2; // Default for Rogue 1st level expertise
+        limit = 2;
       }
       if (limit === 0) limit = 1;
 
       if (selections.length < limit) return;
     }
 
-    // Apply custom rolled or average HP calculations instead of hardcoded levels
-    const oldMaxHp = character.maxHp || character.hp || 10;
-    const oldHp = character.hp || 10;
-    // Check old stats and levelup increments
-    const baseHpDifference = finalHpGain - levelUpResult.hpIncrease;
-
-    if (levelUpResult.hasASI) {
-      updateCharacterStats(character.id, tempStats);
-    }
-
-    // Adjust HP inside updateCharacter as well to respect roll modifications
-    const finalCalculatedMaxHp = oldMaxHp + baseHpDifference;
-    const finalCalculatedHp = oldHp + baseHpDifference;
-
     const currentChoices = JSON.parse(JSON.stringify(character.choices || {}));
-    const newFeatures = [...(character.features || [])];
     
-    // Add subclass features (avoid duplicates)
-    subclassFeatures.forEach(sf => {
-      if (!newFeatures.some(f => f.index === sf.index)) {
-        newFeatures.push({
-          name: sf.name,
-          index: sf.index,
-          desc: Array.isArray(sf.desc) ? sf.desc.join('\n') : (sf.desc || ''),
-          source: 'Subclass'
-        });
-      }
-    });
-
     if (Object.keys(featureChoices).length > 0) {
-      // Specifically handle expertise and subclasses to match CharacterStats convention
       Object.entries(featureChoices).forEach(([featIndex, selections]) => {
         currentChoices[featIndex] = selections;
         
@@ -289,29 +271,26 @@ export const LevelUpOverlay: React.FC = () => {
             lowerIndex.includes('bard_college') ||
             lowerIndex.includes('otherworldly_patron') ||
             lowerIndex.includes('sorcerous_origin')) {
-          currentChoices['subclass'] = selections[0]; // Usually just one
+          currentChoices['subclass'] = selections[0];
         }
       });
     }
 
-    const updateData: any = { 
+    const payload = {
+      characterId: session.characterId,
+      targetLevel: session.targetLevel,
+      finalHpGain,
+      stats: session.hasASI ? tempStats : undefined,
       choices: currentChoices,
-      features: newFeatures,
-      hp: finalCalculatedHp,
-      maxHp: finalCalculatedMaxHp
+      features: allFeatures,
+      subclass: currentChoices['subclass']
     };
-    
-    if (currentChoices['subclass']) {
-      updateData.subclass = currentChoices['subclass'];
-    }
-    
-    updateCharacter(character.id, updateData);
-    
+
+    await commitLevelUpSession(payload);
+
     // Restore audio
     updateLayerVolume(1, 0.5);
     updateLayerVolume(4, 0.4);
-    
-    dismissLevelUp();
   };
 
   const handleToggleChoice = (featIndex: string, optionIndex: string, limit: number) => {
@@ -405,7 +384,7 @@ export const LevelUpOverlay: React.FC = () => {
   };
 
   const isComplete = () => {
-    if (levelUpResult.hasASI && points > 0) return false;
+    if (session.hasASI && points > 0) return false;
     
     const allFeatures = [...expandedMainFeatures, ...subclassFeatures];
     const featuresWithChoices = allFeatures.filter(f => 
@@ -460,6 +439,15 @@ export const LevelUpOverlay: React.FC = () => {
           </div>
 
           <div className="relative z-10 flex flex-col h-full max-h-[92vh]">
+            {/* Close / Dismiss Session Button */}
+            <button
+              onClick={() => cancelLevelUpSession()}
+              aria-label="Close level up"
+              className="absolute top-4 right-4 z-30 w-8 h-8 rounded-full bg-black/40 hover:bg-dragon-red text-dragon-gold hover:text-white border border-dragon-gold/30 flex items-center justify-center transition-all"
+            >
+              ✕
+            </button>
+
             {/* Header Section */}
             <div className="bg-dragon-darkRed/95 backdrop-blur-sm pt-[35px] pb-[35px] text-center relative overflow-hidden">
                {/* Decorative Lines */}
@@ -482,7 +470,7 @@ export const LevelUpOverlay: React.FC = () => {
                   <div className="flex items-center justify-center gap-6">
                     <div className="h-px w-24 bg-gradient-to-r from-transparent to-dragon-gold/60" />
                     <span className="text-parchment-200 font-bold uppercase tracking-[0.4em] text-[10px]">
-                      {character.name} is now Level {levelUpResult.newLevel}
+                      {character.name} Advancing to Level {session.targetLevel}
                     </span>
                     <div className="h-px w-24 bg-gradient-to-l from-transparent to-dragon-gold/60" />
                   </div>
@@ -598,9 +586,9 @@ hpMethod === 'roll'
                            <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-3 block">Vitality Matrix</span>
                            <div className="flex items-center justify-center gap-4">
                               <div className="flex flex-col items-end">
-                                 <span className="text-[10px] font-bold text-parchment-400 line-through opacity-50">{(character.maxHp || 10) - levelUpResult.hpIncrease}</span>
+                                 <span className="text-[10px] font-bold text-parchment-400 line-through opacity-50">{character.maxHp || 10}</span>
                                  <span className="text-3xl font-header font-black text-dragon-red leading-none">
-                                    {(character.maxHp || 10) + (finalHpGain - levelUpResult.hpIncrease)}
+                                    {(character.maxHp || 10) + finalHpGain}
                                  </span>
                               </div>
                               <div className="flex flex-col items-center">
@@ -626,7 +614,7 @@ hpMethod === 'roll'
                            <div className="flex items-center justify-center gap-3">
                               <GameIcon name="award" size={24} color="#D4AF37" className="drop-shadow-smAlpha" />
                               <span className="text-3xl font-header font-black text-dragon-darkRed">
-                                 +{Math.floor(2 + (levelUpResult.newLevel - 1) / 4)}
+                                 +{Math.floor(2 + (session.targetLevel - 1) / 4)}
                               </span>
                            </div>
                            <span className="text-[8px] font-bold text-dragon-gold/60 uppercase tracking-widest mt-1">Tier Advancement</span>
@@ -647,7 +635,7 @@ hpMethod === 'roll'
                           }
                         });
 
-                        const newCharacter = { ...character, level: levelUpResult.newLevel, subclass: newSubclass };
+                        const newCharacter = { ...character, level: session.targetLevel, subclass: newSubclass };
                         const newSlots = calculateMaxSpellSlots(newCharacter as any);
                         
                         const slotLevels = Array.from(new Set([...Object.keys(oldSlots), ...Object.keys(newSlots)]))
@@ -710,7 +698,7 @@ hpMethod === 'roll'
                   {/* RIGHT PANEL: Features & ASI */}
                   <div className="space-y-10">
                     {/* New Features */}
-                    {levelUpResult.features.length > 0 && (
+                    {(session.features?.length > 0 || expandedMainFeatures.length > 0) && (
                       <div className="space-y-5">
                         <div className="flex items-center gap-4">
                            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
@@ -868,7 +856,7 @@ hpMethod === 'roll'
                     )}
 
                     {/* ASI Improvement UI */}
-                    {levelUpResult.hasASI && (
+                    {session.hasASI && (
                       <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

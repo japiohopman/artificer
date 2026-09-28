@@ -1,9 +1,31 @@
 import { FeatureOption, extractOptionsFromFeature, getChoiceLimit } from './atlasUtils';
+import { getLevelFromXP, CLASS_DATA } from './characterUtils';
 
 /**
  * Shared utility for D&D 5e character progression logic.
  * Unifies logic for Character Creation (Level 1) and Level Up (Level 2+).
  */
+
+export interface ActiveLevelUpSession {
+  characterId: string;
+  currentLevel: number;
+  targetLevel: number;
+  classHitDie: number;
+  features: any[];
+  hpIncrease: number;
+  hasASI: boolean;
+  levelData?: any;
+}
+
+export interface LevelUpCommitPayload {
+  characterId: string;
+  targetLevel: number;
+  finalHpGain: number;
+  stats?: Record<string, number>;
+  choices?: Record<string, any>;
+  features?: any[];
+  subclass?: string;
+}
 
 export interface ProgressionChoices {
   features: any[];
@@ -12,6 +34,46 @@ export interface ProgressionChoices {
   languageChoices: { choose: number; from: string[] }[];
   spellsGained?: number;
   cantripsGained?: number;
+}
+
+/**
+ * Evaluates the next single level progression step (currentLevel -> currentLevel + 1)
+ * without mutating canonical character state.
+ */
+export async function evaluateNextLevelStep(character: any): Promise<ActiveLevelUpSession | null> {
+  if (!character) return null;
+
+  const currentLevel = character.level || 1;
+  const eligibleLevel = getLevelFromXP(character.xp || 0);
+
+  if (eligibleLevel <= currentLevel) {
+    return null;
+  }
+
+  const targetLevel = currentLevel + 1;
+  const { atlasService } = await import('../services/atlasService');
+  const classData = await atlasService.loadClass(character.class, character.ruleset);
+  const hitDie = classData?.hit_die || CLASS_DATA[character.class]?.hitDie || 8;
+  const levelData = await atlasService.loadLevelData(character.class, targetLevel, character.ruleset);
+
+  const features = levelData?.features || [];
+  const hasASI = levelData?.ability_score_bonuses !== undefined
+    ? levelData.ability_score_bonuses > 0
+    : (targetLevel % 4 === 0);
+
+  const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
+  const hpIncrease = Math.max(1, Math.floor(hitDie / 2) + 1 + conModifier);
+
+  return {
+    characterId: character.id,
+    currentLevel,
+    targetLevel,
+    classHitDie: hitDie,
+    features,
+    hpIncrease,
+    hasASI,
+    levelData
+  };
 }
 
 /**
