@@ -8,16 +8,16 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 
 ## ChatGPT-Curated Execution Sequence
 
-> This sequence is project-management guidance maintained by ChatGPT together with the human project owner. GitHub Issues remain the authoritative execution contracts. Until workflow Issue #387 is implemented, the existing dispatcher still uses its current Issue validation/dependency/priority selection model.
+> This sequence is project-management guidance maintained by ChatGPT together with the human project owner. GitHub Issues remain the authoritative execution contracts. The Issue-first dispatcher consumes this sequence only to determine order; Issue Quality Gate, dependency checks, and the live dispatch safety gate still control execution.
 
 | Order | Issue / checkpoint | Purpose | Current state |
 |---|---|---|---|
 | 1 | #387 | Establish roadmap sequencing and automatic readiness handoff | **completed — merged** |
-| 2 | #389 | Repair canonical directory-reference handling in the live Jules selector | **blocking dispatcher hotfix** |
-| 3 | #365 | Complete Foundry 2024 species source parity | ready after #389 |
-| 4 | #376 | Close remaining 2024 runtime ruleset gaps | blocked by #365 |
-| 5 | Character Creator stability checkpoint | Verify full Continue/creator flow on the corrected foundation | after #376 |
-| 6 | #381 | Resume player-controlled level-up lifecycle | parked until foundation is stable |
+| 2 | #389 | Repair canonical directory-reference handling in the live Jules selector | **completed — merged** |
+| 3 | #365 | Complete Foundry 2024 species source parity | **completed — merged** |
+| 4 | #376 | Close remaining 2024 runtime ruleset gaps | **completed — merged** |
+| 5 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **ready after #376** |
+| 6 | #381 | Resume player-controlled level-up lifecycle | parked until #393 |
 | 7 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
 | 8 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |
 
