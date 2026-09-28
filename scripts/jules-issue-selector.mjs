@@ -114,12 +114,11 @@ export function isSequenceItemComplete(seq, issues, dependencyStates, options = 
     return true;
   }
 
-  // If dependency issue is closed or roadmap state explicitly marks it completed/merged
+  // If dependency issue is closed and completed (reject not_planned or duplicate)
   if (depState && depState.type === 'issue' && depState.state === 'closed') {
-    return true;
-  }
-
-  if (/complete|completed|done|passed|merged/i.test(seq.currentState || '')) {
+    if (depState.stateReason === 'not_planned' || depState.stateReason === 'duplicate') {
+      return false;
+    }
     return true;
   }
 
@@ -455,7 +454,7 @@ async function dependencies(numbers) {
       const pull = await github('pulls/' + number);
       result.set(number, { type: 'pull_request', state: pull.state, merged: Boolean(pull.merged) });
     } else {
-      result.set(number, { type: 'issue', state: issue.state });
+      result.set(number, { type: 'issue', state: issue.state, stateReason: issue.state_reason });
     }
   }
   return result;

@@ -359,13 +359,54 @@ test('roadmap sequence selection advances after earlier item is merged/closed', 
   const result = selectDispatchableIssue(
     [issue365],
     {
-      dependencyStates: new Map([[387, { type: 'issue', state: 'closed' }]]),
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: 'completed' }]]),
       fileExistFn,
       roadmapSequence: seq
     }
   );
 
   assert.equal(result.selected.issue.number, 365);
+});
+
+test('sequence issue is not complete if roadmap says complete but issue is open in repository', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'completed in PR #387' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'open' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected, null);
+  assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Blocked by earlier incomplete roadmap sequence item')));
+});
+
+test('sequence issue closed as not_planned or duplicate does not count as completed terminal state', () => {
+  const seq = [
+    { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'closed' },
+    { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
+  ];
+
+  const issue365 = issue(365);
+
+  const result = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: 'not_planned' }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+
+  assert.equal(result.selected, null);
 });
 
 test('dry-run prompt contains required context', () => {
