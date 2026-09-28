@@ -1919,6 +1919,11 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(npc24.proficiencies).toContain('Saving Throw: STR');
       expect(npc24.proficiencies).toContain('Saving Throw: CON');
       expect(npc24.proficiencies).toContain('Skill: Athletics');
+
+      // Verify 2024 level 1 features are resolved for 2024 NPC
+      expect(npc24.features.length).toBeGreaterThan(0);
+      const featureIndices = npc24.features.map((f: any) => f.index);
+      expect(featureIndices).toContain('second_wind_2024');
     });
 
     it('verifies 2024 species proficiencies omit obsolete 2014 weapon proficiencies', async () => {

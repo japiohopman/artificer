@@ -358,13 +358,16 @@ export const BACKGROUND_DATA: Record<string, any> = {
 };
 
 export async function generateNPCAsync(partial: any): Promise<any> {
-  const { fetchClassData, fetchBackgroundData } = await import('../services/storageService');
+  const { fetchClassData, fetchBackgroundData, fetchSpeciesData } = await import('../services/storageService');
+  const { atlasService } = await import('../services/atlasService');
   const ruleset: '2014' | '2024' = partial.ruleset || '2014';
   const className = partial.class || randomFromList(DND_CLASSES);
   const background = partial.background || randomFromList(DND_BACKGROUNDS);
+  const race = partial.race || randomFromList(DND_RACES);
 
   let classData = partial.classData;
   let backgroundData = partial.backgroundData;
+  let speciesData = partial.speciesData;
 
   if (!classData && className) {
     classData = await fetchClassData(className, ruleset);
@@ -372,14 +375,34 @@ export async function generateNPCAsync(partial: any): Promise<any> {
   if (!backgroundData && background) {
     backgroundData = await fetchBackgroundData(background, ruleset);
   }
+  if (!speciesData && race) {
+    speciesData = await fetchSpeciesData(race, ruleset);
+  }
+
+  // Load level 1 class features if ruleset is 2024 and class features array is empty
+  if (ruleset === '2024' && classData && (!classData.features || classData.features.length === 0)) {
+    const level1Data = await atlasService.loadLevelData(className, 1, '2024');
+    if (level1Data?.features) {
+      const resolvedFeatures: any[] = [];
+      for (const fRef of level1Data.features) {
+        const fData = await atlasService.loadFeature(fRef.index);
+        if (fData) {
+          resolvedFeatures.push({ ...fData, source: 'Class' });
+        }
+      }
+      classData = { ...classData, features: resolvedFeatures };
+    }
+  }
 
   return generateNPC({
     ...partial,
     class: className,
     background,
+    race,
     ruleset,
     classData,
-    backgroundData
+    backgroundData,
+    speciesData
   });
 }
 
@@ -401,9 +424,16 @@ export function generateNPC(partial: any): any {
   const stats: any = {};
   
   const rawPrimary = partial.classData?.primary_ability;
-  const primaryList = Array.isArray(rawPrimary)
-    ? rawPrimary.map((a: any) => String(a.index || a).toLowerCase())
-    : (typeof rawPrimary === 'string' ? [rawPrimary.toLowerCase()] : (classInfo.primaryStats || ['str', 'dex']));
+  let primaryList: string[] = [];
+  if (Array.isArray(rawPrimary)) {
+    primaryList = rawPrimary.map((a: any) => String(a.index || a).toLowerCase());
+  } else if (typeof rawPrimary === 'string') {
+    primaryList = [rawPrimary.toLowerCase()];
+  } else if (rawPrimary && typeof rawPrimary === 'object') {
+    primaryList = [String(rawPrimary.index || rawPrimary.name || 'str').toLowerCase()];
+  } else {
+    primaryList = classInfo.primaryStats || ['str', 'dex'];
+  }
 
   const priorities = [...primaryList];
   const others = Object.keys(rolls).filter(s => !priorities.includes(s)).sort(() => Math.random() - 0.5);
@@ -435,11 +465,17 @@ export function generateNPC(partial: any): any {
 
   // 4. CHOICES (Level 1)
   const choices: Record<string, string[]> = {};
-  if (className === 'Ranger') {
-    choices['favored-enemy-1-type'] = [randomFromList(['beasts', 'fey', 'humanoids', 'monstrosities', 'undead'])];
-    choices['natural-explorer-1-terrain-type'] = [randomFromList(['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp'])];
-  } else if (className === 'Fighter') {
-    choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
+  if (ruleset === '2014') {
+    if (className === 'Ranger') {
+      choices['favored-enemy-1-type'] = [randomFromList(['beasts', 'fey', 'humanoids', 'monstrosities', 'undead'])];
+      choices['natural-explorer-1-terrain-type'] = [randomFromList(['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp'])];
+    } else if (className === 'Fighter') {
+      choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
+    }
+  } else {
+    if (['fighter', 'paladin', 'ranger'].includes(className.toLowerCase())) {
+      choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
+    }
   }
 
   // 5. EQUIPMENT: Slot-aware distribution
@@ -557,7 +593,7 @@ export function generateNPC(partial: any): any {
     stats,
     proficiencies: uniqueProficiencies,
     traits,
-    features: partial.classData?.features || classInfo.features || [],
+    features: partial.classData?.features || (ruleset === '2014' ? classInfo.features || [] : []),
     flaws,
     ideals,
     bonds,
