@@ -763,7 +763,11 @@ export async function fetchMaterialData(index: string): Promise<any> {
 
 export function getCachedEquipment(index: string, ruleset?: '2014' | '2024'): any | null {
   const activeRuleset = getActiveRulesetContext(ruleset);
-  return equipmentCache[`${activeRuleset}:${index}`] || equipmentCache[`2014:${index}`] || equipmentCache[`2024:${index}`] || null;
+  const cached = equipmentCache[`${activeRuleset}:${index}`];
+  if (cached && cached.rulesetContext === activeRuleset) {
+    return cached;
+  }
+  return null;
 }
 
 export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024'): Promise<any> {

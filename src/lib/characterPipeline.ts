@@ -118,19 +118,19 @@ export class CharacterPipeline {
    * If the item represents an equipment pack (e.g. "explorers-pack"),
    * resolves pack contents via getPackContents() and generates instances for each content item.
    */
-  static async expandAndCreateItemInstances(itemIndex: string, quantity: number = 1): Promise<any[]> {
+  static async expandAndCreateItemInstances(itemIndex: string, quantity: number = 1, ruleset?: '2014' | '2024'): Promise<any[]> {
     const packContents = getPackContents(itemIndex);
     if (packContents && packContents.length > 0) {
       const instances: any[] = [];
       for (const content of packContents) {
-        const metadata = await fetchEquipmentData(content.template);
+        const metadata = await fetchEquipmentData(content.template, ruleset);
         const inst = createItemInstance(content.template, content.quantity * quantity, metadata);
         instances.push(inst);
       }
       return instances;
     }
 
-    const metadata = await fetchEquipmentData(itemIndex);
+    const metadata = await fetchEquipmentData(itemIndex, ruleset);
     const inst = createItemInstance(itemIndex, quantity, metadata);
     return [inst];
   }

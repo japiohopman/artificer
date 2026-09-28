@@ -1913,6 +1913,12 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(npc24.class).toBe('fighter');
       expect(npc24.background).toBe('soldier');
       expect(Object.keys(npc24.items || {}).length).toBeGreaterThan(0);
+
+      // Verify proficiencies derived from 2024 Fighter class and 2024 Soldier background datasets
+      expect(npc24.proficiencies.length).toBeGreaterThan(0);
+      expect(npc24.proficiencies).toContain('Saving Throw: STR');
+      expect(npc24.proficiencies).toContain('Saving Throw: CON');
+      expect(npc24.proficiencies).toContain('Skill: Athletics');
     });
 
     it('verifies 2024 species proficiencies omit obsolete 2014 weapon proficiencies', async () => {

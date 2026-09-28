@@ -393,13 +393,19 @@ export function generateNPC(partial: any): any {
   const gender = partial.gender || randomFromList(['Male', 'Female']);
 
   const classInfo = CLASS_DATA[className] || CLASS_DATA['Fighter'];
+  const hitDie = partial.classData?.hit_die || classInfo.hitDie || 8;
   
   // 1. STATS: Assign based on class priority
   const rolls = generateStandardStats();
   const pooledStats = Object.values(rolls).sort((a, b) => b - a);
   const stats: any = {};
   
-  const priorities = [...(classInfo.primaryStats || ['str', 'dex'])];
+  const rawPrimary = partial.classData?.primary_ability;
+  const primaryList = Array.isArray(rawPrimary)
+    ? rawPrimary.map((a: any) => String(a.index || a).toLowerCase())
+    : (typeof rawPrimary === 'string' ? [rawPrimary.toLowerCase()] : (classInfo.primaryStats || ['str', 'dex']));
+
+  const priorities = [...primaryList];
   const others = Object.keys(rolls).filter(s => !priorities.includes(s)).sort(() => Math.random() - 0.5);
   const finalOrder = [...priorities, ...others];
   
@@ -407,7 +413,7 @@ export function generateNPC(partial: any): any {
     stats[ability] = pooledStats[i];
   });
 
-  const hp = calculateHP(level, stats.con, classInfo.hitDie || 8);
+  const hp = calculateHP(level, stats.con, hitDie);
 
   // 2. FLAVOR: Randomized traits
   const traits = partial.traits && partial.traits.length > 0 ? partial.traits : [randomFromList(DND_TRAITS)];
@@ -528,6 +534,14 @@ export function generateNPC(partial: any): any {
     }
   });
 
+  const derivedProficiencies = [
+    ...(partial.proficiencies || []),
+    ...(partial.classData?.proficiencies || []).map((p: any) => p.name || p.index || p),
+    ...(partial.classData?.saving_throws || []).map((s: any) => 'Saving Throw: ' + String(s.name || s.index || s).toUpperCase()),
+    ...(partial.backgroundData?.starting_proficiencies || []).map((p: any) => p.name || p.index || p)
+  ];
+  const uniqueProficiencies = Array.from(new Set(derivedProficiencies));
+
   return {
     id: npcId,
     ruleset: ruleset,
@@ -541,9 +555,9 @@ export function generateNPC(partial: any): any {
     alignment,
     background,
     stats,
-    proficiencies: partial.proficiencies || [],
+    proficiencies: uniqueProficiencies,
     traits,
-    features: classInfo.features || [],
+    features: partial.classData?.features || classInfo.features || [],
     flaws,
     ideals,
     bonds,
@@ -559,7 +573,7 @@ export function generateNPC(partial: any): any {
     choices,
     hp,
     maxHp: hp,
-    money: { cp: 0, sp: 0, gp: BACKGROUND_DATA[background]?.gold || 10, pp: 0 },
+    money: { cp: 0, sp: 0, gp: partial.backgroundData?.gold || BACKGROUND_DATA[background]?.gold || 10, pp: 0 },
     isNpc: true,
     isRecruitable: true,
     dataPath: `${githubBase}public/assets/atlas/character/npc_character_profiles/json/${npcIndex}.json`

@@ -49,10 +49,11 @@ const EquipmentOptionChoice: React.FC<{
     opt: any;
     idx: number;
     source: string;
+    ruleset?: '2014' | '2024';
     completedOptions: Record<string, boolean>;
     choiceSelections: Record<string, string[]>;
     handleChoice: (opt: any, choiceIdx: number, optKey: string, actualChoice?: any) => void;
-}> = ({ opt, idx, source, completedOptions, choiceSelections, handleChoice }) => {
+}> = ({ opt, idx, source, ruleset, completedOptions, choiceSelections, handleChoice }) => {
     const optKey = `${source}-${idx}`;
     const isCompleted = completedOptions[optKey];
     const [categoryItems, setCategoryItems] = useState<any[]>([]);
@@ -144,7 +145,7 @@ const EquipmentOptionChoice: React.FC<{
             if (missing.length > 0) {
                 const uniqueMissing = Array.from(new Set(missing));
                 const results = await Promise.all(uniqueMissing.map(async (idx: string) => {
-                    const data = await fetchEquipmentData(idx);
+                    const data = await fetchEquipmentData(idx, ruleset);
                     return { idx, data };
                 }));
                 
@@ -507,7 +508,7 @@ export const EquipmentStep: React.FC<{
                 const uniqueIndices = Array.from(new Set(equipmentToFetch));
                 const details: Record<string, any> = {};
                 await Promise.all(uniqueIndices.map(async (idx) => {
-                    const d = await fetchEquipmentData(idx);
+                    const d = await fetchEquipmentData(idx, newChar.ruleset);
                     if (d) details[idx] = d;
                 }));
                 setEquipmentDetails(prev => ({ ...prev, ...details }));
@@ -532,7 +533,7 @@ export const EquipmentStep: React.FC<{
                         const idx = eq.equipment?.index;
                         if (!idx || !details[idx]) continue;
                         
-                        const expandedInstances = await CharacterPipeline.expandAndCreateItemInstances(idx, eq.quantity || 1);
+                        const expandedInstances = await CharacterPipeline.expandAndCreateItemInstances(idx, eq.quantity || 1, newChar.ruleset);
                         for (const instance of expandedInstances) {
                             itemsRegistry[instance.id] = instance;
                             const slotId = idx.includes('shield') ? 'off_hand' :
@@ -636,7 +637,7 @@ export const EquipmentStep: React.FC<{
             const index = itemRef.index;
             if (!index) continue;
             
-            const expandedInstances = await CharacterPipeline.expandAndCreateItemInstances(index, itemRef.quantity || 1);
+            const expandedInstances = await CharacterPipeline.expandAndCreateItemInstances(index, itemRef.quantity || 1, newChar.ruleset);
             
             setNewChar(prev => {
                 const itemsRegistry = { ...(prev.items || {}) };
@@ -872,7 +873,7 @@ export const EquipmentStep: React.FC<{
                                             key={i} 
                                             onClick={async () => {
                                                 if (eq.equipment?.index) {
-                                                    const fullItem = await fetchEquipmentData(eq.equipment.index);
+                                                    const fullItem = await fetchEquipmentData(eq.equipment.index, newChar.ruleset);
                                                     if (fullItem) {
                                                         useUIStore.getState().setFocusedItem(fullItem);
                                                         soundService.playEffect('UI_CLICK_LIGHT');
@@ -925,7 +926,8 @@ export const EquipmentStep: React.FC<{
                                         key={`class-${idx}`} 
                                         opt={opt} 
                                         idx={idx} 
-                                        source="Class" 
+                                        source="Class"
+                                        ruleset={newChar.ruleset}
                                         completedOptions={completedOptions} 
                                         choiceSelections={choiceSelections}
                                         handleChoice={handleChoice} 
@@ -936,7 +938,8 @@ export const EquipmentStep: React.FC<{
                                         key={`bg-${idx}`} 
                                         opt={opt} 
                                         idx={idx} 
-                                        source="Background" 
+                                        source="Background"
+                                        ruleset={newChar.ruleset}
                                         completedOptions={completedOptions} 
                                         choiceSelections={choiceSelections}
                                         handleChoice={handleChoice} 
