@@ -1973,6 +1973,23 @@ export async function fetchSpeciesList(ruleset?: '2014' | '2024'): Promise<{ nam
     } catch (e) {}
   }
 
+  try {
+    const localRes = await fetch(`/assets/atlas/species/index_${versionFolder}.json`);
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        let list = data.map((s: any) => ({
+          name: s.name || s.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: s.index
+        }));
+        if (activeRuleset === '2024') {
+          list = list.filter(item => TOP_LEVEL_2024_SPECIES.includes(item.index));
+        }
+        return list;
+      }
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
@@ -2819,6 +2836,19 @@ export async function fetchFeatureData(index: string): Promise<any> {
 }
 
 export async function fetchAlignmentsList(): Promise<{ name: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/alignments/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((a: any) => ({
+          name: a.name || a.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: a.index
+        }));
+      }
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/alignments/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {

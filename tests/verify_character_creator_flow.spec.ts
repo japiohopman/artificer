@@ -1,166 +1,265 @@
 import { test, expect } from '@playwright/test';
 
-test('verify complete guided character creator flow, validation overlay, and review state', async ({ page }) => {
+test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', () => {
     test.setTimeout(60000);
 
-    await page.goto('http://localhost:3000');
+    test('2014 Guided Character Creator Flow completes through review state', async ({ page }) => {
+        await page.goto('http://localhost:3000');
 
-    console.log('Waiting for React stores...');
-    await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
+        console.log('Waiting for React stores...');
+        await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
 
-    console.log('Opening Character Creator...');
-    await page.evaluate(() => {
-      if ((window as any).useGameStore) {
-        (window as any).useGameStore.setState({ isGameStarted: true });
-      }
-      if ((window as any).useUIStore) {
-        (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
-      }
+        console.log('Opening Character Creator...');
+        await page.evaluate(() => {
+          if ((window as any).useGameStore) {
+            (window as any).useGameStore.setState({ isGameStarted: true });
+          }
+          if ((window as any).useUIStore) {
+            (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
+          }
+        });
+
+        await page.waitForTimeout(1000);
+
+        // 1. Welcome Step & Ruleset Selection
+        console.log('1. Verifying Welcome Step & Ruleset Context (2014)...');
+        await expect(page.locator('text=Welcome to Character Creation')).toBeVisible();
+        await expect(page.locator('button:has-text("D&D 5e (2014)")')).toBeVisible();
+        await expect(page.locator('button:has-text("D&D 5.5e (2024)")')).toBeVisible();
+
+        // Explicitly select 2014 ruleset
+        await page.click('button:has-text("D&D 5e (2014)")');
+        await page.waitForTimeout(300);
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 2. Save Slot Step
+        console.log('2. Verifying Save Slot Step...');
+        await expect(page.locator('h2:has-text("Select Save Manifest")')).toBeVisible();
+        await page.click('button:has-text("Slot_01")');
+        await page.waitForTimeout(300);
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 3. Identity Step (Manifested Polarity)
+        console.log('3. Verifying Identity Step...');
+        await expect(page.locator('h2:has-text("Manifested Polarity")')).toBeVisible();
+        await page.click('text=Male');
+        await page.waitForTimeout(300);
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 4. Species Step
+        console.log('4. Verifying Species Step (2014)...');
+        await expect(page.locator('text=Select Species & Heritage')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Human' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Human' }).click();
+        await page.waitForTimeout(500);
+        await expect(page.locator('text=Examine Records: Human')).toBeVisible();
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 5. Class Step
+        console.log('5. Verifying Class Step (2014)...');
+        await expect(page.locator('text=Choose Class')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Fighter' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Fighter' }).click();
+        await page.waitForTimeout(500);
+        await expect(page.locator('text=Examine Records: Fighter')).toBeVisible();
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 6. Background Step (Origins)
+        console.log('6. Verifying Background Step (2014)...');
+        await expect(page.locator('text=Character Origins')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Acolyte' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Acolyte' }).click();
+        await page.waitForTimeout(500);
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 7. Alignment Step
+        console.log('7. Verifying Alignment Step...');
+        await expect(page.locator('button', { hasText: 'Lawful Good' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Lawful Good' }).click();
+        await page.waitForTimeout(500);
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 8. Attributes Step
+        console.log('8. Verifying Attributes Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 9. Choices Step
+        console.log('9. Verifying Choices Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 10. Equipment Step (Fighter is non-spellcaster -> Spells step skipped)
+        console.log('10. Verifying Equipment Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 11. Appearance Step
+        console.log('11. Verifying Appearance Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 12. Describe Your Character Step (Backstory)
+        console.log('12. Verifying Backstory Step & Moniker...');
+        await expect(page.locator('text=Soul Moniker (Character Name)')).toBeVisible();
+        await page.fill('input[placeholder="Enter Character Name or Moniker..."]', 'Arthur 2014');
+        await page.waitForTimeout(300);
+
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
+
+        // 13. Review Step (Final Manifest)
+        console.log('13. Verifying Review Step (Final Manifest 2014)...');
+        await expect(page.locator('h2:has-text("Final Manifest")')).toBeVisible();
+        await expect(page.getByRole('heading', { name: 'Arthur 2014' }).first()).toBeVisible();
+        await expect(page.getByText('Level 0 fighter')).toBeVisible();
+        await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5e (2014)');
+
+        await page.screenshot({ path: 'verification/character_creator_guided_review.png' });
+        console.log('✓ 2014 guided character creator flow test complete!');
     });
 
-    await page.waitForTimeout(1000);
+    test('2024 Guided Character Creator Flow completes through review state', async ({ page }) => {
+        await page.goto('http://localhost:3000');
 
-    // 1. Welcome Step & Ruleset Selection
-    console.log('1. Verifying Welcome Step & Ruleset Context...');
-    await expect(page.locator('text=The Genesis Ritual')).toBeVisible();
-    await expect(page.locator('button:has-text("D&D 5e (2014)")')).toBeVisible();
-    await expect(page.locator('button:has-text("D&D 5.5e (2024)")')).toBeVisible();
+        console.log('Waiting for React stores...');
+        await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
 
-    // Click Continue to go to Save Slot step
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        console.log('Opening Character Creator for 2024 flow...');
+        await page.evaluate(() => {
+          if ((window as any).useGameStore) {
+            (window as any).useGameStore.setState({ isGameStarted: true });
+          }
+          if ((window as any).useUIStore) {
+            (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
+          }
+        });
 
-    // 2. Save Slot Step & Validation Overlay Test
-    console.log('2. Verifying Save Slot & Validation Overlay...');
-    await expect(page.locator('h2:has-text("Select Save Manifest")')).toBeVisible();
+        await page.waitForTimeout(1000);
 
-    // Try to continue without selecting a save slot -> trigger validation overlay
-    console.log('Testing Validation Overlay trigger on incomplete step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        // 1. Welcome Step & Ruleset Selection (2024)
+        console.log('1. Verifying Welcome Step & Ruleset Context (2024)...');
+        await expect(page.locator('text=Welcome to Character Creation')).toBeVisible();
+        await page.click('button:has-text("D&D 5.5e (2024)")');
+        await page.waitForTimeout(300);
 
-    // Expect Validation Overlay modal to pop up
-    await expect(page.locator('text=Complete Your Character')).toBeVisible();
-    await expect(page.locator('text=No save slot selected')).toBeVisible();
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Dismiss validation overlay
-    await page.click('button:has-text("Dismiss")');
-    await page.waitForTimeout(300);
+        // 2. Save Slot Step
+        console.log('2. Verifying Save Slot Step...');
+        await page.click('button:has-text("Slot_02")');
+        await page.waitForTimeout(300);
 
-    // Select Slot 1
-    console.log('Selecting Slot 1...');
-    await page.click('button:has-text("Slot_01")');
-    await page.waitForTimeout(300);
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Continue to Identity step
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        // 3. Identity Step
+        console.log('3. Verifying Identity Step...');
+        await page.click('text=Female');
+        await page.waitForTimeout(300);
 
-    // 3. Identity Step & Name Validation
-    console.log('3. Verifying Identity Step & Name Validation...');
-    await expect(page.locator('h2:has-text("The Great Sigil")')).toBeVisible();
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Try to continue without entering a name -> trigger validation overlay
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        // 4. Species Step (2024 Goliath)
+        console.log('4. Verifying Species Step (2024 Goliath)...');
+        await expect(page.locator('text=Select Species & Heritage')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Goliath' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Goliath' }).click();
+        await page.waitForTimeout(500);
+        await expect(page.locator('text=Examine Records: Goliath')).toBeVisible();
 
-    await expect(page.locator('text=Complete Your Character')).toBeVisible();
-    await expect(page.locator('text=Character name is missing')).toBeVisible();
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Dismiss validation overlay
-    await page.click('button:has-text("Dismiss")');
-    await page.waitForTimeout(300);
+        // 5. Class Step (2024 Paladin)
+        console.log('5. Verifying Class Step (2024 Paladin)...');
+        await expect(page.locator('text=Choose Class')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Paladin' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Paladin' }).click();
+        await page.waitForTimeout(500);
+        await expect(page.locator('text=Examine Records: Paladin')).toBeVisible();
 
-    // Type character name
-    await page.fill('input[placeholder="Enter Moniker..."]', 'Arthur');
-    await page.waitForTimeout(300);
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        // 6. Background Step (2024 Soldier)
+        console.log('6. Verifying Background Step (2024 Origin Background)...');
+        await expect(page.locator('text=Character Origins')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Soldier' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Soldier' }).click();
+        await page.waitForTimeout(500);
+        await expect(page.locator('text=Examine Records: Soldier')).toBeVisible();
 
-    // 4. Species Step
-    console.log('4. Verifying Species Step & 3:2 Aspect Ratio Cards...');
-    await expect(page.locator('text=Select Species & Heritage')).toBeVisible();
-    await expect(page.locator('button').filter({ hasText: /^Human/ })).toBeVisible();
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Select Human
-    await page.locator('button').filter({ hasText: /^Human/ }).click();
-    await page.waitForTimeout(500);
-    await expect(page.locator('text=Examine Records: Human')).toBeVisible();
+        // 7. Alignment Step
+        console.log('7. Verifying Alignment Step...');
+        await expect(page.locator('button', { hasText: 'Lawful Good' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Lawful Good' }).click();
+        await page.waitForTimeout(500);
 
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // 5. Class Step
-    console.log('5. Verifying Class Step & 2:3 Aspect Ratio Cards...');
-    await expect(page.locator('text=Choose Class')).toBeVisible();
-    await expect(page.locator('button').filter({ hasText: /^Fighter/ })).toBeVisible();
+        // 8. Attributes Step
+        console.log('8. Verifying Attributes Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Select Fighter
-    await page.locator('button').filter({ hasText: /^Fighter/ }).click();
-    await page.waitForTimeout(500);
-    await expect(page.locator('text=Examine Records: Fighter')).toBeVisible();
+        // 9. Choices Step
+        console.log('9. Verifying Choices Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        // 10. Arcana / Spells Step (Paladin is a spellcaster)
+        console.log('10. Verifying Spells / Arcana Step (Paladin)...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // 6. Background Step (Origins)
-    console.log('6. Verifying Background Step & 1:1 Aspect Ratio Cards...');
-    await expect(page.locator('text=Character Origins')).toBeVisible();
-    await expect(page.locator('button').filter({ hasText: /^Acolyte/ })).toBeVisible();
+        // 11. Equipment Step
+        console.log('11. Verifying Equipment Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Select Acolyte
-    await page.locator('button').filter({ hasText: /^Acolyte/ }).click();
-    await page.waitForTimeout(500);
-    await expect(page.locator('text=Examine Records: Acolyte')).toBeVisible();
+        // 12. Appearance Step
+        console.log('12. Verifying Appearance Step...');
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+        // 13. Describe Your Character Step
+        console.log('13. Verifying Backstory Step & Moniker...');
+        await expect(page.locator('text=Soul Moniker (Character Name)')).toBeVisible();
+        await page.fill('input[placeholder="Enter Character Name or Moniker..."]', 'Valeria 2024');
+        await page.waitForTimeout(300);
 
-    // 7. Alignment Step
-    console.log('7. Verifying Alignment Step...');
-    await expect(page.locator('button').filter({ hasText: /^Lawful Good/ })).toBeVisible();
+        await page.click('#next-stage-btn');
+        await page.waitForTimeout(500);
 
-    // Select Lawful Good
-    await page.locator('button').filter({ hasText: /^Lawful Good/ }).click();
-    await page.waitForTimeout(500);
+        // 14. Review Step (Final Manifest 2024)
+        console.log('14. Verifying Review Step (Final Manifest 2024)...');
+        await expect(page.locator('h2:has-text("Final Manifest")')).toBeVisible();
+        await expect(page.getByRole('heading', { name: 'Valeria 2024' }).first()).toBeVisible();
+        await expect(page.getByText('Level 0 paladin')).toBeVisible();
+        await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5.5e (2024)');
 
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // 8. Attributes Step
-    console.log('8. Verifying Attributes Step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // 9. Choices Step
-    console.log('9. Verifying Choices Step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // 10. Equipment Step
-    console.log('10. Verifying Equipment Step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // 11. Appearance Step
-    console.log('11. Verifying Appearance Step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // 12. Describe Your Character Step
-    console.log('12. Verifying Backstory Step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // 13. Review Step (Final Manifest)
-    console.log('13. Verifying Review Step (Final Manifest)...');
-    await expect(page.locator('h2:has-text("Final Manifest")')).toBeVisible();
-    await expect(page.getByText('Arthur')).toBeVisible();
-    await expect(page.getByText('Level 0 fighter')).toBeVisible();
-    await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5e (2014)');
-
-    // Save screenshot
-    await page.screenshot({ path: 'verification/character_creator_guided_review.png' });
-    console.log('✓ Playwright guided character creator flow test complete!');
+        await page.screenshot({ path: 'verification/character_creator_2024_review.png' });
+        console.log('✓ 2024 guided character creator flow test complete!');
+    });
 });

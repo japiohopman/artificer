@@ -16,8 +16,8 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 | 2 | #389 | Repair canonical directory-reference handling in the live Jules selector | **completed — merged** |
 | 3 | #365 | Complete Foundry 2024 species source parity | **completed — merged** |
 | 4 | #376 | Close remaining 2024 runtime ruleset gaps | **completed — merged** |
-| 5 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **ready after #376** |
-| 6 | #381 | Resume player-controlled level-up lifecycle | parked until #393 |
+| 5 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **completed — verified in PR** |
+| 6 | #381 | Resume player-controlled level-up lifecycle | **ready after #393** |
 | 7 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
 | 8 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |
 
