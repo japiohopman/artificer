@@ -55,16 +55,7 @@ export const LevelUpOverlay: React.FC = () => {
 
   const { updateLayerVolume } = useAudioStore();
   
-  // Active session taking precedence over legacy queue structure
-  const session = activeLevelUpSession || (levelUpQueue[0] ? {
-    characterId: levelUpQueue[0].characterId,
-    currentLevel: (characters.find(c => c.id === levelUpQueue[0].characterId)?.level || 1),
-    targetLevel: levelUpQueue[0].newLevel,
-    classHitDie: (CLASS_DATA[characters.find(c => c.id === levelUpQueue[0].characterId)?.class || 'Fighter']?.hitDie || 8),
-    features: levelUpQueue[0].features || [],
-    hpIncrease: levelUpQueue[0].hpIncrease || 6,
-    hasASI: levelUpQueue[0].hasASI || false
-  } : null);
+  const session = activeLevelUpSession;
 
   const character = characters.find(c => c.id === session?.characterId);
 
@@ -710,8 +701,14 @@ hpMethod === 'roll'
                              const options = getOptionsForChoice(feat);
                              const selections = featureChoices[feat.index] || [];
                              const isSubclassFeature = subclassFeatures.some(sf => sf.index === feat.index);
-                             const limit = getChoiceLimit(feat) || (isExpertise(feat) ? 2 : 0);
-                             const hasChoice = (options.length > 0) || (isExpertise(feat) && options.length > 0);
+                             let limit = getChoiceLimit(feat);
+                             if (limit === 0 && isExpertise(feat)) {
+                               limit = 2;
+                             }
+                             if (limit === 0) {
+                               limit = 1;
+                             }
+                             const hasChoice = (options.length > 0);
                              const featDescLines = Array.isArray(feat.full_desc) ? feat.full_desc : [feat.desc || ''];
 
                              return (
