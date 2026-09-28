@@ -98,33 +98,59 @@ export function findOpenImplementationPr(issueNumber, prs) {
   ) || null;
 }
 
+export function isSequenceItemComplete(seq, issues, dependencyStates, options = {}) {
+  const prs = options.openPullRequests || [];
+
+  if (seq.issueNumber === null) {
+    return /complete|completed|done|passed/i.test(seq.currentState || '');
+  }
+
+  const depState = dependencyStates instanceof Map
+    ? dependencyStates.get(seq.issueNumber)
+    : dependencyStates[seq.issueNumber];
+
+  // If dependency is a merged PR
+  if (depState && depState.type === 'pull_request' && depState.merged) {
+    return true;
+  }
+
+  // If dependency issue is closed or roadmap state explicitly marks it completed/merged
+  if (depState && depState.type === 'issue' && depState.state === 'closed') {
+    return true;
+  }
+
+  if (/complete|completed|done|passed|merged/i.test(seq.currentState || '')) {
+    return true;
+  }
+
+  const hasMergedPr = prs.some(pr =>
+    pr.merged && (
+      new RegExp('(Closes|Fixes|Resolves|Refs|Part of)\\s+#' + seq.issueNumber + '\\b', 'i').test(pr.body || '') ||
+      new RegExp('\\(#' + seq.issueNumber + '\\)', 'i').test(pr.title || '') ||
+      new RegExp('\\(#' + seq.issueNumber + '\\)', 'i').test(pr.body || '')
+    )
+  );
+
+  if (hasMergedPr) {
+    return true;
+  }
+
+  return false;
+}
+
 export function advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates, options = {}) {
   const fileExistFn = options.fileExistFn;
   if (!roadmapSequence || roadmapSequence.length === 0) return null;
 
   for (let i = 0; i < roadmapSequence.length; i++) {
     const seq = roadmapSequence[i];
-    if (seq.issueNumber === null) {
-      const isComplete = /complete|completed|done|passed/i.test(seq.currentState || '');
-      if (!isComplete) break;
+
+    if (isSequenceItemComplete(seq, issues, dependencyStates, options)) {
       continue;
     }
 
-    const depState = dependencyStates instanceof Map
-      ? dependencyStates.get(seq.issueNumber)
-      : dependencyStates[seq.issueNumber];
-
-    const isClosedInDepStates = depState && (
-      (depState.type === 'issue' && depState.state === 'closed') ||
-      (depState.type === 'pull_request' && depState.merged)
-    );
-
-    const isOpenInIssues = issues.some(idx => idx && idx.number === seq.issueNumber && idx.state === 'open' && !idx.pull_request);
-    const isOpenInDepStates = depState && depState.state === 'open';
-
-    if (isClosedInDepStates || (!isOpenInIssues && !isOpenInDepStates && depState && depState.state === 'closed')) {
-      // Completed, continue to check next item
-      continue;
+    if (seq.issueNumber === null) {
+      break;
     }
 
     // Found the first uncompleted sequence issue!
@@ -240,8 +266,8 @@ export function selectDispatchableIssue(issues, options = {}) {
         const isOpenInIssues = issues.some(i => i && i.number === seq.issueNumber && i.state === 'open' && !i.pull_request);
         const isOpenInDepStates = depState && depState.state === 'open';
 
-        // If explicitly closed or merged, this sequence step is complete
-        if (isClosedInDepStates || (!isOpenInIssues && !isOpenInDepStates && depState && depState.state === 'closed')) {
+        // Check if sequence item is complete using verified terminal state
+        if (isSequenceItemComplete(seq, issues, dependencyStates, options)) {
           continue; // Move to next item in sequence
         }
 
@@ -466,25 +492,32 @@ async function main() {
   ])];
   const dependencyStates = await dependencies(dependencyNumbers);
 
-  // Check for automatic readiness handoff if the current candidate is not ready but eligible for promotion
-  const promotion = advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates);
+  // Check for automatic readiness handoff if the current candidate is not ready but eligible for promotion.
+  // CRITICAL SAFETY RULE: The selector is read-only during dry-run. Do NOT mutate GitHub state unless confirmation is DISPATCH or ALLOW_READINESS_MUTATION === 'true'.
+  const allowMutation = process.env.ALLOW_READINESS_MUTATION === 'true' || process.env.JULES_DISPATCH_CONFIRMATION === 'DISPATCH';
+  const promotion = advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates, { openPullRequests: prs });
+
   if (promotion && promotion.promoted) {
-    console.error(`Automatic readiness handoff: Promoting Issue #${promotion.issueNumber} to status: ready ...`);
-    const patchResponse = await fetch('https://api.github.com/repos/' + REPO + '/issues/' + promotion.issueNumber, {
-      method: 'PATCH',
-      headers: {
-        Authorization: 'Bearer ' + TOKEN,
-        Accept: 'application/vnd.github+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ body: promotion.updatedBody })
-    });
-    if (!patchResponse.ok) {
-      const errorText = await patchResponse.text();
-      throw new Error(`Automatic readiness handoff failed: GitHub API returned ${patchResponse.status} ${errorText}`);
+    if (allowMutation) {
+      console.error(`Automatic readiness handoff: Promoting Issue #${promotion.issueNumber} to status: ready ...`);
+      const patchResponse = await fetch('https://api.github.com/repos/' + REPO + '/issues/' + promotion.issueNumber, {
+        method: 'PATCH',
+        headers: {
+          Authorization: 'Bearer ' + TOKEN,
+          Accept: 'application/vnd.github+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ body: promotion.updatedBody })
+      });
+      if (!patchResponse.ok) {
+        const errorText = await patchResponse.text();
+        throw new Error(`Automatic readiness handoff failed: GitHub API returned ${patchResponse.status} ${errorText}`);
+      }
+      console.error(`Successfully promoted Issue #${promotion.issueNumber} to status: ready.`);
+      promotion.targetIssue.body = promotion.updatedBody;
+    } else {
+      console.error(`[Dry-run] Automatic readiness handoff eligible: Issue #${promotion.issueNumber} would be promoted to status: ready (mutation skipped in dry-run mode).`);
     }
-    console.error(`Successfully promoted Issue #${promotion.issueNumber} to status: ready.`);
-    promotion.targetIssue.body = promotion.updatedBody;
   }
 
   const decision = selectDispatchableIssue(issues, {
@@ -573,9 +606,11 @@ const direct = process.argv[1]
   && new URL(import.meta.url).pathname === new URL('file://' + process.argv[1]).pathname;
 
 if (direct) {
-  main().catch(error => {
+  try {
+    await main();
+  } catch (error) {
     console.error(error);
     setOutput('dispatch', false);
     process.exit(1);
-  });
+  }
 }

@@ -206,16 +206,52 @@ test('executable selector throws error fail-closed if GitHub API PATCH fails dur
   const runnerScript = `
     globalThis.fetch = async (url, options = {}) => {
       const u = new URL(url);
+      if (options.method === 'PATCH' && u.pathname.endsWith('/issues/365')) {
+        return new Response('Internal Server Error', { status: 500 });
+      }
+      if (u.pathname.endsWith('/issues/387')) {
+        return new Response(JSON.stringify({ number: 387, state: 'closed' }), { status: 200 });
+      }
+      if (options.method === 'PATCH') {
+        return new Response('Internal Server Error', { status: 500 });
+      }
+      if (u.pathname.endsWith('/issues/387')) {
+        return new Response(JSON.stringify({ number: 387, state: 'closed' }), { status: 200 });
+      }
+      if (u.pathname.endsWith('/issues/365')) {
+        const tick = String.fromCharCode(96);
+        const metaProposed = [
+          '## Problem / Desired Outcome', 'Problem',
+          '## Goal', 'Goal',
+          '## Current Repository Facts', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick + ' exists.',
+          '## Investigation Required', 'Investigation',
+          '## Canonical Ownership', 'Ownership',
+          '## Known Risks / Invariants', 'Risks',
+          '## Scope', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick,
+          '## Acceptance Criteria', '1. Criterion',
+          '## Verification Plan', '- Verification',
+          '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
+          '## Out of Scope', 'Out of scope',
+          '## Jules Dispatch Metadata',
+          '- **status:** proposed',
+          '- **priority:** 100',
+          '- **specialist:** architecture',
+          '- **depends-on:** none',
+          '- **dispatch-policy:** one issue at a time',
+          '- **implementation-branch:** required'
+        ].join('\\n');
+        return new Response(JSON.stringify({ number: 365, title: 'Issue 365', body: metaProposed, state: 'open' }), { status: 200 });
+      }
       if (u.pathname.endsWith('/issues')) {
         const tick = String.fromCharCode(96);
         const metaProposed = [
           '## Problem / Desired Outcome', 'Problem',
           '## Goal', 'Goal',
-          '## Current Repository Facts', '- Fact',
+          '## Current Repository Facts', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick + ' exists.',
           '## Investigation Required', 'Investigation',
           '## Canonical Ownership', 'Ownership',
           '## Known Risks / Invariants', 'Risks',
-          '## Scope', '- Scope',
+          '## Scope', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick,
           '## Acceptance Criteria', '1. Criterion',
           '## Verification Plan', '- Verification',
           '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
@@ -231,9 +267,6 @@ test('executable selector throws error fail-closed if GitHub API PATCH fails dur
         return new Response(JSON.stringify([
           { number: 365, title: 'Issue 365', body: metaProposed, state: 'open' }
         ]), { status: 200 });
-      }
-      if (options.method === 'PATCH' && u.pathname.endsWith('/issues/365')) {
-        return new Response('Internal Server Error', { status: 500 });
       }
       if (u.pathname.endsWith('/pulls')) {
         return new Response(JSON.stringify([]), { status: 200 });
@@ -263,7 +296,8 @@ test('executable selector throws error fail-closed if GitHub API PATCH fails dur
     env: {
       ...process.env,
       GITHUB_REPOSITORY: 'japiohopman/artificer',
-      GITHUB_TOKEN: 'mock-token'
+      GITHUB_TOKEN: 'mock-token',
+      ALLOW_READINESS_MUTATION: 'true'
     },
     encoding: 'utf8'
   });
@@ -398,11 +432,11 @@ test('executable selector stdout is strictly valid JSON even when Discovery pers
         const meta = [
           '## Problem / Desired Outcome', 'Problem',
           '## Goal', 'Goal',
-          '## Current Repository Facts', '- Fact',
+          '## Current Repository Facts', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick + ' exists.',
           '## Investigation Required', 'Investigation',
           '## Canonical Ownership', 'Ownership',
           '## Known Risks / Invariants', 'Risks',
-          '## Scope', '- Scope',
+          '## Scope', '- ' + tick + 'scripts/jules-issue-selector.mjs' + tick,
           '## Acceptance Criteria', '1. Criterion',
           '## Verification Plan', '- Verification',
           '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
