@@ -201,6 +201,77 @@ test('advanceNextCuratedIssueReadiness promotes next proposed issue in sequence 
   assert.match(promotion.updatedBody, /- \*\*status:\*\* ready/);
 });
 
+test('executable selector throws error fail-closed if GitHub API PATCH fails during promotion', async () => {
+  const { spawnSync } = await import('node:child_process');
+  const runnerScript = `
+    globalThis.fetch = async (url, options = {}) => {
+      const u = new URL(url);
+      if (u.pathname.endsWith('/issues')) {
+        const tick = String.fromCharCode(96);
+        const metaProposed = [
+          '## Problem / Desired Outcome', 'Problem',
+          '## Goal', 'Goal',
+          '## Current Repository Facts', '- Fact',
+          '## Investigation Required', 'Investigation',
+          '## Canonical Ownership', 'Ownership',
+          '## Known Risks / Invariants', 'Risks',
+          '## Scope', '- Scope',
+          '## Acceptance Criteria', '1. Criterion',
+          '## Verification Plan', '- Verification',
+          '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
+          '## Out of Scope', 'Out of scope',
+          '## Jules Dispatch Metadata',
+          '- **status:** proposed',
+          '- **priority:** 100',
+          '- **specialist:** architecture',
+          '- **depends-on:** none',
+          '- **dispatch-policy:** one issue at a time',
+          '- **implementation-branch:** required'
+        ].join('\\n');
+        return new Response(JSON.stringify([
+          { number: 365, title: 'Issue 365', body: metaProposed, state: 'open' }
+        ]), { status: 200 });
+      }
+      if (options.method === 'PATCH' && u.pathname.endsWith('/issues/365')) {
+        return new Response('Internal Server Error', { status: 500 });
+      }
+      if (u.pathname.endsWith('/pulls')) {
+        return new Response(JSON.stringify([]), { status: 200 });
+      }
+      if (u.pathname.includes('/contents/')) {
+        if (u.pathname.includes('ROADMAP.md')) {
+          const roadmap = [
+            '## ChatGPT-Curated Execution Sequence',
+            '| Order | Issue / checkpoint | Purpose | Current state |',
+            '|---|---|---|---|',
+            '| 1 | #387 | Purpose 1 | completed |',
+            '| 2 | #365 | Purpose 2 | proposed |'
+          ].join('\\n');
+          return new Response(JSON.stringify({ content: Buffer.from(roadmap).toString('base64') }), { status: 200 });
+        }
+        return new Response(JSON.stringify({ content: Buffer.from('mock content').toString('base64') }), { status: 200 });
+      }
+      return new Response(JSON.stringify({}), { status: 200 });
+    };
+
+    const scriptUrl = new URL('./scripts/jules-issue-selector.mjs', 'file://' + process.cwd() + '/');
+    process.argv[1] = scriptUrl.pathname;
+    await import(scriptUrl.href);
+  `;
+
+  const child = spawnSync(process.execPath, ['--input-type=module', '-e', runnerScript], {
+    env: {
+      ...process.env,
+      GITHUB_REPOSITORY: 'japiohopman/artificer',
+      GITHUB_TOKEN: 'mock-token'
+    },
+    encoding: 'utf8'
+  });
+
+  assert.notEqual(child.status, 0, 'Child process must fail when PATCH fails');
+  assert.ok(child.stderr.includes('Automatic readiness handoff failed'), 'Diagnostics must report promotion failure');
+});
+
 test('roadmap sequence selection selects first incomplete sequence candidate', () => {
   const seq = [
     { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'ready' },
@@ -347,6 +418,9 @@ test('executable selector stdout is strictly valid JSON even when Discovery pers
         return new Response(JSON.stringify([
           { number: 1, title: 'Issue 1', body: meta, state: 'open' }
         ]), { status: 200 });
+      }
+      if (u.pathname.endsWith('/issues/387') || u.pathname.endsWith('/issues/365')) {
+        return new Response(JSON.stringify({ number: 365, state: 'open' }), { status: 200 });
       }
       if (u.pathname.endsWith('/pulls')) {
         return new Response(JSON.stringify([]), { status: 200 });

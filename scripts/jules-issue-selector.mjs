@@ -479,10 +479,12 @@ async function main() {
       },
       body: JSON.stringify({ body: promotion.updatedBody })
     });
-    if (patchResponse.ok) {
-      console.error(`Successfully promoted Issue #${promotion.issueNumber} to status: ready.`);
-      promotion.targetIssue.body = promotion.updatedBody;
+    if (!patchResponse.ok) {
+      const errorText = await patchResponse.text();
+      throw new Error(`Automatic readiness handoff failed: GitHub API returned ${patchResponse.status} ${errorText}`);
     }
+    console.error(`Successfully promoted Issue #${promotion.issueNumber} to status: ready.`);
+    promotion.targetIssue.body = promotion.updatedBody;
   }
 
   const decision = selectDispatchableIssue(issues, {
