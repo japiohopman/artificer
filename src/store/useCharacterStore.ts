@@ -316,6 +316,13 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     const char = characters.find(c => c.id === payload.characterId);
     if (!char) return false;
 
+    // Verify live character level matches session current level and character remains eligible
+    const { getLevelFromXP } = await import('../lib/characterUtils');
+    const eligibleLvl = getLevelFromXP(char.xp || 0);
+    if (char.level !== activeLevelUpSession.currentLevel || eligibleLvl < activeLevelUpSession.targetLevel) {
+      return false;
+    }
+
     // Validate ASI stat allocation if applicable
     if (activeLevelUpSession.hasASI && payload.stats) {
       const origStats = char.stats || {};

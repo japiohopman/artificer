@@ -262,4 +262,34 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(char.subclass).toBe('champion');
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
+
+  it('9. Stale active session cannot commit if live character level or XP eligibility changes', async () => {
+    const store = useCharacterStore.getState();
+    await store.addXp('test-fighter-1', 300); // 300 XP = eligible for level 2
+    await store.startLevelUpSession('test-fighter-1'); // Active session created for Lvl 1 -> 2
+
+    // Simulate canonical character update altering level or dropping XP below eligibility threshold
+    store.updateCharacter('test-fighter-1', { level: 2 }); // Manually set to level 2
+
+    // Attempting to commit the stale level 1 -> 2 session must be rejected with 0 mutation
+    const commitResult = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8
+    });
+
+    expect(commitResult).toBe(false);
+  });
+
+  it('10. evaluateNextLevelStep fails closed when canonical level progression data is missing', async () => {
+    const charWithHighLevel = {
+      ...testCharacter,
+      id: 'test-high-1',
+      level: 99, // Non-existent level record
+      xp: 9999999
+    };
+
+    const session = await evaluateNextLevelStep(charWithHighLevel);
+    expect(session).toBeNull(); // Fails closed when target level data cannot be loaded
+  });
 });
