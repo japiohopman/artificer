@@ -65,11 +65,12 @@ export async function evaluateNextLevelStep(character: any): Promise<ActiveLevel
   }
 
   const levelData = await atlasService.loadLevelData(character.class, targetLevel, character.ruleset);
+  if (!levelData) {
+    return null;
+  }
 
-  const features = levelData?.features || [];
-  const hasASI = levelData?.ability_score_bonuses !== undefined
-    ? levelData.ability_score_bonuses > 0
-    : (targetLevel % 4 === 0);
+  const features = levelData.features || [];
+  const hasASI = (levelData.ability_score_bonuses || 0) > 0;
 
   const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
   const hpIncrease = Math.max(1, Math.floor(hitDie / 2) + 1 + conModifier);

@@ -282,14 +282,23 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
   });
 
   it('10. evaluateNextLevelStep fails closed when canonical level progression data is missing', async () => {
-    const charWithHighLevel = {
-      ...testCharacter,
-      id: 'test-high-1',
-      level: 99, // Non-existent level record
-      xp: 9999999
-    };
+    // Fighter level 1 eligible for level 2, but simulate loadLevelData returning null for Fighter level 2
+    const { atlasService } = await import('../src/services/atlasService');
+    const originalLoadLevelData = atlasService.loadLevelData;
+    atlasService.loadLevelData = async () => null;
 
-    const session = await evaluateNextLevelStep(charWithHighLevel);
-    expect(session).toBeNull(); // Fails closed when target level data cannot be loaded
+    try {
+      const eligibleChar = {
+        ...testCharacter,
+        id: 'test-missing-leveldata',
+        level: 1,
+        xp: 300
+      };
+
+      const session = await evaluateNextLevelStep(eligibleChar);
+      expect(session).toBeNull(); // Fails closed without empty feature or targetLevel % 4 ASI fallback
+    } finally {
+      atlasService.loadLevelData = originalLoadLevelData;
+    }
   });
 });
