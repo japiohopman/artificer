@@ -1,8 +1,10 @@
 {
   "index": "large_form",
-  "name": "large form",
+  "name": "Large Form",
+  "rulesetContext": "2024",
   "desc": [
-    "Starting at level 5, as a Bonus Action, you can magically change your size to Large for 10 minutes or until you end it. While Large, you have Advantage on Strength checks, and your Speed increases by 10 feet."
-  ],
-  "url": "/assets/atlas/traits/json/large_form.json"
+    "Starting at level 5, as a Bonus Action, you can magically transform into a Large creature for 10 minutes or until you end it (no action required).",
+    "While Large, you have Advantage on Strength checks, and your Speed increases by 10 feet.",
+    "Once you use this trait, you can't use it again until you finish a Long Rest."
+  ]
 }

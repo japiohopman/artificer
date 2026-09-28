@@ -38,6 +38,10 @@
       "url": "/assets/atlas/traits/json/gnomish_lineage.json"
     }
   ],
+  "lineage_options": [
+    { "index": "gnome_forest", "name": "Forest Gnome" },
+    { "index": "gnome_rock", "name": "Rock Gnome" }
+  ],
   "subraces": [],
   "url": "/assets/atlas/species/json/24/gnome.json",
   "image": "/assets/ui/official/races/gnome.webp"

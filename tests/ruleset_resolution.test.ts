@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData, fetchSubraceList, fetchSubraceData } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData, fetchSubraceList, fetchSubraceData, fetchTraitData } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 import { validate2024BackgroundAbilityScores, calculate2024BackgroundBonuses } from '../src/lib/backgroundUtils';
 import fs from 'fs';
@@ -682,18 +682,69 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(tiefling24).not.toBeNull();
     expect(tiefling24?.rulesetContext).toBe('2024');
 
-    // Verify lineage resolution
-    const abyssalTiefling = await fetchSpeciesData('tiefling_abyssal', '2024');
-    expect(abyssalTiefling).not.toBeNull();
-    expect(abyssalTiefling?.rulesetContext).toBe('2024');
-
+    // Verify detailed lineage resolution and source parity mechanics
     const drowElf = await fetchSpeciesData('elf_drow', '2024');
     expect(drowElf).not.toBeNull();
     expect(drowElf?.rulesetContext).toBe('2024');
+    expect(drowElf?.darkvision_range).toBe(120);
+    expect(drowElf?.spells?.cantrip).toBe('dancing_lights');
+
+    const highElf = await fetchSpeciesData('elf_high', '2024');
+    expect(highElf).not.toBeNull();
+    expect(highElf?.rulesetContext).toBe('2024');
+    expect(highElf?.spells?.cantrip).toBe('prestidigitation');
+
+    const woodElf = await fetchSpeciesData('elf_wood', '2024');
+    expect(woodElf).not.toBeNull();
+    expect(woodElf?.rulesetContext).toBe('2024');
+    expect(woodElf?.speed).toBe(35);
+    expect(woodElf?.spells?.cantrip).toBe('druidcraft');
 
     const forestGnome = await fetchSpeciesData('gnome_forest', '2024');
     expect(forestGnome).not.toBeNull();
     expect(forestGnome?.rulesetContext).toBe('2024');
+    expect(forestGnome?.spells?.cantrip).toBe('minor_illusion');
+
+    const rockGnome = await fetchSpeciesData('gnome_rock', '2024');
+    expect(rockGnome).not.toBeNull();
+    expect(rockGnome?.rulesetContext).toBe('2024');
+    expect(rockGnome?.spells?.cantrip).toContain('mending');
+
+    const abyssalTiefling = await fetchSpeciesData('tiefling_abyssal', '2024');
+    expect(abyssalTiefling).not.toBeNull();
+    expect(abyssalTiefling?.rulesetContext).toBe('2024');
+    expect(abyssalTiefling?.damage_resistances).toContain('poison');
+    expect(abyssalTiefling?.spells?.cantrip).toBe('poison_spray');
+
+    const chthonicTiefling = await fetchSpeciesData('tiefling_chthonic', '2024');
+    expect(chthonicTiefling).not.toBeNull();
+    expect(chthonicTiefling?.rulesetContext).toBe('2024');
+    expect(chthonicTiefling?.damage_resistances).toContain('necrotic');
+    expect(chthonicTiefling?.spells?.cantrip).toBe('chill_touch');
+
+    const infernalTiefling = await fetchSpeciesData('tiefling_infernal', '2024');
+    expect(infernalTiefling).not.toBeNull();
+    expect(infernalTiefling?.rulesetContext).toBe('2024');
+    expect(infernalTiefling?.damage_resistances).toContain('fire');
+    expect(infernalTiefling?.spells?.cantrip).toBe('fire_bolt');
+
+    // Verify Goliath trait source-parity details
+    const powerfulBuild = await fetchTraitData('powerful_build');
+    expect(powerfulBuild).not.toBeNull();
+    expect(powerfulBuild?.desc.join(' ')).toContain('Advantage on Ability Checks made to end or avoid the Grappled condition');
+
+    const largeForm = await fetchTraitData('large_form');
+    expect(largeForm).not.toBeNull();
+    expect(largeForm?.desc.join(' ')).toContain("can't use it again until you finish a Long Rest");
+
+    const giantAncestry = await fetchTraitData('giant_ancestry');
+    expect(giantAncestry).not.toBeNull();
+    expect(giantAncestry?.desc.join(' ')).toContain("Cloud's Jaunt");
+    expect(giantAncestry?.desc.join(' ')).toContain("Fire's Burn");
+    expect(giantAncestry?.desc.join(' ')).toContain("Frost's Chill");
+    expect(giantAncestry?.desc.join(' ')).toContain("Hill's Tumble");
+    expect(giantAncestry?.desc.join(' ')).toContain("Stone's Endurance");
+    expect(giantAncestry?.desc.join(' ')).toContain("Storm's Thunder");
   });
 
   it('verifies 2024 species list includes all 9 top-level PHB species without duplicate lineages', async () => {

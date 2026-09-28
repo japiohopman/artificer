@@ -38,6 +38,11 @@
       "url": "/assets/atlas/traits/json/otherworldly_presence.json"
     }
   ],
+  "lineage_options": [
+    { "index": "tiefling_abyssal", "name": "Abyssal Tiefling" },
+    { "index": "tiefling_chthonic", "name": "Chthonic Tiefling" },
+    { "index": "tiefling_infernal", "name": "Infernal Tiefling" }
+  ],
   "subraces": [],
   "url": "/assets/atlas/species/json/24/tiefling.json",
   "image": "/assets/ui/official/races/tiefling.webp"

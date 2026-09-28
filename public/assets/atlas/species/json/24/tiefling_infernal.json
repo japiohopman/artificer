@@ -1,44 +1,22 @@
 {
   "index": "tiefling_infernal",
-  "name": "infernal tiefling",
+  "name": "Infernal Tiefling",
   "rulesetContext": "2024",
   "speed": 30,
-  "ability_bonuses": [],
-  "alignment": "Infernal tieflings tend toward lawful alignments.",
-  "age": "Tieflings mature at the same rate as humans but live a few years longer.",
-  "size": "Medium or Small",
-  "size_description": "Medium (about 4–7 feet tall) or Small (about 3–4 feet tall).",
-  "languages": [
-    {
-      "index": "common",
-      "name": "common",
-      "url": "/assets/atlas/languages/json/common.json"
-    },
-    {
-      "index": "infernal",
-      "name": "infernal",
-      "url": "/assets/atlas/languages/json/infernal.json"
-    }
-  ],
-  "language_desc": "You can speak, read, and write Common and Infernal.",
+  "size": "Medium",
+  "parent_species": "tiefling",
+  "desc": "Your bloodline traces to the Nine Hells, granting you hellish fire resistance and fiendish magic.",
+  "damage_resistances": ["fire"],
   "traits": [
     {
-      "index": "darkvision",
-      "name": "darkvision",
-      "url": "/assets/atlas/traits/json/darkvision.json"
-    },
-    {
-      "index": "fiendish_legacy",
-      "name": "fiendish legacy",
-      "url": "/assets/atlas/traits/json/fiendish_legacy.json"
-    },
-    {
-      "index": "otherworldly_presence",
-      "name": "otherworldly presence",
-      "url": "/assets/atlas/traits/json/otherworldly_presence.json"
+      "index": "fiendish_legacy_infernal",
+      "name": "Infernal Fiendish Legacy",
+      "desc": "You have Resistance to Fire damage. You know the Fire Bolt cantrip. At level 3, you can cast Hellish Rebuke. At level 5, you can cast Darkness. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
     }
   ],
-  "subraces": [],
-  "url": "/assets/atlas/species/json/24/tiefling_infernal.json",
-  "image": "/assets/ui/official/races/tiefling.webp"
+  "spells": {
+    "cantrip": "fire_bolt",
+    "level_3": "hellish_rebuke",
+    "level_5": "darkness"
+  }
 }

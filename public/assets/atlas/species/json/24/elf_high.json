@@ -1,54 +1,21 @@
 {
   "index": "elf_high",
-  "name": "high elf",
+  "name": "High Elf",
   "rulesetContext": "2024",
   "speed": 30,
-  "ability_bonuses": [],
-  "alignment": "Elves love freedom, variety, and self-expression, leaning toward chaos.",
-  "age": "Elves reach adulthood around age 100 and can live to be 750 years old.",
   "size": "Medium",
-  "size_description": "Medium (about 5–6 feet tall).",
-  "languages": [
-    {
-      "index": "common",
-      "name": "common",
-      "url": "/assets/atlas/languages/json/common.json"
-    },
-    {
-      "index": "elvish",
-      "name": "elvish",
-      "url": "/assets/atlas/languages/json/elvish.json"
-    }
-  ],
-  "language_desc": "You can speak, read, and write Common and Elvish.",
+  "parent_species": "elf",
+  "desc": "High Elves are steeped in the arcane traditions of Feywild and mortal worlds. You know one extra cantrip of choice from the Wizard spell list.",
   "traits": [
     {
-      "index": "darkvision",
-      "name": "darkvision",
-      "url": "/assets/atlas/traits/json/darkvision.json"
-    },
-    {
-      "index": "elven_lineage",
-      "name": "elven lineage",
-      "url": "/assets/atlas/traits/json/elven_lineage.json"
-    },
-    {
-      "index": "fey_ancestry",
-      "name": "fey ancestry",
-      "url": "/assets/atlas/traits/json/fey_ancestry.json"
-    },
-    {
-      "index": "keen_senses",
-      "name": "keen senses",
-      "url": "/assets/atlas/traits/json/keen_senses.json"
-    },
-    {
-      "index": "trance",
-      "name": "trance",
-      "url": "/assets/atlas/traits/json/trance.json"
+      "index": "high_elf_lineage",
+      "name": "High Elf Lineage",
+      "desc": "You know the Prestidigitation cantrip (or another cantrip from the Wizard spell list). Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. At level 3, you can cast Detect Magic. At level 5, you can cast Misty Step. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
     }
   ],
-  "subraces": [],
-  "url": "/assets/atlas/species/json/24/elf_high.json",
-  "image": "/assets/ui/official/races/elf.webp"
+  "spells": {
+    "cantrip": "prestidigitation",
+    "level_3": "detect_magic",
+    "level_5": "misty_step"
+  }
 }

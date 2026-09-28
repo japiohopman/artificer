@@ -2735,20 +2735,38 @@ export async function fetchAlignmentData(index: string): Promise<any> {
 }
 
 export async function fetchTraitData(index: string): Promise<any> {
+  const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_');
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const traitPath = pathModule.resolve(process.cwd(), `public/assets/atlas/traits/json/${cleanIndex}.json`);
+      if (fs.existsSync(traitPath)) {
+        return JSON.parse(fs.readFileSync(traitPath, 'utf8'));
+      }
+      const profPath = pathModule.resolve(process.cwd(), `public/assets/atlas/proficiencies/json/${cleanIndex}.json`);
+      if (fs.existsSync(profPath)) {
+        return JSON.parse(fs.readFileSync(profPath, 'utf8'));
+      }
+    } catch (e) {}
+  }
+
   // Try local traits
   try {
-    const localTraits = await fetch(`/assets/atlas/traits/json/${index}.json`);
+    const localTraits = await fetch(`/assets/atlas/traits/json/${cleanIndex}.json`);
     if (localTraits.ok) return await localTraits.json();
   } catch (e) {}
 
   // Try local proficiencies
   try {
-    const localProf = await fetch(`/assets/atlas/proficiencies/json/${index}.json`);
+    const localProf = await fetch(`/assets/atlas/proficiencies/json/${cleanIndex}.json`);
     if (localProf.ok) return await localProf.json();
   } catch (e) {}
 
   // GitHub traits
-  const traitUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/traits/json/${index}.json?t=${Date.now()}`;
+  const traitUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/traits/json/${cleanIndex}.json?t=${Date.now()}`;
   try {
     const res = await fetch(`/api/raw?url=${encodeURIComponent(traitUrl)}`);
     if (res.ok) {
@@ -2758,7 +2776,7 @@ export async function fetchTraitData(index: string): Promise<any> {
   } catch (e) {}
 
   // GitHub proficiencies
-  const profUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/proficiencies/json/${index}.json?t=${Date.now()}`;
+  const profUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/proficiencies/json/${cleanIndex}.json?t=${Date.now()}`;
   try {
     const res = await fetch(`/api/raw?url=${encodeURIComponent(profUrl)}`);
     if (res.ok) {

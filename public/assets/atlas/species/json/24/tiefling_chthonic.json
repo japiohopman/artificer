@@ -1,44 +1,22 @@
 {
   "index": "tiefling_chthonic",
-  "name": "chthonic tiefling",
+  "name": "Chthonic Tiefling",
   "rulesetContext": "2024",
   "speed": 30,
-  "ability_bonuses": [],
-  "alignment": "Chthonic tieflings tend toward neutral or lawful alignments.",
-  "age": "Tieflings mature at the same rate as humans but live a few years longer.",
-  "size": "Medium or Small",
-  "size_description": "Medium (about 4–7 feet tall) or Small (about 3–4 feet tall).",
-  "languages": [
-    {
-      "index": "common",
-      "name": "common",
-      "url": "/assets/atlas/languages/json/common.json"
-    },
-    {
-      "index": "infernal",
-      "name": "infernal",
-      "url": "/assets/atlas/languages/json/infernal.json"
-    }
-  ],
-  "language_desc": "You can speak, read, and write Common and Infernal.",
+  "size": "Medium",
+  "parent_species": "tiefling",
+  "desc": "Your bloodline traces to Carceri, Gehenna, or Hades, giving you affinity with grave energies.",
+  "damage_resistances": ["necrotic"],
   "traits": [
     {
-      "index": "darkvision",
-      "name": "darkvision",
-      "url": "/assets/atlas/traits/json/darkvision.json"
-    },
-    {
-      "index": "fiendish_legacy",
-      "name": "fiendish legacy",
-      "url": "/assets/atlas/traits/json/fiendish_legacy.json"
-    },
-    {
-      "index": "otherworldly_presence",
-      "name": "otherworldly presence",
-      "url": "/assets/atlas/traits/json/otherworldly_presence.json"
+      "index": "fiendish_legacy_chthonic",
+      "name": "Chthonic Fiendish Legacy",
+      "desc": "You have Resistance to Necrotic damage. You know the Chill Touch cantrip. At level 3, you can cast False Life. At level 5, you can cast Ray of Enfeeblement. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
     }
   ],
-  "subraces": [],
-  "url": "/assets/atlas/species/json/24/tiefling_chthonic.json",
-  "image": "/assets/ui/official/races/tiefling.webp"
+  "spells": {
+    "cantrip": "chill_touch",
+    "level_3": "false_life",
+    "level_5": "ray_of_enfeeblement"
+  }
 }

@@ -1,44 +1,19 @@
 {
   "index": "gnome_rock",
-  "name": "rock gnome",
+  "name": "Rock Gnome",
   "rulesetContext": "2024",
   "speed": 30,
-  "ability_bonuses": [],
-  "alignment": "Rock gnomes are most often good and lean toward lawful or neutral alignments.",
-  "age": "Gnomes mature at the same rate humans do and live 350 to 500 years.",
   "size": "Small",
-  "size_description": "Small (about 3–4 feet tall).",
-  "languages": [
-    {
-      "index": "common",
-      "name": "common",
-      "url": "/assets/atlas/languages/json/common.json"
-    },
-    {
-      "index": "gnomish",
-      "name": "gnomish",
-      "url": "/assets/atlas/languages/json/gnomish.json"
-    }
-  ],
-  "language_desc": "You can speak, read, and write Common and Gnomish.",
+  "parent_species": "gnome",
+  "desc": "Rock Gnomes possess a natural curiosity and inventiveness regarding mechanical marvels.",
   "traits": [
     {
-      "index": "darkvision",
-      "name": "darkvision",
-      "url": "/assets/atlas/traits/json/darkvision.json"
-    },
-    {
-      "index": "gnome_cunning",
-      "name": "gnome cunning",
-      "url": "/assets/atlas/traits/json/gnome_cunning.json"
-    },
-    {
-      "index": "gnomish_lineage",
-      "name": "gnomish lineage",
-      "url": "/assets/atlas/traits/json/gnomish_lineage.json"
+      "index": "rock_gnome_lineage",
+      "name": "Rock Gnome Lineage",
+      "desc": "You know the Mending and Prestidigitation cantrips. In addition, using Prestidigitation, you can spend 10 minutes creating a Tiny clockwork device (such as a toy, firestarter, or music box) that functions for 8 hours or until dismantled."
     }
   ],
-  "subraces": [],
-  "url": "/assets/atlas/species/json/24/gnome_rock.json",
-  "image": "/assets/ui/official/races/gnome.webp"
+  "spells": {
+    "cantrip": ["mending", "prestidigitation"]
+  }
 }

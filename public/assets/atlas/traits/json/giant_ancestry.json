@@ -1,8 +1,15 @@
 {
   "index": "giant_ancestry",
-  "name": "giant ancestry",
+  "name": "Giant Ancestry",
+  "rulesetContext": "2024",
   "desc": [
-    "You are descended from giants, granting you a supernatural benefit associated with a giant lineage (Cloud, Fire, Frost, Hill, Stone, or Storm Giant)."
-  ],
-  "url": "/assets/atlas/traits/json/giant_ancestry.json"
+    "You possess supernatural traits inherited from giant ancestors. Choose one of the following benefits when selecting this trait:",
+    "- Cloud's Jaunt: As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.",
+    "- Fire's Burn: When you hit a target with an attack roll and deal damage, you can deal an extra 1d10 Fire damage.",
+    "- Frost's Chill: When you hit a target with an attack roll and deal damage, you can deal an extra 1d6 Cold damage and reduce the target's Speed by 10 feet until the start of your next turn.",
+    "- Hill's Tumble: When you hit a Large or smaller creature with an attack roll, you can knock that creature Prone.",
+    "- Stone's Endurance: When you take damage, you can use a Reaction to roll 1d12 + your Constitution modifier and reduce the damage by that total.",
+    "- Storm's Thunder: When you take damage from a creature within 60 feet, you can use a Reaction to deal 1d8 Thunder damage to that creature.",
+    "You can use your chosen benefit a number of times equal to your Proficiency Bonus per Long Rest."
+  ]
 }

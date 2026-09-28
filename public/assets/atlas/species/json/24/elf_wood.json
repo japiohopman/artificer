@@ -1,54 +1,21 @@
 {
   "index": "elf_wood",
-  "name": "wood elf",
+  "name": "Wood Elf",
   "rulesetContext": "2024",
-  "speed": 30,
-  "ability_bonuses": [],
-  "alignment": "Elves love freedom, variety, and self-expression, leaning toward chaos.",
-  "age": "Elves reach adulthood around age 100 and can live to be 750 years old.",
+  "speed": 35,
   "size": "Medium",
-  "size_description": "Medium (about 5–6 feet tall).",
-  "languages": [
-    {
-      "index": "common",
-      "name": "common",
-      "url": "/assets/atlas/languages/json/common.json"
-    },
-    {
-      "index": "elvish",
-      "name": "elvish",
-      "url": "/assets/atlas/languages/json/elvish.json"
-    }
-  ],
-  "language_desc": "You can speak, read, and write Common and Elvish.",
+  "parent_species": "elf",
+  "desc": "Wood Elves carry the swiftness and stealth of primeval forests. Your Speed increases to 35 feet, and you possess druidic innate magic.",
   "traits": [
     {
-      "index": "darkvision",
-      "name": "darkvision",
-      "url": "/assets/atlas/traits/json/darkvision.json"
-    },
-    {
-      "index": "elven_lineage",
-      "name": "elven lineage",
-      "url": "/assets/atlas/traits/json/elven_lineage.json"
-    },
-    {
-      "index": "fey_ancestry",
-      "name": "fey ancestry",
-      "url": "/assets/atlas/traits/json/fey_ancestry.json"
-    },
-    {
-      "index": "keen_senses",
-      "name": "keen senses",
-      "url": "/assets/atlas/traits/json/keen_senses.json"
-    },
-    {
-      "index": "trance",
-      "name": "trance",
-      "url": "/assets/atlas/traits/json/trance.json"
+      "index": "wood_elf_lineage",
+      "name": "Wood Elf Lineage",
+      "desc": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip. At level 3, you can cast Longstrider. At level 5, you can cast Pass Without Trace. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
     }
   ],
-  "subraces": [],
-  "url": "/assets/atlas/species/json/24/elf_wood.json",
-  "image": "/assets/ui/official/races/elf.webp"
+  "spells": {
+    "cantrip": "druidcraft",
+    "level_3": "longstrider",
+    "level_5": "pass_without_trace"
+  }
 }
