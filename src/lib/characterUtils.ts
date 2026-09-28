@@ -273,6 +273,55 @@ export const PRIMARY_ABILITIES_2024: Record<string, string[]> = {
   'wizard': ['int', 'wis']
 };
 
+export const CATEGORY_DEFAULT_EQUIPMENT: Record<string, string[]> = {
+  'martial_weapons': ['longsword', 'greatsword', 'rapier', 'shortsword', 'battleaxe'],
+  'simple_weapons': ['dagger', 'shortbow', 'mace', 'quarterstaff', 'light_crossbow'],
+  'musical_instruments': ['lute', 'flute', 'lyre'],
+  'artisans_tools': ['smiths_tools', 'tinkers_tools'],
+  'gaming_sets': ['dice_set'],
+  'holy_symbols': ['holy_symbol']
+};
+
+export function extractItemFromChoice(choice: any): any[] {
+  if (!choice) return [];
+  const results: any[] = [];
+  const type = choice.option_type;
+
+  if (type === 'multiple' && Array.isArray(choice.items)) {
+    choice.items.forEach((subItem: any) => {
+      results.push(...extractItemFromChoice(subItem));
+    });
+  } else if (type === 'choice' && choice.choice) {
+    const ch = choice.choice;
+    const chooseCount = ch.choose || 1;
+    const fromSetType = ch.from?.option_set_type;
+
+    if (fromSetType === 'equipment_category' && ch.from?.equipment_category?.index) {
+      const catKey = ch.from.equipment_category.index.toLowerCase().replace(/-/g, '_');
+      const defaultPool = CATEGORY_DEFAULT_EQUIPMENT[catKey] || ['longsword'];
+      for (let c = 0; c < chooseCount; c++) {
+        const selectedIndex = defaultPool[c % defaultPool.length];
+        results.push({ index: selectedIndex, quantity: 1 });
+      }
+    } else if (ch.from?.options && Array.isArray(ch.from.options)) {
+      for (let c = 0; c < chooseCount && c < ch.from.options.length; c++) {
+        results.push(...extractItemFromChoice(ch.from.options[c]));
+      }
+    }
+  } else if (type === 'counted_reference' && choice.of) {
+    const idx = choice.of.index || choice.of.id;
+    if (idx) results.push({ index: idx, quantity: choice.count || 1 });
+  } else if (type === 'reference' && choice.item) {
+    const idx = choice.item.index || choice.item.id;
+    if (idx) results.push({ index: idx, quantity: choice.quantity || choice.count || 1 });
+  } else {
+    const idx = choice.item?.index || choice.of?.index || choice.equipment?.index || choice.index;
+    if (idx) results.push({ index: idx, quantity: choice.quantity || choice.count || 1 });
+  }
+
+  return results;
+}
+
 export function resolveStartingEquipment(options: any[]): any[] {
   if (!Array.isArray(options)) return [];
   const items: any[] = [];
@@ -282,22 +331,11 @@ export function resolveStartingEquipment(options: any[]): any[] {
     const fromOptions = option.from?.options || option.from?.equipment?.options || [];
 
     for (let i = 0; i < chooseCount; i++) {
-        if (fromOptions.length === 0) continue;
-        const selection = fromOptions[i % fromOptions.length];
-        if (!selection) continue;
-
-        if (selection.option_type === 'multiple' && Array.isArray(selection.items)) {
-          selection.items.forEach((it: any) => {
-            const idx = it.item?.index || it.of?.index || it.equipment?.index || it.index;
-            if (idx) items.push({ index: idx, quantity: it.quantity || it.count || 1 });
-            else if (it.item || it) items.push(it.item || it);
-          });
-        } else {
-          const idx = selection.item?.index || selection.of?.index || selection.equipment?.index || selection.index;
-          if (idx) items.push({ index: idx, quantity: selection.quantity || selection.count || 1 });
-          else if (selection.item) items.push(selection.item);
-          else if (selection.of) items.push(selection.of);
-        }
+      if (fromOptions.length === 0) continue;
+      const selection = fromOptions[i % fromOptions.length];
+      if (selection) {
+        items.push(...extractItemFromChoice(selection));
+      }
     }
   });
 

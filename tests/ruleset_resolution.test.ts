@@ -1913,9 +1913,12 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(npc24.class).toBe('fighter');
       expect(npc24.background).toBe('soldier');
 
-      // Verify V2 item instances populated from 2024 starting equipment options (Fighter starting_equipment_options)
+      // Verify V2 item instances populated from 2024 starting equipment options (Fighter starting_equipment_options including nested category choices)
       const itemTemplates = Object.values(npc24.items || {}).map((inst: any) => inst.template);
-      expect(itemTemplates.length).toBeGreaterThan(0);
+      expect(itemTemplates).toContain('chain_mail');
+      expect(itemTemplates).toContain('longsword');
+      expect(itemTemplates).toContain('shield');
+      expect(itemTemplates).toContain('crossbow_light');
 
       // Verify proficiencies derived from 2024 Fighter class, saving throws, 2024 proficiency choices, and Soldier background
       expect(npc24.proficiencies.length).toBeGreaterThan(0);
