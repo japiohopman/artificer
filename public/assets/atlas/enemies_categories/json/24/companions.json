@@ -1,17 +1,5 @@
 {
   "name": "Companions",
   "index": "companions",
-  "monsters": [
-    {
-      "name": "companions",
-      "index": "gubp4lzjltbygaal",
-      "size": "Medium",
-      "type": "humanoid",
-      "alignment": "any alignment",
-      "xp": 10,
-      "challenge_rating": 0,
-      "json_path": "/assets/atlas/enemies/json/24/companions/gubp4lzjltbygaal.json",
-      "image_url": null
-    }
-  ]
+  "monsters": []
 }

@@ -3,17 +3,6 @@
   "index": "undead",
   "monsters": [
     {
-      "name": "undead",
-      "index": "fsnertz6wosjk4f8",
-      "size": "Medium",
-      "type": "humanoid",
-      "alignment": "any alignment",
-      "xp": 10,
-      "challenge_rating": 0,
-      "json_path": "/assets/atlas/enemies/json/24/undead/fsnertz6wosjk4f8.json",
-      "image_url": null
-    },
-    {
       "name": "ghast",
       "index": "mmghast000000000",
       "size": "Medium",

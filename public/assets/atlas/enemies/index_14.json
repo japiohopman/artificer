@@ -392,20 +392,6 @@
     "json_path": "/assets/atlas/enemies/json/14/humanoid/5tmstvmurpvtmnr3.json"
   },
   {
-    "index": "5tsd0woze1l5i3ej",
-    "name": "fey",
-    "ruleset": "2014",
-    "category": "fey",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/fey/5tsd0woze1l5i3ej.json"
-  },
-  {
     "index": "68bamipe4jvder9g",
     "name": "storm giant",
     "ruleset": "2014",
@@ -544,20 +530,6 @@
     "image": "/assets/atlas/enemies/tokens/dragon/YoungGreenDragon.webp",
     "imageUrl": "/assets/atlas/enemies/images/young_green_dragon.webp",
     "json_path": "/assets/atlas/enemies/json/14/dragon/85ahd1jeo9b3poaq.json"
-  },
-  {
-    "index": "89dam0oezivxn75y",
-    "name": "summons",
-    "ruleset": "2014",
-    "category": "summons",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/summons/89dam0oezivxn75y.json"
   },
   {
     "index": "8actkp5qabpfoqxm",
@@ -1118,20 +1090,6 @@
     "image": "/assets/atlas/enemies/tokens/humanoid/Acolyte.webp",
     "imageUrl": "/assets/atlas/enemies/images/acolyte.webp",
     "json_path": "/assets/atlas/enemies/json/14/humanoid/cheujiyrvm9x0vit.json"
-  },
-  {
-    "index": "chmylff3thtzhvyb",
-    "name": "aberration",
-    "ruleset": "2014",
-    "category": "aberration",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/aberration/chmylff3thtzhvyb.json"
   },
   {
     "index": "ci49duvhgcpfmnk3",
@@ -1722,20 +1680,6 @@
     "json_path": "/assets/atlas/enemies/json/14/humanoid/fspruaidog4tvrgb.json"
   },
   {
-    "index": "fsvttiirh93utaoh",
-    "name": "undead",
-    "ruleset": "2014",
-    "category": "undead",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/undead/fsvttiirh93utaoh.json"
-  },
-  {
     "index": "fwsdiq9szsdibaa8",
     "name": "sea horse",
     "ruleset": "2014",
@@ -1790,20 +1734,6 @@
     "image": "/assets/atlas/enemies/tokens/monstrosity/Darkmantle.webp",
     "imageUrl": null,
     "json_path": "/assets/atlas/enemies/json/14/monstrosity/g7fsu2ou4yhpgwna.json"
-  },
-  {
-    "index": "g8dmtgw2tibpzcmk",
-    "name": "beast",
-    "ruleset": "2014",
-    "category": "beast",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/beast/g8dmtgw2tibpzcmk.json"
   },
   {
     "index": "g9peny6nw0xrxcjw",
@@ -2154,20 +2084,6 @@
     "image": "/assets/atlas/enemies/tokens/beast/Lizard.webp",
     "imageUrl": "/assets/atlas/enemies/images/lizard.webp",
     "json_path": "/assets/atlas/enemies/json/14/beast/i2x01hzojvn4nujf.json"
-  },
-  {
-    "index": "ib448xvsbvtqitzs",
-    "name": "elemental",
-    "ruleset": "2014",
-    "category": "elemental",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/elemental/ib448xvsbvtqitzs.json"
   },
   {
     "index": "igbdqa3iuksurcuy",
@@ -2604,20 +2520,6 @@
     "json_path": "/assets/atlas/enemies/json/14/beast/kxg5xliwkhn1v0y5.json"
   },
   {
-    "index": "ky8fajtnvvoit8yt",
-    "name": "plant",
-    "ruleset": "2014",
-    "category": "plant",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/plant/ky8fajtnvvoit8yt.json"
-  },
-  {
     "index": "kz1t6xexvwodpyb2",
     "name": "berserker",
     "ruleset": "2014",
@@ -2812,20 +2714,6 @@
     "image": "/assets/atlas/enemies/tokens/beast/Mammoth.webp",
     "imageUrl": "/assets/atlas/enemies/images/mammoth.webp",
     "json_path": "/assets/atlas/enemies/json/14/beast/miyraihwm9it1in8.json"
-  },
-  {
-    "index": "mmkvdw6xi98wdivu",
-    "name": "monstrosity",
-    "ruleset": "2014",
-    "category": "monstrosity",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/monstrosity/mmkvdw6xi98wdivu.json"
   },
   {
     "index": "mnijwxpmhwr7yyfc",
@@ -3290,20 +3178,6 @@
     "json_path": "/assets/atlas/enemies/json/14/summons/ot08gcxhkvnkjtda.json"
   },
   {
-    "index": "p1ykvdd1in7xxwwy",
-    "name": "fiend",
-    "ruleset": "2014",
-    "category": "fiend",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/fiend/p1ykvdd1in7xxwwy.json"
-  },
-  {
     "index": "p6qc8jb3pneh0tie",
     "name": "chuul",
     "ruleset": "2014",
@@ -3360,20 +3234,6 @@
     "json_path": "/assets/atlas/enemies/json/14/dragon/pauindr7nvpsw9ng.json"
   },
   {
-    "index": "pcy5iejezfrcg9a0",
-    "name": "celestial",
-    "ruleset": "2014",
-    "category": "celestial",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/celestial/pcy5iejezfrcg9a0.json"
-  },
-  {
     "index": "pcz0qjig6bhpffp9",
     "name": "swarm of bats",
     "ruleset": "2014",
@@ -3386,20 +3246,6 @@
     "image": null,
     "imageUrl": null,
     "json_path": "/assets/atlas/enemies/json/14/beast/pcz0qjig6bhpffp9.json"
-  },
-  {
-    "index": "peyqiq8dyb21xia3",
-    "name": "humanoid",
-    "ruleset": "2014",
-    "category": "humanoid",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/humanoid/peyqiq8dyb21xia3.json"
   },
   {
     "index": "ph78nbdvoaszab61",
@@ -3444,20 +3290,6 @@
     "json_path": "/assets/atlas/enemies/json/14/beast/plzsh4da517tn73e.json"
   },
   {
-    "index": "pneksr74iaz5djwz",
-    "name": "dragon",
-    "ruleset": "2014",
-    "category": "dragon",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/dragon/pneksr74iaz5djwz.json"
-  },
-  {
     "index": "popqu4unr27za0jf",
     "name": "minotaur",
     "ruleset": "2014",
@@ -3498,20 +3330,6 @@
     "image": null,
     "imageUrl": "/assets/atlas/enemies/images/purple_worm.webp",
     "json_path": "/assets/atlas/enemies/json/14/monstrosity/ptots52hphx596cz.json"
-  },
-  {
-    "index": "pucbjwwbrvmweiod",
-    "name": "construct",
-    "ruleset": "2014",
-    "category": "construct",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/construct/pucbjwwbrvmweiod.json"
   },
   {
     "index": "pupo4h4dcxigf0fy",
@@ -3990,20 +3808,6 @@
     "json_path": "/assets/atlas/enemies/json/14/beast/sok7l5zjqkxtvgll.json"
   },
   {
-    "index": "spz6dws3to6qs5mh",
-    "name": "ooze",
-    "ruleset": "2014",
-    "category": "ooze",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/ooze/spz6dws3to6qs5mh.json"
-  },
-  {
     "index": "sqzruj8lt2kgjbbq",
     "name": "commoner",
     "ruleset": "2014",
@@ -4310,20 +4114,6 @@
     "image": "/assets/atlas/enemies/tokens/fiend/Balor.webp",
     "imageUrl": "/assets/atlas/enemies/images/balor.webp",
     "json_path": "/assets/atlas/enemies/json/14/fiend/uz8nrrenwyz4qnf6.json"
-  },
-  {
-    "index": "v8gfgdeluefqdrqg",
-    "name": "giant",
-    "ruleset": "2014",
-    "category": "giant",
-    "type": "humanoid",
-    "alignment": "any alignment",
-    "challenge_rating": 0,
-    "hit_points": 10,
-    "armor_class": 10,
-    "image": null,
-    "imageUrl": null,
-    "json_path": "/assets/atlas/enemies/json/14/giant/v8gfgdeluefqdrqg.json"
   },
   {
     "index": "v99woosujjugcunf",

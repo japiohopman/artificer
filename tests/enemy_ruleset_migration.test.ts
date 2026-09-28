@@ -101,14 +101,14 @@ describe('Enemy Ruleset Migration Audits & Isolation', () => {
 
   it('should return strictly ruleset-local records when calling fetchMonsterList', async () => {
     const list14 = await fetchMonsterList('2014');
-    expect(list14.length).toBe(352);
+    expect(list14.length).toBe(337);
     list14.forEach(m => {
       expect(m.path).toContain('/14/');
       expect(m.path).not.toContain('/24/');
     });
 
     const list24 = await fetchMonsterList('2024');
-    expect(list24.length).toBe(392);
+    expect(list24.length).toBe(371);
     list24.forEach(m => {
       expect(m.path).toContain('/24/');
       expect(m.path).not.toContain('/14/');
@@ -120,13 +120,34 @@ describe('Enemy Ruleset Migration Audits & Isolation', () => {
     const index24 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies/index_24.json'), 'utf8'));
     const indexUnified = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies/index.json'), 'utf8'));
 
+    expect(index14.length).toBe(337);
+    expect(index24.length).toBe(371);
+    expect(indexUnified.length).toBe(708);
+
     const catIndex14 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies_categories/index_14.json'), 'utf8'));
     const catIndex24 = JSON.parse(fs.readFileSync(path.resolve(rootDir, 'public/assets/atlas/enemies_categories/index_24.json'), 'utf8'));
 
     [index14, index24, indexUnified, catIndex14, catIndex24].forEach(list => {
       list.forEach((item: any) => {
         expect(item.index).not.toContain('_folder');
-        if (item.name) expect(item.name).not.toContain('_folder');
+        if (item.name) {
+          expect(item.name).not.toContain('_folder');
+        }
+      });
+    });
+
+    // Ensure category monster arrays contain zero category descriptor records
+    catIndex14.forEach((catEntry: any) => {
+      const catObj = JSON.parse(fs.readFileSync(path.resolve(rootDir, `public/assets/atlas/enemies_categories/json/14/${catEntry.index}.json`), 'utf8'));
+      catObj.monsters.forEach((m: any) => {
+        expect(m.name.toLowerCase()).not.toBe(catEntry.index.toLowerCase());
+      });
+    });
+
+    catIndex24.forEach((catEntry: any) => {
+      const catObj = JSON.parse(fs.readFileSync(path.resolve(rootDir, `public/assets/atlas/enemies_categories/json/24/${catEntry.index}.json`), 'utf8'));
+      catObj.monsters.forEach((m: any) => {
+        expect(m.name.toLowerCase()).not.toBe(catEntry.index.toLowerCase());
       });
     });
   });
