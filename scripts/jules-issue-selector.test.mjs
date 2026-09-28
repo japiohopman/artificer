@@ -191,7 +191,7 @@ test('advanceNextCuratedIssueReadiness promotes next proposed issue in sequence 
   const promotion = advanceNextCuratedIssueReadiness(
     [issue365],
     seq,
-    new Map([[387, { type: 'issue', state: 'closed' }]]),
+    new Map([[387, { type: 'issue', state: 'closed', stateReason: 'completed' }]]),
     { fileExistFn }
   );
 
@@ -210,7 +210,7 @@ test('executable selector throws error fail-closed if GitHub API PATCH fails dur
         return new Response('Internal Server Error', { status: 500 });
       }
       if (u.pathname.endsWith('/issues/387')) {
-        return new Response(JSON.stringify({ number: 387, state: 'closed' }), { status: 200 });
+        return new Response(JSON.stringify({ number: 387, state: 'closed', state_reason: 'completed' }), { status: 200 });
       }
       if (options.method === 'PATCH') {
         return new Response('Internal Server Error', { status: 500 });
@@ -389,7 +389,7 @@ test('sequence issue is not complete if roadmap says complete but issue is open 
   assert.ok(result.rejected.some(r => r.issueNumber === 365 && r.reason.includes('Blocked by earlier incomplete roadmap sequence item')));
 });
 
-test('sequence issue closed as not_planned or duplicate does not count as completed terminal state', () => {
+test('sequence issue closed as not_planned, duplicate, or null/unknown stateReason does not count as completed terminal state', () => {
   const seq = [
     { order: 1, issueNumber: 387, rawItem: '#387', currentState: 'closed' },
     { order: 2, issueNumber: 365, rawItem: '#365', currentState: 'ready' }
@@ -397,7 +397,19 @@ test('sequence issue closed as not_planned or duplicate does not count as comple
 
   const issue365 = issue(365);
 
-  const result = selectDispatchableIssue(
+  // null stateReason
+  const resultNull = selectDispatchableIssue(
+    [issue365],
+    {
+      dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: null }]]),
+      fileExistFn,
+      roadmapSequence: seq
+    }
+  );
+  assert.equal(resultNull.selected, null);
+
+  // not_planned stateReason
+  const resultNotPlanned = selectDispatchableIssue(
     [issue365],
     {
       dependencyStates: new Map([[387, { type: 'issue', state: 'closed', stateReason: 'not_planned' }]]),
@@ -405,8 +417,13 @@ test('sequence issue closed as not_planned or duplicate does not count as comple
       roadmapSequence: seq
     }
   );
+  assert.equal(resultNotPlanned.selected, null);
+});
 
-  assert.equal(result.selected, null);
+test('dependencyBlocks requires explicit stateReason completed for closed issues', () => {
+  assert.equal(dependencyBlocks(99, { type: 'issue', state: 'closed', stateReason: 'completed' }).blocked, false);
+  assert.equal(dependencyBlocks(99, { type: 'issue', state: 'closed', stateReason: 'not_planned' }).blocked, true);
+  assert.equal(dependencyBlocks(99, { type: 'issue', state: 'closed', stateReason: null }).blocked, true);
 });
 
 test('dry-run prompt contains required context', () => {

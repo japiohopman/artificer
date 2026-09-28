@@ -114,12 +114,9 @@ export function isSequenceItemComplete(seq, issues, dependencyStates, options = 
     return true;
   }
 
-  // If dependency issue is closed and completed (reject not_planned or duplicate)
+  // If dependency issue is closed, require explicit stateReason === 'completed'
   if (depState && depState.type === 'issue' && depState.state === 'closed') {
-    if (depState.stateReason === 'not_planned' || depState.stateReason === 'duplicate') {
-      return false;
-    }
-    return true;
+    return depState.stateReason === 'completed';
   }
 
   const hasMergedPr = prs.some(pr =>
@@ -200,9 +197,13 @@ export function dependencyBlocks(number, state) {
       ? { blocked: false }
       : { blocked: true, reason: 'Dependency PR #' + number + ' is not merged.' };
   }
-  return state.state === 'open'
-    ? { blocked: true, reason: 'Dependency Issue #' + number + ' is still open.' }
-    : { blocked: false };
+  if (state.state === 'open') {
+    return { blocked: true, reason: 'Dependency Issue #' + number + ' is still open.' };
+  }
+  if (state.state === 'closed' && state.stateReason !== 'completed') {
+    return { blocked: true, reason: 'Dependency Issue #' + number + ' was closed without completed state (reason: ' + (state.stateReason || 'unknown') + ').' };
+  }
+  return { blocked: false };
 }
 
 export function selectDispatchableIssue(issues, options = {}) {
