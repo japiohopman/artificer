@@ -1,4 +1,21 @@
 import { test, expect } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
+
+const SLOT1_PATH = path.resolve(process.cwd(), 'public/data/character_save/json/slot1.json');
+let initialSlot1Content: string | null = null;
+
+test.beforeAll(() => {
+  if (fs.existsSync(SLOT1_PATH)) {
+    initialSlot1Content = fs.readFileSync(SLOT1_PATH, 'utf8');
+  }
+});
+
+test.afterAll(() => {
+  if (initialSlot1Content !== null && fs.existsSync(SLOT1_PATH)) {
+    fs.writeFileSync(SLOT1_PATH, initialSlot1Content, 'utf8');
+  }
+});
 
 test('verify complete guided character creator flow for 2014 ruleset', async ({ page }) => {
     test.setTimeout(60000);
@@ -290,7 +307,85 @@ test('verify complete guided character creator flow for 2024 ruleset', async ({ 
     await expect(page.getByText('Level 0 paladin')).toBeVisible();
     await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5.5e (2024)');
 
-    console.log('✓ Playwright guided 2024 character creator flow test complete!');
+    // 15. Commit Final Manifest
+    console.log('15. Clicking Manifest (#finish-creation-btn) and verifying canonical persistence...');
+    await page.click('#finish-creation-btn');
+    await page.waitForTimeout(1000);
+
+    // Verify creator portal closes and character is persisted in useCharacterStore
+    await expect(page.locator('#character-creator-portal')).not.toBeVisible();
+
+    const activeCharName = await page.evaluate(() => {
+      const store = (window as any).useCharacterStore?.getState();
+      const activeChar = store?.characters?.find((c: any) => c.id === store?.activeCharacterId);
+      return activeChar?.name;
+    });
+
+    expect(activeCharName).toBe('Freya');
+
+    console.log('✓ Playwright guided 2024 character creator flow test complete with canonical store persistence!');
+});
+
+test('verify ruleset switch purges stale selections end-to-end', async ({ page }) => {
+    test.setTimeout(60000);
+
+    await page.goto('http://localhost:3000');
+
+    await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
+
+    await page.evaluate(() => {
+      if ((window as any).useGameStore) {
+        (window as any).useGameStore.setState({ isGameStarted: true });
+      }
+      if ((window as any).useUIStore) {
+        (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
+      }
+    });
+
+    await page.waitForTimeout(1000);
+
+    // Start with 2014 ruleset
+    await page.click('button:has-text("D&D 5e (2014)")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to slot
+    await page.waitForTimeout(300);
+
+    await page.click('button:has-text("Slot_01")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to identity
+    await page.waitForTimeout(300);
+
+    await page.click('span:has-text("Male")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to species
+    await page.waitForTimeout(300);
+
+    // Select 2014 Species: Elf
+    await page.click('button:has-text("Elf")');
+    await page.waitForTimeout(500);
+    await expect(page.locator('text=Examine Records: elf')).toBeVisible();
+
+    // Now navigate back to Welcome step and switch to 2024 ruleset
+    await page.locator('#creator-sidebar button').first().click();
+    await page.waitForTimeout(300);
+
+    await expect(page.locator('text=Welcome to Character Creation')).toBeVisible();
+    await page.click('button:has-text("D&D 5.5e (2024)")');
+    await page.waitForTimeout(300);
+
+    // Navigate back to Species step
+    await page.click('#next-stage-btn'); // slot
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // identity
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // species
+    await page.waitForTimeout(500);
+
+    // Verify species selection was reset (no active "Examine Records: elf") and 2024 species (e.g. Goliath) are present
+    await expect(page.locator('text=Examine Records: elf')).not.toBeVisible();
+    await expect(page.locator('button:has-text("Goliath")')).toBeVisible();
+
+    console.log('✓ End-to-end ruleset switch reset test complete!');
 });
 
 test('verify validation overlay trigger and navigation for incomplete character choices', async ({ page }) => {

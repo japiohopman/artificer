@@ -486,4 +486,60 @@ if (eldritchKnightSlots['1'] !== 3) {
   throw new Error(`Expected Eldritch Knight level 7 to have 3 level 1 slots, got ${JSON.stringify(eldritchKnightSlots)}`);
 }
 
+// 7. Character Creator State Reset & Selection Validation Unit Tests (direct production import)
+import { createRulesetResetCharacterState, evaluateMissingRequiredSteps } from '../src/components/character/CharacterCreator';
+
+// Test ruleset reset purges 2014/2024 state via CharacterCreator production function
+const populated2014Char: any = {
+  ruleset: '2014',
+  race: 'elf',
+  subrace: 'high_elf',
+  class: 'wizard',
+  subclass: 'evocation',
+  background: 'acolyte',
+  proficiencies: ['Arcana', 'History'],
+  traits: [{ name: 'Fey Ancestry', index: 'fey-ancestry' }],
+  features: [{ name: 'Spellcasting', index: 'spellcasting' }],
+  knownSpells: [{ index: 'fireball' }],
+  preparedSpells: ['fireball'],
+  items: { item1: { id: 'item1', template: 'spellbook' } },
+  choices: { spell_choices: ['fireball'] }
+};
+
+const resetChar = createRulesetResetCharacterState(populated2014Char, '2024');
+if (
+  resetChar.ruleset !== '2024' ||
+  resetChar.race !== undefined ||
+  resetChar.subrace !== undefined ||
+  resetChar.class !== undefined ||
+  resetChar.subclass !== undefined ||
+  resetChar.background !== undefined ||
+  resetChar.proficiencies?.length !== 0 ||
+  resetChar.traits?.length !== 0 ||
+  resetChar.features?.length !== 0 ||
+  resetChar.knownSpells?.length !== 0 ||
+  resetChar.preparedSpells?.length !== 0 ||
+  resetChar.backpack?.length !== 0 ||
+  Object.keys(resetChar.inventory || {}).length !== 0 ||
+  Object.keys(resetChar.items || {}).length !== 0 ||
+  Object.keys(resetChar.containers || {}).length !== 0 ||
+  resetChar.equipment?.slots?.length !== 0 ||
+  Object.keys(resetChar.choices || {}).length !== 0
+) {
+  throw new Error(`Ruleset state reset failed to purge all rules-sensitive selections: ${JSON.stringify(resetChar)}`);
+}
+
+// Test validation gates via CharacterCreator production function
+const incompleteChar: any = { name: '', race: 'human' };
+const missingFields = evaluateMissingRequiredSteps(incompleteChar, null).map(item => item.stepId);
+if (!missingFields.includes('slot') || !missingFields.includes('identity') || !missingFields.includes('backstory') || !missingFields.includes('class') || !missingFields.includes('background') || !missingFields.includes('alignment')) {
+  throw new Error(`evaluateMissingRequiredSteps failed to identify all missing required steps: ${missingFields.join(', ')}`);
+}
+
+const completeChar: any = { name: 'Arthur', gender: 'Male', race: 'human', class: 'fighter', background: 'soldier', alignment: 'Lawful Good' };
+const missingComplete = evaluateMissingRequiredSteps(completeChar, 1);
+if (missingComplete.length !== 0) {
+  throw new Error(`evaluateMissingRequiredSteps flagged steps for complete character: ${JSON.stringify(missingComplete)}`);
+}
+
 console.log('✓ All Character Architecture Unit Tests Passed Successfully!');

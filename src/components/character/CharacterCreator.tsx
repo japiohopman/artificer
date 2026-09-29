@@ -70,6 +70,92 @@ const CHARACTER_MIRROR_START_STEP: CreationStep = 'species';
 const PLAYABLE_SPECIES_2014 = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
 const PLAYABLE_SPECIES_2024 = ['dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'];
 
+export function createRulesetResetCharacterState(prevChar: Partial<Character>, ruleset: '2014' | '2024'): Partial<Character> {
+  return {
+    ...prevChar,
+    ruleset,
+    race: undefined,
+    subrace: undefined,
+    class: undefined,
+    subclass: undefined,
+    background: undefined,
+    proficiencies: [],
+    traits: [],
+    features: [],
+    knownSpells: [],
+    preparedSpells: [],
+    backpack: [],
+    inventory: {},
+    items: {},
+    containers: {},
+    equipment: { containerId: '', slots: [] },
+    choices: {}
+  };
+}
+
+export function evaluateMissingRequiredSteps(newChar: Partial<Character>, selectedSlot: number | null): MissingStepItem[] {
+  const missing: MissingStepItem[] = [];
+
+  if (!selectedSlot) {
+    missing.push({
+      stepId: 'slot',
+      label: 'Save Slot',
+      icon: 'save_data',
+      reason: 'No save slot selected'
+    });
+  }
+  if (!newChar.gender) {
+    missing.push({
+      stepId: 'identity',
+      label: 'Manifested Polarity',
+      icon: 'info',
+      reason: 'Gender selection is missing'
+    });
+  }
+  if (!newChar.name || !newChar.name.trim()) {
+    missing.push({
+      stepId: 'backstory',
+      label: 'Soul Moniker',
+      icon: 'book',
+      reason: 'Character name is missing'
+    });
+  }
+  if (!newChar.race) {
+    missing.push({
+      stepId: 'species',
+      label: 'Species & Heritage',
+      icon: 'ancestry',
+      reason: 'No species selected'
+    });
+  }
+  if (!newChar.class) {
+    missing.push({
+      stepId: 'class',
+      label: 'Class',
+      icon: 'weapon',
+      reason: 'No class selected'
+    });
+  }
+  if (!newChar.background) {
+    missing.push({
+      stepId: 'background',
+      label: 'Origins / Background',
+      icon: 'scroll',
+      reason: 'No background selected'
+    });
+  }
+  if (!newChar.alignment) {
+    missing.push({
+      stepId: 'alignment',
+      label: 'Alignment',
+      icon: 'shield',
+      reason: 'No alignment selected'
+    });
+  }
+
+  return missing;
+}
+
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
 
@@ -149,26 +235,7 @@ export const CharacterCreator: React.FC = () => {
     if (newChar.ruleset === ruleset) return;
     soundService.playEffect('UI_CLICK_LIGHT');
     // Reset rules-sensitive selections and V2 equipment state on ruleset change to prevent mixed data
-    setNewChar(prev => ({
-      ...prev,
-      ruleset,
-      race: undefined,
-      subrace: undefined,
-      class: undefined,
-      subclass: undefined,
-      background: undefined,
-      proficiencies: [],
-      traits: [],
-      features: [],
-      knownSpells: [],
-      preparedSpells: [],
-      backpack: [],
-      inventory: {},
-      items: {},
-      containers: {},
-      equipment: { containerId: '', slots: [] },
-      choices: {}
-    }));
+    setNewChar(prev => createRulesetResetCharacterState(prev, ruleset));
   };
 
   const handleGenderChange = (gender: 'Male' | 'Female') => {
@@ -220,6 +287,14 @@ export const CharacterCreator: React.FC = () => {
   useEffect(() => {
     if (!newChar.race && !newChar.class && !newChar.subrace && !newChar.background) return;
 
+    let isCancelled = false;
+    const snapshotRuleset = newChar.ruleset;
+    const snapshotRace = newChar.race;
+    const snapshotSubrace = newChar.subrace;
+    const snapshotClass = newChar.class;
+    const snapshotSubclass = newChar.subclass;
+    const snapshotBackground = newChar.background;
+
     const syncMetadata = async () => {
         let traits: any[] = [];
         let profs: string[] = [];
@@ -232,10 +307,10 @@ export const CharacterCreator: React.FC = () => {
             // Helper to resolve trait details
             const resolveTrait = async (traitRef: any) => {
                 const traitIndex = typeof traitRef === 'string' ? traitRef : traitRef.index;
-                if (!traitIndex) return;
+                if (!traitIndex || isCancelled) return;
                 
                 const traitData = await atlasService.loadTrait(traitIndex);
-                if (traitData) {
+                if (traitData && !isCancelled) {
                     if (traitData.name && !traits.some(t => t.index === traitData.index)) {
                         traits.push({
                             name: traitData.name,
@@ -256,8 +331,9 @@ export const CharacterCreator: React.FC = () => {
                 }
             };
 
-            if (newChar.race) {
-                const sData = await fetchSpeciesData(newChar.race, newChar.ruleset);
+            if (snapshotRace) {
+                const sData = await fetchSpeciesData(snapshotRace, snapshotRuleset);
+                if (isCancelled) return;
                 if (sData?.traits) {
                     await Promise.all(sData.traits.map(resolveTrait));
                 }
@@ -278,15 +354,19 @@ export const CharacterCreator: React.FC = () => {
                     }
                 }
             }
-            if (newChar.subclass) {
-                const subData = await atlasService.loadSubclass(newChar.subclass, newChar.ruleset);
+            if (isCancelled) return;
+
+            if (snapshotSubclass) {
+                const subData = await atlasService.loadSubclass(snapshotSubclass, snapshotRuleset);
+                if (isCancelled) return;
                 if (subData?.subclass_levels) {
                     const subLvl1Features = subData.subclass_levels
                         .filter((lGroup: any) => lGroup.level === 1 || lGroup.level === 3)
                         .flatMap((lGroup: any) => lGroup.features || []);
                     for (const fRef of subLvl1Features) {
+                        if (isCancelled) return;
                         const fData = await atlasService.loadFeature(fRef.index);
-                        if (fData) {
+                        if (fData && !isCancelled) {
                             features.push({
                                 ...fData,
                                 source: 'Subclass'
@@ -298,8 +378,11 @@ export const CharacterCreator: React.FC = () => {
                     profs.push(...subData.proficiencies.map((p: any) => p.name || p.index || p));
                 }
             }
-            if (newChar.subrace) {
-                const subData = await fetchSubraceData(newChar.subrace, newChar.ruleset);
+            if (isCancelled) return;
+
+            if (snapshotSubrace) {
+                const subData = await fetchSubraceData(snapshotSubrace, snapshotRuleset);
+                if (isCancelled) return;
                 if (subData?.racial_traits) {
                     await Promise.all(subData.racial_traits.map(resolveTrait));
                 }
@@ -320,8 +403,11 @@ export const CharacterCreator: React.FC = () => {
                     }
                 }
             }
-            if (newChar.background) {
-               const bgData = await atlasService.loadBackground(newChar.background, newChar.ruleset);
+            if (isCancelled) return;
+
+            if (snapshotBackground) {
+               const bgData = await atlasService.loadBackground(snapshotBackground, snapshotRuleset);
+               if (isCancelled) return;
                if (bgData?.languages) {
                   const lList = bgData.languages.map((l: any) => (l.index || l.name || l).toLowerCase());
                   langs.push(...lList);
@@ -345,8 +431,11 @@ export const CharacterCreator: React.FC = () => {
                    });
                }
             }
-            if (newChar.class) {
-                const cData = await atlasService.loadClass(newChar.class, newChar.ruleset);
+            if (isCancelled) return;
+
+            if (snapshotClass) {
+                const cData = await atlasService.loadClass(snapshotClass, snapshotRuleset);
+                if (isCancelled) return;
                 if (cData?.proficiencies) {
                     profs.push(...cData.proficiencies.map((p: any) => p.name || p.index || p));
                 }
@@ -355,11 +444,13 @@ export const CharacterCreator: React.FC = () => {
                 }
 
                 // Initial level features
-                const lvlData = await atlasService.loadLevelData(newChar.class, 1, newChar.ruleset);
+                const lvlData = await atlasService.loadLevelData(snapshotClass, 1, snapshotRuleset);
+                if (isCancelled) return;
                 if (lvlData?.features) {
                     for (const fRef of lvlData.features) {
+                        if (isCancelled) return;
                         const fData = await atlasService.loadFeature(fRef.index);
-                        if (fData) {
+                        if (fData && !isCancelled) {
                             features.push({
                                 ...fData,
                                 source: 'Class'
@@ -368,6 +459,7 @@ export const CharacterCreator: React.FC = () => {
                     }
                 }
             }
+            if (isCancelled) return;
 
             // Sync manually chosen skills from Choices.skills
             const chosenSkills = newChar.choices?.skills || [];
@@ -385,6 +477,8 @@ export const CharacterCreator: React.FC = () => {
             const newLangs = Array.from(new Set(langs));
             const newFeatures = Array.from(new Set(features.map(f => JSON.stringify(f)))).map(s => JSON.parse(s));
 
+            if (isCancelled) return;
+
             setStaticLanguages(newLangs);
             setMaxLanguageOptions(optionsCount);
             setAllowedLanguagesPool(pool.size > 0 ? Array.from(pool) : null);
@@ -395,8 +489,20 @@ export const CharacterCreator: React.FC = () => {
                 JSON.stringify(newLangs) !== JSON.stringify(currentLangs) ||
                 JSON.stringify(newFeatures) !== JSON.stringify(currentFeatures);
 
-            if (needsUpdate) {
+            if (needsUpdate && !isCancelled) {
                 setNewChar(prev => {
+                    // Guard against stale async resolution if ruleset or selections changed during fetch
+                    if (
+                      prev.ruleset !== snapshotRuleset ||
+                      prev.race !== snapshotRace ||
+                      prev.subrace !== snapshotSubrace ||
+                      prev.class !== snapshotClass ||
+                      prev.subclass !== snapshotSubclass ||
+                      prev.background !== snapshotBackground
+                    ) {
+                        return prev;
+                    }
+
                     const manualChoices = (prev.languages || []).filter(l => !newLangs.includes(l));
                     const limitedManual = manualChoices.slice(0, optionsCount);
                     
@@ -414,7 +520,11 @@ export const CharacterCreator: React.FC = () => {
         }
     };
     syncMetadata();
-  }, [newChar.race, newChar.subrace, newChar.class, newChar.background]);
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [newChar.ruleset, newChar.race, newChar.subrace, newChar.class, newChar.subclass, newChar.background]);
 
   useEffect(() => {
     if (isCharacterCreatorOpen) {
@@ -530,66 +640,7 @@ export const CharacterCreator: React.FC = () => {
   };
 
   const getMissingRequiredSteps = (): MissingStepItem[] => {
-    const missing: MissingStepItem[] = [];
-
-    if (!selectedSlot) {
-      missing.push({
-        stepId: 'slot',
-        label: 'Save Slot',
-        icon: 'save_data',
-        reason: 'No save slot selected'
-      });
-    }
-    if (!newChar.gender) {
-      missing.push({
-        stepId: 'identity',
-        label: 'Manifested Polarity',
-        icon: 'info',
-        reason: 'Gender selection is missing'
-      });
-    }
-    if (!newChar.name || !newChar.name.trim()) {
-      missing.push({
-        stepId: 'backstory',
-        label: 'Soul Moniker',
-        icon: 'book',
-        reason: 'Character name is missing'
-      });
-    }
-    if (!newChar.race) {
-      missing.push({
-        stepId: 'species',
-        label: 'Species & Heritage',
-        icon: 'ancestry',
-        reason: 'No species selected'
-      });
-    }
-    if (!newChar.class) {
-      missing.push({
-        stepId: 'class',
-        label: 'Class',
-        icon: 'weapon',
-        reason: 'No class selected'
-      });
-    }
-    if (!newChar.background) {
-      missing.push({
-        stepId: 'background',
-        label: 'Origins / Background',
-        icon: 'scroll',
-        reason: 'No background selected'
-      });
-    }
-    if (!newChar.alignment) {
-      missing.push({
-        stepId: 'alignment',
-        label: 'Alignment',
-        icon: 'shield',
-        reason: 'No alignment selected'
-      });
-    }
-
-    return missing;
+    return evaluateMissingRequiredSteps(newChar, selectedSlot);
   };
 
   const canGoNext = () => {
