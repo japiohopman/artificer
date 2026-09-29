@@ -142,8 +142,6 @@ test('verify complete guided character creator flow for 2014 ruleset', async ({ 
     await expect(page.getByText('Level 0 fighter')).toBeVisible();
     await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5e (2014)');
 
-    // Save screenshot
-    await page.screenshot({ path: 'verification/character_creator_guided_review.png' });
     console.log('✓ Playwright guided 2014 character creator flow test complete!');
 });
 
@@ -292,7 +290,105 @@ test('verify complete guided character creator flow for 2024 ruleset', async ({ 
     await expect(page.getByText('Level 0 paladin')).toBeVisible();
     await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5.5e (2024)');
 
-    // Save screenshot
-    await page.screenshot({ path: 'verification/character_creator_2024_review.png' });
     console.log('✓ Playwright guided 2024 character creator flow test complete!');
+});
+
+test('verify validation overlay trigger and navigation for incomplete character choices', async ({ page }) => {
+    test.setTimeout(60000);
+
+    await page.goto('http://localhost:3000');
+
+    await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
+
+    await page.evaluate(() => {
+      if ((window as any).useGameStore) {
+        (window as any).useGameStore.setState({ isGameStarted: true });
+      }
+      if ((window as any).useUIStore) {
+        (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
+      }
+    });
+
+    await page.waitForTimeout(1000);
+
+    console.log('Testing Validation Overlay trigger on incomplete character manifest...');
+    await page.click('button:has-text("D&D 5e (2014)")');
+    await page.waitForTimeout(300);
+
+    // Set step to review via page window property if defined or navigate to review
+    await page.evaluate(() => {
+      // Set test step on window or trigger validation
+      const creatorStage = document.querySelector('#creator-stage');
+      if (creatorStage) {
+        // Trigger finish directly or navigate step
+      }
+    });
+
+    // Walk through steps to review without making required selections
+    await page.click('#next-stage-btn'); // to slot
+    await page.waitForTimeout(300);
+
+    // Select Slot 1
+    await page.click('button:has-text("Slot_01")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to identity
+    await page.waitForTimeout(300);
+
+    // Select Gender
+    await page.click('span:has-text("Male")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to species
+    await page.waitForTimeout(300);
+
+    // Do NOT select species, select Class directly or jump to review step
+    // In CharacterCreator, sidebar button for a step is enabled once activeIdx reaches that step.
+    // So select Species: Human, Class: Fighter, Background: Acolyte, Alignment: Lawful Good to advance, but omit Moniker (Name).
+    await page.click('button:has-text("Human")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to class
+    await page.waitForTimeout(300);
+
+    await page.click('button:has-text("Fighter")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to background
+    await page.waitForTimeout(300);
+
+    await page.click('button:has-text("Acolyte")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to alignment
+    await page.waitForTimeout(300);
+
+    await page.click('button:has-text("Lawful Good")');
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to stats
+    await page.waitForTimeout(300);
+
+    await page.click('#next-stage-btn'); // to choices
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to equipment
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to appearance
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to backstory (without entering name)
+    await page.waitForTimeout(300);
+    await page.click('#next-stage-btn'); // to review
+    await page.waitForTimeout(500);
+
+    await expect(page.locator('h2:has-text("Final Manifest")')).toBeVisible();
+
+    // Click Manifest button (#finish-creation-btn)
+    await page.click('#finish-creation-btn');
+    await page.waitForTimeout(500);
+
+    // Expect Validation Overlay modal to pop up for missing character name!
+    await expect(page.locator('text=Complete Your Character')).toBeVisible();
+    await expect(page.locator('text=Character name is missing')).toBeVisible();
+
+    // Click Jump button on missing item to jump directly to backstory step
+    await page.locator('div').filter({ hasText: /^Soul Moniker/ }).getByRole('button', { name: 'Jump' }).click();
+    await page.waitForTimeout(500);
+
+    // Verify we jumped back to backstory step with name input
+    await expect(page.locator('input[placeholder="Enter Character Name or Moniker..."]')).toBeVisible();
+    console.log('✓ Validation Overlay trigger and jump navigation test complete!');
 });
