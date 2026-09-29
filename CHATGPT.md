@@ -78,7 +78,7 @@ ChatGPT acts as Jaap's interactive architecture advisor and project management a
 
 ---
 
-## 🧭 Current Project Control & Sequencing Model — 2026-09-28
+## 🧭 Current Project Control & Sequencing Model — 2026-09-29
 
 ### ChatGPT-owned sequencing
 
@@ -98,13 +98,14 @@ The roadmap therefore becomes a sequencing aid, not a second task database or so
 
 The current character/ruleset lane is intentionally ordered as follows:
 
-1. **#387 — Roadmap sequencing & automatic readiness handoff** — workflow foundation; this is the next workflow task.
-2. **#365 — 2024 species source parity** — complete the missing Foundry 2024 species catalogue and lineage mapping.
-3. **#376 — Remaining 2024 runtime gaps** — audit/close the remaining ruleset-sensitive runtime boundaries after #365.
-4. **Character Creator stability checkpoint** — verify the complete creator/Continue flow against the now-correct ruleset foundation before resuming progression work.
-5. **#381 — Player-controlled level-up lifecycle** — resume only after the foundation and creator flow are stable.
-6. **#382 — Canonical level-up HP/dice integration** — build on #381 without mixing dice-engine redesign into the lifecycle work.
-7. **#383 — Canonical feature/ASI/feat/follow-up choices** — build the generic progression-choice chain on the stabilized lifecycle.
+1. **#387 — Roadmap sequencing & automatic readiness handoff** — completed and merged workflow foundation.
+2. **#365 — 2024 species source parity** — completed and merged.
+3. **#376 — Remaining 2024 runtime gaps** — completed and merged.
+4. **#396 — Restore runtime Species selection data loading** — active discovered blocker; must be resolved before #393.
+5. **#393 — Character Creator stability checkpoint** — blocked until #396 is resolved and the real runtime flow is re-verified.
+6. **#381 — Player-controlled level-up lifecycle** — resume only after the foundation and creator flow are stable.
+7. **#382 — Canonical level-up HP/dice integration** — build on #381 without mixing dice-engine redesign into the lifecycle work.
+8. **#383 — Canonical feature/ASI/feat/follow-up choices** — build the generic progression-choice chain on the stabilized lifecycle.
 
 This order is deliberately different from simply sorting all `ready` Issues by numeric priority. A technically valid Issue can still be strategically premature because an upstream foundation is incomplete.
 
@@ -123,9 +124,7 @@ Observed lessons from the #386 review loop:
 
 ### Dispatcher lesson
 
-The current Issue-first dispatcher has strong safety boundaries, but the selector can only reason from Issue Quality Gate validity, dependency state, open PRs and numeric priority. It does not yet understand ChatGPT's intended project sequence.
-
-That gap is tracked by **#387**. The target model is to let ChatGPT curate order, let Jules report factual completion, and let automation safely promote the next already-approved Issue without allowing Jules or arbitrary roadmap text to become a task selector.
+The Issue-first sequencing model from **#387** is now active. The current lesson is that a newly discovered blocking Issue must also be inserted into the curated sequence when the live selector needs to dispatch it; otherwise a valid `ready` Issue outside the sequence is intentionally not selected. The current sequence therefore places **#396 before #393** and keeps #393 non-ready until the blocker is resolved.
 
 ### Jules handoff convention
 
