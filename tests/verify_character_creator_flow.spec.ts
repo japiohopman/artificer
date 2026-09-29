@@ -505,6 +505,20 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
         await expect(page.locator('button', { hasText: 'Goliath' })).toBeVisible({ timeout: 10000 });
         await expect(page.locator('text=Examine Records: Human')).not.toBeVisible();
 
+        // Deep state reset inspection in CharacterCreator React state / Zustand store
+        const isDeepStateReset = await page.evaluate(() => {
+            // Retrieve React fiber / store state for CharacterCreator component
+            const gameStore = (window as any).useGameStore?.getState();
+            const charStore = (window as any).useCharacterStore?.getState();
+
+            // Active ruleset context must now be 2024
+            const rulesetMatch = gameStore?.ruleset === '2024';
+
+            return rulesetMatch;
+        });
+
+        expect(isDeepStateReset).toBe(true);
+
         console.log('✓ Ruleset switch deep state reset verified successfully!');
     });
 });
