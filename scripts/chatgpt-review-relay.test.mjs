@@ -7,6 +7,7 @@ import {
   findGoverningIssue,
   summarizeCheckRuns,
   formatRelayComment,
+  formatClosedRelayComment,
 } from './chatgpt-review-relay.mjs';
 
 const basePr = {
@@ -82,4 +83,11 @@ test('relay comment contains stable marker and current review context', () => {
 
 test('relay label is the documented queue label', () => {
   assert.equal(RELAY_LABEL, 'chatgpt-review');
+});
+
+test('closed relay comment clears the active queue state', () => {
+  const comment = formatClosedRelayComment({ number: 400, merged: true });
+  assert.match(comment, /PR #400 is closed and merged/);
+  assert.match(comment, /active ChatGPT review queue entry has been cleared/);
+  assert.equal(comment.includes(RELAY_MARKER), true);
 });
