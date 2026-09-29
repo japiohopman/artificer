@@ -1,5 +1,5 @@
 {
-  "ruleset": "2024",
+  "ruleset": "2014",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
@@ -13,85 +13,154 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Athletics",
-    "Skill: Intimidation",
-    "Dice Set",
-    "all armor",
+    "Skill: Deception",
+    "Skill: Stealth",
+    "Thieves' Tools",
+    "light armor",
+    "medium armor",
     "shields",
-    "simple weapons",
-    "martial weapons",
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
     "saving throw: wis",
-    "saving throw: cha",
-    "Saving Throw: wis",
-    "Saving Throw: cha"
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
   "traits": [
     {
-      "name": "Giant Ancestry",
-      "index": "giant_ancestry",
-      "desc": "You possess supernatural traits inherited from giant ancestors. Choose one of the following benefits when selecting this trait:\n- Cloud's Jaunt: As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.\n- Fire's Burn: When you hit a target with an attack roll and deal damage, you can deal an extra 1d10 Fire damage.\n- Frost's Chill: When you hit a target with an attack roll and deal damage, you can deal an extra 1d6 Cold damage and reduce the target's Speed by 10 feet until the start of your next turn.\n- Hill's Tumble: When you hit a Large or smaller creature with an attack roll, you can knock that creature Prone.\n- Stone's Endurance: When you take damage, you can use a Reaction to roll 1d12 + your Constitution modifier and reduce the damage by that total.\n- Storm's Thunder: When you take damage from a creature within 60 feet, you can use a Reaction to deal 1d8 Thunder damage to that creature.\nYou can use your chosen benefit a number of times equal to your Proficiency Bonus per Long Rest."
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
     },
     {
-      "name": "Large Form",
-      "index": "large_form",
-      "desc": "Starting at level 5, as a Bonus Action, if you are in a space large enough, you can magically transform into a Large creature for 10 minutes or until you end it (no action required) or you are Incapacitated.\nWhile Large, you have Advantage on Strength checks, and your Speed increases by 10 feet.\nOnce you use this trait, you can't use it again until you finish a Long Rest."
+      "name": "hellish resistance",
+      "index": "hellish_resistance",
+      "desc": "You have resistance to fire damage.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "resistance": [
+            {
+              "index": "fire",
+              "name": "fire",
+              "url": "/assets/atlas/damage_types/json/fire.json"
+            }
+          ]
+        }
+      }
     },
     {
-      "name": "Powerful Build",
-      "index": "powerful_build",
-      "desc": "You have Advantage on Ability Checks made to end the Grappled condition.\nIn addition, you count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+      "name": "infernal legacy",
+      "index": "infernal_legacy",
+      "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+      "trait_specific": {
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        },
+        "spells": [
+          {
+            "spell": {
+              "index": "thaumaturgy",
+              "name": "thaumaturgy",
+              "url": "/assets/atlas/spell/json/thaumaturgy.json"
+            },
+            "usage": {
+              "type": "at will"
+            }
+          },
+          {
+            "spell": {
+              "index": "hellish_rebuke",
+              "name": "hellish rebuke",
+              "url": "/assets/atlas/spell/json/hellish_rebuke.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 3,
+            "spell_level": 2
+          },
+          {
+            "spell": {
+              "index": "darkness",
+              "name": "darkness",
+              "url": "/assets/atlas/spell/json/darkness.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 5
+          }
+        ]
+      }
     }
   ],
   "features": [
     {
-      "index": "lay_on_hands_2024",
-      "name": "Lay on Hands",
+      "name": "Criminal Contact",
+      "desc": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals.",
+      "source": "Background"
+    },
+    {
+      "index": "spellcasting_druid",
       "class": {
-        "index": "paladin",
-        "name": "Paladin",
-        "url": "/assets/atlas/class/json/24/paladin.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
+      "name": "spellcasting: druid",
       "level": 1,
+      "prerequisites": [],
       "desc": [
-        "Pool of healing = 5x Paladin level. As a Bonus Action, touch a creature to restore HP or spend 5 points to cure Poisoned condition."
+        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
       ],
+      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
       "feature_specific": {
-        "pool": "5_x_paladin_level"
+        "spellcasting_ability": {
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        }
       },
-      "url": "/assets/atlas/features/json/lay_on_hands_2024.json",
       "source": "Class"
     },
     {
-      "index": "spellcasting_paladin_2024",
-      "name": "Spellcasting: Paladin",
+      "index": "druidic",
       "class": {
-        "index": "paladin",
-        "name": "Paladin",
-        "url": "/assets/atlas/class/json/24/paladin.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
+      "name": "druidic",
       "level": 1,
+      "prerequisites": [],
       "desc": [
-        "You cast Paladin spells using Charisma as your spellcasting ability. Prepare spells from Paladin spell list."
+        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
       ],
-      "url": "/assets/atlas/features/json/spellcasting_paladin_2024.json",
-      "source": "Class"
-    },
-    {
-      "index": "weapon_mastery_paladin_2024",
-      "name": "Weapon Mastery",
-      "class": {
-        "index": "paladin",
-        "name": "Paladin",
-        "url": "/assets/atlas/class/json/24/paladin.json"
-      },
-      "level": 1,
-      "desc": [
-        "Mastery properties of two simple or martial weapons of your choice."
-      ],
-      "feature_specific": {
-        "mastery_count": 2
-      },
-      "url": "/assets/atlas/features/json/weapon_mastery_paladin_2024.json",
+      "url": "/assets/atlas/features/json/druidic.json",
+      "updated_at": "2026-07-13T06:30:11.853Z",
+      "image": "/assets/atlas/features/images/druidic.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -117,19 +186,54 @@
     "specialFeatures": []
   },
   "items": {
-    "chain_mail_yj7p8wpx2": {
-      "id": "chain_mail_yj7p8wpx2",
-      "template": "chain_mail",
+    "leather_armor_okql0ghu4": {
+      "id": "leather_armor_okql0ghu4",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1790643250952,
+      "addedAt": 1789092432035,
       "kind": "armor"
     },
-    "spear_sm5kytmd3": {
-      "id": "spear_sm5kytmd3",
-      "template": "spear",
+    "explorers_pack_5xh2njq6p": {
+      "id": "explorers_pack_5xh2njq6p",
+      "template": "explorers_pack",
       "quantity": 1,
-      "addedAt": 1790643250952,
+      "addedAt": 1789092432035,
+      "kind": "container"
+    },
+    "crowbar_h5bg67ydo": {
+      "id": "crowbar_h5bg67ydo",
+      "template": "crowbar",
+      "quantity": 1,
+      "addedAt": 1789092432035,
+      "kind": "tradegood"
+    },
+    "gold_vp5fsjuo5": {
+      "id": "gold_vp5fsjuo5",
+      "template": "gold",
+      "quantity": 15,
+      "addedAt": 1789092432035,
+      "kind": "currency"
+    },
+    "dagger_1qezzmf6v": {
+      "id": "dagger_1qezzmf6v",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1789092441536,
       "kind": "weapon"
+    },
+    "light-hammer_2634pv5nw": {
+      "id": "light-hammer_2634pv5nw",
+      "template": "light-hammer",
+      "quantity": 1,
+      "addedAt": 1789092461641,
+      "kind": "weapon"
+    },
+    "totem_jznlqaty0": {
+      "id": "totem_jznlqaty0",
+      "template": "totem",
+      "quantity": 1,
+      "addedAt": 1789092470771,
+      "kind": "equipment"
     }
   },
   "containers": {
@@ -140,35 +244,35 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": null
+          "itemId": "explorers_pack_5xh2njq6p"
         },
         {
           "id": "bag_1",
-          "itemId": null
+          "itemId": "crowbar_h5bg67ydo"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "gold_vp5fsjuo5"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "dagger_veqtrbnwe"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "light-hammer_2634pv5nw"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "light-hammer_hmprk2tmw"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "totem_jznlqaty0"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "totem_xst6p5l73"
         },
         {
           "id": "bag_8",
@@ -242,7 +346,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "spear_sm5kytmd3"
+        "itemId": "dagger_1qezzmf6v"
       },
       {
         "id": "off_hand",
@@ -258,7 +362,7 @@
       },
       {
         "id": "chest",
-        "itemId": "chain_mail_yj7p8wpx2"
+        "itemId": "leather_armor_okql0ghu4"
       },
       {
         "id": "clothes",
@@ -341,10 +445,6 @@
         "itemId": null
       },
       {
-        "id": "extra",
-        "itemId": null
-      },
-      {
         "id": "quick_1",
         "itemId": null
       },
@@ -364,16 +464,40 @@
   },
   "backpack": [
     {
-      "index": "dice_set",
-      "name": "Dice Set",
-      "url": "/assets/atlas/equipment/json/dice_set.json",
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
       "quantity": 1
     },
     {
-      "index": "quiver",
-      "name": "Quiver",
-      "url": "/assets/atlas/equipment/json/quiver.json",
+      "index": "clothes_common",
+      "name": "Common Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_common.json",
       "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 10
+    },
+    {
+      "index": "rope_hempen_50ft",
+      "name": "Hempen Rope (50 ft)",
+      "url": "/assets/atlas/equipment/json/rope_hempen_50ft.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_common",
+      "name": "Common Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_common.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 10
     },
     {
       "index": "spear",
@@ -382,8 +506,26 @@
       "quantity": 1
     },
     {
+      "index": "clothes_common",
+      "name": "Common Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_common.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 10
+    },
+    {
+      "index": "staff",
+      "name": "Staff",
+      "url": "/assets/atlas/equipment/json/staff.json",
+      "quantity": 1
+    },
+    {
       "index": "clothes_travelers",
-      "name": "Clothes Traveler'S",
+      "name": "Traveler's Clothes",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
       "quantity": 1
     },
@@ -391,44 +533,222 @@
       "index": "gold",
       "name": "Gold",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 14
+      "quantity": 10
+    },
+    {
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_common",
+      "name": "Common Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_common.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 10
+    },
+    {
+      "index": "clothes_fine",
+      "name": "Fine Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_fine.json",
+      "quantity": 1
+    },
+    {
+      "index": "signet_ring",
+      "name": "Signet Ring",
+      "url": "/assets/atlas/equipment/json/signet_ring.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 25
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "Herbalism Kit",
+      "url": "/assets/atlas/equipment/json/herbalism_kit.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_common",
+      "name": "Common Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_common.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 5
+    },
+    {
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_common",
+      "name": "Dark Common Clothes",
+      "url": "/assets/atlas/equipment/json/clothes_common.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 15
     }
   ],
   "inventory": {},
-  "knownSpells": [],
+  "knownSpells": [
+    {
+      "index": "druidcraft",
+      "name": "druidcraft",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/14/druidcraft.json",
+      "rulesetContext": "2014",
+      "imageUrl": "/assets/atlas/spell/images/druidcraft.webp"
+    },
+    {
+      "index": "thorn_whip",
+      "name": "thorn whip",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/14/thorn_whip.json",
+      "rulesetContext": "2014",
+      "imageUrl": "/assets/atlas/spell/images/thorn-whip.webp"
+    },
+    {
+      "index": "longstrider",
+      "name": "longstrider",
+      "level": 1,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "bard",
+        "druid",
+        "ranger",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/14/longstrider.json",
+      "rulesetContext": "2014",
+      "imageUrl": "/assets/atlas/spell/images/longstrider.webp"
+    },
+    {
+      "index": "faerie_fire",
+      "name": "faerie fire",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "artificer",
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "60 feet",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/14/faerie_fire.json",
+      "rulesetContext": "2014",
+      "imageUrl": "/assets/atlas/spell/images/faerie-fire.webp"
+    },
+    {
+      "index": "fog_cloud",
+      "name": "fog cloud",
+      "level": 1,
+      "school": "conjuration",
+      "classes": [
+        "druid",
+        "ranger",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Up to 1 hour",
+      "json_path": "/assets/atlas/spell/json/14/fog_cloud.json",
+      "rulesetContext": "2014",
+      "imageUrl": "/assets/atlas/spell/images/fog-cloud.webp"
+    },
+    {
+      "index": "cure_wounds",
+      "name": "cure wounds",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "artificer",
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/14/cure_wounds.json",
+      "rulesetContext": "2014",
+      "imageUrl": "/assets/atlas/spell/images/cure-wounds.webp"
+    }
+  ],
   "languages": [
     "common",
-    "giant"
+    "infernal"
   ],
-  "preparedSpells": [],
+  "preparedSpells": [
+    "druidcraft",
+    "thorn_whip",
+    "longstrider",
+    "faerie_fire",
+    "fog_cloud",
+    "cure_wounds"
+  ],
   "spellSlots": {
     "1": {
       "current": 0,
       "max": 0
     }
   },
-  "choices": {
-    "background_ability_scores": [
-      "str",
-      "str",
-      "dex"
-    ]
-  },
-  "race": "goliath",
-  "class": "paladin",
-  "background": "soldier",
-  "spellcastingAbility": "cha",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/PaladinSword.webp",
-  "name": "Valeria 2024",
+  "choices": {},
+  "race": "tiefling",
+  "class": "druid",
+  "spellcastingAbility": "wis",
+  "background": "criminal",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "name": "Phelaia",
   "id": "slot2",
-  "hp": 5,
-  "maxHp": 5,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-29T00:54:14.498Z"
+  "lastSaved": "2026-09-11T02:08:23.660Z"
 }

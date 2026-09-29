@@ -2,8 +2,17 @@ import { test, expect } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
-// Helper to register local Playwright route mocking for GitHub directory listing API requests
+// Helper to register local Playwright route mocking for GitHub directory listing API requests and save commits
 async function setupApiRouteMocks(page: any) {
+    // Intercept server file commit calls to prevent mutating character_save slot fixtures during test runs
+    await page.route('**/api/commit', async (route: any) => {
+        return route.fulfill({
+            status: 200,
+            contentType: 'application/json',
+            body: JSON.stringify({ success: true, local: true, github: false })
+        });
+    });
+
     await page.route('**/api/fetch?url=*', async (route: any) => {
         const urlParam = route.request().url().split('url=')[1];
         const decodedUrl = decodeURIComponent(urlParam || '');
