@@ -134,14 +134,24 @@ async function main() {
 
   if (event.action === 'closed') {
     await setLabel(repository, token, pr.number, false);
-    await upsertRelayComment(repository, token, pr.number, [
-      RELAY_MARKER,
-      '## ChatGPT PR Review Relay',
-      '',
-      'PR #' + pr.number + ' is closed' + (pr.merged ? ' and merged' : '') + '.',
-      '',
-      'The active ChatGPT review queue entry has been cleared.'
-    ].join('\n'));
+    const comments = await github(repository, token, 'issues/' + pr.number + '/comments?per_page=100');
+    const existing = comments.find(comment => String(comment.body || '').includes(RELAY_MARKER));
+    if (existing) {
+      await github(repository, token, 'issues/comments/' + existing.id, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          body: [
+            RELAY_MARKER,
+            '## ChatGPT PR Review Relay',
+            '',
+            'PR #' + pr.number + ' is closed' + (pr.merged ? ' and merged' : '') + '.',
+            '',
+            'The active ChatGPT review queue entry has been cleared.'
+          ].join('\n')
+        })
+      });
+    }
     return;
   }
 
