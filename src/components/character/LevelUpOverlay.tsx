@@ -873,13 +873,9 @@ export const LevelUpOverlay: React.FC = () => {
                                          <div className="flex items-baseline gap-3">
                                             <span className="text-3xl font-header font-black text-dragon-darkRed tabular-nums">{val}</span>
                                             {diff > 0 && (
-                                              <motion.span 
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: 1 }}
-                                                className="text-xs font-black text-dragon-gold px-1.5 py-0.5 bg-dragon-darkRed/20 rounded-sm border border-dragon-gold/30"
-                                              >
+                                              <span className="text-xs font-bold font-mono text-dragon-darkRed">
                                                 +{diff}
-                                              </motion.span>
+                                              </span>
                                             )}
                                          </div>
                                       </div>
@@ -889,16 +885,18 @@ export const LevelUpOverlay: React.FC = () => {
                                       <button 
                                         onClick={() => handleStatChange(stat.id, -1)}
                                         disabled={val <= origVal}
-                                        className="w-10 h-10 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-5 transition-all font-black text-lg shadow-sm"
+                                        aria-label={`Decrease ${stat.name}`}
+                                        className="w-10 h-10 rounded bg-white/60 border border-dragon-gold/20 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-20 transition-all cursor-pointer"
                                       >
-                                        -
+                                        <GameIcon name="direction_left" size={16} color="currentColor" />
                                       </button>
                                       <button 
                                         onClick={() => handleStatChange(stat.id, 1)}
                                         disabled={points <= 0 || val >= 20}
-                                        className="w-12 h-12 rounded-full bg-dragon-gold/20 border-2 border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-5 transition-all font-black text-2xl shadow-md"
+                                        aria-label={`Increase ${stat.name}`}
+                                        className="w-10 h-10 rounded bg-dragon-gold/20 border border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-20 transition-all cursor-pointer"
                                       >
-                                        +
+                                        <GameIcon name="direction_right" size={16} color="currentColor" />
                                       </button>
                                    </div>
                                 </div>

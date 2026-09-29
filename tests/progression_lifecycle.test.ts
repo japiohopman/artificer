@@ -162,10 +162,12 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(session).toBeNull(); // Fails closed without falling back to legacy CLASS_DATA
   });
 
-  it('6. Commit rejects invalid targetLevel or malformed payloads without mutating character state', async () => {
+  it('6. Commit rejects invalid targetLevel, malformed payloads, or non-ASI stat mutations with zero canonical mutation', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
-    await store.startLevelUpSession('test-fighter-1'); // Active session for targetLevel 2
+    await store.startLevelUpSession('test-fighter-1'); // Active session for targetLevel 2 (Fighter Lvl 2 has no ASI)
+
+    const charBeforeRejections = JSON.parse(JSON.stringify(useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')));
 
     // Mismatched targetLevel
     const wrongTargetCommit = await store.commitLevelUpSession({
@@ -183,10 +185,21 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     });
     expect(invalidHpCommit).toBe(false);
 
-    // Character state remains untouched after rejected commits
+    // Stat mutation on non-ASI level (Lvl 2)
+    const invalidStatCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8,
+      stats: { str: 18 } // Fighter Lvl 2 has no ASI
+    });
+    expect(invalidStatCommit).toBe(false);
+
+    // Character state remains untouched after all rejected commits
     const char = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
     expect(char.level).toBe(1);
     expect(char.hp).toBe(12);
+    expect(char.stats).toEqual(charBeforeRejections.stats);
+    expect(char.features).toEqual(charBeforeRejections.features);
   });
 
   it('7. Completing level-up commits new level, HP, features, and choices atomically', async () => {

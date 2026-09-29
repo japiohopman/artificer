@@ -323,6 +323,16 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       return false;
     }
 
+    // Reject stat mutations if level has no ASI
+    if (!activeLevelUpSession.hasASI && payload.stats) {
+      const origStats = char.stats || {};
+      for (const [key, val] of Object.entries(payload.stats)) {
+        if (typeof val === 'number' && val !== (origStats as any)[key]) {
+          return false; // Cannot mutate stats on non-ASI level
+        }
+      }
+    }
+
     // Validate ASI stat allocation if applicable
     if (activeLevelUpSession.hasASI && payload.stats) {
       const origStats = char.stats || {};
@@ -340,6 +350,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
         return false; // Cannot allocate more than 2 ASI points
       }
     }
+
 
     const oldMaxHp = char.maxHp || char.hp || 10;
     const oldHp = char.hp || 10;
