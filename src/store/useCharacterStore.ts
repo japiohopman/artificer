@@ -351,6 +351,50 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     }
 
+    // Validate features against active session target level and subclass
+    if (payload.features && Array.isArray(payload.features)) {
+      const allowedIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index));
+      const existingIndices = new Set((char.features || []).map((f: any) => f.index));
+      for (const feat of payload.features) {
+        if (feat.index && !allowedIndices.has(feat.index) && !existingIndices.has(feat.index) && feat.source !== 'Subclass') {
+          return false; // Reject feature not granted by class level, existing character features, or subclass
+        }
+      }
+    }
+
+    // Validate choices against granted features
+    if (payload.choices && typeof payload.choices === 'object') {
+      const allowedFeatureIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index.toLowerCase()));
+      for (const choiceKey of Object.keys(payload.choices)) {
+        const lowerKey = choiceKey.toLowerCase();
+        const isStandardChoiceKey = lowerKey.includes('fighting') || lowerKey.includes('expertise') || lowerKey.includes('subclass') || lowerKey.includes('archetype') || lowerKey.includes('skills');
+        const matchesFeature = allowedFeatureIndices.has(lowerKey);
+        // Allow keys existing on prior character choices
+        const isExistingChoice = char.choices && Object.keys(char.choices).map(k => k.toLowerCase()).includes(lowerKey);
+        if (!isStandardChoiceKey && !matchesFeature && !isExistingChoice) {
+          return false; // Reject arbitrary choice key
+        }
+      }
+    }
+
+    // Validate subclass choice against progression rules
+    if (payload.subclass) {
+      if (char.subclass && payload.subclass !== char.subclass) {
+        return false; // Cannot change existing subclass
+      }
+      if (!char.subclass) {
+        const grantsSubclass = (activeLevelUpSession.features || []).some((f: any) => {
+          const idx = (f.index || '').toLowerCase();
+          const name = (f.name || '').toLowerCase();
+          return idx.includes('subclass') || idx.includes('archetype') || idx.includes('tradition') || idx.includes('circle') || idx.includes('oath') || idx.includes('college') || idx.includes('patron') || idx.includes('origin') ||
+                 name.includes('subclass') || name.includes('archetype') || name.includes('tradition') || name.includes('circle') || name.includes('oath') || name.includes('college') || name.includes('patron') || name.includes('origin');
+        });
+        if (!grantsSubclass) {
+          return false; // Cannot select subclass on a level that does not grant subclass choice
+        }
+      }
+    }
+
 
     const oldMaxHp = char.maxHp || char.hp || 10;
     const oldHp = char.hp || 10;

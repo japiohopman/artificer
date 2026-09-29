@@ -162,10 +162,10 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(session).toBeNull(); // Fails closed without falling back to legacy CLASS_DATA
   });
 
-  it('6. Commit rejects invalid targetLevel, malformed payloads, or non-ASI stat mutations with zero canonical mutation', async () => {
+  it('6. Commit rejects invalid targetLevel, malformed payloads, non-ASI stat mutations, ungranted features, arbitrary choices, or ungranted subclasses with zero canonical mutation', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
-    await store.startLevelUpSession('test-fighter-1'); // Active session for targetLevel 2 (Fighter Lvl 2 has no ASI)
+    await store.startLevelUpSession('test-fighter-1'); // Active session for targetLevel 2 (Fighter Lvl 2 has no ASI / no subclass grant)
 
     const charBeforeRejections = JSON.parse(JSON.stringify(useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')));
 
@@ -194,12 +194,40 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     });
     expect(invalidStatCommit).toBe(false);
 
+    // Ungranted feature payload
+    const invalidFeatureCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8,
+      features: [{ name: 'Fake Feature', index: 'fake_ungranted_feature', desc: 'Invalid' }]
+    });
+    expect(invalidFeatureCommit).toBe(false);
+
+    // Arbitrary choice payload
+    const invalidChoiceCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8,
+      choices: { 'illegal_choice_key': ['unauthorized_selection'] }
+    });
+    expect(invalidChoiceCommit).toBe(false);
+
+    // Subclass payload on level that does not grant a subclass
+    const invalidSubclassCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8,
+      subclass: 'champion'
+    });
+    expect(invalidSubclassCommit).toBe(false);
+
     // Character state remains untouched after all rejected commits
     const char = useCharacterStore.getState().characters.find(c => c.id === 'test-fighter-1')!;
     expect(char.level).toBe(1);
     expect(char.hp).toBe(12);
     expect(char.stats).toEqual(charBeforeRejections.stats);
     expect(char.features).toEqual(charBeforeRejections.features);
+    expect(char.subclass).toBeUndefined();
   });
 
   it('7. Completing level-up commits new level, HP, features, and choices atomically', async () => {
@@ -215,7 +243,7 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
         'fighting-style': ['archery']
       },
       features: [
-        { name: 'Action Surge', index: 'action_surge', desc: 'Gain an extra action', source: 'Class' }
+        { name: 'Action Surge', index: 'action_surge_1_use', desc: 'Gain an extra action', source: 'Class' }
       ]
     });
 
@@ -226,7 +254,7 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(charAfterCommit.maxHp).toBe(20); // 12 + 8
     expect(charAfterCommit.hp).toBe(20);
     expect(charAfterCommit.choices['fighting-style']).toEqual(['archery']);
-    expect(charAfterCommit.features.some(f => f.index === 'action_surge')).toBe(true);
+    expect(charAfterCommit.features.some(f => f.index === 'action_surge_1_use')).toBe(true);
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
