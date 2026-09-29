@@ -1,9 +1,60 @@
 import { test, expect } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
+
+// Helper to register local Playwright route mocking for GitHub directory listing API requests
+async function setupApiRouteMocks(page: any) {
+    await page.route('**/api/fetch?url=*', async (route: any) => {
+        const urlParam = route.request().url().split('url=')[1];
+        const decodedUrl = decodeURIComponent(urlParam || '');
+
+        // Mock GitHub contents API calls using local directory listings
+        if (decodedUrl.includes('/contents/public/assets/atlas/species/json/14')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/species/json/14');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/species/json/14/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+        if (decodedUrl.includes('/contents/public/assets/atlas/species/json/24')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/species/json/24');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/species/json/24/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+        if (decodedUrl.includes('/contents/public/assets/atlas/alignments/json')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/alignments/json');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/alignments/json/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+        if (decodedUrl.includes('/contents/public/assets/atlas/backgrounds/json/14')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/backgrounds/json/14');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/backgrounds/json/14/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+        if (decodedUrl.includes('/contents/public/assets/atlas/backgrounds/json/24')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/backgrounds/json/24');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/backgrounds/json/24/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+        if (decodedUrl.includes('/contents/public/assets/atlas/class/json/14')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/class/json/14');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/class/json/14/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+        if (decodedUrl.includes('/contents/public/assets/atlas/class/json/24')) {
+            const dirPath = path.resolve(process.cwd(), 'public/assets/atlas/class/json/24');
+            const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json')).map(f => ({ name: f, path: `public/assets/atlas/class/json/24/${f}` }));
+            return route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(files) });
+        }
+
+        // Continue unhandled routes normally
+        return route.continue();
+    });
+}
 
 test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', () => {
     test.setTimeout(60000);
 
-    test('2014 Guided Character Creator Flow completes through review state', async ({ page }) => {
+    test('2014 Guided Character Creator Flow completes through review and final persistence', async ({ page }) => {
+        await setupApiRouteMocks(page);
         await page.goto('http://localhost:3000');
 
         console.log('Waiting for React stores...');
@@ -130,10 +181,28 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
         await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5e (2014)');
 
         await page.screenshot({ path: 'verification/character_creator_guided_review.png' });
-        console.log('✓ 2014 guided character creator flow test complete!');
+
+        // 14. Final Persistence / Manifestation Step
+        console.log('14. Committing character manifestation via #finish-creation-btn...');
+        await page.click('#finish-creation-btn');
+        await page.waitForTimeout(1000);
+
+        // Verify character creator closed and character persisted in store
+        await page.waitForFunction(() => {
+            const charStore = (window as any).useCharacterStore?.getState();
+            const uiStore = (window as any).useUIStore?.getState();
+            return uiStore?.isCharacterCreatorOpen === false &&
+                   charStore?.characters?.length > 0 &&
+                   charStore?.characters[0]?.name === 'Arthur 2014' &&
+                   charStore?.characters[0]?.ruleset === '2014' &&
+                   charStore?.characters[0]?.saveVersion === 2;
+        });
+
+        console.log('✓ 2014 guided character creator flow and final persistence verified!');
     });
 
-    test('2024 Guided Character Creator Flow completes through review state', async ({ page }) => {
+    test('2024 Guided Character Creator Flow completes through review and final persistence', async ({ page }) => {
+        await setupApiRouteMocks(page);
         await page.goto('http://localhost:3000');
 
         console.log('Waiting for React stores...');
@@ -260,6 +329,81 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
         await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5.5e (2024)');
 
         await page.screenshot({ path: 'verification/character_creator_2024_review.png' });
-        console.log('✓ 2024 guided character creator flow test complete!');
+
+        // 15. Final Persistence / Manifestation Step
+        console.log('15. Committing character manifestation via #finish-creation-btn...');
+        await page.click('#finish-creation-btn');
+        await page.waitForTimeout(1000);
+
+        // Verify character creator closed and character persisted in store
+        await page.waitForFunction(() => {
+            const charStore = (window as any).useCharacterStore?.getState();
+            const uiStore = (window as any).useUIStore?.getState();
+            return uiStore?.isCharacterCreatorOpen === false &&
+                   charStore?.characters?.length > 0 &&
+                   charStore?.characters[0]?.name === 'Valeria 2024' &&
+                   charStore?.characters[0]?.ruleset === '2024' &&
+                   charStore?.characters[0]?.saveVersion === 2;
+        });
+
+        console.log('✓ 2024 guided character creator flow and final persistence verified!');
+    });
+
+    test('Switching rulesets clears stale rules-sensitive selections and equipment', async ({ page }) => {
+        await setupApiRouteMocks(page);
+        await page.goto('http://localhost:3000');
+
+        await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
+
+        await page.evaluate(() => {
+          if ((window as any).useGameStore) {
+            (window as any).useGameStore.setState({ isGameStarted: true });
+          }
+          if ((window as any).useUIStore) {
+            (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
+          }
+        });
+
+        await page.waitForTimeout(1000);
+
+        // 1. Select 2014 ruleset initially
+        await page.click('button:has-text("D&D 5e (2014)")');
+        await page.waitForTimeout(300);
+        await page.click('#next-stage-btn'); // Go to Slot step
+        await page.waitForTimeout(300);
+        await page.click('button:has-text("Slot_01")');
+        await page.click('#next-stage-btn'); // Go to Identity step
+        await page.click('text=Male');
+        await page.click('#next-stage-btn'); // Go to Species step
+
+        // Select 2014 species (Human)
+        await expect(page.locator('button', { hasText: 'Human' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Human' }).click();
+        await page.waitForTimeout(300);
+
+        // Go back to Welcome step using sidebar
+        const welcomeSidebarBtn = page.locator('#creator-sidebar button[title="Welcome"]');
+        await welcomeSidebarBtn.click();
+        await page.waitForTimeout(500);
+
+        // Switch to 2024 ruleset
+        console.log('Switching ruleset to D&D 5.5e (2024)...');
+        await page.click('button:has-text("D&D 5.5e (2024)")');
+        await page.waitForTimeout(500);
+
+        // Navigate forward to Species step (Welcome -> Slot -> Identity -> Species)
+        await page.click('#next-stage-btn'); // Welcome -> Slot
+        await page.waitForTimeout(300);
+        await page.click('#next-stage-btn'); // Slot -> Identity
+        await page.waitForTimeout(300);
+        await page.click('#next-stage-btn'); // Identity -> Species
+        await page.waitForTimeout(500);
+
+        // Verify species step now shows 2024 top-level species (Goliath) and previous selection (Human) is cleared
+        await expect(page.locator('text=Select Species & Heritage')).toBeVisible();
+        await expect(page.locator('button', { hasText: 'Goliath' })).toBeVisible({ timeout: 10000 });
+        await expect(page.locator('text=Examine Records: Human')).not.toBeVisible();
+
+        console.log('✓ Ruleset switch state reset verified successfully!');
     });
 });

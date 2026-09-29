@@ -13,71 +13,128 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Investigation",
-    "Skill: Perception",
-    "Calligrapher'S Supplies",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "all armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: str",
+    "saving throw: con",
+    "Saving Throw: str",
+    "Saving Throw: con",
+    "skill_insight",
+    "skill_religion"
   ],
   "traits": [],
   "features": [
     {
-      "index": "spellcasting_wizard",
+      "index": "fighter_fighting_style",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "fighter",
+        "name": "fighter",
+        "url": "/assets/atlas/class/json/fighter.json"
       },
-      "name": "spellcasting: wizard",
+      "name": "fighting style",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
       ],
-      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "intelligence",
-          "name": "intelligence",
-          "url": "/assets/atlas/ability_scores/json/int.json"
+        "subfeature_options": {
+          "choose": 1,
+          "type": "feature",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_archery",
+                  "name": "fighting style: archery",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_defense",
+                  "name": "fighting style: defense",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_dueling",
+                  "name": "fighting style: dueling",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_great_weapon_fighting",
+                  "name": "fighting style: great weapon fighting",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_protection",
+                  "name": "fighting style: protection",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_two_weapon_fighting",
+                  "name": "fighting style: two_weapon fighting",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
+                }
+              }
+            ]
+          }
+        },
+        "invocations": []
+      },
+      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
+      "source": "Class"
+    },
+    {
+      "index": "second_wind",
+      "class": {
+        "index": "fighter",
+        "name": "fighter",
+        "url": "/assets/atlas/class/json/fighter.json"
+      },
+      "name": "second wind",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
+        "Once you use this feature, you must finish a short or long rest before you can use it again."
+      ],
+      "url": "/assets/atlas/features/json/second_wind.json",
+      "updated_at": "2026-07-13T06:30:11.862Z",
+      "image": "/assets/atlas/features/images/second_wind.webp",
+      "feature_specific": {
+        "special_action": "bonus_action",
+        "healing": {
+          "dice": "1d10",
+          "modifier": "fighter_level"
         }
       },
       "source": "Class"
     },
     {
-      "index": "arcane_recovery",
-      "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
-      },
-      "name": "arcane recovery",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
-      ],
-      "url": "/assets/atlas/features/json/arcane_recovery.json",
-      "updated_at": "2026-07-13T06:30:11.957Z",
-      "image": "/assets/atlas/features/images/arcane_recovery.webp",
-      "feature_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
-      },
-      "source": "Class"
+      "name": "Shelter of the Faithful",
+      "index": "acolyte-feature",
+      "desc": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith.",
+      "source": "Background"
     }
   ],
   "flaws": [],
@@ -102,39 +159,25 @@
     "specialFeatures": []
   },
   "items": {
-    "spellbook_slkzafah2": {
-      "id": "spellbook_slkzafah2",
-      "template": "spellbook",
+    "amulet_wpgptdast": {
+      "id": "amulet_wpgptdast",
+      "template": "amulet",
       "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "focus"
+      "addedAt": 1790643228732,
+      "kind": "neck"
     },
-    "abacus_o3bpvears": {
-      "id": "abacus_o3bpvears",
-      "template": "abacus",
-      "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "tradegood"
-    },
-    "book_e8183hn8r": {
-      "id": "book_e8183hn8r",
+    "book_14rgyp031": {
+      "id": "book_14rgyp031",
       "template": "book",
       "quantity": 1,
-      "addedAt": 1787899118782,
+      "addedAt": 1790643228732,
       "kind": "book"
     },
-    "ink_pen_3d7urv9dc": {
-      "id": "ink_pen_3d7urv9dc",
-      "template": "ink_pen",
-      "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "tradegood"
-    },
-    "gold_f3mffd827": {
-      "id": "gold_f3mffd827",
+    "gold_pkgpxx90v": {
+      "id": "gold_pkgpxx90v",
       "template": "gold",
-      "quantity": 8,
-      "addedAt": 1787899118782,
+      "quantity": 15,
+      "addedAt": 1790643228732,
       "kind": "currency"
     }
   },
@@ -146,23 +189,23 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_slkzafah2"
+          "itemId": "amulet_wpgptdast"
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_o3bpvears"
+          "itemId": "book_14rgyp031"
         },
         {
           "id": "bag_2",
-          "itemId": "book_e8183hn8r"
+          "itemId": "gold_pkgpxx90v"
         },
         {
           "id": "bag_3",
-          "itemId": "ink_pen_3d7urv9dc"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "gold_f3mffd827"
+          "itemId": null
         },
         {
           "id": "bag_5",
@@ -347,6 +390,10 @@
         "itemId": null
       },
       {
+        "id": "extra",
+        "itemId": null
+      },
+      {
         "id": "quick_1",
         "itemId": null
       },
@@ -366,176 +413,28 @@
   },
   "backpack": [
     {
-      "id": "calligraphers_supplies_p7827830r",
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
-      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
+      "index": "amulet",
+      "name": "Amulet",
+      "url": "/assets/atlas/equipment/json/amulet.json",
+      "quantity": 1
     },
     {
-      "id": "abacus_buno2pbz2",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
-      "rulesetContext": "2014"
-    },
-    {
-      "id": "book_g5hv91fb8",
       "index": "book",
-      "name": "Book",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
+      "name": "Prayer Book",
       "url": "/assets/atlas/equipment/json/book.json",
-      "image_url": "public/assets/atlas/equipment/images/book.webp",
-      "imageUrl": "/assets/atlas/equipment/images/book.webp",
-      "desc": [
-        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
-      ],
-      "special": [],
-      "kind": "book",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/book.webp",
-      "updated_at": "2026-07-12T19:00:14.600Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 10,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
-      "rulesetContext": "2014"
+      "quantity": 1
     },
     {
-      "id": "ink_1_ounce_bottle_urrhn0nqh",
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp"
-    },
-    {
-      "id": "ink_pen_84vkixfoh",
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
-      "desc": [
-        "A deviced used in combination with ink to write or draw on a sheet of paper."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/ink-pen.webp",
-      "updated_at": "2026-07-12T19:00:13.712Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "rulesetContext": "2014"
-    },
-    {
-      "id": "parchment_one_sheet_8drghcfl0",
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "quantity": 10,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
-    },
-    {
-      "id": "clothes_travelers_fjs8ceajq",
       "index": "clothes_travelers",
-      "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
+      "name": "Vestments",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_fcggoa8jj",
       "index": "gold",
       "name": "Gold",
-      "quantity": 8,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
+      "quantity": 15
     }
   ],
   "inventory": {},
@@ -544,28 +443,23 @@
     "common"
   ],
   "preparedSpells": [],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
-  },
+  "spellSlots": {},
   "choices": {},
-  "name": "Tristan Sterling",
   "race": "human",
-  "class": "wizard",
-  "spellcastingAbility": "int",
-  "background": "scribe",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
+  "class": "fighter",
+  "spellcastingAbility": "cha",
+  "background": "acolyte",
+  "alignment": "lawful_good",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/FighterShield.webp",
+  "name": "Arthur 2014",
   "id": "slot1",
-  "hp": 3,
-  "maxHp": 3,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-28T06:39:04.263Z"
+  "lastSaved": "2026-09-29T00:53:53.215Z"
 }
