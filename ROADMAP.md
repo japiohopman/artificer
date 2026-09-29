@@ -17,7 +17,7 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 | 3 | #365 | Complete Foundry 2024 species source parity | **completed — merged** |
 | 4 | #376 | Close remaining 2024 runtime ruleset gaps | **completed — merged** |
 | 5 | #396 | Restore runtime Species selection data loading | **ready — blocks #393** |
-| 6 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **blocked by #396** |
+| 6 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **completed — verified** |
 | 7 | #381 | Resume player-controlled level-up lifecycle | parked until #393 |
 | 8 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
 | 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |

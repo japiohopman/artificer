@@ -70,6 +70,92 @@ const CHARACTER_MIRROR_START_STEP: CreationStep = 'species';
 const PLAYABLE_SPECIES_2014 = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
 const PLAYABLE_SPECIES_2024 = ['dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'];
 
+export function createRulesetResetCharacterState(prevChar: Partial<Character>, ruleset: '2014' | '2024'): Partial<Character> {
+  return {
+    ...prevChar,
+    ruleset,
+    race: undefined,
+    subrace: undefined,
+    class: undefined,
+    subclass: undefined,
+    background: undefined,
+    proficiencies: [],
+    traits: [],
+    features: [],
+    knownSpells: [],
+    preparedSpells: [],
+    backpack: [],
+    inventory: {},
+    items: {},
+    containers: {},
+    equipment: { containerId: '', slots: [] },
+    choices: {}
+  };
+}
+
+export function evaluateMissingRequiredSteps(newChar: Partial<Character>, selectedSlot: number | null): MissingStepItem[] {
+  const missing: MissingStepItem[] = [];
+
+  if (!selectedSlot) {
+    missing.push({
+      stepId: 'slot',
+      label: 'Save Slot',
+      icon: 'save_data',
+      reason: 'No save slot selected'
+    });
+  }
+  if (!newChar.gender) {
+    missing.push({
+      stepId: 'identity',
+      label: 'Manifested Polarity',
+      icon: 'info',
+      reason: 'Gender selection is missing'
+    });
+  }
+  if (!newChar.name || !newChar.name.trim()) {
+    missing.push({
+      stepId: 'backstory',
+      label: 'Soul Moniker',
+      icon: 'book',
+      reason: 'Character name is missing'
+    });
+  }
+  if (!newChar.race) {
+    missing.push({
+      stepId: 'species',
+      label: 'Species & Heritage',
+      icon: 'ancestry',
+      reason: 'No species selected'
+    });
+  }
+  if (!newChar.class) {
+    missing.push({
+      stepId: 'class',
+      label: 'Class',
+      icon: 'weapon',
+      reason: 'No class selected'
+    });
+  }
+  if (!newChar.background) {
+    missing.push({
+      stepId: 'background',
+      label: 'Origins / Background',
+      icon: 'scroll',
+      reason: 'No background selected'
+    });
+  }
+  if (!newChar.alignment) {
+    missing.push({
+      stepId: 'alignment',
+      label: 'Alignment',
+      icon: 'shield',
+      reason: 'No alignment selected'
+    });
+  }
+
+  return missing;
+}
+
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
 
@@ -149,26 +235,7 @@ export const CharacterCreator: React.FC = () => {
     if (newChar.ruleset === ruleset) return;
     soundService.playEffect('UI_CLICK_LIGHT');
     // Reset rules-sensitive selections and V2 equipment state on ruleset change to prevent mixed data
-    setNewChar(prev => ({
-      ...prev,
-      ruleset,
-      race: undefined,
-      subrace: undefined,
-      class: undefined,
-      subclass: undefined,
-      background: undefined,
-      proficiencies: [],
-      traits: [],
-      features: [],
-      knownSpells: [],
-      preparedSpells: [],
-      backpack: [],
-      inventory: {},
-      items: {},
-      containers: {},
-      equipment: { containerId: '', slots: [] },
-      choices: {}
-    }));
+    setNewChar(prev => createRulesetResetCharacterState(prev, ruleset));
   };
 
   const handleGenderChange = (gender: 'Male' | 'Female') => {
@@ -530,66 +597,7 @@ export const CharacterCreator: React.FC = () => {
   };
 
   const getMissingRequiredSteps = (): MissingStepItem[] => {
-    const missing: MissingStepItem[] = [];
-
-    if (!selectedSlot) {
-      missing.push({
-        stepId: 'slot',
-        label: 'Save Slot',
-        icon: 'save_data',
-        reason: 'No save slot selected'
-      });
-    }
-    if (!newChar.gender) {
-      missing.push({
-        stepId: 'identity',
-        label: 'Manifested Polarity',
-        icon: 'info',
-        reason: 'Gender selection is missing'
-      });
-    }
-    if (!newChar.name || !newChar.name.trim()) {
-      missing.push({
-        stepId: 'backstory',
-        label: 'Soul Moniker',
-        icon: 'book',
-        reason: 'Character name is missing'
-      });
-    }
-    if (!newChar.race) {
-      missing.push({
-        stepId: 'species',
-        label: 'Species & Heritage',
-        icon: 'ancestry',
-        reason: 'No species selected'
-      });
-    }
-    if (!newChar.class) {
-      missing.push({
-        stepId: 'class',
-        label: 'Class',
-        icon: 'weapon',
-        reason: 'No class selected'
-      });
-    }
-    if (!newChar.background) {
-      missing.push({
-        stepId: 'background',
-        label: 'Origins / Background',
-        icon: 'scroll',
-        reason: 'No background selected'
-      });
-    }
-    if (!newChar.alignment) {
-      missing.push({
-        stepId: 'alignment',
-        label: 'Alignment',
-        icon: 'shield',
-        reason: 'No alignment selected'
-      });
-    }
-
-    return missing;
+    return evaluateMissingRequiredSteps(newChar, selectedSlot);
   };
 
   const canGoNext = () => {
