@@ -30,6 +30,17 @@ export function summarizeCheckRuns(checkRuns = []) {
   };
 }
 
+export function formatClosedRelayComment(pr) {
+  return [
+    RELAY_MARKER,
+    '## ChatGPT PR Review Relay',
+    '',
+    'PR #' + pr.number + ' is closed' + (pr.merged ? ' and merged' : '') + '.',
+    '',
+    'The active ChatGPT review queue entry has been cleared.'
+  ].join('\\n');
+}
+
 export function formatRelayComment(pr, checks, phaseSafety) {
   const issue = findGoverningIssue(pr.body || '');
   const checkSummary = summarizeCheckRuns(checks);
