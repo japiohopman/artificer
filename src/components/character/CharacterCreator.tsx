@@ -924,7 +924,7 @@ export const CharacterCreator: React.FC = () => {
               <button 
                 id="finish-creation-btn"
                 onClick={handleFinish}
-                className="flex items-center gap-1.5 px-6 py-2 bg-dragon-red text-white rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg hover:bg-dragon-darkRed transition-all cursor-pointer"
+                className="flex items-center gap-1.5 px-6 py-2 bg-dragon-red text-white rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg hover:bg-dragon-darkRed transition-all"
               >
                 <GameIcon name="save_data" size={14} color="currentColor" />
                 Manifest
@@ -933,11 +933,12 @@ export const CharacterCreator: React.FC = () => {
              <button 
                id="next-stage-btn"
                onClick={nextStep}
+               disabled={!canGoNext()}
                className={cn(
-                 "flex items-center gap-1.5 px-6 py-2 rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg transition-all cursor-pointer",
+                 "flex items-center gap-1.5 px-6 py-2 rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg transition-all",
                  canGoNext() 
-                    ? "bg-dragon-red text-white hover:bg-dragon-darkRed animate-subtle-pulse"
-                    : "bg-parchment-300 text-parchment-700 hover:bg-parchment-400"
+                    ? "bg-dragon-red text-white hover:bg-dragon-darkRed animate-subtle-pulse cursor-pointer"
+                    : "bg-parchment-200 text-parchment-600 shadow-none cursor-not-allowed opacity-60"
                )}
              >
                Continue
