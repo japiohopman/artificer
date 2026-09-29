@@ -876,7 +876,7 @@ export const LevelUpOverlay: React.FC = () => {
                                               <motion.span 
                                                 initial={{ scale: 0 }}
                                                 animate={{ scale: 1 }}
-                                                className="text-xs font-black text-green-600 px-1.5 py-0.5 bg-green-100 rounded-full"
+                                                className="text-xs font-black text-dragon-gold px-1.5 py-0.5 bg-dragon-darkRed/20 rounded-sm border border-dragon-gold/30"
                                               >
                                                 +{diff}
                                               </motion.span>
