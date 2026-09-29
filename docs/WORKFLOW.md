@@ -114,6 +114,38 @@ To prevent premature dispatch of strategically dependent work, dispatch candidat
 
 ---
 
+## 3.5. Automated ChatGPT PR Review Relay
+
+The review relay is deliberately separate from Jules dispatch. It automates only the handoff signal from an eligible Jules Pull Request to the ChatGPT review queue.
+
+### Eligibility
+
+The dedicated `.github/workflows/chatgpt-review-relay.yml` listens to Pull Request lifecycle events. An open PR is eligible only when:
+
+- the base branch is `main`;
+- the head branch starts with `jules-`;
+- the PR is not a draft;
+- the head repository is this repository;
+- the PR body contains a governing Issue reference using `Closes`, `Fixes`, `Resolves`, `Refs`, or `Part of`.
+
+### Queue State
+
+Eligible PRs receive the `chatgpt-review` label and one stable relay comment identified by an internal marker. New commits refresh that same comment rather than creating duplicate queue entries. The comment reports the current HEAD SHA, governing Issue, aggregate check state, and Phase Safety Gate state.
+
+Closed PRs have the active `chatgpt-review` label removed and their relay comment is converted to a terminal record.
+
+### Boundary
+
+The relay is **not** an execution queue and does not:
+
+- create or resume Jules sessions;
+- change Issue `status: ready`;
+- change Issue scope or dependencies;
+- approve, request changes, merge, or close Pull Requests;
+- invoke an LLM or external review service.
+
+ChatGPT remains responsible for inspecting the PR and its governing Issue and producing the review verdict. Jaap remains the final merge authority.
+
 ## 4. New AI / New Chat Context Recovery & Repository Autonomy
 
 A fresh contributor or AI agent (ChatGPT, Jules, or any AI session) must reconstruct the current Artificer workflow and repository state using **only** the repository itself.
