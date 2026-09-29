@@ -767,6 +767,25 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(indices24).toEqual(EXPECTED_2024_SPECIES);
   });
 
+  it('verifies fetchSpeciesList loads non-empty collections for both 2014 and 2024 and fail-closes', async () => {
+    const { fetchSpeciesList } = await import('../src/services/storageService');
+
+    const species14 = await fetchSpeciesList('2014');
+    expect(species14.length).toBeGreaterThan(0);
+    const indices14 = species14.map(s => s.index);
+    expect(indices14).toContain('human');
+    expect(indices14).toContain('elf');
+    expect(indices14).toContain('half_elf');
+
+    const species24 = await fetchSpeciesList('2024');
+    expect(species24.length).toBeGreaterThan(0);
+    const indices24 = species24.map(s => s.index);
+    expect(indices24).toContain('human');
+    expect(indices24).toContain('goliath');
+    expect(indices24).toContain('orc');
+    expect(indices24).not.toContain('half_elf');
+  });
+
   it('verifies atlasService species loading with explicit ruleset', async () => {
     const sp14 = await atlasService.loadSpecies('human', '2014');
     const sp24 = await atlasService.loadSpecies('human', '2024');
