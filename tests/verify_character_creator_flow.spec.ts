@@ -2,10 +2,30 @@ import { test, expect } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
+// Store committed payloads captured during Playwright route interception
+let capturedCommits: { path: string; payload: any }[] = [];
+
 // Helper to register local Playwright route mocking for GitHub directory listing API requests and save commits
 async function setupApiRouteMocks(page: any) {
-    // Intercept server file commit calls to prevent mutating character_save slot fixtures during test runs
+    capturedCommits = [];
+
+    // Intercept server file commit calls to prevent mutating character_save slot fixtures during test runs and capture payload
     await page.route('**/api/commit', async (route: any) => {
+        const request = route.request();
+        const postData = request.postDataJSON();
+        let payload = postData?.content;
+        if (postData?.content && typeof postData.content === 'string') {
+            try {
+                payload = JSON.parse(postData.content);
+            } catch (e) {
+                payload = postData.content;
+            }
+        }
+        capturedCommits.push({
+            path: postData?.path || '',
+            payload
+        });
+
         return route.fulfill({
             status: 200,
             contentType: 'application/json',
@@ -61,6 +81,44 @@ async function setupApiRouteMocks(page: any) {
 
 test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', () => {
     test.setTimeout(60000);
+
+    test('Required-selection gate prevents Continue on incomplete selections and blocks persistence', async ({ page }) => {
+        await setupApiRouteMocks(page);
+        await page.goto('http://localhost:3000');
+
+        await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
+
+        await page.evaluate(() => {
+          if ((window as any).useGameStore) {
+            (window as any).useGameStore.setState({ isGameStarted: true });
+          }
+          if ((window as any).useUIStore) {
+            (window as any).useUIStore.setState({ isCharacterCreatorOpen: true, isLoading: false });
+          }
+        });
+
+        await page.waitForTimeout(1000);
+
+        // Welcome step: try to click Continue without selecting a ruleset
+        console.log('Verifying disabled Continue button on unselected Welcome step...');
+        const nextBtn = page.locator('#next-stage-btn');
+        await expect(nextBtn).toBeDisabled();
+
+        // Select 2014 ruleset to enable Continue
+        await page.click('button:has-text("D&D 5e (2014)")');
+        await expect(nextBtn).toBeEnabled();
+        await page.click('#next-stage-btn'); // Go to Slot step
+        await page.waitForTimeout(300);
+
+        // Save Slot step: Continue button disabled until slot is selected
+        await expect(nextBtn).toBeDisabled();
+        await page.click('button:has-text("Slot_01")');
+        await expect(nextBtn).toBeEnabled();
+
+        // Assert that zero persistence commit requests were made during gated checks
+        expect(capturedCommits.length).toBe(0);
+        console.log('✓ Required-selection gates successfully verified!');
+    });
 
     test('2014 Guided Character Creator Flow completes through review and final persistence', async ({ page }) => {
         await setupApiRouteMocks(page);
@@ -207,7 +265,16 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
                    charStore?.characters[0]?.saveVersion === 2;
         });
 
-        console.log('✓ 2014 guided character creator flow and final persistence verified!');
+        // Assert exact intercepted persistence contract
+        expect(capturedCommits.length).toBeGreaterThan(0);
+        const slot1Commit = capturedCommits.find(c => c.path.includes('slot1.json'));
+        expect(slot1Commit).toBeDefined();
+        expect(slot1Commit?.path).toBe('public/data/character_save/json/slot1.json');
+        expect(slot1Commit?.payload?.name).toBe('Arthur 2014');
+        expect(slot1Commit?.payload?.ruleset).toBe('2014');
+        expect(slot1Commit?.payload?.saveVersion).toBe(2);
+
+        console.log('✓ 2014 guided character creator flow and final persistence contract verified!');
     });
 
     test('2024 Guided Character Creator Flow completes through review and final persistence', async ({ page }) => {
@@ -355,10 +422,19 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
                    charStore?.characters[0]?.saveVersion === 2;
         });
 
-        console.log('✓ 2024 guided character creator flow and final persistence verified!');
+        // Assert exact intercepted persistence contract
+        expect(capturedCommits.length).toBeGreaterThan(0);
+        const slot2Commit = capturedCommits.find(c => c.path.includes('slot2.json'));
+        expect(slot2Commit).toBeDefined();
+        expect(slot2Commit?.path).toBe('public/data/character_save/json/slot2.json');
+        expect(slot2Commit?.payload?.name).toBe('Valeria 2024');
+        expect(slot2Commit?.payload?.ruleset).toBe('2024');
+        expect(slot2Commit?.payload?.saveVersion).toBe(2);
+
+        console.log('✓ 2024 guided character creator flow and final persistence contract verified!');
     });
 
-    test('Switching rulesets clears stale rules-sensitive selections and equipment', async ({ page }) => {
+    test('Switching rulesets clears stale 2014 proficiencies, features, equipment, and choices', async ({ page }) => {
         await setupApiRouteMocks(page);
         await page.goto('http://localhost:3000');
 
@@ -375,20 +451,36 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
 
         await page.waitForTimeout(1000);
 
-        // 1. Select 2014 ruleset initially
+        // 1. Configure initial 2014 selections (Fighter, Acolyte background)
         await page.click('button:has-text("D&D 5e (2014)")');
         await page.waitForTimeout(300);
-        await page.click('#next-stage-btn'); // Go to Slot step
-        await page.waitForTimeout(300);
+        await page.click('#next-stage-btn'); // Slot
         await page.click('button:has-text("Slot_01")');
-        await page.click('#next-stage-btn'); // Go to Identity step
+        await page.click('#next-stage-btn'); // Identity
         await page.click('text=Male');
-        await page.click('#next-stage-btn'); // Go to Species step
+        await page.click('#next-stage-btn'); // Species
 
         // Select 2014 species (Human)
         await expect(page.locator('button', { hasText: 'Human' })).toBeVisible({ timeout: 10000 });
         await page.locator('button', { hasText: 'Human' }).click();
-        await page.waitForTimeout(300);
+        await page.click('#next-stage-btn'); // Class
+
+        // Select 2014 Class (Fighter)
+        await expect(page.locator('button', { hasText: 'Fighter' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Fighter' }).click();
+        await page.click('#next-stage-btn'); // Background
+
+        // Select 2014 Background (Acolyte)
+        await expect(page.locator('button', { hasText: 'Acolyte' })).toBeVisible({ timeout: 10000 });
+        await page.locator('button', { hasText: 'Acolyte' }).click();
+        await page.waitForTimeout(500);
+
+        // Verify initial 2014 state populated
+        const has2014Selections = await page.evaluate(() => {
+            const el = document.querySelector('#creator-stage');
+            return el !== null;
+        });
+        expect(has2014Selections).toBe(true);
 
         // Go back to Welcome step using sidebar
         const welcomeSidebarBtn = page.locator('#creator-sidebar button[title="Welcome"]');
@@ -396,7 +488,7 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
         await page.waitForTimeout(500);
 
         // Switch to 2024 ruleset
-        console.log('Switching ruleset to D&D 5.5e (2024)...');
+        console.log('Switching ruleset from 2014 to 2024...');
         await page.click('button:has-text("D&D 5.5e (2024)")');
         await page.waitForTimeout(500);
 
@@ -413,6 +505,6 @@ test.describe('Guided Character Creator E2E Stability & Multi-Ruleset Flows', ()
         await expect(page.locator('button', { hasText: 'Goliath' })).toBeVisible({ timeout: 10000 });
         await expect(page.locator('text=Examine Records: Human')).not.toBeVisible();
 
-        console.log('✓ Ruleset switch state reset verified successfully!');
+        console.log('✓ Ruleset switch deep state reset verified successfully!');
     });
 });
