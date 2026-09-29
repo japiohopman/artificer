@@ -1,9 +1,9 @@
 {
-  "ruleset": "2014",
+  "ruleset": "2024",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
     "str": 10,
     "dex": 10,
@@ -13,70 +13,85 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Investigation",
-    "Skill: Perception",
-    "Calligrapher'S Supplies",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
+    "Skill: Athletics",
+    "Skill: Intimidation",
+    "Dice Set",
+    "all armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
     "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "Giant Ancestry",
+      "index": "giant_ancestry",
+      "desc": "You possess supernatural traits inherited from giant ancestors. Choose one of the following benefits when selecting this trait:\n- Cloud's Jaunt: As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.\n- Fire's Burn: When you hit a target with an attack roll and deal damage, you can deal an extra 1d10 Fire damage.\n- Frost's Chill: When you hit a target with an attack roll and deal damage, you can deal an extra 1d6 Cold damage and reduce the target's Speed by 10 feet until the start of your next turn.\n- Hill's Tumble: When you hit a Large or smaller creature with an attack roll, you can knock that creature Prone.\n- Stone's Endurance: When you take damage, you can use a Reaction to roll 1d12 + your Constitution modifier and reduce the damage by that total.\n- Storm's Thunder: When you take damage from a creature within 60 feet, you can use a Reaction to deal 1d8 Thunder damage to that creature.\nYou can use your chosen benefit a number of times equal to your Proficiency Bonus per Long Rest."
+    },
+    {
+      "name": "Large Form",
+      "index": "large_form",
+      "desc": "Starting at level 5, as a Bonus Action, if you are in a space large enough, you can magically transform into a Large creature for 10 minutes or until you end it (no action required) or you are Incapacitated.\nWhile Large, you have Advantage on Strength checks, and your Speed increases by 10 feet.\nOnce you use this trait, you can't use it again until you finish a Long Rest."
+    },
+    {
+      "name": "Powerful Build",
+      "index": "powerful_build",
+      "desc": "You have Advantage on Ability Checks made to end the Grappled condition.\nIn addition, you count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+    }
+  ],
   "features": [
     {
-      "index": "spellcasting_wizard",
+      "index": "lay_on_hands_2024",
+      "name": "Lay on Hands",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/assets/atlas/class/json/24/paladin.json"
       },
-      "name": "spellcasting: wizard",
       "level": 1,
-      "prerequisites": [],
       "desc": [
-        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+        "Pool of healing = 5x Paladin level. As a Bonus Action, touch a creature to restore HP or spend 5 points to cure Poisoned condition."
       ],
-      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "intelligence",
-          "name": "intelligence",
-          "url": "/assets/atlas/ability_scores/json/int.json"
-        }
+        "pool": "5_x_paladin_level"
       },
+      "url": "/assets/atlas/features/json/lay_on_hands_2024.json",
       "source": "Class"
     },
     {
-      "index": "arcane_recovery",
+      "index": "spellcasting_paladin_2024",
+      "name": "Spellcasting: Paladin",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/assets/atlas/class/json/24/paladin.json"
       },
-      "name": "arcane recovery",
       "level": 1,
-      "prerequisites": [],
       "desc": [
-        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+        "You cast Paladin spells using Charisma as your spellcasting ability. Prepare spells from Paladin spell list."
       ],
-      "url": "/assets/atlas/features/json/arcane_recovery.json",
-      "updated_at": "2026-07-13T06:30:11.957Z",
-      "image": "/assets/atlas/features/images/arcane_recovery.webp",
-      "feature_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
+      "url": "/assets/atlas/features/json/spellcasting_paladin_2024.json",
+      "source": "Class"
+    },
+    {
+      "index": "weapon_mastery_paladin_2024",
+      "name": "Weapon Mastery",
+      "class": {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/assets/atlas/class/json/24/paladin.json"
       },
+      "level": 1,
+      "desc": [
+        "Mastery properties of two simple or martial weapons of your choice."
+      ],
+      "feature_specific": {
+        "mastery_count": 2
+      },
+      "url": "/assets/atlas/features/json/weapon_mastery_paladin_2024.json",
       "source": "Class"
     }
   ],
@@ -102,40 +117,19 @@
     "specialFeatures": []
   },
   "items": {
-    "spellbook_slkzafah2": {
-      "id": "spellbook_slkzafah2",
-      "template": "spellbook",
+    "chain_mail_cdf7cbsv1": {
+      "id": "chain_mail_cdf7cbsv1",
+      "template": "chain_mail",
       "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "focus"
+      "addedAt": 1790692471344,
+      "kind": "armor"
     },
-    "abacus_o3bpvears": {
-      "id": "abacus_o3bpvears",
-      "template": "abacus",
+    "spear_yi9wxqfno": {
+      "id": "spear_yi9wxqfno",
+      "template": "spear",
       "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "tradegood"
-    },
-    "book_e8183hn8r": {
-      "id": "book_e8183hn8r",
-      "template": "book",
-      "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "book"
-    },
-    "ink_pen_3d7urv9dc": {
-      "id": "ink_pen_3d7urv9dc",
-      "template": "ink_pen",
-      "quantity": 1,
-      "addedAt": 1787899118782,
-      "kind": "tradegood"
-    },
-    "gold_f3mffd827": {
-      "id": "gold_f3mffd827",
-      "template": "gold",
-      "quantity": 8,
-      "addedAt": 1787899118782,
-      "kind": "currency"
+      "addedAt": 1790692471344,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -146,23 +140,23 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_slkzafah2"
+          "itemId": null
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_o3bpvears"
+          "itemId": null
         },
         {
           "id": "bag_2",
-          "itemId": "book_e8183hn8r"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "ink_pen_3d7urv9dc"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "gold_f3mffd827"
+          "itemId": null
         },
         {
           "id": "bag_5",
@@ -248,7 +242,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "spear_yi9wxqfno"
       },
       {
         "id": "off_hand",
@@ -264,7 +258,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "chain_mail_cdf7cbsv1"
       },
       {
         "id": "clothes",
@@ -347,6 +341,10 @@
         "itemId": null
       },
       {
+        "id": "extra",
+        "itemId": null
+      },
+      {
         "id": "quick_1",
         "itemId": null
       },
@@ -366,182 +364,41 @@
   },
   "backpack": [
     {
-      "id": "calligraphers_supplies_p7827830r",
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
-      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
+      "index": "dice_set",
+      "name": "Dice Set",
+      "url": "/assets/atlas/equipment/json/dice_set.json",
+      "quantity": 1
     },
     {
-      "id": "abacus_buno2pbz2",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
-      "rulesetContext": "2014"
+      "index": "quiver",
+      "name": "Quiver",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "quantity": 1
     },
     {
-      "id": "book_g5hv91fb8",
-      "index": "book",
-      "name": "Book",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/book.json",
-      "image_url": "public/assets/atlas/equipment/images/book.webp",
-      "imageUrl": "/assets/atlas/equipment/images/book.webp",
-      "desc": [
-        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
-      ],
-      "special": [],
-      "kind": "book",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/book.webp",
-      "updated_at": "2026-07-12T19:00:14.600Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 10,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
-      "rulesetContext": "2014"
+      "index": "spear",
+      "name": "Spear",
+      "url": "/assets/atlas/equipment/json/spear.json",
+      "quantity": 1
     },
     {
-      "id": "ink_1_ounce_bottle_urrhn0nqh",
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp"
-    },
-    {
-      "id": "ink_pen_84vkixfoh",
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
-      "desc": [
-        "A deviced used in combination with ink to write or draw on a sheet of paper."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/ink-pen.webp",
-      "updated_at": "2026-07-12T19:00:13.712Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "rulesetContext": "2014"
-    },
-    {
-      "id": "parchment_one_sheet_8drghcfl0",
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "quantity": 10,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
-    },
-    {
-      "id": "clothes_travelers_fjs8ceajq",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_fcggoa8jj",
       "index": "gold",
       "name": "Gold",
-      "quantity": 8,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
+      "quantity": 14
     }
   ],
   "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common"
+    "common",
+    "giant"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -550,22 +407,28 @@
       "max": 0
     }
   },
-  "choices": {},
-  "name": "Tristan Sterling",
-  "race": "human",
-  "class": "wizard",
-  "spellcastingAbility": "int",
-  "background": "scribe",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
+  "choices": {
+    "background_ability_scores": [
+      "str",
+      "str",
+      "dex"
+    ]
+  },
+  "race": "goliath",
+  "class": "paladin",
+  "background": "soldier",
+  "spellcastingAbility": "cha",
+  "alignment": "neutral_good",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/PaladinSword.webp",
+  "name": "Freya",
   "id": "slot1",
-  "hp": 3,
-  "maxHp": 3,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-28T06:39:04.263Z"
+  "lastSaved": "2026-09-29T14:34:34.304Z"
 }
