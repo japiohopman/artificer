@@ -1,0 +1,38 @@
+name: ChatGPT PR Review Relay
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize, closed]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+  checks: read
+
+concurrency:
+  group: chatgpt-review-relay-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  relay:
+    name: Maintain ChatGPT review queue
+    if: github.event.pull_request.head.ref != '' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run review relay
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: node scripts/chatgpt-review-relay.mjs
