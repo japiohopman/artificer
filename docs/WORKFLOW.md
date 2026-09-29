@@ -116,7 +116,7 @@ To prevent premature dispatch of strategically dependent work, dispatch candidat
 
 ## 3.5. Automated ChatGPT PR Review Relay
 
-The review relay is deliberately separate from Jules dispatch. It automates only the handoff signal from an eligible Jules Pull Request to the ChatGPT review queue.
+The review relay is deliberately separate from Jules dispatch. It automates only the handoff signal from an eligible Jules Pull Request to the ChatGPT review queue. The privileged relay runs from the trusted `main` workflow context and never checks out or executes Pull Request code.
 
 ### Eligibility
 
