@@ -1973,6 +1973,35 @@ export async function fetchSpeciesList(ruleset?: '2014' | '2024'): Promise<{ nam
     } catch (e) {}
   }
 
+  const candidateSpeciesList = activeRuleset === '2024'
+    ? TOP_LEVEL_2024_SPECIES
+    : ['dragonborn', 'dwarf', 'elf', 'gnome', 'half_elf', 'half_orc', 'halfling', 'human', 'tiefling'];
+
+  try {
+    const localMatches = await Promise.all(
+      candidateSpeciesList.map(async (spIndex) => {
+        try {
+          const localRes = await fetch(`/assets/atlas/species/json/${versionFolder}/${spIndex}.json`);
+          if (localRes.ok) {
+            const data = await safeJson(localRes);
+            if (data) {
+              return {
+                name: data.name ? (data.name.charAt(0).toUpperCase() + data.name.slice(1).replace(/_/g, ' ')) : spIndex.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+                index: spIndex
+              };
+            }
+          }
+        } catch (e) {}
+        return null;
+      })
+    );
+
+    const validLocalList = localMatches.filter((item): item is { name: string; index: string } => item !== null);
+    if (validLocalList.length > 0) {
+      return validLocalList;
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
