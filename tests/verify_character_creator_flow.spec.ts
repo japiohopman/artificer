@@ -1,4 +1,21 @@
 import { test, expect } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
+
+const SLOT1_PATH = path.resolve(process.cwd(), 'public/data/character_save/json/slot1.json');
+let initialSlot1Content: string | null = null;
+
+test.beforeAll(() => {
+  if (fs.existsSync(SLOT1_PATH)) {
+    initialSlot1Content = fs.readFileSync(SLOT1_PATH, 'utf8');
+  }
+});
+
+test.afterAll(() => {
+  if (initialSlot1Content !== null && fs.existsSync(SLOT1_PATH)) {
+    fs.writeFileSync(SLOT1_PATH, initialSlot1Content, 'utf8');
+  }
+});
 
 test('verify complete guided character creator flow for 2014 ruleset', async ({ page }) => {
     test.setTimeout(60000);

@@ -507,8 +507,26 @@ const populated2014Char: any = {
 };
 
 const resetChar = createRulesetResetCharacterState(populated2014Char, '2024');
-if (resetChar.ruleset !== '2024' || resetChar.race !== undefined || resetChar.class !== undefined || resetChar.proficiencies?.length !== 0 || Object.keys(resetChar.items || {}).length !== 0) {
-  throw new Error(`Ruleset state reset failed to purge character selections: ${JSON.stringify(resetChar)}`);
+if (
+  resetChar.ruleset !== '2024' ||
+  resetChar.race !== undefined ||
+  resetChar.subrace !== undefined ||
+  resetChar.class !== undefined ||
+  resetChar.subclass !== undefined ||
+  resetChar.background !== undefined ||
+  resetChar.proficiencies?.length !== 0 ||
+  resetChar.traits?.length !== 0 ||
+  resetChar.features?.length !== 0 ||
+  resetChar.knownSpells?.length !== 0 ||
+  resetChar.preparedSpells?.length !== 0 ||
+  resetChar.backpack?.length !== 0 ||
+  Object.keys(resetChar.inventory || {}).length !== 0 ||
+  Object.keys(resetChar.items || {}).length !== 0 ||
+  Object.keys(resetChar.containers || {}).length !== 0 ||
+  resetChar.equipment?.slots?.length !== 0 ||
+  Object.keys(resetChar.choices || {}).length !== 0
+) {
+  throw new Error(`Ruleset state reset failed to purge all rules-sensitive selections: ${JSON.stringify(resetChar)}`);
 }
 
 // Test validation gates via CharacterCreator production function
