@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { useWorldStore } from './useWorldStore';
+import { ActiveLevelUpSession, evaluateNextLevelStep, validateLevelUpCommit } from '../lib/progressionUtils';
 
 export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
 
@@ -149,6 +150,7 @@ interface CharacterState {
     hpIncrease: number;
     hasASI: boolean;
   }[];
+  activeLevelUpSession: ActiveLevelUpSession | null;
   xpGain: {
     characterId: string;
     amount: number;
@@ -165,6 +167,10 @@ interface CharacterState {
   addXp: (id: string, amount: number) => Promise<void>;
   addPartyXp: (amount: number) => Promise<void>;
   dismissLevelUp: () => void;
+  startLevelUpSession: (characterId: string) => Promise<ActiveLevelUpSession | null>;
+  cancelLevelUpSession: () => void;
+  updateLevelUpSession: (updates: Partial<ActiveLevelUpSession>) => void;
+  commitLevelUpSession: () => Promise<boolean>;
   updateCharacterStats: (id: string, stats: Partial<Character['stats']>) => void;
   setEmotion: (emotion: Emotion) => void;
   setTestAnimalInteraction: (interaction: any) => void;
@@ -206,6 +212,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   beastRegistry: {},
   testAnimalInteraction: null,
   levelUpQueue: [],
+  activeLevelUpSession: null,
   xpGain: null,
   classLevelingData: {},
   isLoadingSaves: false,
@@ -263,29 +270,10 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     }, 2000);
 
-    const newXp = char.xp + amount;
-    const { processLevelUp } = await import('../lib/characterUtils');
-    const levelUpData = await processLevelUp({ ...char, xp: newXp });
-
-    if (levelUpData) {
-      set((state) => ({
-        characters: state.characters.map(c => c.id === id ? levelUpData.updatedCharacter : c),
-        levelUpQueue: [
-          ...state.levelUpQueue,
-          ...levelUpData.results.map((r: any) => ({
-            characterId: id,
-            newLevel: r.newLevel,
-            features: r.newFeatures,
-            hpIncrease: r.hpIncrease,
-            hasASI: r.hasASI
-          }))
-        ]
-      }));
-    } else {
-      set((state) => ({
-        characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
-      }));
-    }
+    const newXp = (char.xp || 0) + amount;
+    set((state) => ({
+      characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
+    }));
   },
 
   addPartyXp: async (amount) => {
@@ -302,7 +290,127 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
   },
 
+  startLevelUpSession: async (characterId: string) => {
+    const char = get().characters.find(c => c.id === characterId);
+    if (!char) return null;
+
+    const session = await evaluateNextLevelStep(char);
+    if (session) {
+      set({ activeLevelUpSession: session });
+    }
+    return session;
+  },
+
+  cancelLevelUpSession: () => {
+    set({ activeLevelUpSession: null, levelUpQueue: [] });
+  },
+
+  updateLevelUpSession: (updates: Partial<ActiveLevelUpSession>) => {
+    set((state) => {
+      if (!state.activeLevelUpSession) return state;
+      return {
+        activeLevelUpSession: {
+          ...state.activeLevelUpSession,
+          ...updates,
+          validationError: null
+        }
+      };
+    });
+  },
+
+  commitLevelUpSession: async () => {
+    const session = get().activeLevelUpSession;
+    if (!session) return false;
+
+    const char = get().characters.find(c => c.id === session.characterId);
+    if (!char) return false;
+
+    const validation = validateLevelUpCommit(session, char);
+    if (!validation.valid) {
+      set((state) => ({
+        activeLevelUpSession: state.activeLevelUpSession
+          ? { ...state.activeLevelUpSession, validationError: validation.reason }
+          : null
+      }));
+      return false;
+    }
+
+    const conMod = Math.floor(((char.stats?.con || 10) - 10) / 2);
+    const hpGain =
+      session.hpMethod === 'roll' && session.rolledHpValue !== null
+        ? Math.max(1, session.rolledHpValue + conMod)
+        : session.hpIncrease;
+
+    const newMaxHp = (char.maxHp || char.hp || 10) + hpGain;
+    const newHp = (char.hp || 10) + hpGain;
+
+    const newStats = { ...char.stats };
+    if (session.hasASI && session.statIncreases) {
+      Object.entries(session.statIncreases).forEach(([statKey, inc]) => {
+        if (inc && (newStats as any)[statKey] !== undefined) {
+          (newStats as any)[statKey] += inc;
+        }
+      });
+    }
+
+    const newFeatures = [...(char.features || [])];
+    for (const feat of session.features || []) {
+      if (!newFeatures.some(f => f.index === feat.index)) {
+        newFeatures.push({
+          name: feat.name,
+          index: feat.index,
+          desc: Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || ''),
+          source: 'Class'
+        });
+      }
+    }
+
+    const newChoices = JSON.parse(JSON.stringify(char.choices || {}));
+    if (session.choices) {
+      Object.entries(session.choices).forEach(([featIdx, sel]) => {
+        newChoices[featIdx] = sel;
+      });
+    }
+
+    let newSubclass = char.subclass;
+    if (session.subclassChoice) {
+      newSubclass = session.subclassChoice;
+    }
+
+    const updatePayload: Partial<Character> = {
+      level: session.targetLevel,
+      hp: newHp,
+      maxHp: newMaxHp,
+      stats: newStats,
+      features: newFeatures,
+      choices: newChoices,
+      subclass: newSubclass
+    };
+
+    const { calculateMaxSpellSlots } = await import('../lib/statCalculations');
+    const tempChar = { ...char, ...updatePayload } as Character;
+    const maxSlots = calculateMaxSpellSlots(tempChar);
+    if (Object.keys(maxSlots).length > 0) {
+      const newSlots: Record<string, { current: number; max: number }> = { ...(char.spellSlots || {}) };
+      Object.entries(maxSlots).forEach(([lvlStr, maxVal]) => {
+        const currentVal = newSlots[lvlStr]?.current ?? maxVal;
+        const prevMax = newSlots[lvlStr]?.max || 0;
+        const maxDiff = Math.max(0, maxVal - prevMax);
+        newSlots[lvlStr] = {
+          current: Math.min(maxVal, currentVal + maxDiff),
+          max: maxVal
+        };
+      });
+      updatePayload.spellSlots = newSlots;
+    }
+
+    get().updateCharacter(char.id, updatePayload);
+    set({ activeLevelUpSession: null });
+    return true;
+  },
+
   dismissLevelUp: () => set((state) => ({ 
+    activeLevelUpSession: null,
     levelUpQueue: state.levelUpQueue.slice(1) 
   })),
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Character } from '../../../store/useCharacterStore';
+import { Character, useCharacterStore } from '../../../store/useCharacterStore';
 import { calculateDerivedStats } from '../../../lib/statCalculations';
+import { isEligibleForLevelUp } from '../../../lib/progressionUtils';
 import { CharacterPanelAbilities } from './CharacterPanelAbilities';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
@@ -19,7 +20,9 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
 }) => {
   if (!character) return null;
 
+  const { startLevelUpSession } = useCharacterStore();
   const derivedStats = calculateDerivedStats(character as Character);
+  const eligible = isEligibleForLevelUp(character);
 
   const speedText = character.race ? `${derivedStats.speed} FT` : '—';
   const initiativeText = derivedStats.initiative >= 0 ? `+${derivedStats.initiative}` : `${derivedStats.initiative}`;
@@ -80,8 +83,19 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
 
   return (
     <div className={cn("absolute inset-0 z-20 flex flex-col justify-between p-1.5 pointer-events-none", className)}>
-      {/* Right Column: Floating Combat Readiness Metrics Overlay */}
-      <div className="flex justify-end w-full">
+      {/* Top Bar: Level Up Trigger (Left) & Floating Metrics (Right) */}
+      <div className="flex justify-between w-full">
+        <div>
+          {eligible && character.id && (
+            <button
+              onClick={() => startLevelUpSession(character.id!)}
+              className="bg-dragon-darkRed hover:bg-dragon-red border-2 border-dragon-gold text-dragon-gold px-2.5 py-1 rounded-sm shadow-lg flex items-center gap-1.5 text-[9.5px] font-header font-black uppercase tracking-widest animate-bounce pointer-events-auto hover:scale-105 transition-all"
+            >
+              <GameIcon name="advance" size={12} color="#D4AF37" />
+              <span>Level Up!</span>
+            </button>
+          )}
+        </div>
         <div className="flex flex-col gap-1 pointer-events-auto items-end min-w-[80px] sm:min-w-[90px] bg-white/70 backdrop-blur-xs p-1 rounded border border-dragon-gold/25 shadow-xs">
           {/* Armor Class */}
           <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
