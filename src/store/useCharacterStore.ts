@@ -428,29 +428,10 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
 
     // Validate choices in payload against canonical options granted at target level
     if (payload.choices && typeof payload.choices === 'object') {
-      const KNOWN_FIGHTING_STYLES = new Set(['archery', 'defense', 'dueling', 'great_weapon_fighting', 'protection', 'two_weapon_fighting', 'blind_fighting', 'interception', 'thrown_weapon_fighting', 'unarmed_fighting']);
       const KNOWN_SKILLS = new Set(SKILL_LIST.map(s => s.name.toLowerCase()));
 
-      // Helper to verify if target level features explicitly grant a specific choice type
-      const targetLevelGrantsChoice = (typeKeyword: string) => {
-        return targetLevelFeatures.some((f: any) => {
-          const idx = (f.index || '').toLowerCase();
-          const name = (f.name || '').toLowerCase();
-          if (typeKeyword === 'fighting') {
-            return idx.includes('fighting_style') || name.includes('fighting style');
-          }
-          if (typeKeyword === 'expertise') {
-            return idx.includes('expertise') || name.includes('expertise');
-          }
-          if (typeKeyword === 'skills') {
-            return idx.includes('skill') || name.includes('skill') || f.choice?.type === 'proficiencies';
-          }
-          return idx.includes(typeKeyword) || name.includes(typeKeyword);
-        });
-      };
-
       for (const [choiceKey, rawVal] of Object.entries(payload.choices)) {
-        const lowerKey = choiceKey.toLowerCase();
+        const lowerKey = choiceKey.toLowerCase().replace(/-/g, '_');
         const vals = Array.isArray(rawVal) ? rawVal : [rawVal];
 
         const existingVal = char.choices?.[choiceKey];
@@ -458,27 +439,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
           continue; // Existing unchanged choice
         }
 
-        if (lowerKey.includes('fighting')) {
-          if (!targetLevelGrantsChoice('fighting')) {
-            return false; // Target level does not grant a fighting style choice
-          }
-          for (const v of vals) {
-            const lowerV = String(v).toLowerCase().replace(/fighting style:\s*/i, '').trim();
-            if (!KNOWN_FIGHTING_STYLES.has(lowerV)) {
-              return false; // Invalid fighting style option
-            }
-          }
-        } else if (lowerKey.includes('expertise') || lowerKey.includes('skills')) {
-          if (!targetLevelGrantsChoice('expertise') && !targetLevelGrantsChoice('skills') && !targetLevelGrantsChoice('proficiency')) {
-            return false; // Target level does not grant skill/expertise choice
-          }
-          for (const v of vals) {
-            const lowerV = String(v).toLowerCase().replace(/expertise:\s*/i, '').trim();
-            if (!KNOWN_SKILLS.has(lowerV)) {
-              return false; // Invalid skill option
-            }
-          }
-        } else if (lowerKey.includes('subclass') || lowerKey.includes('archetype')) {
+        if (lowerKey === 'subclass' || lowerKey.includes('archetype')) {
           if (payload.subclass) {
             for (const v of vals) {
               if (String(v).toLowerCase() !== payload.subclass.toLowerCase()) {
@@ -486,20 +447,76 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
               }
             }
           }
-        } else {
-          // Check if choiceKey matches any feature granted at target level or on character
-          const matchingFeat = targetLevelFeatures.find((f: any) => f.index.toLowerCase() === lowerKey) ||
-                               (char.features || []).find((f: any) => f.index.toLowerCase() === lowerKey);
-          if (!matchingFeat) {
-            return false; // Arbitrary choice key
+          continue;
+        }
+
+        // Find the feature at target level (or existing on character) that grants this choice
+        let matchingFeat = targetLevelFeatures.find((f: any) => {
+          const idx = (f.index || '').toLowerCase().replace(/-/g, '_');
+          const name = (f.name || '').toLowerCase().replace(/-/g, '_');
+          return idx === lowerKey || name === lowerKey;
+        });
+
+        if (!matchingFeat) {
+          // Special alias matching (e.g. "fighting-style" -> "fighter_fighting_style" or "ranger_fighting_style")
+          if (lowerKey.includes('fighting')) {
+            matchingFeat = targetLevelFeatures.find((f: any) => {
+              const idx = (f.index || '').toLowerCase();
+              const name = (f.name || '').toLowerCase();
+              return idx.includes('fighting') || name.includes('fighting');
+            });
+          } else if (lowerKey.includes('expertise')) {
+            matchingFeat = targetLevelFeatures.find((f: any) => {
+              const idx = (f.index || '').toLowerCase();
+              const name = (f.name || '').toLowerCase();
+              return idx.includes('expertise') || name.includes('expertise');
+            });
           }
-          const options = extractOptionsFromFeature(matchingFeat);
-          if (options.length > 0) {
-            const allowedSet = new Set(options.map(o => (o.index || o.name).toLowerCase()));
-            for (const v of vals) {
-              if (!allowedSet.has(String(v).toLowerCase())) {
-                return false; // Option not in feature options
-              }
+        }
+
+        if (!matchingFeat) {
+          // Check existing character features as a fallback for pre-existing choice keys
+          matchingFeat = (char.features || []).find((f: any) => {
+            const idx = (f.index || '').toLowerCase().replace(/-/g, '_');
+            return idx === lowerKey;
+          });
+        }
+
+        if (!matchingFeat) {
+          return false; // Arbitrary choice key not granted at target level or character
+        }
+
+        const options = extractOptionsFromFeature(matchingFeat);
+        if (options.length > 0) {
+          const allowedSet = new Set<string>();
+          for (const opt of options) {
+            const optIdx = (opt.index || '').toLowerCase();
+            const optName = (opt.name || '').toLowerCase();
+            allowedSet.add(optIdx);
+            allowedSet.add(optName);
+            // Add normalized variations without prefixes e.g. "fighting style: "
+            const strippedName = optName.replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '').trim();
+            allowedSet.add(strippedName);
+            allowedSet.add(strippedName.replace(/\s+/g, '_'));
+            // Add index suffix if prefixed with feature name (e.g. "ranger_fighting_style_archery" -> "archery")
+            const idxParts = optIdx.split('_');
+            if (idxParts.length > 0) {
+              allowedSet.add(idxParts[idxParts.length - 1]);
+            }
+          }
+
+          for (const v of vals) {
+            const lowerV = String(v).toLowerCase().replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '').trim();
+            const lowerVUnderscore = lowerV.replace(/\s+/g, '_');
+            if (!allowedSet.has(lowerV) && !allowedSet.has(lowerVUnderscore)) {
+              return false; // Option not in target feature's granted options
+            }
+          }
+        } else if (lowerKey.includes('expertise') || lowerKey.includes('skills') || lowerKey.includes('proficiency')) {
+          for (const v of vals) {
+            const lowerV = String(v).toLowerCase().replace(/expertise:\s*/i, '').trim();
+            if (!KNOWN_SKILLS.has(lowerV)) {
+              return false; // Invalid skill option
             }
           }
         }

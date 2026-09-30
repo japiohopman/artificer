@@ -427,4 +427,47 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(canCastLvl2).toBe(true);
     expect(useCharacterStore.getState().characters.find(c => c.id === 'test-wizard-slots-1')!.spellSlots['2'].current).toBe(1);
   });
+
+  it('12. Class-specific option boundaries are enforced for choices (e.g. Ranger Level 2 choice rejects Great Weapon Fighting option)', async () => {
+    const rangerChar: Character = {
+      ...testCharacter,
+      id: 'test-ranger-options-1',
+      class: 'Ranger',
+      level: 1,
+      xp: 300 // Eligible for Level 2
+    };
+
+    useCharacterStore.setState({
+      characters: [rangerChar],
+      activeCharacterId: 'test-ranger-options-1',
+      activeLevelUpSession: null
+    });
+
+    const store = useCharacterStore.getState();
+    const session = await store.startLevelUpSession('test-ranger-options-1');
+    expect(session).not.toBeNull();
+    expect(session?.targetLevel).toBe(2);
+
+    // Attempting to commit Ranger Level 2 with 'great_weapon_fighting' (which is NOT an option for Ranger Fighting Style) must be rejected
+    const invalidOptionCommit = await store.commitLevelUpSession({
+      characterId: 'test-ranger-options-1',
+      targetLevel: 2,
+      finalHpGain: 6,
+      choices: { 'fighting-style': ['great_weapon_fighting'] }
+    });
+    expect(invalidOptionCommit).toBe(false);
+
+    // Valid Ranger Fighting Style ('archery') must succeed
+    const validOptionCommit = await store.commitLevelUpSession({
+      characterId: 'test-ranger-options-1',
+      targetLevel: 2,
+      finalHpGain: 6,
+      choices: { 'fighting-style': ['archery'] }
+    });
+    expect(validOptionCommit).toBe(true);
+
+    const updatedRanger = useCharacterStore.getState().characters.find(c => c.id === 'test-ranger-options-1')!;
+    expect(updatedRanger.level).toBe(2);
+    expect(updatedRanger.choices['fighting-style']).toEqual(['archery']);
+  });
 });

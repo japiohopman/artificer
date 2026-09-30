@@ -67,6 +67,7 @@ export const LevelUpOverlay: React.FC = () => {
   const [animationsComplete, setAnimationsComplete] = useState(false);
   const [expandedMainFeatures, setExpandedMainFeatures] = useState<any[]>([]);
   const [subclassFeatures, setSubclassFeatures] = useState<any[]>([]);
+  const [commitError, setCommitError] = useState<string | null>(null);
 
   // Fast HP Rolling states
   const [hpMethod, setHpMethod] = useState<'fixed' | 'roll'>('fixed');
@@ -219,7 +220,31 @@ export const LevelUpOverlay: React.FC = () => {
     setPoints(prev => prev - delta);
   };
 
+  const getMissingRequirements = () => {
+    const missing: string[] = [];
+    if (session.hasASI && points > 0) {
+      missing.push(`Allocate ${points} remaining attribute point${points > 1 ? 's' : ''}`);
+    }
+    const allFeatures = [...expandedMainFeatures, ...subclassFeatures];
+    const featuresWithChoices = allFeatures.filter(f =>
+       f.choice ||
+       f.feature_specific?.subfeature_options ||
+       isExpertise(f)
+    );
+    for (const feat of featuresWithChoices) {
+      const selections = featureChoices[feat.index] || [];
+      let limit = getChoiceLimit(feat);
+      if (limit === 0 && isExpertise(feat)) limit = 2;
+      if (limit === 0) limit = 1;
+      if (selections.length < limit) {
+        missing.push(`Select ${limit - selections.length} more option${limit - selections.length > 1 ? 's' : ''} for ${feat.name}`);
+      }
+    }
+    return missing;
+  };
+
   const handleComplete = async () => {
+    setCommitError(null);
     if (session.hasASI && points > 0) return false;
     
     const allFeatures = [...expandedMainFeatures, ...subclassFeatures];
@@ -237,7 +262,7 @@ export const LevelUpOverlay: React.FC = () => {
       }
       if (limit === 0) limit = 1;
 
-      if (selections.length < limit) return;
+      if (selections.length < limit) return false;
     }
 
     const currentChoices = JSON.parse(JSON.stringify(character.choices || {}));
@@ -279,11 +304,16 @@ export const LevelUpOverlay: React.FC = () => {
       subclass: currentChoices['subclass']
     };
 
-    await commitLevelUpSession(payload);
+    const success = await commitLevelUpSession(payload);
+    if (!success) {
+      setCommitError('Validation failed. Please verify your selections.');
+      return false;
+    }
 
     // Restore audio
     updateLayerVolume(1, 0.5);
     updateLayerVolume(4, 0.4);
+    return true;
   };
 
   const handleToggleChoice = (featIndex: string, optionIndex: string, limit: number) => {
@@ -298,15 +328,11 @@ export const LevelUpOverlay: React.FC = () => {
   };
 
   const getOptionsForChoice = (feat: any) => {
-    // 1. Basic extraction from feature data
     const options = extractOptionsFromFeature(feat);
     
-    // 2. If it's expertise, prioritize character proficiencies filtering
-    if (isExpertise(feat)) {
-      const currentProfs = character.proficiencies || [];
-      
-      if (options.length > 0) {
-        // Filter JSON options by what character already has
+    if (options.length > 0) {
+      if (isExpertise(feat)) {
+        const currentProfs = character.proficiencies || [];
         const filtered = options.filter(opt => {
            const normalizedName = opt.name.toLowerCase()
              .replace(/fighting style:\s*/i, '')
@@ -320,36 +346,22 @@ export const LevelUpOverlay: React.FC = () => {
         });
         if (filtered.length > 0) return filtered;
       }
-      
-      // Fallback to all current proficiencies if pool is empty or filtering failed
-      if (currentProfs.length > 0) {
-        return currentProfs.map(p => {
-          const name = typeof p === 'string' ? p : (p.name || p.index || '');
-          return {
-            index: name,
-            name: name
-          };
-        });
-      }
+      return options;
     }
-
-    if (options.length > 0) return options;
 
     const choice = feat.choice || feat.feature_specific?.subfeature_options;
     if (!choice) return [];
 
-    // 1. Direct options array
     if (choice.from?.options) {
       return choice.from.options.map((opt: any) => ({
         index: opt.index || opt.item?.index || opt.name,
-        name: opt.name || opt.item?.name || opt.index
+        name: opt.name || opt.item?.name || opt.index,
+        desc: opt.desc || opt.item?.desc
       }));
     }
 
-    // 2. Option set type is proficiencies
     if (choice.from?.option_set_type === 'proficiencies' || choice.type === 'proficiencies') {
       if (isExpertise(feat)) {
-        // Choose from existing proficiencies
         return (character.proficiencies || []).map(p => {
           const name = typeof p === 'string' ? p : (p.name || p.index || '');
           return {
@@ -357,19 +369,6 @@ export const LevelUpOverlay: React.FC = () => {
             name: name
           };
         });
-      } else {
-        // Gain new proficiency - show skills not already possessed
-        // We use a simplified list of standard skills if the JSON doesn't specify
-        const ALL_SKILLS = [
-          'Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 
-          'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 
-          'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 
-          'Sleight of Hand', 'Stealth', 'Survival'
-        ];
-        
-        return ALL_SKILLS
-          .filter(s => !character.proficiencies.includes(s))
-          .map(s => ({ index: s, name: s }));
       }
     }
     
@@ -457,15 +456,15 @@ export const LevelUpOverlay: React.FC = () => {
                  initial={{ scale: 0.8, opacity: 0 }}
                  animate={{ scale: 1, opacity: 1 }}
                  transition={{ delay: 0.2 }}
-                 className="relative px-8"
+                 className="relative px-4 sm:px-8"
                >
-                  <h2 className="text-[43px] font-cinzel font-black text-dragon-gold uppercase tracking-[0.3em] mb-1 shadow-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Level Ascended</h2>
-                  <div className="flex items-center justify-center gap-6">
-                    <div className="h-px w-24 bg-gradient-to-r from-transparent to-dragon-gold/60" />
-                    <span className="text-parchment-200 font-bold uppercase tracking-[0.4em] text-[10px]">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-cinzel font-black text-dragon-gold uppercase tracking-[0.15em] sm:tracking-[0.25em] mb-1 shadow-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Level Ascended</h2>
+                  <div className="flex items-center justify-center gap-3 sm:gap-6">
+                    <div className="h-px w-12 sm:w-24 bg-gradient-to-r from-transparent to-dragon-gold/60" />
+                    <span className="text-parchment-200 font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[10px] sm:text-xs">
                       {character.name} Advancing to Level {session.targetLevel}
                     </span>
-                    <div className="h-px w-24 bg-gradient-to-l from-transparent to-dragon-gold/60" />
+                    <div className="h-px w-12 sm:w-24 bg-gradient-to-l from-transparent to-dragon-gold/60" />
                   </div>
                </motion.div>
             </div>
@@ -909,45 +908,40 @@ export const LevelUpOverlay: React.FC = () => {
                </div>
             </div>
 
-            {/* Evolution Seal Button (Fixed) */}
-            <AnimatePresence>
-              {isComplete() && animationsComplete && (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.8, y: 50 }}
-                  className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[2100]"
-                >
-                  <button 
-                    onClick={handleComplete}
-                    className="group relative flex flex-col items-center gap-2"
-                  >
-                     {/* Outer Ring Glow */}
-                     <div className="absolute inset-0 bg-dragon-gold/20 blur-2xl rounded-full animate-pulse" />
-                     
-                     <div className="w-24 h-24 rounded-full bg-dragon-darkRed border-4 border-dragon-gold shadow-[0_0_40px_rgba(212,175,55,0.4)] flex items-center justify-center transition-all hover:scale-110 active:scale-95 group-hover:shadow-[0_0_60px_rgba(212,175,55,0.6)]">
-                        <GameIcon name="advance" size={48} color="#D4AF37" className="drop-shadow-lg" />
-                        
-                        {/* Inner Spinning Ring */}
-                        <motion.div 
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                          className="absolute inset-1 rounded-full border border-dashed border-dragon-gold/30"
-                        />
+            {/* Action Footer */}
+            <div className="bg-black/80 border-t border-dragon-gold/20 p-4 flex flex-col sm:flex-row items-center justify-between gap-4 z-20">
+               <div className="flex flex-col gap-1 text-center sm:text-left">
+                  {commitError && (
+                     <span className="text-xs font-bold text-dragon-red uppercase tracking-wider">{commitError}</span>
+                  )}
+                  {!isComplete() ? (
+                     <div className="flex flex-col gap-0.5">
+                        <span className="text-xs font-black text-dragon-gold uppercase tracking-wider">Awaiting Required Choices:</span>
+                        <ul className="text-[11px] text-parchment-400 list-disc list-inside">
+                           {getMissingRequirements().map((req, idx) => (
+                              <li key={idx}>{req}</li>
+                           ))}
+                        </ul>
                      </div>
-                     
-                     <motion.div 
-                       initial={{ opacity: 0 }}
-                       animate={{ opacity: 1 }}
-                       transition={{ delay: 0.5 }}
-                       className="px-4 py-1.5 bg-black/80 backdrop-blur-sm rounded-sm border border-dragon-gold/20 shadow-xl"
-                     >
-                        <span className="text-[10px] font-black text-dragon-gold uppercase tracking-[0.4em] whitespace-nowrap">Manifest Evolution</span>
-                     </motion.div>
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  ) : (
+                     <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">All level-up choices complete</span>
+                  )}
+               </div>
+
+               <button
+                 onClick={handleComplete}
+                 disabled={!isComplete()}
+                 className={cn(
+                   "px-6 py-2.5 rounded font-header font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center gap-2 cursor-pointer shadow-lg",
+                   isComplete()
+                     ? "bg-dragon-darkRed hover:bg-dragon-red text-dragon-gold border-2 border-dragon-gold hover:scale-105 active:scale-95"
+                     : "bg-gray-800 text-parchment-600 border border-gray-700 cursor-not-allowed opacity-50"
+                 )}
+               >
+                 <GameIcon name="advance" size={16} color="currentColor" />
+                 Commit Level Up
+               </button>
+            </div>
           </div>
         </motion.div>
       </div>
