@@ -23,8 +23,54 @@ export {
   parseCanonicalReferences,
   specialistPath,
   validateIssueQualityGate,
-  persistDiscoveryReportIssue
+  persistDiscoveryReportIssue,
+  file
 };
+
+export function parseRoadmapSequence(markdown) {
+  if (!markdown || typeof markdown !== 'string') return [];
+
+  const section = extractSection(markdown, [
+    '## ChatGPT-Curated Execution Sequence',
+    '## Execution Sequence',
+    '## Roadmap Sequence'
+  ]);
+
+  if (!section) return [];
+
+  const textToParse = section;
+
+  const lines = textToParse.split('\n');
+  const sequence = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith('|')) continue;
+
+    const cells = trimmed.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+    if (cells.length < 4) continue;
+
+    const orderNum = parseInt(cells[0], 10);
+    if (isNaN(orderNum)) continue;
+
+    const itemText = cells[1];
+    const purposeText = cells[2];
+    const stateText = cells[3];
+
+    const issueMatch = itemText.match(/#(\d+)/);
+    const issueNumber = issueMatch ? parseInt(issueMatch[1], 10) : null;
+
+    sequence.push({
+      order: orderNum,
+      rawItem: itemText,
+      issueNumber,
+      purpose: purposeText,
+      currentState: stateText
+    });
+  }
+
+  return sequence.sort((a, b) => a.order - b.order);
+}
 
 export function isCandidateIssue(issue, options = {}) {
   if (!issue || issue.state !== 'open' || issue.pull_request) {
@@ -45,8 +91,104 @@ export function findOpenImplementationPr(issueNumber, prs) {
   return prs.find(pr =>
     pr.state === 'open'
     && !pr.merged
-    && new RegExp('(Closes|Fixes|Resolves|Refs|Part of)\\s+' + needle + '\\b', 'i').test(pr.body || '')
+    && (
+      new RegExp('(Closes|Fixes|Resolves|Refs|Part of)\\s+' + needle + '\\b', 'i').test(pr.body || '') ||
+      new RegExp('\\(#' + issueNumber + '\\)', 'i').test(pr.title || '') ||
+      new RegExp('\\(#' + issueNumber + '\\)', 'i').test(pr.body || '')
+    )
   ) || null;
+}
+
+export function isSequenceItemComplete(seq, issues, dependencyStates, options = {}) {
+  const prs = options.openPullRequests || [];
+
+  if (seq.issueNumber === null) {
+    return /complete|completed|done|passed/i.test(seq.currentState || '');
+  }
+
+  const depState = dependencyStates instanceof Map
+    ? dependencyStates.get(seq.issueNumber)
+    : dependencyStates[seq.issueNumber];
+
+  // If dependency is a merged PR
+  if (depState && depState.type === 'pull_request' && depState.merged) {
+    return true;
+  }
+
+  // If dependency issue is closed, require explicit stateReason === 'completed'
+  if (depState && depState.type === 'issue' && depState.state === 'closed') {
+    return depState.stateReason === 'completed';
+  }
+
+  const hasMergedPr = prs.some(pr =>
+    pr.merged && (
+      new RegExp('(Closes|Fixes|Resolves|Refs|Part of)\\s+#' + seq.issueNumber + '\\b', 'i').test(pr.body || '') ||
+      new RegExp('\\(#' + seq.issueNumber + '\\)', 'i').test(pr.title || '') ||
+      new RegExp('\\(#' + seq.issueNumber + '\\)', 'i').test(pr.body || '')
+    )
+  );
+
+  if (hasMergedPr) {
+    return true;
+  }
+
+  return false;
+}
+
+export function advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates, options = {}) {
+  const fileExistFn = options.fileExistFn;
+  if (!roadmapSequence || roadmapSequence.length === 0) return null;
+
+  for (let i = 0; i < roadmapSequence.length; i++) {
+    const seq = roadmapSequence[i];
+
+    if (isSequenceItemComplete(seq, issues, dependencyStates, options)) {
+      continue;
+    }
+
+    if (seq.issueNumber === null) {
+      break;
+    }
+
+    // Found the first uncompleted sequence issue!
+    const targetIssue = issues.find(idx => idx && idx.number === seq.issueNumber && idx.state === 'open' && !idx.pull_request);
+    if (!targetIssue) break;
+
+    // Check if it's currently status: proposed
+    const dispatchMeta = parseDispatchMetadata(targetIssue.body || '');
+    if (dispatchMeta.status === 'proposed') {
+      // Validate quality gate with status overridden to ready to check if quality gate passes
+      const updatedBody = targetIssue.body.replace('- **status:** proposed', '- **status:** ready');
+      const quality = validateIssueQualityGate(updatedBody, { fileExistFn });
+
+      if (quality.valid) {
+        // Check dependencies
+        let depsBlocked = false;
+        for (const dep of quality.metadata.dependsOn) {
+          const state = dependencyStates instanceof Map ? dependencyStates.get(dep) : dependencyStates[dep];
+          const decision = dependencyBlocks(dep, state);
+          if (decision.blocked) {
+            depsBlocked = true;
+            break;
+          }
+        }
+
+        if (!depsBlocked) {
+          return {
+            promoted: true,
+            issueNumber: targetIssue.number,
+            updatedBody,
+            targetIssue
+          };
+        }
+      }
+    }
+
+    // Stop searching once we encounter the first uncompleted issue
+    break;
+  }
+
+  return null;
 }
 
 export function dependencyBlocks(number, state) {
@@ -56,9 +198,13 @@ export function dependencyBlocks(number, state) {
       ? { blocked: false }
       : { blocked: true, reason: 'Dependency PR #' + number + ' is not merged.' };
   }
-  return state.state === 'open'
-    ? { blocked: true, reason: 'Dependency Issue #' + number + ' is still open.' }
-    : { blocked: false };
+  if (state.state === 'open') {
+    return { blocked: true, reason: 'Dependency Issue #' + number + ' is still open.' };
+  }
+  if (state.state === 'closed' && state.stateReason !== 'completed') {
+    return { blocked: true, reason: 'Dependency Issue #' + number + ' was closed without completed state (reason: ' + (state.stateReason || 'unknown') + ').' };
+  }
+  return { blocked: false };
 }
 
 export function selectDispatchableIssue(issues, options = {}) {
@@ -101,33 +247,125 @@ export function selectDispatchableIssue(issues, options = {}) {
     });
   }
 
+  const roadmapSequence = options.roadmapSequence || (options.roadmapContent ? parseRoadmapSequence(options.roadmapContent) : []);
+
   let selectedCandidate = null;
 
-  for (const candidate of sortDispatchCandidates(candidates)) {
-    const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
-    if (existingPr) {
-      rejected.push({
-        issueNumber: candidate.issue.number,
-        reason: 'Open implementation PR #' + existingPr.number + ' already exists.'
-      });
-      continue;
-    }
+  if (roadmapSequence.length > 0) {
+    for (const seq of roadmapSequence) {
+      if (seq.issueNumber !== null) {
+        // Check state of sequence issue
+        const depState = dependencyStates instanceof Map
+          ? dependencyStates.get(seq.issueNumber)
+          : dependencyStates[seq.issueNumber];
 
-    let blocked = false;
-    for (const dependency of candidate.metadata.dependsOn) {
-      const state = dependencyStates instanceof Map
-        ? dependencyStates.get(dependency)
-        : dependencyStates[dependency];
-      const decision = dependencyBlocks(dependency, state);
-      if (decision.blocked) {
-        rejected.push({ issueNumber: candidate.issue.number, reason: decision.reason });
-        blocked = true;
-        break;
+        const isClosedInDepStates = depState && (
+          (depState.type === 'issue' && depState.state === 'closed') ||
+          (depState.type === 'pull_request' && depState.merged)
+        );
+
+        const isOpenInIssues = issues.some(i => i && i.number === seq.issueNumber && i.state === 'open' && !i.pull_request);
+        const isOpenInDepStates = depState && depState.state === 'open';
+
+        // Check if sequence item is complete using verified terminal state
+        if (isSequenceItemComplete(seq, issues, dependencyStates, options)) {
+          continue; // Move to next item in sequence
+        }
+
+        // If it's open or in issues list, test if it is dispatchable
+        const candidate = candidates.find(c => c.issue.number === seq.issueNumber);
+        if (candidate) {
+          const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
+          if (existingPr) {
+            rejected.push({
+              issueNumber: candidate.issue.number,
+              reason: 'Open implementation PR #' + existingPr.number + ' already exists.'
+            });
+            break;
+          }
+
+          let blocked = false;
+          for (const dependency of candidate.metadata.dependsOn) {
+            const state = dependencyStates instanceof Map
+              ? dependencyStates.get(dependency)
+              : dependencyStates[dependency];
+            const decision = dependencyBlocks(dependency, state);
+            if (decision.blocked) {
+              rejected.push({ issueNumber: candidate.issue.number, reason: decision.reason });
+              blocked = true;
+              break;
+            }
+          }
+
+          if (!blocked) {
+            selectedCandidate = candidate;
+            break;
+          } else {
+            break;
+          }
+        } else {
+          // Open issue in sequence is NOT a valid ready candidate
+          break;
+        }
+      } else {
+        // Non-issue named checkpoint
+        const isComplete = /complete|completed|done|passed/i.test(seq.currentState || '');
+        if (isComplete) {
+          continue;
+        } else {
+          break;
+        }
       }
     }
-    if (!blocked) {
-      selectedCandidate = candidate;
-      break;
+
+    if (selectedCandidate) {
+      for (const candidate of candidates) {
+        if (candidate.issue.number !== selectedCandidate.issue.number) {
+          if (!rejected.some(r => r.issueNumber === candidate.issue.number)) {
+            rejected.push({
+              issueNumber: candidate.issue.number,
+              reason: `Skipped by roadmap sequence selection (selected #${selectedCandidate.issue.number}).`
+            });
+          }
+        }
+      }
+    } else {
+      for (const candidate of candidates) {
+        if (!rejected.some(r => r.issueNumber === candidate.issue.number)) {
+          rejected.push({
+            issueNumber: candidate.issue.number,
+            reason: 'Blocked by earlier incomplete roadmap sequence item or checkpoint.'
+          });
+        }
+      }
+    }
+  } else {
+    for (const candidate of sortDispatchCandidates(candidates)) {
+      const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
+      if (existingPr) {
+        rejected.push({
+          issueNumber: candidate.issue.number,
+          reason: 'Open implementation PR #' + existingPr.number + ' already exists.'
+        });
+        continue;
+      }
+
+      let blocked = false;
+      for (const dependency of candidate.metadata.dependsOn) {
+        const state = dependencyStates instanceof Map
+          ? dependencyStates.get(dependency)
+          : dependencyStates[dependency];
+        const decision = dependencyBlocks(dependency, state);
+        if (decision.blocked) {
+          rejected.push({ issueNumber: candidate.issue.number, reason: decision.reason });
+          blocked = true;
+          break;
+        }
+      }
+      if (!blocked) {
+        selectedCandidate = candidate;
+        break;
+      }
     }
   }
 
@@ -194,9 +432,36 @@ async function github(path) {
   return response.json();
 }
 
+export function formatDirectoryListing(path, items, maxItems = 50) {
+  if (!Array.isArray(items)) {
+    throw new Error('Invalid directory listing for ' + path);
+  }
+  const sorted = [...items].sort((a, b) => (a.name || a.path || '').localeCompare(b.name || b.path || ''));
+  const count = sorted.length;
+  const sliced = sorted.slice(0, maxItems);
+  const lines = sliced.map(entry => {
+    const typeLabel = entry.type === 'dir' ? '[DIR]' : '[FILE]';
+    const name = entry.name || entry.path || 'unknown';
+    const sizeLabel = entry.type === 'file' && typeof entry.size === 'number' ? ' (' + entry.size + ' bytes)' : '';
+    return '- ' + typeLabel + ' ' + name + sizeLabel;
+  });
+
+  let result = 'Directory listing for ' + path + ' (' + count + ' item' + (count === 1 ? '' : 's') + '):\n' + lines.join('\n');
+  if (count > maxItems) {
+    result += '\n... and ' + (count - maxItems) + ' more entries (truncated).';
+  }
+  return result;
+}
+
 async function file(path) {
   const item = await github('contents/' + path + '?ref=main');
-  return Buffer.from(item.content, 'base64').toString('utf8');
+  if (Array.isArray(item)) {
+    return formatDirectoryListing(path, item);
+  }
+  if (item && typeof item.content === 'string') {
+    return Buffer.from(item.content, 'base64').toString('utf8');
+  }
+  throw new Error('GitHub API contents/' + path + ' response did not contain content or directory items.');
 }
 
 async function fileOrNull(path) {
@@ -218,7 +483,7 @@ async function dependencies(numbers) {
       const pull = await github('pulls/' + number);
       result.set(number, { type: 'pull_request', state: pull.state, merged: Boolean(pull.merged) });
     } else {
-      result.set(number, { type: 'issue', state: issue.state });
+      result.set(number, { type: 'issue', state: issue.state, stateReason: issue.state_reason });
     }
   }
   return result;
@@ -230,11 +495,13 @@ async function main() {
   if (!REPO || !TOKEN) throw new Error('GITHUB_REPOSITORY and GITHUB_TOKEN are required.');
 
   const results = await Promise.all([
-    github('issues?state=open&per_page=100'),
-    github('pulls?state=open&base=main&per_page=100')
+    github('issues?state=all&per_page=100'),
+    github('pulls?state=all&base=main&per_page=100'),
+    fileOrNull('ROADMAP.md')
   ]);
   const issues = results[0];
   const prs = results[1];
+  const roadmapContent = results[2];
 
   const candidateEntries = issues
     .filter(issue => !issue.pull_request)
@@ -244,11 +511,47 @@ async function main() {
     }))
     .filter(entry => entry.validation.valid);
 
-  const dependencyNumbers = [...new Set(candidateEntries.flatMap(entry => entry.validation.metadata.dependsOn))];
+  const roadmapSequence = parseRoadmapSequence(roadmapContent);
+  const sequenceIssueNumbers = roadmapSequence.map(s => s.issueNumber).filter(Boolean);
+
+  const dependencyNumbers = [...new Set([
+    ...candidateEntries.flatMap(entry => entry.validation.metadata.dependsOn),
+    ...sequenceIssueNumbers
+  ])];
   const dependencyStates = await dependencies(dependencyNumbers);
+
+  // Check for automatic readiness handoff if the current candidate is not ready but eligible for promotion.
+  // CRITICAL SAFETY RULE: The selector is read-only during dry-run. Do NOT mutate GitHub state unless confirmation is DISPATCH or ALLOW_READINESS_MUTATION === 'true'.
+  const allowMutation = process.env.ALLOW_READINESS_MUTATION === 'true' || process.env.JULES_DISPATCH_CONFIRMATION === 'DISPATCH';
+  const promotion = advanceNextCuratedIssueReadiness(issues, roadmapSequence, dependencyStates, { openPullRequests: prs });
+
+  if (promotion && promotion.promoted) {
+    if (allowMutation) {
+      console.error(`Automatic readiness handoff: Promoting Issue #${promotion.issueNumber} to status: ready ...`);
+      const patchResponse = await fetch('https://api.github.com/repos/' + REPO + '/issues/' + promotion.issueNumber, {
+        method: 'PATCH',
+        headers: {
+          Authorization: 'Bearer ' + TOKEN,
+          Accept: 'application/vnd.github+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ body: promotion.updatedBody })
+      });
+      if (!patchResponse.ok) {
+        const errorText = await patchResponse.text();
+        throw new Error(`Automatic readiness handoff failed: GitHub API returned ${patchResponse.status} ${errorText}`);
+      }
+      console.error(`Successfully promoted Issue #${promotion.issueNumber} to status: ready.`);
+      promotion.targetIssue.body = promotion.updatedBody;
+    } else {
+      console.error(`[Dry-run] Automatic readiness handoff eligible: Issue #${promotion.issueNumber} would be promoted to status: ready (mutation skipped in dry-run mode).`);
+    }
+  }
+
   const decision = selectDispatchableIssue(issues, {
     openPullRequests: prs,
-    dependencyStates
+    dependencyStates,
+    roadmapSequence
   });
 
   // If discovery is triggered, persist the discovery report issue.
@@ -331,9 +634,11 @@ const direct = process.argv[1]
   && new URL(import.meta.url).pathname === new URL('file://' + process.argv[1]).pathname;
 
 if (direct) {
-  main().catch(error => {
+  try {
+    await main();
+  } catch (error) {
     console.error(error);
     setOutput('dispatch', false);
     process.exit(1);
-  });
+  }
 }

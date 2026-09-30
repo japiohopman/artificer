@@ -1,0 +1,21 @@
+{
+  "index": "elf_high",
+  "name": "High Elf",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Medium",
+  "parent_species": "elf",
+  "desc": "High Elves are steeped in the arcane traditions of Feywild and mortal worlds. You know one extra cantrip of choice from the Wizard spell list.",
+  "traits": [
+    {
+      "index": "high_elf_lineage",
+      "name": "High Elf Lineage",
+      "desc": "You know the Prestidigitation cantrip (or another cantrip from the Wizard spell list). Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. At level 3, you can cast Detect Magic. At level 5, you can cast Misty Step. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells."
+    }
+  ],
+  "spells": {
+    "cantrip": "prestidigitation",
+    "level_3": "detect_magic",
+    "level_5": "misty_step"
+  }
+}

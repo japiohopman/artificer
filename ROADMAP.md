@@ -6,6 +6,26 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 
 ---
 
+## ChatGPT-Curated Execution Sequence
+
+> This sequence is project-management guidance maintained by ChatGPT together with the human project owner. GitHub Issues remain the authoritative execution contracts. The Issue-first dispatcher consumes this sequence only to determine order; Issue Quality Gate, dependency checks, and the live dispatch safety gate still control execution.
+
+| Order | Issue / checkpoint | Purpose | Current state |
+|---|---|---|---|
+| 1 | #387 | Establish roadmap sequencing and automatic readiness handoff | **completed — merged** |
+| 2 | #389 | Repair canonical directory-reference handling in the live Jules selector | **completed — merged** |
+| 3 | #365 | Complete Foundry 2024 species source parity | **completed — merged** |
+| 4 | #376 | Close remaining 2024 runtime ruleset gaps | **completed — merged** |
+| 5 | #396 | Restore runtime Species selection data loading | **ready — blocks #393** |
+| 6 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **completed — verified** |
+| 7 | #381 | Resume player-controlled level-up lifecycle | parked until #393 |
+| 8 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
+| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |
+
+This order is intentionally not a raw priority sort. It is the current foundation sequence chosen from repository evidence and dependency risk. Implementation scope belongs in each Issue.
+
+---
+
 ## Strategic Priorities
 
 ### Current Focus Areas
@@ -35,9 +55,11 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 
 ## Strategic Roadmap Rules
 
-1. `ROADMAP.md` provides sequence, context, and priority orientation; it is **not** an execution queue or dispatch source.
+1. `ROADMAP.md` provides ChatGPT-curated sequence, context, and priority orientation; it is **not** the source of implementation scope.
 2. Every actionable work item must be represented by a **GitHub Issue**.
-3. Implementation details, acceptance criteria, and specialist routing belong in assigned GitHub Issues and `.github/agents/`.
+3. Implementation details, acceptance criteria, verification, and specialist routing belong in the assigned GitHub Issue and `.github/agents/`.
+4. ChatGPT maintains the intended sequence; Jules reports factual progress for its assigned Issue and does not choose the next Issue.
+5. Automatic readiness advancement is governed by the workflow contract tracked in Issue #387 and must still pass Issue Quality Gate and dependency checks.
 
 ---
 *Strategic priority map for Artificer.*

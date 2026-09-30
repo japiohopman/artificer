@@ -1,0 +1,44 @@
+{
+  "index": "goliath",
+  "name": "goliath",
+  "rulesetContext": "2024",
+  "speed": 35,
+  "ability_bonuses": [],
+  "alignment": "Goliaths tend toward lawful neutral alignments, valuing discipline and fair competition.",
+  "age": "Goliaths have lifespans comparable to humans, reaching adulthood in their late teens and living less than a century.",
+  "size": "Medium",
+  "size_description": "Medium (about 7–8 feet tall).",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/json/common.json"
+    },
+    {
+      "index": "giant",
+      "name": "giant",
+      "url": "/assets/atlas/languages/json/giant.json"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Giant.",
+  "traits": [
+    {
+      "index": "giant_ancestry",
+      "name": "giant ancestry",
+      "url": "/assets/atlas/traits/json/giant_ancestry.json"
+    },
+    {
+      "index": "large_form",
+      "name": "large form",
+      "url": "/assets/atlas/traits/json/large_form.json"
+    },
+    {
+      "index": "powerful_build",
+      "name": "powerful build",
+      "url": "/assets/atlas/traits/json/powerful_build.json"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/24/goliath.json",
+  "image": "/assets/ui/official/races/goliath.webp"
+}

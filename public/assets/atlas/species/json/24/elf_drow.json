@@ -1,0 +1,22 @@
+{
+  "index": "elf_drow",
+  "name": "Drow",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Medium",
+  "parent_species": "elf",
+  "desc": "Drow typically have dark skin and white hair. Your lineage connects you to the Underdark and the Realm of Fey, granting you enhanced darkvision and innate drow magic.",
+  "traits": [
+    {
+      "index": "drow_lineage",
+      "name": "Drow Lineage",
+      "desc": "The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip. At level 3, you can cast Faerie Fire. At level 5, you can cast Darkness. Charisma, Intelligence, or Wisdom is your spellcasting ability for these spells (chosen when you select this lineage)."
+    }
+  ],
+  "spells": {
+    "cantrip": "dancing_lights",
+    "level_3": "faerie_fire",
+    "level_5": "darkness"
+  },
+  "darkvision_range": 120
+}

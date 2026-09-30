@@ -1,0 +1,20 @@
+{
+  "index": "gnome_forest",
+  "name": "Forest Gnome",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "size": "Small",
+  "parent_species": "gnome",
+  "desc": "Forest Gnomes possess a natural knack for illusion and communication with woodland beasts.",
+  "traits": [
+    {
+      "index": "forest_gnome_lineage",
+      "name": "Forest Gnome Lineage",
+      "desc": "You know the Minor Illusion cantrip. You can also cast Speak with Animals a number of times equal to your Proficiency Bonus per Long Rest (and can use any spell slots of 1st level or higher you have to cast it). Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells."
+    }
+  ],
+  "spells": {
+    "cantrip": "minor_illusion",
+    "special": "speak_with_animals"
+  }
+}

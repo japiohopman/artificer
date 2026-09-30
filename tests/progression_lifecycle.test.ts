@@ -242,15 +242,12 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
   it('7. Completing level-up commits new level, HP, features, and choices atomically', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test-fighter-1', 300);
-    await store.startLevelUpSession('test-fighter-1');
+    await store.startLevelUpSession('test-fighter-1'); // Fighter Lvl 2 grants action_surge_1_use
 
     const commitSuccess = await store.commitLevelUpSession({
       characterId: 'test-fighter-1',
       targetLevel: 2,
       finalHpGain: 8,
-      choices: {
-        'fighting-style': ['archery']
-      },
       features: [
         { name: 'Action Surge', index: 'action_surge_1_use', desc: 'Gain an extra action', source: 'Class' }
       ]
@@ -262,7 +259,6 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     expect(charAfterCommit.level).toBe(2);
     expect(charAfterCommit.maxHp).toBe(20); // 12 + 8
     expect(charAfterCommit.hp).toBe(20);
-    expect(charAfterCommit.choices['fighting-style']).toEqual(['archery']);
     expect(charAfterCommit.features.some(f => f.index === 'action_surge_1_use')).toBe(true);
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });

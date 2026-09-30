@@ -763,7 +763,11 @@ export async function fetchMaterialData(index: string): Promise<any> {
 
 export function getCachedEquipment(index: string, ruleset?: '2014' | '2024'): any | null {
   const activeRuleset = getActiveRulesetContext(ruleset);
-  return equipmentCache[`${activeRuleset}:${index}`] || equipmentCache[`2014:${index}`] || equipmentCache[`2024:${index}`] || null;
+  const cached = equipmentCache[`${activeRuleset}:${index}`];
+  if (cached && cached.rulesetContext === activeRuleset) {
+    return cached;
+  }
+  return null;
 }
 
 export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
@@ -797,7 +801,7 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
             (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
           );
           const versioned = matching.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
-          const entry = versioned || matching[0];
+          const entry = versioned || (activeRuleset === '2014' ? matching.find((e: any) => e.json_path && e.json_path.includes('/14/')) || matching[0] : undefined);
           if (entry && entry.json_path) {
             nodePath = entry.json_path.replace(/^\/?assets\/atlas\//, 'public/assets/atlas/').replace(/^\/?public\/assets\/atlas\//, 'public/assets/atlas/');
           }
@@ -817,6 +821,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
           }
           const actualPath = nodePath || data.url || '';
           const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+          if (activeRuleset === '2024' && actualRuleset !== '2024') return null;
+          if (activeRuleset === '2014' && actualRuleset !== '2014') return null;
+
           const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
           equipmentCache[cacheKey] = finalResult;
           return finalResult;
@@ -842,7 +849,7 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
           (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
         );
         const versionedEntry = matchingEntries.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
-        const entry = versionedEntry || matchingEntries[0];
+        const entry = versionedEntry || (activeRuleset === '2014' ? matchingEntries.find((e: any) => e.json_path && e.json_path.includes('/14/')) || matchingEntries[0] : undefined);
         if (entry && entry.json_path) {
           resolvedPath = entry.json_path;
         }
@@ -874,6 +881,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
         }
         const actualPath = resolvedPath || data.url || '';
         const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+        if (activeRuleset === '2024' && actualRuleset !== '2024') return null;
+        if (activeRuleset === '2014' && actualRuleset !== '2014') return null;
+
         const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
         equipmentCache[cacheKey] = finalResult;
         return finalResult;
@@ -895,6 +905,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
       }
       const actualPath = resolvedPath || data.url || '';
       const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+      if (activeRuleset === '2024' && actualRuleset !== '2024') return null;
+      if (activeRuleset === '2014' && actualRuleset !== '2014') return null;
+
       const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
       equipmentCache[cacheKey] = finalResult;
       return finalResult;
@@ -918,6 +931,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
     }
     const actualPath = resolvedPath || data.url || '';
     const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+    if (activeRuleset === '2024' && actualRuleset !== '2024') return null;
+    if (activeRuleset === '2014' && actualRuleset !== '2014') return null;
+
     return {
       ...data,
       rulesetContext: actualRuleset,
@@ -1394,25 +1410,46 @@ export async function fetchMaterialsList(): Promise<{ name: string; index: strin
   }
 }
 
-export async function fetchEquipmentList(): Promise<{ name: string; index: string }[]> {
-  if (equipmentListCache) return equipmentListCache;
+export async function fetchEquipmentList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = getRulesetVersionFolder(ruleset);
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/equipment/index.json');
+      if (fs.existsSync(indexPath)) {
+        const data = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        if (Array.isArray(data)) {
+          return data
+            .filter((item: any) => !item.json_path || item.json_path.includes(`/${versionFolder}/`))
+            .map((item: any) => ({
+              name: item.name || item.index.replace(/_/g, ' '),
+              index: item.index
+            }));
+        }
+      }
+    } catch (e) {}
+  }
+
   try {
-    // Try local index first
     const localRes = await fetch('/assets/atlas/equipment/index.json');
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
-        const list = data.map((item: any) => ({
-          name: item.name || item.index.replace(/_/g, ' '),
-          index: item.index
-        }));
-        equipmentListCache = list;
+        const list = data
+          .filter((item: any) => !item.json_path || item.json_path.includes(`/${versionFolder}/`))
+          .map((item: any) => ({
+            name: item.name || item.index.replace(/_/g, ' '),
+            index: item.index
+          }));
         return list;
       }
     }
   } catch (e) {}
 
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment/json?ref=${BRANCH}&t=${Date.now()}`;
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -1429,6 +1466,82 @@ export async function fetchEquipmentList(): Promise<{ name: string; index: strin
     console.error("Error fetching equipment list:", e);
     return [];
   }
+}
+
+export async function fetchRuleData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const cleanIndex = index.toLowerCase().trim().replace(/^\//, '');
+
+  const candidates = [
+    `/assets/atlas/rules/${versionFolder}/json/${cleanIndex}.json`,
+    `/assets/atlas/rules/${versionFolder}/json/${cleanIndex}`
+  ];
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      for (const cand of candidates) {
+        const fullPath = pathModule.resolve(process.cwd(), `public${cand.endsWith('.json') ? cand : cand + '.json'}`);
+        if (fs.existsSync(fullPath)) {
+          const content = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+          return { ...content, rulesetContext: activeRuleset };
+        }
+      }
+    } catch (e) {}
+  }
+
+  for (const cand of candidates) {
+    try {
+      const fullUrl = cand.endsWith('.json') ? cand : cand + '.json';
+      const res = await fetch(fullUrl);
+      if (res.ok) {
+        const parsed = await safeJson(res);
+        if (parsed) return { ...parsed, rulesetContext: activeRuleset };
+      }
+    } catch (e) {}
+  }
+
+  return null;
+}
+
+export async function fetchTableData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const cleanIndex = index.toLowerCase().trim().replace(/^\//, '');
+
+  const candidates = [
+    `/assets/atlas/tables/json/${versionFolder}/${cleanIndex}.json`,
+    `/assets/atlas/tables/json/${versionFolder}/${cleanIndex}`
+  ];
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      for (const cand of candidates) {
+        const fullPath = pathModule.resolve(process.cwd(), `public${cand.endsWith('.json') ? cand : cand + '.json'}`);
+        if (fs.existsSync(fullPath)) {
+          const content = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+          return { ...content, rulesetContext: activeRuleset };
+        }
+      }
+    } catch (e) {}
+  }
+
+  for (const cand of candidates) {
+    try {
+      const fullUrl = cand.endsWith('.json') ? cand : cand + '.json';
+      const res = await fetch(fullUrl);
+      if (res.ok) {
+        const parsed = await safeJson(res);
+        if (parsed) return { ...parsed, rulesetContext: activeRuleset };
+      }
+    } catch (e) {}
+  }
+
+  return null;
 }
 
 export async function fetchMagicItemList(): Promise<{ name: string; index: string }[]> {
@@ -1826,19 +1939,85 @@ export async function fetchMagicSchools(): Promise<{ name: string; index: string
   }
 }
 
-export async function fetchSpeciesList(): Promise<{ name: string; index: string }[]> {
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json?ref=${BRANCH}&t=${Date.now()}`;
+export async function fetchSpeciesList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+
+  const TOP_LEVEL_2024_SPECIES = ['dragonborn', 'dwarf', 'elf', 'gnome', 'goliath', 'halfling', 'human', 'orc', 'tiefling'];
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/species/json/${versionFolder}`);
+      let files: string[] = [];
+      if (fs.existsSync(dirPath)) {
+        files = fs.readdirSync(dirPath).filter((f: string) => f.endsWith('.json'));
+      } else if (activeRuleset === '2014') {
+        const rootDir = pathModule.resolve(process.cwd(), 'public/assets/atlas/species/json');
+        if (fs.existsSync(rootDir)) {
+          files = fs.readdirSync(rootDir).filter((f: string) => f.endsWith('.json') && f !== 'index.json');
+        }
+      }
+
+      let list = files.map((f: string) => ({
+        name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+        index: f.replace('.json', '')
+      }));
+
+      if (activeRuleset === '2024') {
+        list = list.filter(item => TOP_LEVEL_2024_SPECIES.includes(item.index));
+      }
+      return list;
+    } catch (e) {}
+  }
+
+  const candidateSpeciesList = activeRuleset === '2024'
+    ? TOP_LEVEL_2024_SPECIES
+    : ['dragonborn', 'dwarf', 'elf', 'gnome', 'half_elf', 'half_orc', 'halfling', 'human', 'tiefling'];
+
+  try {
+    const localMatches = await Promise.all(
+      candidateSpeciesList.map(async (spIndex) => {
+        try {
+          const localRes = await fetch(`/assets/atlas/species/json/${versionFolder}/${spIndex}.json`);
+          if (localRes.ok) {
+            const data = await safeJson(localRes);
+            if (data) {
+              return {
+                name: data.name ? (data.name.charAt(0).toUpperCase() + data.name.slice(1).replace(/_/g, ' ')) : spIndex.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+                index: spIndex
+              };
+            }
+          }
+        } catch (e) {}
+        return null;
+      })
+    );
+
+    const validLocalList = localMatches.filter((item): item is { name: string; index: string } => item !== null);
+    if (validLocalList.length > 0) {
+      return validLocalList;
+    }
+  } catch (e) {}
+
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
     if (!files || !Array.isArray(files)) return [];
-    return files
+    let list = files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
         name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
+    if (activeRuleset === '2024') {
+      list = list.filter(item => TOP_LEVEL_2024_SPECIES.includes(item.index));
+    }
+    return list;
   } catch (e) {
     return [];
   }
@@ -2669,6 +2848,37 @@ export async function fetchFeatureData(index: string): Promise<any> {
 }
 
 export async function fetchAlignmentsList(): Promise<{ name: string; index: string }[]> {
+  const candidateAlignments = [
+    'lawful_good', 'neutral_good', 'chaotic_good',
+    'lawful_neutral', 'true_neutral', 'chaotic_neutral',
+    'lawful_evil', 'neutral_evil', 'chaotic_evil'
+  ];
+
+  try {
+    const localMatches = await Promise.all(
+      candidateAlignments.map(async (algIndex) => {
+        try {
+          const localRes = await fetch(`/assets/atlas/alignments/json/${algIndex}.json`);
+          if (localRes.ok) {
+            const data = await safeJson(localRes);
+            if (data) {
+              return {
+                name: data.name ? (data.name.charAt(0).toUpperCase() + data.name.slice(1).replace(/_/g, ' ')) : algIndex.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+                index: algIndex
+              };
+            }
+          }
+        } catch (e) {}
+        return null;
+      })
+    );
+
+    const validLocalList = localMatches.filter((item): item is { name: string; index: string } => item !== null);
+    if (validLocalList.length > 0) {
+      return validLocalList;
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/alignments/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
@@ -2698,20 +2908,38 @@ export async function fetchAlignmentData(index: string): Promise<any> {
 }
 
 export async function fetchTraitData(index: string): Promise<any> {
+  const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_');
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const traitPath = pathModule.resolve(process.cwd(), `public/assets/atlas/traits/json/${cleanIndex}.json`);
+      if (fs.existsSync(traitPath)) {
+        return JSON.parse(fs.readFileSync(traitPath, 'utf8'));
+      }
+      const profPath = pathModule.resolve(process.cwd(), `public/assets/atlas/proficiencies/json/${cleanIndex}.json`);
+      if (fs.existsSync(profPath)) {
+        return JSON.parse(fs.readFileSync(profPath, 'utf8'));
+      }
+    } catch (e) {}
+  }
+
   // Try local traits
   try {
-    const localTraits = await fetch(`/assets/atlas/traits/json/${index}.json`);
+    const localTraits = await fetch(`/assets/atlas/traits/json/${cleanIndex}.json`);
     if (localTraits.ok) return await localTraits.json();
   } catch (e) {}
 
   // Try local proficiencies
   try {
-    const localProf = await fetch(`/assets/atlas/proficiencies/json/${index}.json`);
+    const localProf = await fetch(`/assets/atlas/proficiencies/json/${cleanIndex}.json`);
     if (localProf.ok) return await localProf.json();
   } catch (e) {}
 
   // GitHub traits
-  const traitUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/traits/json/${index}.json?t=${Date.now()}`;
+  const traitUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/traits/json/${cleanIndex}.json?t=${Date.now()}`;
   try {
     const res = await fetch(`/api/raw?url=${encodeURIComponent(traitUrl)}`);
     if (res.ok) {
@@ -2721,7 +2949,7 @@ export async function fetchTraitData(index: string): Promise<any> {
   } catch (e) {}
 
   // GitHub proficiencies
-  const profUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/proficiencies/json/${index}.json?t=${Date.now()}`;
+  const profUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/proficiencies/json/${cleanIndex}.json?t=${Date.now()}`;
   try {
     const res = await fetch(`/api/raw?url=${encodeURIComponent(profUrl)}`);
     if (res.ok) {

@@ -1,0 +1,54 @@
+{
+  "index": "dragonborn",
+  "name": "dragonborn",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "ability_bonuses": [],
+  "alignment": "Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil.",
+  "age": "Young dragonborn grow quickly, reaching adulthood by 15 and living to around 80.",
+  "size": "Medium",
+  "size_description": "Medium (about 5–7 feet tall).",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/json/common.json"
+    },
+    {
+      "index": "draconic",
+      "name": "draconic",
+      "url": "/assets/atlas/languages/json/draconic.json"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Draconic.",
+  "traits": [
+    {
+      "index": "breath_weapon",
+      "name": "breath weapon",
+      "url": "/assets/atlas/traits/json/breath_weapon.json"
+    },
+    {
+      "index": "darkvision",
+      "name": "darkvision",
+      "url": "/assets/atlas/traits/json/darkvision.json"
+    },
+    {
+      "index": "draconic_ancestry",
+      "name": "draconic ancestry",
+      "url": "/assets/atlas/traits/json/draconic_ancestry.json"
+    },
+    {
+      "index": "damage_resistance",
+      "name": "damage resistance",
+      "url": "/assets/atlas/traits/json/damage_resistance.json"
+    },
+    {
+      "index": "draconic_flight",
+      "name": "draconic flight",
+      "url": "/assets/atlas/traits/json/draconic_flight.json"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/24/dragonborn.json",
+  "image": "/assets/ui/official/races/dragonborn.webp"
+}

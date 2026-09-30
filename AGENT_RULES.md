@@ -19,6 +19,7 @@ Do not invent missing scope from `ROADMAP.md`, `GOALS.md`, `docs/TASK_BOARD.md`,
 
 - **Inspect before implementing:** For existing-system work, inspect current implementation, consumers, tests, canonical ownership, and relevant adjacent architecture before modifying code.
 - **Adjacent findings must be recorded, not silently absorbed:** Materially adjacent work belongs in a follow-up Issue rather than being silently added to the active task.
+- **Factual roadmap progress reporting:** Jules may update factual completion state for its assigned Issue in `ROADMAP.md` as part of its PR, but must not reorder project work or create new tasks.
 
 ## 2. Protect canonical ownership
 
