@@ -157,7 +157,7 @@ Observed lessons from the #386 review loop:
 
 ### Dispatcher lesson
 
-The Issue-first sequencing model from **#387** is now active. The current lesson is that a newly discovered blocking Issue must also be inserted into the curated sequence when the live selector needs to dispatch it; otherwise a valid `ready` Issue outside the sequence is intentionally not selected. The current sequence therefore places **#396 before #393** and keeps #393 non-ready until the blocker is resolved.
+The Issue-first sequencing model from **#387** is now active. The current lesson is that a newly discovered blocking Issue must also be inserted into the curated sequence when the live selector needs to dispatch it; otherwise a valid `ready` Issue outside the sequence is intentionally not selected. The current sequence therefore places the completed #396/#393 foundation before **#401**, with #382 and #383 following the stabilized level-up implementation. Workflow hardening in #402 is tracked separately so process improvements do not block active game development.
 
 ### Jules handoff convention
 
