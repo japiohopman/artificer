@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { useWorldStore } from './useWorldStore';
+import { ActiveLevelUpSession, LevelUpCommitPayload, evaluateNextLevelStep } from '../lib/progressionUtils';
 
 export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
 
@@ -149,6 +150,7 @@ interface CharacterState {
     hpIncrease: number;
     hasASI: boolean;
   }[];
+  activeLevelUpSession: ActiveLevelUpSession | null;
   xpGain: {
     characterId: string;
     amount: number;
@@ -164,6 +166,9 @@ interface CharacterState {
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   addXp: (id: string, amount: number) => Promise<void>;
   addPartyXp: (amount: number) => Promise<void>;
+  startLevelUpSession: (characterId: string) => Promise<ActiveLevelUpSession | null>;
+  cancelLevelUpSession: () => void;
+  commitLevelUpSession: (payload: LevelUpCommitPayload) => Promise<boolean>;
   dismissLevelUp: () => void;
   updateCharacterStats: (id: string, stats: Partial<Character['stats']>) => void;
   setEmotion: (emotion: Emotion) => void;
@@ -206,6 +211,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   beastRegistry: {},
   testAnimalInteraction: null,
   levelUpQueue: [],
+  activeLevelUpSession: null,
   xpGain: null,
   classLevelingData: {},
   isLoadingSaves: false,
@@ -264,28 +270,320 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }, 2000);
 
     const newXp = char.xp + amount;
-    const { processLevelUp } = await import('../lib/characterUtils');
-    const levelUpData = await processLevelUp({ ...char, xp: newXp });
+    set((state) => ({
+      characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
+    }));
+  },
 
-    if (levelUpData) {
-      set((state) => ({
-        characters: state.characters.map(c => c.id === id ? levelUpData.updatedCharacter : c),
-        levelUpQueue: [
-          ...state.levelUpQueue,
-          ...levelUpData.results.map((r: any) => ({
-            characterId: id,
-            newLevel: r.newLevel,
-            features: r.newFeatures,
-            hpIncrease: r.hpIncrease,
-            hasASI: r.hasASI
-          }))
-        ]
-      }));
-    } else {
-      set((state) => ({
-        characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
-      }));
+  startLevelUpSession: async (characterId: string) => {
+    const { activeLevelUpSession, characters } = get();
+    // Guard against overwriting ANY active session (even for the same character)
+    if (activeLevelUpSession) {
+      return null;
     }
+
+    const char = characters.find(c => c.id === characterId);
+    if (!char) return null;
+
+    const session = await evaluateNextLevelStep(char);
+    if (session) {
+      set({ activeLevelUpSession: session });
+      return session;
+    }
+    return null;
+  },
+
+  cancelLevelUpSession: () => {
+    set({ activeLevelUpSession: null, levelUpQueue: [] });
+  },
+
+  commitLevelUpSession: async (payload: LevelUpCommitPayload) => {
+    const { activeLevelUpSession, characters } = get();
+    // Strict session validation
+    if (
+      !activeLevelUpSession ||
+      activeLevelUpSession.characterId !== payload.characterId ||
+      activeLevelUpSession.targetLevel !== payload.targetLevel
+    ) {
+      return false;
+    }
+
+    // Validate HP gain
+    if (typeof payload.finalHpGain !== 'number' || payload.finalHpGain < 1 || !Number.isFinite(payload.finalHpGain)) {
+      return false;
+    }
+
+    const char = characters.find(c => c.id === payload.characterId);
+    if (!char) return false;
+
+    // Verify live character level matches session current level and character remains eligible
+    const { getLevelFromXP } = await import('../lib/characterUtils');
+    const eligibleLvl = getLevelFromXP(char.xp || 0);
+    if (char.level !== activeLevelUpSession.currentLevel || eligibleLvl < activeLevelUpSession.targetLevel) {
+      return false;
+    }
+
+    // Reject stat mutations if level has no ASI
+    if (!activeLevelUpSession.hasASI && payload.stats) {
+      const origStats = char.stats || {};
+      for (const [key, val] of Object.entries(payload.stats)) {
+        if (typeof val === 'number' && val !== (origStats as any)[key]) {
+          return false; // Cannot mutate stats on non-ASI level
+        }
+      }
+    }
+
+    // Validate ASI stat allocation if applicable
+    if (activeLevelUpSession.hasASI && payload.stats) {
+      const origStats = char.stats || {};
+      let allocatedPoints = 0;
+      for (const [key, val] of Object.entries(payload.stats)) {
+        const origVal = (origStats as any)[key] || 10;
+        if (typeof val === 'number' && val < origVal) {
+          return false; // Stat reduction not allowed
+        }
+        if (typeof val === 'number') {
+          allocatedPoints += (val - origVal);
+        }
+      }
+      if (allocatedPoints > 2) {
+        return false; // Cannot allocate more than 2 ASI points
+      }
+    }
+
+    // Canonical subclass validation via Atlas
+    let resolvedSubData: any = null;
+    if (payload.subclass) {
+      if (char.subclass && payload.subclass !== char.subclass) {
+        return false; // Cannot change existing subclass
+      }
+      const { atlasService } = await import('../services/atlasService');
+      resolvedSubData = await atlasService.loadSubclass(payload.subclass, char.ruleset);
+      if (!resolvedSubData) {
+        return false; // Subclass record must resolve in Atlas
+      }
+      const classMatch = resolvedSubData.class?.index?.toLowerCase() === char.class.toLowerCase() ||
+                         (typeof resolvedSubData.class === 'string' && resolvedSubData.class.toLowerCase() === char.class.toLowerCase());
+      if (!classMatch) {
+        return false; // Subclass must belong to character's class
+      }
+
+      if (!char.subclass) {
+        // Verify target level has a subclass feature grant in levelData or subclass_levels
+        const levelSubclassGroup = resolvedSubData.subclass_levels?.find((l: any) => l.level === payload.targetLevel);
+        const levelDataFeatures = activeLevelUpSession.features || [];
+        const levelDataGrantsSubclass = levelDataFeatures.some((f: any) => {
+          const idx = (f.index || '').toLowerCase();
+          const name = (f.name || '').toLowerCase();
+          return idx.includes('subclass') || idx.includes('archetype') || idx.includes('tradition') || idx.includes('circle') || idx.includes('oath') || idx.includes('college') || idx.includes('patron') || idx.includes('origin') ||
+                 name.includes('subclass') || name.includes('archetype') || name.includes('tradition') || name.includes('circle') || name.includes('oath') || name.includes('college') || name.includes('patron') || name.includes('origin');
+        });
+        if (!levelSubclassGroup && !levelDataGrantsSubclass) {
+          return false; // Cannot select subclass on a level that does not grant subclass
+        }
+      }
+    }
+
+    // Collect all full feature objects granted at target level
+    const { extractOptionsFromFeature } = await import('../lib/atlasUtils');
+    const { atlasService } = await import('../services/atlasService');
+
+    const targetLevelFeatures: any[] = [];
+    for (const fRef of (activeLevelUpSession.features || [])) {
+      const full = await atlasService.loadFeature(fRef.index);
+      targetLevelFeatures.push(full ? { ...fRef, ...full } : fRef);
+    }
+
+    if (payload.subclass && resolvedSubData?.subclass_levels) {
+      const levelGroup = resolvedSubData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
+      if (levelGroup?.features) {
+        for (const fRef of levelGroup.features) {
+          const full = await atlasService.loadFeature(fRef.index);
+          targetLevelFeatures.push(full ? { ...fRef, ...full } : fRef);
+        }
+      }
+    } else if (char.subclass) {
+      const existingSubData = await atlasService.loadSubclass(char.subclass, char.ruleset);
+      if (existingSubData?.subclass_levels) {
+        const levelGroup = existingSubData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
+        if (levelGroup?.features) {
+          for (const fRef of levelGroup.features) {
+            const full = await atlasService.loadFeature(fRef.index);
+            targetLevelFeatures.push(full ? { ...fRef, ...full } : fRef);
+          }
+        }
+      }
+    }
+
+    // Validate features in payload
+    if (payload.features && Array.isArray(payload.features)) {
+      const allowedFeatureIndices = new Set(targetLevelFeatures.map((f: any) => f.index));
+      const existingFeatureIndices = new Set((char.features || []).map((f: any) => f.index));
+      for (const feat of payload.features) {
+        if (feat.index && !allowedFeatureIndices.has(feat.index) && !existingFeatureIndices.has(feat.index)) {
+          return false; // Reject feature not granted at target level or already on character
+        }
+      }
+    }
+
+    // Validate choices in payload against canonical options granted at target level
+    if (payload.choices && typeof payload.choices === 'object') {
+      const KNOWN_SKILLS = new Set(SKILL_LIST.map(s => s.name.toLowerCase()));
+
+      for (const [choiceKey, rawVal] of Object.entries(payload.choices)) {
+        const lowerKey = choiceKey.toLowerCase().replace(/-/g, '_');
+        const vals = Array.isArray(rawVal) ? rawVal : [rawVal];
+
+        const existingVal = char.choices?.[choiceKey];
+        if (existingVal && JSON.stringify(existingVal) === JSON.stringify(rawVal)) {
+          continue; // Existing unchanged choice
+        }
+
+        if (lowerKey === 'subclass' || lowerKey.includes('archetype')) {
+          if (payload.subclass) {
+            for (const v of vals) {
+              if (String(v).toLowerCase() !== payload.subclass.toLowerCase()) {
+                return false; // Mismatched subclass selection
+              }
+            }
+          }
+          continue;
+        }
+
+        // Find the feature at target level (or existing on character) that grants this choice
+        let matchingFeat = targetLevelFeatures.find((f: any) => {
+          const idx = (f.index || '').toLowerCase().replace(/-/g, '_');
+          const name = (f.name || '').toLowerCase().replace(/-/g, '_');
+          return idx === lowerKey || name === lowerKey;
+        });
+
+        if (!matchingFeat) {
+          // Special alias matching (e.g. "fighting-style" -> "fighter_fighting_style" or "ranger_fighting_style")
+          if (lowerKey.includes('fighting')) {
+            matchingFeat = targetLevelFeatures.find((f: any) => {
+              const idx = (f.index || '').toLowerCase();
+              const name = (f.name || '').toLowerCase();
+              return idx.includes('fighting') || name.includes('fighting');
+            });
+          } else if (lowerKey.includes('expertise')) {
+            matchingFeat = targetLevelFeatures.find((f: any) => {
+              const idx = (f.index || '').toLowerCase();
+              const name = (f.name || '').toLowerCase();
+              return idx.includes('expertise') || name.includes('expertise');
+            });
+          }
+        }
+
+        if (!matchingFeat) {
+          // Check existing character features as a fallback for pre-existing choice keys
+          matchingFeat = (char.features || []).find((f: any) => {
+            const idx = (f.index || '').toLowerCase().replace(/-/g, '_');
+            return idx === lowerKey;
+          });
+        }
+
+        if (!matchingFeat) {
+          return false; // Arbitrary choice key not granted at target level or character
+        }
+
+        const options = extractOptionsFromFeature(matchingFeat);
+        if (options.length > 0) {
+          const allowedSet = new Set<string>();
+          for (const opt of options) {
+            const optIdx = (opt.index || '').toLowerCase();
+            const optName = (opt.name || '').toLowerCase();
+            allowedSet.add(optIdx);
+            allowedSet.add(optName);
+            // Add normalized variations without prefixes e.g. "fighting style: "
+            const strippedName = optName.replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '').trim();
+            allowedSet.add(strippedName);
+            allowedSet.add(strippedName.replace(/\s+/g, '_'));
+            // Add index suffix if prefixed with feature name (e.g. "ranger_fighting_style_archery" -> "archery")
+            const idxParts = optIdx.split('_');
+            if (idxParts.length > 0) {
+              allowedSet.add(idxParts[idxParts.length - 1]);
+            }
+          }
+
+          for (const v of vals) {
+            const lowerV = String(v).toLowerCase().replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '').trim();
+            const lowerVUnderscore = lowerV.replace(/\s+/g, '_');
+            if (!allowedSet.has(lowerV) && !allowedSet.has(lowerVUnderscore)) {
+              return false; // Option not in target feature's granted options
+            }
+          }
+        } else if (lowerKey.includes('expertise') || lowerKey.includes('skills') || lowerKey.includes('proficiency')) {
+          for (const v of vals) {
+            const lowerV = String(v).toLowerCase().replace(/expertise:\s*/i, '').trim();
+            if (!KNOWN_SKILLS.has(lowerV)) {
+              return false; // Invalid skill option
+            }
+          }
+        }
+      }
+    }
+
+
+    const oldMaxHp = char.maxHp || char.hp || 10;
+    const oldHp = char.hp || 10;
+    const finalCalculatedMaxHp = Math.max(1, oldMaxHp + payload.finalHpGain);
+    const finalCalculatedHp = Math.max(1, oldHp + payload.finalHpGain);
+
+    const mergedStats = payload.stats ? { ...char.stats, ...payload.stats } : char.stats;
+    const mergedChoices = payload.choices ? { ...(char.choices || {}), ...payload.choices } : (char.choices || {});
+
+    const existingFeatures = [...(char.features || [])];
+    const incomingFeatures = payload.features || activeLevelUpSession.features || [];
+    incomingFeatures.forEach((feat: any) => {
+      if (!existingFeatures.some(f => f.index === feat.index)) {
+        existingFeatures.push({
+          name: feat.name,
+          index: feat.index,
+          desc: Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || ''),
+          source: feat.source || 'Level'
+        });
+      }
+    });
+
+    const { calculateMaxSpellSlots } = await import('../lib/statCalculations');
+    const tempCharForSlots = {
+      ...char,
+      level: payload.targetLevel,
+      subclass: payload.subclass || char.subclass,
+      stats: mergedStats,
+      choices: mergedChoices
+    };
+    const maxSlotsMap = calculateMaxSpellSlots(tempCharForSlots as any);
+    const updatedSpellSlots: Record<string, { current: number; max: number }> = { ...(char.spellSlots || {}) };
+
+    Object.entries(maxSlotsMap).forEach(([lvlStr, maxCount]) => {
+      const existingSlot = updatedSpellSlots[lvlStr];
+      const prevMax = existingSlot?.max ?? 0;
+      const prevCurrent = existingSlot?.current ?? 0;
+      const addedMax = maxCount - prevMax;
+      const newCurrent = Math.min(maxCount, prevCurrent + Math.max(0, addedMax));
+      updatedSpellSlots[lvlStr] = { current: newCurrent, max: maxCount };
+    });
+
+    const updatedChar: Character = {
+      ...char,
+      level: payload.targetLevel,
+      hp: finalCalculatedHp,
+      maxHp: finalCalculatedMaxHp,
+      stats: mergedStats,
+      choices: mergedChoices,
+      features: existingFeatures,
+      subclass: payload.subclass || char.subclass,
+      spellSlots: updatedSpellSlots
+    };
+
+    set((state) => ({
+      characters: state.characters.map(c => c.id === payload.characterId ? updatedChar : c),
+      activeLevelUpSession: null,
+      levelUpQueue: []
+    }));
+
+    return true;
   },
 
   addPartyXp: async (amount) => {
@@ -302,9 +600,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
   },
 
-  dismissLevelUp: () => set((state) => ({ 
-    levelUpQueue: state.levelUpQueue.slice(1) 
-  })),
+  dismissLevelUp: () => set({ activeLevelUpSession: null, levelUpQueue: [] }),
 
   updateCharacterStats: (id, newStats) => set((state) => ({
     characters: state.characters.map(c => {

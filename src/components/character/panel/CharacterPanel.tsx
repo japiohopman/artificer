@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Character } from '../../../store/useCharacterStore';
+import { Character, useCharacterStore } from '../../../store/useCharacterStore';
 import { calculateDerivedStats } from '../../../lib/statCalculations';
+import { getLevelFromXP } from '../../../lib/characterUtils';
 import { CharacterPanelBody } from './CharacterPanelBody';
 import { CharacterPanelStats } from './CharacterPanelStats';
 import { CharacterPanelTraits } from './CharacterPanelTraits';
@@ -57,6 +58,11 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
   const maxHpVal = character.maxHp ?? hpVal ?? 0;
   const hpPercent = maxHpVal > 0 && hpVal ? Math.min(100, Math.max(0, (hpVal / maxHpVal) * 100)) : 100;
 
+  const currentLvl = character.level || 1;
+  const eligibleLvl = getLevelFromXP(character.xp || 0);
+  const isEligibleForLevelUp = eligibleLvl > currentLvl;
+  const { startLevelUpSession, activeLevelUpSession } = useCharacterStore();
+
   const tabs: { id: CharacterPanelTab; label: string; icon: string }[] = [
     { id: 'stats', label: 'Stats', icon: 'chart' },
     { id: 'traits', label: 'Traits', icon: 'trait' },
@@ -78,6 +84,18 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
               {character.class || 'Adventurer'}{character.subclass ? ` (${character.subclass})` : ''} {character.race ? `• ${character.race.replace(/-/g, ' ')}` : ''} • Lvl {character.level || 1}
             </p>
           </div>
+
+          {/* Player-controlled Level-Up Activation Button */}
+          {isEligibleForLevelUp && character.id && (
+            <button
+              onClick={() => startLevelUpSession(character.id!)}
+              className="flex items-center gap-1 bg-dragon-gold hover:bg-dragon-darkRed text-dragon-darkRed hover:text-dragon-gold border border-dragon-darkRed px-2 py-1 rounded shadow-md text-[9px] font-header font-black uppercase tracking-wider animate-pulse transition-all cursor-pointer shrink-0"
+              title="Click to start level-up progression"
+            >
+              <GameIcon name="advance" size={12} color="currentColor" />
+              <span>Level Up!</span>
+            </button>
+          )}
 
           {/* Prominent Health Treatment (#ec597a accent) */}
           <div className="flex items-center gap-2 bg-[#ec597a]/10 border border-[#ec597a]/30 px-2.5 py-1 rounded shadow-xs shrink-0">
