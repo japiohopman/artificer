@@ -384,43 +384,100 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     }
 
-    // Validate features against levelData or valid subclass features
-    if (payload.features && Array.isArray(payload.features)) {
-      const allowedIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index));
-      const existingIndices = new Set((char.features || []).map((f: any) => f.index));
+    // Collect all full feature objects granted at target level
+    const { extractOptionsFromFeature } = await import('../lib/atlasUtils');
+    const { atlasService } = await import('../services/atlasService');
 
-      let subclassFeatureIndices = new Set<string>();
-      if (payload.subclass && resolvedSubData) {
-        if (resolvedSubData.subclass_levels) {
-          const levelGroup = resolvedSubData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
-          if (levelGroup?.features) {
-            levelGroup.features.forEach((f: any) => subclassFeatureIndices.add(f.index));
-          }
+    const targetLevelFeatures: any[] = [];
+    for (const fRef of (activeLevelUpSession.features || [])) {
+      const full = await atlasService.loadFeature(fRef.index);
+      targetLevelFeatures.push(full ? { ...fRef, ...full } : fRef);
+    }
+
+    if (payload.subclass && resolvedSubData?.subclass_levels) {
+      const levelGroup = resolvedSubData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
+      if (levelGroup?.features) {
+        for (const fRef of levelGroup.features) {
+          const full = await atlasService.loadFeature(fRef.index);
+          targetLevelFeatures.push(full ? { ...fRef, ...full } : fRef);
         }
       }
-
-      for (const feat of payload.features) {
-        if (
-          feat.index &&
-          !allowedIndices.has(feat.index) &&
-          !existingIndices.has(feat.index) &&
-          !subclassFeatureIndices.has(feat.index)
-        ) {
-          return false; // Reject ungranted feature
+    } else if (char.subclass) {
+      const existingSubData = await atlasService.loadSubclass(char.subclass, char.ruleset);
+      if (existingSubData?.subclass_levels) {
+        const levelGroup = existingSubData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
+        if (levelGroup?.features) {
+          for (const fRef of levelGroup.features) {
+            const full = await atlasService.loadFeature(fRef.index);
+            targetLevelFeatures.push(full ? { ...fRef, ...full } : fRef);
+          }
         }
       }
     }
 
-    // Validate choices keys against granted features / standard keys
+    // Validate features in payload
+    if (payload.features && Array.isArray(payload.features)) {
+      const allowedFeatureIndices = new Set(targetLevelFeatures.map((f: any) => f.index));
+      const existingFeatureIndices = new Set((char.features || []).map((f: any) => f.index));
+      for (const feat of payload.features) {
+        if (feat.index && !allowedFeatureIndices.has(feat.index) && !existingFeatureIndices.has(feat.index)) {
+          return false; // Reject feature not granted at target level or already on character
+        }
+      }
+    }
+
+    // Validate choices in payload against canonical options
     if (payload.choices && typeof payload.choices === 'object') {
-      const allowedFeatureIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index.toLowerCase()));
-      for (const choiceKey of Object.keys(payload.choices)) {
+      const KNOWN_FIGHTING_STYLES = new Set(['archery', 'defense', 'dueling', 'great_weapon_fighting', 'protection', 'two_weapon_fighting', 'blind_fighting', 'interception', 'thrown_weapon_fighting', 'unarmed_fighting']);
+      const KNOWN_SKILLS = new Set(SKILL_LIST.map(s => s.name.toLowerCase()));
+
+      for (const [choiceKey, rawVal] of Object.entries(payload.choices)) {
         const lowerKey = choiceKey.toLowerCase();
-        const isStandardChoiceKey = lowerKey.includes('fighting') || lowerKey.includes('expertise') || lowerKey.includes('subclass') || lowerKey.includes('archetype') || lowerKey.includes('skills');
-        const matchesFeature = allowedFeatureIndices.has(lowerKey);
-        const isExistingChoice = char.choices && Object.keys(char.choices).map(k => k.toLowerCase()).includes(lowerKey);
-        if (!isStandardChoiceKey && !matchesFeature && !isExistingChoice) {
-          return false; // Reject arbitrary choice key
+        const vals = Array.isArray(rawVal) ? rawVal : [rawVal];
+
+        const existingVal = char.choices?.[choiceKey];
+        if (existingVal && JSON.stringify(existingVal) === JSON.stringify(rawVal)) {
+          continue; // Existing unchanged choice
+        }
+
+        if (lowerKey.includes('fighting')) {
+          for (const v of vals) {
+            const lowerV = String(v).toLowerCase().replace(/fighting style:\s*/i, '').trim();
+            if (!KNOWN_FIGHTING_STYLES.has(lowerV)) {
+              return false; // Invalid fighting style option
+            }
+          }
+        } else if (lowerKey.includes('expertise') || lowerKey.includes('skills')) {
+          for (const v of vals) {
+            const lowerV = String(v).toLowerCase().replace(/expertise:\s*/i, '').trim();
+            if (!KNOWN_SKILLS.has(lowerV)) {
+              return false; // Invalid skill option
+            }
+          }
+        } else if (lowerKey.includes('subclass') || lowerKey.includes('archetype')) {
+          if (payload.subclass) {
+            for (const v of vals) {
+              if (String(v).toLowerCase() !== payload.subclass.toLowerCase()) {
+                return false; // Mismatched subclass selection
+              }
+            }
+          }
+        } else {
+          // Check if choiceKey matches any feature granted at target level or on character
+          const matchingFeat = targetLevelFeatures.find((f: any) => f.index.toLowerCase() === lowerKey) ||
+                               (char.features || []).find((f: any) => f.index.toLowerCase() === lowerKey);
+          if (!matchingFeat) {
+            return false; // Arbitrary choice key
+          }
+          const options = extractOptionsFromFeature(matchingFeat);
+          if (options.length > 0) {
+            const allowedSet = new Set(options.map(o => (o.index || o.name).toLowerCase()));
+            for (const v of vals) {
+              if (!allowedSet.has(String(v).toLowerCase())) {
+                return false; // Option not in feature options
+              }
+            }
+          }
         }
       }
     }

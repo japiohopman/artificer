@@ -203,14 +203,23 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     });
     expect(invalidFeatureCommit).toBe(false);
 
-    // Arbitrary choice payload
-    const invalidChoiceCommit = await store.commitLevelUpSession({
+    // Arbitrary choice key payload
+    const invalidChoiceKeyCommit = await store.commitLevelUpSession({
       characterId: 'test-fighter-1',
       targetLevel: 2,
       finalHpGain: 8,
       choices: { 'illegal_choice_key': ['unauthorized_selection'] }
     });
-    expect(invalidChoiceCommit).toBe(false);
+    expect(invalidChoiceKeyCommit).toBe(false);
+
+    // Known choice key paired with unauthorized/invalid option value
+    const invalidChoiceValueCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8,
+      choices: { 'fighting-style': ['unauthorized_fake_fighting_style'] }
+    });
+    expect(invalidChoiceValueCommit).toBe(false);
 
     // Subclass payload for wrong class or level that does not grant a subclass
     const invalidSubclassCommit = await store.commitLevelUpSession({
