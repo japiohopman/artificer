@@ -302,7 +302,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   },
 
   cancelLevelUpSession: () => {
-    set({ activeLevelUpSession: null, levelUpQueue: [] });
+    set({ activeLevelUpSession: null });
   },
 
   updateLevelUpSession: (updates: Partial<ActiveLevelUpSession>) => {
@@ -325,7 +325,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     const char = get().characters.find(c => c.id === session.characterId);
     if (!char) return false;
 
-    const validation = validateLevelUpCommit(session, char);
+    const validation = validateLevelUpCommit(char, session);
     if (!validation.valid) {
       set((state) => ({
         activeLevelUpSession: state.activeLevelUpSession
@@ -336,10 +336,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
 
     const conMod = Math.floor(((char.stats?.con || 10) - 10) / 2);
-    const hpGain =
-      session.hpMethod === 'roll' && session.rolledHpValue !== null
-        ? Math.max(1, session.rolledHpValue + conMod)
-        : session.hpIncrease;
+    const hpGain = session.hpIncrease;
 
     const newMaxHp = (char.maxHp || char.hp || 10) + hpGain;
     const newHp = (char.hp || 10) + hpGain;

@@ -7,7 +7,6 @@ import { normalizeImageUrl, fetchSubclassesList } from '../../services/storageSe
 import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
-import { calculateMaxSpellSlots } from '../../lib/statCalculations';
 import { CLASS_DATA } from '../../lib/characterUtils';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useAudioStore } from '../../store/useAudioStore';
@@ -62,10 +61,6 @@ export const LevelUpOverlay: React.FC = () => {
   const conModifier = Math.floor((((character?.stats?.con || 10) + (session?.statIncreases?.con || 0) - 10)) / 2);
   const classHitDie = character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8;
   const fixedHpGain = session?.hpIncrease || Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
-  const rolledHpGain = session?.rolledHpValue !== null && session?.rolledHpValue !== undefined
-    ? Math.max(1, session.rolledHpValue + conModifier)
-    : fixedHpGain;
-  const finalHpGain = session?.hpMethod === 'roll' ? rolledHpGain : fixedHpGain;
 
   useEffect(() => {
     if (session && character) {
@@ -135,15 +130,6 @@ export const LevelUpOverlay: React.FC = () => {
         [statId]: currentVal + delta
       }
     });
-  };
-
-  const handleRollHp = () => {
-    const roll = Math.floor(Math.random() * classHitDie) + 1;
-    updateLevelUpSession({
-      hpMethod: 'roll',
-      rolledHpValue: roll
-    });
-    soundService.playEffect('DICE_ROLL');
   };
 
   const handleToggleChoice = (featIndex: string, optionIndex: string, limit: number, isSubclassChoice?: boolean) => {
@@ -321,67 +307,25 @@ export const LevelUpOverlay: React.FC = () => {
                        </div>
                     </div>
 
-                    {/* HP Decision Section */}
+                    {/* HP Section */}
                     <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/15 space-y-3">
                        <div className="flex items-center justify-between">
                           <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em]">Hit Point Evolution</span>
-                          <span className="text-[9px] font-black text-dragon-gold uppercase tracking-[0.15em]">
-                            {session.hpMethod === 'roll' ? 'Die Roll' : 'Standard Average'}
+                          <span className="text-[9px] font-black text-dragon-gold uppercase tracking-[0.15em]">Standard Average</span>
+                       </div>
+                       <div className="p-3 bg-white/40 rounded-sm border border-dragon-gold/20 text-center">
+                          <span className="text-xs font-bold text-parchment-600 block">Class Hit Die: 1d{classHitDie}</span>
+                          <span className="text-xl font-header font-black text-dragon-darkRed mt-1 block">
+                            +{fixedHpGain} HP (Average {Math.floor(classHitDie / 2) + 1} + {conModifier} CON)
                           </span>
                        </div>
-                       <div className="grid grid-cols-2 gap-2">
-                          <button
-                            onClick={() => updateLevelUpSession({ hpMethod: 'fixed' })}
-                            className={cn(
-                              "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-                              session.hpMethod === 'fixed'
-                                ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
-                                : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
-                            )}
-                          >
-                             Standard (+{fixedHpGain})
-                          </button>
-                          <button
-                            onClick={() => updateLevelUpSession({ hpMethod: 'roll' })}
-                            className={cn(
-                              "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-                              session.hpMethod === 'roll'
-                                ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
-                                : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
-                            )}
-                          >
-                             Roll (1d{classHitDie})
-                          </button>
-                       </div>
-
-                       {session.hpMethod === 'roll' && (
-                          <div className="pt-2 flex flex-col items-center justify-center gap-2 border-t border-dragon-gold/10">
-                             {session.rolledHpValue !== null ? (
-                                <div className="text-center">
-                                   <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest block">ROLLED VALUE</span>
-                                   <span className="text-3xl font-header font-black text-dragon-gold leading-none tabular-nums">
-                                      {session.rolledHpValue} <span className="text-sm text-parchment-400 font-medium">+ {conModifier} Con = +{rolledHpGain} HP</span>
-                                   </span>
-                                </div>
-                             ) : (
-                                <span className="text-[10px] font-bold text-parchment-500 italic block py-1">Click to roll hit die...</span>
-                             )}
-                             <button
-                               onClick={handleRollHp}
-                               className="w-full py-2 bg-dragon-red hover:bg-dragon-darkRed text-white rounded-sm text-[10px] font-black uppercase tracking-widest shadow-md flex items-center justify-center gap-2 active:scale-95 transition-all"
-                             >
-                                <GameIcon name="dice" size={14} />
-                                {session.rolledHpValue !== null ? 'Re-roll Hit Die' : 'Roll Hit Die'}
-                             </button>
-                          </div>
-                       )}
                     </div>
 
                     {/* Stats Summary Box */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-black/5 p-4 rounded-sm text-center">
                          <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-1 block">Max HP Gain</span>
-                         <span className="text-2xl font-header font-black text-dragon-red">+{finalHpGain}</span>
+                         <span className="text-2xl font-header font-black text-dragon-red">+{fixedHpGain}</span>
                       </div>
                       <div className="bg-black/5 p-4 rounded-sm text-center">
                          <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-1 block">Proficiency Bonus</span>
