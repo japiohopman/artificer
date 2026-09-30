@@ -16,11 +16,11 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 | 2 | #389 | Repair canonical directory-reference handling in the live Jules selector | **completed — merged** |
 | 3 | #365 | Complete Foundry 2024 species source parity | **completed — merged** |
 | 4 | #376 | Close remaining 2024 runtime ruleset gaps | **completed — merged** |
-| 5 | #396 | Restore runtime Species selection data loading | **ready — blocks #393** |
+| 5 | #396 | Restore runtime Species selection data loading | **completed — merged** |
 | 6 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **completed — verified** |
-| 7 | #381 | Resume player-controlled level-up lifecycle | parked until #393 |
-| 8 | #382 | Integrate canonical level-up HP/dice resolution | after #381 |
-| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #381; sequence after #382 where choice data needs the stable lifecycle |
+| 7 | #401 | Align player-controlled level-up progression with Character Creator and Atlas semantics | **ready — current level-up implementation** |
+| 8 | #382 | Integrate canonical level-up HP/dice resolution | after #401 |
+| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #401; sequence after #382 where the canonical HP flow is required |
 
 This order is intentionally not a raw priority sort. It is the current foundation sequence chosen from repository evidence and dependency risk. Implementation scope belongs in each Issue.
 
