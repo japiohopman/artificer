@@ -352,24 +352,25 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
 
     // Canonical subclass validation via Atlas
+    let resolvedSubData: any = null;
     if (payload.subclass) {
       if (char.subclass && payload.subclass !== char.subclass) {
         return false; // Cannot change existing subclass
       }
       const { atlasService } = await import('../services/atlasService');
-      const subData = await atlasService.loadSubclass(payload.subclass, char.ruleset);
-      if (!subData) {
+      resolvedSubData = await atlasService.loadSubclass(payload.subclass, char.ruleset);
+      if (!resolvedSubData) {
         return false; // Subclass record must resolve in Atlas
       }
-      const classMatch = subData.class?.index?.toLowerCase() === char.class.toLowerCase() ||
-                         (typeof subData.class === 'string' && subData.class.toLowerCase() === char.class.toLowerCase());
+      const classMatch = resolvedSubData.class?.index?.toLowerCase() === char.class.toLowerCase() ||
+                         (typeof resolvedSubData.class === 'string' && resolvedSubData.class.toLowerCase() === char.class.toLowerCase());
       if (!classMatch) {
         return false; // Subclass must belong to character's class
       }
 
       if (!char.subclass) {
         // Verify target level has a subclass feature grant in levelData or subclass_levels
-        const levelSubclassGroup = subData.subclass_levels?.find((l: any) => l.level === payload.targetLevel);
+        const levelSubclassGroup = resolvedSubData.subclass_levels?.find((l: any) => l.level === payload.targetLevel);
         const levelDataFeatures = activeLevelUpSession.features || [];
         const levelDataGrantsSubclass = levelDataFeatures.some((f: any) => {
           const idx = (f.index || '').toLowerCase();
@@ -389,11 +390,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       const existingIndices = new Set((char.features || []).map((f: any) => f.index));
 
       let subclassFeatureIndices = new Set<string>();
-      if (payload.subclass) {
-        const { atlasService } = await import('../services/atlasService');
-        const subData = await atlasService.loadSubclass(payload.subclass, char.ruleset);
-        if (subData?.subclass_levels) {
-          const levelGroup = subData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
+      if (payload.subclass && resolvedSubData) {
+        if (resolvedSubData.subclass_levels) {
+          const levelGroup = resolvedSubData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
           if (levelGroup?.features) {
             levelGroup.features.forEach((f: any) => subclassFeatureIndices.add(f.index));
           }
