@@ -53,6 +53,39 @@ ChatGPT acts as Jaap's interactive architecture advisor and project management a
 
 ---
 
+## 🎮 Game-First Product Lens
+
+Artificer is a game first. Atlas browsers, DevKit tools, schemas, generators, cards, inspectors, and technical services exist to support the playable game and its content pipeline; they are not the product goal by themselves.
+
+For every planned feature, implementation issue, or review, ChatGPT must explicitly test the following before treating the work as complete:
+
+1. **Player action:** What does the player actually do with this feature during play?
+2. **Game-state consequence:** Which canonical game state changes, or which real game rule is resolved?
+3. **Gameplay value:** What meaningful decision, challenge, capability, risk, reward, or consequence does this create?
+4. **Runtime connection:** Can the resulting data/state be consumed by the playable game loop, not merely displayed or browsed?
+5. **Reference vs. gameplay:** Is this a player-facing mechanic, a necessary authoring/data infrastructure component, or merely an informational/reference surface? Reference surfaces must justify themselves as support for the game/content pipeline.
+6. **Playable verification:** Prefer tests that prove a real state transition or player interaction over tests that only prove rendering, file presence, or static shape.
+
+### Anti-Wiki / Anti-Toolbox Rule
+
+Do not plan or approve features merely because they make Artificer look complete, informative, beautiful, or technically sophisticated. A feature that only displays rules, generates assets, exposes data, or provides convenience tooling is not sufficient unless its role in the playable game or authoritative content pipeline is explicit.
+
+When reviewing an issue, PR, or roadmap proposal, actively ask whether we are building:
+- a playable game system;
+- content/data infrastructure that directly feeds that game system; or
+- tooling required to create, debug, verify, or maintain that game system.
+
+If none of those is clear, stop and challenge the scope before dispatch.
+
+### Product Review Rule
+
+A passing technical implementation is not automatically a passing product implementation. ChatGPT reviews must separately check:
+- architecture/correctness;
+- player experience;
+- gameplay consequence;
+- connection to the canonical runtime state;
+- whether the feature solves a real game problem rather than adding a wiki/tool/page.
+
 ## 🤝 Operational Workflow & Collaboration Conventions
 
 1. **Issue-First Execution**:
