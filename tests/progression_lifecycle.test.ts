@@ -221,6 +221,15 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     });
     expect(invalidChoiceValueCommit).toBe(false);
 
+    // Globally valid choice value submitted at a level where choice is NOT granted (Fighter Lvl 2 does not grant Fighting Style)
+    const ungrantedChoiceCommit = await store.commitLevelUpSession({
+      characterId: 'test-fighter-1',
+      targetLevel: 2,
+      finalHpGain: 8,
+      choices: { 'fighting-style': ['archery'] }
+    });
+    expect(ungrantedChoiceCommit).toBe(false);
+
     // Subclass payload for wrong class or level that does not grant a subclass
     const invalidSubclassCommit = await store.commitLevelUpSession({
       characterId: 'test-fighter-1',

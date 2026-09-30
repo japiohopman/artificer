@@ -426,10 +426,28 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     }
 
-    // Validate choices in payload against canonical options
+    // Validate choices in payload against canonical options granted at target level
     if (payload.choices && typeof payload.choices === 'object') {
       const KNOWN_FIGHTING_STYLES = new Set(['archery', 'defense', 'dueling', 'great_weapon_fighting', 'protection', 'two_weapon_fighting', 'blind_fighting', 'interception', 'thrown_weapon_fighting', 'unarmed_fighting']);
       const KNOWN_SKILLS = new Set(SKILL_LIST.map(s => s.name.toLowerCase()));
+
+      // Helper to verify if target level features explicitly grant a specific choice type
+      const targetLevelGrantsChoice = (typeKeyword: string) => {
+        return targetLevelFeatures.some((f: any) => {
+          const idx = (f.index || '').toLowerCase();
+          const name = (f.name || '').toLowerCase();
+          if (typeKeyword === 'fighting') {
+            return idx.includes('fighting_style') || name.includes('fighting style');
+          }
+          if (typeKeyword === 'expertise') {
+            return idx.includes('expertise') || name.includes('expertise');
+          }
+          if (typeKeyword === 'skills') {
+            return idx.includes('skill') || name.includes('skill') || f.choice?.type === 'proficiencies';
+          }
+          return idx.includes(typeKeyword) || name.includes(typeKeyword);
+        });
+      };
 
       for (const [choiceKey, rawVal] of Object.entries(payload.choices)) {
         const lowerKey = choiceKey.toLowerCase();
@@ -441,6 +459,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
         }
 
         if (lowerKey.includes('fighting')) {
+          if (!targetLevelGrantsChoice('fighting')) {
+            return false; // Target level does not grant a fighting style choice
+          }
           for (const v of vals) {
             const lowerV = String(v).toLowerCase().replace(/fighting style:\s*/i, '').trim();
             if (!KNOWN_FIGHTING_STYLES.has(lowerV)) {
@@ -448,6 +469,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
             }
           }
         } else if (lowerKey.includes('expertise') || lowerKey.includes('skills')) {
+          if (!targetLevelGrantsChoice('expertise') && !targetLevelGrantsChoice('skills') && !targetLevelGrantsChoice('proficiency')) {
+            return false; // Target level does not grant skill/expertise choice
+          }
           for (const v of vals) {
             const lowerV = String(v).toLowerCase().replace(/expertise:\s*/i, '').trim();
             if (!KNOWN_SKILLS.has(lowerV)) {
