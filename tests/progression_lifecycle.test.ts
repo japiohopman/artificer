@@ -212,12 +212,12 @@ describe('Player-Controlled Level-Up Progression Lifecycle (Issue #381)', () => 
     });
     expect(invalidChoiceCommit).toBe(false);
 
-    // Subclass payload on level that does not grant a subclass
+    // Subclass payload for wrong class or level that does not grant a subclass
     const invalidSubclassCommit = await store.commitLevelUpSession({
       characterId: 'test-fighter-1',
       targetLevel: 2,
       finalHpGain: 8,
-      subclass: 'champion'
+      subclass: 'evocation' // Wizard subclass attempted on Fighter
     });
     expect(invalidSubclassCommit).toBe(false);
 

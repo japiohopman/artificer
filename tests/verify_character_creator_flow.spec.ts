@@ -22,59 +22,52 @@ test('verify complete guided character creator flow, validation overlay, and rev
 
     // 1. Welcome Step & Ruleset Selection
     console.log('1. Verifying Welcome Step & Ruleset Context...');
-    await expect(page.locator('text=The Genesis Ritual')).toBeVisible();
+    await expect(page.locator('text=Welcome to Character Creation')).toBeVisible();
     await expect(page.locator('button:has-text("D&D 5e (2014)")')).toBeVisible();
     await expect(page.locator('button:has-text("D&D 5.5e (2024)")')).toBeVisible();
 
-    // Click Continue to go to Save Slot step
+    // Verify Continue button is disabled when ruleset is not yet explicitly selected
+    await expect(page.locator('#next-stage-btn')).toBeDisabled();
+
+    // Explicitly select 2014 ruleset
+    await page.click('button:has-text("D&D 5e (2014)")');
+    await page.waitForTimeout(300);
+
+    // Verify Continue button is now enabled
+    await expect(page.locator('#next-stage-btn')).toBeEnabled();
     await page.click('#next-stage-btn');
     await page.waitForTimeout(500);
 
-    // 2. Save Slot Step & Validation Overlay Test
-    console.log('2. Verifying Save Slot & Validation Overlay...');
+    // 2. Save Slot Step Test
+    console.log('2. Verifying Save Slot Step...');
     await expect(page.locator('h2:has-text("Select Save Manifest")')).toBeVisible();
 
-    // Try to continue without selecting a save slot -> trigger validation overlay
-    console.log('Testing Validation Overlay trigger on incomplete step...');
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
-
-    // Expect Validation Overlay modal to pop up
-    await expect(page.locator('text=Complete Your Character')).toBeVisible();
-    await expect(page.locator('text=No save slot selected')).toBeVisible();
-
-    // Dismiss validation overlay
-    await page.click('button:has-text("Dismiss")');
-    await page.waitForTimeout(300);
+    // Verify Continue button is disabled when no slot is selected
+    await expect(page.locator('#next-stage-btn')).toBeDisabled();
 
     // Select Slot 1
     console.log('Selecting Slot 1...');
     await page.click('button:has-text("Slot_01")');
     await page.waitForTimeout(300);
 
-    // Continue to Identity step
+    // Verify Continue button is enabled
+    await expect(page.locator('#next-stage-btn')).toBeEnabled();
     await page.click('#next-stage-btn');
     await page.waitForTimeout(500);
 
-    // 3. Identity Step & Name Validation
-    console.log('3. Verifying Identity Step & Name Validation...');
-    await expect(page.locator('h2:has-text("The Great Sigil")')).toBeVisible();
+    // 3. Identity Step Test
+    console.log('3. Verifying Identity Step...');
+    await expect(page.locator('h2:has-text("Manifested Polarity")')).toBeVisible();
 
-    // Try to continue without entering a name -> trigger validation overlay
-    await page.click('#next-stage-btn');
-    await page.waitForTimeout(500);
+    // Verify Continue button is disabled when gender/polarity is not explicitly selected
+    await expect(page.locator('#next-stage-btn')).toBeDisabled();
 
-    await expect(page.locator('text=Complete Your Character')).toBeVisible();
-    await expect(page.locator('text=Character name is missing')).toBeVisible();
-
-    // Dismiss validation overlay
-    await page.click('button:has-text("Dismiss")');
+    // Select Male polarity
+    await page.locator('div:has-text("Male")').last().click();
     await page.waitForTimeout(300);
 
-    // Type character name
-    await page.fill('input[placeholder="Enter Moniker..."]', 'Arthur');
-    await page.waitForTimeout(300);
-
+    // Verify Continue button is enabled
+    await expect(page.locator('#next-stage-btn')).toBeEnabled();
     await page.click('#next-stage-btn');
     await page.waitForTimeout(500);
 
@@ -94,10 +87,10 @@ test('verify complete guided character creator flow, validation overlay, and rev
     // 5. Class Step
     console.log('5. Verifying Class Step & 2:3 Aspect Ratio Cards...');
     await expect(page.locator('text=Choose Class')).toBeVisible();
-    await expect(page.locator('button').filter({ hasText: /^Fighter/ })).toBeVisible();
+    await expect(page.locator('button').filter({ hasText: /Fighter/i }).first()).toBeVisible();
 
     // Select Fighter
-    await page.locator('button').filter({ hasText: /^Fighter/ }).click();
+    await page.locator('button').filter({ hasText: /Fighter/i }).first().click();
     await page.waitForTimeout(500);
     await expect(page.locator('text=Examine Records: Fighter')).toBeVisible();
 
@@ -107,10 +100,10 @@ test('verify complete guided character creator flow, validation overlay, and rev
     // 6. Background Step (Origins)
     console.log('6. Verifying Background Step & 1:1 Aspect Ratio Cards...');
     await expect(page.locator('text=Character Origins')).toBeVisible();
-    await expect(page.locator('button').filter({ hasText: /^Acolyte/ })).toBeVisible();
+    await expect(page.locator('button').filter({ hasText: /Acolyte/i }).first()).toBeVisible();
 
     // Select Acolyte
-    await page.locator('button').filter({ hasText: /^Acolyte/ }).click();
+    await page.locator('button').filter({ hasText: /Acolyte/i }).first().click();
     await page.waitForTimeout(500);
     await expect(page.locator('text=Examine Records: Acolyte')).toBeVisible();
 
@@ -119,10 +112,10 @@ test('verify complete guided character creator flow, validation overlay, and rev
 
     // 7. Alignment Step
     console.log('7. Verifying Alignment Step...');
-    await expect(page.locator('button').filter({ hasText: /^Lawful Good/ })).toBeVisible();
+    await expect(page.locator('button').filter({ hasText: /Lawful Good/i }).first()).toBeVisible();
 
     // Select Lawful Good
-    await page.locator('button').filter({ hasText: /^Lawful Good/ }).click();
+    await page.locator('button').filter({ hasText: /Lawful Good/i }).first().click();
     await page.waitForTimeout(500);
 
     await page.click('#next-stage-btn');
@@ -156,7 +149,6 @@ test('verify complete guided character creator flow, validation overlay, and rev
     // 13. Review Step (Final Manifest)
     console.log('13. Verifying Review Step (Final Manifest)...');
     await expect(page.locator('h2:has-text("Final Manifest")')).toBeVisible();
-    await expect(page.getByText('Arthur')).toBeVisible();
     await expect(page.getByText('Level 0 fighter')).toBeVisible();
     await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5e (2014)');
 

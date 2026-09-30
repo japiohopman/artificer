@@ -351,46 +351,77 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     }
 
-    // Validate features against active session target level and subclass
-    if (payload.features && Array.isArray(payload.features)) {
-      const allowedIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index));
-      const existingIndices = new Set((char.features || []).map((f: any) => f.index));
-      for (const feat of payload.features) {
-        if (feat.index && !allowedIndices.has(feat.index) && !existingIndices.has(feat.index) && feat.source !== 'Subclass') {
-          return false; // Reject feature not granted by class level, existing character features, or subclass
+    // Canonical subclass validation via Atlas
+    if (payload.subclass) {
+      if (char.subclass && payload.subclass !== char.subclass) {
+        return false; // Cannot change existing subclass
+      }
+      const { atlasService } = await import('../services/atlasService');
+      const subData = await atlasService.loadSubclass(payload.subclass, char.ruleset);
+      if (!subData) {
+        return false; // Subclass record must resolve in Atlas
+      }
+      const classMatch = subData.class?.index?.toLowerCase() === char.class.toLowerCase() ||
+                         (typeof subData.class === 'string' && subData.class.toLowerCase() === char.class.toLowerCase());
+      if (!classMatch) {
+        return false; // Subclass must belong to character's class
+      }
+
+      if (!char.subclass) {
+        // Verify target level has a subclass feature grant in levelData or subclass_levels
+        const levelSubclassGroup = subData.subclass_levels?.find((l: any) => l.level === payload.targetLevel);
+        const levelDataFeatures = activeLevelUpSession.features || [];
+        const levelDataGrantsSubclass = levelDataFeatures.some((f: any) => {
+          const idx = (f.index || '').toLowerCase();
+          const name = (f.name || '').toLowerCase();
+          return idx.includes('subclass') || idx.includes('archetype') || idx.includes('tradition') || idx.includes('circle') || idx.includes('oath') || idx.includes('college') || idx.includes('patron') || idx.includes('origin') ||
+                 name.includes('subclass') || name.includes('archetype') || name.includes('tradition') || name.includes('circle') || name.includes('oath') || name.includes('college') || name.includes('patron') || name.includes('origin');
+        });
+        if (!levelSubclassGroup && !levelDataGrantsSubclass) {
+          return false; // Cannot select subclass on a level that does not grant subclass
         }
       }
     }
 
-    // Validate choices against granted features
+    // Validate features against levelData or valid subclass features
+    if (payload.features && Array.isArray(payload.features)) {
+      const allowedIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index));
+      const existingIndices = new Set((char.features || []).map((f: any) => f.index));
+
+      let subclassFeatureIndices = new Set<string>();
+      if (payload.subclass) {
+        const { atlasService } = await import('../services/atlasService');
+        const subData = await atlasService.loadSubclass(payload.subclass, char.ruleset);
+        if (subData?.subclass_levels) {
+          const levelGroup = subData.subclass_levels.find((l: any) => l.level === payload.targetLevel);
+          if (levelGroup?.features) {
+            levelGroup.features.forEach((f: any) => subclassFeatureIndices.add(f.index));
+          }
+        }
+      }
+
+      for (const feat of payload.features) {
+        if (
+          feat.index &&
+          !allowedIndices.has(feat.index) &&
+          !existingIndices.has(feat.index) &&
+          !subclassFeatureIndices.has(feat.index)
+        ) {
+          return false; // Reject ungranted feature
+        }
+      }
+    }
+
+    // Validate choices keys against granted features / standard keys
     if (payload.choices && typeof payload.choices === 'object') {
       const allowedFeatureIndices = new Set((activeLevelUpSession.features || []).map((f: any) => f.index.toLowerCase()));
       for (const choiceKey of Object.keys(payload.choices)) {
         const lowerKey = choiceKey.toLowerCase();
         const isStandardChoiceKey = lowerKey.includes('fighting') || lowerKey.includes('expertise') || lowerKey.includes('subclass') || lowerKey.includes('archetype') || lowerKey.includes('skills');
         const matchesFeature = allowedFeatureIndices.has(lowerKey);
-        // Allow keys existing on prior character choices
         const isExistingChoice = char.choices && Object.keys(char.choices).map(k => k.toLowerCase()).includes(lowerKey);
         if (!isStandardChoiceKey && !matchesFeature && !isExistingChoice) {
           return false; // Reject arbitrary choice key
-        }
-      }
-    }
-
-    // Validate subclass choice against progression rules
-    if (payload.subclass) {
-      if (char.subclass && payload.subclass !== char.subclass) {
-        return false; // Cannot change existing subclass
-      }
-      if (!char.subclass) {
-        const grantsSubclass = (activeLevelUpSession.features || []).some((f: any) => {
-          const idx = (f.index || '').toLowerCase();
-          const name = (f.name || '').toLowerCase();
-          return idx.includes('subclass') || idx.includes('archetype') || idx.includes('tradition') || idx.includes('circle') || idx.includes('oath') || idx.includes('college') || idx.includes('patron') || idx.includes('origin') ||
-                 name.includes('subclass') || name.includes('archetype') || name.includes('tradition') || name.includes('circle') || name.includes('oath') || name.includes('college') || name.includes('patron') || name.includes('origin');
-        });
-        if (!grantsSubclass) {
-          return false; // Cannot select subclass on a level that does not grant subclass choice
         }
       }
     }
