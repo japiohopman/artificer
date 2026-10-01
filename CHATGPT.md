@@ -138,7 +138,7 @@ The current character/ruleset lane is intentionally ordered as follows:
 5. **#393 — Character Creator stability checkpoint** — blocked until #396 is resolved and the real runtime flow is re-verified.
 6. **#381 — Player-controlled level-up lifecycle** — resume only after the foundation and creator flow are stable.
 7. **#382 — Canonical level-up HP/dice integration** — build on #381 without mixing dice-engine redesign into the lifecycle work.
-8. **#383 — Canonical feature/ASI/feat/follow-up choices** — build the generic progression-choice chain on the stabilized lifecycle.
+8. **#383 — Canonical feature/ASI/feat/follow-up choices** — follow #382 and consume its canonical HP/session result boundary.
 
 This order is deliberately different from simply sorting all `ready` Issues by numeric priority. A technically valid Issue can still be strategically premature because an upstream foundation is incomplete.
 
@@ -157,7 +157,7 @@ Observed lessons from the #386 review loop:
 
 ### Dispatcher lesson
 
-The Issue-first sequencing model from **#387** is now active. The current lesson is that a newly discovered blocking Issue must also be inserted into the curated sequence when the live selector needs to dispatch it; otherwise a valid `ready` Issue outside the sequence is intentionally not selected. The current sequence therefore places the completed #396/#393 foundation before **#401**, with #382 and #383 following the stabilized level-up implementation. Workflow hardening in #402 is tracked separately so process improvements do not block active game development.
+The Issue-first sequencing model from **#387** is now active. The current lesson is that a newly discovered blocking Issue must also be inserted into the curated sequence when the live selector needs to dispatch it; otherwise a valid `ready` Issue outside the sequence is intentionally not selected. The current sequence therefore places the completed #396/#393 foundation before **#401**, with #401 now completed and #382 as the next implementation, followed by #383. Workflow hardening in #402 is tracked separately so process improvements do not block active game development.
 
 ### Jules handoff convention
 
