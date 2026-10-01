@@ -296,9 +296,22 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
 
     const session = await evaluateNextLevelStep(char);
     if (session) {
-      set({ activeLevelUpSession: session });
+      const { diceService } = await import('../dice_roller/diceService');
+      const rollResult = diceService.rollBackground(`1d${session.classHitDie}`, 'Level Up HP Roll');
+      const hpRollResult = rollResult.rolls[0]?.result || (Math.floor(session.classHitDie / 2) + 1);
+      const conModifier = Math.floor(((char.stats?.con || 10) - 10) / 2);
+      const hpIncrease = Math.max(1, hpRollResult + conModifier);
+
+      const activeSession: ActiveLevelUpSession = {
+        ...session,
+        hpRollResult,
+        hpIncrease
+      };
+
+      set({ activeLevelUpSession: activeSession });
+      return activeSession;
     }
-    return session;
+    return null;
   },
 
   cancelLevelUpSession: () => {

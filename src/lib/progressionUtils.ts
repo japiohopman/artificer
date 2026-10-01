@@ -1,7 +1,6 @@
 import { extractStructuredOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
 import { fetchSubclassesList } from '../services/storageService';
-import { diceService } from '../dice_roller/diceService';
 
 export interface ActiveLevelUpSession {
   characterId: string;
@@ -112,10 +111,8 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
 
   const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
   const classHitDie = classData?.hit_die || levelData.hit_die || 8;
-
-  const rollResult = diceService.rollBackground(`1d${classHitDie}`, 'Level Up HP Roll');
-  const hpRollResult = rollResult.rolls[0]?.result || (Math.floor(classHitDie / 2) + 1);
-  const hpGain = Math.max(1, hpRollResult + conModifier);
+  const defaultHpRollResult = Math.floor(classHitDie / 2) + 1;
+  const defaultHpGain = Math.max(1, defaultHpRollResult + conModifier);
 
   const prevAsiCount = prevLevelData?.ability_score_bonuses || 0;
   const currentAsiCount = levelData.ability_score_bonuses || 0;
@@ -131,8 +128,8 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
     targetLevel,
     features: fullFeatures,
     classHitDie,
-    hpRollResult,
-    hpIncrease: hpGain,
+    hpRollResult: defaultHpRollResult,
+    hpIncrease: defaultHpGain,
     hasASI,
     statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
     choices: {},

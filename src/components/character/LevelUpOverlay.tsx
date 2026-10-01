@@ -65,30 +65,14 @@ export const LevelUpOverlay: React.FC = () => {
   const hpRollResult = session?.hpRollResult ?? Math.floor(classHitDie / 2) + 1;
   const hpGain = session?.hpIncrease ?? Math.max(1, hpRollResult + conModifier);
 
-  const handleInteractiveRollHp = async () => {
+  const handleVisualize3DRoll = async () => {
     if (isRollingHp || !session) return;
     setIsRollingHp(true);
     soundService.playEffect('DICE_ROLL');
     try {
-      const result = await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000');
-      const bgFallback = diceService.rollBackground(`1d${classHitDie}`, 'Level Up HP Roll');
-      const rolledVal = result?.rolls[0]?.result ?? bgFallback.rolls[0]?.result ?? (Math.floor(classHitDie / 2) + 1);
-      const newHpGain = Math.max(1, rolledVal + conModifier);
-      updateLevelUpSession({
-        hpRollResult: rolledVal,
-        hpIncrease: newHpGain,
-        hpMethod: 'roll'
-      });
+      await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000');
     } catch (e) {
-      console.warn('[LevelUpOverlay] HP 3D roll fallback:', e);
-      const bgResult = diceService.rollBackground(`1d${classHitDie}`, 'Level Up HP Roll');
-      const rolledVal = bgResult.rolls[0]?.result ?? (Math.floor(classHitDie / 2) + 1);
-      const newHpGain = Math.max(1, rolledVal + conModifier);
-      updateLevelUpSession({
-        hpRollResult: rolledVal,
-        hpIncrease: newHpGain,
-        hpMethod: 'roll'
-      });
+      console.warn('[LevelUpOverlay] 3D roll presentation:', e);
     } finally {
       setIsRollingHp(false);
     }
@@ -390,12 +374,12 @@ export const LevelUpOverlay: React.FC = () => {
                              <div className="flex items-center justify-between">
                                <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em]">Hit Point Advancement</span>
                                <button
-                                 onClick={handleInteractiveRollHp}
+                                 onClick={handleVisualize3DRoll}
                                  disabled={isRollingHp}
                                  className="px-3 py-1 bg-dragon-darkRed text-dragon-gold hover:bg-dragon-gold hover:text-dragon-darkRed border border-dragon-gold rounded text-[10px] font-black uppercase tracking-wider transition-all disabled:opacity-50 flex items-center gap-1.5 shadow-sm"
                                >
                                  <GameIcon name="dice" size={14} color="currentColor" />
-                                 <span>{isRollingHp ? 'Rolling...' : `Roll 1d${classHitDie}`}</span>
+                                 <span>{isRollingHp ? 'Rolling...' : `Visualize 1d${classHitDie}`}</span>
                                </button>
                              </div>
 

@@ -183,6 +183,8 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const updatedSession = useCharacterStore.getState().activeLevelUpSession;
     expect(updatedSession?.hpRollResult).toBe(rolledValue);
     expect(updatedSession?.hpIncrease).toBe(initialHpIncrease);
+
+    store.cancelLevelUpSession();
   });
 
   test('Multi-level eligibility does not silently auto-commit next levels', async () => {
@@ -206,7 +208,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  test('Canonical hit die resolution and dice roll calculation for non-d8 classes', async () => {
+  test('evaluateNextLevelStep is pure and deterministic without side effects', async () => {
     const wizard: any = {
       id: 'test_wizard_1',
       name: 'Melf',
@@ -219,12 +221,17 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       stats: { str: 8, dex: 14, con: 12, int: 16, wis: 12, cha: 10 } // CON mod = +1
     };
 
-    const session = await evaluateNextLevelStep(wizard);
-    expect(session).not.toBeNull();
-    expect(session?.classHitDie).toBe(6);
-    expect(session?.hpRollResult).toBeGreaterThanOrEqual(1);
-    expect(session?.hpRollResult).toBeLessThanOrEqual(6);
-    expect(session?.hpIncrease).toBe(Math.max(1, session!.hpRollResult + 1));
+    const step1 = await evaluateNextLevelStep(wizard);
+    const step2 = await evaluateNextLevelStep(wizard);
+
+    expect(step1).not.toBeNull();
+    expect(step2).not.toBeNull();
+    expect(step1?.classHitDie).toBe(6);
+    // evaluateNextLevelStep returns pure canonical step data with deterministic defaults
+    expect(step1?.hpRollResult).toBe(4); // floor(6/2) + 1
+    expect(step2?.hpRollResult).toBe(4);
+    expect(step1?.hpIncrease).toBe(5);
+    expect(step2?.hpIncrease).toBe(5);
   });
 
   test('Minimum HP increase rule enforces at least +1 HP even with negative CON modifier', async () => {
