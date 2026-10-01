@@ -335,13 +335,17 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       return false;
     }
 
-    const hpGain = session.hpIncrease;
+    // Re-evaluate canonical step to obtain immutable canonical features & HP gain
+    const canonicalStep = await evaluateNextLevelStep(char);
+    if (!canonicalStep) return false;
+
+    const hpGain = canonicalStep.hpIncrease;
 
     const newMaxHp = (char.maxHp || char.hp || 10) + hpGain;
     const newHp = (char.hp || 10) + hpGain;
 
     const newStats = { ...char.stats };
-    if (session.hasASI && session.statIncreases) {
+    if (canonicalStep.hasASI && session.statIncreases) {
       Object.entries(session.statIncreases).forEach(([statKey, inc]) => {
         if (inc && (newStats as any)[statKey] !== undefined) {
           (newStats as any)[statKey] += inc;
@@ -350,7 +354,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
 
     const newFeatures = [...(char.features || [])];
-    for (const feat of session.features || []) {
+    for (const feat of canonicalStep.features || []) {
       if (!newFeatures.some(f => f.index === feat.index)) {
         newFeatures.push({
           name: feat.name,
@@ -374,7 +378,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
 
     const updatePayload: Partial<Character> = {
-      level: session.targetLevel,
+      level: canonicalStep.targetLevel,
       hp: newHp,
       maxHp: newMaxHp,
       stats: newStats,
