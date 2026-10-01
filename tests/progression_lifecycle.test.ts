@@ -235,6 +235,45 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(validation.reason).toContain('fake_subclass_xyz');
   });
 
+  test('Validation rejects tampered feature set, injected choice keys, and subclass mismatch', async () => {
+    const fighter: any = {
+      id: 'test_tamper',
+      name: 'Tamper',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+
+    const validSession = await evaluateNextLevelStep(fighter);
+    expect(validSession).not.toBeNull();
+
+    // 1. Omitted target feature
+    const incompleteSession = { ...validSession!, features: [] };
+    const resIncomplete = await validateLevelUpCommit(fighter, incompleteSession);
+    expect(resIncomplete.valid).toBe(false);
+    expect(resIncomplete.reason).toContain('feature count');
+
+    // 2. Extra injected non-target choice key
+    const injectedChoiceSession = {
+      ...validSession!,
+      choices: { ungranted_feature_key: ['some_choice'] }
+    };
+    const resInjectedChoice = await validateLevelUpCommit(fighter, injectedChoiceSession);
+    expect(resInjectedChoice.valid).toBe(false);
+    expect(resInjectedChoice.reason).toContain('ungranted_feature_key');
+
+    // 3. Mismatched subclassChoice vs session.choices
+    const subFighter: any = { id: 'test_sub_mismatch', name: 'Sub', class: 'Fighter', level: 2, xp: 900, stats: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 } };
+    const subSession = await evaluateNextLevelStep(subFighter);
+    subSession!.choices['martial_archetype'] = ['champion'];
+    subSession!.subclassChoice = 'battle_master';
+
+    const resMismatchedSub = await validateLevelUpCommit(subFighter, subSession!);
+    expect(resMismatchedSub.valid).toBe(false);
+    expect(resMismatchedSub.reason).toContain('Mismatched subclassChoice');
+  });
+
   test('extractStructuredOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
     const proseFeature = {
       index: 'prose_feature_test',

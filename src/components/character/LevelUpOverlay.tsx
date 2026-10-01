@@ -4,7 +4,7 @@ import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { normalizeImageUrl, fetchSubclassesList } from '../../services/storageService';
-import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
+import { extractStructuredOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { CLASS_DATA } from '../../lib/characterUtils';
@@ -71,9 +71,7 @@ export const LevelUpOverlay: React.FC = () => {
       soundService.playEffect('LEVEL_UP');
 
       const hasSubclassGrant = session.features.some(f =>
-        f.feature_specific?.subfeature_options?.type === 'subclass' ||
-        f.index?.toLowerCase().includes('subclass') ||
-        f.index?.toLowerCase().includes('archetype')
+        f.feature_specific?.subfeature_options?.type === 'subclass'
       );
 
       if (hasSubclassGrant) {
@@ -92,7 +90,7 @@ export const LevelUpOverlay: React.FC = () => {
       }
 
       session.features.forEach((feat) => {
-        const options = extractOptionsFromFeature(feat);
+        const options = extractStructuredOptionsFromFeature(feat);
         options.forEach(opt => {
           if (opt.desc) {
             setOptionDetails(prev => ({ ...prev, [opt.index]: opt.desc! }));
@@ -112,10 +110,7 @@ export const LevelUpOverlay: React.FC = () => {
   if (!session || !character) return null;
 
   const getOptionsForChoice = (feat: any) => {
-    const isSubclassChoice =
-      feat.feature_specific?.subfeature_options?.type === 'subclass' ||
-      feat.index?.toLowerCase().includes('subclass') ||
-      feat.index?.toLowerCase().includes('martial_archetype');
+    const isSubclassChoice = feat.feature_specific?.subfeature_options?.type === 'subclass';
 
     if (isSubclassChoice && subclassOptions.length > 0) {
       return subclassOptions.map(s => ({
@@ -124,7 +119,7 @@ export const LevelUpOverlay: React.FC = () => {
       }));
     }
 
-    return extractOptionsFromFeature(feat);
+    return extractStructuredOptionsFromFeature(feat);
   };
 
   const choiceFeatures = session.features.filter(f => getOptionsForChoice(f).length > 0);
@@ -410,10 +405,7 @@ export const LevelUpOverlay: React.FC = () => {
                         const options = getOptionsForChoice(feat);
                         const selections = session.choices?.[feat.index] || [];
                         const limit = getChoiceLimit(feat) || 1;
-                        const isSubclassChoice =
-                          feat.feature_specific?.subfeature_options?.type === 'subclass' ||
-                          feat.index?.toLowerCase().includes('subclass') ||
-                          feat.index?.toLowerCase().includes('martial_archetype');
+                        const isSubclassChoice = feat.feature_specific?.subfeature_options?.type === 'subclass';
 
                         return (
                           <div key={feat.index} className="space-y-3 bg-black/5 p-4 rounded border border-dragon-gold/15">

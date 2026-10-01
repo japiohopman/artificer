@@ -1,4 +1,4 @@
-import { extractStructuredOptionsFromFeature, extractOptionsFromFeature, getChoiceLimit } from './atlasUtils';
+import { extractStructuredOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
 import { fetchSubclassesList } from '../services/storageService';
 
@@ -160,11 +160,24 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     return { valid: false, reason: `ASI grant state does not match canonical level-up target.` };
   }
 
-  // Ensure no features in session that do not belong to canonical target level features
+  // Ensure exact 1:1 match of session features against canonical features (no extra, no missing)
   const canonicalFeatureIndices = canonicalStep.features.map(f => f.index);
+  const sessionFeatureIndices = session.features.map(f => f.index);
+
+  if (session.features.length !== canonicalStep.features.length) {
+    return { valid: false, reason: `Session feature count (${session.features.length}) does not match canonical target feature count (${canonicalStep.features.length}).` };
+  }
+
   for (const sessionFeat of session.features) {
     if (!canonicalFeatureIndices.includes(sessionFeat.index)) {
       return { valid: false, reason: `Feature "${sessionFeat.name || sessionFeat.index}" is not a valid grant for level ${session.targetLevel}.` };
+    }
+  }
+
+  // Reject choice keys in session.choices that do not correspond to any feature in session.features
+  for (const choiceKey of Object.keys(session.choices || {})) {
+    if (!sessionFeatureIndices.includes(choiceKey)) {
+      return { valid: false, reason: `Choice key "${choiceKey}" does not belong to any feature granted at level ${session.targetLevel}.` };
     }
   }
 
@@ -190,6 +203,8 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     }
   }
 
+  // Validate feature choices and subclass choice coherence
+  let subclassFeatureKey: string | null = null;
   for (const feat of session.features) {
     const limit = getChoiceLimit(feat);
     const selected = session.choices?.[feat.index] || [];
@@ -200,6 +215,7 @@ export async function validateLevelUpCommit(character: Character, session: Activ
 
     const isSubclassChoice = feat.feature_specific?.subfeature_options?.type === 'subclass';
     if (isSubclassChoice) {
+      subclassFeatureKey = feat.index;
       if (selected.length > 0) {
         const chosenSubclass = selected[0];
         const allowedSubclasses = await fetchSubclassesList(character.ruleset, character.class);
@@ -220,6 +236,19 @@ export async function validateLevelUpCommit(character: Character, session: Activ
         }
       }
     }
+  }
+
+  // Validate subclassChoice coherence with session.choices
+  if (subclassFeatureKey) {
+    const selectedSubInChoices = session.choices?.[subclassFeatureKey]?.[0];
+    if (session.subclassChoice && session.subclassChoice !== selectedSubInChoices) {
+      return { valid: false, reason: `Mismatched subclassChoice "${session.subclassChoice}" vs selected choice "${selectedSubInChoices}".` };
+    }
+    if (selectedSubInChoices && session.subclassChoice !== selectedSubInChoices) {
+      return { valid: false, reason: `Subclass selection "${selectedSubInChoices}" is not synchronized with subclassChoice.` };
+    }
+  } else if (session.subclassChoice) {
+    return { valid: false, reason: `subclassChoice "${session.subclassChoice}" provided but target level does not grant a subclass.` };
   }
 
   return { valid: true };
