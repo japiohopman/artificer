@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { normalizeImageUrl } from '../../services/storageService';
-import { extractOptionsFromFeature, getChoiceLimit, FeatureOption, getFeatureIcon, getAlignmentIcon, getTraitIcon, getFeatIcon , getMagicSchoolIcon, getLanguageIcon, getBackgroundIcon, getProficiencyIcon, getAttackIcon } from '../../lib/atlasUtils';
+import { normalizeImageUrl, fetchSubclassesList } from '../../services/storageService';
+import { extractStructuredOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
-
-import { calculateMaxSpellSlots } from '../../lib/statCalculations';
 import { CLASS_DATA } from '../../lib/characterUtils';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { useAudioStore } from '../../store/useAudioStore';
 
 const Sparkle: React.FC<{ delay: number; x: string; y: string }> = ({ delay, x, y }) => (
   <motion.div
@@ -41,394 +41,178 @@ const STATS = [
   { id: 'cha', name: 'Charisma', abbr: 'CHA' }
 ] as const;
 
-import { useCharacterStore } from '../../store/useCharacterStore';
-import { useAudioStore } from '../../store/useAudioStore';
-
 export const LevelUpOverlay: React.FC = () => {
   const { 
-    levelUpQueue, 
-    dismissLevelUp, 
-    characters, 
-    updateCharacterStats,
-    updateCharacter,
+    activeLevelUpSession,
+    cancelLevelUpSession,
+    updateLevelUpSession,
+    commitLevelUpSession,
+    characters
   } = useCharacterStore();
 
   const { updateLayerVolume } = useAudioStore();
-  
-  const levelUpResult = levelUpQueue[0];
-  
-  const [points, setPoints] = useState(2);
-  const [tempStats, setTempStats] = useState<Record<string, number>>({});
-  const [originalStats, setOriginalStats] = useState<Record<string, number>>({});
-  const [featureChoices, setFeatureChoices] = useState<Record<string, string[]>>({});
+
   const [optionDetails, setOptionDetails] = useState<Record<string, string>>({});
-  const [animationsComplete, setAnimationsComplete] = useState(false);
-  const [expandedMainFeatures, setExpandedMainFeatures] = useState<any[]>([]);
-  const [subclassFeatures, setSubclassFeatures] = useState<any[]>([]);
+  const [subclassOptions, setSubclassOptions] = useState<any[]>([]);
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
-  // Fast HP Rolling states
-  const [hpMethod, setHpMethod] = useState<'fixed' | 'roll'>('fixed');
-  const [rolledHpValue, setRolledHpValue] = useState<number | null>(null);
-  
-  const character = characters.find(c => c.id === levelUpResult?.characterId);
-  const proficiencyBonus = Math.floor(2 + ((levelUpResult?.newLevel || 1) - 1) / 4);
+  const session = activeLevelUpSession;
+  const character = characters.find(c => c.id === session?.characterId);
 
-  // Calculated HP Increase (Fixed / Average method)
-  const conModifier = Math.floor(((tempStats.con || (character ? character.stats?.con : 10) || 10) - 10) / 2);
-  const classHitDie = character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8; // fallback to 8
-  const fixedHpGain = Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
-  const rolledHpGain = rolledHpValue !== null ? Math.max(1, rolledHpValue + conModifier) : fixedHpGain;
-  const finalHpGain = hpMethod === 'roll' ? rolledHpGain : fixedHpGain;
-
-  const handleRollHp = () => {
-    // Generate fast pseudo-random roll matching character class hit die size
-    const roll = Math.floor(Math.random() * classHitDie) + 1;
-    setRolledHpValue(roll);
-    soundService.playEffect('DICE_ROLL');
-  };
+  const conModifier = Math.floor((((character?.stats?.con || 10) + (session?.statIncreases?.con || 0) - 10)) / 2);
+  const classHitDie = character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8;
+  const fixedHpGain = session?.hpIncrease || Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
 
   useEffect(() => {
-    if (levelUpResult && character) {
-      setOriginalStats(character.stats || {});
-      setTempStats(character.stats || {});
-      setPoints(2);
-      setFeatureChoices({});
-      setOptionDetails({});
-      setAnimationsComplete(false);
-      setExpandedMainFeatures([]);
-      setSubclassFeatures([]);
-      setHpMethod('fixed');
-      setRolledHpValue(null);
-      
-      // Load full feature data for main features
-      const loadMainFeatures = async () => {
-        const expanded = await Promise.all(levelUpResult.features.map(async (feat) => {
-          if (feat.choice || feat.feature_specific) return feat;
-          const full = await atlasService.loadFeature(feat.index);
-          return full ? { ...feat, ...full } : feat;
-        }));
-        setExpandedMainFeatures(expanded);
-
-        // Load descriptions for choices in main features
-        expanded.forEach(async (feat) => {
-          const options = extractOptionsFromFeature(feat);
-          for (const opt of options) {
-            if (opt.desc) {
-              setOptionDetails(prev => ({ ...prev, [opt.index]: opt.desc! }));
-            }
-
-            atlasService.loadFeature(opt.index).then(fullFeat => {
-              if (fullFeat && fullFeat.desc) {
-                const description = Array.isArray(fullFeat.desc) ? fullFeat.desc.join('\n') : fullFeat.desc;
-                setOptionDetails(prev => ({ ...prev, [opt.index]: description }));
-              }
-            });
-          }
-        });
-      };
-      loadMainFeatures();
-      
-      // Delay button appearance to let animations play
-      const timer = setTimeout(() => setAnimationsComplete(true), 2500);
-      
-      // Audio transition
+    if (session && character) {
+      setCurrentStepIndex(0);
       updateLayerVolume(1, 0);
       updateLayerVolume(4, 0);
       soundService.playEffect('LEVEL_UP');
 
-      return () => clearTimeout(timer);
-    }
-  }, [levelUpResult?.characterId, levelUpResult?.newLevel]); // More specific triggers
+      const hasSubclassGrant = session.features.some(f =>
+        f.feature_specific?.subfeature_options?.type === 'subclass'
+      );
 
-  useEffect(() => {
-    if (!levelUpResult) return;
-
-    const subclassEntries = Object.entries(featureChoices).filter(([key]) => 
-      key.toLowerCase().includes('archetype') || 
-      key.toLowerCase().includes('subclass') ||
-      key.toLowerCase().includes('tradition') ||
-      key.toLowerCase().includes('circle') ||
-      key.toLowerCase().includes('oath') ||
-      key.toLowerCase().includes('college') ||
-      key.toLowerCase().includes('patron') ||
-      key.toLowerCase().includes('origin')
-    );
-
-    if (subclassEntries.length > 0) {
-      const subclassIndex = subclassEntries[0][1][0];
-      if (subclassIndex) {
-        atlasService.loadSubclass(subclassIndex, character?.ruleset).then(async (subData) => {
-          if (subData && subData.subclass_levels) {
-            const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === levelUpResult.newLevel);
-            const currentLevelFeatures = currentLevelGroup?.features || [];
-            
-            // Expand subclass features
-            const expanded = await Promise.all(currentLevelFeatures.map(async (f: any) => {
-              const full = await atlasService.loadFeature(f.index);
-              return full ? { ...f, ...full } : f;
-            }));
-            
-            setSubclassFeatures(expanded);
-
-            // Load descriptions for choices in subclass features
-            expanded.forEach((feat) => {
-              const options = extractOptionsFromFeature(feat);
-              options.forEach(opt => {
-                if (opt.desc) {
-                  setOptionDetails(prev => ({ ...prev, [opt.index]: opt.desc! }));
-                }
-              });
-            });
+      if (hasSubclassGrant) {
+        fetchSubclassesList(character.ruleset, character.class).then(async (list) => {
+          if (list && list.length > 0) {
+            setSubclassOptions(list);
+            for (const s of list) {
+              const subData = await atlasService.loadSubclass(s.index, character.ruleset);
+              if (subData) {
+                const desc = Array.isArray(subData.desc) ? subData.desc.join('\n') : (subData.desc || '');
+                setOptionDetails(prev => ({ ...prev, [s.index]: desc }));
+              }
+            }
           }
         });
       }
-    } else if (character?.subclass) {
-      // If character already has a subclass, check it for new features at this level
-      atlasService.loadSubclass(character.subclass, character?.ruleset).then(async (subData) => {
-        if (subData && subData.subclass_levels) {
-          const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === levelUpResult.newLevel);
-          const currentLevelFeatures = currentLevelGroup?.features || [];
-          
-          // Expand subclass features
-          const expanded = await Promise.all(currentLevelFeatures.map(async (f: any) => {
-            const full = await atlasService.loadFeature(f.index);
-            return full ? { ...f, ...full } : f;
-          }));
-          
-          setSubclassFeatures(expanded);
-        }
-      });
-    }
-  }, [featureChoices, levelUpResult?.newLevel, character?.subclass]);
 
-  if (!levelUpResult || !character) return null;
-
-  const handleStatChange = (statId: string, delta: number) => {
-    const currentVal = tempStats[statId] || 10;
-    const originalVal = originalStats[statId] || 10;
-    
-    // Limits
-    if (delta > 0 && points <= 0) return;
-    if (delta < 0 && currentVal <= originalVal) return;
-    if (delta > 0 && currentVal >= 20) return;
-
-    setTempStats(prev => ({ ...prev, [statId]: currentVal + delta }));
-    setPoints(prev => prev - delta);
-  };
-
-  const handleComplete = () => {
-    if (levelUpResult.hasASI && points > 0) return false; // Must spend all points
-    
-    const allFeatures = [...expandedMainFeatures, ...subclassFeatures];
-    const featuresWithChoices = allFeatures.filter(f => 
-       f.choice || 
-       f.feature_specific?.subfeature_options || 
-       isExpertise(f)
-    );
-    for (const feat of featuresWithChoices) {
-      const selections = featureChoices[feat.index] || [];
-      
-      let limit = getChoiceLimit(feat);
-      if (limit === 0 && isExpertise(feat)) {
-        limit = 2; // Default for Rogue 1st level expertise
-      }
-      if (limit === 0) limit = 1;
-
-      if (selections.length < limit) return;
-    }
-
-    // Apply custom rolled or average HP calculations instead of hardcoded levels
-    const oldMaxHp = character.maxHp || character.hp || 10;
-    const oldHp = character.hp || 10;
-    // Check old stats and levelup increments
-    const baseHpDifference = finalHpGain - levelUpResult.hpIncrease;
-
-    if (levelUpResult.hasASI) {
-      updateCharacterStats(character.id, tempStats);
-    }
-
-    // Adjust HP inside updateCharacter as well to respect roll modifications
-    const finalCalculatedMaxHp = oldMaxHp + baseHpDifference;
-    const finalCalculatedHp = oldHp + baseHpDifference;
-
-    const currentChoices = JSON.parse(JSON.stringify(character.choices || {}));
-    const newFeatures = [...(character.features || [])];
-    
-    // Add subclass features (avoid duplicates)
-    subclassFeatures.forEach(sf => {
-      if (!newFeatures.some(f => f.index === sf.index)) {
-        newFeatures.push({
-          name: sf.name,
-          index: sf.index,
-          desc: Array.isArray(sf.desc) ? sf.desc.join('\n') : (sf.desc || ''),
-          source: 'Subclass'
+      session.features.forEach((feat) => {
+        const options = extractStructuredOptionsFromFeature(feat);
+        options.forEach(opt => {
+          if (opt.desc) {
+            setOptionDetails(prev => ({ ...prev, [opt.index]: opt.desc! }));
+          } else {
+            atlasService.loadFeature(opt.index).then(fullFeat => {
+              if (fullFeat && fullFeat.desc) {
+                const desc = Array.isArray(fullFeat.desc) ? fullFeat.desc.join('\n') : fullFeat.desc;
+                setOptionDetails(prev => ({ ...prev, [opt.index]: desc }));
+              }
+            });
+          }
         });
-      }
-    });
-
-    if (Object.keys(featureChoices).length > 0) {
-      // Specifically handle expertise and subclasses to match CharacterStats convention
-      Object.entries(featureChoices).forEach(([featIndex, selections]) => {
-        currentChoices[featIndex] = selections;
-        
-        const lowerIndex = featIndex.toLowerCase();
-        if (lowerIndex.includes('fighting_style')) {
-           currentChoices['fighting-style'] = [...(currentChoices['fighting-style'] || []), ...selections];
-        }
-        if (lowerIndex.includes('expertise')) {
-          currentChoices['expertise'] = [...(currentChoices['expertise'] || []), ...selections];
-        }
-        if (lowerIndex.includes('martial_archetype') || 
-            lowerIndex.includes('subclass') || 
-            lowerIndex.includes('archetype') || 
-            lowerIndex.includes('arcane_tradition') ||
-            lowerIndex.includes('druid_circle') ||
-            lowerIndex.includes('sacred_oath') ||
-            lowerIndex.includes('ranger_archetype') ||
-            lowerIndex.includes('monastic_tradition') ||
-            lowerIndex.includes('bard_college') ||
-            lowerIndex.includes('otherworldly_patron') ||
-            lowerIndex.includes('sorcerous_origin')) {
-          currentChoices['subclass'] = selections[0]; // Usually just one
-        }
       });
     }
+  }, [session?.characterId, session?.targetLevel]);
 
-    const updateData: any = { 
-      choices: currentChoices,
-      features: newFeatures,
-      hp: finalCalculatedHp,
-      maxHp: finalCalculatedMaxHp
-    };
-    
-    if (currentChoices['subclass']) {
-      updateData.subclass = currentChoices['subclass'];
-    }
-    
-    updateCharacter(character.id, updateData);
-    
-    // Restore audio
-    updateLayerVolume(1, 0.5);
-    updateLayerVolume(4, 0.4);
-    
-    dismissLevelUp();
-  };
-
-  const handleToggleChoice = (featIndex: string, optionIndex: string, limit: number) => {
-    setFeatureChoices(prev => {
-      const current = prev[featIndex] || [];
-      if (current.includes(optionIndex)) {
-        return { ...prev, [featIndex]: current.filter(i => i !== optionIndex) };
-      }
-      if (current.length >= limit) return prev;
-      return { ...prev, [featIndex]: [...current, optionIndex] };
-    });
-  };
+  if (!session || !character) return null;
 
   const getOptionsForChoice = (feat: any) => {
-    // 1. Basic extraction from feature data
-    const options = extractOptionsFromFeature(feat);
-    
-    // 2. If it's expertise, prioritize character proficiencies filtering
-    if (isExpertise(feat)) {
-      const currentProfs = character.proficiencies || [];
-      
-      if (options.length > 0) {
-        // Filter JSON options by what character already has
-        const filtered = options.filter(opt => {
-           const normalizedName = opt.name.toLowerCase()
-             .replace(/fighting style:\s*/i, '')
-             .replace(/expertise:\s*/i, '')
-             .trim();
-           
-           return currentProfs.some(p => {
-             const name = (typeof p === 'string' ? p : (p.name || p.index || '')).toLowerCase();
-             return name === normalizedName || name === opt.index.toLowerCase();
-           });
-        });
-        if (filtered.length > 0) return filtered;
-      }
-      
-      // Fallback to all current proficiencies if pool is empty or filtering failed
-      if (currentProfs.length > 0) {
-        return currentProfs.map(p => {
-          const name = typeof p === 'string' ? p : (p.name || p.index || '');
-          return {
-            index: name,
-            name: name
-          };
-        });
-      }
-    }
+    const isSubclassChoice = feat.feature_specific?.subfeature_options?.type === 'subclass';
 
-    if (options.length > 0) return options;
-
-    const choice = feat.choice || feat.feature_specific?.subfeature_options;
-    if (!choice) return [];
-
-    // 1. Direct options array
-    if (choice.from?.options) {
-      return choice.from.options.map((opt: any) => ({
-        index: opt.index || opt.item?.index || opt.name,
-        name: opt.name || opt.item?.name || opt.index
+    if (isSubclassChoice && subclassOptions.length > 0) {
+      return subclassOptions.map(s => ({
+        index: s.index,
+        name: s.name
       }));
     }
 
-    // 2. Option set type is proficiencies
-    if (choice.from?.option_set_type === 'proficiencies' || choice.type === 'proficiencies') {
-      if (isExpertise(feat)) {
-        // Choose from existing proficiencies
-        return (character.proficiencies || []).map(p => {
-          const name = typeof p === 'string' ? p : (p.name || p.index || '');
-          return {
-            index: name,
-            name: name
-          };
-        });
+    return extractStructuredOptionsFromFeature(feat);
+  };
+
+  const choiceFeatures = session.features.filter(f => getOptionsForChoice(f).length > 0);
+
+  // Progression Wizard Steps
+  const wizardSteps: { id: string; title: string }[] = [
+    { id: 'summary', title: 'Grants & Vitality' }
+  ];
+  if (choiceFeatures.length > 0) {
+    wizardSteps.push({ id: 'choices', title: 'Specialty Choices' });
+  }
+  if (session.hasASI) {
+    wizardSteps.push({ id: 'asi', title: 'Ability Score Improvement' });
+  }
+
+  const activeStep = wizardSteps[currentStepIndex] || wizardSteps[0];
+  const isLastStep = currentStepIndex === wizardSteps.length - 1;
+
+  const pointsSpent = Object.values(session.statIncreases || {}).reduce((a, b) => a + (b || 0), 0);
+  const pointsRemaining = 2 - pointsSpent;
+
+  const handleStatChange = (statId: string, delta: number) => {
+    const currentIncreases = session.statIncreases || {};
+    const currentVal = currentIncreases[statId] || 0;
+    const baseVal = (character.stats as any)[statId] || 10;
+
+    if (delta > 0 && pointsRemaining <= 0) return;
+    if (delta < 0 && currentVal <= 0) return;
+    if (delta > 0 && baseVal + currentVal >= 20) return;
+
+    updateLevelUpSession({
+      statIncreases: {
+        ...currentIncreases,
+        [statId]: currentVal + delta
+      }
+    });
+  };
+
+  const handleToggleChoice = (featIndex: string, optionIndex: string, limit: number, isSubclassChoice?: boolean) => {
+    const currentChoices = session.choices?.[featIndex] || [];
+    let newSelections: string[];
+
+    if (currentChoices.includes(optionIndex)) {
+      newSelections = currentChoices.filter(i => i !== optionIndex);
+    } else {
+      if (currentChoices.length >= limit) {
+        if (limit === 1) {
+          newSelections = [optionIndex];
+        } else {
+          return;
+        }
       } else {
-        // Gain new proficiency - show skills not already possessed
-        // We use a simplified list of standard skills if the JSON doesn't specify
-        const ALL_SKILLS = [
-          'Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 
-          'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 
-          'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 
-          'Sleight of Hand', 'Stealth', 'Survival'
-        ];
-        
-        return ALL_SKILLS
-          .filter(s => !character.proficiencies.includes(s))
-          .map(s => ({ index: s, name: s }));
+        newSelections = [...currentChoices, optionIndex];
       }
     }
-    
-    return [];
+
+    const updatedChoices = {
+      ...(session.choices || {}),
+      [featIndex]: newSelections
+    };
+
+    updateLevelUpSession({
+      choices: updatedChoices,
+      subclassChoice: isSubclassChoice ? (newSelections[0] || undefined) : session.subclassChoice
+    });
   };
 
-  const isComplete = () => {
-    if (levelUpResult.hasASI && points > 0) return false;
-    
-    const allFeatures = [...expandedMainFeatures, ...subclassFeatures];
-    const featuresWithChoices = allFeatures.filter(f => 
-      f.choice || 
-      f.feature_specific?.subfeature_options || 
-      isExpertise(f)
-    );
-    
-    for (const feat of featuresWithChoices) {
-      const selections = featureChoices[feat.index] || [];
-      let limit = getChoiceLimit(feat);
-      if (limit === 0 && isExpertise(feat)) {
-        limit = 2;
-      }
-      if (limit === 0) limit = 1;
-      
-      if (selections.length < limit) return false;
+  const handleNextStep = () => {
+    if (!isLastStep) {
+      setCurrentStepIndex(prev => prev + 1);
+      soundService.playEffect('UI_CLICK_LIGHT');
     }
-    return true;
   };
 
-  const isExpertise = (feat: any) => {
-    return feat.index?.toLowerCase().includes('expertise') || feat.name?.toLowerCase().includes('expertise');
+  const handlePrevStep = () => {
+    if (currentStepIndex > 0) {
+      setCurrentStepIndex(prev => prev - 1);
+      soundService.playEffect('UI_CLICK_LIGHT');
+    }
+  };
+
+  const handleCommit = async () => {
+    const success = await commitLevelUpSession();
+    if (success) {
+      updateLayerVolume(1, 0.5);
+      updateLayerVolume(4, 0.4);
+    }
+  };
+
+  const handleCancel = () => {
+    updateLayerVolume(1, 0.5);
+    updateLayerVolume(4, 0.4);
+    cancelLevelUpSession();
   };
 
   return (
@@ -440,6 +224,7 @@ export const LevelUpOverlay: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="absolute inset-0 bg-black/80 backdrop-blur-md"
+          onClick={handleCancel}
         />
 
         {/* Content Card - Parchment Theme */}
@@ -459,14 +244,21 @@ export const LevelUpOverlay: React.FC = () => {
              <GameIcon name={character.class?.toLowerCase()} fallbackName="award" size={48} color="#D4AF37" />
           </div>
 
+          {/* Close/Cancel Button */}
+          <button
+            onClick={handleCancel}
+            className="absolute top-4 right-4 z-30 w-10 h-10 rounded-full bg-dragon-darkRed/80 hover:bg-dragon-darkRed border-2 border-dragon-gold text-dragon-gold font-black flex items-center justify-center transition-all hover:scale-110 shadow-lg"
+            title="Cancel Level Up"
+          >
+            ✕
+          </button>
+
           <div className="relative z-10 flex flex-col h-full max-h-[92vh]">
             {/* Header Section */}
             <div className="bg-dragon-darkRed/95 backdrop-blur-sm pt-[35px] pb-[35px] text-center relative overflow-hidden">
-               {/* Decorative Lines */}
                <div className="absolute top-1/2 left-0 right-0 h-px bg-dragon-gold/30 -translate-y-1/2" />
                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-dragon-gold to-transparent" />
                
-               {/* Sparkle Effects */}
                <Sparkle delay={0} x="10%" y="20%" />
                <Sparkle delay={0.5} x="85%" y="40%" />
                <Sparkle delay={1.2} x="20%" y="70%" />
@@ -478,506 +270,302 @@ export const LevelUpOverlay: React.FC = () => {
                  transition={{ delay: 0.2 }}
                  className="relative px-8"
                >
-                  <h2 className="text-[43px] font-cinzel font-black text-dragon-gold uppercase tracking-[0.3em] mb-1 shadow-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Level Ascended</h2>
+                  <h2 className="text-[36px] font-cinzel font-black text-dragon-gold uppercase tracking-[0.3em] mb-1 shadow-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                    Level Ascended
+                  </h2>
                   <div className="flex items-center justify-center gap-6">
                     <div className="h-px w-24 bg-gradient-to-r from-transparent to-dragon-gold/60" />
                     <span className="text-parchment-200 font-bold uppercase tracking-[0.4em] text-[10px]">
-                      {character.name} is now Level {levelUpResult.newLevel}
+                      {character.name} — Target Level {session.targetLevel}
                     </span>
                     <div className="h-px w-24 bg-gradient-to-l from-transparent to-dragon-gold/60" />
                   </div>
                </motion.div>
+
+               {/* Step Navigation Indicator Tabs */}
+               {wizardSteps.length > 1 && (
+                 <div className="flex items-center justify-center gap-3 mt-4">
+                   {wizardSteps.map((step, sIdx) => (
+                     <button
+                       key={step.id}
+                       onClick={() => { setCurrentStepIndex(sIdx); soundService.playEffect('UI_CLICK_LIGHT'); }}
+                       className={cn(
+                         "px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest transition-all border",
+                         sIdx === currentStepIndex
+                           ? "bg-dragon-gold text-dragon-darkRed border-dragon-gold shadow-md"
+                           : "bg-black/30 text-parchment-300 border-dragon-gold/20 hover:border-dragon-gold/50"
+                       )}
+                     >
+                       Step {sIdx + 1}: {step.title}
+                     </button>
+                   ))}
+                 </div>
+               )}
             </div>
 
+            {/* Validation Error Banner */}
+            {session.validationError && (
+              <div className="bg-red-950/90 border-y-2 border-red-500 text-red-200 px-6 py-3 text-center text-xs font-black uppercase tracking-wider flex items-center justify-center gap-2 z-20 animate-shake">
+                <GameIcon name="warning" size={16} color="#EF4444" />
+                <span>{session.validationError}</span>
+              </div>
+            )}
+
             {/* Main Content Area */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar p-1 md:p-8 relative">
+            <div className="flex-1 overflow-y-auto custom-scrollbar p-6 md:p-8 relative">
                <div className="absolute inset-0 bg-paper-texture opacity-20 mix-blend-multiply pointer-events-none z-[1]" />
                <div className="absolute inset-0 bg-parchment-100/10 pointer-events-none z-[2]" />
                
-               <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+               <div className="relative z-10 w-full pb-20">
                   
-                  {/* LEFT PANEL: Profile & Stats */}
-                  <div className="space-y-10">
-                    {/* Header Info - Moved to Top */}
-                    <div className="text-center relative py-4">
-                       <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
-                          <GameIcon name="award" size={14} color="#D4AF37" className="animate-pulse" />
-                          <div className="h-px w-12 bg-dragon-gold/30" />
-                          <GameIcon name="award" size={14} color="#D4AF37" className="animate-pulse" />
-                       </div>
-                       <h3 className="text-[32px] font-cinzel font-black text-dragon-darkRed uppercase tracking-[0.2em]"><GameIcon name={character.class?.toLowerCase()} size={24} color="currentColor" fallbackName="award" /> {character.class}</h3>
-                       <p className="text-[11px] font-black text-parchment-500 uppercase tracking-[0.3em] mt-1"><GameIcon name={character.race?.toLowerCase().replace(/-/g, "_")} size={12} color="currentColor" fallbackName="award" /> {character.race} // <GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={12} color="currentColor" fallbackName="award" /> {character.alignment}</p>
-                    </div>
+                  {/* STEP 1: Summary / Grants & Vitality */}
+                  {activeStep.id === 'summary' && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                       <div className="space-y-6">
+                          <div className="text-center py-2">
+                             <h3 className="text-[26px] font-cinzel font-black text-dragon-darkRed uppercase tracking-[0.2em]">
+                               <GameIcon name={character.class?.toLowerCase()} size={24} color="currentColor" fallbackName="award" /> {character.class}
+                             </h3>
+                             <p className="text-[11px] font-black text-parchment-500 uppercase tracking-[0.3em] mt-1">
+                               <GameIcon name={character.race?.toLowerCase().replace(/-/g, "_")} size={12} color="currentColor" fallbackName="award" /> {character.race} // <GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={12} color="currentColor" fallbackName="award" /> {character.alignment}
+                             </p>
+                          </div>
 
-                    {/* Profile Frame & Info */}
-                    <div className="flex flex-col items-center gap-6">
-                       <div className="relative w-full max-w-[340px] aspect-[4/3] drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)] -mt-4">
-                          {character.imageUrl ? (
-                             <>
-                                <ChromaKeyImage 
-                                   src={normalizeImageUrl(character.imageUrl, 'character', character.id)} 
-                                   alt={character.name} 
-                                   className="w-full h-full object-contain relative z-20" 
-                                   threshold={60}
-                                />
-                                <div className="absolute inset-x-20 inset-y-10 bg-dragon-red/10 blur-[90px] rounded-full pointer-events-none z-10" />
-                             </>
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center text-dragon-darkRed/20">
-                              <GameIcon name="user" size={64} />
-                            </div>
-                          )}
-                       </div>
-                    </div>
-
-                    {/* Fast HP Rolling Section & Core Attribute Gains */}
-                    <div className="flex flex-col gap-6">
-                      {/* Segmented HP Decision Controller */}
-                      <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/10 space-y-3">
-                         <div className="flex items-center justify-between">
-                            <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em]">HP Evolution Path</span>
-                            <span className="text-[9px] font-black text-dragon-gold uppercase tracking-[0.15em]">{hpMethod === 'roll' ? 'Chaotic Roll' : 'Standard Fixed'}</span>
-                         </div>
-                         <div className="grid grid-cols-2 gap-2">
-                            <button
-                              onClick={() => { setHpMethod('fixed'); setRolledHpValue(null); }}
-                              className={cn(
-                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-hpMethod === 'fixed'
-                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
-
-                                  : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
-                              )}
-                            >
-                               Standard (Avg)
-                            </button>
-                            <button
-                              onClick={() => { setHpMethod('roll'); }}
-                              className={cn(
-                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-hpMethod === 'roll'
-                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
-
-                                  : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
-                              )}
-                            >
-                               Roll (1d{classHitDie})
-                            </button>
-                         </div>
-
-                         {hpMethod === 'roll' && (
-                            <div className="pt-2 flex flex-col items-center justify-center gap-2 border-t border-dragon-gold/10">
-                               {rolledHpValue !== null ? (
-                                  <div className="text-center">
-                                     <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest block">ROLLED VALUE</span>
-                                     <span className="text-4xl font-header font-black text-dragon-gold leading-none tabular-nums animate-scaleIn">
-                                        {rolledHpValue} <span className="text-lg text-parchment-400 font-medium font-body">+ {conModifier} Con = +{rolledHpGain} HP</span>
-                                     </span>
+                          <div className="flex flex-col items-center gap-4">
+                             <div className="relative w-full max-w-[260px] aspect-[4/3] drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+                                {character.imageUrl ? (
+                                   <ChromaKeyImage
+                                      src={normalizeImageUrl(character.imageUrl, 'character', character.id)}
+                                      alt={character.name}
+                                      className="w-full h-full object-contain relative z-20"
+                                      threshold={60}
+                                   />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center text-dragon-darkRed/20">
+                                    <GameIcon name="user" size={64} />
                                   </div>
-                               ) : (
-                                  <span className="text-[10px] font-bold text-parchment-500 italic block py-1">Awaiting active roll seed...</span>
                                 )}
-                                <button
-                                  onClick={handleRollHp}
-                                  className="w-full py-2 bg-dragon-red hover:bg-dragon-darkRed text-white rounded-sm text-[10px] font-black uppercase tracking-widest shadow-md flex items-center justify-center gap-2 active:scale-95 transition-all"
-                                >
-                                   <GameIcon name="dice" size={14} />
-                                   {rolledHpValue !== null ? 'Re-roll HP' : 'Roll HP Matrix'}
-                                </button>
-                            </div>
-                         )}
-                      </div>
+                             </div>
+                          </div>
 
-                      <div className="grid grid-cols-2 gap-6">
-<motion.div
-                          initial={{ x: -20, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          transition={{ delay: 0.4 }}
-                          className="bg-black/5 p-5 rounded-sm text-center relative group overflow-hidden flex flex-col items-center"
-                        >
-                           <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-3 block">Vitality Matrix</span>
-                           <div className="flex items-center justify-center gap-4">
-                              <div className="flex flex-col items-end">
-                                 <span className="text-[10px] font-bold text-parchment-400 line-through opacity-50">{(character.maxHp || 10) - levelUpResult.hpIncrease}</span>
-                                 <span className="text-3xl font-header font-black text-dragon-red leading-none">
-                                    {(character.maxHp || 10) + (finalHpGain - levelUpResult.hpIncrease)}
-                                 </span>
-                              </div>
-                              <div className="flex flex-col items-center">
-                                 <motion.div
-                                   animate={{ x: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
-                                   transition={{ duration: 1.5, repeat: Infinity }}
-                                 >
-                                   <GameIcon name="energy" size={14} color="#D4AF37" />
-                                 </motion.div>
-                                 <span className="text-[10px] font-black text-dragon-gold">+{finalHpGain}</span>
-                              </div>
-                              <GameIcon name="hp" size={32} color="#8B0000" className="drop-shadow-smAlpha" />
-                           </div>
-                        </motion.div>
+                          <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/15 space-y-2">
+                             <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em] block">Hit Point Progression</span>
+                             <div className="p-3 bg-white/40 rounded-sm border border-dragon-gold/20 text-center">
+                                <span className="text-xs font-bold text-parchment-600 block">Class Hit Die: 1d{classHitDie}</span>
+                                <span className="text-xl font-header font-black text-dragon-darkRed mt-1 block">
+                                  +{fixedHpGain} HP (Average {Math.floor(classHitDie / 2) + 1} + {conModifier} CON)
+                                </span>
+                             </div>
+                          </div>
+                       </div>
 
-<motion.div
-                          initial={{ x: 20, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          transition={{ delay: 0.5 }}
-                          className="bg-black/10 p-5 rounded-sm text-center relative group overflow-hidden"
-                        >
-                           <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-2 block">Task Proficiency</span>
-                           <div className="flex items-center justify-center gap-3">
-                              <GameIcon name="award" size={24} color="#D4AF37" className="drop-shadow-smAlpha" />
-                              <span className="text-3xl font-header font-black text-dragon-darkRed">
-                                 +{Math.floor(2 + (levelUpResult.newLevel - 1) / 4)}
-                              </span>
-                           </div>
-                           <span className="text-[8px] font-bold text-dragon-gold/60 uppercase tracking-widest mt-1">Tier Advancement</span>
-                        </motion.div>
-                      </div>
+                       <div className="space-y-4">
+                          <div className="flex items-center gap-4">
+                             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
+                             <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-[0.3em] italic">
+                               Level {session.targetLevel} Grants
+                             </span>
+                             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dragon-darkRed/20" />
+                          </div>
+
+                          {session.features.map((feat, idx) => {
+                            const descLines = Array.isArray(feat.desc) ? feat.desc : [feat.desc || ''];
+                            return (
+                              <div key={feat.index || idx} className="group bg-gradient-to-r from-black/5 to-transparent p-4 rounded-sm flex gap-4 items-start border-l-4 border-dragon-gold/40">
+                                <div className="w-10 h-10 bg-white/20 rounded border border-dragon-gold/10 flex items-center justify-center shrink-0 mt-0.5">
+                                  <GameIcon name={getFeatureIcon(feat.index, feat.name)} size={22} color="#D4AF37" fallbackName="award" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="text-base font-header font-black text-dragon-darkRed uppercase tracking-widest">{feat.name}</h4>
+                                  <div className="space-y-1 mt-1">
+                                    {descLines.filter(Boolean).map((line: string, lIdx: number) => (
+                                      <p key={lIdx} className="text-[11px] text-parchment-700 leading-relaxed font-medium">{line}</p>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                       </div>
                     </div>
+                  )}
 
-                    {/* Spell Slots Advancement */}
-                    {(() => {
-                        const oldSlots = calculateMaxSpellSlots(character);
-                        
-                        // Find current subclass selection in feature choices
-                        let newSubclass = character.subclass;
-                        Object.entries(featureChoices).forEach(([key, val]) => {
-                          const k = key.toLowerCase();
-                          if ((k.includes('archetype') || k.includes('subclass') || k.includes('tradition') || k.includes('circle') || k.includes('oath') || k.includes('college') || k.includes('origin') || k.includes('patron')) && val[0]) {
-                            newSubclass = val[0];
-                          }
-                        });
+                  {/* STEP 2: Feature Choices */}
+                  {activeStep.id === 'choices' && (
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                         <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
+                         <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-[0.3em] italic">
+                           Specialty Choices
+                         </span>
+                         <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dragon-darkRed/20" />
+                      </div>
 
-                        const newCharacter = { ...character, level: levelUpResult.newLevel, subclass: newSubclass };
-                        const newSlots = calculateMaxSpellSlots(newCharacter as any);
-                        
-                        const slotLevels = Array.from(new Set([...Object.keys(oldSlots), ...Object.keys(newSlots)]))
-                          .sort((a, b) => parseInt(a) - parseInt(b));
-                          
-                        const hasChanges = slotLevels.some(lvl => newSlots[lvl] !== oldSlots[lvl]);
-
-                        if (!hasChanges) return null;
+                      {choiceFeatures.map(feat => {
+                        const options = getOptionsForChoice(feat);
+                        const selections = session.choices?.[feat.index] || [];
+                        const limit = getChoiceLimit(feat) || 1;
+                        const isSubclassChoice = feat.feature_specific?.subfeature_options?.type === 'subclass';
 
                         return (
-                          <div className="space-y-4 pt-6">
-                            <div className="flex items-center gap-4">
-                               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
-                               <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-[0.4em] italic">Weave Refinement</span>
-                               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dragon-darkRed/20" />
+                          <div key={feat.index} className="space-y-3 bg-black/5 p-4 rounded border border-dragon-gold/15">
+                            <div className="flex items-center justify-between">
+                              <h4 className="text-sm font-header font-black text-dragon-darkRed uppercase tracking-widest">
+                                {feat.name}
+                              </h4>
+                              <span className="text-xs font-black text-dragon-gold tabular-nums">
+                                {selections.length} / {limit} selected
+                              </span>
                             </div>
-                            <div className="grid grid-cols-5 gap-2">
-                               {slotLevels.map(lvl => {
-                                  const oldVal = oldSlots[lvl] || 0;
-                                  const newVal = newSlots[lvl] || 0;
-                                  const isNew = newVal > oldVal;
-                                  
-                                  return (
-                                    <motion.div 
-                                      key={lvl}
-                                      initial={isNew ? { scale: 0.8, opacity: 0 } : false}
-                                      animate={{ scale: 1, opacity: 1 }}
-                                      className={cn(
-                                        "p-2 rounded-sm border flex flex-col items-center gap-1 transition-all",
-                                        isNew ? "bg-dragon-gold/10 border-dragon-gold shadow-[0_0_15px_rgba(212,175,55,0.2)]" : "bg-black/5 border-transparent"
-                                      )}
-                                    >
-                                       <span className="text-[8px] font-black text-parchment-400 uppercase tracking-tighter">LVL {lvl}</span>
-                                       <div className="flex items-center gap-1.5">
-                                          {isNew && (
-                                            <span className="text-[10px] font-black text-dragon-gold line-through opacity-50">{oldVal}</span>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                              {options.map((opt: any) => {
+                                const isSelected = selections.includes(opt.index);
+                                const description = optionDetails[opt.index] || opt.desc;
+
+                                return (
+                                  <button
+                                    key={opt.index}
+                                    onClick={() => handleToggleChoice(feat.index, opt.index, limit, isSubclassChoice)}
+                                    className={cn(
+                                      "text-left p-3 rounded-sm border-2 transition-all uppercase flex flex-col gap-1 relative overflow-hidden",
+                                      isSelected
+                                        ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-md"
+                                        : "bg-white/40 border-dragon-gold/10 text-parchment-600 hover:bg-white hover:border-dragon-gold/40"
+                                    )}
+                                  >
+                                    <div className="flex items-center justify-between gap-2">
+                                      <div className="flex items-center gap-3">
+                                        <div className={cn(
+                                          "w-4 h-4 rounded-sm border-2 shrink-0 flex items-center justify-center transition-all",
+                                          isSelected ? "bg-dragon-gold border-dragon-gold rotate-45" : "bg-transparent border-dragon-darkRed/20"
+                                        )}>
+                                          {isSelected && (
+                                            <span className="-rotate-45 text-[10px] text-dragon-darkRed font-black">✓</span>
                                           )}
-                                          <span className={cn("text-lg font-header font-black", isNew ? "text-dragon-gold" : "text-dragon-darkRed")}>
-                                            {newVal}
-                                          </span>
-                                       </div>
-                                       {isNew && (
-                                          <motion.div 
-                                            animate={{ opacity: [0, 1, 0] }}
-                                            transition={{ duration: 2, repeat: Infinity }}
-                                            className="text-[7px] font-black text-dragon-gold uppercase tracking-widest"
-                                          >
-                                            NEW SLOT
-                                          </motion.div>
-                                       )}
-                                    </motion.div>
-                                  );
-                               })}
+                                        </div>
+                                        <span className="font-header font-black tracking-wider text-xs">
+                                          {opt.name.replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '')}
+                                        </span>
+                                      </div>
+                                    </div>
+
+                                    {description && (
+                                      <p className={cn(
+                                        "text-[10px] leading-relaxed font-medium ml-7 normal-case",
+                                        isSelected ? "text-dragon-gold/80" : "text-parchment-500"
+                                      )}>
+                                        {description}
+                                      </p>
+                                    )}
+                                  </button>
+                                );
+                              })}
                             </div>
                           </div>
                         );
-                    })()}
-                  </div>
+                      })}
+                    </div>
+                  )}
 
-                  {/* RIGHT PANEL: Features & ASI */}
-                  <div className="space-y-10">
-                    {/* New Features */}
-                    {levelUpResult.features.length > 0 && (
-                      <div className="space-y-5">
-                        <div className="flex items-center gap-4">
-                           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
-                           <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-[0.4em] italic">Features Gained</span>
-                           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dragon-darkRed/20" />
+                  {/* STEP 3: ASI Allocation */}
+                  {activeStep.id === 'asi' && (
+                    <div className="space-y-6">
+                      <div className="flex items-center justify-between border-b border-dragon-darkRed/10 pb-3">
+                        <div className="flex flex-col">
+                          <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">
+                            Ability Score Improvement
+                          </span>
+                          <span className="text-[10px] font-bold text-parchment-500 uppercase tracking-widest">
+                            Allocate 2 attribute points total
+                          </span>
                         </div>
-                        <div className="grid gap-4">
-                           {[...expandedMainFeatures, ...subclassFeatures].map((feat, idx) => {
-                             const options = getOptionsForChoice(feat);
-                             const selections = featureChoices[feat.index] || [];
-                             const isSubclassFeature = subclassFeatures.some(sf => sf.index === feat.index);
-                             const limit = getChoiceLimit(feat) || (isExpertise(feat) ? 2 : 0);
-                             const hasChoice = (options.length > 0) || (isExpertise(feat) && options.length > 0);
-                             const featDescLines = Array.isArray(feat.full_desc) ? feat.full_desc : [feat.desc || ''];
-
-                             return (
-                               <motion.div 
-                                 key={feat.index} 
-                                 initial={{ x: 20, opacity: 0 }}
-                                 animate={{ x: 0, opacity: 1 }}
-                                 transition={{ delay: 0.3 + (idx * 0.1) }}
-                                 className="flex flex-col gap-1"
-                               >
-                                 <div className={cn(
-                                   "group bg-gradient-to-r from-black/5 to-transparent p-4 rounded-sm flex gap-5 items-start relative transition-all hover:bg-black/10 border-l-4",
-                                   isSubclassFeature ? "border-dragon-red/60 bg-dragon-red/5" : "border-dragon-gold/40"
-                                 )}>
-                                   <div className="w-12 h-12 bg-white/20 rounded border border-dragon-gold/10 flex items-center justify-center shrink-0 shadow-inner group-hover:scale-105 transition-transform mt-1">
-                                      <GameIcon name={getFeatureIcon(feat.index, feat.name)} size={26} color={isSubclassFeature ? "#8B0000" : "#D4AF37"} fallbackName="award" />
-                                   </div>
-                                   <div className="flex-1 min-w-0">
-                                      <div className="flex items-center gap-2 mb-2">
-                                        <h4 className="text-lg font-header font-black text-dragon-darkRed uppercase leading-none tracking-widest">{feat.name}</h4>
-                                        {isSubclassFeature && (
-                                          <span className="text-[7px] font-black bg-dragon-red/10 text-dragon-red px-1.5 py-0.5 rounded-full uppercase tracking-widest">Archetype Path</span>
-                                        )}
-                                      </div>
-                                      <div className="space-y-1.5">
-                                        {featDescLines.filter(Boolean).map((line: string, lIdx: number) => (
-                                          <p key={lIdx} className="text-[11px] text-parchment-700 leading-relaxed font-medium opacity-90">{line}</p>
-                                        ))}
-                                      </div>
-                                   </div>
-                                 </div>
-
-                                 {/* Choice Selection UI */}
-                                 {hasChoice && (
-                                   <div className="mt-2 mb-6 ml-6 pl-8 border-l-2 border-dragon-gold/20 space-y-5 py-2">
-                                     <div className="flex items-center justify-between">
-                                       <div className="flex flex-col">
-                                         <span className="text-[13px] font-black text-dragon-darkRed uppercase tracking-[0.2em]">
-                                            Select Specialty
-                                         </span>
-                                         <span className="text-[10px] font-bold text-parchment-500 uppercase tracking-widest">
-                                           Choose {limit} option{limit > 1 ? 's' : ''} to manifest
-                                         </span>
-                                       </div>
-                                       
-                                       <div className="flex items-center gap-3">
-                                         <div className="text-[14px] font-black text-dragon-darkRed tabular-nums">
-                                           {selections.length} / {limit}
-                                         </div>
-                                         {selections.length < limit && (
-                                           <motion.div 
-                                             animate={{ scale: [1, 1.1, 1] }}
-                                             transition={{ duration: 1.5, repeat: Infinity }}
-                                             className="flex items-center gap-2 px-2 py-1 bg-dragon-red/10 rounded-sm"
-                                           >
-                                             <div className="w-1.5 h-1.5 rounded-full bg-dragon-red shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-                                             <span className="text-[9px] font-black text-dragon-red uppercase tracking-widest">Awaiting Selection</span>
-                                           </motion.div>
-                                         )}
-                                       </div>
-                                     </div>
-
-                                     <div className="grid grid-cols-1 gap-3">
-                                       {options.map((opt: any) => {
-                                         const isSelected = selections.includes(opt.index);
-                                         const description = optionDetails[opt.index] || opt.desc;
-
-                                         return (
-                                           <button
-                                             key={opt.index}
-                                             onClick={() => handleToggleChoice(feat.index, opt.index, limit)}
-                                             className={cn(
-                                               "group/opt text-left p-4 rounded-sm border-2 transition-all uppercase flex flex-col gap-2 relative overflow-hidden",
-                                               isSelected 
-                                                 ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-[0_10px_20px_-5px_rgba(139,0,0,0.4)]" 
-                                                 : "bg-white/40 border-dragon-gold/10 text-parchment-600 hover:bg-white hover:border-dragon-gold/40 hover:translate-x-1"
-                                             )}
-                                           >
-                                             <div className="flex items-center justify-between gap-4 relative z-10 w-full">
-                                               <div className="flex items-center gap-4">
-                                                 <div className={cn(
-                                                   "w-5 h-5 rounded-sm border-2 shrink-0 flex items-center justify-center transition-all",
-                                                   isSelected ? "bg-dragon-gold border-dragon-gold rotate-45" : "bg-transparent border-dragon-darkRed/20 group-hover/opt:border-dragon-darkRed/40"
-                                                 )}>
-                                                   {isSelected && (
-                                                     <motion.div 
-                                                       initial={{ scale: 0 }}
-                                                       animate={{ scale: 1 }}
-                                                       className="-rotate-45"
-                                                     >
-                                                       <GameIcon name="check" size={12} color="#8B0000" />
-                                                     </motion.div>
-                                                   )}
-                                                 </div>
-                                                 <div className="flex items-center gap-3">
-                                                   <GameIcon name={getFeatureIcon(opt.index, opt.name)} size={16} color={isSelected ? "#D4AF37" : "#8B0000"} className="opacity-60 group-hover/opt:opacity-100 transition-opacity" fallbackName="award" />
-                                                   <span className="font-header font-black tracking-widest text-sm">
-                                                     {opt.name.replace(/fighting style:\s*/i, '')
-                                                              .replace(/expertise:\s*/i, '')
-                                                              .replace(/martial archetype:\s*/i, '')
-                                                              .replace(/archetype:\s*/i, '')
-                                                              .replace(/arcane tradition:\s*/i, '')
-                                                              .replace(/druid circle:\s*/i, '')
-                                                              .replace(/sacred oath:\s*/i, '')
-                                                              .replace(/ranger archetype:\s*/i, '')
-                                                              .replace(/monastic tradition:\s*/i, '')
-                                                              .replace(/bard college:\s*/i, '')
-                                                              .replace(/otherworldly patron:\s*/i, '')
-                                                              .replace(/sorcerous origin:\s*/i, '')
-                                                     }
-                                                   </span>
-                                                 </div>
-                                               </div>
-                                             </div>
-                                             
-                                             {description && (
-                                               <div className={cn(
-                                                 "text-[10px] leading-relaxed font-medium transition-colors ml-9 normal-case",
-                                                 isSelected ? "text-dragon-gold/80" : "text-parchment-500"
-                                               )}>
-                                                 {description}
-                                               </div>
-                                             )}
-
-                                             {isSelected && (
-                                               <motion.div 
-                                                 layoutId={`check-${feat.index}`}
-                                                 className="absolute right-0 top-0 bottom-0 w-1 bg-dragon-gold"
-                                               />
-                                             )}
-                                           </button>
-                                         );
-                                       })}
-                                     </div>
-                                   </div>
-                                 )}
-                               </motion.div>
-                             );
-                           })}
+                        <div className="px-4 py-2 bg-dragon-darkRed text-dragon-gold rounded-sm border border-dragon-gold text-xs font-black">
+                          {pointsRemaining} PTS REMAINING
                         </div>
                       </div>
-                    )}
 
-                    {/* ASI Improvement UI */}
-                    {levelUpResult.hasASI && (
-                      <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="space-y-8 pt-10 border-t border-dragon-darkRed/10"
-                      >
-                         <div className="flex items-center justify-between">
-                           <div className="flex flex-col gap-1">
-                              <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-[0.4em]">Ability Score Improvement</span>
-                              <span className="text-[11px] text-parchment-500 font-bold uppercase tracking-widest">Apply points to evolve core attributes</span>
-                           </div>
-                           <div className="px-5 py-3 bg-dragon-darkRed text-dragon-gold rounded-sm border-2 border-dragon-gold text-[13px] font-black shadow-[0_10px_20px_rgba(0,0,0,0.2)]">
-                              {points} PTS
-                           </div>
-                         </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {STATS.map(stat => {
+                          const currentInc = session.statIncreases?.[stat.id] || 0;
+                          const baseVal = (character.stats as any)[stat.id] || 10;
+                          const newVal = baseVal + currentInc;
 
-                         <div className="grid grid-cols-1 gap-4">
-                            {STATS.map(stat => {
-                              const val = tempStats[stat.id] || 10;
-                              const origVal = originalStats[stat.id] || 10;
-                              const diff = val - origVal;
-                              
-                              return (
-                                <div key={stat.id} className="bg-black/5 p-4 rounded-sm flex items-center justify-between group hover:bg-black/10 transition-all border-b border-transparent hover:border-dragon-gold/20">
-                                   <div className="flex items-center gap-5">
-                                      <div className="w-12 h-12 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/5 group-hover:bg-dragon-gold/10 transition-all shrink-0">
-                                          <GameIcon name={stat.abbr.toLowerCase() as any} size={24} color="#8B0000" />
-                                      </div>
-                                      <div>
-                                         <div className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-1">{stat.name}</div>
-                                         <div className="flex items-baseline gap-3">
-                                            <span className="text-3xl font-header font-black text-dragon-darkRed tabular-nums">{val}</span>
-                                            {diff > 0 && (
-                                              <motion.span 
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: 1 }}
-                                                className="text-xs font-black text-green-600 px-1.5 py-0.5 bg-green-100 rounded-full"
-                                              >
-                                                +{diff}
-                                              </motion.span>
-                                            )}
-                                         </div>
-                                      </div>
-                                   </div>
-                                   
-                                   <div className="flex items-center gap-3">
-                                      <button 
-                                        onClick={() => handleStatChange(stat.id, -1)}
-                                        disabled={val <= origVal}
-                                        className="w-10 h-10 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-5 transition-all font-black text-lg shadow-sm"
-                                      >
-                                        -
-                                      </button>
-                                      <button 
-                                        onClick={() => handleStatChange(stat.id, 1)}
-                                        disabled={points <= 0 || val >= 20}
-                                        className="w-12 h-12 rounded-full bg-dragon-gold/20 border-2 border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-5 transition-all font-black text-2xl shadow-md"
-                                      >
-                                        +
-                                      </button>
-                                   </div>
+                          return (
+                            <div key={stat.id} className="bg-black/5 p-4 rounded-sm flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/10">
+                                  <GameIcon name={stat.abbr.toLowerCase() as any} size={20} color="#8B0000" />
                                 </div>
-                              );
-                            })}
-                         </div>
-                      </motion.div>
-                    )}
-                  </div>
+                                <div>
+                                  <span className="text-xs font-black text-parchment-400 uppercase tracking-wider block">{stat.name}</span>
+                                  <div className="flex items-baseline gap-2">
+                                    <span className="text-2xl font-header font-black text-dragon-darkRed">{newVal}</span>
+                                    {currentInc > 0 && (
+                                      <span className="text-xs font-black text-green-600">+{currentInc}</span>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="flex items-center gap-2">
+                                <button
+                                  onClick={() => handleStatChange(stat.id, -1)}
+                                  disabled={currentInc <= 0}
+                                  className="w-9 h-9 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-20 font-black"
+                                >
+                                  -
+                                </button>
+                                <button
+                                  onClick={() => handleStatChange(stat.id, 1)}
+                                  disabled={pointsRemaining <= 0 || newVal >= 20}
+                                  className="w-9 h-9 rounded-full bg-dragon-gold/20 border border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-20 font-black"
+                                >
+                                  +
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
                </div>
             </div>
 
-            {/* Evolution Seal Button (Fixed) */}
-            <AnimatePresence>
-              {isComplete() && animationsComplete && (
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.8, y: 50 }}
-                  className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[2100]"
+            {/* Step Navigation Controls Footer */}
+            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[2100] flex items-center gap-4">
+              {currentStepIndex > 0 && (
+                <button
+                  onClick={handlePrevStep}
+                  className="px-6 py-2.5 rounded-full bg-black/60 border border-dragon-gold/40 text-parchment-200 text-xs font-black uppercase tracking-widest hover:bg-black/80 transition-all"
                 >
-                  <button 
-                    onClick={handleComplete}
-                    className="group relative flex flex-col items-center gap-2"
-                  >
-                     {/* Outer Ring Glow */}
-                     <div className="absolute inset-0 bg-dragon-gold/20 blur-2xl rounded-full animate-pulse" />
-                     
-                     <div className="w-24 h-24 rounded-full bg-dragon-darkRed border-4 border-dragon-gold shadow-[0_0_40px_rgba(212,175,55,0.4)] flex items-center justify-center transition-all hover:scale-110 active:scale-95 group-hover:shadow-[0_0_60px_rgba(212,175,55,0.6)]">
-                        <GameIcon name="advance" size={48} color="#D4AF37" className="drop-shadow-lg" />
-                        
-                        {/* Inner Spinning Ring */}
-                        <motion.div 
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                          className="absolute inset-1 rounded-full border border-dashed border-dragon-gold/30"
-                        />
-                     </div>
-                     
-                     <motion.div 
-                       initial={{ opacity: 0 }}
-                       animate={{ opacity: 1 }}
-                       transition={{ delay: 0.5 }}
-                       className="px-4 py-1.5 bg-black/80 backdrop-blur-sm rounded-sm border border-dragon-gold/20 shadow-xl"
-                     >
-                        <span className="text-[10px] font-black text-dragon-gold uppercase tracking-[0.4em] whitespace-nowrap">Manifest Evolution</span>
-                     </motion.div>
-                  </button>
-                </motion.div>
+                  Previous Step
+                </button>
               )}
-            </AnimatePresence>
+
+              {!isLastStep ? (
+                <button
+                  onClick={handleNextStep}
+                  className="px-8 py-3 rounded-full bg-dragon-darkRed border-2 border-dragon-gold shadow-[0_0_30px_rgba(212,175,55,0.4)] text-xs font-black text-dragon-gold uppercase tracking-[0.2em] flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
+                >
+                  <span>Continue</span>
+                  <GameIcon name="advance" size={18} color="#D4AF37" />
+                </button>
+              ) : (
+                <button
+                  onClick={handleCommit}
+                  className="group relative flex flex-col items-center gap-2"
+                >
+                   <div className="absolute inset-0 bg-dragon-gold/20 blur-xl rounded-full animate-pulse" />
+                   <div className="px-8 py-3 rounded-full bg-dragon-darkRed border-2 border-dragon-gold shadow-[0_0_30px_rgba(212,175,55,0.4)] flex items-center gap-3 transition-all hover:scale-105 active:scale-95">
+                      <GameIcon name="advance" size={24} color="#D4AF37" />
+                      <span className="text-xs font-black text-dragon-gold uppercase tracking-[0.3em]">Manifest Evolution</span>
+                   </div>
+                </button>
+              )}
+            </div>
           </div>
         </motion.div>
       </div>

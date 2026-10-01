@@ -117,8 +117,8 @@ class AtlasService {
   private traitCache: Record<string, AtlasTrait> = {};
   private shopArchetypes: any = null;
   private transportCache: Record<string, AtlasTransport> = {};
-  private repo = REPO;
-  private branch = BRANCH;
+  private get repo() { return REPO; }
+  private get branch() { return BRANCH; }
 
   private isJson(text: string): boolean {
     if (!text) return false;

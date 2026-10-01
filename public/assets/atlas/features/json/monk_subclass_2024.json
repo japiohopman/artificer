@@ -10,5 +10,11 @@
   "desc": [
     "Choose a Monk subclass (Warrior of Mercy, Warrior of Shadow, Warrior of the Elements, or Warrior of Open Hand)."
   ],
-  "url": "/assets/atlas/features/json/monk_subclass_2024.json"
+  "url": "/assets/atlas/features/json/monk_subclass_2024.json",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }

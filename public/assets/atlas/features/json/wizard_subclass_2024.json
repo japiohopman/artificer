@@ -10,5 +10,11 @@
   "desc": [
     "You gain a Wizard subclass of your choice. A subclass is a specialization that grants you features at certain Wizard levels (levels 3, 6, 10, and 14)."
   ],
-  "url": "/assets/atlas/features/json/wizard_subclass_2024.json"
+  "url": "/assets/atlas/features/json/wizard_subclass_2024.json",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }

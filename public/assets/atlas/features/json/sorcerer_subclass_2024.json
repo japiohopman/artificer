@@ -10,5 +10,11 @@
   "desc": [
     "Choose a Sorcerer subclass (Aberrant Sorcery, Clockwork Sorcery, Draconic Sorcery, or Wild Magic Sorcery)."
   ],
-  "url": "/assets/atlas/features/json/sorcerer_subclass_2024.json"
+  "url": "/assets/atlas/features/json/sorcerer_subclass_2024.json",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }

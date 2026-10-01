@@ -10,5 +10,11 @@
   "desc": [
     "You gain a Fighter subclass of your choice. A subclass is a specialization that grants you features at certain Fighter levels (levels 3, 7, 10, and 15)."
   ],
-  "url": "/assets/atlas/features/json/fighter_subclass_2024.json"
+  "url": "/assets/atlas/features/json/fighter_subclass_2024.json",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }
