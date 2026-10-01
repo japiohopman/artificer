@@ -18,9 +18,9 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 | 4 | #376 | Close remaining 2024 runtime ruleset gaps | **completed — merged** |
 | 5 | #396 | Restore runtime Species selection data loading | **completed — merged** |
 | 6 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **completed — verified** |
-| 7 | #401 | Align player-controlled level-up progression with Character Creator and Atlas semantics | **ready — current level-up implementation** |
-| 8 | #382 | Integrate canonical level-up HP/dice resolution | after #401 |
-| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #401; sequence after #382 where the canonical HP flow is required |
+| 7 | #401 | Align player-controlled level-up progression with Character Creator and Atlas semantics | **completed — merged** |
+| 8 | #382 | Integrate canonical level-up HP/dice resolution | **ready — next implementation** |
+| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #382 |
 
 This order is intentionally not a raw priority sort. It is the current foundation sequence chosen from repository evidence and dependency risk. Implementation scope belongs in each Issue.
 
