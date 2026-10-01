@@ -146,7 +146,7 @@ class DiceService {
   /**
    * Roll dice with 3D animation
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
+  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string, targetValue?: number): Promise<DiceResult | null> {
     if (this.isRolling) {
       console.warn(`[DiceService] Roll request ignored: dice system is busy (${this.status}).`);
       return null;
@@ -154,7 +154,7 @@ class DiceService {
 
     this.setStatus('rolling');
 
-    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}`);
+    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}, targetValue: ${targetValue}`);
 
     // Play roll sound effect
     import('../services/soundService').then(({ soundService }) => {
@@ -196,17 +196,22 @@ class DiceService {
 
       // Use the parser to get the final computed result object
       const finalResults = this.parser.parseFinalResults(results);
-      const rolls = this.extractRolls(finalResults);
+      let rolls = this.extractRolls(finalResults);
+
+      if (typeof targetValue === 'number' && rolls.length > 0) {
+        rolls = rolls.map((r, idx) => idx === 0 ? { ...r, result: targetValue } : r);
+      }
       
       // Calculate modifier
       let rollSum = 0;
       rolls.filter(r => r.valid !== false).forEach(r => rollSum += r.result);
       const modifier = finalResults.value - rollSum;
+      const totalValue = typeof targetValue === 'number' && rolls.length === 1 ? targetValue : finalResults.value;
 
       const diceResult: DiceResult = {
         id: crypto.randomUUID(),
         notation,
-        total: finalResults.value,
+        total: totalValue,
         label,
         rolls,
         modifier,
