@@ -160,17 +160,17 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     return { valid: false, reason: `ASI grant state does not match canonical level-up target.` };
   }
 
-  // Ensure exact 1:1 match of session features against canonical features (no extra, no missing)
-  const canonicalFeatureIndices = canonicalStep.features.map(f => f.index);
-  const sessionFeatureIndices = session.features.map(f => f.index);
+  // Exact 1:1 multiset comparison of session feature indices against canonical feature indices
+  const canonicalFeatureIndices = canonicalStep.features.map(f => f.index).sort();
+  const sessionFeatureIndices = session.features.map(f => f.index).sort();
 
-  if (session.features.length !== canonicalStep.features.length) {
-    return { valid: false, reason: `Session feature count (${session.features.length}) does not match canonical target feature count (${canonicalStep.features.length}).` };
+  if (canonicalFeatureIndices.length !== sessionFeatureIndices.length) {
+    return { valid: false, reason: `Session feature count (${sessionFeatureIndices.length}) does not match canonical target feature count (${canonicalFeatureIndices.length}).` };
   }
 
-  for (const sessionFeat of session.features) {
-    if (!canonicalFeatureIndices.includes(sessionFeat.index)) {
-      return { valid: false, reason: `Feature "${sessionFeat.name || sessionFeat.index}" is not a valid grant for level ${session.targetLevel}.` };
+  for (let i = 0; i < canonicalFeatureIndices.length; i++) {
+    if (canonicalFeatureIndices[i] !== sessionFeatureIndices[i]) {
+      return { valid: false, reason: `Session features do not match canonical level ${session.targetLevel} grants exactly.` };
     }
   }
 
