@@ -7,7 +7,7 @@ import { normalizeImageUrl, fetchSubclassesList } from '../../services/storageSe
 import { extractStructuredOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
-import { CLASS_DATA } from '../../lib/characterUtils';
+import { diceService } from '../../dice_roller/diceService';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useAudioStore } from '../../store/useAudioStore';
 
@@ -55,13 +55,44 @@ export const LevelUpOverlay: React.FC = () => {
   const [optionDetails, setOptionDetails] = useState<Record<string, string>>({});
   const [subclassOptions, setSubclassOptions] = useState<any[]>([]);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [isRollingHp, setIsRollingHp] = useState(false);
 
   const session = activeLevelUpSession;
   const character = characters.find(c => c.id === session?.characterId);
 
   const conModifier = Math.floor((((character?.stats?.con || 10) + (session?.statIncreases?.con || 0) - 10)) / 2);
-  const classHitDie = character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8;
-  const fixedHpGain = session?.hpIncrease || Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
+  const classHitDie = session?.classHitDie || 8;
+  const hpRollResult = session?.hpRollResult ?? Math.floor(classHitDie / 2) + 1;
+  const hpGain = session?.hpIncrease ?? Math.max(1, hpRollResult + conModifier);
+
+  const handleInteractiveRollHp = async () => {
+    if (isRollingHp || !session) return;
+    setIsRollingHp(true);
+    soundService.playEffect('DICE_ROLL');
+    try {
+      const result = await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000');
+      const bgFallback = diceService.rollBackground(`1d${classHitDie}`, 'Level Up HP Roll');
+      const rolledVal = result?.rolls[0]?.result ?? bgFallback.rolls[0]?.result ?? (Math.floor(classHitDie / 2) + 1);
+      const newHpGain = Math.max(1, rolledVal + conModifier);
+      updateLevelUpSession({
+        hpRollResult: rolledVal,
+        hpIncrease: newHpGain,
+        hpMethod: 'roll'
+      });
+    } catch (e) {
+      console.warn('[LevelUpOverlay] HP 3D roll fallback:', e);
+      const bgResult = diceService.rollBackground(`1d${classHitDie}`, 'Level Up HP Roll');
+      const rolledVal = bgResult.rolls[0]?.result ?? (Math.floor(classHitDie / 2) + 1);
+      const newHpGain = Math.max(1, rolledVal + conModifier);
+      updateLevelUpSession({
+        hpRollResult: rolledVal,
+        hpIncrease: newHpGain,
+        hpMethod: 'roll'
+      });
+    } finally {
+      setIsRollingHp(false);
+    }
+  };
 
   useEffect(() => {
     if (session && character) {
@@ -150,11 +181,18 @@ export const LevelUpOverlay: React.FC = () => {
     if (delta < 0 && currentVal <= 0) return;
     if (delta > 0 && baseVal + currentVal >= 20) return;
 
+    const newIncreases = {
+      ...currentIncreases,
+      [statId]: currentVal + delta
+    };
+
+    const newConVal = (character.stats?.con || 10) + (newIncreases.con || 0);
+    const newConMod = Math.floor((newConVal - 10) / 2);
+    const updatedHpIncrease = Math.max(1, (session.hpRollResult ?? Math.floor(classHitDie / 2) + 1) + newConMod);
+
     updateLevelUpSession({
-      statIncreases: {
-        ...currentIncreases,
-        [statId]: currentVal + delta
-      }
+      statIncreases: newIncreases,
+      hpIncrease: updatedHpIncrease
     });
   };
 
@@ -348,13 +386,34 @@ export const LevelUpOverlay: React.FC = () => {
                              </div>
                           </div>
 
-                          <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/15 space-y-2">
-                             <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em] block">Hit Point Progression</span>
-                             <div className="p-3 bg-white/40 rounded-sm border border-dragon-gold/20 text-center">
-                                <span className="text-xs font-bold text-parchment-600 block">Class Hit Die: 1d{classHitDie}</span>
-                                <span className="text-xl font-header font-black text-dragon-darkRed mt-1 block">
-                                  +{fixedHpGain} HP (Average {Math.floor(classHitDie / 2) + 1} + {conModifier} CON)
+                          <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/15 space-y-3">
+                             <div className="flex items-center justify-between">
+                               <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em]">Hit Point Advancement</span>
+                               <button
+                                 onClick={handleInteractiveRollHp}
+                                 disabled={isRollingHp}
+                                 className="px-3 py-1 bg-dragon-darkRed text-dragon-gold hover:bg-dragon-gold hover:text-dragon-darkRed border border-dragon-gold rounded text-[10px] font-black uppercase tracking-wider transition-all disabled:opacity-50 flex items-center gap-1.5 shadow-sm"
+                               >
+                                 <GameIcon name="dice" size={14} color="currentColor" />
+                                 <span>{isRollingHp ? 'Rolling...' : `Roll 1d${classHitDie}`}</span>
+                               </button>
+                             </div>
+
+                             <div className="p-4 bg-white/50 rounded-sm border border-dragon-gold/30 text-center relative overflow-hidden">
+                                <span className="text-xs font-bold text-parchment-600 block uppercase tracking-wider">
+                                  Class Hit Die: 1d{classHitDie}
                                 </span>
+                                <div className="text-xs font-medium text-parchment-700 mt-1">
+                                  Rolled <span className="font-bold text-dragon-darkRed">{hpRollResult}</span> + <span className="font-bold text-dragon-darkRed">{conModifier}</span> CON Modifier
+                                </div>
+                                <motion.div
+                                  key={`${hpRollResult}-${conModifier}-${hpGain}`}
+                                  initial={{ scale: 0.8, opacity: 0 }}
+                                  animate={{ scale: 1, opacity: 1 }}
+                                  className="text-3xl font-header font-black text-dragon-darkRed mt-2 drop-shadow-[0_0_10px_rgba(212,175,55,0.3)] flex items-center justify-center gap-1"
+                                >
+                                  <span>+{hpGain} MAX HP</span>
+                                </motion.div>
                              </div>
                           </div>
                        </div>

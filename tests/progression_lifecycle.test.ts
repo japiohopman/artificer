@@ -126,7 +126,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(garethLvl3.subclass).toBe('champion');
   });
 
-  test('ASI grant at level 4 enforces allocating exactly 2 points before committing', async () => {
+  test('ASI grant at level 4 enforces allocating exactly 2 points and adjusts CON modifier for HP gain correctly', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test_fighter_1', 2000); // 2950 XP total -> eligible for Lvl 4
 
@@ -134,19 +134,55 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(sessionLvl4?.targetLevel).toBe(4);
     expect(sessionLvl4?.hasASI).toBe(true);
 
+    const initialHpRoll = sessionLvl4!.hpRollResult;
+    const initialHpGain = sessionLvl4!.hpIncrease;
+
     const commitWithoutASI = await store.commitLevelUpSession();
     expect(commitWithoutASI).toBe(false);
 
+    // Gareth has base CON = 14 (+2 mod). Allocating +2 to CON brings CON to 16 (+3 mod, +1 delta).
+    const newConMod = Math.floor((16 - 10) / 2); // 3
+    const expectedUpdatedHpGain = Math.max(1, initialHpRoll + newConMod);
+
     store.updateLevelUpSession({
-      statIncreases: { str: 1, con: 1 }
+      statIncreases: { con: 2 },
+      hpIncrease: expectedUpdatedHpGain
     });
 
     const commitLvl4 = await store.commitLevelUpSession();
     expect(commitLvl4).toBe(true);
     const garethLvl4 = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_1')!;
     expect(garethLvl4.level).toBe(4);
-    expect(garethLvl4.stats.str).toBe(17);
-    expect(garethLvl4.stats.con).toBe(15);
+    expect(garethLvl4.stats.con).toBe(16);
+  });
+
+  test('Session roll remains stable across session updates and rerenders without re-rolling', async () => {
+    const cleric: any = {
+      id: 'test_cleric_stability',
+      name: 'Cadderly',
+      class: 'Cleric',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 12, dex: 10, con: 14, int: 12, wis: 16, cha: 10 }
+    };
+
+    const store = useCharacterStore.getState();
+    store.addCharacter(cleric);
+
+    const session = await store.startLevelUpSession('test_cleric_stability');
+    expect(session).not.toBeNull();
+
+    const rolledValue = session!.hpRollResult;
+    const initialHpIncrease = session!.hpIncrease;
+
+    // Mutate unrelated session state (e.g. choices)
+    store.updateLevelUpSession({ choices: { test_feature: ['choice_a'] } });
+
+    const updatedSession = useCharacterStore.getState().activeLevelUpSession;
+    expect(updatedSession?.hpRollResult).toBe(rolledValue);
+    expect(updatedSession?.hpIncrease).toBe(initialHpIncrease);
   });
 
   test('Multi-level eligibility does not silently auto-commit next levels', async () => {
@@ -170,7 +206,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  test('Non-d8 class hit die resolves exact HP gain from class data', async () => {
+  test('Canonical hit die resolution and dice roll calculation for non-d8 classes', async () => {
     const wizard: any = {
       id: 'test_wizard_1',
       name: 'Melf',
@@ -185,8 +221,37 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
     const session = await evaluateNextLevelStep(wizard);
     expect(session).not.toBeNull();
-    // Wizard hit die is d6. Fixed HP gain = floor(6/2) + 1 + conMod(1) = 4 + 1 = 5.
-    expect(session?.hpIncrease).toBe(5);
+    expect(session?.classHitDie).toBe(6);
+    expect(session?.hpRollResult).toBeGreaterThanOrEqual(1);
+    expect(session?.hpRollResult).toBeLessThanOrEqual(6);
+    expect(session?.hpIncrease).toBe(Math.max(1, session!.hpRollResult + 1));
+  });
+
+  test('Minimum HP increase rule enforces at least +1 HP even with negative CON modifier', async () => {
+    const frailBarbarian: any = {
+      id: 'test_barbarian_1',
+      name: 'Conan',
+      class: 'Barbarian',
+      race: 'Human',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 16, dex: 10, con: 4, int: 10, wis: 10, cha: 8 } // CON mod = -3
+    };
+
+    const session = await evaluateNextLevelStep(frailBarbarian);
+    expect(session).not.toBeNull();
+    expect(session?.classHitDie).toBe(12);
+
+    // Force roll result to 1 to test negative CON modifier floor
+    session!.hpRollResult = 1;
+    session!.hpIncrease = Math.max(1, 1 + (-3));
+
+    expect(session!.hpIncrease).toBe(1);
+
+    const validation = await validateLevelUpCommit(frailBarbarian, session!);
+    expect(validation.valid).toBe(true);
   });
 
   test('Existing subclass target-level features are included in level-up grants', async () => {

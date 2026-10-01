@@ -1,17 +1,20 @@
 import { extractStructuredOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
 import { fetchSubclassesList } from '../services/storageService';
+import { diceService } from '../dice_roller/diceService';
 
 export interface ActiveLevelUpSession {
   characterId: string;
   targetLevel: number;
   features: any[];
+  classHitDie: number;
+  hpRollResult: number;
   hpIncrease: number;
   hasASI: boolean;
   statIncreases: Record<string, number>;
   choices: Record<string, string[]>;
   subclassChoice?: string;
-  hpMethod: 'fixed';
+  hpMethod: 'roll' | 'fixed';
   validationError?: string | null;
 }
 
@@ -109,7 +112,10 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
 
   const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
   const classHitDie = classData?.hit_die || levelData.hit_die || 8;
-  const fixedHpGain = Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
+
+  const rollResult = diceService.rollBackground(`1d${classHitDie}`, 'Level Up HP Roll');
+  const hpRollResult = rollResult.rolls[0]?.result || (Math.floor(classHitDie / 2) + 1);
+  const hpGain = Math.max(1, hpRollResult + conModifier);
 
   const prevAsiCount = prevLevelData?.ability_score_bonuses || 0;
   const currentAsiCount = levelData.ability_score_bonuses || 0;
@@ -124,11 +130,13 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
     characterId: character.id,
     targetLevel,
     features: fullFeatures,
-    hpIncrease: fixedHpGain,
+    classHitDie,
+    hpRollResult,
+    hpIncrease: hpGain,
     hasASI,
     statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
     choices: {},
-    hpMethod: 'fixed',
+    hpMethod: 'roll',
     validationError: null
   };
 }
@@ -152,8 +160,25 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     return { valid: false, reason: 'Failed to evaluate canonical level-up step for validation.' };
   }
 
-  if (session.hpIncrease !== canonicalStep.hpIncrease) {
-    return { valid: false, reason: `HP increase ${session.hpIncrease} does not match canonical HP increase ${canonicalStep.hpIncrease}.` };
+  const totalCon = (character.stats?.con || 10) + (session.statIncreases?.con || 0);
+  const conModifier = Math.floor((totalCon - 10) / 2);
+  if (session.classHitDie !== canonicalStep.classHitDie) {
+    return { valid: false, reason: `Class hit die d${session.classHitDie} does not match canonical class hit die d${canonicalStep.classHitDie}.` };
+  }
+
+  if (session.hpMethod === 'fixed') {
+    const expectedFixedHp = Math.max(1, Math.floor(canonicalStep.classHitDie / 2) + 1 + conModifier);
+    if (session.hpIncrease !== expectedFixedHp) {
+      return { valid: false, reason: `Fixed HP increase ${session.hpIncrease} does not match expected average HP increase ${expectedFixedHp}.` };
+    }
+  } else {
+    if (typeof session.hpRollResult !== 'number' || session.hpRollResult < 1 || session.hpRollResult > canonicalStep.classHitDie) {
+      return { valid: false, reason: `Invalid HP roll result ${session.hpRollResult} for d${canonicalStep.classHitDie}.` };
+    }
+    const expectedRolledHp = Math.max(1, session.hpRollResult + conModifier);
+    if (session.hpIncrease !== expectedRolledHp) {
+      return { valid: false, reason: `HP increase ${session.hpIncrease} does not match calculated roll ${session.hpRollResult} + CON mod ${conModifier} (min 1 = ${expectedRolledHp}).` };
+    }
   }
 
   if (session.hasASI !== canonicalStep.hasASI) {

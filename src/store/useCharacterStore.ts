@@ -335,11 +335,11 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       return false;
     }
 
-    // Re-evaluate canonical step to obtain immutable canonical features & HP gain
+    // Re-evaluate canonical step to obtain immutable canonical features & target level
     const canonicalStep = await evaluateNextLevelStep(char);
     if (!canonicalStep) return false;
 
-    const hpGain = canonicalStep.hpIncrease;
+    const hpGain = session.hpIncrease;
 
     const newMaxHp = (char.maxHp || char.hp || 10) + hpGain;
     const newHp = (char.hp || 10) + hpGain;
