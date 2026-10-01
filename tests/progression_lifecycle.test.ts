@@ -1,6 +1,7 @@
-import { describe, test, expect } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import fs from 'fs';
 import path from 'path';
+import { diceService } from '../src/dice_roller/diceService';
 
 // Relative fetch polyfill for Node CLI environment
 if (typeof window === 'undefined') {
@@ -185,6 +186,50 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(updatedSession?.hpIncrease).toBe(initialHpIncrease);
 
     store.cancelLevelUpSession();
+  });
+
+  test('Exactly one authoritative HP roll is performed per active level-up session', async () => {
+    const cleric: any = {
+      id: 'test_cleric_spy',
+      name: 'Uther',
+      class: 'Cleric',
+      level: 1,
+      xp: 300,
+      hp: 12,
+      maxHp: 12,
+      stats: { str: 16, dex: 10, con: 14, int: 10, wis: 12, cha: 14 }
+    };
+
+    const store = useCharacterStore.getState();
+    store.addCharacter(cleric);
+
+    const rollSpy = vi.spyOn(diceService, 'rollBackground');
+    rollSpy.mockClear();
+
+    // 1. evaluateNextLevelStep must be pure and cause 0 rolls
+    await evaluateNextLevelStep(cleric);
+    expect(rollSpy).toHaveBeenCalledTimes(0);
+
+    // 2. startLevelUpSession must perform exactly 1 roll
+    const session = await store.startLevelUpSession('test_cleric_spy');
+    expect(session).not.toBeNull();
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 3. Updating session choices or stat increases must cause 0 additional rolls
+    store.updateLevelUpSession({ statIncreases: { str: 0 } });
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 4. validateLevelUpCommit must cause 0 additional rolls
+    const validation = await validateLevelUpCommit(cleric, useCharacterStore.getState().activeLevelUpSession!);
+    expect(validation.valid).toBe(true);
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 5. commitLevelUpSession must cause 0 additional rolls
+    const commitSuccess = await store.commitLevelUpSession();
+    expect(commitSuccess).toBe(true);
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    rollSpy.mockRestore();
   });
 
   test('Multi-level eligibility does not silently auto-commit next levels', async () => {
