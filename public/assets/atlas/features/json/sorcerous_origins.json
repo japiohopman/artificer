@@ -15,5 +15,10 @@
   "url": "/assets/atlas/features/json/sorcerous_origins.json",
   "updated_at": "2026-07-13T06:30:11.927Z",
   "image": "icons/magic/air/wind-vortex-swirl-purple.webp",
-  "feature_specific": {}
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }

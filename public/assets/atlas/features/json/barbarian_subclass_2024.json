@@ -10,5 +10,11 @@
   "desc": [
     "You choose a Barbarian subclass (Path of the Berserker, Path of the Wild Heart, Path of the Zealot, or Path of the World Tree) that grants features at levels 3, 6, 10, and 14."
   ],
-  "url": "/assets/atlas/features/json/barbarian_subclass_2024.json"
+  "url": "/assets/atlas/features/json/barbarian_subclass_2024.json",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }

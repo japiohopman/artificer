@@ -10,5 +10,11 @@
   "desc": [
     "Choose a Paladin subclass (Oath of Devotion, Oath of Glory, Oath of Ancients, or Oath of Vengeance)."
   ],
-  "url": "/assets/atlas/features/json/paladin_subclass_2024.json"
+  "url": "/assets/atlas/features/json/paladin_subclass_2024.json",
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": 1,
+      "type": "subclass"
+    }
+  }
 }
