@@ -26,7 +26,7 @@ import {
   evaluateNextLevelStep,
   validateLevelUpCommit
 } from '../src/lib/progressionUtils';
-import { extractOptionsFromFeature } from '../src/lib/atlasUtils';
+import { extractStructuredOptionsFromFeature, extractOptionsFromFeature } from '../src/lib/atlasUtils';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -235,14 +235,19 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(validation.reason).toContain('fake_subclass_xyz');
   });
 
-  test('extractOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
+  test('extractStructuredOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
     const proseFeature = {
       index: 'prose_feature_test',
       name: 'Prose Feature',
       desc: ['Choose one from the following options: @UUID[Compendium.dnd5e.feats.Item.123]{Feat A}']
     };
 
-    const options = extractOptionsFromFeature(proseFeature);
+    const options = extractStructuredOptionsFromFeature(proseFeature);
     expect(options.length).toBe(0);
+
+    // Verify extractOptionsFromFeature retains prose options for Character Creator legacy compatibility
+    const legacyOptions = extractOptionsFromFeature(proseFeature);
+    expect(legacyOptions.length).toBe(1);
+    expect(legacyOptions[0].name).toBe('Feat A');
   });
 });

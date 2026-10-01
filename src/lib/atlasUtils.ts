@@ -4,7 +4,11 @@ export interface FeatureOption {
   desc?: string;
 }
 
-export function extractOptionsFromFeature(feat: any): FeatureOption[] {
+/**
+  * Extracts structured options from feature JSON.
+  * Explicitly excludes prose description parsing (@UUID) for strict gameplay choice boundaries (Issue #401).
+  */
+export function extractStructuredOptionsFromFeature(feat: any): FeatureOption[] {
   if (!feat) return [];
 
   // Structure 1: LevelUpOverlay style 'choice'
@@ -87,6 +91,40 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
 
   if (collected.length > 0) {
     return Array.from(new Map(collected.map(item => [item.index, item])).values());
+  }
+
+  return [];
+}
+
+/**
+  * Legacy options extractor for general presentation and Character Creator fallback.
+  * Retains prose @UUID link parsing for legacy/ported content compatibility.
+  */
+export function extractOptionsFromFeature(feat: any): FeatureOption[] {
+  const structured = extractStructuredOptionsFromFeature(feat);
+  if (structured.length > 0) return structured;
+
+  if (feat?.desc) {
+    const descArray = Array.isArray(feat.desc) ? feat.desc : [feat.desc];
+    const uuidOptions: FeatureOption[] = [];
+
+    descArray.forEach((line: string) => {
+      if (typeof line !== 'string') return;
+      const regex = /@UUID\[.*?\]\{(.*?)\}/g;
+      let match;
+      while ((match = regex.exec(line)) !== null) {
+        const name = match[1];
+        const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
+        uuidOptions.push({
+          index,
+          name
+        });
+      }
+    });
+
+    if (uuidOptions.length > 0) {
+      return Array.from(new Map(uuidOptions.map(item => [item.index, item])).values());
+    }
   }
 
   return [];

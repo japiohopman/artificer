@@ -1,4 +1,4 @@
-import { extractOptionsFromFeature, getChoiceLimit } from './atlasUtils';
+import { extractStructuredOptionsFromFeature, extractOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
 import { fetchSubclassesList } from '../services/storageService';
 
@@ -146,8 +146,45 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     return { valid: false, reason: `Target level ${session.targetLevel} does not match character level ${character.level} + 1.` };
   }
 
+  // Re-evaluating expected canonical step to guard against mutated/tampered session state
+  const canonicalStep = await evaluateNextLevelStep(character);
+  if (!canonicalStep) {
+    return { valid: false, reason: 'Failed to evaluate canonical level-up step for validation.' };
+  }
+
+  if (session.hpIncrease !== canonicalStep.hpIncrease) {
+    return { valid: false, reason: `HP increase ${session.hpIncrease} does not match canonical HP increase ${canonicalStep.hpIncrease}.` };
+  }
+
+  if (session.hasASI !== canonicalStep.hasASI) {
+    return { valid: false, reason: `ASI grant state does not match canonical level-up target.` };
+  }
+
+  // Ensure no features in session that do not belong to canonical target level features
+  const canonicalFeatureIndices = canonicalStep.features.map(f => f.index);
+  for (const sessionFeat of session.features) {
+    if (!canonicalFeatureIndices.includes(sessionFeat.index)) {
+      return { valid: false, reason: `Feature "${sessionFeat.name || sessionFeat.index}" is not a valid grant for level ${session.targetLevel}.` };
+    }
+  }
+
   if (session.hasASI) {
-    const pointsAllocated = Object.values(session.statIncreases || {}).reduce((a, b) => a + (b || 0), 0);
+    const validStatKeys = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+    let pointsAllocated = 0;
+    for (const [statKey, inc] of Object.entries(session.statIncreases || {})) {
+      if (!validStatKeys.includes(statKey)) {
+        return { valid: false, reason: `Invalid stat key "${statKey}" in ASI allocation.` };
+      }
+      if (typeof inc !== 'number' || inc < 0 || inc > 2) {
+        return { valid: false, reason: `Invalid ASI point increment ${inc} for ${statKey}.` };
+      }
+      const currentVal = (character.stats as any)[statKey] || 10;
+      if (currentVal + inc > 20) {
+        return { valid: false, reason: `Attribute ${statKey.toUpperCase()} cannot exceed 20.` };
+      }
+      pointsAllocated += inc;
+    }
+
     if (pointsAllocated !== 2) {
       return { valid: false, reason: `Ability Score Improvement requires allocating exactly 2 points (currently allocated: ${pointsAllocated}).` };
     }
@@ -172,7 +209,8 @@ export async function validateLevelUpCommit(character: Character, session: Activ
         }
       }
     } else {
-      const availableOptions = extractOptionsFromFeature(feat);
+      // Enforce strict structured option extraction (ignoring prose @UUID fallback)
+      const availableOptions = extractStructuredOptionsFromFeature(feat);
       if (availableOptions.length > 0) {
         const validIndices = availableOptions.map(o => o.index);
         for (const sel of selected) {
