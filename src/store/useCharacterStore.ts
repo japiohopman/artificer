@@ -291,8 +291,14 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   },
 
   startLevelUpSession: async (characterId: string) => {
+    const { activeLevelUpSession } = get();
     const char = get().characters.find(c => c.id === characterId);
     if (!char) return null;
+
+    const targetLevel = char.level + 1;
+    if (activeLevelUpSession && activeLevelUpSession.characterId === characterId && activeLevelUpSession.targetLevel === targetLevel) {
+      return activeLevelUpSession;
+    }
 
     const session = await evaluateNextLevelStep(char);
     if (session) {

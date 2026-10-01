@@ -141,12 +141,12 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const commitWithoutASI = await store.commitLevelUpSession();
     expect(commitWithoutASI).toBe(false);
 
-    // Gareth has base CON = 14 (+2 mod). Allocating +2 to CON brings CON to 16 (+3 mod, +1 delta).
-    const newConMod = Math.floor((16 - 10) / 2); // 3
+    // Gareth has base STR = 16, CON = 14 (+2 mod). Allocating +1 STR and +1 CON brings STR to 17, CON to 15 (+2 mod).
+    const newConMod = Math.floor((15 - 10) / 2); // 2
     const expectedUpdatedHpGain = Math.max(1, initialHpRoll + newConMod);
 
     store.updateLevelUpSession({
-      statIncreases: { con: 2 },
+      statIncreases: { str: 1, con: 1 },
       hpIncrease: expectedUpdatedHpGain
     });
 
@@ -154,7 +154,8 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(commitLvl4).toBe(true);
     const garethLvl4 = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_1')!;
     expect(garethLvl4.level).toBe(4);
-    expect(garethLvl4.stats.con).toBe(16);
+    expect(garethLvl4.stats.str).toBe(17);
+    expect(garethLvl4.stats.con).toBe(15);
   });
 
   test('Session roll remains stable across session updates and rerenders without re-rolling', async () => {
@@ -213,6 +214,12 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     // 2. startLevelUpSession must perform exactly 1 roll
     const session = await store.startLevelUpSession('test_cleric_spy');
     expect(session).not.toBeNull();
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 2b. Calling startLevelUpSession a second time for the active session returns existing session without re-rolling
+    const sessionAgain = await store.startLevelUpSession('test_cleric_spy');
+    expect(sessionAgain).toBe(session);
+    expect(sessionAgain?.hpRollResult).toBe(session!.hpRollResult);
     expect(rollSpy).toHaveBeenCalledTimes(1);
 
     // 3. Updating session choices or stat increases must cause 0 additional rolls
