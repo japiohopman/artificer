@@ -1,4 +1,4 @@
-import { describe, test, expect, beforeAll } from 'vitest';
+import { describe, test, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 
@@ -26,6 +26,7 @@ import {
   evaluateNextLevelStep,
   validateLevelUpCommit
 } from '../src/lib/progressionUtils';
+import { extractOptionsFromFeature } from '../src/lib/atlasUtils';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -158,11 +159,6 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const sessionLvl5 = await store.startLevelUpSession('test_fighter_1');
     expect(sessionLvl5?.targetLevel).toBe(5);
 
-    const validationResult = validateLevelUpCommit(garethBefore, sessionLvl5!);
-    if (!validationResult.valid) {
-      console.error('Validation failed reason:', validationResult.reason);
-    }
-
     const commitLvl5 = await store.commitLevelUpSession();
     expect(commitLvl5).toBe(true);
     const garethLvl5 = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_1')!;
@@ -172,5 +168,81 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(isEligibleForLevelUp(garethLvl5)).toBe(true);
     expect(getNextLevelTarget(garethLvl5)).toBe(6);
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
+  });
+
+  test('Non-d8 class hit die resolves exact HP gain from class data', async () => {
+    const wizard: any = {
+      id: 'test_wizard_1',
+      name: 'Melf',
+      class: 'Wizard',
+      race: 'Elf',
+      level: 1,
+      xp: 300, // eligible for Lvl 2
+      hp: 8,
+      maxHp: 8,
+      stats: { str: 8, dex: 14, con: 12, int: 16, wis: 12, cha: 10 } // CON mod = +1
+    };
+
+    const session = await evaluateNextLevelStep(wizard);
+    expect(session).not.toBeNull();
+    // Wizard hit die is d6. Fixed HP gain = floor(6/2) + 1 + conMod(1) = 4 + 1 = 5.
+    expect(session?.hpIncrease).toBe(5);
+  });
+
+  test('Existing subclass target-level features are included in level-up grants', async () => {
+    const championFighter: any = {
+      id: 'test_champion_1',
+      name: 'Elric',
+      class: 'Fighter',
+      subclass: 'champion_2024',
+      ruleset: '2024',
+      race: 'Human',
+      level: 6,
+      xp: 23000, // eligible for Lvl 7 (23,000 XP)
+      hp: 58,
+      maxHp: 58,
+      stats: { str: 18, dex: 12, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+
+    const session = await evaluateNextLevelStep(championFighter);
+    expect(session).not.toBeNull();
+    expect(session?.targetLevel).toBe(7);
+
+    // Champion 2024 at level 7 receives 'additional_fighting_style_champion_2024'
+    const subFeatureIndices = session?.features.map(f => f.index);
+    expect(subFeatureIndices).toContain('additional_fighting_style_champion_2024');
+  });
+
+  test('Invalid subclass selection is rejected by fail-closed validation', async () => {
+    const fighter: any = {
+      id: 'test_sub_validation',
+      name: 'Val',
+      class: 'Fighter',
+      level: 2,
+      xp: 900,
+      stats: { str: 16, dex: 10, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+
+    const session = await evaluateNextLevelStep(fighter);
+    expect(session).not.toBeNull();
+
+    // Attach invalid subclass choice
+    session!.choices['martial_archetype'] = ['fake_subclass_xyz'];
+    session!.subclassChoice = 'fake_subclass_xyz';
+
+    const validation = await validateLevelUpCommit(fighter, session!);
+    expect(validation.valid).toBe(false);
+    expect(validation.reason).toContain('fake_subclass_xyz');
+  });
+
+  test('extractOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
+    const proseFeature = {
+      index: 'prose_feature_test',
+      name: 'Prose Feature',
+      desc: ['Choose one from the following options: @UUID[Compendium.dnd5e.feats.Item.123]{Feat A}']
+    };
+
+    const options = extractOptionsFromFeature(proseFeature);
+    expect(options.length).toBe(0);
   });
 });

@@ -325,7 +325,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     const char = get().characters.find(c => c.id === session.characterId);
     if (!char) return false;
 
-    const validation = validateLevelUpCommit(char, session);
+    const validation = await validateLevelUpCommit(char, session);
     if (!validation.valid) {
       set((state) => ({
         activeLevelUpSession: state.activeLevelUpSession
@@ -335,7 +335,6 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       return false;
     }
 
-    const conMod = Math.floor(((char.stats?.con || 10) - 10) / 2);
     const hpGain = session.hpIncrease;
 
     const newMaxHp = (char.maxHp || char.hp || 10) + hpGain;
@@ -357,7 +356,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
           name: feat.name,
           index: feat.index,
           desc: Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || ''),
-          source: 'Class'
+          source: feat.source || 'Class'
         });
       }
     }

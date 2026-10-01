@@ -27,7 +27,7 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
     }
   }
 
-  // Structure 2: User provided structure 'feature_specific.*_options'
+  // Structure 2: Structured 'feature_specific.*_options'
   const collected: FeatureOption[] = [];
 
   const normalizeIndex = (s: string) => s.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
@@ -35,10 +35,8 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
   const processSet = (set: any) => {
     if (!set) return;
 
-    // Handle options array
     if (set.options) {
       set.options.forEach((opt: any) => {
-        // Handle primitive strings in options array (e.g., ["aberrations", "beasts"])
         if (typeof opt === 'string') {
           collected.push({
             index: normalizeIndex(opt),
@@ -68,7 +66,6 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
             }
           });
         } else if (opt.index || opt.name) {
-          // Fallback for flatter structures
           collected.push({
             index: opt.index || opt.name,
             name: opt.name || opt.index,
@@ -89,34 +86,7 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
   }
 
   if (collected.length > 0) {
-    // Return unique by index
     return Array.from(new Map(collected.map(item => [item.index, item])).values());
-  }
-
-  // Structure 3: Parsing descriptions for @UUID links (Foundry VTT port)
-  if (feat.desc) {
-    const descArray = Array.isArray(feat.desc) ? feat.desc : [feat.desc];
-    const uuidOptions: FeatureOption[] = [];
-    
-    descArray.forEach((line: string) => {
-      if (typeof line !== 'string') return;
-      const regex = /@UUID\[.*?\]\{(.*?)\}/g;
-      let match;
-      while ((match = regex.exec(line)) !== null) {
-        const name = match[1];
-        // Ensure index is completely alphanumeric/underscore
-        const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
-        uuidOptions.push({
-          index,
-          name
-        });
-      }
-    });
-
-    if (uuidOptions.length > 0) {
-      // Return these UUIDs as options, ensuring they are unique by index
-      return Array.from(new Map(uuidOptions.map(item => [item.index, item])).values());
-    }
   }
 
   return [];
@@ -148,26 +118,8 @@ export function getChoiceLimit(feat: any): number {
     }
   }
 
-  // Check if it's a UUID-inferred choice
-  const descText = Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || '');
-  const hasChooseWord = /choose/i.test(descText);
-  if (hasChooseWord) {
-    const regex = /@UUID\[.*?\]\{(.*?)\}/g;
-    if (regex.test(descText)) {
-      return 1;
-    }
-  }
-
-  // Fallback for expertise features if choice data is missing
   const lowerIndex = feat.index?.toLowerCase() || '';
   if (lowerIndex.includes('expertise')) return 2;
-  
-  // If it has UUID choices but no explicit choose property, default to 1
-  if (feat.desc) {
-    const descArray = Array.isArray(feat.desc) ? feat.desc : [feat.desc];
-    const hasUUIDs = descArray.some((line: string) => typeof line === 'string' && line.includes('@UUID'));
-    if (hasUUIDs) return 1;
-  }
   
   return 0;
 }
@@ -176,10 +128,8 @@ export function getFeatureIcon(index: string, name: string): string {
   let lowerIndex = String(index || '').toLowerCase().replace(/-/g, '_');
   const lowerName = String(name || '').toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
   
-  // Strip common prefixes to get to the core identity
   lowerIndex = lowerIndex.replace(/^feature_/, '').replace(/^subclass_/, '');
 
-  // Basic Normalization for Features
   if (lowerIndex.includes('expertise') || lowerName.includes('expertise')) return 'expertise';
   if (lowerIndex.includes('second_wind') || lowerName.includes('second_wind')) return 'second_wind';
   if (lowerIndex.includes('action_surge') || lowerName.includes('action_surge')) return 'action_surge';
@@ -188,7 +138,6 @@ export function getFeatureIcon(index: string, name: string): string {
   if (lowerIndex.includes('unarmored_defense')) return 'unarmored_defense';
   if (lowerIndex.includes('cunning_action')) return 'cunning_action';
   
-  // Fighting Styles - map to feature icons
   if (lowerIndex.includes('fighting_style') || lowerName.includes('fighting_style')) {
     if (lowerIndex.includes('archery') || lowerName.includes('archery')) return 'fighter_fighting_style_archery';
     if (lowerIndex.includes('defense') || lowerName.includes('defense')) return 'fighting_style_defense';
@@ -199,7 +148,6 @@ export function getFeatureIcon(index: string, name: string): string {
     return 'fighter_fighting_style';
   }
 
-  // Check if it's a subclass-related feature
   if (lowerIndex.includes('thief') || lowerName.includes('thief')) return 'thief';
   if (lowerIndex.includes('assassin') || lowerName.includes('assassin')) return 'assassin';
   if (lowerIndex.includes('arcane_trickster') || lowerName.includes('arcane_trickster')) return 'arcane_trickster';
@@ -208,7 +156,6 @@ export function getFeatureIcon(index: string, name: string): string {
   if (lowerIndex.includes('battle_master') || lowerName.includes('battle_master')) return 'battle_master';
   if (lowerIndex.includes('eldritch_knight') || lowerName.includes('eldritch_knight')) return 'eldritch_knight';
 
-  // Exact matches for index or normalized name
   return lowerIndex;
 }
 
@@ -216,7 +163,6 @@ export function getTraitIcon(index: string): string {
   if (!index) return 'award';
   const lower = index.toLowerCase().replace(/-/g, '_').replace(/\s+/g, '_');
   
-  // Common mappings for traits if they don't match index exactly
   if (lower.includes('darkvision')) return 'darkvision';
   if (lower.includes('resistance')) return 'damage_resistance';
   if (lower.includes('luck')) return 'lucky';

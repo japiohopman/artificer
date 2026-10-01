@@ -1,5 +1,6 @@
 import { extractOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
+import { fetchSubclassesList } from '../services/storageService';
 
 export interface ActiveLevelUpSession {
   characterId: string;
@@ -66,15 +67,16 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
 
   const targetLevel = character.level + 1;
   const { atlasService } = await import('../services/atlasService');
-  const levelData = await atlasService.loadLevelData(character.class, targetLevel, character.ruleset);
+
+  const [classData, levelData, prevLevelData] = await Promise.all([
+    atlasService.loadClass(character.class, character.ruleset),
+    atlasService.loadLevelData(character.class, targetLevel, character.ruleset),
+    targetLevel > 1 ? atlasService.loadLevelData(character.class, targetLevel - 1, character.ruleset) : null
+  ]);
 
   if (!levelData) {
     return null;
   }
-
-  const prevLevelData = targetLevel > 1
-    ? await atlasService.loadLevelData(character.class, targetLevel - 1, character.ruleset)
-    : null;
 
   const rawFeatures = levelData.features || [];
   const fullFeatures = await Promise.all(
@@ -84,8 +86,29 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
     })
   );
 
+  // If character already has a subclass, load target level subclass features
+  if (character.subclass) {
+    const subData = await atlasService.loadSubclass(character.subclass, character.ruleset);
+    if (subData && Array.isArray(subData.subclass_levels)) {
+      const targetSubGroup = subData.subclass_levels.find((l: any) => l.level === targetLevel);
+      if (targetSubGroup?.features) {
+        const fullSubFeatures = await Promise.all(
+          targetSubGroup.features.map(async (f: any) => {
+            const details = await atlasService.loadFeature(f.index);
+            return details ? { ...f, ...details, source: 'Subclass' } : { ...f, source: 'Subclass' };
+          })
+        );
+        fullSubFeatures.forEach(sf => {
+          if (!fullFeatures.some(f => f.index === sf.index)) {
+            fullFeatures.push(sf);
+          }
+        });
+      }
+    }
+  }
+
   const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
-  const classHitDie = levelData.hit_die || 8;
+  const classHitDie = classData?.hit_die || levelData.hit_die || 8;
   const fixedHpGain = Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
 
   const prevAsiCount = prevLevelData?.ability_score_bonuses || 0;
@@ -110,7 +133,7 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
   };
 }
 
-export function validateLevelUpCommit(character: Character, session: ActiveLevelUpSession): { valid: boolean; reason?: string } {
+export async function validateLevelUpCommit(character: Character, session: ActiveLevelUpSession): Promise<{ valid: boolean; reason?: string }> {
   if (!character || !session) {
     return { valid: false, reason: 'Invalid character or level-up session context.' };
   }
@@ -139,7 +162,16 @@ export function validateLevelUpCommit(character: Character, session: ActiveLevel
     }
 
     const isSubclassChoice = feat.feature_specific?.subfeature_options?.type === 'subclass';
-    if (!isSubclassChoice) {
+    if (isSubclassChoice) {
+      if (selected.length > 0) {
+        const chosenSubclass = selected[0];
+        const allowedSubclasses = await fetchSubclassesList(character.ruleset, character.class);
+        const isValidSubclass = allowedSubclasses.some((s: any) => s.index.toLowerCase() === chosenSubclass.toLowerCase());
+        if (!isValidSubclass) {
+          return { valid: false, reason: `Subclass "${chosenSubclass}" is not a valid subclass option for class ${character.class}.` };
+        }
+      }
+    } else {
       const availableOptions = extractOptionsFromFeature(feat);
       if (availableOptions.length > 0) {
         const validIndices = availableOptions.map(o => o.index);

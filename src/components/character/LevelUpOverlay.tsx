@@ -54,6 +54,7 @@ export const LevelUpOverlay: React.FC = () => {
 
   const [optionDetails, setOptionDetails] = useState<Record<string, string>>({});
   const [subclassOptions, setSubclassOptions] = useState<any[]>([]);
+  const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   const session = activeLevelUpSession;
   const character = characters.find(c => c.id === session?.characterId);
@@ -64,12 +65,11 @@ export const LevelUpOverlay: React.FC = () => {
 
   useEffect(() => {
     if (session && character) {
-      // Audio transition
+      setCurrentStepIndex(0);
       updateLayerVolume(1, 0);
       updateLayerVolume(4, 0);
       soundService.playEffect('LEVEL_UP');
 
-      // Load subclass options if target level grants subclass
       const hasSubclassGrant = session.features.some(f =>
         f.feature_specific?.subfeature_options?.type === 'subclass' ||
         f.index?.toLowerCase().includes('subclass') ||
@@ -91,7 +91,6 @@ export const LevelUpOverlay: React.FC = () => {
         });
       }
 
-      // Load descriptions for options in session features
       session.features.forEach((feat) => {
         const options = extractOptionsFromFeature(feat);
         options.forEach(opt => {
@@ -111,6 +110,38 @@ export const LevelUpOverlay: React.FC = () => {
   }, [session?.characterId, session?.targetLevel]);
 
   if (!session || !character) return null;
+
+  const getOptionsForChoice = (feat: any) => {
+    const isSubclassChoice =
+      feat.feature_specific?.subfeature_options?.type === 'subclass' ||
+      feat.index?.toLowerCase().includes('subclass') ||
+      feat.index?.toLowerCase().includes('martial_archetype');
+
+    if (isSubclassChoice && subclassOptions.length > 0) {
+      return subclassOptions.map(s => ({
+        index: s.index,
+        name: s.name
+      }));
+    }
+
+    return extractOptionsFromFeature(feat);
+  };
+
+  const choiceFeatures = session.features.filter(f => getOptionsForChoice(f).length > 0);
+
+  // Progression Wizard Steps
+  const wizardSteps: { id: string; title: string }[] = [
+    { id: 'summary', title: 'Grants & Vitality' }
+  ];
+  if (choiceFeatures.length > 0) {
+    wizardSteps.push({ id: 'choices', title: 'Specialty Choices' });
+  }
+  if (session.hasASI) {
+    wizardSteps.push({ id: 'asi', title: 'Ability Score Improvement' });
+  }
+
+  const activeStep = wizardSteps[currentStepIndex] || wizardSteps[0];
+  const isLastStep = currentStepIndex === wizardSteps.length - 1;
 
   const pointsSpent = Object.values(session.statIncreases || {}).reduce((a, b) => a + (b || 0), 0);
   const pointsRemaining = 2 - pointsSpent;
@@ -161,6 +192,20 @@ export const LevelUpOverlay: React.FC = () => {
     });
   };
 
+  const handleNextStep = () => {
+    if (!isLastStep) {
+      setCurrentStepIndex(prev => prev + 1);
+      soundService.playEffect('UI_CLICK_LIGHT');
+    }
+  };
+
+  const handlePrevStep = () => {
+    if (currentStepIndex > 0) {
+      setCurrentStepIndex(prev => prev - 1);
+      soundService.playEffect('UI_CLICK_LIGHT');
+    }
+  };
+
   const handleCommit = async () => {
     const success = await commitLevelUpSession();
     if (success) {
@@ -173,22 +218,6 @@ export const LevelUpOverlay: React.FC = () => {
     updateLayerVolume(1, 0.5);
     updateLayerVolume(4, 0.4);
     cancelLevelUpSession();
-  };
-
-  const getOptionsForChoice = (feat: any) => {
-    const isSubclassChoice =
-      feat.feature_specific?.subfeature_options?.type === 'subclass' ||
-      feat.index?.toLowerCase().includes('subclass') ||
-      feat.index?.toLowerCase().includes('martial_archetype');
-
-    if (isSubclassChoice && subclassOptions.length > 0) {
-      return subclassOptions.map(s => ({
-        index: s.index,
-        name: s.name
-      }));
-    }
-
-    return extractOptionsFromFeature(feat);
   };
 
   return (
@@ -246,7 +275,7 @@ export const LevelUpOverlay: React.FC = () => {
                  transition={{ delay: 0.2 }}
                  className="relative px-8"
                >
-                  <h2 className="text-[43px] font-cinzel font-black text-dragon-gold uppercase tracking-[0.3em] mb-1 shadow-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                  <h2 className="text-[36px] font-cinzel font-black text-dragon-gold uppercase tracking-[0.3em] mb-1 shadow-text drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                     Level Ascended
                   </h2>
                   <div className="flex items-center justify-center gap-6">
@@ -257,6 +286,26 @@ export const LevelUpOverlay: React.FC = () => {
                     <div className="h-px w-24 bg-gradient-to-l from-transparent to-dragon-gold/60" />
                   </div>
                </motion.div>
+
+               {/* Step Navigation Indicator Tabs */}
+               {wizardSteps.length > 1 && (
+                 <div className="flex items-center justify-center gap-3 mt-4">
+                   {wizardSteps.map((step, sIdx) => (
+                     <button
+                       key={step.id}
+                       onClick={() => { setCurrentStepIndex(sIdx); soundService.playEffect('UI_CLICK_LIGHT'); }}
+                       className={cn(
+                         "px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest transition-all border",
+                         sIdx === currentStepIndex
+                           ? "bg-dragon-gold text-dragon-darkRed border-dragon-gold shadow-md"
+                           : "bg-black/30 text-parchment-300 border-dragon-gold/20 hover:border-dragon-gold/50"
+                       )}
+                     >
+                       Step {sIdx + 1}: {step.title}
+                     </button>
+                   ))}
+                 </div>
+               )}
             </div>
 
             {/* Validation Error Banner */}
@@ -268,262 +317,262 @@ export const LevelUpOverlay: React.FC = () => {
             )}
 
             {/* Main Content Area */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 relative">
+            <div className="flex-1 overflow-y-auto custom-scrollbar p-6 md:p-8 relative">
                <div className="absolute inset-0 bg-paper-texture opacity-20 mix-blend-multiply pointer-events-none z-[1]" />
                <div className="absolute inset-0 bg-parchment-100/10 pointer-events-none z-[2]" />
                
-               <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-24">
+               <div className="relative z-10 w-full pb-20">
                   
-                  {/* LEFT PANEL: Profile & Vitality */}
-                  <div className="space-y-8">
-                    {/* Header Info */}
-                    <div className="text-center relative py-2">
-                       <h3 className="text-[28px] font-cinzel font-black text-dragon-darkRed uppercase tracking-[0.2em]">
-                         <GameIcon name={character.class?.toLowerCase()} size={24} color="currentColor" fallbackName="award" /> {character.class}
-                       </h3>
-                       <p className="text-[11px] font-black text-parchment-500 uppercase tracking-[0.3em] mt-1">
-                         <GameIcon name={character.race?.toLowerCase().replace(/-/g, "_")} size={12} color="currentColor" fallbackName="award" /> {character.race} // <GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={12} color="currentColor" fallbackName="award" /> {character.alignment}
-                       </p>
-                    </div>
+                  {/* STEP 1: Summary / Grants & Vitality */}
+                  {activeStep.id === 'summary' && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                       <div className="space-y-6">
+                          <div className="text-center py-2">
+                             <h3 className="text-[26px] font-cinzel font-black text-dragon-darkRed uppercase tracking-[0.2em]">
+                               <GameIcon name={character.class?.toLowerCase()} size={24} color="currentColor" fallbackName="award" /> {character.class}
+                             </h3>
+                             <p className="text-[11px] font-black text-parchment-500 uppercase tracking-[0.3em] mt-1">
+                               <GameIcon name={character.race?.toLowerCase().replace(/-/g, "_")} size={12} color="currentColor" fallbackName="award" /> {character.race} // <GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={12} color="currentColor" fallbackName="award" /> {character.alignment}
+                             </p>
+                          </div>
 
-                    {/* Profile Frame */}
-                    <div className="flex flex-col items-center gap-4">
-                       <div className="relative w-full max-w-[280px] aspect-[4/3] drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
-                          {character.imageUrl ? (
-                             <>
-                                <ChromaKeyImage 
-                                   src={normalizeImageUrl(character.imageUrl, 'character', character.id)} 
-                                   alt={character.name} 
-                                   className="w-full h-full object-contain relative z-20" 
-                                   threshold={60}
-                                />
-                                <div className="absolute inset-x-20 inset-y-10 bg-dragon-red/10 blur-[90px] rounded-full pointer-events-none z-10" />
-                             </>
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center text-dragon-darkRed/20">
-                              <GameIcon name="user" size={64} />
-                            </div>
-                          )}
+                          <div className="flex flex-col items-center gap-4">
+                             <div className="relative w-full max-w-[260px] aspect-[4/3] drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+                                {character.imageUrl ? (
+                                   <ChromaKeyImage
+                                      src={normalizeImageUrl(character.imageUrl, 'character', character.id)}
+                                      alt={character.name}
+                                      className="w-full h-full object-contain relative z-20"
+                                      threshold={60}
+                                   />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center text-dragon-darkRed/20">
+                                    <GameIcon name="user" size={64} />
+                                  </div>
+                                )}
+                             </div>
+                          </div>
+
+                          <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/15 space-y-2">
+                             <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em] block">Hit Point Progression</span>
+                             <div className="p-3 bg-white/40 rounded-sm border border-dragon-gold/20 text-center">
+                                <span className="text-xs font-bold text-parchment-600 block">Class Hit Die: 1d{classHitDie}</span>
+                                <span className="text-xl font-header font-black text-dragon-darkRed mt-1 block">
+                                  +{fixedHpGain} HP (Average {Math.floor(classHitDie / 2) + 1} + {conModifier} CON)
+                                </span>
+                             </div>
+                          </div>
+                       </div>
+
+                       <div className="space-y-4">
+                          <div className="flex items-center gap-4">
+                             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
+                             <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-[0.3em] italic">
+                               Level {session.targetLevel} Grants
+                             </span>
+                             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dragon-darkRed/20" />
+                          </div>
+
+                          {session.features.map((feat, idx) => {
+                            const descLines = Array.isArray(feat.desc) ? feat.desc : [feat.desc || ''];
+                            return (
+                              <div key={feat.index || idx} className="group bg-gradient-to-r from-black/5 to-transparent p-4 rounded-sm flex gap-4 items-start border-l-4 border-dragon-gold/40">
+                                <div className="w-10 h-10 bg-white/20 rounded border border-dragon-gold/10 flex items-center justify-center shrink-0 mt-0.5">
+                                  <GameIcon name={getFeatureIcon(feat.index, feat.name)} size={22} color="#D4AF37" fallbackName="award" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <h4 className="text-base font-header font-black text-dragon-darkRed uppercase tracking-widest">{feat.name}</h4>
+                                  <div className="space-y-1 mt-1">
+                                    {descLines.filter(Boolean).map((line: string, lIdx: number) => (
+                                      <p key={lIdx} className="text-[11px] text-parchment-700 leading-relaxed font-medium">{line}</p>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
                        </div>
                     </div>
+                  )}
 
-                    {/* HP Section */}
-                    <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/15 space-y-3">
-                       <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em]">Hit Point Evolution</span>
-                          <span className="text-[9px] font-black text-dragon-gold uppercase tracking-[0.15em]">Standard Average</span>
-                       </div>
-                       <div className="p-3 bg-white/40 rounded-sm border border-dragon-gold/20 text-center">
-                          <span className="text-xs font-bold text-parchment-600 block">Class Hit Die: 1d{classHitDie}</span>
-                          <span className="text-xl font-header font-black text-dragon-darkRed mt-1 block">
-                            +{fixedHpGain} HP (Average {Math.floor(classHitDie / 2) + 1} + {conModifier} CON)
-                          </span>
-                       </div>
-                    </div>
-
-                    {/* Stats Summary Box */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-black/5 p-4 rounded-sm text-center">
-                         <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-1 block">Max HP Gain</span>
-                         <span className="text-2xl font-header font-black text-dragon-red">+{fixedHpGain}</span>
-                      </div>
-                      <div className="bg-black/5 p-4 rounded-sm text-center">
-                         <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-1 block">Proficiency Bonus</span>
-                         <span className="text-2xl font-header font-black text-dragon-darkRed">
-                           +{Math.floor(2 + (session.targetLevel - 1) / 4)}
-                         </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* RIGHT PANEL: Target Level Features & Choices */}
-                  <div className="space-y-8">
-                    {/* Features List */}
-                    <div className="space-y-4">
+                  {/* STEP 2: Feature Choices */}
+                  {activeStep.id === 'choices' && (
+                    <div className="space-y-6">
                       <div className="flex items-center gap-4">
                          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dragon-darkRed/20" />
-                         <span className="text-[12px] font-black text-dragon-darkRed uppercase tracking-[0.4em] italic">
-                           Level {session.targetLevel} Grants
+                         <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-[0.3em] italic">
+                           Specialty Choices
                          </span>
                          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dragon-darkRed/20" />
                       </div>
 
-                      {session.features.length === 0 ? (
-                        <p className="text-center text-xs text-parchment-500 italic py-4">
-                          No new features granted at this level.
-                        </p>
-                      ) : (
-                        <div className="grid gap-4">
-                          {session.features.map((feat, idx) => {
-                            const options = getOptionsForChoice(feat);
-                            const selections = session.choices?.[feat.index] || [];
-                            const limit = getChoiceLimit(feat) || 1;
-                            const isSubclassChoice =
-                              feat.feature_specific?.subfeature_options?.type === 'subclass' ||
-                              feat.index?.toLowerCase().includes('subclass') ||
-                              feat.index?.toLowerCase().includes('martial_archetype');
-                            const hasChoice = options.length > 0;
-                            const descLines = Array.isArray(feat.desc) ? feat.desc : [feat.desc || ''];
+                      {choiceFeatures.map(feat => {
+                        const options = getOptionsForChoice(feat);
+                        const selections = session.choices?.[feat.index] || [];
+                        const limit = getChoiceLimit(feat) || 1;
+                        const isSubclassChoice =
+                          feat.feature_specific?.subfeature_options?.type === 'subclass' ||
+                          feat.index?.toLowerCase().includes('subclass') ||
+                          feat.index?.toLowerCase().includes('martial_archetype');
 
-                            return (
-                              <div key={feat.index || idx} className="flex flex-col gap-2">
-                                <div className="group bg-gradient-to-r from-black/5 to-transparent p-4 rounded-sm flex gap-4 items-start border-l-4 border-dragon-gold/40">
-                                  <div className="w-10 h-10 bg-white/20 rounded border border-dragon-gold/10 flex items-center justify-center shrink-0 mt-0.5">
-                                    <GameIcon name={getFeatureIcon(feat.index, feat.name)} size={22} color="#D4AF37" fallbackName="award" />
-                                  </div>
-                                  <div className="flex-1 min-w-0">
-                                    <h4 className="text-base font-header font-black text-dragon-darkRed uppercase tracking-widest">{feat.name}</h4>
-                                    <div className="space-y-1 mt-1">
-                                      {descLines.filter(Boolean).map((line: string, lIdx: number) => (
-                                        <p key={lIdx} className="text-[11px] text-parchment-700 leading-relaxed font-medium">{line}</p>
-                                      ))}
+                        return (
+                          <div key={feat.index} className="space-y-3 bg-black/5 p-4 rounded border border-dragon-gold/15">
+                            <div className="flex items-center justify-between">
+                              <h4 className="text-sm font-header font-black text-dragon-darkRed uppercase tracking-widest">
+                                {feat.name}
+                              </h4>
+                              <span className="text-xs font-black text-dragon-gold tabular-nums">
+                                {selections.length} / {limit} selected
+                              </span>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                              {options.map((opt: any) => {
+                                const isSelected = selections.includes(opt.index);
+                                const description = optionDetails[opt.index] || opt.desc;
+
+                                return (
+                                  <button
+                                    key={opt.index}
+                                    onClick={() => handleToggleChoice(feat.index, opt.index, limit, isSubclassChoice)}
+                                    className={cn(
+                                      "text-left p-3 rounded-sm border-2 transition-all uppercase flex flex-col gap-1 relative overflow-hidden",
+                                      isSelected
+                                        ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-md"
+                                        : "bg-white/40 border-dragon-gold/10 text-parchment-600 hover:bg-white hover:border-dragon-gold/40"
+                                    )}
+                                  >
+                                    <div className="flex items-center justify-between gap-2">
+                                      <div className="flex items-center gap-3">
+                                        <div className={cn(
+                                          "w-4 h-4 rounded-sm border-2 shrink-0 flex items-center justify-center transition-all",
+                                          isSelected ? "bg-dragon-gold border-dragon-gold rotate-45" : "bg-transparent border-dragon-darkRed/20"
+                                        )}>
+                                          {isSelected && (
+                                            <span className="-rotate-45 text-[10px] text-dragon-darkRed font-black">✓</span>
+                                          )}
+                                        </div>
+                                        <span className="font-header font-black tracking-wider text-xs">
+                                          {opt.name.replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '')}
+                                        </span>
+                                      </div>
                                     </div>
-                                  </div>
-                                </div>
 
-                                {/* Choice Cards */}
-                                {hasChoice && (
-                                  <div className="ml-4 pl-4 border-l-2 border-dragon-gold/30 space-y-3 py-2">
-                                    <div className="flex items-center justify-between">
-                                      <span className="text-[11px] font-black text-dragon-darkRed uppercase tracking-widest">
-                                        Select {feat.name} Specialty
-                                      </span>
-                                      <span className="text-[11px] font-black text-dragon-gold tabular-nums">
-                                        {selections.length} / {limit}
-                                      </span>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 gap-2">
-                                      {options.map((opt: any) => {
-                                        const isSelected = selections.includes(opt.index);
-                                        const description = optionDetails[opt.index] || opt.desc;
-
-                                        return (
-                                          <button
-                                            key={opt.index}
-                                            onClick={() => handleToggleChoice(feat.index, opt.index, limit, isSubclassChoice)}
-                                            className={cn(
-                                              "text-left p-3 rounded-sm border-2 transition-all uppercase flex flex-col gap-1 relative overflow-hidden",
-                                              isSelected
-                                                ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-md"
-                                                : "bg-white/40 border-dragon-gold/10 text-parchment-600 hover:bg-white hover:border-dragon-gold/40"
-                                            )}
-                                          >
-                                            <div className="flex items-center justify-between gap-2">
-                                              <div className="flex items-center gap-3">
-                                                <div className={cn(
-                                                  "w-4 h-4 rounded-sm border-2 shrink-0 flex items-center justify-center transition-all",
-                                                  isSelected ? "bg-dragon-gold border-dragon-gold rotate-45" : "bg-transparent border-dragon-darkRed/20"
-                                                )}>
-                                                  {isSelected && (
-                                                    <span className="-rotate-45 text-[10px] text-dragon-darkRed font-black">✓</span>
-                                                  )}
-                                                </div>
-                                                <span className="font-header font-black tracking-wider text-xs">
-                                                  {opt.name.replace(/fighting style:\s*/i, '').replace(/expertise:\s*/i, '')}
-                                                </span>
-                                              </div>
-                                            </div>
-
-                                            {description && (
-                                              <p className={cn(
-                                                "text-[10px] leading-relaxed font-medium ml-7 normal-case",
-                                                isSelected ? "text-dragon-gold/80" : "text-parchment-500"
-                                              )}>
-                                                {description}
-                                              </p>
-                                            )}
-                                          </button>
-                                        );
-                                      })}
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      )}
+                                    {description && (
+                                      <p className={cn(
+                                        "text-[10px] leading-relaxed font-medium ml-7 normal-case",
+                                        isSelected ? "text-dragon-gold/80" : "text-parchment-500"
+                                      )}>
+                                        {description}
+                                      </p>
+                                    )}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
+                  )}
 
-                    {/* ASI Allocation UI */}
-                    {session.hasASI && (
-                      <div className="space-y-4 pt-6 border-t border-dragon-darkRed/10">
-                        <div className="flex items-center justify-between">
-                          <div className="flex flex-col">
-                            <span className="text-[13px] font-black text-dragon-darkRed uppercase tracking-widest">
-                              Ability Score Improvement
-                            </span>
-                            <span className="text-[10px] font-bold text-parchment-500 uppercase tracking-widest">
-                              Increase attributes by 2 points total
-                            </span>
-                          </div>
-                          <div className="px-3 py-1.5 bg-dragon-darkRed text-dragon-gold rounded-sm border border-dragon-gold text-xs font-black">
-                            {pointsRemaining} PTS LEFT
-                          </div>
+                  {/* STEP 3: ASI Allocation */}
+                  {activeStep.id === 'asi' && (
+                    <div className="space-y-6">
+                      <div className="flex items-center justify-between border-b border-dragon-darkRed/10 pb-3">
+                        <div className="flex flex-col">
+                          <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">
+                            Ability Score Improvement
+                          </span>
+                          <span className="text-[10px] font-bold text-parchment-500 uppercase tracking-widest">
+                            Allocate 2 attribute points total
+                          </span>
                         </div>
-
-                        <div className="grid grid-cols-1 gap-2">
-                          {STATS.map(stat => {
-                            const currentInc = session.statIncreases?.[stat.id] || 0;
-                            const baseVal = (character.stats as any)[stat.id] || 10;
-                            const newVal = baseVal + currentInc;
-
-                            return (
-                              <div key={stat.id} className="bg-black/5 p-3 rounded-sm flex items-center justify-between">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/10">
-                                    <GameIcon name={stat.abbr.toLowerCase() as any} size={16} color="#8B0000" />
-                                  </div>
-                                  <div>
-                                    <span className="text-[10px] font-black text-parchment-400 uppercase tracking-wider block">{stat.name}</span>
-                                    <div className="flex items-baseline gap-2">
-                                      <span className="text-xl font-header font-black text-dragon-darkRed">{newVal}</span>
-                                      {currentInc > 0 && (
-                                        <span className="text-xs font-black text-green-600">+{currentInc}</span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div className="flex items-center gap-2">
-                                  <button
-                                    onClick={() => handleStatChange(stat.id, -1)}
-                                    disabled={currentInc <= 0}
-                                    className="w-8 h-8 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-20 font-black"
-                                  >
-                                    -
-                                  </button>
-                                  <button
-                                    onClick={() => handleStatChange(stat.id, 1)}
-                                    disabled={pointsRemaining <= 0 || newVal >= 20}
-                                    className="w-8 h-8 rounded-full bg-dragon-gold/20 border border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-20 font-black"
-                                  >
-                                    +
-                                  </button>
-                                </div>
-                              </div>
-                            );
-                          })}
+                        <div className="px-4 py-2 bg-dragon-darkRed text-dragon-gold rounded-sm border border-dragon-gold text-xs font-black">
+                          {pointsRemaining} PTS REMAINING
                         </div>
                       </div>
-                    )}
-                  </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {STATS.map(stat => {
+                          const currentInc = session.statIncreases?.[stat.id] || 0;
+                          const baseVal = (character.stats as any)[stat.id] || 10;
+                          const newVal = baseVal + currentInc;
+
+                          return (
+                            <div key={stat.id} className="bg-black/5 p-4 rounded-sm flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/10">
+                                  <GameIcon name={stat.abbr.toLowerCase() as any} size={20} color="#8B0000" />
+                                </div>
+                                <div>
+                                  <span className="text-xs font-black text-parchment-400 uppercase tracking-wider block">{stat.name}</span>
+                                  <div className="flex items-baseline gap-2">
+                                    <span className="text-2xl font-header font-black text-dragon-darkRed">{newVal}</span>
+                                    {currentInc > 0 && (
+                                      <span className="text-xs font-black text-green-600">+{currentInc}</span>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="flex items-center gap-2">
+                                <button
+                                  onClick={() => handleStatChange(stat.id, -1)}
+                                  disabled={currentInc <= 0}
+                                  className="w-9 h-9 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-20 font-black"
+                                >
+                                  -
+                                </button>
+                                <button
+                                  onClick={() => handleStatChange(stat.id, 1)}
+                                  disabled={pointsRemaining <= 0 || newVal >= 20}
+                                  className="w-9 h-9 rounded-full bg-dragon-gold/20 border border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-20 font-black"
+                                >
+                                  +
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
                </div>
             </div>
 
-            {/* Manifest Evolution Button */}
-            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[2100]">
-              <button
-                onClick={handleCommit}
-                className="group relative flex flex-col items-center gap-2"
-              >
-                 <div className="absolute inset-0 bg-dragon-gold/20 blur-xl rounded-full animate-pulse" />
-                 <div className="px-8 py-3 rounded-full bg-dragon-darkRed border-2 border-dragon-gold shadow-[0_0_30px_rgba(212,175,55,0.4)] flex items-center gap-3 transition-all hover:scale-105 active:scale-95">
-                    <GameIcon name="advance" size={24} color="#D4AF37" />
-                    <span className="text-xs font-black text-dragon-gold uppercase tracking-[0.3em]">Manifest Evolution</span>
-                 </div>
-              </button>
+            {/* Step Navigation Controls Footer */}
+            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[2100] flex items-center gap-4">
+              {currentStepIndex > 0 && (
+                <button
+                  onClick={handlePrevStep}
+                  className="px-6 py-2.5 rounded-full bg-black/60 border border-dragon-gold/40 text-parchment-200 text-xs font-black uppercase tracking-widest hover:bg-black/80 transition-all"
+                >
+                  Previous Step
+                </button>
+              )}
+
+              {!isLastStep ? (
+                <button
+                  onClick={handleNextStep}
+                  className="px-8 py-3 rounded-full bg-dragon-darkRed border-2 border-dragon-gold shadow-[0_0_30px_rgba(212,175,55,0.4)] text-xs font-black text-dragon-gold uppercase tracking-[0.2em] flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
+                >
+                  <span>Continue</span>
+                  <GameIcon name="advance" size={18} color="#D4AF37" />
+                </button>
+              ) : (
+                <button
+                  onClick={handleCommit}
+                  className="group relative flex flex-col items-center gap-2"
+                >
+                   <div className="absolute inset-0 bg-dragon-gold/20 blur-xl rounded-full animate-pulse" />
+                   <div className="px-8 py-3 rounded-full bg-dragon-darkRed border-2 border-dragon-gold shadow-[0_0_30px_rgba(212,175,55,0.4)] flex items-center gap-3 transition-all hover:scale-105 active:scale-95">
+                      <GameIcon name="advance" size={24} color="#D4AF37" />
+                      <span className="text-xs font-black text-dragon-gold uppercase tracking-[0.3em]">Manifest Evolution</span>
+                   </div>
+                </button>
+              )}
             </div>
           </div>
         </motion.div>
