@@ -144,7 +144,9 @@ class DiceService {
   }
 
   /**
-   * Roll dice with 3D animation
+   * Roll dice with 3D animation.
+   * When targetValue is provided (e.g. Level-Up HP presentation), executes the WebGL 3D dice
+   * animation via diceBox without mutating or overriding the authoritative target result.
    */
   async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string, targetValue?: number): Promise<DiceResult | null> {
     if (this.isRolling) {
