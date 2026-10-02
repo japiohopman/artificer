@@ -400,7 +400,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
 
 
-  test('Visual 3D dice roll via diceService.roll3D updates active session hpRollResult and hpIncrease with WebGL result', async () => {
+  test('Visual 3D dice roll via diceService.roll3D visualizes active session hpRollResult without secondary RNG roll or session mutation', async () => {
     const store = useCharacterStore.getState();
     const fighter: any = {
       id: 'test_fighter_visual',
@@ -414,28 +414,36 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     };
     store.addCharacter(fighter);
 
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
+    // 1. startLevelUpSession generates the single authoritative roll
     const session = await store.startLevelUpSession('test_fighter_visual');
     expect(session).not.toBeNull();
+    expect(bgSpy).toHaveBeenCalledTimes(1);
 
-    // Trigger visual 3D roll (in test env without initialized WebGL canvas, roll3D falls back gracefully to rollBackground)
-    const rollRes = await diceService.roll3D('1d10', 'Level Up HP Roll');
-    expect(rollRes).not.toBeNull();
-    const rolledVal = rollRes!.rolls[0].result;
+    const initialRollVal = session!.hpRollResult;
+    const initialHpGain = session!.hpIncrease;
 
-    store.updateLevelUpSession({
-      hpRollResult: rolledVal,
-      hpIncrease: Math.max(1, rolledVal + 2)
-    });
+    // 2. Triggering 3D roll visualization for hpRollResult does NOT perform secondary RNG rolls
+    const visRes = await diceService.roll3D('1d10', 'Level Up HP Roll', 'default', '#8B0000', initialRollVal);
+    expect(visRes).not.toBeNull();
+    expect(visRes?.total).toBe(initialRollVal);
+    expect(bgSpy).toHaveBeenCalledTimes(1); // Still 1 roll total!
 
+    // 3. Session state remains untouched and matches single authoritative roll
     const activeSession = useCharacterStore.getState().activeLevelUpSession;
-    expect(activeSession?.hpRollResult).toBe(rolledVal);
-    expect(activeSession?.hpIncrease).toBe(Math.max(1, rolledVal + 2));
+    expect(activeSession?.hpRollResult).toBe(initialRollVal);
+    expect(activeSession?.hpIncrease).toBe(initialHpGain);
 
+    // 4. Commit succeeds using initial authoritative roll
     const commitSuccess = await store.commitLevelUpSession();
     expect(commitSuccess).toBe(true);
 
     const updatedFighter = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_visual');
-    expect(updatedFighter?.maxHp).toBe(12 + Math.max(1, rolledVal + 2));
+    expect(updatedFighter?.maxHp).toBe(12 + initialHpGain);
+
+    bgSpy.mockRestore();
   });
 
   test('extractStructuredOptionsFromFeature rejects prose description @UUID links as runtime options', () => {

@@ -146,10 +146,22 @@ class DiceService {
   /**
    * Roll dice with 3D animation
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
+  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string, targetValue?: number): Promise<DiceResult | null> {
     if (this.isRolling) {
       console.warn(`[DiceService] Roll request ignored: dice system is busy (${this.status}).`);
       return null;
+    }
+
+    if (typeof targetValue === 'number') {
+      this.setStatus('rolling');
+      console.log(`[DiceService] Visualizing authoritative targetValue: ${targetValue} (${notation})`);
+      import('../services/soundService').then(({ soundService }) => {
+        soundService.playEffect('DICE_ROLL');
+      });
+      const result = this.rollTargetResult(notation, targetValue, label);
+      await new Promise(resolve => setTimeout(resolve, 800));
+      this.setStatus('idle');
+      return result;
     }
 
     this.setStatus('rolling');
@@ -223,6 +235,19 @@ class DiceService {
       this.safeClear();
       this.setStatus('idle');
     }
+  }
+
+  rollTargetResult(notation: string, targetValue: number, label = "Roll"): DiceResult {
+    const sides = parseInt(notation.replace(/[^0-9]/g, '')) || 20;
+    return {
+      id: crypto.randomUUID(),
+      notation,
+      total: targetValue,
+      label,
+      rolls: [{ die: sides, result: targetValue, valid: true }],
+      modifier: 0,
+      timestamp: Date.now()
+    };
   }
 
   private extractRolls(parsedResult: any): any[] {
