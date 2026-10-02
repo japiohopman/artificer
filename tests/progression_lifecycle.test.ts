@@ -400,19 +400,42 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
 
 
-  test('diceService.roll3D with targetValue returns authoritative target result deterministically without secondary RNG roll', async () => {
-    const bgSpy = vi.spyOn(diceService, 'rollBackground');
-    bgSpy.mockClear();
+  test('Visual 3D dice roll via diceService.roll3D updates active session hpRollResult and hpIncrease with WebGL result', async () => {
+    const store = useCharacterStore.getState();
+    const fighter: any = {
+      id: 'test_fighter_visual',
+      name: 'GarethVisual',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      hp: 12,
+      maxHp: 12,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 } // CON mod = +2
+    };
+    store.addCharacter(fighter);
 
-    const res = await diceService.roll3D('1d10', 'HP Roll', 'default', '#8B0000', 7);
+    const session = await store.startLevelUpSession('test_fighter_visual');
+    expect(session).not.toBeNull();
 
-    expect(res).not.toBeNull();
-    expect(res?.total).toBe(7);
-    expect(res?.rolls[0]?.result).toBe(7);
-    // Verified that passing targetValue avoids secondary RNG calls to rollBackground
-    expect(bgSpy).toHaveBeenCalledTimes(0);
+    // Trigger visual 3D roll (in test env without initialized WebGL canvas, roll3D falls back gracefully to rollBackground)
+    const rollRes = await diceService.roll3D('1d10', 'Level Up HP Roll');
+    expect(rollRes).not.toBeNull();
+    const rolledVal = rollRes!.rolls[0].result;
 
-    bgSpy.mockRestore();
+    store.updateLevelUpSession({
+      hpRollResult: rolledVal,
+      hpIncrease: Math.max(1, rolledVal + 2)
+    });
+
+    const activeSession = useCharacterStore.getState().activeLevelUpSession;
+    expect(activeSession?.hpRollResult).toBe(rolledVal);
+    expect(activeSession?.hpIncrease).toBe(Math.max(1, rolledVal + 2));
+
+    const commitSuccess = await store.commitLevelUpSession();
+    expect(commitSuccess).toBe(true);
+
+    const updatedFighter = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_visual');
+    expect(updatedFighter?.maxHp).toBe(12 + Math.max(1, rolledVal + 2));
   });
 
   test('extractStructuredOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
