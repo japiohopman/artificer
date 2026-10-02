@@ -70,7 +70,7 @@ export const LevelUpOverlay: React.FC = () => {
     setIsRollingHp(true);
     soundService.playEffect('DICE_ROLL');
     try {
-      await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000', hpRollResult);
+      await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000');
     } catch (e) {
       console.warn('[LevelUpOverlay] 3D roll presentation:', e);
     } finally {

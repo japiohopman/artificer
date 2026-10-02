@@ -146,7 +146,7 @@ class DiceService {
   /**
    * Roll dice with 3D animation
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string, targetValue?: number): Promise<DiceResult | null> {
+  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
     if (this.isRolling) {
       console.warn(`[DiceService] Roll request ignored: dice system is busy (${this.status}).`);
       return null;
@@ -154,7 +154,7 @@ class DiceService {
 
     this.setStatus('rolling');
 
-    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}, targetValue: ${targetValue}`);
+    console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}`);
 
     // Play roll sound effect
     import('../services/soundService').then(({ soundService }) => {
@@ -168,10 +168,8 @@ class DiceService {
       }
 
       if (!this.initialized || !this.diceBox) {
-        console.warn("[DiceService] DiceBox not initialized, returning result-aware or background fallback.");
-        return typeof targetValue === 'number'
-          ? this.rollTargetResult(notation, targetValue, label)
-          : this.rollBackground(notation, label);
+        console.warn("[DiceService] DiceBox not initialized, falling back to background roll.");
+        return this.rollBackground(notation, label);
       }
 
       // 3D Roll - Ensure theme and color are passed correctly
@@ -182,11 +180,7 @@ class DiceService {
       }
       
       let results;
-      if (typeof targetValue === 'number') {
-        const sides = parseInt(notation.replace(/[^0-9]/g, '')) || 20;
-        const targetNotation = [{ qty: 1, sides, value: targetValue, target: targetValue, result: targetValue }];
-        results = await this.diceBox.roll(targetNotation, rollOptions);
-      } else if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
+      if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
          const parsedNotation = this.parser.parseNotation(notation);
          results = await this.diceBox.roll(parsedNotation, rollOptions);
       } else {
@@ -195,30 +189,23 @@ class DiceService {
 
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
-        console.warn("[DiceService] No results from 3D roll, returning fallback.");
-        return typeof targetValue === 'number'
-          ? this.rollTargetResult(notation, targetValue, label)
-          : this.rollBackground(notation, label);
+        console.warn("[DiceService] No results from 3D roll, falling back.");
+        return this.rollBackground(notation, label);
       }
 
       // Use the parser to get the final computed result object
       const finalResults = this.parser.parseFinalResults(results);
-      let rolls = this.extractRolls(finalResults);
-
-      if (typeof targetValue === 'number' && rolls.length > 0) {
-        rolls = rolls.map((r, idx) => idx === 0 ? { ...r, result: targetValue } : r);
-      }
+      const rolls = this.extractRolls(finalResults);
       
       // Calculate modifier
       let rollSum = 0;
       rolls.filter(r => r.valid !== false).forEach(r => rollSum += r.result);
       const modifier = finalResults.value - rollSum;
-      const totalValue = typeof targetValue === 'number' && rolls.length === 1 ? targetValue : finalResults.value;
 
       const diceResult: DiceResult = {
         id: crypto.randomUUID(),
         notation,
-        total: totalValue,
+        total: finalResults.value,
         label,
         rolls,
         modifier,
@@ -231,9 +218,7 @@ class DiceService {
       return diceResult;
     } catch (error) {
       console.error("[DiceService] roll3D execution failed:", error);
-      return typeof targetValue === 'number'
-        ? this.rollTargetResult(notation, targetValue, label)
-        : this.rollBackground(notation, label);
+      return this.rollBackground(notation, label);
     } finally {
       this.safeClear();
       this.setStatus('idle');
@@ -276,19 +261,6 @@ class DiceService {
     };
     walk(parsedResult);
     return rolls;
-  }
-
-  rollTargetResult(notation: string, targetValue: number, label = "Roll"): DiceResult {
-    const sides = parseInt(notation.replace(/[^0-9]/g, '')) || 20;
-    return {
-      id: crypto.randomUUID(),
-      notation,
-      total: targetValue,
-      label,
-      rolls: [{ die: sides, result: targetValue, valid: true }],
-      modifier: 0,
-      timestamp: Date.now()
-    };
   }
 
   rollBackground(notation: string, label = "Roll"): DiceResult {
