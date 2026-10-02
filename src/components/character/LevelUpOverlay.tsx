@@ -69,7 +69,18 @@ export const LevelUpOverlay: React.FC = () => {
     if (isRollingHp || !session || !character) return;
     setIsRollingHp(true);
     try {
-      await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000', hpRollResult);
+      const rollRes = await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000', hpRollResult);
+      if (rollRes && rollRes.rolls.length > 0) {
+        const rolledResult = rollRes.rolls[0].result;
+        const newConVal = (character.stats?.con || 10) + (session.statIncreases?.con || 0);
+        const newConMod = Math.floor((newConVal - 10) / 2);
+        const updatedHpIncrease = Math.max(1, rolledResult + newConMod);
+
+        updateLevelUpSession({
+          hpRollResult: rolledResult,
+          hpIncrease: updatedHpIncrease
+        });
+      }
     } catch (e) {
       console.warn('[LevelUpOverlay] 3D roll presentation:', e);
     } finally {
