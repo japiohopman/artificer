@@ -400,15 +400,16 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
 
 
-  test('diceService.roll3D with initialized diceBox invokes diceBox.roll for 3D WebGL presentation', async () => {
-    const mockRoll = vi.fn().mockResolvedValue([{ value: 7 }]);
+  test('diceService.roll3D with initialized diceBox invokes diceBox.roll for 3D WebGL presentation and returns authoritative targetValue', async () => {
+    const mockRoll = vi.fn().mockResolvedValue([{ value: 3 }]); // WebGL physics returns 3, targetValue is 7
     (diceService as any).initialized = true;
-    (diceService as any).diceBox = { roll: mockRoll };
+    (diceService as any).diceBox = { roll: mockRoll, clear: vi.fn() };
 
     const res = await diceService.roll3D('1d10', 'Level Up HP Roll', 'default', '#8B0000', 7);
 
     expect(mockRoll).toHaveBeenCalledTimes(1);
     expect(res?.total).toBe(7);
+    expect(res?.rolls[0]?.result).toBe(7);
 
     (diceService as any).initialized = false;
     (diceService as any).diceBox = null;
