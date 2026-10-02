@@ -152,6 +152,38 @@ class DiceService {
       return null;
     }
 
+    if (typeof targetValue === 'number') {
+      this.setStatus('rolling');
+      console.log(`[DiceService] Visualizing authoritative targetValue: ${targetValue} (${notation})`);
+      import('../services/soundService').then(({ soundService }) => {
+        soundService.playEffect('DICE_ROLL');
+      });
+
+      if (this.initialized && this.diceBox) {
+        try {
+          const rollTheme = theme || "default";
+          const rollOptions: any = { theme: rollTheme };
+          if (color) rollOptions.themeColor = color;
+
+          if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
+            const parsedNotation = this.parser.parseNotation(notation);
+            await this.diceBox.roll(parsedNotation, rollOptions);
+          } else {
+            await this.diceBox.roll(notation, rollOptions);
+          }
+        } catch (e) {
+          console.warn('[DiceService] 3D roll presentation error:', e);
+        } finally {
+          this.safeClear();
+        }
+      } else {
+        await new Promise(resolve => setTimeout(resolve, 800));
+      }
+
+      this.setStatus('idle');
+      return this.rollTargetResult(notation, targetValue, label);
+    }
+
     this.setStatus('rolling');
 
     console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}`);
@@ -169,9 +201,7 @@ class DiceService {
 
       if (!this.initialized || !this.diceBox) {
         console.warn("[DiceService] DiceBox not initialized, returning fallback.");
-        return typeof targetValue === 'number'
-          ? this.rollTargetResult(notation, targetValue, label)
-          : this.rollBackground(notation, label);
+        return this.rollBackground(notation, label);
       }
 
       // 3D Roll - Ensure theme and color are passed correctly
@@ -192,9 +222,7 @@ class DiceService {
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
         console.warn("[DiceService] No results from 3D roll, returning fallback.");
-        return typeof targetValue === 'number'
-          ? this.rollTargetResult(notation, targetValue, label)
-          : this.rollBackground(notation, label);
+        return this.rollBackground(notation, label);
       }
 
       // Use the parser to get the final computed result object
@@ -222,9 +250,7 @@ class DiceService {
       return diceResult;
     } catch (error) {
       console.error("[DiceService] roll3D execution failed:", error);
-      return typeof targetValue === 'number'
-        ? this.rollTargetResult(notation, targetValue, label)
-        : this.rollBackground(notation, label);
+      return this.rollBackground(notation, label);
     } finally {
       this.safeClear();
       this.setStatus('idle');

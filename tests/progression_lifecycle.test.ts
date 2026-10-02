@@ -400,6 +400,20 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
 
 
+  test('diceService.roll3D with initialized diceBox invokes diceBox.roll for 3D WebGL presentation', async () => {
+    const mockRoll = vi.fn().mockResolvedValue([{ value: 7 }]);
+    (diceService as any).initialized = true;
+    (diceService as any).diceBox = { roll: mockRoll };
+
+    const res = await diceService.roll3D('1d10', 'Level Up HP Roll', 'default', '#8B0000', 7);
+
+    expect(mockRoll).toHaveBeenCalledTimes(1);
+    expect(res?.total).toBe(7);
+
+    (diceService as any).initialized = false;
+    (diceService as any).diceBox = null;
+  });
+
   test('Visual 3D dice roll via diceService.roll3D visualizes active session hpRollResult without secondary RNG roll or session mutation', async () => {
     const store = useCharacterStore.getState();
     const fighter: any = {
