@@ -399,6 +399,21 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   });
 
 
+  test('diceService.roll3D with targetValue in fallback mode visualizes exact targetValue without extra RNG', async () => {
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
+    const res = await diceService.roll3D('1d10', 'HP Roll', 'default', '#8B0000', 7);
+
+    expect(res).not.toBeNull();
+    expect(res?.total).toBe(7);
+    expect(res?.rolls[0]?.result).toBe(7);
+    // Verified that in uninitialized/fallback mode, targetValue causes zero calls to rollBackground
+    expect(bgSpy).toHaveBeenCalledTimes(0);
+
+    bgSpy.mockRestore();
+  });
+
   test('extractStructuredOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
     const proseFeature = {
       index: 'prose_feature_test',
