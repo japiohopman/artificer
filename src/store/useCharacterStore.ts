@@ -327,12 +327,24 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   updateLevelUpSession: (updates: Partial<ActiveLevelUpSession>) => {
     set((state) => {
       if (!state.activeLevelUpSession) return state;
-      return {
-        activeLevelUpSession: {
-          ...state.activeLevelUpSession,
-          ...updates,
-          validationError: null
+      const merged = {
+        ...state.activeLevelUpSession,
+        ...updates,
+        validationError: null
+      };
+
+      if (updates.statIncreases?.con !== undefined && updates.hpIncrease === undefined) {
+        const char = state.characters.find(c => c.id === merged.characterId);
+        if (char) {
+          const conInc = merged.statIncreases.con || 0;
+          const conMod = Math.floor(((char.stats?.con || 10) + conInc - 10) / 2);
+          const baseRoll = merged.hpRollResult ?? Math.floor((merged.classHitDie || 8) / 2) + 1;
+          merged.hpIncrease = Math.max(1, baseRoll + conMod);
         }
+      }
+
+      return {
+        activeLevelUpSession: merged
       };
     });
   },
