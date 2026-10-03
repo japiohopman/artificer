@@ -536,7 +536,7 @@ if (!missingFields.includes('slot') || !missingFields.includes('identity') || !m
   throw new Error(`evaluateMissingRequiredSteps failed to identify all missing required steps: ${missingFields.join(', ')}`);
 }
 
-const completeChar: any = { name: 'Arthur', gender: 'Male', race: 'human', class: 'fighter', background: 'soldier', alignment: 'Lawful Good' };
+const completeChar: any = { name: 'Arthur', gender: 'Male', race: 'human', class: 'fighter', background: 'soldier', alignment: 'Lawful Good', backstory: 'A brave soldier from the borderlands.' };
 const missingComplete = evaluateMissingRequiredSteps(completeChar, 1);
 if (missingComplete.length !== 0) {
   throw new Error(`evaluateMissingRequiredSteps flagged steps for complete character: ${JSON.stringify(missingComplete)}`);

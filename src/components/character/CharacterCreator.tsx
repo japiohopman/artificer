@@ -120,6 +120,14 @@ export function evaluateMissingRequiredSteps(newChar: Partial<Character>, select
       reason: 'Character name is missing'
     });
   }
+  if (!newChar.backstory || !newChar.backstory.trim()) {
+    missing.push({
+      stepId: 'backstory',
+      label: 'The Chronicle',
+      icon: 'book',
+      reason: 'Character backstory is missing'
+    });
+  }
   if (!newChar.race) {
     missing.push({
       stepId: 'species',
@@ -654,7 +662,7 @@ export const CharacterCreator: React.FC = () => {
         case 'equipment': return true;
         case 'spells': return true;
         case 'background': return !!newChar.background;
-        case 'backstory': return true;
+        case 'backstory': return !!(newChar.name && newChar.name.trim() && newChar.backstory && newChar.backstory.trim());
         case 'alignment': return !!newChar.alignment;
         case 'stats': return true;
         case 'appearance': return true;

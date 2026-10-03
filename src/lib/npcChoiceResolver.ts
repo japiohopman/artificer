@@ -2,6 +2,7 @@ import { atlasService, AtlasClass, AtlasBackground, AtlasSpecies } from "../serv
 import { CharacterPipeline } from "./characterPipeline";
 import { NPCProfile } from "../services/ai/npcService";
 import { ItemInstance, InventorySlot, InventoryContainer, EQUIPMENT_SLOT_CATALOG } from "../types/inventory";
+import { resolvePersonality as resolvePersonalityDomain } from "./narrative/narrativeResolver";
 
 const SLOT_MAP: Record<string, string> = {
   'chest': 'chest',
@@ -332,28 +333,10 @@ export class NPCChoiceResolver {
   }
 
   /**
-   * Resolves personality aspects from background.
+   * Resolves personality aspects from background deterministically.
    */
-  static resolvePersonality(background: AtlasBackground | null): { traits: string[], ideals: string[], bonds: string[], flaws: string[] } {
-    const pickRandom = (set: any) => {
-      if (!set || !set.from || !set.from.options) return '';
-      const options = set.from.options;
-      const picked = options[Math.floor(Math.random() * options.length)];
-      return picked.desc || picked.text || picked;
-    };
-
-    // Try to find personality data - it varies in format
-    const traits = background?.suggested_characteristics?.traits || [];
-    const ideals = background?.suggested_characteristics?.ideals || [];
-    const bonds = background?.suggested_characteristics?.bonds || [];
-    const flaws = background?.suggested_characteristics?.flaws || [];
-
-    return {
-      traits: traits.length > 0 ? [traits[Math.floor(Math.random() * traits.length)]] : [],
-      ideals: ideals.length > 0 ? [ideals[Math.floor(Math.random() * ideals.length)]] : [],
-      bonds: bonds.length > 0 ? [bonds[Math.floor(Math.random() * bonds.length)]] : [],
-      flaws: flaws.length > 0 ? [flaws[Math.floor(Math.random() * flaws.length)]] : []
-    };
+  static resolvePersonality(background: AtlasBackground | null, seed?: number | string): { traits: string[], ideals: string[], bonds: string[], flaws: string[] } {
+    return resolvePersonalityDomain(background, seed);
   }
 
   /**
