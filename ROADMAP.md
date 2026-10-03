@@ -19,8 +19,13 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 | 5 | #396 | Restore runtime Species selection data loading | **completed — merged** |
 | 6 | #393 | Verify Character Creator stability on the corrected 2024 foundation | **completed — verified** |
 | 7 | #401 | Align player-controlled level-up progression with Character Creator and Atlas semantics | **completed — merged** |
-| 8 | #382 | Integrate canonical level-up HP/dice resolution | **ready — next implementation** |
-| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | after #382 |
+| 8 | #382 | Integrate canonical level-up HP/dice resolution | **completed — merged** |
+| 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | **completed — merged** |
+| 10 | #377 | Restore deterministic non-LLM Character Creator narrative generation | **ready — next implementation** |
+| 11 | #366 | Define the target DevKit workspace architecture and tab responsibilities | **after #377** |
+| 12 | #369 | Establish canonical BattleMap schema, edge semantics, hazards and CombatTester integration | **after #366** |
+| 13 | #372 | Establish canonical dice resolution, seeded RNG and action auditability | **after #369** |
+| 14 | #370 | Build data-driven random encounter tables and travel integration | **after #372** |
 
 This order is intentionally not a raw priority sort. It is the current foundation sequence chosen from repository evidence and dependency risk. Implementation scope belongs in each Issue.
 
