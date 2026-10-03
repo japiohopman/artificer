@@ -144,7 +144,7 @@ class DiceService {
   }
 
   /**
-   * Roll dice with 3D animation
+   * Roll dice with 3D animation.
    */
   async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
     if (this.isRolling) {
@@ -168,7 +168,7 @@ class DiceService {
       }
 
       if (!this.initialized || !this.diceBox) {
-        console.warn("[DiceService] DiceBox not initialized, falling back to background roll.");
+        console.warn("[DiceService] DiceBox not initialized, returning fallback.");
         return this.rollBackground(notation, label);
       }
 
@@ -179,7 +179,6 @@ class DiceService {
         rollOptions.themeColor = color;
       }
       
-      // Use DiceParser to parse notation for dice-box if it's complex
       let results;
       if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
          const parsedNotation = this.parser.parseNotation(notation);
@@ -190,14 +189,14 @@ class DiceService {
 
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
-        console.warn("[DiceService] No results from 3D roll, falling back.");
+        console.warn("[DiceService] No results from 3D roll, returning fallback.");
         return this.rollBackground(notation, label);
       }
 
       // Use the parser to get the final computed result object
       const finalResults = this.parser.parseFinalResults(results);
       const rolls = this.extractRolls(finalResults);
-      
+
       // Calculate modifier
       let rollSum = 0;
       rolls.filter(r => r.valid !== false).forEach(r => rollSum += r.result);

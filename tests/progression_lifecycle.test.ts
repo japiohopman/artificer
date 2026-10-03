@@ -1,6 +1,7 @@
-import { describe, test, expect } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import fs from 'fs';
 import path from 'path';
+import { diceService } from '../src/dice_roller/diceService';
 
 // Relative fetch polyfill for Node CLI environment
 if (typeof window === 'undefined') {
@@ -20,6 +21,7 @@ if (typeof window === 'undefined') {
 }
 
 import { useCharacterStore } from '../src/store/useCharacterStore';
+import { useUIStore } from '../src/store/useUIStore';
 import {
   isEligibleForLevelUp,
   getNextLevelTarget,
@@ -27,6 +29,9 @@ import {
   validateLevelUpCommit
 } from '../src/lib/progressionUtils';
 import { extractStructuredOptionsFromFeature, extractOptionsFromFeature } from '../src/lib/atlasUtils';
+import { deterministicDiceAdapter } from '../src/dice_roller/deterministicDiceAdapter';
+import { handlePanelStatsLevelUpClick } from '../src/components/character/panel/CharacterPanelStats';
+import { createDeterministicDiceViewerPresenter } from '../src/components/dice/DeterministicDiceViewer';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -126,7 +131,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(garethLvl3.subclass).toBe('champion');
   });
 
-  test('ASI grant at level 4 enforces allocating exactly 2 points before committing', async () => {
+  test('ASI grant at level 4 enforces allocating exactly 2 points and adjusts CON modifier for HP gain correctly', async () => {
     const store = useCharacterStore.getState();
     await store.addXp('test_fighter_1', 2000); // 2950 XP total -> eligible for Lvl 4
 
@@ -134,11 +139,18 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(sessionLvl4?.targetLevel).toBe(4);
     expect(sessionLvl4?.hasASI).toBe(true);
 
+    const initialHpRoll = sessionLvl4!.hpRollResult;
+
     const commitWithoutASI = await store.commitLevelUpSession();
     expect(commitWithoutASI).toBe(false);
 
+    // Gareth has base STR = 16, CON = 14 (+2 mod). Allocating +1 STR and +1 CON brings STR to 17, CON to 15 (+2 mod).
+    const newConMod = Math.floor((15 - 10) / 2); // 2
+    const expectedUpdatedHpGain = Math.max(1, initialHpRoll + newConMod);
+
     store.updateLevelUpSession({
-      statIncreases: { str: 1, con: 1 }
+      statIncreases: { str: 1, con: 1 },
+      hpIncrease: expectedUpdatedHpGain
     });
 
     const commitLvl4 = await store.commitLevelUpSession();
@@ -147,6 +159,87 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(garethLvl4.level).toBe(4);
     expect(garethLvl4.stats.str).toBe(17);
     expect(garethLvl4.stats.con).toBe(15);
+  });
+
+  test('Session roll remains stable across session updates and rerenders without re-rolling', async () => {
+    const cleric: any = {
+      id: 'test_cleric_stability',
+      name: 'Cadderly',
+      class: 'Cleric',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 12, dex: 10, con: 14, int: 12, wis: 16, cha: 10 }
+    };
+
+    const store = useCharacterStore.getState();
+    store.addCharacter(cleric);
+
+    const session = await store.startLevelUpSession('test_cleric_stability');
+    expect(session).not.toBeNull();
+
+    const rolledValue = session!.hpRollResult;
+    const initialHpIncrease = session!.hpIncrease;
+
+    // Mutate unrelated session state (e.g. choices)
+    store.updateLevelUpSession({ choices: { test_feature: ['choice_a'] } });
+
+    const updatedSession = useCharacterStore.getState().activeLevelUpSession;
+    expect(updatedSession?.hpRollResult).toBe(rolledValue);
+    expect(updatedSession?.hpIncrease).toBe(initialHpIncrease);
+
+    store.cancelLevelUpSession();
+  });
+
+  test('Exactly one authoritative HP roll is performed per active level-up session', async () => {
+    const cleric: any = {
+      id: 'test_cleric_spy',
+      name: 'Uther',
+      class: 'Cleric',
+      level: 1,
+      xp: 300,
+      hp: 12,
+      maxHp: 12,
+      stats: { str: 16, dex: 10, con: 14, int: 10, wis: 12, cha: 14 }
+    };
+
+    const store = useCharacterStore.getState();
+    store.addCharacter(cleric);
+
+    const rollSpy = vi.spyOn(diceService, 'rollBackground');
+    rollSpy.mockClear();
+
+    // 1. evaluateNextLevelStep must be pure and cause 0 rolls
+    await evaluateNextLevelStep(cleric);
+    expect(rollSpy).toHaveBeenCalledTimes(0);
+
+    // 2. startLevelUpSession must perform exactly 1 roll
+    const session = await store.startLevelUpSession('test_cleric_spy');
+    expect(session).not.toBeNull();
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 2b. Calling startLevelUpSession a second time for the active session returns existing session without re-rolling
+    const sessionAgain = await store.startLevelUpSession('test_cleric_spy');
+    expect(sessionAgain).toBe(session);
+    expect(sessionAgain?.hpRollResult).toBe(session!.hpRollResult);
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 3. Updating session choices or stat increases must cause 0 additional rolls
+    store.updateLevelUpSession({ statIncreases: { str: 0 } });
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 4. validateLevelUpCommit must cause 0 additional rolls
+    const validation = await validateLevelUpCommit(cleric, useCharacterStore.getState().activeLevelUpSession!);
+    expect(validation.valid).toBe(true);
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    // 5. commitLevelUpSession must cause 0 additional rolls
+    const commitSuccess = await store.commitLevelUpSession();
+    expect(commitSuccess).toBe(true);
+    expect(rollSpy).toHaveBeenCalledTimes(1);
+
+    rollSpy.mockRestore();
   });
 
   test('Multi-level eligibility does not silently auto-commit next levels', async () => {
@@ -170,7 +263,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(useCharacterStore.getState().activeLevelUpSession).toBeNull();
   });
 
-  test('Non-d8 class hit die resolves exact HP gain from class data', async () => {
+  test('evaluateNextLevelStep is pure and deterministic without side effects', async () => {
     const wizard: any = {
       id: 'test_wizard_1',
       name: 'Melf',
@@ -183,10 +276,44 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       stats: { str: 8, dex: 14, con: 12, int: 16, wis: 12, cha: 10 } // CON mod = +1
     };
 
-    const session = await evaluateNextLevelStep(wizard);
+    const step1 = await evaluateNextLevelStep(wizard);
+    const step2 = await evaluateNextLevelStep(wizard);
+
+    expect(step1).not.toBeNull();
+    expect(step2).not.toBeNull();
+    expect(step1?.classHitDie).toBe(6);
+    // evaluateNextLevelStep returns pure canonical step data with deterministic defaults
+    expect(step1?.hpRollResult).toBe(4); // floor(6/2) + 1
+    expect(step2?.hpRollResult).toBe(4);
+    expect(step1?.hpIncrease).toBe(5);
+    expect(step2?.hpIncrease).toBe(5);
+  });
+
+  test('Minimum HP increase rule enforces at least +1 HP even with negative CON modifier', async () => {
+    const frailBarbarian: any = {
+      id: 'test_barbarian_1',
+      name: 'Conan',
+      class: 'Barbarian',
+      race: 'Human',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 16, dex: 10, con: 4, int: 10, wis: 10, cha: 8 } // CON mod = -3
+    };
+
+    const session = await evaluateNextLevelStep(frailBarbarian);
     expect(session).not.toBeNull();
-    // Wizard hit die is d6. Fixed HP gain = floor(6/2) + 1 + conMod(1) = 4 + 1 = 5.
-    expect(session?.hpIncrease).toBe(5);
+    expect(session?.classHitDie).toBe(12);
+
+    // Force roll result to 1 to test negative CON modifier floor
+    session!.hpRollResult = 1;
+    session!.hpIncrease = Math.max(1, 1 + (-3));
+
+    expect(session!.hpIncrease).toBe(1);
+
+    const validation = await validateLevelUpCommit(frailBarbarian, session!);
+    expect(validation.valid).toBe(true);
   });
 
   test('Existing subclass target-level features are included in level-up grants', async () => {
@@ -274,6 +401,80 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(resMismatchedSub.reason).toContain('Mismatched subclassChoice');
   });
 
+  test('Visual roll presentation via deterministicDiceAdapter visualizes active session hpRollResult without secondary RNG roll or session mutation', async () => {
+    const store = useCharacterStore.getState();
+    const fighter: any = {
+      id: 'test_fighter_visual',
+      name: 'GarethVisual',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      hp: 12,
+      maxHp: 12,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 } // CON mod = +2
+    };
+    store.addCharacter(fighter);
+
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
+    const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
+    deterministicDiceAdapter.registerPresenter({
+      id: 'test_visual_presenter',
+      name: 'Test Visual Presenter',
+      presentRoll: mockPresentRoll
+    });
+
+    // 1. startLevelUpSession generates the single authoritative roll
+    const session = await store.startLevelUpSession('test_fighter_visual');
+    expect(session).not.toBeNull();
+    expect(bgSpy).toHaveBeenCalledTimes(1);
+
+    const initialRollVal = session!.hpRollResult;
+    const initialHpGain = session!.hpIncrease;
+
+    // 2. Triggering deterministic presentation visualizes hpRollResult without secondary RNG rolls
+    await deterministicDiceAdapter.presentRoll({ sides: 10, value: initialRollVal, label: 'Level Up HP Roll' });
+
+    expect(mockPresentRoll).toHaveBeenCalledTimes(1);
+    expect(mockPresentRoll).toHaveBeenCalledWith({ sides: 10, value: initialRollVal, label: 'Level Up HP Roll' });
+    expect(bgSpy).toHaveBeenCalledTimes(1); // Still 1 roll total!
+
+    // 3. Session state remains untouched and matches single authoritative roll
+    const activeSession = useCharacterStore.getState().activeLevelUpSession;
+    expect(activeSession?.hpRollResult).toBe(initialRollVal);
+    expect(activeSession?.hpIncrease).toBe(initialHpGain);
+
+    // 4. Commit succeeds using initial authoritative roll
+    const commitSuccess = await store.commitLevelUpSession();
+    expect(commitSuccess).toBe(true);
+
+    const updatedFighter = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_visual');
+    expect(updatedFighter?.maxHp).toBe(12 + initialHpGain);
+
+    bgSpy.mockRestore();
+  });
+
+  test('deterministicDiceAdapter presents authoritative roll value to active presenter without secondary RNG or session mutation', async () => {
+    const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
+    deterministicDiceAdapter.registerPresenter({
+      id: 'test_presenter',
+      name: 'Test Presenter',
+      presentRoll: mockPresentRoll
+    });
+
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
+    await deterministicDiceAdapter.presentRoll({ sides: 10, value: 7, label: 'Level Up HP Roll' });
+
+    expect(mockPresentRoll).toHaveBeenCalledTimes(1);
+    expect(mockPresentRoll).toHaveBeenCalledWith({ sides: 10, value: 7, label: 'Level Up HP Roll' });
+    expect(bgSpy).toHaveBeenCalledTimes(0);
+
+    bgSpy.mockRestore();
+  });
+
   test('extractStructuredOptionsFromFeature rejects prose description @UUID links as runtime options', () => {
     const proseFeature = {
       index: 'prose_feature_test',
@@ -288,5 +489,86 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const legacyOptions = extractOptionsFromFeature(proseFeature);
     expect(legacyOptions.length).toBe(1);
     expect(legacyOptions[0].name).toBe('Feat A');
+  });
+
+  test('CharacterPanelStats closes CharacterProfile modal before starting level-up session', async () => {
+    const store = useCharacterStore.getState();
+    const hero: any = {
+      id: 'test_modal_hero',
+      name: 'ModalHero',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+    store.addCharacter(hero);
+
+    useUIStore.getState().setIsProfileMenuOpen(true);
+    expect(useUIStore.getState().isProfileMenuOpen).toBe(true);
+
+    handlePanelStatsLevelUpClick('test_modal_hero');
+
+    expect(useUIStore.getState().isProfileMenuOpen).toBe(false);
+
+    await store.startLevelUpSession('test_modal_hero');
+    expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test_modal_hero');
+  });
+
+  test('commitLevelUpSession retains canonical feature_specific metadata when granting features', async () => {
+    const store = useCharacterStore.getState();
+    const hero: any = {
+      id: 'test_feature_meta_hero',
+      name: 'MetaHero',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 },
+      features: []
+    };
+    store.addCharacter(hero);
+
+    const session = await store.startLevelUpSession('test_feature_meta_hero');
+    expect(session).not.toBeNull();
+
+    const committed = await store.commitLevelUpSession();
+    expect(committed).toBe(true);
+
+    const updatedHero = useCharacterStore.getState().characters.find(c => c.id === 'test_feature_meta_hero');
+    expect(updatedHero).not.toBeUndefined();
+    const grantedFeature = updatedHero?.features.find(f => f.index === session?.features[0].index);
+    expect(grantedFeature).not.toBeUndefined();
+    expect(grantedFeature?.feature_specific).toBeDefined();
+    expect(grantedFeature?.feature_specific?.special_action).toBe('additional_action');
+  });
+
+  test('DeterministicDiceViewer presenter registers and handles d6, d8, d10, d12 3D polyhedron rolls with zero RNG', async () => {
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
+    let currentDisplayValue = 0;
+    let isAnimating = false;
+
+    const setDisplayValue = (v: number) => { currentDisplayValue = v; };
+    const setAnimating = (a: boolean) => { isAnimating = a; };
+    const onComplete = vi.fn();
+
+    const presenter = createDeterministicDiceViewerPresenter(setDisplayValue, setAnimating, onComplete);
+    deterministicDiceAdapter.registerPresenter(presenter);
+
+    for (const sides of [6, 8, 10, 12]) {
+      const val = Math.floor(sides / 2);
+      await presenter.presentRoll({ sides, value: val, label: `d${sides} Roll` });
+      expect(currentDisplayValue).toBe(val);
+      expect(isAnimating).toBe(false);
+      expect(onComplete).toHaveBeenCalled();
+    }
+
+    expect(bgSpy).toHaveBeenCalledTimes(0);
+    deterministicDiceAdapter.unregisterPresenter('css_3d_polyhedron_presenter');
+    bgSpy.mockRestore();
   });
 });

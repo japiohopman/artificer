@@ -291,14 +291,37 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   },
 
   startLevelUpSession: async (characterId: string) => {
+    const { activeLevelUpSession } = get();
     const char = get().characters.find(c => c.id === characterId);
     if (!char) return null;
 
+    const targetLevel = char.level + 1;
+    if (activeLevelUpSession && activeLevelUpSession.characterId === characterId && activeLevelUpSession.targetLevel === targetLevel) {
+      return activeLevelUpSession;
+    }
+
     const session = await evaluateNextLevelStep(char);
     if (session) {
-      set({ activeLevelUpSession: session });
+      const { diceService } = await import('../dice_roller/diceService');
+      const rollResult = diceService.rollBackground(`1d${session.classHitDie}`, 'Level Up HP Roll');
+      const rawRollVal = (rollResult.rolls && rollResult.rolls[0]?.result) ?? rollResult.total;
+      const hpRollResult = (typeof rawRollVal === 'number' && rawRollVal >= 1 && rawRollVal <= session.classHitDie)
+        ? rawRollVal
+        : Math.min(session.classHitDie, Math.max(1, rollResult.total || (Math.floor(session.classHitDie / 2) + 1)));
+
+      const conModifier = Math.floor(((char.stats?.con || 10) - 10) / 2);
+      const hpIncrease = Math.max(1, hpRollResult + conModifier);
+
+      const activeSession: ActiveLevelUpSession = {
+        ...session,
+        hpRollResult,
+        hpIncrease
+      };
+
+      set({ activeLevelUpSession: activeSession });
+      return activeSession;
     }
-    return session;
+    return null;
   },
 
   cancelLevelUpSession: () => {
@@ -308,12 +331,24 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   updateLevelUpSession: (updates: Partial<ActiveLevelUpSession>) => {
     set((state) => {
       if (!state.activeLevelUpSession) return state;
-      return {
-        activeLevelUpSession: {
-          ...state.activeLevelUpSession,
-          ...updates,
-          validationError: null
+      const merged = {
+        ...state.activeLevelUpSession,
+        ...updates,
+        validationError: null
+      };
+
+      if (updates.statIncreases?.con !== undefined && updates.hpIncrease === undefined) {
+        const char = state.characters.find(c => c.id === merged.characterId);
+        if (char) {
+          const conInc = merged.statIncreases.con || 0;
+          const conMod = Math.floor(((char.stats?.con || 10) + conInc - 10) / 2);
+          const baseRoll = merged.hpRollResult ?? Math.floor((merged.classHitDie || 8) / 2) + 1;
+          merged.hpIncrease = Math.max(1, baseRoll + conMod);
         }
+      }
+
+      return {
+        activeLevelUpSession: merged
       };
     });
   },
@@ -335,11 +370,11 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       return false;
     }
 
-    // Re-evaluate canonical step to obtain immutable canonical features & HP gain
+    // Re-evaluate canonical step to obtain immutable canonical features & target level
     const canonicalStep = await evaluateNextLevelStep(char);
     if (!canonicalStep) return false;
 
-    const hpGain = canonicalStep.hpIncrease;
+    const hpGain = session.hpIncrease;
 
     const newMaxHp = (char.maxHp || char.hp || 10) + hpGain;
     const newHp = (char.hp || 10) + hpGain;
@@ -357,6 +392,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     for (const feat of canonicalStep.features || []) {
       if (!newFeatures.some(f => f.index === feat.index)) {
         newFeatures.push({
+          ...feat,
           name: feat.name,
           index: feat.index,
           desc: Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || ''),
