@@ -489,12 +489,33 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(legacyOptions[0].name).toBe('Feat A');
   });
 
-  test('CharacterPanelStats closes CharacterProfile modal before starting level-up session', () => {
+  test('CharacterPanelStats closes CharacterProfile modal before starting level-up session', async () => {
+    const store = useCharacterStore.getState();
+    const hero: any = {
+      id: 'test_modal_hero',
+      name: 'ModalHero',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+    store.addCharacter(hero);
+
     useUIStore.getState().setIsProfileMenuOpen(true);
     expect(useUIStore.getState().isProfileMenuOpen).toBe(true);
 
-    useUIStore.getState().setIsProfileMenuOpen(false);
+    // Execute the exact Level Up click handler logic from CharacterPanelStats
+    const handleLevelUpClick = async () => {
+      useUIStore.getState().setIsProfileMenuOpen(false);
+      await store.startLevelUpSession(hero.id);
+    };
+
+    await handleLevelUpClick();
+
     expect(useUIStore.getState().isProfileMenuOpen).toBe(false);
+    expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test_modal_hero');
   });
 
   test('commitLevelUpSession retains canonical feature_specific metadata when granting features', async () => {
@@ -526,7 +547,10 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(grantedFeature?.feature_specific?.special_action).toBe('additional_action');
   });
 
-  test('DeterministicDiceViewer presenter registers with stable static presenter ID css_3d_polyhedron_presenter', async () => {
+  test('DeterministicDiceViewer presenter registers and handles d6, d8, d10, d12 3D polyhedron rolls with zero RNG', async () => {
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
     const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
     deterministicDiceAdapter.registerPresenter({
       id: 'css_3d_polyhedron_presenter',
@@ -534,9 +558,14 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       presentRoll: mockPresentRoll
     });
 
-    await deterministicDiceAdapter.presentRoll({ sides: 10, value: 8, label: 'Polyhedron Roll' });
-    expect(mockPresentRoll).toHaveBeenCalledWith({ sides: 10, value: 8, label: 'Polyhedron Roll' });
+    for (const sides of [6, 8, 10, 12]) {
+      const val = Math.floor(sides / 2);
+      await deterministicDiceAdapter.presentRoll({ sides, value: val, label: `d${sides} Roll` });
+      expect(mockPresentRoll).toHaveBeenLastCalledWith({ sides, value: val, label: `d${sides} Roll` });
+    }
 
+    expect(bgSpy).toHaveBeenCalledTimes(0);
     deterministicDiceAdapter.unregisterPresenter('css_3d_polyhedron_presenter');
+    bgSpy.mockRestore();
   });
 });

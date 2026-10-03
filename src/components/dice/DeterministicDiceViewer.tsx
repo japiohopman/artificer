@@ -44,12 +44,191 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
     };
   }, [onComplete]);
 
-  // Compute adjacent face values deterministically for 3D polyhedron depth
-  const backValue = Math.max(1, (sides + 1) - displayValue);
-  const topValue = ((displayValue % sides) + 1);
-  const bottomValue = (((displayValue + 2) % sides) + 1);
-  const rightValue = (((displayValue + 3) % sides) + 1);
-  const leftValue = (((displayValue + 4) % sides) + 1);
+  const getFaceValues = (totalSides: number, primary: number) => {
+    const vals: number[] = [primary];
+    for (let i = 1; i < totalSides; i++) {
+      vals.push(((primary + i - 1) % totalSides) + 1);
+    }
+    return vals;
+  };
+
+  const faceValues = getFaceValues(sides, displayValue);
+
+  const renderGeometry = (sidesCount: number) => {
+    if (sidesCount <= 6) {
+      // d6: Cube (6 Square Faces)
+      return (
+        <div className="w-16 h-16 relative [transform-style:preserve-3d]">
+          {/* Front Face */}
+          <div className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed via-black to-dragon-darkRed border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:translateZ(32px)]">
+            <span className="text-2xl font-header font-black text-dragon-gold drop-shadow-md">{faceValues[0]}</span>
+          </div>
+          {/* Back Face */}
+          <div className="absolute inset-0 bg-stone-900 border-2 border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateY(180deg)_translateZ(32px)]">
+            <span className="text-xs font-header font-bold text-dragon-gold/40">{faceValues[1]}</span>
+          </div>
+          {/* Right Face */}
+          <div className="absolute inset-0 bg-stone-900 border-2 border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateY(90deg)_translateZ(32px)]">
+            <span className="text-xs font-header font-bold text-dragon-gold/40">{faceValues[2]}</span>
+          </div>
+          {/* Left Face */}
+          <div className="absolute inset-0 bg-stone-900 border-2 border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateY(-90deg)_translateZ(32px)]">
+            <span className="text-xs font-header font-bold text-dragon-gold/40">{faceValues[3]}</span>
+          </div>
+          {/* Top Face */}
+          <div className="absolute inset-0 bg-stone-900 border-2 border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateX(90deg)_translateZ(32px)]">
+            <span className="text-xs font-header font-bold text-dragon-gold/40">{faceValues[4]}</span>
+          </div>
+          {/* Bottom Face */}
+          <div className="absolute inset-0 bg-stone-900 border-2 border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateX(-90deg)_translateZ(32px)]">
+            <span className="text-xs font-header font-bold text-dragon-gold/40">{faceValues[5]}</span>
+          </div>
+        </div>
+      );
+    }
+
+    if (sidesCount <= 8) {
+      // d8: Octahedron (8 Triangular Faces)
+      const topAngles = [0, 90, 180, 270];
+      const botAngles = [0, 90, 180, 270];
+      return (
+        <div className="w-16 h-16 relative [transform-style:preserve-3d]">
+          {/* Upper 4 Triangular Faces */}
+          {topAngles.map((angle, idx) => (
+            <div
+              key={`d8-top-${idx}`}
+              style={{
+                transform: `rotateY(${angle}deg) rotateX(35deg) translateZ(22px)`,
+                clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+              }}
+              className={`absolute inset-0 border border-dragon-gold/80 flex items-center justify-center ${
+                idx === 0
+                  ? 'bg-gradient-to-br from-dragon-darkRed via-black to-dragon-darkRed z-10'
+                  : 'bg-stone-900/90'
+              }`}
+            >
+              <span className={`font-header font-black ${idx === 0 ? 'text-2xl text-dragon-gold drop-shadow-md' : 'text-xs text-dragon-gold/40'}`}>
+                {faceValues[idx]}
+              </span>
+            </div>
+          ))}
+          {/* Lower 4 Triangular Faces */}
+          {botAngles.map((angle, idx) => (
+            <div
+              key={`d8-bot-${idx}`}
+              style={{
+                transform: `rotateY(${angle}deg) rotateX(145deg) translateZ(22px)`,
+                clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+              }}
+              className="absolute inset-0 bg-stone-950 border border-dragon-gold/40 flex items-center justify-center"
+            >
+              <span className="text-xs font-header font-bold text-dragon-gold/30">
+                {faceValues[idx + 4]}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    if (sidesCount <= 10) {
+      // d10: Decahedron / Pentagonal Trapezohedron (10 Kite Faces)
+      const topAngles = [0, 72, 144, 216, 288];
+      const botAngles = [36, 108, 180, 252, 324];
+      return (
+        <div className="w-16 h-16 relative [transform-style:preserve-3d]">
+          {/* Upper 5 Kite Faces */}
+          {topAngles.map((angle, idx) => (
+            <div
+              key={`d10-top-${idx}`}
+              style={{
+                transform: `rotateY(${angle}deg) rotateX(32deg) translateZ(24px)`,
+                clipPath: 'polygon(50% 0%, 100% 40%, 50% 100%, 0% 40%)'
+              }}
+              className={`absolute inset-0 border border-dragon-gold/80 flex items-center justify-center ${
+                idx === 0
+                  ? 'bg-gradient-to-br from-dragon-darkRed via-black to-dragon-darkRed z-10'
+                  : 'bg-stone-900/90'
+              }`}
+            >
+              <span className={`font-header font-black ${idx === 0 ? 'text-2xl text-dragon-gold drop-shadow-md' : 'text-xs text-dragon-gold/40'}`}>
+                {faceValues[idx]}
+              </span>
+            </div>
+          ))}
+          {/* Lower 5 Kite Faces */}
+          {botAngles.map((angle, idx) => (
+            <div
+              key={`d10-bot-${idx}`}
+              style={{
+                transform: `rotateY(${angle}deg) rotateX(148deg) translateZ(24px)`,
+                clipPath: 'polygon(50% 0%, 100% 40%, 50% 100%, 0% 40%)'
+              }}
+              className="absolute inset-0 bg-stone-950 border border-dragon-gold/40 flex items-center justify-center"
+            >
+              <span className="text-xs font-header font-bold text-dragon-gold/30">
+                {faceValues[idx + 5]}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    // d12+: Dodecahedron (12 Pentagonal Faces)
+    const ringAngles = [0, 72, 144, 216, 288];
+    const lowerAngles = [36, 108, 180, 252, 324];
+    return (
+      <div className="w-16 h-16 relative [transform-style:preserve-3d]">
+        {/* Front Pentagonal Face */}
+        <div
+          style={{
+            transform: 'translateZ(30px)',
+            clipPath: 'polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%)'
+          }}
+          className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed via-black to-dragon-darkRed border-2 border-dragon-gold flex items-center justify-center z-10"
+        >
+          <span className="text-2xl font-header font-black text-dragon-gold drop-shadow-md">{faceValues[0]}</span>
+        </div>
+        {/* Upper Ring (5 Pentagons) */}
+        {ringAngles.map((angle, idx) => (
+          <div
+            key={`d12-ring-${idx}`}
+            style={{
+              transform: `rotateY(${angle}deg) rotateX(63.4deg) translateZ(30px)`,
+              clipPath: 'polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%)'
+            }}
+            className="absolute inset-0 bg-stone-900 border border-dragon-gold/60 flex items-center justify-center"
+          >
+            <span className="text-xs font-header font-bold text-dragon-gold/40">{faceValues[idx + 1]}</span>
+          </div>
+        ))}
+        {/* Lower Ring (5 Pentagons) */}
+        {lowerAngles.map((angle, idx) => (
+          <div
+            key={`d12-lower-${idx}`}
+            style={{
+              transform: `rotateY(${angle}deg) rotateX(116.6deg) translateZ(30px)`,
+              clipPath: 'polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%)'
+            }}
+            className="absolute inset-0 bg-stone-950 border border-dragon-gold/40 flex items-center justify-center"
+          >
+            <span className="text-xs font-header font-bold text-dragon-gold/30">{faceValues[idx + 6]}</span>
+          </div>
+        ))}
+        {/* Back Pentagonal Face */}
+        <div
+          style={{
+            transform: 'rotateY(180deg) translateZ(30px)',
+            clipPath: 'polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%)'
+          }}
+          className="absolute inset-0 bg-black border border-dragon-gold/20 flex items-center justify-center opacity-40"
+        >
+          <span className="text-xs font-header font-bold text-dragon-gold/20">{faceValues[11]}</span>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="flex flex-col items-center justify-center p-3 my-2 bg-black/20 rounded border border-dragon-gold/20 shadow-inner">
@@ -73,71 +252,17 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
               transition={{ duration: 0.8, ease: 'easeInOut' }}
               className="w-16 h-16 relative [transform-style:preserve-3d]"
             >
-              {/* Face 1: Front */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-red via-dragon-darkRed to-black border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:translateZ(32px)]">
-                <span className="text-xl font-header font-black text-dragon-gold">{displayValue}</span>
-              </div>
-              {/* Face 2: Back */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed to-black border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:rotateY(180deg)_translateZ(32px)]">
-                <span className="text-xl font-header font-black text-dragon-gold/70">{backValue}</span>
-              </div>
-              {/* Face 3: Right */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-red to-black border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:rotateY(90deg)_translateZ(32px)]">
-                <span className="text-xl font-header font-black text-dragon-gold/70">{rightValue}</span>
-              </div>
-              {/* Face 4: Left */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed to-black border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:rotateY(-90deg)_translateZ(32px)]">
-                <span className="text-xl font-header font-black text-dragon-gold/70">{leftValue}</span>
-              </div>
-              {/* Face 5: Top */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-red to-black border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:rotateX(90deg)_translateZ(32px)]">
-                <span className="text-xl font-header font-black text-dragon-gold/70">{topValue}</span>
-              </div>
-              {/* Face 6: Bottom */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed to-black border-2 border-dragon-gold rounded shadow-lg flex items-center justify-center [transform:rotateX(-90deg)_translateZ(32px)]">
-                <span className="text-xl font-header font-black text-dragon-gold/70">{bottomValue}</span>
-              </div>
+              {renderGeometry(sides)}
             </motion.div>
           ) : (
             <motion.div
               key={`settled-polyhedron-3d-${displayValue}`}
-              initial={{ scale: 0.7, rotateX: -25, rotateY: 25, opacity: 0 }}
-              animate={{ scale: 1, rotateX: -12, rotateY: 15, opacity: 1 }}
+              initial={{ scale: 0.7, rotateX: -25, rotateY: 15, opacity: 0 }}
+              animate={{ scale: 1, rotateX: -10, rotateY: 10, opacity: 1 }}
               transition={{ type: 'spring', stiffness: 350, damping: 18 }}
               className="w-16 h-16 relative [transform-style:preserve-3d]"
             >
-              {/* True 3D Settled Polyhedron Die - Front Face displaying authoritative roll */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed via-black to-dragon-darkRed border-2 border-dragon-gold rounded shadow-[0_0_20px_rgba(212,175,55,0.8)] flex items-center justify-center relative overflow-hidden [transform:translateZ(32px)]">
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-dragon-gold/20 to-white/10 pointer-events-none" />
-                <span className="text-3xl font-header font-black text-dragon-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] tabular-nums relative z-10">
-                  {displayValue}
-                </span>
-              </div>
-
-              {/* 3D Polyhedron Top Bevel Face */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dragon-darkRed to-stone-900 border border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateX(90deg)_translateZ(32px)] opacity-90">
-                <span className="text-xs font-header font-bold text-dragon-gold/50">{topValue}</span>
-              </div>
-
-              {/* 3D Polyhedron Right Bevel Face */}
-              <div className="absolute inset-0 bg-gradient-to-br from-stone-950 to-dragon-darkRed border border-dragon-gold/60 rounded flex items-center justify-center [transform:rotateY(90deg)_translateZ(32px)] opacity-85">
-                <span className="text-xs font-header font-bold text-dragon-gold/50">{rightValue}</span>
-              </div>
-
-              {/* 3D Polyhedron Bottom Bevel Face */}
-              <div className="absolute inset-0 bg-black border border-dragon-gold/40 rounded flex items-center justify-center [transform:rotateX(-90deg)_translateZ(32px)] opacity-70">
-                <span className="text-xs font-header font-bold text-dragon-gold/30">{bottomValue}</span>
-              </div>
-
-              {/* 3D Polyhedron Left Bevel Face */}
-              <div className="absolute inset-0 bg-black border border-dragon-gold/40 rounded flex items-center justify-center [transform:rotateY(-90deg)_translateZ(32px)] opacity-70">
-                <span className="text-xs font-header font-bold text-dragon-gold/30">{leftValue}</span>
-              </div>
-
-              {/* 3D Polyhedron Back Face */}
-              <div className="absolute inset-0 bg-black border border-dragon-gold/20 rounded flex items-center justify-center [transform:rotateY(180deg)_translateZ(32px)] opacity-50">
-                <span className="text-xs font-header font-bold text-dragon-gold/20">{backValue}</span>
-              </div>
+              {renderGeometry(sides)}
             </motion.div>
           )}
         </AnimatePresence>
