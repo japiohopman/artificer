@@ -14,6 +14,11 @@ export interface CharacterPanelStatsProps {
   variant?: 'full' | 'compact';
 }
 
+export const handlePanelStatsLevelUpClick = (characterId: string) => {
+  useUIStore.getState().setIsProfileMenuOpen(false);
+  useCharacterStore.getState().startLevelUpSession(characterId);
+};
+
 export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
   character,
   className,
@@ -21,7 +26,6 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
 }) => {
   if (!character) return null;
 
-  const { startLevelUpSession } = useCharacterStore();
   const derivedStats = calculateDerivedStats(character as Character);
   const eligible = isEligibleForLevelUp(character);
 
@@ -32,8 +36,7 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
   const spellAtkText = derivedStats.spellAttackBonus >= 0 ? `+${derivedStats.spellAttackBonus}` : `${derivedStats.spellAttackBonus}`;
 
   const handleLevelUpClick = () => {
-    useUIStore.getState().setIsProfileMenuOpen(false);
-    startLevelUpSession(character.id!);
+    handlePanelStatsLevelUpClick(character.id!);
   };
 
   if (variant === 'compact') {

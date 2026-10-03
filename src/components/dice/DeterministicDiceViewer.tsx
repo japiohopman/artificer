@@ -10,7 +10,24 @@ export interface DeterministicDiceViewerProps {
   onComplete?: () => void;
 }
 
-const PRESENTER_ID = 'css_3d_polyhedron_presenter';
+export const PRESENTER_ID = 'css_3d_polyhedron_presenter';
+
+export const createDeterministicDiceViewerPresenter = (
+  setDisplayValue: (v: number) => void,
+  setAnimating: (a: boolean) => void,
+  onComplete?: () => void
+) => ({
+  id: PRESENTER_ID,
+  name: 'CSS 3D Polyhedron Presenter',
+  presentRoll: async (params: DeterministicDiceParams) => {
+    setDisplayValue(params.value);
+    setAnimating(true);
+    soundService.playEffect('DICE_ROLL');
+    await new Promise(resolve => setTimeout(resolve, 850));
+    setAnimating(false);
+    onComplete?.();
+  }
+});
 
 export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = ({
   sides,
@@ -26,18 +43,8 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
   }, [value]);
 
   useEffect(() => {
-    deterministicDiceAdapter.registerPresenter({
-      id: PRESENTER_ID,
-      name: 'CSS 3D Polyhedron Presenter',
-      presentRoll: async (params: DeterministicDiceParams) => {
-        setDisplayValue(params.value);
-        setAnimating(true);
-        soundService.playEffect('DICE_ROLL');
-        await new Promise(resolve => setTimeout(resolve, 850));
-        setAnimating(false);
-        onComplete?.();
-      }
-    });
+    const presenter = createDeterministicDiceViewerPresenter(setDisplayValue, setAnimating, onComplete);
+    deterministicDiceAdapter.registerPresenter(presenter);
 
     return () => {
       deterministicDiceAdapter.unregisterPresenter(PRESENTER_ID);

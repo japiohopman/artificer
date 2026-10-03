@@ -30,6 +30,8 @@ import {
 } from '../src/lib/progressionUtils';
 import { extractStructuredOptionsFromFeature, extractOptionsFromFeature } from '../src/lib/atlasUtils';
 import { deterministicDiceAdapter } from '../src/dice_roller/deterministicDiceAdapter';
+import { handlePanelStatsLevelUpClick } from '../src/components/character/panel/CharacterPanelStats';
+import { createDeterministicDiceViewerPresenter } from '../src/components/dice/DeterministicDiceViewer';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -506,15 +508,11 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     useUIStore.getState().setIsProfileMenuOpen(true);
     expect(useUIStore.getState().isProfileMenuOpen).toBe(true);
 
-    // Execute the exact Level Up click handler logic from CharacterPanelStats
-    const handleLevelUpClick = async () => {
-      useUIStore.getState().setIsProfileMenuOpen(false);
-      await store.startLevelUpSession(hero.id);
-    };
-
-    await handleLevelUpClick();
+    handlePanelStatsLevelUpClick('test_modal_hero');
 
     expect(useUIStore.getState().isProfileMenuOpen).toBe(false);
+
+    await store.startLevelUpSession('test_modal_hero');
     expect(useCharacterStore.getState().activeLevelUpSession?.characterId).toBe('test_modal_hero');
   });
 
@@ -551,17 +549,22 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const bgSpy = vi.spyOn(diceService, 'rollBackground');
     bgSpy.mockClear();
 
-    const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
-    deterministicDiceAdapter.registerPresenter({
-      id: 'css_3d_polyhedron_presenter',
-      name: 'CSS 3D Polyhedron Presenter',
-      presentRoll: mockPresentRoll
-    });
+    let currentDisplayValue = 0;
+    let isAnimating = false;
+
+    const setDisplayValue = (v: number) => { currentDisplayValue = v; };
+    const setAnimating = (a: boolean) => { isAnimating = a; };
+    const onComplete = vi.fn();
+
+    const presenter = createDeterministicDiceViewerPresenter(setDisplayValue, setAnimating, onComplete);
+    deterministicDiceAdapter.registerPresenter(presenter);
 
     for (const sides of [6, 8, 10, 12]) {
       const val = Math.floor(sides / 2);
-      await deterministicDiceAdapter.presentRoll({ sides, value: val, label: `d${sides} Roll` });
-      expect(mockPresentRoll).toHaveBeenLastCalledWith({ sides, value: val, label: `d${sides} Roll` });
+      await presenter.presentRoll({ sides, value: val, label: `d${sides} Roll` });
+      expect(currentDisplayValue).toBe(val);
+      expect(isAnimating).toBe(false);
+      expect(onComplete).toHaveBeenCalled();
     }
 
     expect(bgSpy).toHaveBeenCalledTimes(0);
