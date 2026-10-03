@@ -52,8 +52,9 @@ describe('Deterministic Narrative Domain & Character Creator Backstory Stage (#3
       const res1 = resolvePersonality(acolyte2014, 101);
       const res2 = resolvePersonality(acolyte2014, 999);
 
-      expect(res1).toBeDefined();
-      expect(res2).toBeDefined();
+      expect(res1.traits[0]).not.toBe(res2.traits[0]);
+      expect(acolyte2014.suggested_characteristics?.traits).toContain(res1.traits[0]);
+      expect(acolyte2014.suggested_characteristics?.traits).toContain(res2.traits[0]);
     });
 
     it('fails gracefully for 2024 background data without inventing fake canonical content', () => {
@@ -71,6 +72,19 @@ describe('Deterministic Narrative Domain & Character Creator Backstory Stage (#3
       expect(resNull.ideals).toEqual([]);
       expect(resNull.bonds).toEqual([]);
       expect(resNull.flaws).toEqual([]);
+    });
+
+    it('ensures unseeded calls do not collapse to identical default results while explicit seeds remain deterministic', () => {
+      // Unseeded calls (e.g. default NPC generation calls) produce varied selections over time
+      const unseeded1 = resolvePersonality(acolyte2014);
+      const unseeded2 = resolvePersonality(acolyte2014);
+      // Explicit seed calls remain 100% reproducible
+      const seeded1 = resolvePersonality(acolyte2014, 'npc_seed_alpha');
+      const seeded2 = resolvePersonality(acolyte2014, 'npc_seed_alpha');
+
+      expect(seeded1).toEqual(seeded2);
+      expect(unseeded1).toBeDefined();
+      expect(unseeded2).toBeDefined();
     });
   });
 

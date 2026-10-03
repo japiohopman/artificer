@@ -17,7 +17,8 @@ export function resolvePersonality(
   backgroundData?: AtlasBackground | null,
   seed?: number | string
 ): ResolvedPersonality {
-  const rng = new SeedableRNG(seed ?? 42);
+  const effectiveSeed = seed ?? (Date.now() + Math.random());
+  const rng = new SeedableRNG(effectiveSeed);
 
   const suggested = backgroundData?.suggested_characteristics;
   if (!suggested) {
