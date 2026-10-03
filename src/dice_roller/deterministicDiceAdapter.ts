@@ -18,6 +18,12 @@ class DeterministicDiceAdapterRegistry {
     this.activePresenter = presenter;
   }
 
+  unregisterPresenter(presenterId: string) {
+    if (this.activePresenter?.id === presenterId) {
+      this.activePresenter = null;
+    }
+  }
+
   getActivePresenter(): DeterministicDicePresenter | null {
     return this.activePresenter;
   }

@@ -145,45 +145,11 @@ class DiceService {
 
   /**
    * Roll dice with 3D animation.
-   * When targetValue is provided (e.g. Level-Up HP presentation), executes the WebGL 3D dice
-   * animation via diceBox without mutating or overriding the authoritative target result.
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string, targetValue?: number): Promise<DiceResult | null> {
+  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
     if (this.isRolling) {
       console.warn(`[DiceService] Roll request ignored: dice system is busy (${this.status}).`);
       return null;
-    }
-
-    if (typeof targetValue === 'number') {
-      this.setStatus('rolling');
-      console.log(`[DiceService] Visualizing authoritative targetValue: ${targetValue} (${notation})`);
-      import('../services/soundService').then(({ soundService }) => {
-        soundService.playEffect('DICE_ROLL');
-      });
-
-      if (this.initialized && this.diceBox) {
-        try {
-          const rollTheme = theme || "default";
-          const rollOptions: any = { theme: rollTheme };
-          if (color) rollOptions.themeColor = color;
-
-          if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
-            const parsedNotation = this.parser.parseNotation(notation);
-            await this.diceBox.roll(parsedNotation, rollOptions);
-          } else {
-            await this.diceBox.roll(notation, rollOptions);
-          }
-        } catch (e) {
-          console.warn('[DiceService] 3D roll presentation error:', e);
-        } finally {
-          this.safeClear();
-        }
-      } else {
-        await new Promise(resolve => setTimeout(resolve, 800));
-      }
-
-      this.setStatus('idle');
-      return this.rollTargetResult(notation, targetValue, label);
     }
 
     this.setStatus('rolling');
@@ -257,19 +223,6 @@ class DiceService {
       this.safeClear();
       this.setStatus('idle');
     }
-  }
-
-  rollTargetResult(notation: string, targetValue: number, label = "Roll"): DiceResult {
-    const sides = parseInt(notation.replace(/[^0-9]/g, '')) || 20;
-    return {
-      id: crypto.randomUUID(),
-      notation,
-      total: targetValue,
-      label,
-      rolls: [{ die: sides, result: targetValue, valid: true }],
-      modifier: 0,
-      timestamp: Date.now()
-    };
   }
 
   private extractRolls(parsedResult: any): any[] {

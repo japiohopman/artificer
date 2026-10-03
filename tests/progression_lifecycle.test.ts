@@ -401,22 +401,7 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
 
 
-  test('diceService.roll3D with initialized diceBox invokes diceBox.roll for 3D WebGL presentation and returns authoritative targetValue', async () => {
-    const mockRoll = vi.fn().mockResolvedValue([{ value: 3 }]); // WebGL physics returns 3, targetValue is 7
-    (diceService as any).initialized = true;
-    (diceService as any).diceBox = { roll: mockRoll, clear: vi.fn() };
-
-    const res = await diceService.roll3D('1d10', 'Level Up HP Roll', 'default', '#8B0000', 7);
-
-    expect(mockRoll).toHaveBeenCalledTimes(1);
-    expect(res?.total).toBe(7);
-    expect(res?.rolls[0]?.result).toBe(7);
-
-    (diceService as any).initialized = false;
-    (diceService as any).diceBox = null;
-  });
-
-  test('Visual 3D dice roll via diceService.roll3D visualizes active session hpRollResult without secondary RNG roll or session mutation', async () => {
+  test('Visual roll presentation via deterministicDiceAdapter visualizes active session hpRollResult without secondary RNG roll or session mutation', async () => {
     const store = useCharacterStore.getState();
     const fighter: any = {
       id: 'test_fighter_visual',
@@ -433,6 +418,13 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const bgSpy = vi.spyOn(diceService, 'rollBackground');
     bgSpy.mockClear();
 
+    const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
+    deterministicDiceAdapter.registerPresenter({
+      id: 'test_visual_presenter',
+      name: 'Test Visual Presenter',
+      presentRoll: mockPresentRoll
+    });
+
     // 1. startLevelUpSession generates the single authoritative roll
     const session = await store.startLevelUpSession('test_fighter_visual');
     expect(session).not.toBeNull();
@@ -441,10 +433,11 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const initialRollVal = session!.hpRollResult;
     const initialHpGain = session!.hpIncrease;
 
-    // 2. Triggering 3D roll visualization for hpRollResult does NOT perform secondary RNG rolls
-    const visRes = await diceService.roll3D('1d10', 'Level Up HP Roll', 'default', '#8B0000', initialRollVal);
-    expect(visRes).not.toBeNull();
-    expect(visRes?.total).toBe(initialRollVal);
+    // 2. Triggering deterministic presentation visualizes hpRollResult without secondary RNG rolls
+    await deterministicDiceAdapter.presentRoll({ sides: 10, value: initialRollVal, label: 'Level Up HP Roll' });
+
+    expect(mockPresentRoll).toHaveBeenCalledTimes(1);
+    expect(mockPresentRoll).toHaveBeenCalledWith({ sides: 10, value: initialRollVal, label: 'Level Up HP Roll' });
     expect(bgSpy).toHaveBeenCalledTimes(1); // Still 1 roll total!
 
     // 3. Session state remains untouched and matches single authoritative roll

@@ -8,7 +8,6 @@ export interface DeterministicDiceViewerProps {
   sides: number;
   value: number;
   label?: string;
-  isRolling?: boolean;
   onComplete?: () => void;
 }
 
@@ -16,39 +15,35 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
   sides,
   value,
   label = 'Authoritative Roll',
-  isRolling = false,
   onComplete
 }) => {
   const [animating, setAnimating] = useState(false);
-  const [displayValue, setDisplayValue] = useState<number | null>(value);
+  const [displayValue, setDisplayValue] = useState<number>(value);
 
   useEffect(() => {
-    // Register adapter presenter
+    setDisplayValue(value);
+  }, [value]);
+
+  useEffect(() => {
+    const presenterId = `deterministic_css3d_presenter_${Math.random().toString(36).substr(2, 9)}`;
+
     deterministicDiceAdapter.registerPresenter({
-      id: 'css_framer_3d_presenter',
+      id: presenterId,
       name: 'CSS 3D Polyhedron & Motion Presenter',
       presentRoll: async (params: DeterministicDiceParams) => {
         setDisplayValue(params.value);
         setAnimating(true);
         soundService.playEffect('DICE_ROLL');
-        await new Promise(resolve => setTimeout(resolve, 900));
+        await new Promise(resolve => setTimeout(resolve, 850));
         setAnimating(false);
         onComplete?.();
       }
     });
-  }, [value, onComplete]);
 
-  useEffect(() => {
-    if (isRolling) {
-      setAnimating(true);
-      soundService.playEffect('DICE_ROLL');
-      const timer = setTimeout(() => {
-        setAnimating(false);
-        onComplete?.();
-      }, 900);
-      return () => clearTimeout(timer);
-    }
-  }, [isRolling, onComplete]);
+    return () => {
+      deterministicDiceAdapter.unregisterPresenter(presenterId);
+    };
+  }, [onComplete]);
 
   return (
     <div className="flex flex-col items-center justify-center p-3 my-2 bg-black/20 rounded border border-dragon-gold/20 shadow-inner">
@@ -56,35 +51,44 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
         {label} (d{sides})
       </div>
 
-      <div className="relative w-20 h-20 flex items-center justify-center">
+      <div className="relative w-24 h-24 flex items-center justify-center [perspective:800px]">
         <AnimatePresence mode="wait">
           {animating ? (
             <motion.div
-              key="rolling"
-              initial={{ rotateX: 0, rotateY: 0, rotateZ: 0, scale: 0.8, opacity: 0.7 }}
+              key="rolling-3d"
+              initial={{ rotateX: 0, rotateY: 0, rotateZ: 0, scale: 0.7 }}
               animate={{
                 rotateX: [0, 360, 720, 1080],
                 rotateY: [0, 180, 540, 720],
                 rotateZ: [0, 90, 270, 360],
-                scale: [0.8, 1.15, 0.95, 1],
-                opacity: 1
+                scale: [0.7, 1.15, 0.95, 1],
+                opacity: [0.8, 1, 1, 1]
               }}
-              transition={{ duration: 0.85, ease: 'easeOut' }}
-              className="w-16 h-16 bg-dragon-darkRed border-2 border-dragon-gold rounded-lg shadow-[0_0_20px_rgba(212,175,55,0.6)] flex items-center justify-center"
+              transition={{ duration: 0.8, ease: 'easeInOut' }}
+              className="w-16 h-16 bg-gradient-to-br from-dragon-red via-dragon-darkRed to-black border-2 border-dragon-gold rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.7)] flex items-center justify-center [transform-style:preserve-3d]"
             >
               <GameIcon name="dice" size={32} color="#D4AF37" />
             </motion.div>
           ) : (
             <motion.div
-              key="settled"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-              className="w-16 h-16 bg-gradient-to-br from-dragon-darkRed to-black border-2 border-dragon-gold rounded-lg shadow-[0_0_25px_rgba(212,175,55,0.8)] flex items-center justify-center relative overflow-hidden"
+              key={`settled-3d-${displayValue}`}
+              initial={{ scale: 0.7, rotateX: -30, opacity: 0 }}
+              animate={{ scale: 1, rotateX: 0, opacity: 1 }}
+              transition={{ type: 'spring', stiffness: 350, damping: 18 }}
+              className="w-16 h-16 bg-gradient-to-br from-dragon-darkRed to-black border-2 border-dragon-gold rounded-xl shadow-[0_0_25px_rgba(212,175,55,0.9)] flex items-center justify-center relative overflow-hidden [transform-style:preserve-3d]"
             >
-              <div className="absolute inset-0 bg-dragon-gold/10 mix-blend-overlay" />
-              <span className="text-3xl font-header font-black text-dragon-gold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                {value}
+              {/* Inner ambient glow & parchment texture */}
+              <div className="absolute inset-0 bg-dragon-gold/15 mix-blend-overlay pointer-events-none" />
+
+              {/* Corner accent rivets */}
+              <div className="absolute top-1 left-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
+              <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
+              <div className="absolute bottom-1 left-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
+              <div className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
+
+              {/* Authoritative display value */}
+              <span className="text-3xl font-header font-black text-dragon-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] tabular-nums">
+                {displayValue}
               </span>
             </motion.div>
           )}

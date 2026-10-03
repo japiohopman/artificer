@@ -396,7 +396,6 @@ export const LevelUpOverlay: React.FC = () => {
                                 <DeterministicDiceViewer
                                   sides={classHitDie}
                                   value={hpRollResult}
-                                  isRolling={isRollingHp}
                                 />
                                 <div className="text-xs font-medium text-parchment-700 mt-1">
                                   Rolled <span className="font-bold text-dragon-darkRed">{hpRollResult}</span> + <span className="font-bold text-dragon-darkRed">{conModifier}</span> CON Modifier
