@@ -304,7 +304,11 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     if (session) {
       const { diceService } = await import('../dice_roller/diceService');
       const rollResult = diceService.rollBackground(`1d${session.classHitDie}`, 'Level Up HP Roll');
-      const hpRollResult = rollResult.rolls[0]?.result || (Math.floor(session.classHitDie / 2) + 1);
+      const rawRollVal = (rollResult.rolls && rollResult.rolls[0]?.result) ?? rollResult.total;
+      const hpRollResult = (typeof rawRollVal === 'number' && rawRollVal >= 1 && rawRollVal <= session.classHitDie)
+        ? rawRollVal
+        : Math.min(session.classHitDie, Math.max(1, rollResult.total || (Math.floor(session.classHitDie / 2) + 1)));
+
       const conModifier = Math.floor(((char.stats?.con || 10) - 10) / 2);
       const hpIncrease = Math.max(1, hpRollResult + conModifier);
 
@@ -388,6 +392,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     for (const feat of canonicalStep.features || []) {
       if (!newFeatures.some(f => f.index === feat.index)) {
         newFeatures.push({
+          ...feat,
           name: feat.name,
           index: feat.index,
           desc: Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || ''),

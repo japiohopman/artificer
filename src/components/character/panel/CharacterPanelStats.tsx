@@ -1,5 +1,6 @@
 import React from 'react';
 import { Character, useCharacterStore } from '../../../store/useCharacterStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { calculateDerivedStats } from '../../../lib/statCalculations';
 import { isEligibleForLevelUp } from '../../../lib/progressionUtils';
 import { CharacterPanelAbilities } from './CharacterPanelAbilities';
@@ -29,6 +30,11 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
   const acText = `${derivedStats.ac}`;
   const attackBonusText = derivedStats.attackBonus >= 0 ? `+${derivedStats.attackBonus}` : `${derivedStats.attackBonus}`;
   const spellAtkText = derivedStats.spellAttackBonus >= 0 ? `+${derivedStats.spellAttackBonus}` : `${derivedStats.spellAttackBonus}`;
+
+  const handleLevelUpClick = () => {
+    useUIStore.getState().setIsProfileMenuOpen(false);
+    startLevelUpSession(character.id!);
+  };
 
   if (variant === 'compact') {
     return (
@@ -88,7 +94,7 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
         <div>
           {eligible && character.id && (
             <button
-              onClick={() => startLevelUpSession(character.id!)}
+              onClick={handleLevelUpClick}
               className="bg-dragon-darkRed hover:bg-dragon-red border-2 border-dragon-gold text-dragon-gold px-2.5 py-1 rounded-sm shadow-lg flex items-center gap-1.5 text-[9.5px] font-header font-black uppercase tracking-widest animate-bounce pointer-events-auto hover:scale-105 transition-all"
             >
               <GameIcon name="advance" size={12} color="#D4AF37" />

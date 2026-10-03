@@ -21,6 +21,7 @@ if (typeof window === 'undefined') {
 }
 
 import { useCharacterStore } from '../src/store/useCharacterStore';
+import { useUIStore } from '../src/store/useUIStore';
 import {
   isEligibleForLevelUp,
   getNextLevelTarget,
@@ -137,7 +138,6 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(sessionLvl4?.hasASI).toBe(true);
 
     const initialHpRoll = sessionLvl4!.hpRollResult;
-    const initialHpGain = sessionLvl4!.hpIncrease;
 
     const commitWithoutASI = await store.commitLevelUpSession();
     expect(commitWithoutASI).toBe(false);
@@ -399,8 +399,6 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(resMismatchedSub.reason).toContain('Mismatched subclassChoice');
   });
 
-
-
   test('Visual roll presentation via deterministicDiceAdapter visualizes active session hpRollResult without secondary RNG roll or session mutation', async () => {
     const store = useCharacterStore.getState();
     const fighter: any = {
@@ -489,5 +487,56 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     const legacyOptions = extractOptionsFromFeature(proseFeature);
     expect(legacyOptions.length).toBe(1);
     expect(legacyOptions[0].name).toBe('Feat A');
+  });
+
+  test('CharacterPanelStats closes CharacterProfile modal before starting level-up session', () => {
+    useUIStore.getState().setIsProfileMenuOpen(true);
+    expect(useUIStore.getState().isProfileMenuOpen).toBe(true);
+
+    useUIStore.getState().setIsProfileMenuOpen(false);
+    expect(useUIStore.getState().isProfileMenuOpen).toBe(false);
+  });
+
+  test('commitLevelUpSession retains canonical feature_specific metadata when granting features', async () => {
+    const store = useCharacterStore.getState();
+    const hero: any = {
+      id: 'test_feature_meta_hero',
+      name: 'MetaHero',
+      class: 'Fighter',
+      level: 1,
+      xp: 300,
+      hp: 10,
+      maxHp: 10,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 },
+      features: []
+    };
+    store.addCharacter(hero);
+
+    const session = await store.startLevelUpSession('test_feature_meta_hero');
+    expect(session).not.toBeNull();
+
+    const committed = await store.commitLevelUpSession();
+    expect(committed).toBe(true);
+
+    const updatedHero = useCharacterStore.getState().characters.find(c => c.id === 'test_feature_meta_hero');
+    expect(updatedHero).not.toBeUndefined();
+    const grantedFeature = updatedHero?.features.find(f => f.index === session?.features[0].index);
+    expect(grantedFeature).not.toBeUndefined();
+    expect(grantedFeature?.feature_specific).toBeDefined();
+    expect(grantedFeature?.feature_specific?.special_action).toBe('additional_action');
+  });
+
+  test('DeterministicDiceViewer presenter registers with stable static presenter ID css_3d_polyhedron_presenter', async () => {
+    const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
+    deterministicDiceAdapter.registerPresenter({
+      id: 'css_3d_polyhedron_presenter',
+      name: 'CSS 3D Polyhedron Presenter',
+      presentRoll: mockPresentRoll
+    });
+
+    await deterministicDiceAdapter.presentRoll({ sides: 10, value: 8, label: 'Polyhedron Roll' });
+    expect(mockPresentRoll).toHaveBeenCalledWith({ sides: 10, value: 8, label: 'Polyhedron Roll' });
+
+    deterministicDiceAdapter.unregisterPresenter('css_3d_polyhedron_presenter');
   });
 });

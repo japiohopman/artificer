@@ -11,6 +11,8 @@ export interface DeterministicDiceViewerProps {
   onComplete?: () => void;
 }
 
+const PRESENTER_ID = 'css_3d_polyhedron_presenter';
+
 export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = ({
   sides,
   value,
@@ -25,11 +27,9 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
   }, [value]);
 
   useEffect(() => {
-    const presenterId = `deterministic_css3d_presenter_${Math.random().toString(36).substr(2, 9)}`;
-
     deterministicDiceAdapter.registerPresenter({
-      id: presenterId,
-      name: 'CSS 3D Polyhedron & Motion Presenter',
+      id: PRESENTER_ID,
+      name: 'CSS 3D Polyhedron Presenter',
       presentRoll: async (params: DeterministicDiceParams) => {
         setDisplayValue(params.value);
         setAnimating(true);
@@ -41,7 +41,7 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
     });
 
     return () => {
-      deterministicDiceAdapter.unregisterPresenter(presenterId);
+      deterministicDiceAdapter.unregisterPresenter(PRESENTER_ID);
     };
   }, [onComplete]);
 
@@ -51,11 +51,11 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
         {label} (d{sides})
       </div>
 
-      <div className="relative w-24 h-24 flex items-center justify-center [perspective:800px]">
+      <div className="relative w-28 h-28 flex items-center justify-center [perspective:800px]">
         <AnimatePresence mode="wait">
           {animating ? (
             <motion.div
-              key="rolling-3d"
+              key="rolling-polyhedron-3d"
               initial={{ rotateX: 0, rotateY: 0, rotateZ: 0, scale: 0.7 }}
               animate={{
                 rotateX: [0, 360, 720, 1080],
@@ -65,29 +65,24 @@ export const DeterministicDiceViewer: React.FC<DeterministicDiceViewerProps> = (
                 opacity: [0.8, 1, 1, 1]
               }}
               transition={{ duration: 0.8, ease: 'easeInOut' }}
-              className="w-16 h-16 bg-gradient-to-br from-dragon-red via-dragon-darkRed to-black border-2 border-dragon-gold rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.7)] flex items-center justify-center [transform-style:preserve-3d]"
+              className="w-20 h-20 bg-gradient-to-br from-dragon-red via-dragon-darkRed to-black border-2 border-dragon-gold shadow-[0_0_30px_rgba(212,175,55,0.7)] flex items-center justify-center [transform-style:preserve-3d] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
             >
               <GameIcon name="dice" size={32} color="#D4AF37" />
             </motion.div>
           ) : (
             <motion.div
-              key={`settled-3d-${displayValue}`}
+              key={`settled-polyhedron-3d-${displayValue}`}
               initial={{ scale: 0.7, rotateX: -30, opacity: 0 }}
               animate={{ scale: 1, rotateX: 0, opacity: 1 }}
               transition={{ type: 'spring', stiffness: 350, damping: 18 }}
-              className="w-16 h-16 bg-gradient-to-br from-dragon-darkRed to-black border-2 border-dragon-gold rounded-xl shadow-[0_0_25px_rgba(212,175,55,0.9)] flex items-center justify-center relative overflow-hidden [transform-style:preserve-3d]"
+              className="w-20 h-20 bg-gradient-to-br from-dragon-darkRed via-black to-dragon-darkRed border-2 border-dragon-gold shadow-[0_0_25px_rgba(212,175,55,0.9)] flex items-center justify-center relative overflow-hidden [transform-style:preserve-3d] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
             >
-              {/* Inner ambient glow & parchment texture */}
-              <div className="absolute inset-0 bg-dragon-gold/15 mix-blend-overlay pointer-events-none" />
+              {/* Faceted lighting & ambient gold overlays */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-dragon-gold/20 to-white/10 pointer-events-none" />
+              <div className="absolute top-0 inset-x-0 h-1/2 bg-white/10 pointer-events-none" />
 
-              {/* Corner accent rivets */}
-              <div className="absolute top-1 left-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
-              <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
-              <div className="absolute bottom-1 left-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
-              <div className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-dragon-gold rounded-full opacity-80" />
-
-              {/* Authoritative display value */}
-              <span className="text-3xl font-header font-black text-dragon-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] tabular-nums">
+              {/* Authoritative display value on front face */}
+              <span className="text-3xl font-header font-black text-dragon-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] tabular-nums relative z-10">
                 {displayValue}
               </span>
             </motion.div>
