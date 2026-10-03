@@ -438,6 +438,13 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
             feature_specific: featData.feature_specific
           });
         }
+      } else {
+        set((state) => ({
+          activeLevelUpSession: state.activeLevelUpSession
+            ? { ...state.activeLevelUpSession, validationError: `Failed to load feat "${session.featChoice}" from canonical Atlas.` }
+            : null
+        }));
+        return false;
       }
     }
 

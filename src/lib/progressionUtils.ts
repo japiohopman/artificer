@@ -1,6 +1,6 @@
 import { extractStructuredOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
-import { fetchSubclassesList, fetchFeatsList } from '../services/storageService';
+import { fetchSubclassesList, fetchFeatsList, fetchFeatData } from '../services/storageService';
 
 export interface ActiveLevelUpSession {
   characterId: string;
@@ -64,6 +64,178 @@ export function isEligibleForLevelUp(character?: Partial<Character> | null): boo
 export function getNextLevelTarget(character?: Partial<Character> | null): number | null {
   if (!character || !isEligibleForLevelUp(character) || character.level === undefined) return null;
   return character.level + 1;
+}
+
+export function evaluateFeatPrerequisites(
+  character: Character,
+  featData: any,
+  targetLevel?: number
+): { eligible: boolean; reason?: string } {
+  if (!featData || !featData.prerequisites || !Array.isArray(featData.prerequisites) || featData.prerequisites.length === 0) {
+    return { eligible: true };
+  }
+
+  const effectiveLevel = targetLevel ?? (character.level + 1);
+
+  const getStat = (statName: string): number => {
+    const key = statName.toLowerCase().slice(0, 3) as keyof Character['stats'];
+    return character.stats?.[key] ?? 10;
+  };
+
+  const statMap: Record<string, string> = {
+    strength: 'str',
+    dexterity: 'dex',
+    constitution: 'con',
+    intelligence: 'int',
+    wisdom: 'wis',
+    charisma: 'cha'
+  };
+
+  for (const prereq of featData.prerequisites) {
+    if (typeof prereq === 'string') {
+      const trimmed = prereq.trim();
+
+      // String Pattern 1: "Level N+"
+      const levelMatch = trimmed.match(/^level\s+(\d+)\+/i);
+      if (levelMatch) {
+        const minLevel = parseInt(levelMatch[1], 10);
+        if (effectiveLevel < minLevel) {
+          return { eligible: false, reason: `Requires character level ${minLevel}+ (current: ${effectiveLevel}).` };
+        }
+        continue;
+      }
+
+      // String Pattern 2: Ability score requirement, e.g., "Charisma 13+", "Strength or Dexterity 13+", "Intelligence, Wisdom, or Charisma 13+"
+      const statMatch = trimmed.match(/^([A-Za-z,\s]+)\s+(\d+)\+/i);
+      if (statMatch) {
+        const statsStr = statMatch[1];
+        const minVal = parseInt(statMatch[2], 10);
+        const statsToTest = statsStr
+          .split(/,\s*|\s+or\s+/i)
+          .map(s => s.trim().toLowerCase())
+          .filter(Boolean);
+
+        const meetsStat = statsToTest.some(s => {
+          const abbr = statMap[s] || s.slice(0, 3);
+          const currentVal = (character.stats as any)?.[abbr] ?? 10;
+          return currentVal >= minVal;
+        });
+
+        if (!meetsStat) {
+          return { eligible: false, reason: `Requires ${statsStr} ${minVal}+.` };
+        }
+        continue;
+      }
+
+      // String Pattern 3: Spellcasting feature requirement
+      if (trimmed.toLowerCase().includes('spellcasting') || trimmed.toLowerCase().includes('pact magic') || trimmed.toLowerCase().includes('ability to cast at least one spell')) {
+        const spellcasterClasses = ['wizard', 'cleric', 'druid', 'bard', 'sorcerer', 'paladin', 'ranger', 'warlock', 'artificer'];
+        const isCasterClass = spellcasterClasses.includes((character.class || '').toLowerCase());
+        const hasKnownSpells = Array.isArray(character.knownSpells) && character.knownSpells.length > 0;
+        if (!isCasterClass && !hasKnownSpells) {
+          return { eligible: false, reason: 'Requires Spellcasting or Pact Magic feature.' };
+        }
+        continue;
+      }
+
+      // String Pattern 4: Armor / Shield Training
+      if (trimmed.toLowerCase().includes('armor training') || trimmed.toLowerCase().includes('shield training')) {
+        const reqStr = trimmed.toLowerCase();
+        const profs = (character.proficiencies || []).map(p => (typeof p === 'string' ? p : p.name || p.index || '').toLowerCase());
+        let met = false;
+
+        if (reqStr.includes('light armor')) {
+          met = profs.some(p => p.includes('light armor') || p.includes('light_armor') || p === 'light');
+        } else if (reqStr.includes('medium armor')) {
+          met = profs.some(p => p.includes('medium armor') || p.includes('medium_armor') || p === 'medium');
+        } else if (reqStr.includes('heavy armor')) {
+          met = profs.some(p => p.includes('heavy armor') || p.includes('heavy_armor') || p === 'heavy');
+        } else if (reqStr.includes('shield')) {
+          met = profs.some(p => p.includes('shield'));
+        }
+
+        if (!met) {
+          return { eligible: false, reason: `Requires ${trimmed}.` };
+        }
+        continue;
+      }
+
+      // String Pattern 5: Fighting Style Feature
+      if (trimmed.toLowerCase().includes('fighting style')) {
+        const hasFightingStyle = (character.features || []).some(f => (f.name || f.index || '').toLowerCase().includes('fighting_style') || (f.name || '').toLowerCase().includes('fighting style'));
+        if (!hasFightingStyle) {
+          return { eligible: false, reason: 'Requires Fighting Style Feature.' };
+        }
+        continue;
+      }
+    } else if (typeof prereq === 'object' && prereq !== null) {
+      // Structured 2014 object prerequisites
+      if (prereq.stat === 'level') {
+        const minLvl = prereq.value || 1;
+        if (effectiveLevel < minLvl) {
+          return { eligible: false, reason: `Requires level ${minLvl}+.` };
+        }
+      } else if (prereq.stat === 'species') {
+        const charSpecies = (character.race || '').toLowerCase().replace(/[\s-]/g, '_');
+        if (Array.isArray(prereq.value)) {
+          if (!prereq.value.some((val: string) => charSpecies.includes(val.toLowerCase()))) {
+            return { eligible: false, reason: `Requires species ${prereq.value.join('/')}.` };
+          }
+        } else if (typeof prereq.value === 'string') {
+          if (!charSpecies.includes(prereq.value.toLowerCase())) {
+            return { eligible: false, reason: `Requires species ${prereq.value}.` };
+          }
+        }
+      } else if (prereq.stat && statMap[prereq.stat.toLowerCase()]) {
+        const val = getStat(prereq.stat);
+        const reqVal = prereq.value || 13;
+        if (val < reqVal) {
+          return { eligible: false, reason: `Requires ${prereq.stat} ${reqVal}+.` };
+        }
+      } else if (prereq.stat === 'spellcasting') {
+        const spellcasterClasses = ['wizard', 'cleric', 'druid', 'bard', 'sorcerer', 'paladin', 'ranger', 'warlock', 'artificer'];
+        const isCasterClass = spellcasterClasses.includes((character.class || '').toLowerCase());
+        const hasKnownSpells = Array.isArray(character.knownSpells) && character.knownSpells.length > 0;
+        if (!isCasterClass && !hasKnownSpells) {
+          return { eligible: false, reason: 'Requires Spellcasting feature.' };
+        }
+      }
+    }
+  }
+
+  return { eligible: true };
+}
+
+export async function fetchAsiEligibleFeats(
+  ruleset?: '2014' | '2024',
+  character?: Character,
+  targetLevel?: number
+): Promise<{ name: string; index: string; category?: string }[]> {
+  const activeRuleset = ruleset || character?.ruleset || '2014';
+  const categoryFilter = activeRuleset === '2024' ? 'general' : undefined;
+
+  const allFeats = await fetchFeatsList(activeRuleset, categoryFilter);
+  if (!character) return allFeats;
+
+  const { atlasService } = await import('../services/atlasService');
+
+  const eligibleFeats: { name: string; index: string; category?: string }[] = [];
+  for (const featSummary of allFeats) {
+    const featData = await atlasService.loadFeat(featSummary.index, activeRuleset);
+    if (!featData) continue;
+
+    // Strict 2024 rule: ASI replacement strictly allows General feats
+    if (activeRuleset === '2024' && featData.category && featData.category !== 'general') {
+      continue;
+    }
+
+    const prereqEval = evaluateFeatPrerequisites(character, featData, targetLevel);
+    if (prereqEval.eligible) {
+      eligibleFeats.push(featSummary);
+    }
+  }
+
+  return eligibleFeats;
 }
 
 export async function resolveLevelUpFeatures(
@@ -232,11 +404,26 @@ export async function validateLevelUpCommit(character: Character, session: Activ
       if (!session.featChoice || session.featChoice.trim() === '') {
         return { valid: false, reason: 'A feat must be selected when Feat choice is active.' };
       }
-      const availableFeats = await fetchFeatsList(character.ruleset);
-      const isCanonicalFeat = availableFeats.some(f => f.index.toLowerCase() === session.featChoice?.toLowerCase());
-      if (!isCanonicalFeat) {
-        return { valid: false, reason: `Selected feat "${session.featChoice}" is not a valid canonical feat.` };
+
+      const { atlasService } = await import('../services/atlasService');
+      const featData = await atlasService.loadFeat(session.featChoice, character.ruleset);
+      if (!featData) {
+        return { valid: false, reason: `Selected feat "${session.featChoice}" could not be loaded from canonical Atlas.` };
       }
+
+      // Check feat category for 2024 ruleset (ASI replacement strictly allows general feats)
+      if (character.ruleset === '2024') {
+        if (featData.category && featData.category !== 'general') {
+          return { valid: false, reason: `Feat "${featData.name || session.featChoice}" (category: ${featData.category}) is not eligible for ASI replacement in 2024 ruleset.` };
+        }
+      }
+
+      // Check prerequisites
+      const prereqEval = evaluateFeatPrerequisites(character, featData, session.targetLevel);
+      if (!prereqEval.eligible) {
+        return { valid: false, reason: `Character does not meet prerequisites for feat "${featData.name || session.featChoice}": ${prereqEval.reason}` };
+      }
+
       const pointsAllocated = Object.values(session.statIncreases || {}).reduce((a, b) => a + (b || 0), 0);
       if (pointsAllocated !== 0) {
         return { valid: false, reason: 'Stat increases must be 0 when selecting a Feat.' };

@@ -5,6 +5,7 @@ import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { normalizeImageUrl, fetchSubclassesList } from '../../services/storageService';
 import { extractStructuredOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
+import { fetchAsiEligibleFeats } from '../../lib/progressionUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { deterministicDiceAdapter } from '../../dice_roller/deterministicDiceAdapter';
@@ -111,7 +112,7 @@ export const LevelUpOverlay: React.FC = () => {
       }
 
       if (session.hasASI) {
-        atlasService.loadFeatsList(character.ruleset).then(async (list) => {
+        fetchAsiEligibleFeats(character.ruleset, character, session.targetLevel).then(list => {
           if (Array.isArray(list)) {
             setFeatsList(list);
           }

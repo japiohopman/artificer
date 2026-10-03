@@ -681,4 +681,129 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     deterministicDiceAdapter.unregisterPresenter('css_3d_polyhedron_presenter');
     bgSpy.mockRestore();
   });
+
+  describe('PR Review Negative Boundaries (#383)', () => {
+    test('2024 ASI replacement rejects epic boons and origin feats', async () => {
+      const hero2024: any = {
+        id: 'test_2024_epic_reject',
+        name: 'Hero2024',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 16 },
+        features: []
+      };
+
+      const session = await evaluateNextLevelStep(hero2024);
+      expect(session).not.toBeNull();
+      session!.asiMode = 'feat';
+      session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+      // 1. Attempt Epic Boon selection
+      session!.featChoice = 'boon_of_combat_prowess';
+      const resEpic = await validateLevelUpCommit(hero2024, session!);
+      expect(resEpic.valid).toBe(false);
+      expect(resEpic.reason).toContain('not eligible for ASI replacement');
+
+      // 2. Attempt Origin Feat selection
+      session!.featChoice = 'musician';
+      const resOrigin = await validateLevelUpCommit(hero2024, session!);
+      expect(resOrigin.valid).toBe(false);
+      expect(resOrigin.reason).toContain('not eligible for ASI replacement');
+    });
+
+    test('Canonical feat with unmet stat or level prerequisite is rejected', async () => {
+      const lowChaHero: any = {
+        id: 'test_low_cha_hero',
+        name: 'LowCha',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }, // CHA 8 < 13
+        features: []
+      };
+
+      const session = await evaluateNextLevelStep(lowChaHero);
+      expect(session).not.toBeNull();
+      session!.asiMode = 'feat';
+      session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+      session!.featChoice = 'actor'; // Actor requires CHA 13+
+
+      const res = await validateLevelUpCommit(lowChaHero, session!);
+      expect(res.valid).toBe(false);
+      expect(res.reason).toContain('does not meet prerequisites');
+      expect(res.reason).toContain('Charisma 13+');
+    });
+
+    test('Selected feat that cannot be loaded fails closed at commit', async () => {
+      const store = useCharacterStore.getState();
+      const hero: any = {
+        id: 'test_missing_feat_hero',
+        name: 'MissingFeat',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 },
+        features: []
+      };
+      store.addCharacter(hero);
+
+      await store.startLevelUpSession('test_missing_feat_hero');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'non_existent_feat_index_xyz',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const committed = await store.commitLevelUpSession();
+      expect(committed).toBe(false);
+
+      const activeSession = useCharacterStore.getState().activeLevelUpSession;
+      expect(activeSession).not.toBeNull();
+      expect(activeSession?.validationError).toContain('could not be loaded');
+    });
+
+    test('Valid eligible feat commits with feature_specific preserved', async () => {
+      const store = useCharacterStore.getState();
+      const eligibleHero: any = {
+        id: 'test_valid_feat_hero',
+        name: 'EligibleHero',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 14 }, // CHA 14 >= 13 for Actor
+        features: []
+      };
+      store.addCharacter(eligibleHero);
+
+      await store.startLevelUpSession('test_valid_feat_hero');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'actor',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const committed = await store.commitLevelUpSession();
+      expect(committed).toBe(true);
+
+      const updatedHero = useCharacterStore.getState().characters.find(c => c.id === 'test_valid_feat_hero')!;
+      expect(updatedHero.level).toBe(4);
+      const actorFeat = updatedHero.features.find(f => f.index === 'actor' && f.source === 'Feat');
+      expect(actorFeat).toBeDefined();
+      expect(actorFeat?.name).toBe('actor');
+      expect(updatedHero.choices['feat']).toEqual(['actor']);
+    });
+  });
 });
