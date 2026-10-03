@@ -74,17 +74,16 @@ describe('Deterministic Narrative Domain & Character Creator Backstory Stage (#3
       expect(resNull.flaws).toEqual([]);
     });
 
-    it('ensures unseeded calls do not collapse to identical default results while explicit seeds remain deterministic', () => {
-      // Unseeded calls (e.g. default NPC generation calls) produce varied selections over time
-      const unseeded1 = resolvePersonality(acolyte2014);
-      const unseeded2 = resolvePersonality(acolyte2014);
-      // Explicit seed calls remain 100% reproducible
-      const seeded1 = resolvePersonality(acolyte2014, 'npc_seed_alpha');
-      const seeded2 = resolvePersonality(acolyte2014, 'npc_seed_alpha');
+    it('supports context-derived seeds for NPC generation without unseeded Math.random in narrative domain', () => {
+      const seed1 = 'npc_Arthur_Human_Fighter_Acolyte';
+      const seed2 = 'npc_Zal_Elf_Rogue_Acolyte';
 
-      expect(seeded1).toEqual(seeded2);
-      expect(unseeded1).toBeDefined();
-      expect(unseeded2).toBeDefined();
+      const res1 = resolvePersonality(acolyte2014, seed1);
+      const res2 = resolvePersonality(acolyte2014, seed2);
+      const res1Again = resolvePersonality(acolyte2014, seed1);
+
+      expect(res1).toEqual(res1Again); // 100% deterministic given same context seed
+      expect(res1.traits[0]).not.toBe(res2.traits[0]); // Varied for different NPC context seeds
     });
   });
 
