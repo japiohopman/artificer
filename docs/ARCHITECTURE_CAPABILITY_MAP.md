@@ -536,8 +536,8 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Source-of-Truth Data:** `useUIStore.isDevKitOpen`, local state in `DevKit.tsx`.
 - **Derived / Presentation Consumers:** Application shell (`src/App.tsx`), DevKit header/sub-tabs.
 - **Current Status:** `Audited & Architecture Contracted (#366)`
-- **Known Architectural Debt:** `DevKit.tsx` (2,554 lines) directly contains full authoring UI, scraping, and state for Enemy, Material, Equipment, Habitat, and Hue tabs. Target architecture contracts a 4-workspace model (Explorer, Generators, Testers, Hardware/Audio) and establishes #408 for inline module extraction.
-- **Related GitHub Issues:** #313, #366, #408
+- **Known Architectural Debt:** `DevKit.tsx` (1,475 lines) directly contains full authoring UI, scraping, and state for Enemy, Material, Equipment, Habitat, and Hue tabs. Target architecture contracts a 4-workspace model (Explorer, Generators, Testers, Hardware/Audio) and establishes Refactor Issue 1 for module extraction.
+- **Related GitHub Issues:** #313, #366
 - **Intended Specialist Agent:** Architecture Specialist
 - **Dependencies:** `useUIStore`, `useAtlasStore`, `useWorldStore`
 
@@ -547,8 +547,8 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Source-of-Truth Data:** `useAtlasStore` static catalogs, `useWorldStore.savedLocations`, `useWorldStore.worldFlags`.
 - **Derived / Presentation Consumers:** DevKit Inspector tab, entity preview cards (`MonsterCard`, `EquipmentCard`, `MaterialCard`, `SpellCard`, `GodCard`), regional vector map SVG.
 - **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `AssetExplorer` and `WorldExplorer` are separate sub-tabs. Audit #366 contracts merging them into a unified data browser under #367.
-- **Related GitHub Issues:** #313, #366, #367
+- **Known Architectural Debt:** `AssetExplorer` and `WorldExplorer` are separate sub-tabs. Audit #366 contracts merging them into a unified data browser under Refactor Issue 3.
+- **Related GitHub Issues:** #313, #366
 - **Intended Specialist Agent:** UI Specialist / Ruleset & Data Specialist
 - **Dependencies:** `useAtlasStore`, `useWorldStore`, `storageService.ts`
 
@@ -558,8 +558,8 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Source-of-Truth Data:** Static Atlas JSON files, seedable PRNG (`rng.ts`), AI prompt templates, background configs (`backgroundConfigs.ts`).
 - **Derived / Presentation Consumers:** DevKit Generator workspace, Character Creator name/backstory step.
 - **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `npcGeneratorUtils.ts` duplicates D&D rules using hardcoded legacy arrays (`CLASS_DATA`, `BACKGROUND_DATA`). Tracked as #368 for modernization using canonical Atlas loaders (`storageService.ts`).
-- **Related GitHub Issues:** #306, #313, #366, #368
+- **Known Architectural Debt:** `npcGeneratorUtils.ts` duplicates D&D rules using hardcoded legacy arrays (`CLASS_DATA`, `BACKGROUND_DATA`). Tracked as Refactor Issue 2 for modernization using canonical Atlas loaders (`storageService.ts`).
+- **Related GitHub Issues:** #306, #313, #366
 - **Intended Specialist Agent:** UI Specialist / Ruleset & Data Specialist
 - **Dependencies:** `src/lib/naming/`, `@google/genai`, `storageService.ts`
 
@@ -580,8 +580,8 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Source-of-Truth Data:** `useGameStore`, `useCharacterStore`, test suites in `tests/`, workflow tests (`node --test`).
 - **Derived / Presentation Consumers:** DevKit Tester tab, CI workflows (`.github/workflows/ci.yml`, `phase-safety-gate.yml`).
 - **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `AudioLaboratory.tsx` exists as an unimported, orphaned file in `src/components/devkit/`. Tracked for removal under #409.
-- **Related GitHub Issues:** #306, #313, #366, #409
+- **Known Architectural Debt:** `AudioLaboratory.tsx` exists as an unimported, orphaned file in `src/components/devkit/`. Tracked for removal under Refactor Issue 4.
+- **Related GitHub Issues:** #306, #313, #366
 - **Intended Specialist Agent:** Verification Specialist
 - **Dependencies:** Vitest, Playwright, Node native test runner
 
@@ -591,8 +591,8 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Source-of-Truth Data:** `useHueStore.lights`, `useHueStore.credentials`, `useAudioStore.layerStates`.
 - **Derived / Presentation Consumers:** DevKit Audio Lab and Hue tabs, floating Mixer overlay.
 - **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `DevKitHueTab` is currently embedded inside `DevKit.tsx`. Tracked for extraction into `HueStudio.tsx` under #408.
-- **Related GitHub Issues:** #313, #366, #408, #409
+- **Known Architectural Debt:** `DevKitHueTab` is currently embedded inside `DevKit.tsx`. Tracked for extraction into `HueStudio.tsx` under Refactor Issue 1.
+- **Related GitHub Issues:** #313, #366
 - **Intended Specialist Agent:** Architecture Specialist / Assets Specialist
 - **Dependencies:** `useHueStore`, `useAudioStore`, `soundService.ts`
 

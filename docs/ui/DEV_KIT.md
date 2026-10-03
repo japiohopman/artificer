@@ -61,7 +61,7 @@ Control physical audio stems, sound effects, and smart light bulbs.
 
 To prevent `DevKit.tsx` from accumulating unmaintainable inline state, subsequent refactors follow this ordered plan:
 
-1. **#408 — Inline Authoring Extraction:** Extract inline Enemy, Equipment, Material, Habitat, and Hue authoring panels out of `DevKit.tsx` into standalone components.
-2. **#368 — NPC Generator Modernization:** Replace hardcoded legacy D&D data arrays in `npcGeneratorUtils.ts` with canonical Atlas loaders (`storageService.ts`).
-3. **#367 — Unified Explorer Workspace:** Combine `AssetExplorer.tsx` and `WorldExplorer.tsx` into a single unified search and browsing shell.
-4. **#409 — Housekeeping & Dead Code Removal:** Remove unimported legacy files (`AudioLaboratory.tsx`) and synchronize all test harnesses.
+1. **Inline Authoring Extraction:** Extract inline Enemy, Equipment, Material, Habitat, and Hue authoring panels out of `DevKit.tsx` into standalone components.
+2. **NPC Generator Modernization:** Replace hardcoded legacy D&D data arrays in `npcGeneratorUtils.ts` with canonical Atlas loaders (`storageService.ts`).
+3. **Unified Explorer Workspace:** Combine `AssetExplorer.tsx` and `WorldExplorer.tsx` into a single unified search and browsing shell.
+4. **Housekeeping & Dead Code Removal:** Remove unimported legacy files (`AudioLaboratory.tsx`) and synchronize all test harnesses.
