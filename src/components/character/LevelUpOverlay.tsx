@@ -7,7 +7,6 @@ import { normalizeImageUrl, fetchSubclassesList } from '../../services/storageSe
 import { extractStructuredOptionsFromFeature, getChoiceLimit, getFeatureIcon, getAlignmentIcon } from '../../lib/atlasUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
-import { diceService } from '../../dice_roller/diceService';
 import { deterministicDiceAdapter } from '../../dice_roller/deterministicDiceAdapter';
 import { DeterministicDiceViewer } from '../dice/DeterministicDiceViewer';
 import { useCharacterStore } from '../../store/useCharacterStore';
@@ -56,6 +55,8 @@ export const LevelUpOverlay: React.FC = () => {
 
   const [optionDetails, setOptionDetails] = useState<Record<string, string>>({});
   const [subclassOptions, setSubclassOptions] = useState<any[]>([]);
+  const [featsList, setFeatsList] = useState<{ name: string; index: string; category?: string }[]>([]);
+  const [featDetails, setFeatDetails] = useState<Record<string, any>>({});
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [isRollingHp, setIsRollingHp] = useState(false);
 
@@ -83,7 +84,6 @@ export const LevelUpOverlay: React.FC = () => {
     }
   };
 
-
   useEffect(() => {
     if (session && character) {
       setCurrentStepIndex(0);
@@ -106,6 +106,14 @@ export const LevelUpOverlay: React.FC = () => {
                 setOptionDetails(prev => ({ ...prev, [s.index]: desc }));
               }
             }
+          }
+        });
+      }
+
+      if (session.hasASI) {
+        atlasService.loadFeatsList(character.ruleset).then(async (list) => {
+          if (Array.isArray(list)) {
+            setFeatsList(list);
           }
         });
       }
@@ -153,7 +161,7 @@ export const LevelUpOverlay: React.FC = () => {
     wizardSteps.push({ id: 'choices', title: 'Specialty Choices' });
   }
   if (session.hasASI) {
-    wizardSteps.push({ id: 'asi', title: 'Ability Score Improvement' });
+    wizardSteps.push({ id: 'asi', title: 'ASI / Feat Selection' });
   }
 
   const activeStep = wizardSteps[currentStepIndex] || wizardSteps[0];
@@ -181,9 +189,27 @@ export const LevelUpOverlay: React.FC = () => {
     const updatedHpIncrease = Math.max(1, (session.hpRollResult ?? Math.floor(classHitDie / 2) + 1) + newConMod);
 
     updateLevelUpSession({
+      asiMode: 'asi',
+      featChoice: undefined,
       statIncreases: newIncreases,
       hpIncrease: updatedHpIncrease
     });
+  };
+
+  const handleSelectFeat = async (featIndex: string) => {
+    if (!featDetails[featIndex]) {
+      const data = await atlasService.loadFeat(featIndex, character.ruleset);
+      if (data) {
+        setFeatDetails(prev => ({ ...prev, [featIndex]: data }));
+      }
+    }
+
+    updateLevelUpSession({
+      asiMode: 'feat',
+      featChoice: featIndex,
+      statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+    });
+    soundService.playEffect('UI_CLICK_LIGHT');
   };
 
   const handleToggleChoice = (featIndex: string, optionIndex: string, limit: number, isSubclassChoice?: boolean) => {
@@ -521,66 +547,182 @@ export const LevelUpOverlay: React.FC = () => {
                     </div>
                   )}
 
-                  {/* STEP 3: ASI Allocation */}
+                  {/* STEP 3: ASI Allocation or Feat Selection */}
                   {activeStep.id === 'asi' && (
                     <div className="space-y-6">
                       <div className="flex items-center justify-between border-b border-dragon-darkRed/10 pb-3">
-                        <div className="flex flex-col">
-                          <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">
-                            Ability Score Improvement
-                          </span>
-                          <span className="text-[10px] font-bold text-parchment-500 uppercase tracking-widest">
-                            Allocate 2 attribute points total
-                          </span>
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full bg-dragon-darkRed/20 border border-dragon-gold/30 flex items-center justify-center shrink-0">
+                            <GameIcon name="ability-score-improvement" size={24} color="#8B0000" fallbackName="award" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">
+                              Ability Score Improvement or Feat
+                            </span>
+                            <span className="text-[10px] font-bold text-parchment-500 uppercase tracking-widest">
+                              Choose between +2 Ability Score Points or a canonical Feat
+                            </span>
+                          </div>
                         </div>
+
                         <div className="px-4 py-2 bg-dragon-darkRed text-dragon-gold rounded-sm border border-dragon-gold text-xs font-black">
-                          {pointsRemaining} PTS REMAINING
+                          {session.asiMode === 'feat' ? (
+                            <span>{session.featChoice ? '1 FEAT SELECTED' : 'FEAT MODE ACTIVE'}</span>
+                          ) : (
+                            <span>{pointsRemaining} PTS REMAINING</span>
+                          )}
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {STATS.map(stat => {
-                          const currentInc = session.statIncreases?.[stat.id] || 0;
-                          const baseVal = (character.stats as any)[stat.id] || 10;
-                          const newVal = baseVal + currentInc;
+                      {/* Mode Switcher */}
+                      <div className="flex items-center gap-2 bg-black/10 p-1 rounded border border-dragon-gold/20">
+                        <button
+                          onClick={() => {
+                            updateLevelUpSession({
+                              asiMode: 'asi',
+                              featChoice: undefined,
+                              statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+                            });
+                            soundService.playEffect('UI_CLICK_LIGHT');
+                          }}
+                          className={cn(
+                            "flex-1 py-2.5 px-4 rounded text-xs font-black uppercase tracking-wider transition-all border",
+                            (session.asiMode || 'asi') === 'asi'
+                              ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-md"
+                              : "bg-white/20 text-parchment-600 border-transparent hover:bg-white/40"
+                          )}
+                        >
+                          Ability Score Improvement (+2 Stats)
+                        </button>
 
-                          return (
-                            <div key={stat.id} className="bg-black/5 p-4 rounded-sm flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/10">
-                                  <GameIcon name={stat.abbr.toLowerCase() as any} size={20} color="#8B0000" />
-                                </div>
-                                <div>
-                                  <span className="text-xs font-black text-parchment-400 uppercase tracking-wider block">{stat.name}</span>
-                                  <div className="flex items-baseline gap-2">
-                                    <span className="text-2xl font-header font-black text-dragon-darkRed">{newVal}</span>
-                                    {currentInc > 0 && (
-                                      <span className="text-xs font-black text-green-600">+{currentInc}</span>
-                                    )}
+                        <button
+                          onClick={() => {
+                            updateLevelUpSession({
+                              asiMode: 'feat',
+                              statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+                            });
+                            soundService.playEffect('UI_CLICK_LIGHT');
+                          }}
+                          className={cn(
+                            "flex-1 py-2.5 px-4 rounded text-xs font-black uppercase tracking-wider transition-all border",
+                            session.asiMode === 'feat'
+                              ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-md"
+                              : "bg-white/20 text-parchment-600 border-transparent hover:bg-white/40"
+                          )}
+                        >
+                          Select a Feat
+                        </button>
+                      </div>
+
+                      {/* MODE 1: Stat Allocation */}
+                      {(session.asiMode || 'asi') === 'asi' && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {STATS.map(stat => {
+                            const currentInc = session.statIncreases?.[stat.id] || 0;
+                            const baseVal = (character.stats as any)[stat.id] || 10;
+                            const newVal = baseVal + currentInc;
+
+                            return (
+                              <div key={stat.id} className="bg-black/5 p-4 rounded-sm flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                  <div className="w-10 h-10 rounded-full bg-white/40 flex items-center justify-center border border-dragon-gold/10">
+                                    <GameIcon name={stat.abbr.toLowerCase() as any} size={20} color="#8B0000" />
+                                  </div>
+                                  <div>
+                                    <span className="text-xs font-black text-parchment-400 uppercase tracking-wider block">{stat.name}</span>
+                                    <div className="flex items-baseline gap-2">
+                                      <span className="text-2xl font-header font-black text-dragon-darkRed">{newVal}</span>
+                                      {currentInc > 0 && (
+                                        <span className="text-xs font-black text-green-600">+{currentInc}</span>
+                                      )}
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
 
-                              <div className="flex items-center gap-2">
-                                <button
-                                  onClick={() => handleStatChange(stat.id, -1)}
-                                  disabled={currentInc <= 0}
-                                  className="w-9 h-9 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-20 font-black"
-                                >
-                                  -
-                                </button>
-                                <button
-                                  onClick={() => handleStatChange(stat.id, 1)}
-                                  disabled={pointsRemaining <= 0 || newVal >= 20}
-                                  className="w-9 h-9 rounded-full bg-dragon-gold/20 border border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-20 font-black"
-                                >
-                                  +
-                                </button>
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    onClick={() => handleStatChange(stat.id, -1)}
+                                    disabled={currentInc <= 0}
+                                    className="w-9 h-9 rounded-full bg-white/60 border border-dragon-gold/10 flex items-center justify-center text-dragon-darkRed hover:bg-dragon-red hover:text-white disabled:opacity-20 font-black"
+                                  >
+                                    -
+                                  </button>
+                                  <button
+                                    onClick={() => handleStatChange(stat.id, 1)}
+                                    disabled={pointsRemaining <= 0 || newVal >= 20}
+                                    className="w-9 h-9 rounded-full bg-dragon-gold/20 border border-dragon-gold flex items-center justify-center text-dragon-darkRed hover:bg-dragon-gold hover:text-white disabled:opacity-20 font-black"
+                                  >
+                                    +
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })}
-                      </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* MODE 2: Feat Selection */}
+                      {session.asiMode === 'feat' && (
+                        <div className="space-y-4">
+                          <div className="text-xs font-bold text-parchment-600 uppercase tracking-wider">
+                            Choose 1 feat from available {character.ruleset || '2014'} catalog:
+                          </div>
+
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[420px] overflow-y-auto custom-scrollbar pr-1">
+                            {featsList.map((feat) => {
+                              const isSelected = session.featChoice?.toLowerCase() === feat.index.toLowerCase();
+                              const cachedData = featDetails[feat.index];
+                              const descText = cachedData
+                                ? (Array.isArray(cachedData.desc) ? cachedData.desc.join('\n') : cachedData.desc)
+                                : feat.category || 'Canonical Feat';
+
+                              return (
+                                <button
+                                  key={feat.index}
+                                  onClick={() => handleSelectFeat(feat.index)}
+                                  className={cn(
+                                    "text-left p-3.5 rounded-sm border-2 transition-all flex flex-col gap-1.5 relative overflow-hidden",
+                                    isSelected
+                                      ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold shadow-md"
+                                      : "bg-white/40 border-dragon-gold/10 text-parchment-600 hover:bg-white hover:border-dragon-gold/40"
+                                  )}
+                                >
+                                  <div className="flex items-center justify-between gap-2">
+                                    <div className="flex items-center gap-2.5">
+                                      <div className={cn(
+                                        "w-4 h-4 rounded-sm border-2 shrink-0 flex items-center justify-center transition-all",
+                                        isSelected ? "bg-dragon-gold border-dragon-gold rotate-45" : "bg-transparent border-dragon-darkRed/20"
+                                      )}>
+                                        {isSelected && (
+                                          <span className="-rotate-45 text-[10px] text-dragon-darkRed font-black">✓</span>
+                                        )}
+                                      </div>
+                                      <span className="font-header font-black tracking-wider text-xs uppercase">
+                                        {feat.name}
+                                      </span>
+                                    </div>
+                                    {feat.category && (
+                                      <span className={cn(
+                                        "text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider",
+                                        isSelected ? "bg-dragon-gold/20 text-dragon-gold" : "bg-black/10 text-parchment-500"
+                                      )}>
+                                        {feat.category.replace(/-/g, ' ')}
+                                      </span>
+                                    )}
+                                  </div>
+
+                                  <p className={cn(
+                                    "text-[10px] leading-relaxed font-medium line-clamp-3 normal-case ml-6.5",
+                                    isSelected ? "text-dragon-gold/80" : "text-parchment-600"
+                                  )}>
+                                    {descText}
+                                  </p>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
 

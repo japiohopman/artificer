@@ -161,6 +161,116 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(garethLvl4.stats.con).toBe(15);
   });
 
+  test('Feat selection mode in ASI step persists selected feat to character features and choices', async () => {
+    const store = useCharacterStore.getState();
+    const hero: any = {
+      id: 'test_feat_asi_hero',
+      name: 'FeatHero',
+      class: 'Fighter',
+      level: 3,
+      xp: 2700, // Eligible for Level 4
+      hp: 24,
+      maxHp: 24,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 },
+      features: []
+    };
+    store.addCharacter(hero);
+
+    const session = await store.startLevelUpSession('test_feat_asi_hero');
+    expect(session).not.toBeNull();
+    expect(session?.hasASI).toBe(true);
+
+    // Select Feat mode and pick 'actor' feat
+    store.updateLevelUpSession({
+      asiMode: 'feat',
+      featChoice: 'actor',
+      statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+    });
+
+    const committed = await store.commitLevelUpSession();
+    expect(committed).toBe(true);
+
+    const updatedHero = useCharacterStore.getState().characters.find(c => c.id === 'test_feat_asi_hero')!;
+    expect(updatedHero.level).toBe(4);
+    // Stats remain unmutated (STR = 16, CON = 14)
+    expect(updatedHero.stats.str).toBe(16);
+    expect(updatedHero.stats.con).toBe(14);
+    // Selected feat persists in features and choices
+    expect(updatedHero.features.some(f => f.index === 'actor' && f.source === 'Feat')).toBe(true);
+    expect(updatedHero.choices['feat']).toEqual(['actor']);
+  });
+
+  test('Feat mode validation rejects empty feat choice or non-zero stat points', async () => {
+    const hero: any = {
+      id: 'test_feat_reject',
+      name: 'FeatReject',
+      class: 'Fighter',
+      level: 3,
+      xp: 2700,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+
+    const session = await evaluateNextLevelStep(hero);
+    expect(session).not.toBeNull();
+
+    // 1. Feat mode active but no feat selected
+    session!.asiMode = 'feat';
+    session!.featChoice = undefined;
+    session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+    const res1 = await validateLevelUpCommit(hero, session!);
+    expect(res1.valid).toBe(false);
+    expect(res1.reason).toContain('feat must be selected');
+
+    // 2. Feat mode active with feat selected BUT stat points allocated
+    session!.featChoice = 'actor';
+    session!.statIncreases = { str: 1, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+    const res2 = await validateLevelUpCommit(hero, session!);
+    expect(res2.valid).toBe(false);
+    expect(res2.reason).toContain('must be 0 when selecting a Feat');
+  });
+
+  test('Subclass selection at level 3 resolves and grants subclass features and follow-up choices', async () => {
+    const store = useCharacterStore.getState();
+    const rogue: any = {
+      id: 'test_rogue_subclass',
+      name: 'Shadow',
+      class: 'Rogue',
+      ruleset: '2024',
+      level: 2,
+      xp: 900, // Eligible for Level 3
+      hp: 14,
+      maxHp: 14,
+      stats: { str: 10, dex: 16, con: 12, int: 14, wis: 10, cha: 10 },
+      features: []
+    };
+    store.addCharacter(rogue);
+
+    const session = await store.startLevelUpSession('test_rogue_subclass');
+    expect(session).not.toBeNull();
+    expect(session?.targetLevel).toBe(3);
+
+    const subclassFeat = session!.features.find(f => f.feature_specific?.subfeature_options?.type === 'subclass');
+    expect(subclassFeat).toBeDefined();
+
+    // Pick Thief subclass using the exact feature index
+    store.updateLevelUpSession({
+      choices: { [subclassFeat!.index]: ['thief_2024'] },
+      subclassChoice: 'thief_2024'
+    });
+
+    const committed = await store.commitLevelUpSession();
+    expect(committed).toBe(true);
+
+    const updatedRogue = useCharacterStore.getState().characters.find(c => c.id === 'test_rogue_subclass')!;
+    expect(updatedRogue.level).toBe(3);
+    expect(updatedRogue.subclass).toBe('thief_2024');
+    // Subclass features for Thief 2024 at level 3 (fast_hands_thief_2024, second_story_work_thief_2024) are granted in features
+    expect(updatedRogue.features.some(f => f.index === 'fast_hands_thief_2024' && f.source === 'Subclass')).toBe(true);
+    expect(updatedRogue.features.some(f => f.index === 'second_story_work_thief_2024' && f.source === 'Subclass')).toBe(true);
+  });
+
   test('Session roll remains stable across session updates and rerenders without re-rolling', async () => {
     const cleric: any = {
       id: 'test_cleric_stability',

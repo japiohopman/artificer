@@ -1,6 +1,6 @@
 import { extractStructuredOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
-import { fetchSubclassesList } from '../services/storageService';
+import { fetchSubclassesList, fetchFeatsList } from '../services/storageService';
 
 export interface ActiveLevelUpSession {
   characterId: string;
@@ -10,7 +10,9 @@ export interface ActiveLevelUpSession {
   hpRollResult: number;
   hpIncrease: number;
   hasASI: boolean;
+  asiMode?: 'asi' | 'feat';
   statIncreases: Record<string, number>;
+  featChoice?: string;
   choices: Record<string, string[]>;
   subclassChoice?: string;
   hpMethod: 'roll' | 'fixed';
@@ -64,33 +66,27 @@ export function getNextLevelTarget(character?: Partial<Character> | null): numbe
   return character.level + 1;
 }
 
-export async function evaluateNextLevelStep(character: Character): Promise<ActiveLevelUpSession | null> {
-  if (!isEligibleForLevelUp(character)) return null;
-
-  const targetLevel = character.level + 1;
+export async function resolveLevelUpFeatures(
+  character: Character,
+  targetLevel: number,
+  subclassChoice?: string
+): Promise<any[]> {
   const { atlasService } = await import('../services/atlasService');
 
-  const [classData, levelData, prevLevelData] = await Promise.all([
-    atlasService.loadClass(character.class, character.ruleset),
-    atlasService.loadLevelData(character.class, targetLevel, character.ruleset),
-    targetLevel > 1 ? atlasService.loadLevelData(character.class, targetLevel - 1, character.ruleset) : null
-  ]);
-
-  if (!levelData) {
-    return null;
-  }
+  const levelData = await atlasService.loadLevelData(character.class, targetLevel, character.ruleset);
+  if (!levelData) return [];
 
   const rawFeatures = levelData.features || [];
-  const fullFeatures = await Promise.all(
+  const fullFeatures: any[] = await Promise.all(
     rawFeatures.map(async (f: any) => {
       const details = await atlasService.loadFeature(f.index);
       return details ? { ...f, ...details } : f;
     })
   );
 
-  // If character already has a subclass, load target level subclass features
-  if (character.subclass) {
-    const subData = await atlasService.loadSubclass(character.subclass, character.ruleset);
+  const effectiveSubclass = character.subclass || subclassChoice;
+  if (effectiveSubclass) {
+    const subData = await atlasService.loadSubclass(effectiveSubclass, character.ruleset);
     if (subData && Array.isArray(subData.subclass_levels)) {
       const targetSubGroup = subData.subclass_levels.find((l: any) => l.level === targetLevel);
       if (targetSubGroup?.features) {
@@ -108,6 +104,27 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
       }
     }
   }
+
+  return fullFeatures;
+}
+
+export async function evaluateNextLevelStep(character: Character, overrideSubclassChoice?: string): Promise<ActiveLevelUpSession | null> {
+  if (!isEligibleForLevelUp(character)) return null;
+
+  const targetLevel = character.level + 1;
+  const { atlasService } = await import('../services/atlasService');
+
+  const [classData, levelData, prevLevelData] = await Promise.all([
+    atlasService.loadClass(character.class, character.ruleset),
+    atlasService.loadLevelData(character.class, targetLevel, character.ruleset),
+    targetLevel > 1 ? atlasService.loadLevelData(character.class, targetLevel - 1, character.ruleset) : null
+  ]);
+
+  if (!levelData) {
+    return null;
+  }
+
+  const fullFeatures = await resolveLevelUpFeatures(character, targetLevel, overrideSubclassChoice);
 
   const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
   const classHitDie = classData?.hit_die || levelData.hit_die || 8;
@@ -131,8 +148,10 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
     hpRollResult: defaultHpRollResult,
     hpIncrease: defaultHpGain,
     hasASI,
+    asiMode: 'asi',
     statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
     choices: {},
+    subclassChoice: overrideSubclassChoice || character.subclass,
     hpMethod: 'roll',
     validationError: null
   };
@@ -152,9 +171,14 @@ export async function validateLevelUpCommit(character: Character, session: Activ
   }
 
   // Re-evaluating expected canonical step to guard against mutated/tampered session state
-  const canonicalStep = await evaluateNextLevelStep(character);
+  const canonicalStep = await evaluateNextLevelStep(character, session.subclassChoice);
   if (!canonicalStep) {
     return { valid: false, reason: 'Failed to evaluate canonical level-up step for validation.' };
+  }
+
+  // Synchronize session features if subclass choice newly populated subclass features
+  if (session.subclassChoice && session.features.length < canonicalStep.features.length) {
+    session.features = canonicalStep.features;
   }
 
   const totalCon = (character.stats?.con || 10) + (session.statIncreases?.con || 0);
@@ -204,24 +228,39 @@ export async function validateLevelUpCommit(character: Character, session: Activ
   }
 
   if (session.hasASI) {
-    const validStatKeys = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
-    let pointsAllocated = 0;
-    for (const [statKey, inc] of Object.entries(session.statIncreases || {})) {
-      if (!validStatKeys.includes(statKey)) {
-        return { valid: false, reason: `Invalid stat key "${statKey}" in ASI allocation.` };
+    if (session.asiMode === 'feat' || session.featChoice) {
+      if (!session.featChoice || session.featChoice.trim() === '') {
+        return { valid: false, reason: 'A feat must be selected when Feat choice is active.' };
       }
-      if (typeof inc !== 'number' || inc < 0 || inc > 2) {
-        return { valid: false, reason: `Invalid ASI point increment ${inc} for ${statKey}.` };
+      const availableFeats = await fetchFeatsList(character.ruleset);
+      const isCanonicalFeat = availableFeats.some(f => f.index.toLowerCase() === session.featChoice?.toLowerCase());
+      if (!isCanonicalFeat) {
+        return { valid: false, reason: `Selected feat "${session.featChoice}" is not a valid canonical feat.` };
       }
-      const currentVal = (character.stats as any)[statKey] || 10;
-      if (currentVal + inc > 20) {
-        return { valid: false, reason: `Attribute ${statKey.toUpperCase()} cannot exceed 20.` };
+      const pointsAllocated = Object.values(session.statIncreases || {}).reduce((a, b) => a + (b || 0), 0);
+      if (pointsAllocated !== 0) {
+        return { valid: false, reason: 'Stat increases must be 0 when selecting a Feat.' };
       }
-      pointsAllocated += inc;
-    }
+    } else {
+      const validStatKeys = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+      let pointsAllocated = 0;
+      for (const [statKey, inc] of Object.entries(session.statIncreases || {})) {
+        if (!validStatKeys.includes(statKey)) {
+          return { valid: false, reason: `Invalid stat key "${statKey}" in ASI allocation.` };
+        }
+        if (typeof inc !== 'number' || inc < 0 || inc > 2) {
+          return { valid: false, reason: `Invalid ASI point increment ${inc} for ${statKey}.` };
+        }
+        const currentVal = (character.stats as any)[statKey] || 10;
+        if (currentVal + inc > 20) {
+          return { valid: false, reason: `Attribute ${statKey.toUpperCase()} cannot exceed 20.` };
+        }
+        pointsAllocated += inc;
+      }
 
-    if (pointsAllocated !== 2) {
-      return { valid: false, reason: `Ability Score Improvement requires allocating exactly 2 points (currently allocated: ${pointsAllocated}).` };
+      if (pointsAllocated !== 2) {
+        return { valid: false, reason: `Ability Score Improvement requires allocating exactly 2 points (currently allocated: ${pointsAllocated}).` };
+      }
     }
   }
 
@@ -269,7 +308,7 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     if (selectedSubInChoices && session.subclassChoice !== selectedSubInChoices) {
       return { valid: false, reason: `Subclass selection "${selectedSubInChoices}" is not synchronized with subclassChoice.` };
     }
-  } else if (session.subclassChoice) {
+  } else if (session.subclassChoice && session.subclassChoice !== character.subclass) {
     return { valid: false, reason: `subclassChoice "${session.subclassChoice}" provided but target level does not grant a subclass.` };
   }
 
