@@ -215,12 +215,15 @@ export async function fetchAsiEligibleFeats(
   const categoryFilter = activeRuleset === '2024' ? 'general' : undefined;
 
   const allFeats = await fetchFeatsList(activeRuleset, categoryFilter);
-  if (!character) return allFeats;
+  // Exclude canonical ability_score_improvement from selectable Feat replacement set
+  const nonAsiFeats = allFeats.filter(f => f.index.toLowerCase() !== 'ability_score_improvement');
+
+  if (!character) return nonAsiFeats;
 
   const { atlasService } = await import('../services/atlasService');
 
   const eligibleFeats: { name: string; index: string; category?: string }[] = [];
-  for (const featSummary of allFeats) {
+  for (const featSummary of nonAsiFeats) {
     const featData = await atlasService.loadFeat(featSummary.index, activeRuleset);
     if (!featData) continue;
 
@@ -404,6 +407,10 @@ export async function validateLevelUpCommit(character: Character, session: Activ
       if (!session.featChoice || session.featChoice.trim() === '') {
         return { valid: false, reason: 'A feat must be selected when Feat choice is active.' };
       }
+
+        if (session.featChoice.toLowerCase() === 'ability_score_improvement') {
+          return { valid: false, reason: 'Ability Score Improvement cannot be selected as a Feat choice.' };
+        }
 
       const { atlasService } = await import('../services/atlasService');
       const featData = await atlasService.loadFeat(session.featChoice, character.ruleset);

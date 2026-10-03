@@ -683,6 +683,37 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   });
 
   describe('PR Review Negative Boundaries (#383)', () => {
+    test('ability_score_improvement is excluded from fetchAsiEligibleFeats and rejected as a Feat choice', async () => {
+      const hero2024: any = {
+        id: 'test_asi_feat_exclusion',
+        name: 'HeroASIExclusion',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 16 },
+        features: []
+      };
+
+      // 1. Prove ability_score_improvement is not in fetchAsiEligibleFeats output
+      const eligibleFeats = await import('../src/lib/progressionUtils').then(m => m.fetchAsiEligibleFeats('2024', hero2024, 4));
+      expect(eligibleFeats.some(f => f.index.toLowerCase() === 'ability_score_improvement')).toBe(false);
+      expect(eligibleFeats.some(f => f.index.toLowerCase() === 'actor')).toBe(true);
+
+      // 2. Prove validateLevelUpCommit explicitly rejects ability_score_improvement as a featChoice
+      const session = await evaluateNextLevelStep(hero2024);
+      expect(session).not.toBeNull();
+      session!.asiMode = 'feat';
+      session!.featChoice = 'ability_score_improvement';
+      session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+      const res = await validateLevelUpCommit(hero2024, session!);
+      expect(res.valid).toBe(false);
+      expect(res.reason).toContain('Ability Score Improvement cannot be selected as a Feat choice');
+    });
+
     test('2024 ASI replacement rejects epic boons and origin feats', async () => {
       const hero2024: any = {
         id: 'test_2024_epic_reject',
