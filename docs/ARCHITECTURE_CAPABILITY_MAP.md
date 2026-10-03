@@ -530,71 +530,38 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 
 ### G. DevKit / Tooling Domain
 
-#### G1. Workspace Orchestration & Architecture
-- **Current Canonical Module:** `src/components/devkit/DevKit.tsx`, `docs/modules/devkit_workings.md`, `docs/ui/DEV_KIT.md`
-- **Primary Functions / Hooks / Selectors:** DevKit window modal orchestration, top-level workspace tab selection (`inspectors`, `generators`, `testers`, `audio_lab`, `hue_lamps`), background audio fade on opening.
-- **Source-of-Truth Data:** `useUIStore.isDevKitOpen`, local state in `DevKit.tsx`.
-- **Derived / Presentation Consumers:** Application shell (`src/App.tsx`), DevKit header/sub-tabs.
-- **Current Status:** `Audited & Architecture Contracted (#366)`
-- **Known Architectural Debt:** `DevKit.tsx` (1,475 lines) directly contains full authoring UI, scraping, and state for Enemy, Material, Equipment, Habitat, and Hue tabs. Target architecture contracts a 4-workspace model (Explorer, Generators, Testers, Hardware/Audio) and establishes Refactor Issue 1 for module extraction.
-- **Related GitHub Issues:** #313, #366
-- **Intended Specialist Agent:** Architecture Specialist
-- **Dependencies:** `useUIStore`, `useAtlasStore`, `useWorldStore`
-
-#### G2. Unified Explorers & Inspectors
-- **Current Canonical Module:** `src/components/devkit/AssetExplorer.tsx`, `WorldExplorer.tsx`, `FlagManager.tsx`
-- **Primary Functions / Hooks / Selectors:** `loadList()`, `selectItem()`, `setInspectedLocation()`, `setWorldFlag()`.
-- **Source-of-Truth Data:** `useAtlasStore` static catalogs, `useWorldStore.savedLocations`, `useWorldStore.worldFlags`.
-- **Derived / Presentation Consumers:** DevKit Inspector tab, entity preview cards (`MonsterCard`, `EquipmentCard`, `MaterialCard`, `SpellCard`, `GodCard`), regional vector map SVG.
-- **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `AssetExplorer` and `WorldExplorer` are separate sub-tabs. Audit #366 contracts merging them into a unified data browser under Refactor Issue 3.
-- **Related GitHub Issues:** #313, #366
+#### G1. Generators
+- **Current Canonical Module:** `src/components/devkit/npc_generator.tsx`, `enemy-image_generator.tsx`, `equipment-image_generator.tsx`, `material-image_generator.tsx`, `src/lib/naming/`
+- **Primary Functions / Hooks / Selectors:** Artificer Naming Domain (`generateArtificerName()`), generator components.
+- **Source-of-Truth Data:** Seedable PRNG (`rng.ts`), structured source pools (`sourceData.ts`), AI prompt templates for image generation.
+- **Derived / Presentation Consumers:** DevKit tool suite, Character Creator backstory/name generator (`BackstoryStep.tsx`).
+- **Current Status:** `Implemented`
+- **Known Architectural Debt:** Image generators interact directly with Gemini image API endpoints requiring developer API key configuration.
+- **Related GitHub Issues:** #306, #313
 - **Intended Specialist Agent:** UI Specialist / Ruleset & Data Specialist
-- **Dependencies:** `useAtlasStore`, `useWorldStore`, `storageService.ts`
+- **Dependencies:** `src/lib/naming/`, `@google/genai`
 
-#### G3. Generators & Entity Authoring
-- **Current Canonical Module:** `src/components/devkit/npc_generator.tsx`, `Jane.tsx`, `GodsLore.tsx`, `enemy-image_generator.tsx`, `equipment-image_generator.tsx`, `material-image_generator.tsx`, `src/lib/naming/`
-- **Primary Functions / Hooks / Selectors:** `generateNPCData()`, `generateNPCImages()`, `scrapeMonsterWiki()`, `generateVisualPrompt()`, `generateBackgroundImage()`, `generateArtificerName()`.
-- **Source-of-Truth Data:** Static Atlas JSON files, seedable PRNG (`rng.ts`), AI prompt templates, background configs (`backgroundConfigs.ts`).
-- **Derived / Presentation Consumers:** DevKit Generator workspace, Character Creator name/backstory step.
-- **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `npcGeneratorUtils.ts` duplicates D&D rules using hardcoded legacy arrays (`CLASS_DATA`, `BACKGROUND_DATA`). Tracked as Refactor Issue 2 for modernization using canonical Atlas loaders (`storageService.ts`).
-- **Related GitHub Issues:** #306, #313, #366
-- **Intended Specialist Agent:** UI Specialist / Ruleset & Data Specialist
-- **Dependencies:** `src/lib/naming/`, `@google/genai`, `storageService.ts`
-
-#### G4. Editors & Map Authoring
+#### G2. Editors & Map Authoring
 - **Current Canonical Module:** `src/components/devkit/BattleMapEditor/` (`BattleMapEditor.tsx`, `renderMap.ts`, `editorStore.ts`, `battleMapStorage.ts`, `battleMapToCombatGrid.ts`)
 - **Primary Functions / Hooks / Selectors:** HTML Canvas rendering pipeline, coordinate snapping, command history stack (Undo/Redo), server storage adapter.
 - **Source-of-Truth Data:** `BattleMap` JSON authoring files in `public/assets/atlas/combat/combat_maps/`.
 - **Derived / Presentation Consumers:** DevKit Map Editor workspace, runtime combat adapter (`battleMapToCombatGrid.ts` -> `CombatGrid.tsx`).
 - **Current Status:** `Implemented`
 - **Known Architectural Debt:** Scaffolding tool placeholders exist for advanced layer inspectors that require full feature completion.
-- **Related GitHub Issues:** #313, #366
+- **Related GitHub Issues:** #313
 - **Intended Specialist Agent:** UI Specialist (Canvas rendering) / Architecture Specialist (data pipeline)
 - **Dependencies:** Canvas API, `battleMapStorage.ts`
 
-#### G5. Verification Tools & Test Harnesses
-- **Current Canonical Module:** `src/components/devkit/CombatTester.tsx`, `npc_tester.tsx`, `Simulator.tsx`, `tests/*.test.ts`, `scripts/jules-orchestrator-preflight.mjs`
-- **Primary Functions / Hooks / Selectors:** `spawnMonster()`, `nextTurn()`, `updateCharacter()`, `npm test`, `npx vitest run tests/`, `npm run test:workflow`.
-- **Source-of-Truth Data:** `useGameStore`, `useCharacterStore`, test suites in `tests/`, workflow tests (`node --test`).
-- **Derived / Presentation Consumers:** DevKit Tester tab, CI workflows (`.github/workflows/ci.yml`, `phase-safety-gate.yml`).
-- **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `AudioLaboratory.tsx` exists as an unimported, orphaned file in `src/components/devkit/`. Tracked for removal under Refactor Issue 4.
-- **Related GitHub Issues:** #306, #313, #366
+#### G3. Verification Tools & Test Harnesses
+- **Current Canonical Module:** `src/components/devkit/CombatTester.tsx`, `npc_tester.tsx`, `Simulator.tsx`, `FlagManager.tsx`, `tests/*.test.ts`, `scripts/jules-orchestrator-preflight.mjs`
+- **Primary Functions / Hooks / Selectors:** `npm test` (lint + check:assets + playwright), `npx vitest run tests/`, `npm run test:workflow`.
+- **Source-of-Truth Data:** Test suites in `tests/`, workflow tests in Node test runner format (`node --test`).
+- **Derived / Presentation Consumers:** CI workflows (`.github/workflows/ci.yml`, `phase-safety-gate.yml`), preflight orchestrator.
+- **Current Status:** `Implemented`
+- **Known Architectural Debt:** Playwright integration tests require Vite dev server running on port 3000 and local Chromium installation.
+- **Related GitHub Issues:** #306, #313
 - **Intended Specialist Agent:** Verification Specialist
 - **Dependencies:** Vitest, Playwright, Node native test runner
-
-#### G6. Hardware & Audio Control
-- **Current Canonical Module:** `src/components/devkit/audio/SoundStudio.tsx`, `Mixer.tsx`, `DevKitHueTab` in `DevKit.tsx`, `LampCard.tsx`, `LampControls.tsx`, `useHueStore`, `useAudioStore`
-- **Primary Functions / Hooks / Selectors:** `useHueStore.connect()`, `triggerHue()`, `audioEngine`, `soundService`.
-- **Source-of-Truth Data:** `useHueStore.lights`, `useHueStore.credentials`, `useAudioStore.layerStates`.
-- **Derived / Presentation Consumers:** DevKit Audio Lab and Hue tabs, floating Mixer overlay.
-- **Current Status:** `Audited & Target Contracted (#366)`
-- **Known Architectural Debt:** `DevKitHueTab` is currently embedded inside `DevKit.tsx`. Tracked for extraction into `HueStudio.tsx` under Refactor Issue 1.
-- **Related GitHub Issues:** #313, #366
-- **Intended Specialist Agent:** Architecture Specialist / Assets Specialist
-- **Dependencies:** `useHueStore`, `useAudioStore`, `soundService.ts`
 
 ---
 
