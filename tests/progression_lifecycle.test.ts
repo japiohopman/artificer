@@ -8,13 +8,16 @@ if (typeof window === 'undefined') {
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async (input: any, init?: any) => {
     const urlStr = typeof input === 'string' ? input : (input && input.url ? input.url : '');
-    if (urlStr.startsWith('/assets/atlas/')) {
+    if (urlStr.startsWith('/assets/atlas/') || urlStr.startsWith('/data/')) {
       const localPath = path.resolve(process.cwd(), 'public' + urlStr);
       if (fs.existsSync(localPath)) {
         const content = fs.readFileSync(localPath, 'utf8');
         return new Response(content, { status: 200, statusText: 'OK', headers: { 'Content-Type': 'application/json' } });
       }
       return new Response(null, { status: 404, statusText: 'Not Found' });
+    }
+    if (urlStr === '/api/commit') {
+      return new Response(JSON.stringify({ success: true }), { status: 200, statusText: 'OK', headers: { 'Content-Type': 'application/json' } });
     }
     return originalFetch(input, init);
   };
@@ -857,6 +860,16 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       store.setCharacters([slot1Hero]);
       store.setActiveCharacter('slot1');
 
+      let savedCharacterState: any = null;
+      const saveSpy = vi.spyOn(saveService, 'saveCharacter').mockImplementation(async (charToSave) => {
+        savedCharacterState = JSON.parse(JSON.stringify(charToSave));
+        return true;
+      });
+
+      const loadSpy = vi.spyOn(saveService, 'loadCharacters').mockImplementation(async () => {
+        return savedCharacterState ? [savedCharacterState] : [];
+      });
+
       // 1. Start level-up session, select 'actor' feat, and commit
       await store.startLevelUpSession('slot1');
       store.updateLevelUpSession({
@@ -868,8 +881,17 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       const commitResult = await store.commitLevelUpSession();
       expect(commitResult).toBe(true);
 
-      // 2. Load characters from canonical saveService boundary
+      // 2. Assert saveCharacter was called and received exact updated character
+      expect(saveSpy).toHaveBeenCalledTimes(1);
+      expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({
+        id: 'slot1',
+        level: 4,
+        choices: expect.objectContaining({ feat: ['actor'] })
+      }), 1);
+
+      // 3. Load characters from canonical saveService boundary
       const loadedCharacters = await saveService.loadCharacters();
+      expect(loadSpy).toHaveBeenCalledTimes(1);
       const reloadedHero = loadedCharacters.find(c => c.id === 'slot1');
 
       expect(reloadedHero).toBeDefined();
@@ -879,6 +901,51 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       const persistedFeat = reloadedHero?.features?.find((f: any) => f.index === 'actor');
       expect(persistedFeat).toBeDefined();
       expect(persistedFeat?.source).toBe('Feat');
+
+      saveSpy.mockRestore();
+      loadSpy.mockRestore();
+    });
+
+    test('Level-up commit fails closed when saveService.saveCharacter returns false or throws', async () => {
+      const store = useCharacterStore.getState();
+
+      const slot1Hero: any = {
+        id: 'slot1',
+        name: 'FailSaveHero',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 14 },
+        features: [],
+        choices: {}
+      };
+      store.setCharacters([slot1Hero]);
+      store.setActiveCharacter('slot1');
+
+      const saveSpy = vi.spyOn(saveService, 'saveCharacter').mockResolvedValue(false);
+
+      await store.startLevelUpSession('slot1');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'actor',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const commitResult = await store.commitLevelUpSession();
+      expect(commitResult).toBe(false);
+
+      const activeSession = useCharacterStore.getState().activeLevelUpSession;
+      expect(activeSession).not.toBeNull();
+      expect(activeSession?.validationError).toContain('Failed to persist character save');
+
+      // Character in store should remain Level 3
+      const heroInStore = useCharacterStore.getState().characters.find(c => c.id === 'slot1');
+      expect(heroInStore?.level).toBe(3);
+
+      saveSpy.mockRestore();
     });
   });
 });

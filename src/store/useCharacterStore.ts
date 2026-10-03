@@ -491,17 +491,28 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
 
     const updatedChar = { ...char, ...updatePayload } as Character;
-    get().updateCharacter(char.id, updatePayload);
 
     const { saveService } = await import('../services/saveService');
     const slotMatch = char.id.match(/^slot(\d+)$/i);
     const slotNum = slotMatch ? parseInt(slotMatch[1], 10) : undefined;
+    let saveSuccess = false;
     try {
-      await saveService.saveCharacter(updatedChar, slotNum);
+      saveSuccess = await saveService.saveCharacter(updatedChar, slotNum);
     } catch (e) {
       console.warn('[useCharacterStore] Failed to persist character save during level-up commit:', e);
+      saveSuccess = false;
     }
 
+    if (!saveSuccess) {
+      set((state) => ({
+        activeLevelUpSession: state.activeLevelUpSession
+          ? { ...state.activeLevelUpSession, validationError: 'Failed to persist character save during level-up commit.' }
+          : null
+      }));
+      return false;
+    }
+
+    get().updateCharacter(char.id, updatePayload);
     set({ activeLevelUpSession: null });
     return true;
   },
