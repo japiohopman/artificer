@@ -28,6 +28,7 @@ import {
   validateLevelUpCommit
 } from '../src/lib/progressionUtils';
 import { extractStructuredOptionsFromFeature, extractOptionsFromFeature } from '../src/lib/atlasUtils';
+import { deterministicDiceAdapter } from '../src/dice_roller/deterministicDiceAdapter';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -457,6 +458,26 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
 
     const updatedFighter = useCharacterStore.getState().characters.find(c => c.id === 'test_fighter_visual');
     expect(updatedFighter?.maxHp).toBe(12 + initialHpGain);
+
+    bgSpy.mockRestore();
+  });
+
+  test('deterministicDiceAdapter presents authoritative roll value to active presenter without secondary RNG or session mutation', async () => {
+    const mockPresentRoll = vi.fn().mockResolvedValue(undefined);
+    deterministicDiceAdapter.registerPresenter({
+      id: 'test_presenter',
+      name: 'Test Presenter',
+      presentRoll: mockPresentRoll
+    });
+
+    const bgSpy = vi.spyOn(diceService, 'rollBackground');
+    bgSpy.mockClear();
+
+    await deterministicDiceAdapter.presentRoll({ sides: 10, value: 7, label: 'Level Up HP Roll' });
+
+    expect(mockPresentRoll).toHaveBeenCalledTimes(1);
+    expect(mockPresentRoll).toHaveBeenCalledWith({ sides: 10, value: 7, label: 'Level Up HP Roll' });
+    expect(bgSpy).toHaveBeenCalledTimes(0);
 
     bgSpy.mockRestore();
   });

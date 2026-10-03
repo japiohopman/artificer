@@ -8,6 +8,8 @@ import { extractStructuredOptionsFromFeature, getChoiceLimit, getFeatureIcon, ge
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { diceService } from '../../dice_roller/diceService';
+import { deterministicDiceAdapter } from '../../dice_roller/deterministicDiceAdapter';
+import { DeterministicDiceViewer } from '../dice/DeterministicDiceViewer';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useAudioStore } from '../../store/useAudioStore';
 
@@ -69,9 +71,13 @@ export const LevelUpOverlay: React.FC = () => {
     if (isRollingHp || !session || !character) return;
     setIsRollingHp(true);
     try {
-      await diceService.roll3D(`1d${classHitDie}`, 'Level Up HP Roll', 'default', '#8B0000', hpRollResult);
+      await deterministicDiceAdapter.presentRoll({
+        sides: classHitDie,
+        value: hpRollResult,
+        label: 'Level Up HP Roll'
+      });
     } catch (e) {
-      console.warn('[LevelUpOverlay] 3D roll presentation:', e);
+      console.warn('[LevelUpOverlay] Deterministic roll presentation:', e);
     } finally {
       setIsRollingHp(false);
     }
@@ -383,10 +389,15 @@ export const LevelUpOverlay: React.FC = () => {
                                </button>
                              </div>
 
-                             <div className="p-4 bg-white/50 rounded-sm border border-dragon-gold/30 text-center relative overflow-hidden">
+                             <div className="p-4 bg-white/50 rounded-sm border border-dragon-gold/30 text-center relative overflow-hidden flex flex-col items-center">
                                 <span className="text-xs font-bold text-parchment-600 block uppercase tracking-wider">
                                   Class Hit Die: 1d{classHitDie}
                                 </span>
+                                <DeterministicDiceViewer
+                                  sides={classHitDie}
+                                  value={hpRollResult}
+                                  isRolling={isRollingHp}
+                                />
                                 <div className="text-xs font-medium text-parchment-700 mt-1">
                                   Rolled <span className="font-bold text-dragon-darkRed">{hpRollResult}</span> + <span className="font-bold text-dragon-darkRed">{conModifier}</span> CON Modifier
                                 </div>
