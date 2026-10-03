@@ -1,6 +1,6 @@
 import { extractStructuredOptionsFromFeature, getChoiceLimit } from './atlasUtils';
 import { Character } from '../store/useCharacterStore';
-import { fetchSubclassesList } from '../services/storageService';
+import { fetchSubclassesList, fetchFeatsList, fetchFeatData } from '../services/storageService';
 
 export interface ActiveLevelUpSession {
   characterId: string;
@@ -10,7 +10,9 @@ export interface ActiveLevelUpSession {
   hpRollResult: number;
   hpIncrease: number;
   hasASI: boolean;
+  asiMode?: 'asi' | 'feat';
   statIncreases: Record<string, number>;
+  featChoice?: string;
   choices: Record<string, string[]>;
   subclassChoice?: string;
   hpMethod: 'roll' | 'fixed';
@@ -64,33 +66,202 @@ export function getNextLevelTarget(character?: Partial<Character> | null): numbe
   return character.level + 1;
 }
 
-export async function evaluateNextLevelStep(character: Character): Promise<ActiveLevelUpSession | null> {
-  if (!isEligibleForLevelUp(character)) return null;
-
-  const targetLevel = character.level + 1;
-  const { atlasService } = await import('../services/atlasService');
-
-  const [classData, levelData, prevLevelData] = await Promise.all([
-    atlasService.loadClass(character.class, character.ruleset),
-    atlasService.loadLevelData(character.class, targetLevel, character.ruleset),
-    targetLevel > 1 ? atlasService.loadLevelData(character.class, targetLevel - 1, character.ruleset) : null
-  ]);
-
-  if (!levelData) {
-    return null;
+export function evaluateFeatPrerequisites(
+  character: Character,
+  featData: any,
+  targetLevel?: number
+): { eligible: boolean; reason?: string } {
+  if (!featData || !featData.prerequisites || !Array.isArray(featData.prerequisites) || featData.prerequisites.length === 0) {
+    return { eligible: true };
   }
 
+  const effectiveLevel = targetLevel ?? (character.level + 1);
+
+  const getStat = (statName: string): number => {
+    const key = statName.toLowerCase().slice(0, 3) as keyof Character['stats'];
+    return character.stats?.[key] ?? 10;
+  };
+
+  const statMap: Record<string, string> = {
+    strength: 'str',
+    dexterity: 'dex',
+    constitution: 'con',
+    intelligence: 'int',
+    wisdom: 'wis',
+    charisma: 'cha'
+  };
+
+  for (const prereq of featData.prerequisites) {
+    if (typeof prereq === 'string') {
+      const trimmed = prereq.trim();
+
+      // String Pattern 1: "Level N+"
+      const levelMatch = trimmed.match(/^level\s+(\d+)\+/i);
+      if (levelMatch) {
+        const minLevel = parseInt(levelMatch[1], 10);
+        if (effectiveLevel < minLevel) {
+          return { eligible: false, reason: `Requires character level ${minLevel}+ (current: ${effectiveLevel}).` };
+        }
+        continue;
+      }
+
+      // String Pattern 2: Ability score requirement, e.g., "Charisma 13+", "Strength or Dexterity 13+", "Intelligence, Wisdom, or Charisma 13+"
+      const statMatch = trimmed.match(/^([A-Za-z,\s]+)\s+(\d+)\+/i);
+      if (statMatch) {
+        const statsStr = statMatch[1];
+        const minVal = parseInt(statMatch[2], 10);
+        const statsToTest = statsStr
+          .split(/,\s*|\s+or\s+/i)
+          .map(s => s.trim().toLowerCase())
+          .filter(Boolean);
+
+        const meetsStat = statsToTest.some(s => {
+          const abbr = statMap[s] || s.slice(0, 3);
+          const currentVal = (character.stats as any)?.[abbr] ?? 10;
+          return currentVal >= minVal;
+        });
+
+        if (!meetsStat) {
+          return { eligible: false, reason: `Requires ${statsStr} ${minVal}+.` };
+        }
+        continue;
+      }
+
+      // String Pattern 3: Spellcasting feature requirement
+      if (trimmed.toLowerCase().includes('spellcasting') || trimmed.toLowerCase().includes('pact magic') || trimmed.toLowerCase().includes('ability to cast at least one spell')) {
+        const spellcasterClasses = ['wizard', 'cleric', 'druid', 'bard', 'sorcerer', 'paladin', 'ranger', 'warlock', 'artificer'];
+        const isCasterClass = spellcasterClasses.includes((character.class || '').toLowerCase());
+        const hasKnownSpells = Array.isArray(character.knownSpells) && character.knownSpells.length > 0;
+        if (!isCasterClass && !hasKnownSpells) {
+          return { eligible: false, reason: 'Requires Spellcasting or Pact Magic feature.' };
+        }
+        continue;
+      }
+
+      // String Pattern 4: Armor / Shield Training
+      if (trimmed.toLowerCase().includes('armor training') || trimmed.toLowerCase().includes('shield training')) {
+        const reqStr = trimmed.toLowerCase();
+        const profs = (character.proficiencies || []).map(p => (typeof p === 'string' ? p : p.name || p.index || '').toLowerCase());
+        let met = false;
+
+        if (reqStr.includes('light armor')) {
+          met = profs.some(p => p.includes('light armor') || p.includes('light_armor') || p === 'light');
+        } else if (reqStr.includes('medium armor')) {
+          met = profs.some(p => p.includes('medium armor') || p.includes('medium_armor') || p === 'medium');
+        } else if (reqStr.includes('heavy armor')) {
+          met = profs.some(p => p.includes('heavy armor') || p.includes('heavy_armor') || p === 'heavy');
+        } else if (reqStr.includes('shield')) {
+          met = profs.some(p => p.includes('shield'));
+        }
+
+        if (!met) {
+          return { eligible: false, reason: `Requires ${trimmed}.` };
+        }
+        continue;
+      }
+
+      // String Pattern 5: Fighting Style Feature
+      if (trimmed.toLowerCase().includes('fighting style')) {
+        const hasFightingStyle = (character.features || []).some(f => (f.name || f.index || '').toLowerCase().includes('fighting_style') || (f.name || '').toLowerCase().includes('fighting style'));
+        if (!hasFightingStyle) {
+          return { eligible: false, reason: 'Requires Fighting Style Feature.' };
+        }
+        continue;
+      }
+    } else if (typeof prereq === 'object' && prereq !== null) {
+      // Structured 2014 object prerequisites
+      if (prereq.stat === 'level') {
+        const minLvl = prereq.value || 1;
+        if (effectiveLevel < minLvl) {
+          return { eligible: false, reason: `Requires level ${minLvl}+.` };
+        }
+      } else if (prereq.stat === 'species') {
+        const charSpecies = (character.race || '').toLowerCase().replace(/[\s-]/g, '_');
+        if (Array.isArray(prereq.value)) {
+          if (!prereq.value.some((val: string) => charSpecies.includes(val.toLowerCase()))) {
+            return { eligible: false, reason: `Requires species ${prereq.value.join('/')}.` };
+          }
+        } else if (typeof prereq.value === 'string') {
+          if (!charSpecies.includes(prereq.value.toLowerCase())) {
+            return { eligible: false, reason: `Requires species ${prereq.value}.` };
+          }
+        }
+      } else if (prereq.stat && statMap[prereq.stat.toLowerCase()]) {
+        const val = getStat(prereq.stat);
+        const reqVal = prereq.value || 13;
+        if (val < reqVal) {
+          return { eligible: false, reason: `Requires ${prereq.stat} ${reqVal}+.` };
+        }
+      } else if (prereq.stat === 'spellcasting') {
+        const spellcasterClasses = ['wizard', 'cleric', 'druid', 'bard', 'sorcerer', 'paladin', 'ranger', 'warlock', 'artificer'];
+        const isCasterClass = spellcasterClasses.includes((character.class || '').toLowerCase());
+        const hasKnownSpells = Array.isArray(character.knownSpells) && character.knownSpells.length > 0;
+        if (!isCasterClass && !hasKnownSpells) {
+          return { eligible: false, reason: 'Requires Spellcasting feature.' };
+        }
+      }
+    }
+  }
+
+  return { eligible: true };
+}
+
+export async function fetchAsiEligibleFeats(
+  ruleset?: '2014' | '2024',
+  character?: Character,
+  targetLevel?: number
+): Promise<{ name: string; index: string; category?: string }[]> {
+  const activeRuleset = ruleset || character?.ruleset || '2014';
+  const categoryFilter = activeRuleset === '2024' ? 'general' : undefined;
+
+  const allFeats = await fetchFeatsList(activeRuleset, categoryFilter);
+  // Exclude canonical ability_score_improvement from selectable Feat replacement set
+  const nonAsiFeats = allFeats.filter(f => f.index.toLowerCase() !== 'ability_score_improvement');
+
+  if (!character) return nonAsiFeats;
+
+  const { atlasService } = await import('../services/atlasService');
+
+  const eligibleFeats: { name: string; index: string; category?: string }[] = [];
+  for (const featSummary of nonAsiFeats) {
+    const featData = await atlasService.loadFeat(featSummary.index, activeRuleset);
+    if (!featData) continue;
+
+    // Strict 2024 rule: ASI replacement strictly allows General feats
+    if (activeRuleset === '2024' && featData.category && featData.category !== 'general') {
+      continue;
+    }
+
+    const prereqEval = evaluateFeatPrerequisites(character, featData, targetLevel);
+    if (prereqEval.eligible) {
+      eligibleFeats.push(featSummary);
+    }
+  }
+
+  return eligibleFeats;
+}
+
+export async function resolveLevelUpFeatures(
+  character: Character,
+  targetLevel: number,
+  subclassChoice?: string
+): Promise<any[]> {
+  const { atlasService } = await import('../services/atlasService');
+
+  const levelData = await atlasService.loadLevelData(character.class, targetLevel, character.ruleset);
+  if (!levelData) return [];
+
   const rawFeatures = levelData.features || [];
-  const fullFeatures = await Promise.all(
+  const fullFeatures: any[] = await Promise.all(
     rawFeatures.map(async (f: any) => {
       const details = await atlasService.loadFeature(f.index);
       return details ? { ...f, ...details } : f;
     })
   );
 
-  // If character already has a subclass, load target level subclass features
-  if (character.subclass) {
-    const subData = await atlasService.loadSubclass(character.subclass, character.ruleset);
+  const effectiveSubclass = character.subclass || subclassChoice;
+  if (effectiveSubclass) {
+    const subData = await atlasService.loadSubclass(effectiveSubclass, character.ruleset);
     if (subData && Array.isArray(subData.subclass_levels)) {
       const targetSubGroup = subData.subclass_levels.find((l: any) => l.level === targetLevel);
       if (targetSubGroup?.features) {
@@ -108,6 +279,27 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
       }
     }
   }
+
+  return fullFeatures;
+}
+
+export async function evaluateNextLevelStep(character: Character, overrideSubclassChoice?: string): Promise<ActiveLevelUpSession | null> {
+  if (!isEligibleForLevelUp(character)) return null;
+
+  const targetLevel = character.level + 1;
+  const { atlasService } = await import('../services/atlasService');
+
+  const [classData, levelData, prevLevelData] = await Promise.all([
+    atlasService.loadClass(character.class, character.ruleset),
+    atlasService.loadLevelData(character.class, targetLevel, character.ruleset),
+    targetLevel > 1 ? atlasService.loadLevelData(character.class, targetLevel - 1, character.ruleset) : null
+  ]);
+
+  if (!levelData) {
+    return null;
+  }
+
+  const fullFeatures = await resolveLevelUpFeatures(character, targetLevel, overrideSubclassChoice);
 
   const conModifier = Math.floor(((character.stats?.con || 10) - 10) / 2);
   const classHitDie = classData?.hit_die || levelData.hit_die || 8;
@@ -131,8 +323,10 @@ export async function evaluateNextLevelStep(character: Character): Promise<Activ
     hpRollResult: defaultHpRollResult,
     hpIncrease: defaultHpGain,
     hasASI,
+    asiMode: 'asi',
     statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
     choices: {},
+    subclassChoice: overrideSubclassChoice || character.subclass,
     hpMethod: 'roll',
     validationError: null
   };
@@ -152,9 +346,14 @@ export async function validateLevelUpCommit(character: Character, session: Activ
   }
 
   // Re-evaluating expected canonical step to guard against mutated/tampered session state
-  const canonicalStep = await evaluateNextLevelStep(character);
+  const canonicalStep = await evaluateNextLevelStep(character, session.subclassChoice);
   if (!canonicalStep) {
     return { valid: false, reason: 'Failed to evaluate canonical level-up step for validation.' };
+  }
+
+  // Synchronize session features if subclass choice newly populated subclass features
+  if (session.subclassChoice && session.features.length < canonicalStep.features.length) {
+    session.features = canonicalStep.features;
   }
 
   const totalCon = (character.stats?.con || 10) + (session.statIncreases?.con || 0);
@@ -204,24 +403,58 @@ export async function validateLevelUpCommit(character: Character, session: Activ
   }
 
   if (session.hasASI) {
-    const validStatKeys = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
-    let pointsAllocated = 0;
-    for (const [statKey, inc] of Object.entries(session.statIncreases || {})) {
-      if (!validStatKeys.includes(statKey)) {
-        return { valid: false, reason: `Invalid stat key "${statKey}" in ASI allocation.` };
+    if (session.asiMode === 'feat' || session.featChoice) {
+      if (!session.featChoice || session.featChoice.trim() === '') {
+        return { valid: false, reason: 'A feat must be selected when Feat choice is active.' };
       }
-      if (typeof inc !== 'number' || inc < 0 || inc > 2) {
-        return { valid: false, reason: `Invalid ASI point increment ${inc} for ${statKey}.` };
-      }
-      const currentVal = (character.stats as any)[statKey] || 10;
-      if (currentVal + inc > 20) {
-        return { valid: false, reason: `Attribute ${statKey.toUpperCase()} cannot exceed 20.` };
-      }
-      pointsAllocated += inc;
-    }
 
-    if (pointsAllocated !== 2) {
-      return { valid: false, reason: `Ability Score Improvement requires allocating exactly 2 points (currently allocated: ${pointsAllocated}).` };
+        if (session.featChoice.toLowerCase() === 'ability_score_improvement') {
+          return { valid: false, reason: 'Ability Score Improvement cannot be selected as a Feat choice.' };
+        }
+
+      const { atlasService } = await import('../services/atlasService');
+      const featData = await atlasService.loadFeat(session.featChoice, character.ruleset);
+      if (!featData) {
+        return { valid: false, reason: `Selected feat "${session.featChoice}" could not be loaded from canonical Atlas.` };
+      }
+
+      // Check feat category for 2024 ruleset (ASI replacement strictly allows general feats)
+      if (character.ruleset === '2024') {
+        if (featData.category && featData.category !== 'general') {
+          return { valid: false, reason: `Feat "${featData.name || session.featChoice}" (category: ${featData.category}) is not eligible for ASI replacement in 2024 ruleset.` };
+        }
+      }
+
+      // Check prerequisites
+      const prereqEval = evaluateFeatPrerequisites(character, featData, session.targetLevel);
+      if (!prereqEval.eligible) {
+        return { valid: false, reason: `Character does not meet prerequisites for feat "${featData.name || session.featChoice}": ${prereqEval.reason}` };
+      }
+
+      const pointsAllocated = Object.values(session.statIncreases || {}).reduce((a, b) => a + (b || 0), 0);
+      if (pointsAllocated !== 0) {
+        return { valid: false, reason: 'Stat increases must be 0 when selecting a Feat.' };
+      }
+    } else {
+      const validStatKeys = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+      let pointsAllocated = 0;
+      for (const [statKey, inc] of Object.entries(session.statIncreases || {})) {
+        if (!validStatKeys.includes(statKey)) {
+          return { valid: false, reason: `Invalid stat key "${statKey}" in ASI allocation.` };
+        }
+        if (typeof inc !== 'number' || inc < 0 || inc > 2) {
+          return { valid: false, reason: `Invalid ASI point increment ${inc} for ${statKey}.` };
+        }
+        const currentVal = (character.stats as any)[statKey] || 10;
+        if (currentVal + inc > 20) {
+          return { valid: false, reason: `Attribute ${statKey.toUpperCase()} cannot exceed 20.` };
+        }
+        pointsAllocated += inc;
+      }
+
+      if (pointsAllocated !== 2) {
+        return { valid: false, reason: `Ability Score Improvement requires allocating exactly 2 points (currently allocated: ${pointsAllocated}).` };
+      }
     }
   }
 
@@ -269,7 +502,7 @@ export async function validateLevelUpCommit(character: Character, session: Activ
     if (selectedSubInChoices && session.subclassChoice !== selectedSubInChoices) {
       return { valid: false, reason: `Subclass selection "${selectedSubInChoices}" is not synchronized with subclassChoice.` };
     }
-  } else if (session.subclassChoice) {
+  } else if (session.subclassChoice && session.subclassChoice !== character.subclass) {
     return { valid: false, reason: `subclassChoice "${session.subclassChoice}" provided but target level does not grant a subclass.` };
   }
 

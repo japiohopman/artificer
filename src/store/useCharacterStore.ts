@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
 import { useWorldStore } from './useWorldStore';
-import { ActiveLevelUpSession, evaluateNextLevelStep, validateLevelUpCommit } from '../lib/progressionUtils';
+import { ActiveLevelUpSession, evaluateNextLevelStep, validateLevelUpCommit, resolveLevelUpFeatures } from '../lib/progressionUtils';
 
 export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
 
@@ -329,6 +329,10 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   },
 
   updateLevelUpSession: (updates: Partial<ActiveLevelUpSession>) => {
+    const currentState = get().activeLevelUpSession;
+    if (!currentState) return;
+    const char = get().characters.find(c => c.id === currentState.characterId);
+
     set((state) => {
       if (!state.activeLevelUpSession) return state;
       const merged = {
@@ -338,7 +342,6 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       };
 
       if (updates.statIncreases?.con !== undefined && updates.hpIncrease === undefined) {
-        const char = state.characters.find(c => c.id === merged.characterId);
         if (char) {
           const conInc = merged.statIncreases.con || 0;
           const conMod = Math.floor(((char.stats?.con || 10) + conInc - 10) / 2);
@@ -351,6 +354,22 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
         activeLevelUpSession: merged
       };
     });
+
+    if (updates.subclassChoice && updates.subclassChoice !== currentState.subclassChoice && char) {
+      const targetLevel = currentState.targetLevel;
+      const subChoice = updates.subclassChoice;
+      resolveLevelUpFeatures(char, targetLevel, subChoice).then(fullFeatures => {
+        const latestSession = get().activeLevelUpSession;
+        if (latestSession && latestSession.characterId === char.id && latestSession.subclassChoice === subChoice) {
+          set({
+            activeLevelUpSession: {
+              ...latestSession,
+              features: fullFeatures
+            }
+          });
+        }
+      });
+    }
   },
 
   commitLevelUpSession: async () => {
@@ -371,7 +390,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
 
     // Re-evaluate canonical step to obtain immutable canonical features & target level
-    const canonicalStep = await evaluateNextLevelStep(char);
+    const canonicalStep = await evaluateNextLevelStep(char, session.subclassChoice);
     if (!canonicalStep) return false;
 
     const hpGain = session.hpIncrease;
@@ -380,12 +399,16 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     const newHp = (char.hp || 10) + hpGain;
 
     const newStats = { ...char.stats };
-    if (canonicalStep.hasASI && session.statIncreases) {
-      Object.entries(session.statIncreases).forEach(([statKey, inc]) => {
-        if (inc && (newStats as any)[statKey] !== undefined) {
-          (newStats as any)[statKey] += inc;
-        }
-      });
+    if (canonicalStep.hasASI) {
+      if (session.asiMode === 'feat' || session.featChoice) {
+        // Feat selection mode - stats remain unmodified
+      } else if (session.statIncreases) {
+        Object.entries(session.statIncreases).forEach(([statKey, inc]) => {
+          if (inc && (newStats as any)[statKey] !== undefined) {
+            (newStats as any)[statKey] += inc;
+          }
+        });
+      }
     }
 
     const newFeatures = [...(char.features || [])];
@@ -401,11 +424,38 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       }
     }
 
+    if (canonicalStep.hasASI && (session.asiMode === 'feat' || session.featChoice) && session.featChoice) {
+      const { atlasService } = await import('../services/atlasService');
+      const featData = await atlasService.loadFeat(session.featChoice, char.ruleset);
+      if (featData) {
+        const featIndex = featData.index || session.featChoice;
+        if (!newFeatures.some(f => f.index === featIndex)) {
+          newFeatures.push({
+            name: featData.name || featIndex,
+            index: featIndex,
+            desc: Array.isArray(featData.desc) ? featData.desc.join('\n') : (featData.desc || ''),
+            source: 'Feat',
+            feature_specific: featData.feature_specific
+          });
+        }
+      } else {
+        set((state) => ({
+          activeLevelUpSession: state.activeLevelUpSession
+            ? { ...state.activeLevelUpSession, validationError: `Failed to load feat "${session.featChoice}" from canonical Atlas.` }
+            : null
+        }));
+        return false;
+      }
+    }
+
     const newChoices = JSON.parse(JSON.stringify(char.choices || {}));
     if (session.choices) {
       Object.entries(session.choices).forEach(([featIdx, sel]) => {
         newChoices[featIdx] = sel;
       });
+    }
+    if (session.featChoice) {
+      newChoices['feat'] = [session.featChoice];
     }
 
     let newSubclass = char.subclass;
@@ -438,6 +488,28 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
         };
       });
       updatePayload.spellSlots = newSlots;
+    }
+
+    const updatedChar = { ...char, ...updatePayload } as Character;
+
+    const { saveService } = await import('../services/saveService');
+    const slotMatch = char.id.match(/^slot(\d+)$/i);
+    const slotNum = slotMatch ? parseInt(slotMatch[1], 10) : undefined;
+    let saveSuccess = false;
+    try {
+      saveSuccess = await saveService.saveCharacter(updatedChar, slotNum);
+    } catch (e) {
+      console.warn('[useCharacterStore] Failed to persist character save during level-up commit:', e);
+      saveSuccess = false;
+    }
+
+    if (!saveSuccess) {
+      set((state) => ({
+        activeLevelUpSession: state.activeLevelUpSession
+          ? { ...state.activeLevelUpSession, validationError: 'Failed to persist character save during level-up commit.' }
+          : null
+      }));
+      return false;
     }
 
     get().updateCharacter(char.id, updatePayload);

@@ -8,13 +8,16 @@ if (typeof window === 'undefined') {
   const originalFetch = globalThis.fetch;
   globalThis.fetch = async (input: any, init?: any) => {
     const urlStr = typeof input === 'string' ? input : (input && input.url ? input.url : '');
-    if (urlStr.startsWith('/assets/atlas/')) {
+    if (urlStr.startsWith('/assets/atlas/') || urlStr.startsWith('/data/')) {
       const localPath = path.resolve(process.cwd(), 'public' + urlStr);
       if (fs.existsSync(localPath)) {
         const content = fs.readFileSync(localPath, 'utf8');
         return new Response(content, { status: 200, statusText: 'OK', headers: { 'Content-Type': 'application/json' } });
       }
       return new Response(null, { status: 404, statusText: 'Not Found' });
+    }
+    if (urlStr === '/api/commit') {
+      return new Response(JSON.stringify({ success: true }), { status: 200, statusText: 'OK', headers: { 'Content-Type': 'application/json' } });
     }
     return originalFetch(input, init);
   };
@@ -32,6 +35,7 @@ import { extractStructuredOptionsFromFeature, extractOptionsFromFeature } from '
 import { deterministicDiceAdapter } from '../src/dice_roller/deterministicDiceAdapter';
 import { handlePanelStatsLevelUpClick } from '../src/components/character/panel/CharacterPanelStats';
 import { createDeterministicDiceViewerPresenter } from '../src/components/dice/DeterministicDiceViewer';
+import { saveService } from '../src/services/saveService';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -159,6 +163,116 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(garethLvl4.level).toBe(4);
     expect(garethLvl4.stats.str).toBe(17);
     expect(garethLvl4.stats.con).toBe(15);
+  });
+
+  test('Feat selection mode in ASI step persists selected feat to character features and choices', async () => {
+    const store = useCharacterStore.getState();
+    const hero: any = {
+      id: 'test_feat_asi_hero',
+      name: 'FeatHero',
+      class: 'Fighter',
+      level: 3,
+      xp: 2700, // Eligible for Level 4
+      hp: 24,
+      maxHp: 24,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 },
+      features: []
+    };
+    store.addCharacter(hero);
+
+    const session = await store.startLevelUpSession('test_feat_asi_hero');
+    expect(session).not.toBeNull();
+    expect(session?.hasASI).toBe(true);
+
+    // Select Feat mode and pick 'actor' feat
+    store.updateLevelUpSession({
+      asiMode: 'feat',
+      featChoice: 'actor',
+      statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+    });
+
+    const committed = await store.commitLevelUpSession();
+    expect(committed).toBe(true);
+
+    const updatedHero = useCharacterStore.getState().characters.find(c => c.id === 'test_feat_asi_hero')!;
+    expect(updatedHero.level).toBe(4);
+    // Stats remain unmutated (STR = 16, CON = 14)
+    expect(updatedHero.stats.str).toBe(16);
+    expect(updatedHero.stats.con).toBe(14);
+    // Selected feat persists in features and choices
+    expect(updatedHero.features.some(f => f.index === 'actor' && f.source === 'Feat')).toBe(true);
+    expect(updatedHero.choices['feat']).toEqual(['actor']);
+  });
+
+  test('Feat mode validation rejects empty feat choice or non-zero stat points', async () => {
+    const hero: any = {
+      id: 'test_feat_reject',
+      name: 'FeatReject',
+      class: 'Fighter',
+      level: 3,
+      xp: 2700,
+      stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }
+    };
+
+    const session = await evaluateNextLevelStep(hero);
+    expect(session).not.toBeNull();
+
+    // 1. Feat mode active but no feat selected
+    session!.asiMode = 'feat';
+    session!.featChoice = undefined;
+    session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+    const res1 = await validateLevelUpCommit(hero, session!);
+    expect(res1.valid).toBe(false);
+    expect(res1.reason).toContain('feat must be selected');
+
+    // 2. Feat mode active with feat selected BUT stat points allocated
+    session!.featChoice = 'actor';
+    session!.statIncreases = { str: 1, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+    const res2 = await validateLevelUpCommit(hero, session!);
+    expect(res2.valid).toBe(false);
+    expect(res2.reason).toContain('must be 0 when selecting a Feat');
+  });
+
+  test('Subclass selection at level 3 resolves and grants subclass features and follow-up choices', async () => {
+    const store = useCharacterStore.getState();
+    const rogue: any = {
+      id: 'test_rogue_subclass',
+      name: 'Shadow',
+      class: 'Rogue',
+      ruleset: '2024',
+      level: 2,
+      xp: 900, // Eligible for Level 3
+      hp: 14,
+      maxHp: 14,
+      stats: { str: 10, dex: 16, con: 12, int: 14, wis: 10, cha: 10 },
+      features: []
+    };
+    store.addCharacter(rogue);
+
+    const session = await store.startLevelUpSession('test_rogue_subclass');
+    expect(session).not.toBeNull();
+    expect(session?.targetLevel).toBe(3);
+
+    const subclassFeat = session!.features.find(f => f.feature_specific?.subfeature_options?.type === 'subclass');
+    expect(subclassFeat).toBeDefined();
+
+    // Pick Thief subclass using the exact feature index
+    store.updateLevelUpSession({
+      choices: { [subclassFeat!.index]: ['thief_2024'] },
+      subclassChoice: 'thief_2024'
+    });
+
+    const committed = await store.commitLevelUpSession();
+    expect(committed).toBe(true);
+
+    const updatedRogue = useCharacterStore.getState().characters.find(c => c.id === 'test_rogue_subclass')!;
+    expect(updatedRogue.level).toBe(3);
+    expect(updatedRogue.subclass).toBe('thief_2024');
+    // Subclass features for Thief 2024 at level 3 (fast_hands_thief_2024, second_story_work_thief_2024) are granted in features
+    expect(updatedRogue.features.some(f => f.index === 'fast_hands_thief_2024' && f.source === 'Subclass')).toBe(true);
+    expect(updatedRogue.features.some(f => f.index === 'second_story_work_thief_2024' && f.source === 'Subclass')).toBe(true);
   });
 
   test('Session roll remains stable across session updates and rerenders without re-rolling', async () => {
@@ -570,5 +684,268 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
     expect(bgSpy).toHaveBeenCalledTimes(0);
     deterministicDiceAdapter.unregisterPresenter('css_3d_polyhedron_presenter');
     bgSpy.mockRestore();
+  });
+
+  describe('PR Review Negative Boundaries (#383)', () => {
+    test('ability_score_improvement is excluded from fetchAsiEligibleFeats and rejected as a Feat choice', async () => {
+      const hero2024: any = {
+        id: 'test_asi_feat_exclusion',
+        name: 'HeroASIExclusion',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 16 },
+        features: []
+      };
+
+      // 1. Prove ability_score_improvement is not in fetchAsiEligibleFeats output
+      const eligibleFeats = await import('../src/lib/progressionUtils').then(m => m.fetchAsiEligibleFeats('2024', hero2024, 4));
+      expect(eligibleFeats.some(f => f.index.toLowerCase() === 'ability_score_improvement')).toBe(false);
+      expect(eligibleFeats.some(f => f.index.toLowerCase() === 'actor')).toBe(true);
+
+      // 2. Prove validateLevelUpCommit explicitly rejects ability_score_improvement as a featChoice
+      const session = await evaluateNextLevelStep(hero2024);
+      expect(session).not.toBeNull();
+      session!.asiMode = 'feat';
+      session!.featChoice = 'ability_score_improvement';
+      session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+      const res = await validateLevelUpCommit(hero2024, session!);
+      expect(res.valid).toBe(false);
+      expect(res.reason).toContain('Ability Score Improvement cannot be selected as a Feat choice');
+    });
+
+    test('2024 ASI replacement rejects epic boons and origin feats', async () => {
+      const hero2024: any = {
+        id: 'test_2024_epic_reject',
+        name: 'Hero2024',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 16 },
+        features: []
+      };
+
+      const session = await evaluateNextLevelStep(hero2024);
+      expect(session).not.toBeNull();
+      session!.asiMode = 'feat';
+      session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+
+      // 1. Attempt Epic Boon selection
+      session!.featChoice = 'boon_of_combat_prowess';
+      const resEpic = await validateLevelUpCommit(hero2024, session!);
+      expect(resEpic.valid).toBe(false);
+      expect(resEpic.reason).toContain('not eligible for ASI replacement');
+
+      // 2. Attempt Origin Feat selection
+      session!.featChoice = 'musician';
+      const resOrigin = await validateLevelUpCommit(hero2024, session!);
+      expect(resOrigin.valid).toBe(false);
+      expect(resOrigin.reason).toContain('not eligible for ASI replacement');
+    });
+
+    test('Canonical feat with unmet stat or level prerequisite is rejected', async () => {
+      const lowChaHero: any = {
+        id: 'test_low_cha_hero',
+        name: 'LowCha',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 }, // CHA 8 < 13
+        features: []
+      };
+
+      const session = await evaluateNextLevelStep(lowChaHero);
+      expect(session).not.toBeNull();
+      session!.asiMode = 'feat';
+      session!.statIncreases = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+      session!.featChoice = 'actor'; // Actor requires CHA 13+
+
+      const res = await validateLevelUpCommit(lowChaHero, session!);
+      expect(res.valid).toBe(false);
+      expect(res.reason).toContain('does not meet prerequisites');
+      expect(res.reason).toContain('Charisma 13+');
+    });
+
+    test('Selected feat that cannot be loaded fails closed at commit', async () => {
+      const store = useCharacterStore.getState();
+      const hero: any = {
+        id: 'test_missing_feat_hero',
+        name: 'MissingFeat',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 8 },
+        features: []
+      };
+      store.addCharacter(hero);
+
+      await store.startLevelUpSession('test_missing_feat_hero');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'non_existent_feat_index_xyz',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const committed = await store.commitLevelUpSession();
+      expect(committed).toBe(false);
+
+      const activeSession = useCharacterStore.getState().activeLevelUpSession;
+      expect(activeSession).not.toBeNull();
+      expect(activeSession?.validationError).toContain('could not be loaded');
+    });
+
+    test('Valid eligible feat commits with feature_specific preserved', async () => {
+      const store = useCharacterStore.getState();
+      const eligibleHero: any = {
+        id: 'test_valid_feat_hero',
+        name: 'EligibleHero',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 14 }, // CHA 14 >= 13 for Actor
+        features: []
+      };
+      store.addCharacter(eligibleHero);
+
+      await store.startLevelUpSession('test_valid_feat_hero');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'actor',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const committed = await store.commitLevelUpSession();
+      expect(committed).toBe(true);
+
+      const updatedHero = useCharacterStore.getState().characters.find(c => c.id === 'test_valid_feat_hero')!;
+      expect(updatedHero.level).toBe(4);
+      const actorFeat = updatedHero.features.find(f => f.index === 'actor' && f.source === 'Feat');
+      expect(actorFeat).toBeDefined();
+      expect(actorFeat?.name).toBe('actor');
+      expect(updatedHero.choices['feat']).toEqual(['actor']);
+    });
+
+    test('Level-up commit persists character state to saveService and survives save/load round-trip', async () => {
+      const store = useCharacterStore.getState();
+
+      const slot1Hero: any = {
+        id: 'slot1',
+        name: 'SaveHero',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700, // Eligible for Level 4
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 14 },
+        features: [],
+        choices: {}
+      };
+      store.setCharacters([slot1Hero]);
+      store.setActiveCharacter('slot1');
+
+      let savedCharacterState: any = null;
+      const saveSpy = vi.spyOn(saveService, 'saveCharacter').mockImplementation(async (charToSave) => {
+        savedCharacterState = JSON.parse(JSON.stringify(charToSave));
+        return true;
+      });
+
+      const loadSpy = vi.spyOn(saveService, 'loadCharacters').mockImplementation(async () => {
+        return savedCharacterState ? [savedCharacterState] : [];
+      });
+
+      // 1. Start level-up session, select 'actor' feat, and commit
+      await store.startLevelUpSession('slot1');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'actor',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const commitResult = await store.commitLevelUpSession();
+      expect(commitResult).toBe(true);
+
+      // 2. Assert saveCharacter was called and received exact updated character
+      expect(saveSpy).toHaveBeenCalledTimes(1);
+      expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({
+        id: 'slot1',
+        level: 4,
+        choices: expect.objectContaining({ feat: ['actor'] })
+      }), 1);
+
+      // 3. Load characters from canonical saveService boundary
+      const loadedCharacters = await saveService.loadCharacters();
+      expect(loadSpy).toHaveBeenCalledTimes(1);
+      const reloadedHero = loadedCharacters.find(c => c.id === 'slot1');
+
+      expect(reloadedHero).toBeDefined();
+      expect(reloadedHero?.level).toBe(4);
+      expect(reloadedHero?.choices?.['feat']).toEqual(['actor']);
+
+      const persistedFeat = reloadedHero?.features?.find((f: any) => f.index === 'actor');
+      expect(persistedFeat).toBeDefined();
+      expect(persistedFeat?.source).toBe('Feat');
+
+      saveSpy.mockRestore();
+      loadSpy.mockRestore();
+    });
+
+    test('Level-up commit fails closed when saveService.saveCharacter returns false or throws', async () => {
+      const store = useCharacterStore.getState();
+
+      const slot1Hero: any = {
+        id: 'slot1',
+        name: 'FailSaveHero',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700,
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 14 },
+        features: [],
+        choices: {}
+      };
+      store.setCharacters([slot1Hero]);
+      store.setActiveCharacter('slot1');
+
+      const saveSpy = vi.spyOn(saveService, 'saveCharacter').mockResolvedValue(false);
+
+      await store.startLevelUpSession('slot1');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'actor',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const commitResult = await store.commitLevelUpSession();
+      expect(commitResult).toBe(false);
+
+      const activeSession = useCharacterStore.getState().activeLevelUpSession;
+      expect(activeSession).not.toBeNull();
+      expect(activeSession?.validationError).toContain('Failed to persist character save');
+
+      // Character in store should remain Level 3
+      const heroInStore = useCharacterStore.getState().characters.find(c => c.id === 'slot1');
+      expect(heroInStore?.level).toBe(3);
+
+      saveSpy.mockRestore();
+    });
   });
 });

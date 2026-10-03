@@ -139,19 +139,12 @@ export function getChoiceLimit(feat: any): number {
   if (feat.feature_specific) {
     const optionKeys = Object.keys(feat.feature_specific).filter(k => k.endsWith('_options'));
     for (const key of optionKeys) {
-      if (feat.feature_specific[key]?.choose) {
-        return feat.feature_specific[key].choose;
+      const opt = feat.feature_specific[key];
+      if (opt?.choose) {
+        return opt.choose;
       }
-    }
-  }
-
-  if (feat.feature_specific) {
-    for (const key of Object.keys(feat.feature_specific)) {
-      if (key.endsWith('_options')) {
-        const choose = feat.feature_specific[key]?.choose;
-        if (typeof choose === 'number' && choose > 0) {
-          return choose;
-        }
+      if (opt?.type === 'subclass') {
+        return 1;
       }
     }
   }
