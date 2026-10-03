@@ -32,6 +32,7 @@ import { extractStructuredOptionsFromFeature, extractOptionsFromFeature } from '
 import { deterministicDiceAdapter } from '../src/dice_roller/deterministicDiceAdapter';
 import { handlePanelStatsLevelUpClick } from '../src/components/character/panel/CharacterPanelStats';
 import { createDeterministicDiceViewerPresenter } from '../src/components/dice/DeterministicDiceViewer';
+import { saveService } from '../src/services/saveService';
 
 describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
   test('XP accumulation marks character eligible without mutating level or stats', async () => {
@@ -835,6 +836,49 @@ describe('Level-Up Progression Lifecycle Architecture (#401)', () => {
       expect(actorFeat).toBeDefined();
       expect(actorFeat?.name).toBe('actor');
       expect(updatedHero.choices['feat']).toEqual(['actor']);
+    });
+
+    test('Level-up commit persists character state to saveService and survives save/load round-trip', async () => {
+      const store = useCharacterStore.getState();
+
+      const slot1Hero: any = {
+        id: 'slot1',
+        name: 'SaveHero',
+        class: 'Fighter',
+        ruleset: '2024',
+        level: 3,
+        xp: 2700, // Eligible for Level 4
+        hp: 24,
+        maxHp: 24,
+        stats: { str: 16, dex: 14, con: 14, int: 10, wis: 10, cha: 14 },
+        features: [],
+        choices: {}
+      };
+      store.setCharacters([slot1Hero]);
+      store.setActiveCharacter('slot1');
+
+      // 1. Start level-up session, select 'actor' feat, and commit
+      await store.startLevelUpSession('slot1');
+      store.updateLevelUpSession({
+        asiMode: 'feat',
+        featChoice: 'actor',
+        statIncreases: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 }
+      });
+
+      const commitResult = await store.commitLevelUpSession();
+      expect(commitResult).toBe(true);
+
+      // 2. Load characters from canonical saveService boundary
+      const loadedCharacters = await saveService.loadCharacters();
+      const reloadedHero = loadedCharacters.find(c => c.id === 'slot1');
+
+      expect(reloadedHero).toBeDefined();
+      expect(reloadedHero?.level).toBe(4);
+      expect(reloadedHero?.choices?.['feat']).toEqual(['actor']);
+
+      const persistedFeat = reloadedHero?.features?.find((f: any) => f.index === 'actor');
+      expect(persistedFeat).toBeDefined();
+      expect(persistedFeat?.source).toBe('Feat');
     });
   });
 });
