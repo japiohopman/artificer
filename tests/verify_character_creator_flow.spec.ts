@@ -146,8 +146,17 @@ test('verify complete guided character creator flow for 2014 ruleset', async ({ 
     await page.waitForTimeout(500);
 
     // 12. Describe Your Character Step
-    console.log('12. Verifying Backstory Step...');
-    await page.fill('input[placeholder="Enter Character Name or Moniker..."]', 'Arthur');
+    console.log('12. Verifying Backstory Step (Deterministic Name & Backstory Auto-Population without LLM)...');
+    // Verify name field is populated automatically or editable
+    const nameVal = await page.inputValue('input[placeholder="Enter Character Name or Moniker..."]');
+    if (!nameVal || !nameVal.trim()) {
+      await page.fill('input[placeholder="Enter Character Name or Moniker..."]', 'Arthur');
+    }
+    // Verify auto-populated backstory prose in textarea
+    const backstoryVal = await page.inputValue('textarea[placeholder="Type your own backstory here..."]');
+    expect(backstoryVal).toBeTruthy();
+    expect(backstoryVal.length).toBeGreaterThan(50);
+
     await page.waitForTimeout(300);
     await page.click('#next-stage-btn');
     await page.waitForTimeout(500);

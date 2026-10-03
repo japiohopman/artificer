@@ -214,7 +214,8 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const atlasSpc = await atlasService.loadSpecies(data.race);
       
       const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
-      const personality = NPCChoiceResolver.resolvePersonality(atlasBg);
+      const npcSeed = `npc_${canonicalName}_${data.race}_${data.class}_${data.background}`;
+      const personality = NPCChoiceResolver.resolvePersonality(atlasBg, npcSeed);
       const proficiencies = NPCChoiceResolver.resolveAllProficiencies(atlasCls, atlasBg, atlasSpc);
       const spells = await NPCChoiceResolver.resolveSpells(atlasCls);
       const money = NPCChoiceResolver.resolveStartingMoney();
