@@ -1,129 +1,95 @@
-# 🛠️ Artificer DevKit
+# 🛠️ Artificer DevKit Architecture & Working Model
 
-The DevKit is Artificer's internal **DM/developer authoring and diagnostics workspace**. It is not part of normal player gameplay.
+The DevKit is Artificer's internal **DM/developer authoring, browsing, diagnostics, and hardware workspace**. It is mounted from the application shell (`src/App.tsx`) and controlled via global UI state (`useUIStore.isDevKitOpen`).
 
-## Entry point
+---
 
-- Component: `src/components/devkit/DevKit.tsx`
-- Mounted from the application shell.
-- The DevKit currently groups Inspectors, Generators, Testers, Audio and related developer tools.
+## 1. Executive Summary & Audit Overview
 
-## Current navigation
+A complete workspace-by-workspace audit of the current DevKit implementation (`src/components/devkit/`) revealed significant functionality, as well as areas of architectural debt:
+- **God Component Concentration:** `DevKit.tsx` (1,475 lines) directly contains full authoring UI, state, scraping, and AI prompt logic for Enemy, Material, Equipment, and Habitat background generation, alongside top-level tab orchestration and Hue lamp controls (`DevKitHueTab`).
+- **Data & Rule Duplication:** `npcGeneratorUtils.ts` and `npc_generator.tsx` duplicate D&D class/race/background data, hit dice tables, starting equipment, and AC/HP formulas using hardcoded legacy arrays (`CLASS_DATA`, `BACKGROUND_DATA`) rather than consuming versioned Atlas loaders (`storageService.ts`, `atlasService.ts`).
+- **Orphaned / Unlinked Components:** `AudioLaboratory.tsx` (68k) exists in `src/components/devkit/` but is not imported by `DevKit.tsx` or any other file. DevKit instead imports `SoundStudio.tsx` for the "Audio Lab" tab.
+- **Split Explorer Surface:** `AssetExplorer.tsx` (Atlas assets) and `WorldExplorer.tsx` (World regions/locations) exist as separate inspector sub-tabs with different search and filtering interfaces, despite serving the same primary user goal of browsing canonical static/world data.
 
-The current `DevKit.tsx` defines these top-level workspaces:
+---
 
-### Inspectors
+## 2. DevKit Tool Responsibility & Audit Matrix
 
-- **Codex** — `AssetExplorer`
-- **World** — `WorldExplorer`
-- **Flags** — `FlagManager`
+| Workspace / Tool | Owning Component / File | Canonical Data Owner | Implementation Status | Logic Duplication / Debt | Audit Decision | Required Follow-up Issue |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Inspectors: Codex** | `AssetExplorer.tsx` | `useAtlasStore`, `storageService.ts` | **Implemented** | Uses simple string `includes()` search; duplicates category browsing tabs. | **Merge** into Unified Explorer | Refactor Issue 3 |
+| **Inspectors: World** | `WorldExplorer.tsx` | `useWorldStore`, `REGION_METADATA` | **Implemented** | Renders static Faerûn vector map; separated from Atlas Asset Explorer. | **Merge** into Unified Explorer | Refactor Issue 3 |
+| **Inspectors: Flags** | `FlagManager.tsx` | `useWorldStore.worldFlags` | **Implemented** | Clean key-value flag manager operating against `useWorldStore`. | **Remain** (under Debug/Flags) | Refactor Issue 3 |
+| **Generators: NPC** | `npc_generator.tsx`, `npcService.ts` | `useCharacterStore` | **Implemented** | Hardcoded legacy arrays in `npcGeneratorUtils.ts` duplicate class/race rules and equipment. | **Rebuild / Modernize** | Refactor Issue 2 |
+| **Generators: Enemy** | `DevKit.tsx`, `enemy-image_generator.tsx` | `/public/assets/atlas/enemies/` | **Implemented** | Inline in `DevKit.tsx`; raw text ripper and scraping logic coupled to top window. | **Split / Extract** into generator module | Refactor Issue 1 |
+| **Generators: Material** | `DevKit.tsx`, `material-image_generator.tsx` | `/public/assets/atlas/materials/` | **Implemented** | Inline in `DevKit.tsx`; mixes prompt generation with asset baking. | **Split / Extract** into generator module | Refactor Issue 1 |
+| **Generators: Equipment** | `DevKit.tsx`, `equipment-image_generator.tsx` | `/public/assets/atlas/equipment/` | **Implemented** | Inline in `DevKit.tsx`; tier calculation logic inline in event handlers. | **Split / Extract** into generator module | Refactor Issue 1 |
+| **Generators: Gods / Lore** | `GodsLore.tsx` | `/public/assets/atlas/gods/` | **Implemented** | Standalone viewer and lore authoring interface. | **Remain** | Refactor Issue 1 |
+| **Generators: Jane (World)** | `Jane.tsx` | `useWorldStore` | **Implemented** | High-level regional world builder and narrative location authoring tool. | **Remain** | Refactor Issue 1 |
+| **Generators: Habitat** | `DevKit.tsx`, `backgroundConfigs.ts` | `public/assets/images/enemy_backgrounds/` | **Implemented** | Inline in `DevKit.tsx`; contains interactive sprite gallery and variation generator. | **Split / Extract** into generator module | Refactor Issue 1 |
+| **Generators: Battle Map** | `BattleMapEditor/index.tsx` | `battleMapStorage.ts`, combat maps | **Implemented** | Modular, well-isolated authoring tool with Canvas rendering pipeline. | **Remain** (Modular standalone) | None (Sustaining) |
+| **Testers: NPC Slots** | `npc_tester.tsx` | `useCharacterStore` | **Implemented** | Slot verification harness testing party character state synchronization. | **Remain** | Refactor Issue 4 |
+| **Testers: Tactical Combat** | `CombatTester.tsx` | `useGameStore` | **Implemented** | Full tactical grid testing harness for monster spawning and combat verification. | **Remain** | Refactor Issue 4 |
+| **Testers: Simulator** | `Simulator.tsx` | `useCharacterStore`, `statCalculations.ts` | **Implemented** | Derived stat and equipment calculation simulator. | **Remain** | Refactor Issue 4 |
+| **Audio Lab: Sound Studio** | `audio/SoundStudio.tsx` | `useAudioStore`, `soundService.ts` | **Implemented** | Multi-channel stem mixer, SFX generator, and audio testing environment. | **Remain** | Refactor Issue 4 |
+| **Audio Lab: Audio Laboratory**| `AudioLaboratory.tsx` | `useAudioStore`, `soundService.ts` | **Scaffolded / Orphaned** | Unimported file duplicating `SoundStudio.tsx` sound generation logic. | **Remove** | Refactor Issue 4 |
+| **Audio Lab: Audio Mixer** | `audio/Mixer.tsx` | `soundService.ts` | **Implemented** | Quick floating overlay mixer accessible via DevKit header button. | **Remain** | Refactor Issue 4 |
+| **Hardware: Hue Lamps** | `DevKitHueTab` in `DevKit.tsx`, `LampCard.tsx` | `useHueStore` | **Implemented** | Direct Philips Hue bridge setup and luminary control interface. | **Split / Extract** into `HueStudio.tsx` | Refactor Issue 1 |
 
-Inspectors are primarily for examining and manipulating existing development/game data.
+---
 
-### Generators
+## 3. Concept Separation & Target Architecture
 
-The generator workspace currently exposes:
-
-- NPC Generator — `NPCGenerator`
-- Monster tooling — integrated into `DevKit.tsx` and `EnemyImageGenerator`
-- Material tooling — `MaterialImageGenerator`
-- Equipment tooling — `EquipmentImageGenerator`
-- Gods/Lore tooling — `GodsLore`
-- Jane / World Builder — `Jane`
-- Background generation
-- **Battle Map Editor — `BattleMapEditor`**
-
-The Battle Map Editor is a substantial module and therefore lives independently under:
-
-```text
-src/components/devkit/BattleMapEditor/
-```
-
-See `docs/modules/mapEditor.md` for its architecture and implementation status.
-
-### Testers
-
-The current tester workspace includes:
-
-- `NPCTester`
-- `CombatTester`
-- `Simulator`
-
-These are development tools. A tester existing in the navigation does not mean the underlying production feature is complete.
-
-### Audio / hardware tooling
-
-The DevKit also exposes development tooling for audio and connected lighting, including the Sound Studio/Mixer path and Hue-related controls.
-
-These tools should remain thin UI layers over the existing audio/Hue services and stores rather than becoming alternate runtime systems.
-
-## Architectural rules
-
-### 1. DevKit is an authoring/debug surface
-
-The DevKit may inspect, generate, edit and test data that is later consumed by the runtime. It should not duplicate production game rules unnecessarily.
-
-### 2. Reuse canonical data
-
-Use the existing Atlas services/stores and domain types. Do not create a second registry for monsters, equipment, materials, locations or other canonical entities merely for the DevKit.
-
-### 3. Keep large tools modular
-
-Large DevKit features must be split into their own module directory. Do not turn `DevKit.tsx` into a God Component.
-
-Current example:
+The target DevKit architecture consolidates navigation into **4 coherent top-level workspaces**:
 
 ```text
-DevKit.tsx
-   ↓
-BattleMapEditor/
-   ├── components/
-   ├── tools/
-   ├── state/
-   ├── rendering/
-   ├── geometry/
-   ├── commands/
-   └── persistence/
+DevKit.tsx (Orchestrator & Shell)
+ ├── 1. Explorer (Unified Browsing & Inspection)
+ │    ├── Atlas Assets (Enemies, Equipment, Materials, Spells, Gods)
+ │    ├── World Hierarchy & Map Regions
+ │    └── World Flags & Diagnostics Manager
+ ├── 2. Generators (Authoring & Content Creation)
+ │    ├── NPC Modernization Workspace
+ │    ├── Entity Authoring (Enemy, Material, Equipment)
+ │    ├── Habitat & Background Generator
+ │    ├── World & Regional Builder (Jane)
+ │    ├── Gods & Lore Authoring
+ │    └── Battle Map Editor (Canvas)
+ ├── 3. Testers (Verification & Runtime Simulation)
+ │    ├── NPC Slot & Party Synchronizer
+ │    ├── Tactical Combat Simulator
+ │    └── Mechanics & Stat Calculation Simulator
+ └── 4. Hardware & Audio Studio (Hardware & Sound Control)
+      ├── Audio Sound Studio & Stem Mixer
+      ├── Philips Hue Bridge & Lamp Controller
+      └── Quick Floating Audio Mixer Overlay
 ```
 
-### 4. Placeholder ≠ implemented
+### Strategic Concept Decisions:
+1. **Unified Data & World Explorer:** Asset browsing (`AssetExplorer`) and Region/Location browsing (`WorldExplorer`) are unified into a single "Explorer" workspace. Users select domain views (Atlas vs. World vs. Flags) within a consistent filter and preview shell.
+2. **NPC Generator Modernization as a Separate Track:** The NPC Generator is explicit about its scope. Because it touches character save formats (`saveVersion: 2`), choice resolution, and AI image matrix generation, modernizing `npc_generator.tsx` and removing hardcoded arrays in `npcGeneratorUtils.ts` is tracked as its own refactor issue rather than hidden inside a generic DevKit pass.
+3. **Extraction of Inline Authoring from `DevKit.tsx`:** `DevKit.tsx` must be reduced to an orchestration shell. Inline rendering and state for Enemy, Equipment, Material, Habitat, and Hue tabs will be refactored into dedicated module components under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
+4. **Cleanup of Orphaned Tools:** Unused components such as `AudioLaboratory.tsx` will be removed to maintain codebase hygiene.
 
-A button, tab, panel or placeholder tool must **not** be recorded as a completed feature.
+---
 
-Use these status meanings:
+## 4. Ordered Follow-Up Refactor Plan
 
-- **Implemented** — working behavior exists and is verified.
-- **In progress** — implementation is actively being developed.
-- **Scaffolded** — UI/architecture exists but behavior is incomplete.
-- **Planned** — design exists, implementation has not started.
+The following concrete refactor Issues are established by this audit:
 
-### 5. Runtime boundary
+1. **Refactor Issue 1: Extract Inline DevKit Authoring Modules & Modularize `DevKit.tsx`**
+   - *Goal:* De-risk `DevKit.tsx` by extracting inline Enemy, Equipment, Material, Habitat, and Hue authoring tabs into dedicated files under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
+   - *Dependencies:* None.
 
-Authoring tools should produce canonical data that runtime systems can consume. They should not silently write editor-only state into unrelated global stores.
+2. **Refactor Issue 2: Modernize NPC Generator & Decouple Legacy Generator Utilities**
+   - *Goal:* Replace hardcoded `CLASS_DATA`, `BACKGROUND_DATA`, and legacy D&D arrays in `npcGeneratorUtils.ts` with canonical Atlas loaders (`storageService.ts`) and ensure 100% schema alignment with V2 character state (`useCharacterStore`).
+   - *Dependencies:* Refactor Issue 1.
 
-For the Battle Map Editor specifically:
+3. **Refactor Issue 3: Build Unified Atlas & World Explorer Workspace**
+   - *Goal:* Merge `AssetExplorer.tsx` and `WorldExplorer.tsx` into a single, high-performance data browser supporting rich text search, tag filtering, vector region overlays, and uniform entity card previews.
+   - *Dependencies:* Refactor Issue 1.
 
-```text
-BattleMapEditor
-      ↓
-BattleMap authoring data
-      ↓
-validation / serialization / adapter
-      ↓
-combat runtime
-      ↓
-CombatGrid
-```
-
-## Maintenance guidance
-
-This document describes the **current DevKit architecture**, not a permanent checklist of every button in every component.
-
-When DevKit navigation or ownership changes:
-
-1. Update this document.
-2. Update `docs/COMPONENT_MAP.md` if component ownership changes.
-3. Update `docs/TASK_BOARD.md` only for actual remaining work.
-4. Do not add speculative `[ ]` checklists for features that have not been designed.
-
-For feature-specific details, prefer the module's own documentation instead of expanding this file indefinitely.
+4. **Refactor Issue 4: DevKit Housekeeping, Orphaned Component Removal & Tester Alignment**
+   - *Goal:* Remove dead code (`AudioLaboratory.tsx`), align `NPCTester`, `CombatTester`, and `Simulator` with current store APIs, and update all DevKit verification suites.
+   - *Dependencies:* Refactor Issues 1–3.
