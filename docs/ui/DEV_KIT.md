@@ -20,18 +20,15 @@ The DevKit is organized into 4 primary functional workspace domains:
 │ Explorer │    │Generators │             │  Testers  │    │ Audio & Hue │
 └────┬─────┘    └─────┬─────┘             └─────┬─────┘    └──────┬──────┘
      │                │                         │                 │
-     ├─ Atlas Codex   ├─ Entity (Enemy/Eqp/Mat) ├─ Tactical Combat├─ Sound Studio
-     ├─ World Map     ├─ NPC Generator          ├─ NPC Slots      ├─ Hue Controller
-     └─ World Flags   ├─ Habitat Backgrounds    └─ Simulator      └─ Audio Mixer
-                      ├─ Jane (World Builder)
-                      ├─ Gods & Lore
-                      └─ Battle Map Editor
+     ├─ Explorer Workspace                      ├─ Tactical Combat├─ Sound Studio
+     │  ├─ Atlas Assets                         ├─ NPC Slots      ├─ Hue Controller
+     │  └─ World Locations                      └─ Simulator      └─ Audio Mixer
+     └─ World Flags
 ```
 
 ### 1. Unified Explorer & Inspectors
 Inspect and query canonical static Atlas content and dynamic world state.
-- **Codex Explorer (`AssetExplorer.tsx`):** Query global Atlas assets (Enemies, Equipment, Materials, Spells, Gods) using category filters and card inspectors.
-- **World Explorer (`WorldExplorer.tsx`):** Interactive SVG map browser for Faerûn regions and location registries (`useWorldStore`).
+- **Unified Explorer (`Explorer.tsx`):** Single, unified search and catalogue workspace for global Atlas assets (Enemies, Equipment, Materials, Spells, Gods, Key Items, Books, Transport) and World locations/regions (`useWorldStore`).
 - **Flag Manager (`FlagManager.tsx`):** Inspect and toggle global narrative world flags and quest variables (`useWorldStore.worldFlags`).
 
 ### 2. Entity & Content Generators
@@ -63,6 +60,6 @@ Dependency order for follow-up refactor Issues:
 **#366 → #408 → (#367 / #368) → #409** *(note: #368 also depends on #377)*
 
 1. **#408 — Inline Authoring Extraction:** Extract inline Enemy, Equipment, Material, Habitat, and Hue authoring panels out of `DevKit.tsx` (2,554 lines) into standalone components under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
-2. **#367 — Unified Atlas & World Explorer:** Combine `AssetExplorer.tsx` and `WorldExplorer.tsx` into a single unified search and browsing shell.
+2. **#367 — Unified Atlas & World Explorer:** Combine `AssetExplorer.tsx` and `WorldExplorer.tsx` into a single unified search and browsing shell (`Explorer.tsx`).
 3. **#368 — NPC Generator Modernization:** Replace hardcoded legacy D&D data arrays in `npcGeneratorUtils.ts` with canonical Atlas loaders (`storageService.ts`). (Depends on #408 and #377).
 4. **#409 — Housekeeping & Dead Code Removal:** Remove unimported legacy files (`AudioLaboratory.tsx`) and synchronize all test harnesses. (Depends on #367 and #368).
