@@ -138,8 +138,8 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
           tier: parseInt(t),
           index: v.index,
           name: v.name,
-          jsonExists: !!v.imageUrl || true,
-          imageGenerated: !!v.imageUrl
+          jsonExists: !!v && !!v.index,
+          imageGenerated: !!v && !!v.imageUrl
         };
       });
       setTierStatuses(statuses);

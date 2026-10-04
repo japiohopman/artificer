@@ -34,6 +34,9 @@ describe('DevKit Modular Shell & Extracted Boundaries', () => {
     assert.strictEqual(content.includes('LootHarvestEditor'), true);
     assert.strictEqual(content.includes('SynthesisSection'), true);
 
+    // Verify jsonExists check in runChecks evaluates v.index properly without || true
+    assert.strictEqual(content.includes('jsonExists: !!v && !!v.index'), true);
+
     const subComponentFiles = [
       'HierarchyExplorerDrawer.tsx',
       'WikiScraperHeader.tsx',
@@ -48,6 +51,34 @@ describe('DevKit Modular Shell & Extracted Boundaries', () => {
       const subPath = path.resolve(process.cwd(), `src/components/devkit/generators/entity/${subComp}`);
       assert.strictEqual(fs.existsSync(subPath), true, `Expected sub-component ${subComp} to exist at ${subPath}`);
     }
+  });
+
+  it('verifies sub-component prop interface contracts and behavioral contracts', () => {
+    const drawerPath = path.resolve(process.cwd(), 'src/components/devkit/generators/entity/HierarchyExplorerDrawer.tsx');
+    const drawerContent = fs.readFileSync(drawerPath, 'utf8');
+    assert.strictEqual(drawerContent.includes('interface HierarchyExplorerDrawerProps'), true);
+    assert.strictEqual(drawerContent.includes('activeGenerator: \'monsters\' | \'materials\' | \'equipment\''), true);
+
+    const statsPath = path.resolve(process.cwd(), 'src/components/devkit/generators/entity/MechanicalStatEditor.tsx');
+    const statsContent = fs.readFileSync(statsPath, 'utf8');
+    assert.strictEqual(statsContent.includes('interface MechanicalStatEditorProps'), true);
+    assert.strictEqual(statsContent.includes('getModifier'), true);
+
+    const itemPropsPath = path.resolve(process.cwd(), 'src/components/devkit/generators/entity/ItemPropertyEditor.tsx');
+    const itemPropsContent = fs.readFileSync(itemPropsPath, 'utf8');
+    assert.strictEqual(itemPropsContent.includes('interface ItemPropertyEditorProps'), true);
+    assert.strictEqual(itemPropsContent.includes('BACKGROUND_CONFIGS'), true);
+
+    const lootPath = path.resolve(process.cwd(), 'src/components/devkit/generators/entity/LootHarvestEditor.tsx');
+    const lootContent = fs.readFileSync(lootPath, 'utf8');
+    assert.strictEqual(lootContent.includes('interface LootHarvestEditorProps'), true);
+    assert.strictEqual(lootContent.includes('HARVEST_NODES'), true);
+
+    const synthPath = path.resolve(process.cwd(), 'src/components/devkit/generators/entity/SynthesisSection.tsx');
+    const synthContent = fs.readFileSync(synthPath, 'utf8');
+    assert.strictEqual(synthContent.includes('EnemyImageGenerator'), true);
+    assert.strictEqual(synthContent.includes('EquipmentImageGenerator'), true);
+    assert.strictEqual(synthContent.includes('MaterialImageGenerator'), true);
   });
 
   it('verifies HabitatGenerator module exists', () => {
