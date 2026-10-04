@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { scrapeMonsterWiki, parseRawMonsterText, generateLore } from '../../../services/ai/monsterService';
-import { generateItemDescription } from '../../../services/ai/itemService';
-import { generateVisualPrompt } from '../../../services/ai/imageService';
-import { EnemyImageGenerator } from '../enemy-image_generator';
-import { EquipmentImageGenerator } from '../equipment-image_generator';
-import { MaterialImageGenerator } from '../material-image_generator';
+import { scrapeMonsterWiki, parseRawMonsterText, generateLore } from '../../../../services/ai/monsterService';
+import { generateItemDescription } from '../../../../services/ai/itemService';
+import { generateVisualPrompt } from '../../../../services/ai/imageService';
 import {
   commitFile, fetchMonsterData, fetchMaterialData, fetchEquipmentData, fetchMagicItemData,
   playSuccessSound, playFailSound, playClickSound, updateMonsterCategory
-} from '../../../services/storageService';
-import { useAtlasStore } from '../../../store/useAtlasStore';
-import { getModifier } from '../../../lib/npcGeneratorUtils';
-import { GameIcon } from '../../../game_icons';
-import { BACKGROUND_CONFIGS } from '../../../lib/backgroundConfigs';
+} from '../../../../services/storageService';
+import { useAtlasStore } from '../../../../store/useAtlasStore';
+import { GameIcon } from '../../../../game_icons';
+
+import { HierarchyExplorerDrawer } from './entity/HierarchyExplorerDrawer';
+import { WikiScraperHeader } from './entity/WikiScraperHeader';
+import { LoreBinderSection } from './entity/LoreBinderSection';
+import { MechanicalStatEditor } from './entity/MechanicalStatEditor';
+import { ItemPropertyEditor } from './entity/ItemPropertyEditor';
+import { LootHarvestEditor } from './entity/LootHarvestEditor';
+import { SynthesisSection } from './entity/SynthesisSection';
 
 interface EntityWorkbenchProps {
   activeGenerator: 'monsters' | 'materials' | 'equipment';
@@ -76,8 +79,6 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
     "Consumables", "Herbs", "Oils", "Monster Parts", "Common Materials",
     "Raw Materials", "Refined Materials", "Bundled Materials"
   ];
-
-  const backgroundTypes = BACKGROUND_CONFIGS;
 
   useEffect(() => {
     setSelectedCategory(null);
@@ -268,7 +269,7 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
               if (!cleanPath.startsWith('public/')) cleanPath = 'public/' + cleanPath;
               jsonPath = cleanPath;
             } else {
-              const { getRulesetVersionFolder } = await import('../../../services/storageService');
+              const { getRulesetVersionFolder } = await import('../../../../services/storageService');
               jsonPath = `public/assets/atlas/equipment/json/${getRulesetVersionFolder()}/${index}.json`;
             }
           }
@@ -352,204 +353,29 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
 
   return (
     <div className="flex-1 flex overflow-hidden">
-      {/* Left Drawer: Hierarchy & Checklist */}
-      <div className="w-64 border-r border-white/5 flex flex-col bg-[#1e1e1e]">
-        <div className="p-3 text-[10px] font-bold text-white/40 uppercase tracking-widest flex items-center justify-between">
-          <span>Hierarchy Explorer</span>
-          <GameIcon
-            name="refresh"
-            size={12}
-            color="currentColor"
-            className="hover:rotate-180 transition-transform cursor-pointer"
-            onClick={loadAllLists}
-          />
-        </div>
-
-        <div className="flex-1 overflow-y-auto p-4 space-y-6 custom-scrollbar">
-          {/* Item Selection */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">
-                {(activeGenerator === 'equipment' || activeGenerator === 'materials') && selectedCategory ? 'Current Scope' : 'Root Selection'}
-              </label>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => {
-                    const skeleton = {
-                      name: 'New Entity',
-                      index: 'new-entity',
-                      size: 'Medium',
-                      type: activeGenerator === 'monsters' ? 'Humanoid' : 'Misc',
-                      stats: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
-                      rarity: 'Common',
-                      challenge_rating: '1',
-                      actions: [],
-                      special_abilities: []
-                    };
-                    setEditingItem(skeleton);
-                    playClickSound();
-                  }}
-                  className="p-1 px-2 bg-dragon-red/10 border border-dragon-red/30 rounded text-[9px] font-bold text-dragon-red hover:bg-dragon-red hover:text-white transition-all uppercase tracking-tighter"
-                  title="Create New Entity Manifestation"
-                  aria-label="Create New Entity Manifestation"
-                >
-                  + NEW
-                </button>
-                {(activeGenerator === 'equipment' || activeGenerator === 'materials') && selectedCategory && (
-                  <button
-                    onClick={() => setSelectedCategory(null)}
-                    className="text-[9px] font-bold text-dragon-red uppercase tracking-widest hover:text-white transition-colors"
-                    title="Go back to categories"
-                  >
-                    ../back
-                  </button>
-                )}
-              </div>
-            </div>
-            <div className="grid grid-cols-1 gap-px bg-white/5 rounded overflow-hidden">
-                {(activeGenerator === 'monsters' ? monstersList :
-                  activeGenerator === 'materials' && !selectedCategory ? storeMaterialCategories :
-                  activeGenerator === 'materials' && selectedCategory ? (storeMaterialCategories.find(c => c.index === selectedCategory)?.materials || []) :
-                  activeGenerator === 'equipment' && !selectedCategory ? storeEquipmentCategories :
-                  activeGenerator === 'equipment' && selectedCategory ? (storeEquipmentCategories.find(c => c.index === selectedCategory)?.equipment || []) :
-                  []).map((mOrIndex, i) => {
-                    let m = mOrIndex;
-                    if (typeof mOrIndex === 'string') {
-                      if (activeGenerator === 'equipment') {
-                        m = equipmentList.find(e => e.index === mOrIndex) || { index: mOrIndex, name: mOrIndex };
-                      } else if (activeGenerator === 'materials') {
-                        m = materialsList.find(e => e.index === mOrIndex) || { index: mOrIndex, name: mOrIndex };
-                      }
-                    }
-
-                    const isSelected = editingItem?.index === m.index || (editingItem?.index?.startsWith(m.index + '_'));
-
-                    return (
-                    <button
-                      key={`${m.index}-${i}`}
-                      title={safeString(m.name)}
-                      onClick={async () => {
-                        if ((activeGenerator === 'equipment' || activeGenerator === 'materials') && !selectedCategory) {
-                          setSelectedCategory(m.index);
-                          return;
-                        }
-
-                        let data = itemDataMap[m.index];
-                        if (!data) {
-                          if (activeGenerator === 'monsters') data = await fetchMonsterData(m.index);
-                          else if (activeGenerator === 'materials') data = await fetchMaterialData(m.index);
-                          else if (activeGenerator === 'equipment') data = await fetchEquipmentData(m.index);
-
-                          if (data) {
-                            if (activeGenerator === 'equipment' && !data.category) {
-                              const mapping = useAtlasStore.getState().equipmentCategoryMapping;
-                              if (mapping[m.index]) data.category = mapping[m.index];
-                            }
-                            if (activeGenerator === 'materials' && !data.category) {
-                              const mapping = useAtlasStore.getState().materialCategoryMapping;
-                              if (mapping[m.index]) data.category = mapping[m.index];
-                            }
-                            setItemDataMap(prev => ({ ...prev, [m.index]: data }));
-                          }
-                        }
-
-                        if (data) {
-                          const itemWithDefaults = {
-                            ...data,
-                            background_type: data.background_type || 'land_forest',
-                            versions: m.versions
-                          };
-                          setEditingItem(itemWithDefaults);
-                          runChecks(itemWithDefaults);
-                        }
-                      }}
-                      className={`text-left px-3 py-1.5 transition-all flex items-center gap-2 group ${
-                        isSelected
-                          ? 'bg-dragon-red/20 text-white'
-                          : 'text-white/40 hover:bg-white/5 hover:text-white/60'
-                      }`}
-                    >
-                      <div className="flex items-center gap-2 flex-1 overflow-hidden">
-                        <GameIcon name="save_data" size={10} color={isSelected ? "#8B0000" : "currentColor"} className={isSelected ? '' : 'opacity-30'} />
-                        <span className="truncate text-[10px] font-bold uppercase">{safeString(m.name)}</span>
-                        {m.versions && Object.keys(m.versions).length > 1 && (
-                          <span className="text-[8px] bg-dragon-red/10 text-dragon-red px-1 rounded border border-dragon-red/10 shrink-0">
-                            {Object.keys(m.versions).length}_V
-                          </span>
-                        )}
-                      </div>
-                      {(activeGenerator === 'equipment' || activeGenerator === 'materials') && !selectedCategory && (
-                        <span className="text-[9px] opacity-40 ml-auto">{m.totalAssets || (m.equipment?.length || m.materials?.length || 0)}</span>
-                      )}
-                    </button>
-                  );
-                })}
-            </div>
-          </div>
-
-        {/* Operational Status / Checklist */}
-        <div className="p-3 border-t border-white/5 bg-black/20 space-y-3">
-          <div className="flex items-center justify-between mb-2">
-            <div className="text-[9px] font-bold text-white/30 uppercase tracking-[0.2em]">Operational Integrity</div>
-            {tierStatuses.length > 0 && (
-              <div className="flex gap-1.5">
-                {tierStatuses.map(s => (
-                  <button
-                    key={s.tier}
-                    onClick={async () => {
-                      let data = itemDataMap[s.index];
-                      if (!data) {
-                        data = await fetchEquipmentData(s.index);
-                        if (!data) data = await fetchMagicItemData(s.index);
-                        if (data) setItemDataMap(prev => ({ ...prev, [s.index]: data }));
-                      }
-                      if (data) {
-                        setEditingItem({ ...data, background_type: data.background_type || 'land_forest', versions: editingItem.versions });
-                        runChecks({ ...data, versions: editingItem.versions });
-                      }
-                      playClickSound();
-                    }}
-                    className={`w-2.5 h-2.5 rounded-full transition-all border ${
-                      s.imageGenerated
-                        ? 'bg-green-500 border-green-400/50 shadow-[0_0_8px_rgba(34,197,94,0.3)]'
-                        : 'bg-white/5 border-white/10 hover:border-white/30'
-                    } ${editingItem?.index === s.index ? 'ring-2 ring-dragon-red ring-offset-1 ring-offset-[#1a1a1a] scale-110' : ''}`}
-                    title={`${s.name} ${s.imageGenerated ? '[IMAGE_OK]' : '[IMAGE_MISSING]'}`}
-                    aria-label={`${s.name} ${s.imageGenerated ? '[IMAGE_OK]' : '[IMAGE_MISSING]'}`}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-          {[
-            { key: 'jsonExists', label: 'FS_JSON', id: 1 },
-            { key: 'wikiExists', label: 'MD_WIKI', id: 2 },
-            { key: 'promptReady', label: 'AI_PRMPT', id: 3 },
-            { key: 'imageGenerated', label: 'GEN_IMG', id: 4 },
-            { key: 'bgReady', label: 'BG_STAT', id: 5 },
-            { key: 'isMissingAsset', label: 'MISSING', id: 6 }
-          ].map(step => (
-            <div key={step.id} className="flex items-center justify-between text-[10px]">
-              <div className="flex items-center gap-2">
-                <div className={`w-1.5 h-1.5 rounded-full ${checklist[step.key as keyof typeof checklist] ? 'bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.5)]' : 'bg-white/10'}`} />
-                <span className={`${checklist[step.key as keyof typeof checklist] ? 'text-white/80' : 'text-white/20'}`}>{step.label}</span>
-              </div>
-              {step.key === 'isMissingAsset' ? (
-                checklist[step.key as keyof typeof checklist] ? (
-                  <span className="text-dragon-red font-bold animate-pulse">[MISSING]</span>
-                ) : (
-                  <span className="text-green-500 font-bold">[OK]</span>
-                )
-              ) : checklist[step.key as keyof typeof checklist] ? (
-                <span className="text-green-500 font-bold">[OK]</span>
-              ) : (
-                <span className="text-dragon-red animate-pulse cursor-pointer hover:underline" onClick={step.key === 'jsonExists' ? handleSave : step.key === 'wikiExists' ? (activeGenerator === 'monsters' ? scrapeWiki : generateDescription) : step.key === 'promptReady' ? generatePrompt : undefined}>[FIX]</span>
-              )}
-            </div>
-          ))}
-        </div>
-        </div>
-      </div>
+      <HierarchyExplorerDrawer
+        activeGenerator={activeGenerator}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        editingItem={editingItem}
+        setEditingItem={setEditingItem}
+        monstersList={monstersList}
+        materialsList={materialsList}
+        equipmentList={equipmentList}
+        storeMaterialCategories={storeMaterialCategories}
+        storeEquipmentCategories={storeEquipmentCategories}
+        loadAllLists={loadAllLists}
+        itemDataMap={itemDataMap}
+        setItemDataMap={setItemDataMap}
+        runChecks={runChecks}
+        tierStatuses={tierStatuses}
+        checklist={checklist}
+        handleSave={handleSave}
+        scrapeWiki={scrapeWiki}
+        generateDescription={generateDescription}
+        generatePrompt={generatePrompt}
+        safeString={safeString}
+      />
 
       {/* Right Panel: Code Workspace */}
       <div className="flex-1 flex flex-col bg-[#1a1a1a] relative">
@@ -580,912 +406,84 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
             </div>
 
             <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
-              {/* Ripper / Raw Text Parser */}
-              <div className="bg-[#2a1a1a] border border-red-900/30 rounded-lg p-4 space-y-3 relative overflow-hidden group">
-                 <div className="absolute top-0 right-0 p-2 opacity-5 scale-150 rotate-12 pointer-events-none">
-                    <GameIcon name="scroll" size={60} color="#8B0000" />
-                 </div>
-                 <div className="flex items-center justify-between relative z-10">
-                    <div className="flex items-center gap-2">
-                       <GameIcon name="console" size={14} className="text-dragon-red" />
-                       <h3 className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">5e.Tools / Raw Manifestation Ripper</h3>
-                    </div>
-                    <span className="text-[8px] font-mono text-white/20">v.1.0_PARSER</span>
-                 </div>
-                 <textarea
-                    value={ripperText}
-                    onChange={(e) => setRipperText(e.target.value)}
-                    placeholder="Paste monster stats here from 5e.tools or any PDF/Source. AI will reconstruct the essence..."
-                    rows={3}
-                    className="w-full bg-black/40 border border-white/5 p-3 text-[11px] text-white/50 rounded focus:border-dragon-red/40 transition-all font-mono custom-scrollbar"
-                    title="Raw Manifestation Ripper Input"
-                 />
-                 <div className="flex justify-end gap-3 items-center">
-                    {isParsingRipper && <span className="text-[9px] font-mono text-dragon-red animate-pulse">RECONSTRUCTING_ESSENCE...</span>}
-                    <button
-                       title="Manifest Essence from Raw Text"
-                       onClick={async () => {
-                          if (!ripperText.trim()) return;
-                          setIsParsingRipper(true);
-                          playClickSound();
-                          try {
-                             const parsed = await parseRawMonsterText(ripperText);
-                             if (parsed) {
-                                setEditingItem({ ...editingItem, ...parsed });
+              <WikiScraperHeader
+                ripperText={ripperText}
+                setRipperText={setRipperText}
+                isParsingRipper={isParsingRipper}
+                setIsParsingRipper={setIsParsingRipper}
+                customWikiUrl={customWikiUrl}
+                setCustomWikiUrl={setCustomWikiUrl}
+                isChecking={isChecking}
+                editingItem={editingItem}
+                setEditingItem={setEditingItem}
+                setSelectedMonsterCategory={setSelectedMonsterCategory}
+                scrapeWiki={scrapeWiki}
+                parseRawMonsterText={parseRawMonsterText}
+                playClickSound={playClickSound}
+                playSuccessSound={playSuccessSound}
+                playFailSound={playFailSound}
+              />
 
-                                if (parsed.type) {
-                                   const typeLower = parsed.type.toLowerCase();
-                                   const validCats = ['aberration', 'beast', 'celestial', 'construct', 'dragon', 'elemental', 'fey', 'fiend', 'giant', 'humanoid', 'monstrosity', 'ooze', 'plant', 'undead'];
-                                   if (validCats.includes(typeLower)) {
-                                      setSelectedMonsterCategory(typeLower);
-                                   }
-                                }
-
-                                playSuccessSound();
-                                setRipperText('');
-                             } else {
-                                playFailSound();
-                             }
-                          } finally {
-                             setIsParsingRipper(false);
-                          }
-                       }}
-                       disabled={isParsingRipper || !ripperText}
-                       className="px-4 py-1.5 bg-dragon-red/80 hover:bg-dragon-red text-white text-[10px] font-bold rounded transition-all flex items-center gap-2 shadow-inner disabled:opacity-30"
-                    >
-                       <GameIcon name="magic_effect" size={12} color="#FFFFFF" />
-                       BAM! MANIFEST ESSENCE
-                    </button>
-                 </div>
-              </div>
-
-              {/* External Scraper Support */}
-              <div className="flex items-center gap-3 bg-white/5 p-3 rounded-lg border border-white/10 mb-6 group transition-all hover:border-dragon-red/20">
-                <div className="p-2 bg-dragon-red/10 rounded-full transition-colors group-hover:bg-dragon-red/20">
-                  <GameIcon name="search" size={14} color="#8B0000" />
-                </div>
-                <div className="flex-1 flex gap-2">
-                  <div className="flex-1 bg-black/40 border-b border-white/10 flex items-center px-3 rounded h-9 group-hover:border-dragon-red/30 transition-all">
-                    <span className="text-[10px] text-white/30 mr-1 font-mono shrink-0">URL:</span>
-                    <input
-                      type="text"
-                      placeholder="Auto-detecting wiki page..."
-                      value={customWikiUrl}
-                      onChange={(e) => setCustomWikiUrl(e.target.value)}
-                      className="flex-1 bg-transparent focus:outline-none text-[11px] text-dragon-red/90 font-mono"
-                      title="Wiki URL Input"
-                    />
-                  </div>
-                  <button
-                    onClick={() => scrapeWiki()}
-                    disabled={isChecking}
-                    className="px-6 bg-dragon-red border border-dragon-red/30 text-white text-[11px] font-anton uppercase tracking-widest hover:bg-red-700 transition-all rounded disabled:opacity-50 flex items-center gap-2 shadow-[0_0_15px_rgba(220,38,38,0.2)] active:scale-95"
-                    title="Scrape Lore from Wiki"
-                  >
-                    {isChecking ? <GameIcon name="refresh" size={14} color="#FFFFFF" className="animate-spin" /> : <GameIcon name="magic_effect" size={14} color="#FFFFFF" />}
-                    SCRAPE_LORE
-                  </button>
-                </div>
-              </div>
-
-              {/* Lore Binder Section */}
               {activeGenerator === 'monsters' && (
-                <div className="space-y-4 pt-6 border-t border-white/5">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-dragon-red">
-                      <GameIcon name="scroll" size={16} color="currentColor" />
-                      <h3 className="text-[10px] font-bold uppercase tracking-widest">Chronicle Binder</h3>
-                    </div>
-                    <div className="flex bg-white/5 rounded p-0.5 border border-white/10">
-                      <button
-                        onClick={() => setWikiTab('editor')}
-                        className={`px-3 py-1 text-[9px] font-bold rounded transition-all ${wikiTab === 'editor' ? 'bg-dragon-red text-white' : 'text-white/40 hover:text-white/60'}`}
-                        title="Switch to Editor Tab"
-                      >
-                        EDITOR
-                      </button>
-                      <button
-                        onClick={() => setWikiTab('raw')}
-                        className={`px-3 py-1 text-[9px] font-bold rounded transition-all ${wikiTab === 'raw' ? 'bg-dragon-red text-white' : 'text-white/40 hover:text-white/60'}`}
-                        title="Switch to Raw JSON Tab"
-                      >
-                        WIKI_RAW
-                      </button>
-                    </div>
-                  </div>
-
-                  {wikiTab === 'editor' ? (
-                    <div className="space-y-4 animate-in fade-in slide-in-from-bottom-2">
-                      <div className="space-y-1.5">
-                        <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Atmospheric Lore (Display Summary)</label>
-                        <textarea
-                          value={editingItem.lore || ''}
-                          onChange={(e) => updateField('lore', e.target.value)}
-                          rows={4}
-                          placeholder="Write a beautifully written summary for players..."
-                          className="w-full bg-white/5 border border-white/10 p-3 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-all font-playfair leading-relaxed custom-scrollbar"
-                          title="Atmospheric Lore Textarea"
-                        />
-                      </div>
-
-                      <div className="space-y-3">
-                        <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Wiki Sections (Detailed Data)</label>
-                        {editingItem.wikiData ? (
-                          <div className="grid grid-cols-1 gap-3">
-                            {Object.entries(editingItem.wikiData).map(([key, val]: [string, any]) => (
-                              <div key={key} className="p-3 bg-white/5 rounded border border-white/10 space-y-2 group hover:border-dragon-red/30 transition-all">
-                                <div className="flex justify-between items-center">
-                                  <span className="text-[9px] font-bold text-dragon-red/80 uppercase tracking-widest">{key.replace(/_/g, ' ')}</span>
-                                  <button
-                                    onClick={() => {
-                                      const newData = { ...editingItem.wikiData };
-                                      delete newData[key];
-                                      updateField('wikiData', newData);
-                                    }}
-                                    className="text-white/20 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all"
-                                    title={`Delete wiki section: ${key}`}
-                                  >
-                                    <GameIcon name="trash" size={12} color="currentColor" />
-                                  </button>
-                                </div>
-                                <textarea
-                                  value={typeof val === 'string' ? val : JSON.stringify(val)}
-                                  onChange={(e) => {
-                                    const newData = { ...editingItem.wikiData, [key]: e.target.value };
-                                    updateField('wikiData', newData);
-                                  }}
-                                  rows={2}
-                                  className="w-full bg-transparent border-none p-0 text-[11px] text-white/60 focus:outline-none resize-none custom-scrollbar leading-tight italic"
-                                  title={`Wiki section content: ${key}`}
-                                />
-                              </div>
-                            ))}
-                            <button
-                              onClick={() => {
-                                const section = window.prompt("New section name (e.g. Personality, Rituals):");
-                                if (section) {
-                                  updateField('wikiData', { ...(editingItem.wikiData || {}), [section]: '' });
-                                }
-                              }}
-                              className="w-full py-2 border border-dashed border-white/10 rounded flex items-center justify-center gap-2 text-[10px] text-white/30 hover:text-white/50 hover:border-white/20 transition-all"
-                              title="Add New Wiki Section"
-                            >
-                              <GameIcon name="plus" size={12} /> ADD_NEW_BUREAUCRATIC_RECORD
-                            </button>
-                          </div>
-                        ) : (
-                          <div className="py-8 text-center bg-white/5 rounded border border-dashed border-white/10">
-                            <p className="text-[10px] text-white/20 italic">No detailed records found. Use the Scraper or add manually.</p>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="space-y-1.5 animate-in fade-in slide-in-from-bottom-2">
-                      <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Raw JSON (Lore Data)</label>
-                      <textarea
-                        value={JSON.stringify(editingItem.wikiData, null, 2)}
-                        onChange={(e) => {
-                          try {
-                            const data = JSON.parse(e.target.value);
-                            updateField('wikiData', data);
-                          } catch (err) {}
-                        }}
-                        rows={12}
-                        className="w-full bg-black/40 border border-white/10 p-4 text-[10px] text-dragon-red/80 rounded focus:outline-none focus:border-dragon-red/50 transition-all font-mono custom-scrollbar"
-                        title="Raw JSON Wiki Data Textarea"
-                      />
-                    </div>
-                  )}
-                </div>
+                <LoreBinderSection
+                  editingItem={editingItem}
+                  updateField={updateField}
+                  wikiTab={wikiTab}
+                  setWikiTab={setWikiTab}
+                />
               )}
 
               {activeGenerator === 'monsters' && (
-                <div className="space-y-6 pt-6 border-t border-white/5 bg-black/5 p-4 rounded-lg">
-                  <div className="flex items-center gap-2 text-dragon-red">
-                     <GameIcon name="adjust" size={16} color="currentColor" />
-                     <h3 className="text-[10px] font-bold uppercase tracking-widest">Mechanical Essence</h3>
-                  </div>
-
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Armor Class</label>
-                      <div className="flex gap-1">
-                        <input type="number" title="Armor Class Value" value={editingItem.armor_class || 0} onChange={(e) => updateField('armor_class', parseInt(e.target.value))} className="w-16 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
-                        <input type="text" title="Armor Description" value={editingItem.armor_desc || ''} onChange={(e) => updateField('armor_desc', e.target.value)} className="flex-1 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="natural armor" />
-                      </div>
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Hit Points</label>
-                      <input type="number" title="Hit Points" value={editingItem.hit_points || 0} onChange={(e) => updateField('hit_points', parseInt(e.target.value))} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">HP Dice</label>
-                      <input type="text" title="Hit Dice" value={editingItem.hit_dice || ''} onChange={(e) => updateField('hit_dice', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="1d6" />
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">CR</label>
-                      <input type="text" title="Challenge Rating" value={editingItem.challenge_rating || '0'} onChange={(e) => updateField('challenge_rating', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Initiative & Skills</label>
-                      <div className="flex gap-2">
-                        <div className="flex items-center gap-2 bg-white/5 border border-white/10 p-2 rounded w-1/3">
-                          <span className="text-[8px] text-white/30 font-bold">INIT</span>
-                          <input type="number" title="Initiative" value={editingItem.initiative || 0} onChange={(e) => updateField('initiative', parseInt(e.target.value))} className="bg-transparent border-none p-0 text-xs text-white w-full focus:outline-none" />
-                        </div>
-                        <input type="text" title="Skills" value={editingItem.skills || ''} onChange={(e) => updateField('skills', e.target.value)} className="flex-1 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Stealth +4, Perception +2" />
-                      </div>
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Senses & Languages</label>
-                      <div className="flex gap-2">
-                        <input type="text" title="Senses" value={editingItem.senses || ''} onChange={(e) => updateField('senses', e.target.value)} className="w-1/2 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Darkvision 60ft" />
-                        <input type="text" title="Languages" value={editingItem.languages || ''} onChange={(e) => updateField('languages', e.target.value)} className="w-1/2 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Common" />
-                      </div>
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Habitat & Treasure</label>
-                      <div className="flex gap-2">
-                        <input type="text" title="Habitat" value={editingItem.habitat || ''} onChange={(e) => updateField('habitat', e.target.value)} className="w-1/2 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Underdark" />
-                        <input type="text" title="Treasure" value={editingItem.treasure || ''} onChange={(e) => updateField('treasure', e.target.value)} className="w-1/2 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Any here?" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-6 gap-2">
-                     {['str', 'dex', 'con', 'int', 'wis', 'cha'].map(s => (
-                       <div key={s} className="space-y-1">
-                          <label className="text-[8px] font-bold text-white/20 uppercase text-center block">{s}</label>
-                          <input
-                            type="number"
-                            title={`${s.toUpperCase()} score`}
-                            value={editingItem.stats?.[s] || 10}
-                            onChange={(e) => {
-                              const newStats = { ...(editingItem.stats || {}), [s]: parseInt(e.target.value) || 0 };
-                              updateField('stats', newStats);
-                            }}
-                            className="w-full bg-black/40 border border-white/10 p-1.5 text-xs text-dragon-red font-bold text-center rounded focus:border-dragon-red/50 outline-none"
-                          />
-                          <div className="text-[8px] text-white/30 text-center font-mono">
-                            {getModifier(editingItem.stats?.[s] || 10) >= 0 ? '+' : ''}{getModifier(editingItem.stats?.[s] || 10)}
-                          </div>
-                       </div>
-                     ))}
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Size & Type</label>
-                      <div className="flex gap-2">
-                        <input type="text" title="Size" value={editingItem.size || ''} onChange={(e) => updateField('size', e.target.value)} className="w-1/2 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Medium" />
-                        <input type="text" title="Type" value={editingItem.type || ''} onChange={(e) => updateField('type', e.target.value)} className="w-1/2 bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Humanoid" />
-                      </div>
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[8px] font-bold text-white/20 uppercase">Alignment</label>
-                      <input type="text" title="Alignment" value={editingItem.alignment || ''} onChange={(e) => updateField('alignment', e.target.value)} className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded" placeholder="Lawful Neutral" />
-                    </div>
-                  </div>
-
-                  {/* Traits & Actions Editor */}
-                  <div className="space-y-4">
-                     <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                           <label className="text-[9px] font-bold text-white/40 uppercase tracking-widest">Special Abilities (Traits)</label>
-                           <button title="Add Special Ability" onClick={() => updateField('special_abilities', [...(editingItem.special_abilities || []), { name: 'New Trait', desc: '' }])} className="text-[9px] text-dragon-red hover:text-white uppercase font-bold">+ Add Trait</button>
-                        </div>
-                        <div className="space-y-2">
-                           {(editingItem.special_abilities || []).map((sa: any, i: number) => (
-                             <div key={i} className="bg-white/5 border border-white/10 p-2 rounded relative group">
-                                <input title="Special Ability Name" value={sa.name} onChange={(e) => {
-                                   const newSAs = [...editingItem.special_abilities];
-                                   newSAs[i].name = e.target.value;
-                                   updateField('special_abilities', newSAs);
-                                }} className="bg-transparent border-none p-0 text-[11px] font-bold text-dragon-red w-full focus:outline-none mb-1" />
-                                <textarea title="Special Ability Description" value={sa.desc} onChange={(e) => {
-                                   const newSAs = [...editingItem.special_abilities];
-                                   newSAs[i].desc = e.target.value;
-                                   updateField('special_abilities', newSAs);
-                                }} className="bg-transparent border-none p-0 text-[10px] text-white/60 w-full focus:outline-none resize-none" rows={2} />
-                                <button title="Delete Special Ability" onClick={() => {
-                                   const newSAs = editingItem.special_abilities.filter((_: any, idx: number) => idx !== i);
-                                   updateField('special_abilities', newSAs);
-                                }} className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all"><GameIcon name="trash" size={12} /></button>
-                             </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                           <label className="text-[9px] font-bold text-white/40 uppercase tracking-widest">Actions</label>
-                           <button title="Add Action" onClick={() => updateField('actions', [...(editingItem.actions || []), { name: 'New Action', desc: '' }])} className="text-[9px] text-dragon-red hover:text-white uppercase font-bold">+ Add Action</button>
-                        </div>
-                        <div className="space-y-2">
-                           {(editingItem.actions || []).map((a: any, i: number) => (
-                             <div key={i} className="bg-white/5 border border-white/10 p-2 rounded relative group">
-                                <input title="Action Name" value={a.name} onChange={(e) => {
-                                   const newActions = [...editingItem.actions];
-                                   newActions[i].name = e.target.value;
-                                   updateField('actions', newActions);
-                                }} className="bg-transparent border-none p-0 text-[11px] font-bold text-dragon-red w-full focus:outline-none mb-1" />
-                                <textarea title="Action Description" value={a.desc} onChange={(e) => {
-                                   const newActions = [...editingItem.actions];
-                                   newActions[i].desc = e.target.value;
-                                   updateField('actions', newActions);
-                                }} className="bg-transparent border-none p-0 text-[10px] text-white/60 w-full focus:outline-none resize-none" rows={2} />
-                                <button title="Delete Action" onClick={() => {
-                                   const newActions = editingItem.actions.filter((_: any, idx: number) => idx !== i);
-                                   updateField('actions', newActions);
-                                }} className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all"><GameIcon name="trash" size={12} /></button>
-                             </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                           <label className="text-[9px] font-bold text-white/40 uppercase tracking-widest">Bonus Actions</label>
-                           <button title="Add Bonus Action" onClick={() => updateField('bonus_actions', [...(editingItem.bonus_actions || []), { name: 'New Bonus Action', desc: '' }])} className="text-[9px] text-dragon-red hover:text-white uppercase font-bold">+ Add Bonus</button>
-                        </div>
-                        <div className="space-y-2">
-                           {(editingItem.bonus_actions || []).map((ba: any, i: number) => (
-                             <div key={i} className="bg-white/5 border border-white/10 p-2 rounded relative group">
-                                <input title="Bonus Action Name" value={ba.name} onChange={(e) => {
-                                   const newBAs = [...editingItem.bonus_actions];
-                                   newBAs[i].name = e.target.value;
-                                   updateField('bonus_actions', newBAs);
-                                }} className="bg-transparent border-none p-0 text-[11px] font-bold text-dragon-red w-full focus:outline-none mb-1" />
-                                <textarea title="Bonus Action Description" value={ba.desc} onChange={(e) => {
-                                   const newBAs = [...editingItem.bonus_actions];
-                                   newBAs[i].desc = e.target.value;
-                                   updateField('bonus_actions', newBAs);
-                                }} className="bg-transparent border-none p-0 text-[10px] text-white/60 w-full focus:outline-none resize-none" rows={2} />
-                                <button title="Delete Bonus Action" onClick={() => {
-                                   const newBAs = editingItem.bonus_actions.filter((_: any, idx: number) => idx !== i);
-                                   updateField('bonus_actions', newBAs);
-                                }} className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all"><GameIcon name="trash" size={12} /></button>
-                             </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                           <label className="text-[9px] font-bold text-white/40 uppercase tracking-widest">Reactions</label>
-                           <button title="Add Reaction" onClick={() => updateField('reactions', [...(editingItem.reactions || []), { name: 'New Reaction', desc: '' }])} className="text-[9px] text-dragon-red hover:text-white uppercase font-bold">+ Add Reaction</button>
-                        </div>
-                        <div className="space-y-2">
-                           {(editingItem.reactions || []).map((r: any, i: number) => (
-                             <div key={i} className="bg-white/5 border border-white/10 p-2 rounded relative group">
-                                <input title="Reaction Name" value={r.name} onChange={(e) => {
-                                   const newRs = [...editingItem.reactions];
-                                   newRs[i].name = e.target.value;
-                                   updateField('reactions', newRs);
-                                }} className="bg-transparent border-none p-0 text-[11px] font-bold text-dragon-red w-full focus:outline-none mb-1" />
-                                <textarea title="Reaction Description" value={r.desc} onChange={(e) => {
-                                   const newRs = [...editingItem.reactions];
-                                   newRs[i].desc = e.target.value;
-                                   updateField('reactions', newRs);
-                                }} className="bg-transparent border-none p-0 text-[10px] text-white/60 w-full focus:outline-none resize-none" rows={2} />
-                                <button title="Delete Reaction" onClick={() => {
-                                   const newRs = editingItem.reactions.filter((_: any, idx: number) => idx !== i);
-                                   updateField('reactions', newRs);
-                                }} className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all"><GameIcon name="trash" size={12} /></button>
-                             </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <div className="space-y-2">
-                        <div className="flex items-center justify-between">
-                           <label className="text-[9px] font-bold text-white/40 uppercase tracking-widest">Legendary Actions</label>
-                           <button title="Add Legendary Action" onClick={() => updateField('legendary_actions', [...(editingItem.legendary_actions || []), { name: 'New Legendary Action', desc: '' }])} className="text-[9px] text-dragon-red hover:text-white uppercase font-bold">+ Add Legendary</button>
-                        </div>
-                        <div className="space-y-2">
-                           {(editingItem.legendary_actions || []).map((la: any, i: number) => (
-                             <div key={i} className="bg-white/5 border border-white/10 p-2 rounded relative group">
-                                <input title="Legendary Action Name" value={la.name} onChange={(e) => {
-                                   const newLAs = [...editingItem.legendary_actions];
-                                   newLAs[i].name = e.target.value;
-                                   updateField('legendary_actions', newLAs);
-                                }} className="bg-transparent border-none p-0 text-[11px] font-bold text-dragon-red w-full focus:outline-none mb-1" />
-                                <textarea title="Legendary Action Description" value={la.desc} onChange={(e) => {
-                                   const newLAs = [...editingItem.legendary_actions];
-                                   newLAs[i].desc = e.target.value;
-                                   updateField('legendary_actions', newLAs);
-                                }} className="bg-transparent border-none p-0 text-[10px] text-white/60 w-full focus:outline-none resize-none" rows={2} />
-                                <button title="Delete Legendary Action" onClick={() => {
-                                   const newLAs = editingItem.legendary_actions.filter((_: any, idx: number) => idx !== i);
-                                   updateField('legendary_actions', newLAs);
-                                }} className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all"><GameIcon name="trash" size={12} /></button>
-                             </div>
-                           ))}
-                        </div>
-                     </div>
-                  </div>
-                </div>
+                <MechanicalStatEditor
+                  editingItem={editingItem}
+                  updateField={updateField}
+                />
               )}
 
-              <div className="grid grid-cols-3 gap-6">
-                <div className="space-y-1.5">
-                  <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Asset Rarity</label>
-                  <select
-                    title="Asset Rarity Select"
-                    value={editingItem.rarity || 'Common'}
-                    onChange={(e) => updateField('rarity', e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors cursor-pointer"
-                  >
-                    {['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact'].map(r => (
-                      <option key={r} value={r} className="bg-[#1a1a1a]">{r}</option>
-                    ))}
-                  </select>
-                </div>
+              <ItemPropertyEditor
+                activeGenerator={activeGenerator}
+                editingItem={editingItem}
+                setEditingItem={setEditingItem}
+                updateField={updateField}
+                selectedMonsterCategory={selectedMonsterCategory}
+                setSelectedMonsterCategory={setSelectedMonsterCategory}
+                equipmentCategories={equipmentCategories}
+                materialCategories={materialCategories}
+                generateDescription={generateDescription}
+                formatCost={formatCost}
+                parseCost={parseCost}
+              />
 
-                {activeGenerator === 'monsters' && (
-                  <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Target Category</label>
-                    <select
-                      title="Target Monster Category Select"
-                      value={selectedMonsterCategory}
-                      onChange={(e) => setSelectedMonsterCategory(e.target.value)}
-                      className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors cursor-pointer"
-                    >
-                      {['aberration', 'beast', 'celestial', 'construct', 'dragon', 'elemental', 'fey', 'fiend', 'giant', 'humanoid', 'monstrosity', 'ooze', 'plant', 'undead', 'misc'].map(cat => (
-                        <option key={cat} value={cat} className="bg-[#1a1a1a]">{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
-                      ))}
-                    </select>
-                  </div>
-                )}
-
-                {activeGenerator !== 'monsters' && (
-                  <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Asset_Tier [0-3]</label>
-                    <div className="flex gap-1">
-                      {[0, 1, 2, 3].map(t => {
-                        const index = editingItem.index || '';
-                        return (
-                          <button
-                            key={t}
-                            title={t === 0 ? 'Base Tier' : `Tier ${t}`}
-                            onClick={() => {
-                              const baseIndex = index.replace(/_\d$/, '');
-                              const newIndex = t === 0 ? baseIndex : `${baseIndex}_${t}`;
-                              const newRarity = t === 0 ? 'Common' : t === 1 ? 'Uncommon' : t === 2 ? 'Rare' : 'Very Rare';
-
-                              let newName = editingItem.name || '';
-                              newName = newName.replace(/, \+\d$/, '');
-                              if (t > 0) newName = `${newName}, +${t}`;
-
-                              setEditingItem({
-                                ...editingItem,
-                                index: newIndex,
-                                name: newName,
-                                rarity: newRarity
-                              });
-                            }}
-                            className={`flex-1 py-1 text-[10px] font-bold rounded border transition-all ${
-                              (index.endsWith(`_${t}`) || (t === 0 && !index.match(/_\d$/)))
-                                ? 'bg-dragon-red border-dragon-red text-white'
-                                : 'bg-white/5 border-white/10 text-white/40 hover:border-white/20'
-                            }`}
-                          >
-                            {t === 0 ? 'BASE' : `T_${t}`}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {activeGenerator === 'monsters' && (
-                  <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">XP_VALUE</label>
-                    <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
-                      <input
-                        type="number"
-                        title="XP Value"
-                        value={editingItem.xp || 0}
-                        onChange={(e) => updateField('xp', parseInt(e.target.value) || 0)}
-                        className="w-full p-2 text-[11px] text-white/80 focus:outline-none bg-transparent"
-                      />
-                      <div className="px-2 text-[9px] text-white/20 font-bold border-l border-white/10 uppercase">PTS</div>
-                    </div>
-                  </div>
-                )}
-
-                {activeGenerator !== 'monsters' && (
-                  <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Material_Cost</label>
-                    <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
-                      <input
-                        type="text"
-                        title="Material Cost"
-                        value={formatCost(editingItem.cost)}
-                        onChange={(e) => updateField('cost', parseCost(e.target.value))}
-                        className="w-full p-2 text-[11px] text-white/80 focus:outline-none bg-transparent"
-                        placeholder="e.g. 10 gp"
-                      />
-                    </div>
-                  </div>
-                )}
-
-                <div className="space-y-1.5">
-                  <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Habitat Map</label>
-                  <select
-                    title="Habitat Map Select"
-                    value={editingItem.background_type || 'land_forest'}
-                    onChange={(e) => updateField('background_type', e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-all cursor-pointer"
-                  >
-                    {backgroundTypes.flatMap(b => [
-                      <option key={b.id} value={b.id} className="bg-[#1a1a1a]">{b.label} [MAIN]</option>,
-                      ...[1, 2, 3, 4].map(v => (
-                        <option key={`${b.id}${v}`} value={`${b.id}${v}`} className="bg-[#1a1a1a]">{b.label} [V_{v}]</option>
-                      ))
-                    ])}
-                  </select>
-                </div>
-              </div>
-
-              {activeGenerator === 'monsters' ? (
-                <div className="grid grid-cols-2 gap-6 pb-6 border-b border-white/5">
-                  {/* Monster Parts Section */}
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em] flex items-center gap-2">
-                        <GameIcon name="magic_effect" size={12} color="currentColor" /> HARVEST_NODES
-                      </label>
-                      <button
-                        onClick={() => {
-                          const current = editingItem.item_drops || [];
-                          updateField('item_drops', [...current, { name: 'New Part', rarity: 'Common', quantity: '1', type: 'material' }]);
-                        }}
-                        className="text-[9px] bg-white/5 text-white/40 px-2 py-0.5 rounded border border-white/10 hover:bg-dragon-red hover:text-white transition-all uppercase font-bold"
-                        title="Add Harvest Node"
-                      >
-                        + Add Node
-                      </button>
-                    </div>
-                    <div className="space-y-2 max-h-[180px] overflow-y-auto pr-1 custom-scrollbar">
-                      {editingItem.item_drops?.filter((d: any) => d.type === 'material').map((drop: any, i: number) => (
-                        <div key={i} className="flex gap-2 items-center bg-white/5 p-2 rounded border border-white/5 group/drop">
-                          <input
-                            type="text"
-                            list="materials-datalist"
-                            title="Harvest Node Name"
-                            value={drop.name}
-                            onChange={(e) => {
-                              const newDrops = [...(editingItem.item_drops || [])];
-                              const realIdx = newDrops.indexOf(drop);
-                              newDrops[realIdx] = { ...drop, name: e.target.value };
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="flex-1 bg-transparent border-none text-[11px] text-white/80 p-0 focus:outline-none font-bold"
-                            placeholder="Component identifier..."
-                          />
-                          <input
-                            type="text"
-                            title="Harvest Node Quantity"
-                            value={drop.quantity}
-                            onChange={(e) => {
-                              const newDrops = [...(editingItem.item_drops || [])];
-                              const realIdx = newDrops.indexOf(drop);
-                              newDrops[realIdx] = { ...drop, quantity: e.target.value };
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="w-12 bg-black/20 border border-white/10 text-[10px] text-white/40 p-1 rounded text-center"
-                            placeholder="QTY"
-                          />
-                          <button
-                            onClick={() => {
-                              const newDrops = (editingItem.item_drops || []).filter((d: any) => d !== drop);
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="text-white/20 hover:text-dragon-red opacity-0 group-hover/drop:opacity-100 transition-all"
-                            title="Delete Harvest Node"
-                          >
-                            <GameIcon name="trash" size={12} />
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Loot Section */}
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em] flex items-center gap-2">
-                        <GameIcon name="coins" size={12} color="currentColor" /> LOOT_RESOURCES
-                      </label>
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => {
-                            const current = editingItem.item_drops || [];
-                            updateField('item_drops', [...current, { name: 'gp', rarity: 'Common', quantity: '1d10', type: 'currency' }]);
-                            playClickSound();
-                          }}
-                          className="text-[9px] bg-yellow-600/10 text-yellow-600/60 px-2 py-0.5 rounded border border-yellow-600/20 hover:bg-yellow-600 hover:text-white transition-all uppercase font-bold"
-                          title="Add Gold Pieces to Loot"
-                        >
-                          + GP
-                        </button>
-                        <button
-                          onClick={() => {
-                            const current = editingItem.item_drops || [];
-                            updateField('item_drops', [...current, { name: 'New Item', rarity: 'Common', quantity: '1', type: 'equipment' }]);
-                            playClickSound();
-                          }}
-                          className="text-[9px] bg-white/5 text-white/40 px-2 py-0.5 rounded border border-white/10 hover:bg-dragon-red hover:text-white transition-all uppercase font-bold"
-                          title="Add Item to Loot"
-                        >
-                          + Add Item
-                        </button>
-                      </div>
-                    </div>
-                    <div className="space-y-2 max-h-[180px] overflow-y-auto pr-1 custom-scrollbar">
-                      {editingItem.item_drops?.filter((d: any) => d.type !== 'material').map((drop: any, i: number) => (
-                        <div key={i} className="flex gap-2 items-center bg-white/5 p-2 rounded border border-white/5 group/drop">
-                          <select
-                            title="Loot Type Select"
-                            value={drop.type || 'currency'}
-                            onChange={(e) => {
-                              const newDrops = [...(editingItem.item_drops || [])];
-                              const realIdx = newDrops.indexOf(drop);
-                              newDrops[realIdx] = { ...drop, type: e.target.value as any };
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="bg-black/20 border border-white/10 text-[9px] text-white/40 p-1 rounded focus:outline-none"
-                          >
-                            <option value="currency">CUR</option>
-                            <option value="equipment">EQP</option>
-                          </select>
-                          <input
-                            type="text"
-                            list={drop.type === 'equipment' ? 'equipment-datalist' : undefined}
-                            title="Loot Item Name"
-                            value={drop.name}
-                            onChange={(e) => {
-                              const newDrops = [...(editingItem.item_drops || [])];
-                              const realIdx = newDrops.indexOf(drop);
-                              newDrops[realIdx] = { ...drop, name: e.target.value };
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="flex-1 bg-transparent border-none text-[11px] text-white/80 p-0 focus:outline-none font-bold"
-                            placeholder="Asset SKU..."
-                          />
-                          <input
-                            type="text"
-                            title="Loot Quantity"
-                            value={drop.quantity}
-                            onChange={(e) => {
-                              const newDrops = [...(editingItem.item_drops || [])];
-                              const realIdx = newDrops.indexOf(drop);
-                              newDrops[realIdx] = { ...drop, quantity: e.target.value };
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="w-12 bg-black/20 border border-white/10 text-[10px] text-white/40 p-1 rounded text-center"
-                            placeholder="QTY"
-                          />
-                          <button
-                            onClick={() => {
-                              const newDrops = (editingItem.item_drops || []).filter((d: any) => d !== drop);
-                              updateField('item_drops', newDrops);
-                            }}
-                            className="text-white/20 hover:text-dragon-red opacity-0 group-hover/drop:opacity-100 transition-all"
-                            title="Delete Loot Item"
-                          >
-                            <GameIcon name="trash" size={12} />
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-1.5">
-                        <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">ITEM_WEIGHT</label>
-                        <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
-                          <input
-                            type="text"
-                            title="Item Weight"
-                            value={editingItem.weight || ''}
-                            onChange={(e) => updateField('weight', e.target.value)}
-                            className="w-full p-2 text-[11px] text-white/80 focus:outline-none bg-transparent"
-                            placeholder="e.g. 1 lb."
-                          />
-                          <div className="px-2 text-[9px] text-white/20 font-bold border-l border-white/10 uppercase">LBS</div>
-                        </div>
-                      </div>
-                      <div className="space-y-1.5">
-                        <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Asset Group</label>
-                        <select
-                          title="Asset Group Select"
-                          value={editingItem.category || ''}
-                          onChange={(e) => updateField('category', e.target.value)}
-                          className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors"
-                        >
-                          <option value="" className="bg-[#1a1a1a]">UNASSIGNED</option>
-                          {(activeGenerator === 'equipment' ? equipmentCategories : materialCategories).map(cat => (
-                            <option key={cat} value={cat} className="bg-[#1a1a1a]">{cat.toUpperCase()}</option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-
-                    {activeGenerator === 'equipment' && (
-                      <div className="space-y-1.5">
-                        <div className="flex items-center justify-between">
-                          <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Socket_Slots</label>
-                          <div className="flex gap-2">
-                            <button
-                              onClick={() => updateField('slot', ['main-hand', 'off-hand'])}
-                              className="text-[8px] text-dragon-red hover:text-red-400 font-bold uppercase transition-colors"
-                              title="Set as 2-Handed Slot"
-                            >
-                              [SET_2H]
-                            </button>
-                            <button
-                              onClick={() => updateField('slot', ['main-hand'])}
-                              className="text-[8px] text-dragon-red hover:text-red-400 font-bold uppercase transition-colors"
-                              title="Set as 1-Handed Slot"
-                            >
-                              [SET_1H]
-                            </button>
-                          </div>
-                        </div>
-                        <div className="flex flex-wrap gap-1.5 p-3 bg-black/20 border border-white/5 rounded min-h-[80px]">
-                          {[
-                            'head', 'neck', 'chest', 'back', 'waist',
-                            'main-hand', 'off-hand', 'hands', 'legs', 'feet',
-                            'ring-1', 'ring-2', 'focus', 'tool', 'extra', 'ammo'
-                          ].map(slot => {
-                            const currentSlots = Array.isArray(editingItem.slot) ? editingItem.slot : (editingItem.slot ? [editingItem.slot] : []);
-                            const isSelected = currentSlots.includes(slot);
-                            return (
-                              <button
-                                key={slot}
-                                title={`Toggle ${slot.replace('-', '_')} slot`}
-                                onClick={() => {
-                                  const newSlots = isSelected
-                                    ? currentSlots.filter((s: string) => s !== slot)
-                                    : [...currentSlots, slot];
-                                  updateField('slot', newSlots);
-                                }}
-                                className={`px-2 py-1 rounded text-[9px] font-bold uppercase transition-all border ${
-                                  isSelected
-                                    ? 'bg-dragon-red/20 border-dragon-red text-dragon-red shadow-[0_0_10px_rgba(139,0,0,0.2)]'
-                                    : 'bg-white/5 border-white/5 text-white/30 hover:border-white/20'
-                                }`}
-                              >
-                                {slot.replace('-', '_')}
-                              </button>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="space-y-1.5 flex flex-col">
-                    <div className="flex items-center justify-between">
-                      <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Lore_Description</label>
-                      <button
-                        onClick={generateDescription}
-                        className="text-[9px] text-dragon-red flex items-center gap-1 hover:text-red-400 font-bold uppercase"
-                        title="Execute AI Lore Generation"
-                      >
-                        <GameIcon name="identity" size={10} color="currentColor" /> Execute_Gen
-                      </button>
-                    </div>
-                    <textarea
-                      value={Array.isArray(editingItem.desc) ? editingItem.desc.join('\n') : (editingItem.desc || '')}
-                      onChange={(e) => updateField('desc', e.target.value.split('\n'))}
-                      className="flex-1 min-h-[120px] bg-white/5 border border-white/10 p-3 text-[11px] text-white/70 rounded focus:outline-none focus:border-dragon-red/50 transition-colors font-sans leading-relaxed resize-none custom-scrollbar"
-                      placeholder="// Enter metadata description..."
-                      title="Lore Description Textarea"
-                    />
-                  </div>
-                </div>
+              {activeGenerator === 'monsters' && (
+                <LootHarvestEditor
+                  editingItem={editingItem}
+                  updateField={updateField}
+                  playClickSound={playClickSound}
+                />
               )}
 
-              {/* Synthesis Section */}
-              <div className="space-y-6">
-                {/* Prompt Shell */}
-                <div className="space-y-3 p-4 bg-black/40 border border-white/5 rounded-lg border-l-2 border-l-dragon-red">
-                  <div className="flex items-center justify-between">
-                    <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em] flex items-center gap-2">
-                      <GameIcon name="identity" size={12} color="#8B0000" /> Synthesis_String
-                    </label>
-                    <button
-                      onClick={() => {
-                        generatePrompt();
-                        playClickSound();
-                      }}
-                      className="text-[9px] text-white/40 hover:text-white transition-colors flex items-center gap-1 font-bold uppercase"
-                      title="Recalculate Synthesis String"
-                    >
-                      <GameIcon name="refresh" size={10} color="currentColor" /> Recalculate
-                    </button>
-                  </div>
-                  <textarea
-                    value={prompt}
-                    onChange={(e) => setPrompt(e.target.value)}
-                    className="w-full h-24 bg-transparent text-[11px] text-dragon-red/80 font-mono leading-relaxed focus:outline-none custom-scrollbar resize-none"
-                    placeholder="Prompt will be derived from metadata..."
-                    title="Synthesis String Textarea"
-                  />
-                </div>
-
-                {/* Visual Synthesis Engine */}
-                <div className="space-y-4">
-                  <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em] flex items-center gap-2 border-b border-white/5 pb-1">
-                    <GameIcon name="package" size={12} color="currentColor" /> Visualization_Engine
-                  </label>
-                  <div className="bg-black/20 border border-white/5 rounded-xl p-6">
-                    {activeGenerator === 'monsters' && (
-                      <EnemyImageGenerator
-                        monsterName={editingItem.name || ''}
-                        monsterType={editingItem.type || ''}
-                        monsterSize={editingItem.size}
-                        monsterAlignment={editingItem.alignment}
-                        monsterSubtype={editingItem.subtype}
-                        monsterLore={editingItem.lore || (editingItem.desc ? editingItem.desc[0] : '')}
-                        initialHabitat={editingItem.background_type || 'land_forest'}
-                        initialImageUrl={editingItem.imageUrl || editingItem.image_url}
-                        onImageGenerated={(url) => {
-                          updateField('imageUrl', url);
-                          setChecklist(prev => ({ ...prev, imageGenerated: true }));
-                        }}
-                        onHabitatChanged={(habitat) => {
-                          updateField('background_type', habitat);
-                        }}
-                      />
-                    )}
-                    {activeGenerator === 'equipment' && (
-                      <EquipmentImageGenerator
-                        itemName={editingItem.name || ''}
-                        itemType={editingItem.category || editingItem.type || ''}
-                        itemLore={editingItem.desc ? editingItem.desc[0] : ''}
-                        onImageGenerated={(url) => {
-                          updateField('imageUrl', url);
-                          setChecklist(prev => ({ ...prev, imageGenerated: true }));
-                        }}
-                      />
-                    )}
-                    {activeGenerator === 'materials' && (
-                      <MaterialImageGenerator
-                        itemName={editingItem.name || ''}
-                        itemType={editingItem.material_sub_category || editingItem.category || ''}
-                        itemLore={editingItem.desc ? editingItem.desc[0] : ''}
-                        onImageGenerated={(url) => {
-                          updateField('imageUrl', url);
-                          setChecklist(prev => ({ ...prev, imageGenerated: true }));
-                        }}
-                      />
-                    )}
-                  </div>
-                </div>
+              <SynthesisSection
+                activeGenerator={activeGenerator}
+                editingItem={editingItem}
+                updateField={updateField}
+                prompt={prompt}
+                setPrompt={setPrompt}
+                generatePrompt={generatePrompt}
+                setChecklist={setChecklist}
+                playClickSound={playClickSound}
+              />
             </div>
           </div>
-        </div>
-          ) : (
-            <div className="flex-1 flex flex-col items-center justify-center text-white/10 gap-6">
-              <GameIcon name="console" size={80} color="currentColor" strokeWidth={1} />
-              <div className="text-center space-y-2">
-                <p className="font-bold tracking-[0.3em] uppercase text-sm">Awaiting_Entry_Signal</p>
-                <p className="text-[10px] text-white/5 max-w-[240px]">Select an asset from the project hierarchy to initialize initialization protocols.</p>
-              </div>
+        ) : (
+          <div className="flex-1 flex flex-col items-center justify-center text-white/10 gap-6">
+            <GameIcon name="console" size={80} color="currentColor" strokeWidth={1} />
+            <div className="text-center space-y-2">
+              <p className="font-bold tracking-[0.3em] uppercase text-sm">Awaiting_Entry_Signal</p>
+              <p className="text-[10px] text-white/5 max-w-[240px]">Select an asset from the project hierarchy to initialize initialization protocols.</p>
             </div>
-          )}
-        </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -9,27 +9,45 @@ describe('DevKit Modular Shell & Extracted Boundaries', () => {
     assert.strictEqual(fs.existsSync(devkitPath), true);
 
     const content = fs.readFileSync(devkitPath, 'utf8');
-    assert.strictEqual(content.includes('import { EntityWorkbench } from \'./generators/EntityWorkbench\';'), true);
-    assert.strictEqual(content.includes('import { HabitatGenerator } from \'./generators/HabitatGenerator\';'), true);
-    assert.strictEqual(content.includes('import { HueStudio } from \'./hardware/HueStudio\';'), true);
+    assert.strictEqual(content.includes("import { EntityWorkbench } from './generators/EntityWorkbench';"), true);
+    assert.strictEqual(content.includes("import { HabitatGenerator } from './generators/HabitatGenerator';"), true);
+    assert.strictEqual(content.includes("import { HueStudio } from './hardware/HueStudio';"), true);
     assert.strictEqual(content.includes('<EntityWorkbench'), true);
     assert.strictEqual(content.includes('<HabitatGenerator'), true);
     assert.strictEqual(content.includes('<HueStudio />'), true);
 
-    // Check line count reduction (original was ~2554 lines)
     const lineCount = content.split('\n').length;
     assert.strictEqual(lineCount < 400, true, `Expected line count < 400, got ${lineCount}`);
   });
 
-  it('verifies EntityWorkbench generator module exists', () => {
+  it('verifies EntityWorkbench coordinator and its domain sub-components exist', () => {
     const filePath = path.resolve(process.cwd(), 'src/components/devkit/generators/EntityWorkbench.tsx');
     assert.strictEqual(fs.existsSync(filePath), true);
 
     const content = fs.readFileSync(filePath, 'utf8');
     assert.strictEqual(content.includes('export const EntityWorkbench'), true);
-    assert.strictEqual(content.includes('EnemyImageGenerator'), true);
-    assert.strictEqual(content.includes('EquipmentImageGenerator'), true);
-    assert.strictEqual(content.includes('MaterialImageGenerator'), true);
+    assert.strictEqual(content.includes('HierarchyExplorerDrawer'), true);
+    assert.strictEqual(content.includes('WikiScraperHeader'), true);
+    assert.strictEqual(content.includes('LoreBinderSection'), true);
+    assert.strictEqual(content.includes('MechanicalStatEditor'), true);
+    assert.strictEqual(content.includes('ItemPropertyEditor'), true);
+    assert.strictEqual(content.includes('LootHarvestEditor'), true);
+    assert.strictEqual(content.includes('SynthesisSection'), true);
+
+    const subComponentFiles = [
+      'HierarchyExplorerDrawer.tsx',
+      'WikiScraperHeader.tsx',
+      'LoreBinderSection.tsx',
+      'MechanicalStatEditor.tsx',
+      'ItemPropertyEditor.tsx',
+      'LootHarvestEditor.tsx',
+      'SynthesisSection.tsx'
+    ];
+
+    for (const subComp of subComponentFiles) {
+      const subPath = path.resolve(process.cwd(), `src/components/devkit/generators/entity/${subComp}`);
+      assert.strictEqual(fs.existsSync(subPath), true, `Expected sub-component ${subComp} to exist at ${subPath}`);
+    }
   });
 
   it('verifies HabitatGenerator module exists', () => {
