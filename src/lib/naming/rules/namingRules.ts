@@ -37,7 +37,7 @@ export function normalizeSpeciesKey(species?: string): string {
   if (clean.includes('halfling')) return 'halfling';
   if (clean.includes('halfelf') || (clean.includes('half') && clean.includes('elf'))) return 'halfElf';
   if (clean.includes('halforc') || (clean.includes('half') && clean.includes('orc'))) return 'halfOrc';
-  if (clean.includes('human')) return 'human';
+  if (clean.includes('human') || clean.includes('goliath') || clean.includes('orc')) return 'human';
   return clean;
 }
 

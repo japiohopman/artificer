@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { CharacterPipeline } from '../../lib/characterPipeline';
 import { 
   getLevelFromXP, getXPForLevel, generateStandardStats, 
-  calculateHP, randomFromList, DND_CLASSES, DND_RACES, DND_ALIGNMENTS, DND_BACKGROUNDS,
-  getModifier,
-  calculateInitiative, generateNPC
+  calculateHP, randomFromList, DND_CLASSES, DND_RACES_2014, DND_RACES_2024, DND_ALIGNMENTS, DND_BACKGROUNDS,
+  getModifier, calculateInitiative, generateNPCAsync, generateNPC
 } from '../../lib/npcGeneratorUtils';
 import { generateName } from '../../lib/naming';
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground, StartingEquipmentOption } from '../../services/atlasService';
@@ -35,7 +34,10 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   } = useAtlasStore();
 
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
-  const [npcData, setNpcData] = useState<Partial<NPCProfile>>({
+  const [rulesetContext, setRulesetContext] = useState<'2014' | '2024'>('2014');
+  const [npcSeed, setNpcSeed] = useState<string>('');
+  const [npcData, setNpcData] = useState<Partial<NPCProfile> & { ruleset?: '2014' | '2024' }>({
+    ruleset: '2014',
     name: '',
     gender: 'Male',
     class: 'Fighter',
@@ -78,6 +80,8 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   const [atlasSpecies, setAtlasSpecies] = useState<AtlasSpecies | null>(null);
   const [atlasBackground, setAtlasBackground] = useState<AtlasBackground | null>(null);
   const [isChecking, setIsChecking] = useState(false);
+
+  const activePlayableRaces = rulesetContext === '2024' ? DND_RACES_2024 : DND_RACES_2014;
 
   // Equipment resolution choices
   const [selectedChoices, setSelectedChoices] = useState<Record<number, any>>({});
@@ -135,21 +139,31 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   useEffect(() => {
     const loadAtlasData = async () => {
       if (npcData.class) {
-        const cls = await atlasService.loadClass(npcData.class);
+        const cls = await atlasService.loadClass(npcData.class, rulesetContext);
         setAtlasClass(cls);
         setSelectedChoices({}); // Reset choices when class changes
       }
       if (npcData.race) {
-        const spc = await atlasService.loadSpecies(npcData.race);
+        const spc = await atlasService.loadSpecies(npcData.race, rulesetContext);
         setAtlasSpecies(spc);
       }
       if (npcData.background) {
-        const bg = await atlasService.loadBackground(npcData.background);
+        const bg = await atlasService.loadBackground(npcData.background, rulesetContext);
         setAtlasBackground(bg);
       }
     };
     loadAtlasData();
-  }, [npcData.class, npcData.race, npcData.background]);
+  }, [npcData.class, npcData.race, npcData.background, rulesetContext]);
+
+  const handleRulesetChange = (newRuleset: '2014' | '2024') => {
+    setRulesetContext(newRuleset);
+    setNpcData(prev => ({
+      ...prev,
+      ruleset: newRuleset,
+      race: newRuleset === '2024' && prev.race === 'Half-Elf' ? 'Elf' : prev.race
+    }));
+    playClickSound();
+  };
 
   const randomizeStats = () => {
     const stats = NPCChoiceResolver.resolveStats(statGenMethod);
@@ -162,28 +176,29 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
     playClickSound();
   };
 
-  const syncLevelFromXp = (xp: number) => {
-    const level = getLevelFromXP(xp);
-    setNpcData(prev => ({ ...prev, xp, level }));
-  };
-
-  const syncXpFromLevel = (level: number) => {
-    const xp = getXPForLevel(level);
-    setNpcData(prev => ({ ...prev, level, xp }));
-  };
-
-  const handleQuickRandomize = () => {
-    const npc = generateNPC({
-        name: '', // Pass empty string so Quick Randomize generates a fresh procedural name via Naming Domain
+  const handleQuickRandomize = async () => {
+    setIsGeneratingNpc(true);
+    try {
+      const npc = await generateNPCAsync({
+        ruleset: rulesetContext,
+        name: npcData.name || '',
         class: npcData.class,
         race: npcData.race,
         alignment: npcData.alignment,
         background: npcData.background,
         level: npcData.level || 0,
-        gender: npcData.gender
-    });
-    setNpcData(npc);
-    playSuccessSound();
+        gender: npcData.gender,
+        statGenMethod: statGenMethod,
+        seed: npcSeed.trim() || undefined
+      });
+      setNpcData(npc);
+      playSuccessSound();
+    } catch (e) {
+      console.error("Quick randomize failed:", e);
+      playFailSound();
+    } finally {
+      setIsGeneratingNpc(false);
+    }
   };
 
   const handleGenerateNpc = async () => {
@@ -191,31 +206,33 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
     try {
       const data = await generateNPCData(npcData, { 
         classList: DND_CLASSES as string[],
-        speciesList: DND_RACES as string[],
+        speciesList: activePlayableRaces as string[],
         backgroundList: DND_BACKGROUNDS as string[],
         alignmentList: DND_ALIGNMENTS as string[],
         statGenMethod: statGenMethod
       });
 
+      const seedToUse = npcSeed.trim() || `ai_npc_${Date.now()}_${Math.random()}`;
+
       // Authoritative Naming Domain resolution for AI generated NPC
-      // Always generate canonical procedural name via Naming Domain for AI flow unless manually edited name was provided prior to click
-      const canonicalName = generateName({
-        species: data.race,
-        gender: data.gender?.toLowerCase() || 'unspecified',
-        background: data.background,
-        class: data.class,
-        alignment: data.alignment,
-        seed: `ai_npc_${Date.now()}_${Math.random()}`
-      }).displayName;
+      const canonicalName = (npcData.name && npcData.name.trim().length > 0 && npcData.name !== 'Random')
+        ? npcData.name.trim()
+        : generateName({
+            species: data.race,
+            gender: data.gender?.toLowerCase() || 'unspecified',
+            background: data.background,
+            class: data.class,
+            alignment: data.alignment,
+            seed: seedToUse
+          }).displayName;
       
       // Auto-resolve equipment for the generated character
-      const atlasCls = await atlasService.loadClass(data.class);
-      const atlasBg = await atlasService.loadBackground(data.background);
-      const atlasSpc = await atlasService.loadSpecies(data.race);
+      const atlasCls = await atlasService.loadClass(data.class, rulesetContext);
+      const atlasBg = await atlasService.loadBackground(data.background, rulesetContext);
+      const atlasSpc = await atlasService.loadSpecies(data.race, rulesetContext);
       
       const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
-      const npcSeed = `npc_${canonicalName}_${data.race}_${data.class}_${data.background}`;
-      const personality = NPCChoiceResolver.resolvePersonality(atlasBg, npcSeed);
+      const personality = NPCChoiceResolver.resolvePersonality(atlasBg, seedToUse);
       const proficiencies = NPCChoiceResolver.resolveAllProficiencies(atlasCls, atlasBg, atlasSpc);
       const spells = await NPCChoiceResolver.resolveSpells(atlasCls);
       const money = NPCChoiceResolver.resolveStartingMoney();
@@ -226,6 +243,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
 
       setNpcData({
         ...data,
+        ruleset: rulesetContext,
         name: canonicalName,
         level: data.level ?? 0,
         inventory,
@@ -289,7 +307,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       }
     }
 
-    const fullData = await atlasService.loadEquipment(indexStr);
+    const fullData = await atlasService.loadEquipment(indexStr, rulesetContext);
     const itemObj = CharacterPipeline.createItemObject({ ...fullData, ...itemMini });
 
     setNpcData(prev => {
@@ -371,7 +389,6 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const sanitizedInventory: any = {};
       Object.entries(npcData.inventory || {}).forEach(([slot, item]: [string, any]) => {
         sanitizedInventory[slot] = sanitizeItems([item])[0];
-        // Add the slot property: "chest_slot": "leather armor"
         const slotKey = `${slot.replace('-', '_')}_slot`;
         sanitizedInventory[slot][slotKey] = sanitizedInventory[slot].name;
       });
@@ -379,6 +396,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const npcToSave: any = { 
         ...npcData, 
         id,
+        ruleset: rulesetContext,
         saveVersion: 2,
         level: npcData.level || 0,
         inventory: sanitizedInventory,
@@ -648,6 +666,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
             onClick={() => {
               setEditingCharId(null);
               setNpcData({
+                ruleset: rulesetContext,
                 name: '',
                 gender: 'Male',
                 class: 'Fighter',
@@ -681,10 +700,12 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
               onClick={() => {
                 setEditingCharId(char.id);
                 // Convert Character to NPCProfile compatible format
-                const compatibleNpc: Partial<NPCProfile> = {
+                const compatibleNpc: Partial<NPCProfile> & { ruleset?: '2014' | '2024' } = {
                   ...char,
+                  ruleset: char.ruleset || '2014',
                   traits: Array.isArray(char.traits) ? char.traits.map(t => typeof t === 'string' ? t : t.name) : []
                 } as any;
+                setRulesetContext(char.ruleset || '2014');
                 setNpcData(compatibleNpc);
                 setNpcImages(null);
                 playClickSound();
@@ -696,7 +717,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="text-[10px] font-black text-white/80 uppercase truncate">{char.name}</span>
-                  <span className="text-[8px] text-white/30 uppercase font-bold tracking-tight">LVL {char.level} • {char.class}</span>
+                  <span className="text-[8px] text-white/30 uppercase font-bold tracking-tight">LVL {char.level} • {char.class} ({char.ruleset || '2014'})</span>
                 </div>
               </div>
               <button 
@@ -727,17 +748,50 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
             </div>
             <div>
               <div className="text-[10px] text-white/30 font-bold uppercase tracking-widest">Universal_Entity_Builder</div>
-              <div className="text-sm font-bold text-white uppercase tracking-tight">NPC Character Profile</div>
+              <div className="text-sm font-bold text-white uppercase tracking-tight">NPC Character Pipeline</div>
             </div>
           </div>
           <div className="flex items-center gap-3">
+             {/* Ruleset Selector */}
+             <div className="flex items-center gap-1 p-1 bg-black/40 rounded-lg border border-white/10">
+               <button
+                 type="button"
+                 onClick={() => handleRulesetChange('2014')}
+                 className={`px-2.5 py-1 rounded text-[9px] font-black uppercase transition-all ${
+                   rulesetContext === '2014' ? 'bg-purple-600 text-white shadow-md' : 'text-white/40 hover:text-white'
+                 }`}
+               >
+                 2014 Rules
+               </button>
+               <button
+                 type="button"
+                 onClick={() => handleRulesetChange('2024')}
+                 className={`px-2.5 py-1 rounded text-[9px] font-black uppercase transition-all ${
+                   rulesetContext === '2024' ? 'bg-purple-600 text-white shadow-md' : 'text-white/40 hover:text-white'
+                 }`}
+               >
+                 2024 Rules
+               </button>
+             </div>
+
+             {/* Seed Input */}
+             <input
+               type="text"
+               placeholder="Deterministic Seed..."
+               value={npcSeed}
+               onChange={(e) => setNpcSeed(e.target.value)}
+               title="Optional Seed for Deterministic Resolution"
+               className="bg-black/30 border border-white/10 rounded-lg px-2.5 py-1 text-[10px] font-mono text-purple-300 placeholder:text-white/20 w-36 focus:outline-none focus:border-purple-500"
+             />
+
              <button 
                onClick={handleQuickRandomize}
-               className="flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all shadow-md border border-white/10"
-               title="Quick Randomize NPC"
+               disabled={isGeneratingNpc}
+               className="flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase transition-all shadow-md border border-white/10 disabled:opacity-50"
+               title="No-LLM Deterministic NPC Generation"
              >
                <GameIcon name="refresh" size={12} color="currentColor" />
-               Quick_Random
+               Code_Gen (No-LLM)
              </button>
              <button 
                onClick={handleGenerateNpc}
@@ -1062,9 +1116,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                           onChange={(e) => setNpcData({ ...npcData, race: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
-                          {DND_RACES.map(r => <option key={r} value={r} className="bg-[#1a1a1a]">{r}</option>)}
+                          {activePlayableRaces.map(r => <option key={r} value={r} className="bg-[#1a1a1a]">{r}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('race', DND_RACES)} title="Randomize Race" />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('race', activePlayableRaces)} title="Randomize Race" />
                       </div>
                     </div>
                     <div className="space-y-1">
