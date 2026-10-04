@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
 import { useAtlasStore, ExplorerTab } from '../../store/useAtlasStore';
 import { useWorldStore, SavedLocation } from '../../store/useWorldStore';
@@ -25,10 +25,10 @@ export const Explorer: React.FC<ExplorerProps> = ({ initialDomain }) => {
   const { ruleset } = useGameStore();
 
   const {
-    monstersList, monsterCategories,
-    materialsList, materialCategories,
-    equipmentList, equipmentCategories,
-    transportList, spellsList, spellCategories,
+    monstersList, monsterCategories, monsterCategoryMapping,
+    materialsList, materialCategories, materialCategoryMapping,
+    equipmentList, equipmentCategories, equipmentCategoryMapping,
+    transportList, spellsList, spellCategories, spellCategoryMapping,
     keyItemsList, booksList, godsList,
     isLoadingList, loadList,
     selectedItem, selectItem
@@ -48,7 +48,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ initialDomain }) => {
     }
   }, [activeDomain]);
 
-  // Aggregate current items into normalized ExplorerItem array for searching
+  // Aggregate items for Explorer searching and browsing
   const explorerItems = useMemo<ExplorerItem[]>(() => {
     if (activeDomain === 'locations') {
       const locationItems: ExplorerItem[] = savedLocations.map(loc => ({
@@ -59,7 +59,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ initialDomain }) => {
         category: loc.region || loc.category || 'Location',
         description: loc.description,
         tags: [loc.category, loc.region || 'uncategorized'].filter(Boolean) as string[],
-        raw: loc
+        raw: { ...loc, isCategory: false }
       }));
 
       // Also map regions as browsable items
@@ -71,46 +71,116 @@ export const Explorer: React.FC<ExplorerProps> = ({ initialDomain }) => {
         category: 'Region',
         description: meta.description,
         tags: ['region'],
-        raw: { ...meta, id: `region-${id}`, isRegion: true, regionId: id }
+        raw: { ...meta, id: `region-${id}`, isRegion: true, regionId: id, isCategory: false }
       }));
 
       return [...regionItems, ...locationItems];
     }
 
-    let currentList: any[] = [];
-    if (activeDomain === 'enemies') {
-      currentList = selectedCategory ? monsterCategories.find(c => c.index === selectedCategory)?.monsters || [] : monsterCategories;
-    } else if (activeDomain === 'materials') {
-      currentList = selectedCategory ? materialCategories.find(c => c.index === selectedCategory)?.materials || [] : materialCategories;
-    } else if (activeDomain === 'equipment') {
-      currentList = selectedCategory ? equipmentCategories.find(c => c.index === selectedCategory)?.equipment || [] : equipmentCategories;
-    } else if (activeDomain === 'spells') {
-      currentList = selectedCategory ? spellCategories.find(c => c.index === selectedCategory)?.spells || [] : spellCategories;
-    } else if (activeDomain === 'transport') {
-      currentList = transportList;
-    } else if (activeDomain === 'gods') {
-      currentList = godsList;
-    } else if (activeDomain === 'key') {
-      currentList = keyItemsList;
-    } else {
-      currentList = booksList;
+    const hasCategories = (
+      activeDomain === 'enemies' ||
+      activeDomain === 'materials' ||
+      activeDomain === 'equipment' ||
+      activeDomain === 'spells'
+    );
+
+    const isGlobalSearch = Boolean(searchQuery.trim());
+
+    // Global domain search or browsing within a selected category or domain without categories
+    if (isGlobalSearch || selectedCategory || !hasCategories) {
+      let assetList: any[] = [];
+      if (activeDomain === 'enemies') {
+        assetList = monstersList.length > 0
+          ? monstersList
+          : monsterCategories.flatMap(c => c.monsters || []);
+      } else if (activeDomain === 'materials') {
+        assetList = materialsList.length > 0
+          ? materialsList
+          : materialCategories.flatMap(c => c.materials || []);
+      } else if (activeDomain === 'equipment') {
+        assetList = equipmentList.length > 0
+          ? equipmentList
+          : equipmentCategories.flatMap(c => c.equipment || []);
+      } else if (activeDomain === 'spells') {
+        assetList = spellsList.length > 0
+          ? spellsList
+          : spellCategories.flatMap(c => c.spells || []);
+      } else if (activeDomain === 'transport') {
+        assetList = transportList;
+      } else if (activeDomain === 'gods') {
+        assetList = godsList;
+      } else if (activeDomain === 'key') {
+        assetList = keyItemsList;
+      } else {
+        assetList = booksList;
+      }
+
+      // Filter by selectedCategory when browsing within a category (and no search query)
+      if (selectedCategory && !isGlobalSearch) {
+        if (activeDomain === 'enemies') {
+          const cat = monsterCategories.find(c => c.index === selectedCategory);
+          const catIndices = new Set((cat?.monsters || []).map(m => m.index));
+          assetList = assetList.filter(item => catIndices.has(item.index));
+        } else if (activeDomain === 'materials') {
+          const cat = materialCategories.find(c => c.index === selectedCategory);
+          const catIndices = new Set((cat?.materials || []).map(m => m.index));
+          assetList = assetList.filter(item => catIndices.has(item.index));
+        } else if (activeDomain === 'equipment') {
+          const cat = equipmentCategories.find(c => c.index === selectedCategory);
+          const catIndices = new Set((cat?.equipment || []).map(e => typeof e === 'object' ? e.index : e));
+          assetList = assetList.filter(item => catIndices.has(item.index));
+        } else if (activeDomain === 'spells') {
+          const cat = spellCategories.find(c => c.index === selectedCategory);
+          const catIndices = new Set((cat?.spells || []).map(s => s.index));
+          assetList = assetList.filter(item => catIndices.has(item.index));
+        }
+      }
+
+      return assetList.map(item => {
+        let catName = selectedCategory || item.category;
+        if (!catName) {
+          if (activeDomain === 'enemies') catName = monsterCategoryMapping[item.index];
+          else if (activeDomain === 'materials') catName = materialCategoryMapping[item.index];
+          else if (activeDomain === 'equipment') catName = equipmentCategoryMapping[item.index];
+          else if (activeDomain === 'spells') catName = spellCategoryMapping[item.index];
+        }
+
+        return {
+          id: item.id || item.index || item.name,
+          index: item.index || item.id || item.name,
+          name: item.name || item.title || item.index,
+          domain: activeDomain,
+          category: catName,
+          type: item.type,
+          description: item.description || (Array.isArray(item.desc) ? item.desc.join(' ') : item.desc),
+          rulesetContext: item.rulesetContext,
+          raw: { ...item, isCategory: false }
+        };
+      });
     }
 
-    return currentList.map(item => ({
-      id: item.id || item.index || item.name,
-      index: item.index || item.id || item.name,
-      name: item.name || item.title || item.index,
+    // Browsing category hierarchy at domain root when no search query is present
+    let categoriesList: any[] = [];
+    if (activeDomain === 'enemies') categoriesList = monsterCategories;
+    else if (activeDomain === 'materials') categoriesList = materialCategories;
+    else if (activeDomain === 'equipment') categoriesList = equipmentCategories;
+    else if (activeDomain === 'spells') categoriesList = spellCategories;
+
+    return categoriesList.map(cat => ({
+      id: cat.index,
+      index: cat.index,
+      name: cat.name || cat.index,
       domain: activeDomain,
-      category: item.category || selectedCategory || undefined,
-      type: item.type,
-      description: item.description || (Array.isArray(item.desc) ? item.desc.join(' ') : item.desc),
-      rulesetContext: item.rulesetContext,
-      raw: item
+      category: 'Category',
+      raw: { ...cat, isCategory: true }
     }));
   }, [
-    activeDomain, selectedCategory, savedLocations,
-    monsterCategories, materialCategories, equipmentCategories,
-    spellCategories, transportList, godsList, keyItemsList, booksList
+    activeDomain, selectedCategory, searchQuery, savedLocations,
+    monstersList, monsterCategories, monsterCategoryMapping,
+    materialsList, materialCategories, materialCategoryMapping,
+    equipmentList, equipmentCategories, equipmentCategoryMapping,
+    spellsList, spellCategories, spellCategoryMapping,
+    transportList, godsList, keyItemsList, booksList
   ]);
 
   // Execute deterministic search
@@ -147,19 +217,10 @@ export const Explorer: React.FC<ExplorerProps> = ({ initialDomain }) => {
       } else {
         setInspectedLocation(item.raw as SavedLocation);
       }
+    } else if (item.raw.isCategory) {
+      setSelectedCategory(item.index);
     } else {
-      const isCategorySelection = !selectedCategory && (
-        activeDomain === 'enemies' ||
-        activeDomain === 'materials' ||
-        activeDomain === 'equipment' ||
-        activeDomain === 'spells'
-      );
-
-      if (isCategorySelection) {
-        setSelectedCategory(item.index);
-      } else {
-        selectItem(item.index, activeDomain as ExplorerTab);
-      }
+      selectItem(item.index, activeDomain as ExplorerTab);
     }
   };
 
@@ -286,7 +347,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ initialDomain }) => {
             })
           )}
 
-          {selectedCategory && (
+          {selectedCategory && !searchQuery.trim() && (
             <button
               onClick={() => setSelectedCategory(null)}
               className="w-full mt-4 p-2 text-[9px] font-black uppercase text-center border border-white/10 hover:bg-white/5 text-white/40 transition-all"
