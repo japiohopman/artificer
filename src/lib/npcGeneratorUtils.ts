@@ -33,8 +33,9 @@ export function getXPForLevel(level: number): number {
   return XP_TABLE[Math.min(Math.max(level, 0), 20)] || 0;
 }
 
-export function rollAbilityScore(): number {
-  const rolls = Array.from({ length: 4 }, () => Math.floor(Math.random() * 6) + 1);
+export function rollAbilityScore(rng?: SeedableRNG): number {
+  const roll = () => rng ? rng.nextInt(1, 6) : Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 6) + 1;
+  const rolls = Array.from({ length: 4 }, () => roll());
   rolls.sort((a, b) => b - a); // Sort descending
   return rolls[0] + rolls[1] + rolls[2]; // Sum top 3
 }
@@ -63,7 +64,9 @@ export function calculateHP(level: number, con: number, diceType: number): numbe
 }
 
 export function randomFromList<T>(list: T[]): T {
-  return list[Math.floor(Math.random() * list.length)];
+  if (list.length === 0) return list[0];
+  const rand = crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296;
+  return list[Math.floor(rand * list.length)];
 }
 
 export const DND_CLASSES = [
@@ -146,7 +149,11 @@ export function calculateInitiative(dex: number): number {
 
 export function resolveStartingEquipment(options: any[]): any[] {
   const items: any[] = [];
-  const pickRandom = (list: any[]) => list[Math.floor(Math.random() * list.length)];
+  const pickRandom = (list: any[]) => {
+    if (list.length === 0) return undefined;
+    const rand = crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296;
+    return list[Math.floor(rand * list.length)];
+  };
 
   options.forEach(option => {
     const chooseCount = option.choose || 1;
@@ -155,6 +162,7 @@ export function resolveStartingEquipment(options: any[]): any[] {
     for (let i = 0; i < chooseCount; i++) {
         if (fromOptions.length === 0) continue;
         const selection = pickRandom(fromOptions);
+        if (!selection) continue;
         if (selection.option_type === 'multiple') {
             selection.items?.forEach((it: any) => items.push(it.item || it));
         } else if (selection.item) {
@@ -408,14 +416,18 @@ export function generateNPC(partial: any): any {
       }, seed);
 
   const skin = randomFromList(SKIN_TONES);
+  const randHeightFt = 5 + Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 2);
+  const randHeightIn = Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 12);
+  const randWeight = 120 + Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 100);
+
   const appearance = partial.appearance || {
     hairColor: randomFromList(HAIR_COLORS),
     hairStyle: randomFromList(HAIR_STYLES),
     bodyType: randomFromList(["Slender", "Athletic", "Heavy-set", "Average", "Wiry"]),
     eyeColor: randomFromList(EYE_COLORS),
     skinColor: skin.hex,
-    height: `${Math.floor(Math.random() * 2) + 5}'${Math.floor(Math.random() * 12)}"`,
-    weight: `${Math.floor(Math.random() * 100) + 120} lbs`
+    height: `${randHeightFt}'${randHeightIn}"`,
+    weight: `${randWeight} lbs`
   };
 
   const npcId = partial.id || `npc-${Date.now()}`;
