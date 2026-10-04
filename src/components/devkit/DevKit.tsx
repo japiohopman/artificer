@@ -8,8 +8,7 @@ import { audioEngine } from '../../services/audio/audioEngine';
 import { soundService } from '../../services/soundService';
 import { GameIcon } from '../../game_icons';
 
-import { AssetExplorer } from './AssetExplorer';
-import { WorldExplorer } from './WorldExplorer';
+import { Explorer } from './Explorer';
 import { FlagManager } from './FlagManager';
 
 import { EntityWorkbench } from './generators/EntityWorkbench';
@@ -48,7 +47,7 @@ export const DevKit: React.FC<DevKitProps> = ({
   const { loadAllLists, loadMissingAssets, materialsList, equipmentList } = useAtlasStore();
 
   const [activeTab, setActiveTab] = useState<'inspectors' | 'generators' | 'testers' | 'audio_lab' | 'hue_lamps'>('inspectors');
-  const [activeInspector, setActiveInspector] = useState<'codex' | 'world' | 'flags'>('codex');
+  const [activeInspector, setActiveInspector] = useState<'explorer' | 'flags'>('explorer');
   const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'gods' | 'jane' | 'backgrounds' | 'map_editor'>('npcs');
   const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
 
@@ -195,8 +194,7 @@ export const DevKit: React.FC<DevKitProps> = ({
                {activeTab === 'inspectors' ? (
                  <>
                    {[
-                     { id: 'codex', label: 'Codex' },
-                     { id: 'world', label: 'World' },
+                     { id: 'explorer', label: 'Explorer' },
                      { id: 'flags', label: 'Flags' }
                    ].map(insp => (
                      <button
@@ -251,10 +249,8 @@ export const DevKit: React.FC<DevKitProps> = ({
 
           {/* Main Space */}
           <div className="flex-1 flex overflow-hidden">
-            {activeTab === 'inspectors' && activeInspector === 'codex' ? (
-              <AssetExplorer />
-            ) : activeTab === 'inspectors' && activeInspector === 'world' ? (
-              <WorldExplorer />
+            {activeTab === 'inspectors' && activeInspector === 'explorer' ? (
+              <Explorer />
             ) : activeTab === 'inspectors' && activeInspector === 'flags' ? (
               <div className="flex-1 p-8">
                  <div className="max-w-2xl mx-auto h-full">
