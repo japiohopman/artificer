@@ -115,9 +115,9 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
                           (activeGenerator === 'materials' ? 'materials' :
                           (item.rarity && item.rarity !== 'Common' ? 'magic_items' : 'equipment'));
 
-    const isMissing = missingAssets[missingCategory]?.some(a =>
-      (a: string) => a.toLowerCase().includes(item.index.toLowerCase()) ||
-      (item.name && (a: string) => a.toLowerCase().includes(item.name.toLowerCase()))
+    const isMissing = missingAssets[missingCategory]?.some((a: string) =>
+      a.toLowerCase().includes(item.index.toLowerCase()) ||
+      (item.name && a.toLowerCase().includes(item.name.toLowerCase()))
     );
 
     setChecklist(prev => ({
