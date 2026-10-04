@@ -107,7 +107,7 @@ export const HierarchyExplorerDrawer: React.FC<HierarchyExplorerDrawerProps> = (
                 activeGenerator === 'materials' && selectedCategory ? (storeMaterialCategories.find(c => c.index === selectedCategory)?.materials || []) :
                 activeGenerator === 'equipment' && !selectedCategory ? storeEquipmentCategories :
                 activeGenerator === 'equipment' && selectedCategory ? (storeEquipmentCategories.find(c => c.index === selectedCategory)?.equipment || []) :
-                []).map((mOrIndex, i) => {
+                []).map((mOrIndex: any, i: number) => {
                   let m = mOrIndex;
                   if (typeof mOrIndex === 'string') {
                     if (activeGenerator === 'equipment') {

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { scrapeMonsterWiki, parseRawMonsterText, generateLore } from '../../../../services/ai/monsterService';
-import { generateItemDescription } from '../../../../services/ai/itemService';
-import { generateVisualPrompt } from '../../../../services/ai/imageService';
+import { scrapeMonsterWiki, parseRawMonsterText, generateLore } from '../../../services/ai/monsterService';
+import { generateItemDescription } from '../../../services/ai/itemService';
+import { generateVisualPrompt } from '../../../services/ai/imageService';
 import {
   commitFile, fetchMonsterData, fetchMaterialData, fetchEquipmentData, fetchMagicItemData,
   playSuccessSound, playFailSound, playClickSound, updateMonsterCategory
-} from '../../../../services/storageService';
-import { useAtlasStore } from '../../../../store/useAtlasStore';
-import { GameIcon } from '../../../../game_icons';
+} from '../../../services/storageService';
+import { useAtlasStore } from '../../../store/useAtlasStore';
+import { GameIcon } from '../../../game_icons';
 
 import { HierarchyExplorerDrawer } from './entity/HierarchyExplorerDrawer';
 import { WikiScraperHeader } from './entity/WikiScraperHeader';
@@ -116,8 +116,8 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
                           (item.rarity && item.rarity !== 'Common' ? 'magic_items' : 'equipment'));
 
     const isMissing = missingAssets[missingCategory]?.some(a =>
-      a.toLowerCase().includes(item.index.toLowerCase()) ||
-      (item.name && a.toLowerCase().includes(item.name.toLowerCase()))
+      (a: string) => a.toLowerCase().includes(item.index.toLowerCase()) ||
+      (item.name && (a: string) => a.toLowerCase().includes(item.name.toLowerCase()))
     );
 
     setChecklist(prev => ({
@@ -269,7 +269,7 @@ export const EntityWorkbench: React.FC<EntityWorkbenchProps> = ({
               if (!cleanPath.startsWith('public/')) cleanPath = 'public/' + cleanPath;
               jsonPath = cleanPath;
             } else {
-              const { getRulesetVersionFolder } = await import('../../../../services/storageService');
+              const { getRulesetVersionFolder } = await import('../../../services/storageService');
               jsonPath = `public/assets/atlas/equipment/json/${getRulesetVersionFolder()}/${index}.json`;
             }
           }
