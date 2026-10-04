@@ -7,7 +7,7 @@ The DevKit is Artificer's internal **DM/developer authoring, browsing, diagnosti
 ## 1. Executive Summary & Audit Overview
 
 A complete workspace-by-workspace audit of the current DevKit implementation (`src/components/devkit/`) revealed significant functionality, as well as areas of architectural debt:
-- **God Component Concentration:** `DevKit.tsx` (2,553 lines) directly contains full authoring UI, state, scraping, and AI prompt logic for Enemy, Material, Equipment, and Habitat background generation, alongside top-level tab orchestration and Hue lamp controls (`DevKitHueTab`).
+- **God Component Concentration:** `DevKit.tsx` (2,554 lines) directly contains full authoring UI, state, scraping, and AI prompt logic for Enemy, Material, Equipment, and Habitat background generation, alongside top-level tab orchestration and Hue lamp controls (`DevKitHueTab`).
 - **Data & Rule Duplication:** `npcGeneratorUtils.ts` and `npc_generator.tsx` duplicate D&D class/race/background data, hit dice tables, starting equipment, and AC/HP formulas using hardcoded legacy arrays (`CLASS_DATA`, `BACKGROUND_DATA`) rather than consuming versioned Atlas loaders (`storageService.ts`, `atlasService.ts`).
 - **Orphaned / Unlinked Components:** `AudioLaboratory.tsx` (68k) exists in `src/components/devkit/` but is not imported by `DevKit.tsx` or any other file. DevKit instead imports `SoundStudio.tsx` for the "Audio Lab" tab.
 - **Split Explorer Surface:** `AssetExplorer.tsx` (Atlas assets) and `WorldExplorer.tsx` (World regions/locations) exist as separate inspector sub-tabs with different search and filtering interfaces, despite serving the same primary user goal of browsing canonical static/world data.
@@ -94,7 +94,7 @@ Execution sequence and dependency chain for DevKit modernization:
 ```
 
 1. **Issue #408: Extract inline authoring modules / modularize DevKit shell**
-   - *Goal:* De-risk `DevKit.tsx` (2,553 lines) by extracting inline Enemy, Equipment, Material, Habitat, and Hue authoring tabs into dedicated files under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
+   - *Goal:* De-risk `DevKit.tsx` (2,554 lines) by extracting inline Enemy, Equipment, Material, Habitat, and Hue authoring tabs into dedicated files under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
    - *Dependencies:* #366.
 
 2. **Issue #367: Unified Atlas and World Explorer**

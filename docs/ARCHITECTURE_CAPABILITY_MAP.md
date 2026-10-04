@@ -536,7 +536,7 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Source-of-Truth Data:** `useUIStore.isDevKitOpen`, local state in `DevKit.tsx`.
 - **Derived / Presentation Consumers:** Application shell (`src/App.tsx`), DevKit header/sub-tabs.
 - **Current Status:** `Audited & Architecture Contracted (#366)`
-- **Known Architectural Debt:** `DevKit.tsx` (2,553 lines) directly contains full authoring UI, scraping, and state for Enemy, Material, Equipment, Habitat, and Hue tabs. Target architecture contracts a 4-workspace model (Explorer, Generators, Testers, Hardware/Audio) and establishes #408 for module extraction.
+- **Known Architectural Debt:** `DevKit.tsx` (2,554 lines) directly contains full authoring UI, scraping, and state for Enemy, Material, Equipment, Habitat, and Hue tabs. Target architecture contracts a 4-workspace model (Explorer, Generators, Testers, Hardware/Audio) and establishes #408 for module extraction.
 - **Related GitHub Issues:** #313, #366, #408
 - **Intended Specialist Agent:** Architecture Specialist
 - **Dependencies:** `useUIStore`, `useAtlasStore`, `useWorldStore`

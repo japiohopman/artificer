@@ -62,7 +62,7 @@ Control physical audio stems, sound effects, and smart light bulbs.
 Dependency order for follow-up refactor Issues:
 **#366 → #408 → (#367 / #368) → #409** *(note: #368 also depends on #377)*
 
-1. **#408 — Inline Authoring Extraction:** Extract inline Enemy, Equipment, Material, Habitat, and Hue authoring panels out of `DevKit.tsx` (2,553 lines) into standalone components under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
+1. **#408 — Inline Authoring Extraction:** Extract inline Enemy, Equipment, Material, Habitat, and Hue authoring panels out of `DevKit.tsx` (2,554 lines) into standalone components under `src/components/devkit/generators/` and `src/components/devkit/hardware/`.
 2. **#367 — Unified Atlas & World Explorer:** Combine `AssetExplorer.tsx` and `WorldExplorer.tsx` into a single unified search and browsing shell.
 3. **#368 — NPC Generator Modernization:** Replace hardcoded legacy D&D data arrays in `npcGeneratorUtils.ts` with canonical Atlas loaders (`storageService.ts`). (Depends on #408 and #377).
 4. **#409 — Housekeeping & Dead Code Removal:** Remove unimported legacy files (`AudioLaboratory.tsx`) and synchronize all test harnesses. (Depends on #367 and #368).
