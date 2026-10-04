@@ -5,6 +5,7 @@ import { fetchClassData, fetchBackgroundData, fetchSpeciesData } from '../servic
 import { NPCChoiceResolver } from './npcChoiceResolver';
 import { resolvePersonality, generateDeterministicBackstory } from './narrative/narrativeResolver';
 import { CharacterPipeline } from './characterPipeline';
+import { SeedableRNG } from './naming/rng';
 
 const SLOT_MAP: Record<string, string> = {
   'chest': 'chest',
@@ -33,21 +34,29 @@ export function getXPForLevel(level: number): number {
   return XP_TABLE[Math.min(Math.max(level, 0), 20)] || 0;
 }
 
-export function rollAbilityScore(rng?: SeedableRNG): number {
-  const roll = () => rng ? rng.nextInt(1, 6) : Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 6) + 1;
-  const rolls = Array.from({ length: 4 }, () => roll());
+let globalRngCounter = 0;
+
+function getFallbackRng(): SeedableRNG {
+  globalRngCounter = (globalRngCounter + 1) % 1000000;
+  return new SeedableRNG(`fallback_rng_${Date.now()}_${globalRngCounter}`);
+}
+
+export function rollAbilityScore(customRng?: SeedableRNG): number {
+  const rng = customRng || getFallbackRng();
+  const rolls = Array.from({ length: 4 }, () => rng.nextInt(1, 6));
   rolls.sort((a, b) => b - a); // Sort descending
   return rolls[0] + rolls[1] + rolls[2]; // Sum top 3
 }
 
-export function generateStandardStats(): { str: number; dex: number; con: number; int: number; wis: number; cha: number } {
+export function generateStandardStats(customRng?: SeedableRNG): { str: number; dex: number; con: number; int: number; wis: number; cha: number } {
+  const rng = customRng || getFallbackRng();
   return {
-    str: rollAbilityScore(),
-    dex: rollAbilityScore(),
-    con: rollAbilityScore(),
-    int: rollAbilityScore(),
-    wis: rollAbilityScore(),
-    cha: rollAbilityScore(),
+    str: rollAbilityScore(rng),
+    dex: rollAbilityScore(rng),
+    con: rollAbilityScore(rng),
+    int: rollAbilityScore(rng),
+    wis: rollAbilityScore(rng),
+    cha: rollAbilityScore(rng),
   };
 }
 
@@ -63,10 +72,10 @@ export function calculateHP(level: number, con: number, diceType: number): numbe
   return Math.max(hp, 1);
 }
 
-export function randomFromList<T>(list: T[]): T {
+export function randomFromList<T>(list: T[], customRng?: SeedableRNG): T {
   if (list.length === 0) return list[0];
-  const rand = crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296;
-  return list[Math.floor(rand * list.length)];
+  const rng = customRng || getFallbackRng();
+  return rng.pick(list);
 }
 
 export const DND_CLASSES = [
@@ -147,13 +156,9 @@ export function calculateInitiative(dex: number): number {
   return getModifier(dex);
 }
 
-export function resolveStartingEquipment(options: any[]): any[] {
+export function resolveStartingEquipment(options: any[], customRng?: SeedableRNG): any[] {
   const items: any[] = [];
-  const pickRandom = (list: any[]) => {
-    if (list.length === 0) return undefined;
-    const rand = crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296;
-    return list[Math.floor(rand * list.length)];
-  };
+  const rng = customRng || getFallbackRng();
 
   options.forEach(option => {
     const chooseCount = option.choose || 1;
@@ -161,7 +166,7 @@ export function resolveStartingEquipment(options: any[]): any[] {
 
     for (let i = 0; i < chooseCount; i++) {
         if (fromOptions.length === 0) continue;
-        const selection = pickRandom(fromOptions);
+        const selection: any = rng.pick(fromOptions);
         if (!selection) continue;
         if (selection.option_type === 'multiple') {
             selection.items?.forEach((it: any) => items.push(it.item || it));
@@ -225,8 +230,6 @@ export function createConsumerSeed(prefix: string = 'npc_action'): string {
  * Modernized, canonical NPC generation function that orchestrates Atlas data,
  * deterministic narrative resolvers, and V2 inventory architecture.
  */
-import { SeedableRNG } from './naming/rng';
-
 export async function generateNPCAsync(partial: any): Promise<any> {
   const ruleset: '2014' | '2024' = partial.ruleset || '2014';
   const playableSpecies = ruleset === '2024' ? DND_RACES_2024 : DND_RACES_2014;
@@ -368,14 +371,15 @@ export function generateNPC(partial: any): any {
   const ruleset: '2014' | '2024' = partial.ruleset || '2014';
   const playableSpecies = ruleset === '2024' ? DND_RACES_2024 : DND_RACES_2014;
 
-  const className = partial.class && partial.class !== 'Any' ? partial.class : randomFromList(DND_CLASSES);
-  const race = partial.race && partial.race !== 'Any' ? partial.race : randomFromList(playableSpecies);
-  const alignment = partial.alignment && partial.alignment !== 'Any' ? partial.alignment : randomFromList(DND_ALIGNMENTS);
-  const background = partial.background && partial.background !== 'Any' ? partial.background : randomFromList(DND_BACKGROUNDS);
-  const level = partial.level !== undefined ? partial.level : 0;
-  const gender = partial.gender && partial.gender !== 'Random' ? partial.gender : randomFromList(['Male', 'Female']);
+  const seed = partial.seed || createConsumerSeed('npc_sync');
+  const rng = new SeedableRNG(seed);
 
-  const seed = partial.seed || createConsumerSeed(`npc_${race}_${className}_${background}`);
+  const className = partial.class && partial.class !== 'Any' ? partial.class : rng.pick(DND_CLASSES);
+  const race = partial.race && partial.race !== 'Any' ? partial.race : rng.pick(playableSpecies);
+  const alignment = partial.alignment && partial.alignment !== 'Any' ? partial.alignment : rng.pick(DND_ALIGNMENTS);
+  const background = partial.background && partial.background !== 'Any' ? partial.background : rng.pick(DND_BACKGROUNDS);
+  const level = partial.level !== undefined ? partial.level : 0;
+  const gender = partial.gender && partial.gender !== 'Random' ? partial.gender : rng.pick(['Male', 'Female']);
 
   const canonicalName = (partial.name && partial.name.trim().length > 0 && partial.name !== 'Random')
     ? partial.name.trim()
@@ -388,16 +392,16 @@ export function generateNPC(partial: any): any {
         seed
       }).displayName;
 
-  const stats = partial.stats || generateStandardStats();
+  const stats = partial.stats || generateStandardStats(rng);
   const classInfo = CLASS_DATA[className] || CLASS_DATA['Fighter'];
   const hitDie = classInfo.hitDie || 8;
   const hp = calculateHP(level, stats.con, hitDie);
 
   const resolvedPersonality = resolvePersonality(null, seed);
-  const traits = (partial.traits && partial.traits.length > 0) ? partial.traits : (resolvedPersonality.traits.length > 0 ? resolvedPersonality.traits : [randomFromList(DND_TRAITS)]);
-  const ideals = (partial.ideals && partial.ideals.length > 0) ? partial.ideals : (resolvedPersonality.ideals.length > 0 ? resolvedPersonality.ideals : [randomFromList(DND_IDEALS)]);
-  const bonds = (partial.bonds && partial.bonds.length > 0) ? partial.bonds : (resolvedPersonality.bonds.length > 0 ? resolvedPersonality.bonds : [randomFromList(DND_BONDS)]);
-  const flaws = (partial.flaws && partial.flaws.length > 0) ? partial.flaws : (resolvedPersonality.flaws.length > 0 ? resolvedPersonality.flaws : [randomFromList(DND_FLAWS)]);
+  const traits = (partial.traits && partial.traits.length > 0) ? partial.traits : (resolvedPersonality.traits.length > 0 ? resolvedPersonality.traits : [rng.pick(DND_TRAITS)]);
+  const ideals = (partial.ideals && partial.ideals.length > 0) ? partial.ideals : (resolvedPersonality.ideals.length > 0 ? resolvedPersonality.ideals : [rng.pick(DND_IDEALS)]);
+  const bonds = (partial.bonds && partial.bonds.length > 0) ? partial.bonds : (resolvedPersonality.bonds.length > 0 ? resolvedPersonality.bonds : [rng.pick(DND_BONDS)]);
+  const flaws = (partial.flaws && partial.flaws.length > 0) ? partial.flaws : (resolvedPersonality.flaws.length > 0 ? resolvedPersonality.flaws : [rng.pick(DND_FLAWS)]);
 
   const backstory = (partial.backstory && partial.backstory.trim().length > 0)
     ? partial.backstory
@@ -415,19 +419,15 @@ export function generateNPC(partial: any): any {
         flaws
       }, seed);
 
-  const skin = randomFromList(SKIN_TONES);
-  const randHeightFt = 5 + Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 2);
-  const randHeightIn = Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 12);
-  const randWeight = 120 + Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * 100);
-
+  const skin = rng.pick(SKIN_TONES);
   const appearance = partial.appearance || {
-    hairColor: randomFromList(HAIR_COLORS),
-    hairStyle: randomFromList(HAIR_STYLES),
-    bodyType: randomFromList(["Slender", "Athletic", "Heavy-set", "Average", "Wiry"]),
-    eyeColor: randomFromList(EYE_COLORS),
+    hairColor: rng.pick(HAIR_COLORS),
+    hairStyle: rng.pick(HAIR_STYLES),
+    bodyType: rng.pick(["Slender", "Athletic", "Heavy-set", "Average", "Wiry"]),
+    eyeColor: rng.pick(EYE_COLORS),
     skinColor: skin.hex,
-    height: `${randHeightFt}'${randHeightIn}"`,
-    weight: `${randWeight} lbs`
+    height: `${rng.nextInt(5, 6)}'${rng.nextInt(0, 11)}"`,
+    weight: `${rng.nextInt(120, 220)} lbs`
   };
 
   const npcId = partial.id || `npc-${Date.now()}`;
