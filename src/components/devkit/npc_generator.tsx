@@ -14,8 +14,21 @@ import { useAtlasStore } from '../../store/useAtlasStore';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
 import { EquipmentDoll } from '../character/equipment/EquipmentDoll';
 import { GameIcon, GameIconName } from '../../game_icons';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 
 import { NPCChoiceResolver } from '../../lib/npcChoiceResolver';
+
+function sanitizeImageUrl(url: string | undefined): string {
+  if (!url) return '';
+  const trimmed = url.trim();
+  if (
+    /^data:image\/(png|jpeg|webp|gif|svg\+xml);base64,/i.test(trimmed) ||
+    /^(https?:\/\/|\/|\.\/)/i.test(trimmed)
+  ) {
+    return trimmed;
+  }
+  return '';
+}
 
 interface NPCGeneratorProps {
   onSave?: (npc: NPCProfile) => void;
@@ -717,7 +730,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
             >
               <div className="flex items-center gap-3 min-w-0">
                 <div className="w-8 h-8 rounded shrink-0 overflow-hidden bg-black/40 border border-white/5 shadow-sm">
-                  <img src={normalizeImageUrl(char.avatarUrl || char.imageUrl, 'npc_character_profiles', char.id)} className="w-full h-full object-cover" alt={char.name} />
+                  <img src={sanitizeImageUrl(normalizeImageUrl(char.avatarUrl || char.imageUrl, 'npc_character_profiles', char.id))} className="w-full h-full object-cover" alt={char.name} />
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="text-[10px] font-black text-white/80 uppercase truncate">{char.name}</span>
@@ -849,19 +862,19 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                    <div className="grid grid-cols-12 gap-4">
                       {/* Portrait */}
                       <div className="col-span-3 aspect-[9/16] bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                         <img src={npcImages?.profileUrl || normalizeImageUrl(npcData.imageUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="Hero Portrait" />
+                         <ChromaKeyImage src={sanitizeImageUrl(npcImages?.profileUrl || normalizeImageUrl(npcData.imageUrl, 'npc_character_profiles', npcData.id || 'unnamed'))} className="w-full h-full object-cover" alt="Hero Portrait" />
                          <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">Hero_Portrait_Vertical</div>
                       </div>
                       {/* Avatar */}
                       <div className="col-span-2 space-y-4">
                          <div className="aspect-square bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                            <img src={npcImages?.avatarUrl || normalizeImageUrl(npcData.avatarUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="Neural Avatar" />
+                            <ChromaKeyImage src={sanitizeImageUrl(npcImages?.avatarUrl || normalizeImageUrl(npcData.avatarUrl, 'npc_character_profiles', npcData.id || 'unnamed'))} className="w-full h-full object-cover" alt="Neural Avatar" />
                             <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">Neural_Avatar</div>
                          </div>
                       </div>
                       {/* Matrix */}
                       <div className="col-span-7 aspect-[3/2] bg-black/40 rounded-xl overflow-hidden border border-white/10 relative group/img">
-                         <img src={npcImages?.matrixUrl || normalizeImageUrl(npcData.matrixUrl, 'npc_character_profiles', npcData.id || 'unnamed')} className="w-full h-full object-cover" alt="NPC Portrait Matrix" />
+                         <ChromaKeyImage src={sanitizeImageUrl(npcImages?.matrixUrl || normalizeImageUrl(npcData.matrixUrl, 'npc_character_profiles', npcData.id || 'unnamed'))} className="w-full h-full object-cover" alt="NPC Portrait Matrix" />
                          <div className="absolute inset-x-0 bottom-0 p-2 bg-black/60 backdrop-blur-sm text-[8px] font-bold text-white/60 uppercase text-center">NPC_Portrait_Matrix_Forge [3x3 Emotion Grid]</div>
                       </div>
                    </div>
@@ -1544,7 +1557,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                                  className="flex items-center gap-3 p-2 bg-white/5 border border-white/5 hover:border-purple-500/50 hover:bg-purple-500/5 rounded-xl transition-all group/item text-left"
                                >
                                  <div className="w-8 h-8 rounded bg-black/40 border border-white/5 shrink-0 overflow-hidden group-hover/item:border-purple-500/20 transition-all flex items-center justify-center">
-                                    <img src={item.imageUrl || `/assets/atlas/equipment/images/${item.index.toLowerCase().replace(/[\s-]/g, '_')}.webp`} className="h-[90%] w-auto object-contain mx-auto" alt={item.name} />
+                                    <img src={sanitizeImageUrl(item.imageUrl || `/assets/atlas/equipment/images/${item.index.toLowerCase().replace(/[\s-]/g, '_')}.webp`)} className="h-[90%] w-auto object-contain mx-auto" alt={item.name} />
                                  </div>
                                  <div className="flex flex-col min-w-0">
                                     <span className="text-[9px] font-black text-white/60 uppercase truncate group-hover/item:text-purple-300 transition-colors">{item.name}</span>
