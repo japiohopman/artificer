@@ -166,7 +166,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   };
 
   const randomizeStats = () => {
-    const stats = NPCChoiceResolver.resolveStats(statGenMethod);
+    const stats = NPCChoiceResolver.resolveStats(statGenMethod, npcSeed.trim() || undefined);
     setNpcData(prev => ({ ...prev, stats }));
     playClickSound();
   };
@@ -179,6 +179,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   const handleQuickRandomize = async () => {
     setIsGeneratingNpc(true);
     try {
+      const seedToUse = npcSeed.trim() || undefined;
       const npc = await generateNPCAsync({
         ruleset: rulesetContext,
         name: npcData.name || '',
@@ -189,7 +190,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
         level: npcData.level || 0,
         gender: npcData.gender,
         statGenMethod: statGenMethod,
-        seed: npcSeed.trim() || undefined
+        seed: seedToUse
       });
       setNpcData(npc);
       playSuccessSound();
@@ -212,7 +213,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
         statGenMethod: statGenMethod
       });
 
-      const seedToUse = npcSeed.trim() || `ai_npc_${Date.now()}_${Math.random()}`;
+      const seedToUse = npcSeed.trim() || undefined;
 
       // Authoritative Naming Domain resolution for AI generated NPC
       const canonicalName = (npcData.name && npcData.name.trim().length > 0 && npcData.name !== 'Random')
@@ -231,11 +232,11 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       const atlasBg = await atlasService.loadBackground(data.background, rulesetContext);
       const atlasSpc = await atlasService.loadSpecies(data.race, rulesetContext);
       
-      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg);
+      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasCls, atlasBg, seedToUse);
       const personality = NPCChoiceResolver.resolvePersonality(atlasBg, seedToUse);
-      const proficiencies = NPCChoiceResolver.resolveAllProficiencies(atlasCls, atlasBg, atlasSpc);
-      const spells = await NPCChoiceResolver.resolveSpells(atlasCls);
-      const money = NPCChoiceResolver.resolveStartingMoney();
+      const proficiencies = NPCChoiceResolver.resolveAllProficiencies(atlasCls, atlasBg, atlasSpc, seedToUse);
+      const spells = await NPCChoiceResolver.resolveSpells(atlasCls, seedToUse);
+      const money = NPCChoiceResolver.resolveStartingMoney(seedToUse);
 
       // Recalculate HP based on class hit die
       const hitDie = atlasCls?.hit_die || 8;
@@ -580,7 +581,8 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   const handleAutoResolvedEquipment = async () => {
     setIsApplyingGear(true);
     try {
-      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasClass, atlasBackground);
+      const seedToUse = npcSeed.trim() || undefined;
+      const { inventory, backpack, v2 } = await NPCChoiceResolver.resolveFullStartingEquipment(atlasClass, atlasBackground, seedToUse);
       
       setNpcData(prev => ({
         ...prev,
@@ -605,10 +607,12 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
     try {
       // Collect manual selections
       const manualItems: any[] = [];
+      const seedToUse = npcSeed.trim() || undefined;
+
       const resolveChoice = async (option: StartingEquipmentOption, selectionIndex: number) => {
         const selection = option.from.options?.[selectionIndex];
         if (selection) {
-          const resolved = await NPCChoiceResolver.resolveChoice(selection);
+          const resolved = await NPCChoiceResolver.resolveChoice(selection, seedToUse);
           manualItems.push(...resolved);
         }
       };
@@ -634,9 +638,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
       // Expand and Standardize
       const allItems = [...staticItems, ...manualItems];
       const expanded = await NPCChoiceResolver.expandPacks(allItems);
-      const standardized = await NPCChoiceResolver.standardizeItems(expanded);
+      const standardized = await NPCChoiceResolver.standardizeItems(expanded, seedToUse);
       const { inventory, backpack } = await NPCChoiceResolver.buildResolvedInventory(npcData, standardized);
-      const v2 = await NPCChoiceResolver.buildV2Inventory(standardized);
+      const v2 = await NPCChoiceResolver.buildV2Inventory(standardized, seedToUse);
 
       setNpcData(prev => ({
         ...prev,

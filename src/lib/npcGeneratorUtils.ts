@@ -1,7 +1,7 @@
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG } from '../types/inventory';
 import { generateName } from './naming';
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground } from '../services/atlasService';
-import { fetchClassData, fetchBackgroundData, fetchSpeciesData } from '../services/storageService';
+import { fetchClassData, fetchBackgroundData, fetchSpeciesData, fetchClassesList, fetchSpeciesList, fetchBackgroundsList, fetchAlignmentsList } from '../services/storageService';
 import { NPCChoiceResolver } from './npcChoiceResolver';
 import { resolvePersonality, generateDeterministicBackstory } from './narrative/narrativeResolver';
 import { CharacterPipeline } from './characterPipeline';
@@ -32,6 +32,13 @@ export function getLevelFromXP(xp: number): number {
 
 export function getXPForLevel(level: number): number {
   return XP_TABLE[Math.min(Math.max(level, 0), 20)] || 0;
+}
+
+let consumerSeedCounter = 0;
+
+export function createConsumerSeed(prefix: string = 'npc_action'): string {
+  consumerSeedCounter = (consumerSeedCounter + 1) % 1000000;
+  return `${prefix}_${Date.now()}_${consumerSeedCounter}`;
 }
 
 let globalRngCounter = 0;
@@ -219,28 +226,41 @@ export const SKIN_TONES = [
 
 export const BACKGROUND_DATA: Record<string, any> = {};
 
-let consumerSeedCounter = 0;
-
-export function createConsumerSeed(prefix: string = 'npc_action'): string {
-  consumerSeedCounter = (consumerSeedCounter + 1) % 1000000;
-  return `${prefix}_${Date.now()}_${consumerSeedCounter}`;
-}
-
 /**
  * Modernized, canonical NPC generation function that orchestrates Atlas data,
  * deterministic narrative resolvers, and V2 inventory architecture.
  */
 export async function generateNPCAsync(partial: any): Promise<any> {
   const ruleset: '2014' | '2024' = partial.ruleset || '2014';
-  const playableSpecies = ruleset === '2024' ? DND_RACES_2024 : DND_RACES_2014;
-
   const seed = partial.seed || createConsumerSeed(`npc_gen`);
   const rng = new SeedableRNG(seed);
 
-  const className = partial.class && partial.class !== 'Any' ? partial.class : rng.pick(DND_CLASSES);
-  const race = partial.race && partial.race !== 'Any' ? partial.race : rng.pick(playableSpecies);
-  const alignment = partial.alignment && partial.alignment !== 'Any' ? partial.alignment : rng.pick(DND_ALIGNMENTS);
-  const background = partial.background && partial.background !== 'Any' ? partial.background : rng.pick(DND_BACKGROUNDS);
+  // Fetch canonical ruleset-aware lists dynamically from Atlas instead of hardcoded arrays
+  const [classesList, speciesList, backgroundsList, alignmentsList] = await Promise.all([
+    fetchClassesList(ruleset),
+    fetchSpeciesList(ruleset),
+    fetchBackgroundsList(ruleset),
+    fetchAlignmentsList()
+  ]);
+
+  const classObj = (partial.class && partial.class !== 'Any')
+    ? { index: partial.class, name: partial.class }
+    : rng.pick(classesList);
+  const speciesObj = (partial.race && partial.race !== 'Any')
+    ? { index: partial.race, name: partial.race }
+    : rng.pick(speciesList);
+  const backgroundObj = (partial.background && partial.background !== 'Any')
+    ? { index: partial.background, name: partial.background }
+    : rng.pick(backgroundsList);
+  const alignmentObj = (partial.alignment && partial.alignment !== 'Any')
+    ? { index: partial.alignment, name: partial.alignment }
+    : rng.pick(alignmentsList);
+
+  const className = classObj?.name || classObj?.index || 'Fighter';
+  const race = speciesObj?.name || speciesObj?.index || 'Human';
+  const background = backgroundObj?.name || backgroundObj?.index || 'Soldier';
+  const alignment = alignmentObj?.name || alignmentObj?.index || 'True Neutral';
+
   const level = partial.level !== undefined ? partial.level : 0;
   const gender = partial.gender && partial.gender !== 'Random' ? partial.gender : rng.pick(['Male', 'Female']);
 
@@ -251,8 +271,8 @@ export async function generateNPCAsync(partial: any): Promise<any> {
     fetchSpeciesData(race, ruleset)
   ]);
 
-  // 1. STATS: Standard stats or Point Buy/Rolling
-  const stats = partial.stats || NPCChoiceResolver.resolveStats(partial.statGenMethod || 'Rolling');
+  // 1. STATS: Thread explicit RNG
+  const stats = partial.stats || NPCChoiceResolver.resolveStats(partial.statGenMethod || 'Rolling', rng.fork('stats'));
 
   // Hit die and HP calculation from canonical class record
   const hitDie = classData?.hit_die || CLASS_DATA[className]?.hitDie || 8;
@@ -306,20 +326,21 @@ export async function generateNPCAsync(partial: any): Promise<any> {
     weight: `${rng.nextInt(120, 220)} lbs`
   };
 
-  // 6. PROFICIENCIES & FEATURES
+  // 6. PROFICIENCIES & FEATURES: Thread explicit RNG
   const proficiencies = partial.proficiencies && partial.proficiencies.length > 0
     ? partial.proficiencies
-    : NPCChoiceResolver.resolveAllProficiencies(classData, backgroundData, speciesData);
+    : NPCChoiceResolver.resolveAllProficiencies(classData, backgroundData, speciesData, rng.fork('proficiencies'));
 
   const features = partial.features || classData?.features || [];
 
-  // 7. SPELLS
-  const spells = partial.spells || await NPCChoiceResolver.resolveSpells(classData);
+  // 7. SPELLS: Thread explicit RNG
+  const spells = partial.spells || await NPCChoiceResolver.resolveSpells(classData, rng.fork('spells'));
 
-  // 8. EQUIPMENT: V2 canonical manifestation
-  const startingEquipment = await NPCChoiceResolver.resolveFullStartingEquipment(classData, backgroundData);
+  // 8. EQUIPMENT: Thread explicit RNG for V2 canonical manifestation
+  const startingEquipment = await NPCChoiceResolver.resolveFullStartingEquipment(classData, backgroundData, rng.fork('equipment'));
 
-  const npcId = partial.id || `npc-${Date.now()}`;
+  // Deterministic ID derived from seed & ruleset without Date.now()
+  const npcId = partial.id || `npc_${ruleset}_${seed}`;
   const npcIndex = npcId.toLowerCase().replace(/\s+/g, '_');
   const repo = "japiohopman/artificer";
   const branch = "main";
@@ -356,7 +377,7 @@ export async function generateNPCAsync(partial: any): Promise<any> {
     choices: partial.choices || {},
     hp,
     maxHp: hp,
-    money: partial.money || NPCChoiceResolver.resolveStartingMoney(),
+    money: partial.money || NPCChoiceResolver.resolveStartingMoney(rng.fork('money')),
     voiceProfile: partial.voiceProfile || `${className} ${gender} voice`,
     isNpc: true,
     isRecruitable: true,
@@ -430,7 +451,7 @@ export function generateNPC(partial: any): any {
     weight: `${rng.nextInt(120, 220)} lbs`
   };
 
-  const npcId = partial.id || `npc-${Date.now()}`;
+  const npcId = partial.id || `npc_${ruleset}_${seed}`;
   const npcIndex = npcId.toLowerCase().replace(/\s+/g, '_');
   const repo = "japiohopman/artificer";
   const branch = "main";

@@ -289,6 +289,7 @@ export class NPCChoiceResolver {
       slots: [...EQUIPMENT_SLOT_CATALOG].map(s => ({ ...s, itemId: null }))
     };
 
+    const baseTimestamp = 1700000000000;
     for (let idx = 0; idx < items.length; idx++) {
       const item = items[idx];
       const id = `item_${rng.nextInt(100000, 999999)}_${idx}`;
@@ -296,7 +297,7 @@ export class NPCChoiceResolver {
         id,
         template: item.index,
         quantity: item.quantity || 1,
-        addedAt: Date.now()
+        addedAt: baseTimestamp
       };
 
       const slot = await CharacterPipeline.resolveEquipmentSlot(item.index);
@@ -356,8 +357,8 @@ export class NPCChoiceResolver {
   /**
    * Resolves personality aspects from background deterministically.
    */
-  static resolvePersonality(background: AtlasBackground | null, seed?: number | string): { traits: string[], ideals: string[], bonds: string[], flaws: string[] } {
-    return resolvePersonalityDomain(background, seed);
+  static resolvePersonality(background: AtlasBackground | null, seed?: number | string | SeedableRNG): { traits: string[], ideals: string[], bonds: string[], flaws: string[] } {
+    return resolvePersonalityDomain(background, seed instanceof SeedableRNG ? undefined : seed);
   }
 
   /**
@@ -414,7 +415,7 @@ export class NPCChoiceResolver {
   /**
    * Resolves ability scores based on a specific method deterministically.
    */
-  static resolveStats(method: 'Standard Array' | 'Rolling' | 'Point Buy', seed?: number | string): NPCProfile['stats'] {
+  static resolveStats(method: 'Standard Array' | 'Rolling' | 'Point Buy', seed?: number | string | SeedableRNG): NPCProfile['stats'] {
     const stats: NPCProfile['stats'] = { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
     const keys: (keyof NPCProfile['stats'])[] = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
     const rng = getRng(seed);
@@ -469,7 +470,7 @@ export class NPCChoiceResolver {
   /**
    * Resolves starting money between 5 and 100 GP deterministically.
    */
-  static resolveStartingMoney(seed?: number | string): { cp: number, sp: number, ep: number, gp: number, pp: number } {
+  static resolveStartingMoney(seed?: number | string | SeedableRNG): { cp: number, sp: number, ep: number, gp: number, pp: number } {
     const rng = getRng(seed);
     const totalGP = rng.nextInt(5, 100);
     return {

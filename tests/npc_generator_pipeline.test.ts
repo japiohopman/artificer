@@ -58,7 +58,7 @@ describe('NPC Generator Pipeline Architecture (#368)', () => {
     expect(npc.equipment.slots).toBeDefined();
   });
 
-  it('produces deterministic output when given the same seed', async () => {
+  it('produces 100% complete deterministic output when given the same seed', async () => {
     const seed = 'deterministic_replay_seed_99';
 
     const npc1 = await generateNPCAsync({
@@ -79,13 +79,33 @@ describe('NPC Generator Pipeline Architecture (#368)', () => {
       seed
     });
 
-    // Acceptance Criterion 12: Seed replay determinism
+    // Acceptance Criterion 12: Complete projection seed replay determinism
+    expect(npc1.id).toBe(npc2.id);
+    expect(npc1.ruleset).toBe(npc2.ruleset);
     expect(npc1.name).toBe(npc2.name);
+    expect(npc1.class).toBe(npc2.class);
+    expect(npc1.race).toBe(npc2.race);
+    expect(npc1.background).toBe(npc2.background);
+    expect(npc1.alignment).toBe(npc2.alignment);
+    expect(npc1.level).toBe(npc2.level);
+    expect(npc1.hp).toBe(npc2.hp);
+    expect(npc1.maxHp).toBe(npc2.maxHp);
+    expect(npc1.stats).toEqual(npc2.stats);
+    expect(npc1.appearance).toEqual(npc2.appearance);
+    expect(npc1.proficiencies).toEqual(npc2.proficiencies);
+    expect(npc1.features).toEqual(npc2.features);
+    expect(npc1.spells).toEqual(npc2.spells);
     expect(npc1.traits).toEqual(npc2.traits);
     expect(npc1.ideals).toEqual(npc2.ideals);
     expect(npc1.bonds).toEqual(npc2.bonds);
     expect(npc1.flaws).toEqual(npc2.flaws);
     expect(npc1.backstory).toBe(npc2.backstory);
+    expect(npc1.money).toEqual(npc2.money);
+    expect(npc1.inventory).toEqual(npc2.inventory);
+    expect(npc1.backpack).toEqual(npc2.backpack);
+    expect(npc1.items).toEqual(npc2.items);
+    expect(npc1.containers).toEqual(npc2.containers);
+    expect(npc1.equipment).toEqual(npc2.equipment);
   });
 
   it('supports 2024 ruleset isolation without leaking 2014 legacy data', async () => {
@@ -111,7 +131,8 @@ describe('NPC Generator Pipeline Architecture (#368)', () => {
       name: 'Bartholomew',
       class: 'Cleric',
       race: 'Dwarf',
-      background: 'Acolyte'
+      background: 'Acolyte',
+      seed: 'sync_test_seed'
     });
 
     expect(npc.name).toBe('Bartholomew');
