@@ -3,6 +3,7 @@ import { CharacterPipeline } from "./characterPipeline";
 import { NPCProfile } from "../services/ai/npcService";
 import { ItemInstance, InventorySlot, InventoryContainer, EQUIPMENT_SLOT_CATALOG } from "../types/inventory";
 import { resolvePersonality as resolvePersonalityDomain } from "./narrative/narrativeResolver";
+import { SeedableRNG } from "./naming/rng";
 
 const SLOT_MAP: Record<string, string> = {
   'chest': 'chest',
@@ -28,22 +29,34 @@ export interface ResolvedItem {
   [key: string]: any;
 }
 
+let resolverSeedCounter = 0;
+
+function getRng(seed?: number | string | SeedableRNG): SeedableRNG {
+  if (seed instanceof SeedableRNG) return seed;
+  if (seed !== undefined && seed !== null) {
+    return new SeedableRNG(seed);
+  }
+  resolverSeedCounter = (resolverSeedCounter + 1) % 1000000;
+  return new SeedableRNG(`choice_resolver_${Date.now()}_${resolverSeedCounter}`);
+}
+
 export class NPCChoiceResolver {
   private static REPO = "japiohopman/artificer";
   private static BRANCH = "main";
 
   /**
-   * Resolves a complex "choice" object from D&D 5e-style JSON.
+   * Resolves a complex "choice" object from D&D 5e-style JSON deterministically.
    */
-  static async resolveChoice(choice: any): Promise<any[]> {
+  static async resolveChoice(choice: any, seed?: number | string | SeedableRNG): Promise<any[]> {
     if (!choice) return [];
+    const rng = getRng(seed);
     
     // If it's a multiple-item choice (results in multiple items)
     if (choice.option_type === 'multiple' || choice.items) {
       const results: any[] = [];
       const items = choice.items || choice.from?.options || [];
-      for (const item of items) {
-        const nested = await this.resolveChoice(item);
+      for (let i = 0; i < items.length; i++) {
+        const nested = await this.resolveChoice(items[i], rng.fork(`mult_${i}`));
         results.push(...nested);
       }
       return results;
@@ -57,13 +70,13 @@ export class NPCChoiceResolver {
       if (from.option_set_type === 'options_array') {
         const options = from.options || [];
         if (options.length === 0) return [];
-        const randomOpt = options[Math.floor(Math.random() * options.length)];
-        return this.resolveChoice(randomOpt);
+        const randomOpt = rng.pick(options);
+        return this.resolveChoice(randomOpt, rng.fork('opt_array'));
       } else if (from.option_set_type === 'equipment_category') {
         if (!from.equipment_category?.index) return [];
         const categoryItems = await atlasService.loadEquipmentByCategory(from.equipment_category.index);
         if (categoryItems.length > 0) {
-          const randomItem = categoryItems[Math.floor(Math.random() * categoryItems.length)];
+          const randomItem = rng.pick(categoryItems);
           return [{ index: randomItem.index, name: randomItem.name, quantity: 1 }];
         }
       }
@@ -124,10 +137,12 @@ export class NPCChoiceResolver {
   /**
    * Standardizes item objects with correct URLs and metadata.
    */
-  static async standardizeItems(items: any[]): Promise<ResolvedItem[]> {
+  static async standardizeItems(items: any[], seed?: number | string | SeedableRNG): Promise<ResolvedItem[]> {
     const standardized: ResolvedItem[] = [];
+    const rng = getRng(seed);
 
-    for (const raw of items) {
+    for (let idx = 0; idx < items.length; idx++) {
+      const raw = items[idx];
       if (!raw) continue;
       const index = String(raw.index || raw.item?.index || '');
       if (!index) continue;
@@ -139,7 +154,7 @@ export class NPCChoiceResolver {
       const safeName = Array.isArray(rawName) ? rawName[0] : (typeof rawName === 'string' ? rawName : String(rawName));
       
       const item: ResolvedItem = {
-        id: `${index}_${Math.random().toString(36).substr(2, 9)}`,
+        id: `${index}_${rng.nextInt(100000, 999999)}`,
         index: index,
         name: safeName.toLowerCase().replace(/[_-]/g, ' '),
         quantity: raw.quantity || 1,
@@ -160,9 +175,13 @@ export class NPCChoiceResolver {
   }
 
   /**
-   * Resolves starting equipment.
+   * Resolves starting equipment deterministically.
    */
-  static async resolveFullStartingEquipment(atlasClass: AtlasClass | null, atlasBackground: AtlasBackground | null): Promise<{ 
+  static async resolveFullStartingEquipment(
+    atlasClass: AtlasClass | null,
+    atlasBackground: AtlasBackground | null,
+    seed?: number | string | SeedableRNG
+  ): Promise<{
     inventory: Record<string, ResolvedItem>, 
     backpack: ResolvedItem[],
     v2: {
@@ -171,6 +190,7 @@ export class NPCChoiceResolver {
       equipment: { containerId: string, slots: InventorySlot[] }
     }
   }> {
+    const rng = getRng(seed);
     let allRawItems: any[] = [];
 
     if (atlasClass?.starting_equipment) {
@@ -185,22 +205,24 @@ export class NPCChoiceResolver {
     }
 
     if (atlasClass?.starting_equipment_options) {
-      for (const option of atlasClass.starting_equipment_options) {
-        const resolved = await this.resolveChoice(option);
+      for (let i = 0; i < atlasClass.starting_equipment_options.length; i++) {
+        const option = atlasClass.starting_equipment_options[i];
+        const resolved = await this.resolveChoice(option, rng.fork(`cls_opt_${i}`));
         allRawItems.push(...resolved);
       }
     }
     if (atlasBackground?.starting_equipment_options) {
-      for (const option of atlasBackground.starting_equipment_options) {
-        const resolved = await this.resolveChoice(option);
+      for (let i = 0; i < atlasBackground.starting_equipment_options.length; i++) {
+        const option = atlasBackground.starting_equipment_options[i];
+        const resolved = await this.resolveChoice(option, rng.fork(`bg_opt_${i}`));
         allRawItems.push(...resolved);
       }
     }
 
     const expandedItems = await this.expandPacks(allRawItems);
-    const standardizedItems = await this.standardizeItems(expandedItems);
+    const standardizedItems = await this.standardizeItems(expandedItems, rng.fork('standardize'));
     const v1 = await this.buildResolvedInventory({}, standardizedItems);
-    const v2 = await this.buildV2Inventory(standardizedItems);
+    const v2 = await this.buildV2Inventory(standardizedItems, rng.fork('v2_inv'));
     
     return { ...v1, v2 };
   }
@@ -208,16 +230,13 @@ export class NPCChoiceResolver {
   /**
    * Resolves spells for a class (cantrips and level 1).
    */
-  static async resolveSpells(atlasClass: any): Promise<any[]> {
+  static async resolveSpells(atlasClass: any, seed?: number | string | SeedableRNG): Promise<any[]> {
     const spells: any[] = [];
-    if (!atlasClass || !atlasClass.spells) {
-       // Check if there's a spellcasting property
-       if (!atlasClass?.spellcasting) return [];
-    }
+    const rng = getRng(seed);
 
-    // This is a simplified resolver; real D&D 5e data might be in different places
-    // Usually atlasClass.spells is a URL or a list of options
-    // Let's assume there's a proficiency_choices for spells or a direct spells array
+    if (!atlasClass || (!atlasClass.spells && !atlasClass.spellcasting)) {
+       return [];
+    }
     
     const resolveList = async (list: any[]) => {
       for (const item of list) {
@@ -232,11 +251,11 @@ export class NPCChoiceResolver {
        await resolveList(atlasClass.spells);
     }
 
-    // Handle magic choices (common in Wizard/Cleric)
     if (atlasClass.proficiency_choices) {
-      for (const choice of atlasClass.proficiency_choices) {
+      for (let i = 0; i < atlasClass.proficiency_choices.length; i++) {
+        const choice = atlasClass.proficiency_choices[i];
         if (choice.type === 'spells' || choice.from?.option_set_type === 'spells') {
-          const resolved = await this.resolveChoice(choice);
+          const resolved = await this.resolveChoice(choice, rng.fork(`spell_choice_${i}`));
           for (const r of resolved) {
              const full = await atlasService.loadSpell(r.index);
              if (full) spells.push(full);
@@ -249,15 +268,16 @@ export class NPCChoiceResolver {
   }
 
   /**
-   * Helper to build v2 inventory structure.
+   * Helper to build v2 inventory structure deterministically.
    */
-  static async buildV2Inventory(items: ResolvedItem[]): Promise<{ 
+  static async buildV2Inventory(items: ResolvedItem[], seed?: number | string | SeedableRNG): Promise<{
     items: Record<string, ItemInstance>, 
     containers: Record<string, InventoryContainer>, 
     equipment: { containerId: string, slots: InventorySlot[] } 
   }> {
+    const rng = getRng(seed);
     const registry: Record<string, ItemInstance> = {};
-    const backpackId = `backpack_${Math.random().toString(36).substr(2, 9)}`;
+    const backpackId = `backpack_${rng.nextInt(100000, 999999)}`;
     const backpack: InventoryContainer = {
       id: backpackId,
       name: "Backpack",
@@ -265,12 +285,13 @@ export class NPCChoiceResolver {
       slots: Array.from({ length: 120 }, (_, i) => ({ id: `slot_${i}`, itemId: null }))
     };
     const equipment = {
-      containerId: `equipment_${Math.random().toString(36).substr(2, 9)}`,
+      containerId: `equipment_${rng.nextInt(100000, 999999)}`,
       slots: [...EQUIPMENT_SLOT_CATALOG].map(s => ({ ...s, itemId: null }))
     };
 
-    for (const item of items) {
-      const id = crypto.randomUUID();
+    for (let idx = 0; idx < items.length; idx++) {
+      const item = items[idx];
+      const id = `item_${rng.nextInt(100000, 999999)}_${idx}`;
       registry[id] = {
         id,
         template: item.index,
@@ -340,10 +361,16 @@ export class NPCChoiceResolver {
   }
 
   /**
-   * Resolves proficiency choices across class, background, and race.
+   * Resolves proficiency choices across class, background, and race deterministically.
    */
-  static resolveAllProficiencies(atlasClass: AtlasClass | null, atlasBackground: AtlasBackground | null, atlasSpecies: AtlasSpecies | null): string[] {
+  static resolveAllProficiencies(
+    atlasClass: AtlasClass | null,
+    atlasBackground: AtlasBackground | null,
+    atlasSpecies: AtlasSpecies | null,
+    seed?: number | string | SeedableRNG
+  ): string[] {
     let results: string[] = [];
+    const rng = getRng(seed);
 
     // 1. Static proficiencies
     if (atlasClass?.proficiencies) {
@@ -357,9 +384,10 @@ export class NPCChoiceResolver {
     }
 
     // 2. Resolve choices
-    const resolveFromChoices = (source: any) => {
+    const resolveFromChoices = (source: any, subKey: string) => {
       if (!source?.proficiency_choices) return;
-      for (const choice of source.proficiency_choices) {
+      for (let i = 0; i < source.proficiency_choices.length; i++) {
+        const choice = source.proficiency_choices[i];
         const options = choice.from.options || [];
         const chooseCount = choice.choose || 1;
         
@@ -368,7 +396,8 @@ export class NPCChoiceResolver {
           return !results.includes(idx);
         });
 
-        const shuffled = [...available].sort(() => 0.5 - Math.random());
+        const childRng = rng.fork(`${subKey}_${i}`);
+        const shuffled = childRng.shuffle(available);
         shuffled.slice(0, Math.min(chooseCount, shuffled.length)).forEach((s: any) => {
           const idx = s.item?.index || s.index;
           if (idx) results.push(idx);
@@ -376,59 +405,58 @@ export class NPCChoiceResolver {
       }
     };
 
-    resolveFromChoices(atlasClass);
-    resolveFromChoices(atlasBackground);
-    resolveFromChoices(atlasSpecies);
+    resolveFromChoices(atlasClass, 'cls');
+    resolveFromChoices(atlasBackground, 'bg');
+    resolveFromChoices(atlasSpecies, 'spc');
     return [...new Set(results)];
   }
 
   /**
-   * Resolves ability scores based on a specific method.
+   * Resolves ability scores based on a specific method deterministically.
    */
-  static resolveStats(method: 'Standard Array' | 'Rolling' | 'Point Buy'): NPCProfile['stats'] {
+  static resolveStats(method: 'Standard Array' | 'Rolling' | 'Point Buy', seed?: number | string): NPCProfile['stats'] {
     const stats: NPCProfile['stats'] = { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
     const keys: (keyof NPCProfile['stats'])[] = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
+    const rng = getRng(seed);
 
     if (method === 'Standard Array') {
       const array = [15, 14, 13, 12, 10, 8];
-      const shuffled = [...array].sort(() => 0.5 - Math.random());
+      const shuffled = rng.shuffle(array);
       keys.forEach((key, i) => stats[key] = shuffled[i]);
       return stats;
     }
     
     if (method === 'Rolling') {
-      const rollStat = () => {
+      const rollStat = (subKey: string) => {
+        const childRng = rng.fork(subKey);
         const rolls = [
-          Math.floor(Math.random() * 6) + 1,
-          Math.floor(Math.random() * 6) + 1,
-          Math.floor(Math.random() * 6) + 1,
-          Math.floor(Math.random() * 6) + 1
+          childRng.nextInt(1, 6),
+          childRng.nextInt(1, 6),
+          childRng.nextInt(1, 6),
+          childRng.nextInt(1, 6)
         ].sort((a, b) => a - b);
         return rolls[1] + rolls[2] + rolls[3]; // 4d6 drop lowest
       };
-      keys.forEach(key => stats[key] = rollStat());
+      keys.forEach(key => stats[key] = rollStat(key));
       return stats;
     }
 
     if (method === 'Point Buy') {
-      // Very basic point buy simulation for NPCs
-      // Start all at 8, spend 27 points
       const pointsArray = [0, 0, 0, 0, 0, 0];
       let remaining = 27;
+      let counter = 0;
       while (remaining > 0) {
-        const idx = Math.floor(Math.random() * 6);
-        if (pointsArray[idx] < 7) { // Max 15 (7 points spent on top of 8 base)
+        const idx = rng.nextInt(0, 5);
+        counter++;
+        if (pointsArray[idx] < 7) {
           pointsArray[idx]++;
           remaining--;
         } else {
-          // If all are maxed or near max, just stop or break
-          if (pointsArray.every(p => p >= 7)) break;
+          if (pointsArray.every(p => p >= 7) || counter > 100) break;
         }
       }
       keys.forEach((key, i) => {
         const spent = pointsArray[i];
-        // Point buy costs: 8->0, 9->1, 10->2, 11->3, 12->4, 13->5, 14->7, 15->9
-        // Simplified mapping for simulation
         const mapping: Record<number, number> = { 0:8, 1:9, 2:10, 3:11, 4:12, 5:13, 6:14, 7:15 };
         stats[key] = mapping[spent] || 15;
       });
@@ -439,10 +467,11 @@ export class NPCChoiceResolver {
   }
 
   /**
-   * Resolves starting money between 5 and 100 GP.
+   * Resolves starting money between 5 and 100 GP deterministically.
    */
-  static resolveStartingMoney(): { cp: number, sp: number, ep: number, gp: number, pp: number } {
-    const totalGP = Math.floor(Math.random() * 96) + 5; // 5 to 100
+  static resolveStartingMoney(seed?: number | string): { cp: number, sp: number, ep: number, gp: number, pp: number } {
+    const rng = getRng(seed);
+    const totalGP = rng.nextInt(5, 100);
     return {
       cp: 0,
       sp: 0,
