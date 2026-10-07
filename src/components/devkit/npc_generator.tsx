@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { CharacterPipeline } from '../../lib/characterPipeline';
 import { 
   getLevelFromXP, getXPForLevel, generateStandardStats, 
-  calculateHP, randomFromList, DND_CLASSES, DND_RACES_2014, DND_RACES_2024, DND_ALIGNMENTS, DND_BACKGROUNDS,
+  calculateHP, randomFromList,
   getModifier, calculateInitiative, generateNPCAsync, generateNPC
 } from '../../lib/npcGeneratorUtils';
 import { generateName } from '../../lib/naming';
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground, StartingEquipmentOption } from '../../services/atlasService';
 import { generateNPCData, generateNPCImages, NPCProfile } from '../../services/ai/npcService';
-import { commitFile, playSuccessSound, playFailSound, playClickSound, normalizeImageUrl } from '../../services/storageService';
+import { commitFile, playSuccessSound, playFailSound, playClickSound, normalizeImageUrl, fetchClassesList, fetchSpeciesList, fetchBackgroundsList, fetchAlignmentsList } from '../../services/storageService';
 import { useUIStore } from '../../store/useUIStore';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
@@ -94,7 +94,27 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
   const [atlasBackground, setAtlasBackground] = useState<AtlasBackground | null>(null);
   const [isChecking, setIsChecking] = useState(false);
 
-  const activePlayableRaces = rulesetContext === '2024' ? DND_RACES_2024 : DND_RACES_2014;
+  // Canonical ruleset-aware Atlas domain lists
+  const [availableClasses, setAvailableClasses] = useState<string[]>([]);
+  const [availableSpecies, setAvailableSpecies] = useState<string[]>([]);
+  const [availableBackgrounds, setAvailableBackgrounds] = useState<string[]>([]);
+  const [availableAlignments, setAvailableAlignments] = useState<string[]>([]);
+
+  useEffect(() => {
+    const loadAtlasDomainLists = async () => {
+      const [cList, sList, bList, aList] = await Promise.all([
+        fetchClassesList(rulesetContext),
+        fetchSpeciesList(rulesetContext),
+        fetchBackgroundsList(rulesetContext),
+        fetchAlignmentsList()
+      ]);
+      setAvailableClasses(cList.map(item => item.name || item.index));
+      setAvailableSpecies(sList.map(item => item.name || item.index));
+      setAvailableBackgrounds(bList.map(item => item.name || item.index));
+      setAvailableAlignments(aList.map(item => item.name || item.index));
+    };
+    loadAtlasDomainLists();
+  }, [rulesetContext]);
 
   // Equipment resolution choices
   const [selectedChoices, setSelectedChoices] = useState<Record<number, any>>({});
@@ -219,10 +239,10 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
     setIsGeneratingNpc(true);
     try {
       const data = await generateNPCData(npcData, { 
-        classList: DND_CLASSES as string[],
-        speciesList: activePlayableRaces as string[],
-        backgroundList: DND_BACKGROUNDS as string[],
-        alignmentList: DND_ALIGNMENTS as string[],
+        classList: availableClasses,
+        speciesList: availableSpecies,
+        backgroundList: availableBackgrounds,
+        alignmentList: availableAlignments,
         statGenMethod: statGenMethod
       });
 
@@ -1119,9 +1139,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                           onChange={(e) => setNpcData({ ...npcData, class: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
-                          {DND_CLASSES.map(c => <option key={c} value={c} className="bg-[#1a1a1a]">{c}</option>)}
+                          {availableClasses.map(c => <option key={c} value={c} className="bg-[#1a1a1a]">{c}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('class', DND_CLASSES)} title="Randomize Class" />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('class', availableClasses)} title="Randomize Class" />
                       </div>
                     </div>
                     <div className="space-y-1">
@@ -1133,9 +1153,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                           onChange={(e) => setNpcData({ ...npcData, race: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
-                          {activePlayableRaces.map(r => <option key={r} value={r} className="bg-[#1a1a1a]">{r}</option>)}
+                          {availableSpecies.map(r => <option key={r} value={r} className="bg-[#1a1a1a]">{r}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('race', activePlayableRaces)} title="Randomize Race" />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('race', availableSpecies)} title="Randomize Race" />
                       </div>
                     </div>
                     <div className="space-y-1">
@@ -1147,9 +1167,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                           onChange={(e) => setNpcData({ ...npcData, background: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
-                          {DND_BACKGROUNDS.map(b => <option key={b} value={b} className="bg-[#1a1a1a]">{b}</option>)}
+                          {availableBackgrounds.map(b => <option key={b} value={b} className="bg-[#1a1a1a]">{b}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('background', DND_BACKGROUNDS)} title="Randomize Background" />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('background', availableBackgrounds)} title="Randomize Background" />
                       </div>
                     </div>
                     <div className="space-y-1">
@@ -1161,9 +1181,9 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
                           onChange={(e) => setNpcData({ ...npcData, alignment: e.target.value })}
                           className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white rounded appearance-none font-bold"
                         >
-                          {DND_ALIGNMENTS.map(a => <option key={a} value={a} className="bg-[#1a1a1a]">{a}</option>)}
+                          {availableAlignments.map(a => <option key={a} value={a} className="bg-[#1a1a1a]">{a}</option>)}
                         </select>
-                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('alignment', DND_ALIGNMENTS)} title="Randomize Alignment" />
+                        <GameIcon name="dice_roll" size={10} className="absolute right-2 top-1/2 -translate-y-1/2 text-white/20 group-hover:text-purple-400 cursor-pointer" onClick={() => randomizeField('alignment', availableAlignments)} title="Randomize Alignment" />
                       </div>
                     </div>
                   </div>
