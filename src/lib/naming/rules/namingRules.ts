@@ -320,7 +320,7 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     description: 'Traditional guttural Orc birth name passed down through clan lineage.',
     compositionPattern: '{given}',
     componentRules: [
-      { type: 'given', required: true, poolSource: 'halfOrc.genderGiven' }
+      { type: 'given', required: true, poolSource: 'orc.genderGiven' }
     ],
     matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'orc',
     scoreMatch: () => 15
@@ -334,8 +334,8 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     description: 'Goliath birth given name and mountain clan lineage.',
     compositionPattern: '{given} {clan}',
     componentRules: [
-      { type: 'given', required: true, poolSource: 'dwarf.genderGiven' },
-      { type: 'clan', required: true, poolSource: 'dwarf.clanNames' }
+      { type: 'given', required: true, poolSource: 'goliath.genderGiven' },
+      { type: 'clan', required: true, poolSource: 'goliath.clanNames' }
     ],
     matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'goliath',
     scoreMatch: () => 15
@@ -452,6 +452,25 @@ export function resolveDataPool(poolSource: string, ctx: NamingContext): readonl
     return resolveGenderPool(
       SOURCE_NAMING_DATA.tiefling.maleGiven,
       SOURCE_NAMING_DATA.tiefling.femaleGiven,
+      undefined,
+      genderStr
+    );
+  }
+
+  if (poolSource === 'goliath.genderGiven') {
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.goliath?.maleGiven || [],
+      SOURCE_NAMING_DATA.goliath?.femaleGiven || [],
+      undefined,
+      genderStr
+    );
+  }
+  if (poolSource === 'goliath.clanNames') return SOURCE_NAMING_DATA.goliath?.clanNames || [];
+
+  if (poolSource === 'orc.genderGiven') {
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.orc?.maleGiven || [],
+      SOURCE_NAMING_DATA.orc?.femaleGiven || [],
       undefined,
       genderStr
     );
