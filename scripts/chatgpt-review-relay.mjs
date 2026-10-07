@@ -100,19 +100,19 @@ async function ensureLabel(repository, token) {
 }
 
 async function setLabel(repository, token, issueNumber, active) {
+  if (active) {
+    await ensureLabel(repository, token);
+    await github(repository, token, 'issues/' + issueNumber + '/labels', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ labels: [RELAY_LABEL] })
+    });
+    return;
+  }
   try {
-    if (active) {
-      await ensureLabel(repository, token);
-      await github(repository, token, 'issues/' + issueNumber + '/labels', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ labels: [RELAY_LABEL] })
-      });
-      return;
-    }
     await github(repository, token, 'issues/' + issueNumber + '/labels/' + encodeURIComponent(RELAY_LABEL), { method: 'DELETE' });
   } catch (error) {
-    console.warn('Relay label operation warning (non-fatal):', error.message || error);
+    if (!String(error).includes(' 404 ')) throw error;
   }
 }
 
