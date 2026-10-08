@@ -26,6 +26,8 @@ export interface SourceNamingCatalog {
   dwarf: SourceNamePool;
   halfling: SourceNamePool;
   halfOrc: SourceNamePool;
+  goliath?: SourceNamePool;
+  orc?: SourceNamePool;
   /** Regional human ethnic naming pools derived from official source material + neutral fallback */
   human: Record<string, SourceNamePool>;
   /** Explicit project-authored fallback and generic extension pools (NOT presented as official D&D source material) */
@@ -178,6 +180,36 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     femaleGiven: [
       'Baggi', 'Emen', 'Engong', 'Kansif', 'Myev', 'Neega',
       'Ovak', 'Ownka', 'Shautha', 'Sulha', 'Vola', 'Volen', 'Yevelda'
+    ]
+  },
+
+  // --- 7b. Goliath (Source-derived: Volo's / Elemental Evil / 2024 PHB) ---
+  goliath: {
+    maleGiven: [
+      'Aukan', 'Eglath', 'Gae-Al', 'Kavak', 'Manneo', 'Maveith',
+      'Nalok', 'Orilo', 'Paavu', 'Vakkel'
+    ],
+    femaleGiven: [
+      'Gael', 'Kallie', 'Kuori', 'Lagazi', 'Manea', 'Nalla',
+      'Petiha', 'Thalai', 'Uren', 'Vashti'
+    ],
+    clanNames: [
+      'Anakalathai', 'Gathakanathi', 'Kalagulerio', 'Katho-Olavi', 'Koolaunath',
+      'Nola-Kotu', 'Ogolakanu', 'Thuliaga', 'Vimei-Lakan'
+    ]
+  },
+
+  // --- 7c. Orc (Source-derived: PHB Ch. 2 / Volo's) ---
+  orc: {
+    maleGiven: [
+      'Dench', 'Feng', 'Gell', 'Henk', 'Holg', 'Imsh',
+      'Keth', 'Krusk', 'Mhurren', 'Ront', 'Shump', 'Thokk',
+      'Brak', 'Garm', 'Krag'
+    ],
+    femaleGiven: [
+      'Baggi', 'Emen', 'Engong', 'Kansif', 'Myev', 'Neega',
+      'Ovak', 'Ownka', 'Shautha', 'Sulha', 'Vola', 'Volen', 'Yevelda',
+      'Gora', 'Kroka'
     ]
   },
 

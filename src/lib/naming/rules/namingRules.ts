@@ -37,6 +37,8 @@ export function normalizeSpeciesKey(species?: string): string {
   if (clean.includes('halfling')) return 'halfling';
   if (clean.includes('halfelf') || (clean.includes('half') && clean.includes('elf'))) return 'halfElf';
   if (clean.includes('halforc') || (clean.includes('half') && clean.includes('orc'))) return 'halfOrc';
+  if (clean.includes('goliath')) return 'goliath';
+  if (clean.includes('orc')) return 'orc';
   if (clean.includes('human')) return 'human';
   return clean;
 }
@@ -303,8 +305,40 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     componentRules: [
       { type: 'given', required: true, poolSource: 'halfOrc.genderGiven' }
     ],
-    matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'halfOrc',
-    scoreMatch: () => 10
+    matchesContext: (ctx) => {
+      const sp = normalizeSpeciesKey(ctx.species);
+      return sp === 'halfOrc' || sp === 'orc';
+    },
+    scoreMatch: (ctx) => (normalizeSpeciesKey(ctx.species) === 'halfOrc' ? 12 : 10)
+  },
+
+  // 11b. Orc Naming
+  {
+    id: 'orc_traditional',
+    species: 'orc',
+    tradition: 'Orc Tribal Heritage Name',
+    description: 'Traditional guttural Orc birth name passed down through clan lineage.',
+    compositionPattern: '{given}',
+    componentRules: [
+      { type: 'given', required: true, poolSource: 'orc.genderGiven' }
+    ],
+    matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'orc',
+    scoreMatch: () => 15
+  },
+
+  // 11c. Goliath Naming
+  {
+    id: 'goliath_traditional',
+    species: 'goliath',
+    tradition: 'Goliath Birth & Clan Lineage',
+    description: 'Goliath birth given name and mountain clan lineage.',
+    compositionPattern: '{given} {clan}',
+    componentRules: [
+      { type: 'given', required: true, poolSource: 'goliath.genderGiven' },
+      { type: 'clan', required: true, poolSource: 'goliath.clanNames' }
+    ],
+    matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'goliath',
+    scoreMatch: () => 15
   },
 
   // 12a. Human Cultural Naming - Shou Tradition (Surname First)
@@ -418,6 +452,25 @@ export function resolveDataPool(poolSource: string, ctx: NamingContext): readonl
     return resolveGenderPool(
       SOURCE_NAMING_DATA.tiefling.maleGiven,
       SOURCE_NAMING_DATA.tiefling.femaleGiven,
+      undefined,
+      genderStr
+    );
+  }
+
+  if (poolSource === 'goliath.genderGiven') {
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.goliath?.maleGiven || [],
+      SOURCE_NAMING_DATA.goliath?.femaleGiven || [],
+      undefined,
+      genderStr
+    );
+  }
+  if (poolSource === 'goliath.clanNames') return SOURCE_NAMING_DATA.goliath?.clanNames || [];
+
+  if (poolSource === 'orc.genderGiven') {
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.orc?.maleGiven || [],
+      SOURCE_NAMING_DATA.orc?.femaleGiven || [],
       undefined,
       genderStr
     );

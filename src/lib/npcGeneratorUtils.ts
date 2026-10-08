@@ -1,6 +1,11 @@
-
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG } from '../types/inventory';
 import { generateName } from './naming';
+import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground } from '../services/atlasService';
+import { fetchClassData, fetchBackgroundData, fetchSpeciesData, fetchClassesList, fetchSpeciesList, fetchBackgroundsList, fetchAlignmentsList } from '../services/storageService';
+import { NPCChoiceResolver } from './npcChoiceResolver';
+import { resolvePersonality, generateDeterministicBackstory } from './narrative/narrativeResolver';
+import { CharacterPipeline } from './characterPipeline';
+import { SeedableRNG } from './naming/rng';
 
 const SLOT_MAP: Record<string, string> = {
   'chest': 'chest',
@@ -29,20 +34,36 @@ export function getXPForLevel(level: number): number {
   return XP_TABLE[Math.min(Math.max(level, 0), 20)] || 0;
 }
 
-export function rollAbilityScore(): number {
-  const rolls = Array.from({ length: 4 }, () => Math.floor(Math.random() * 6) + 1);
+let consumerSeedCounter = 0;
+
+export function createConsumerSeed(prefix: string = 'npc_action'): string {
+  consumerSeedCounter = (consumerSeedCounter + 1) % 1000000;
+  return `${prefix}_${Date.now()}_${consumerSeedCounter}`;
+}
+
+let globalRngCounter = 0;
+
+function getFallbackRng(): SeedableRNG {
+  globalRngCounter = (globalRngCounter + 1) % 1000000;
+  return new SeedableRNG(`fallback_rng_${Date.now()}_${globalRngCounter}`);
+}
+
+export function rollAbilityScore(customRng?: SeedableRNG): number {
+  const rng = customRng || getFallbackRng();
+  const rolls = Array.from({ length: 4 }, () => rng.nextInt(1, 6));
   rolls.sort((a, b) => b - a); // Sort descending
   return rolls[0] + rolls[1] + rolls[2]; // Sum top 3
 }
 
-export function generateStandardStats(): { str: number; dex: number; con: number; int: number; wis: number; cha: number } {
+export function generateStandardStats(customRng?: SeedableRNG): { str: number; dex: number; con: number; int: number; wis: number; cha: number } {
+  const rng = customRng || getFallbackRng();
   return {
-    str: rollAbilityScore(),
-    dex: rollAbilityScore(),
-    con: rollAbilityScore(),
-    int: rollAbilityScore(),
-    wis: rollAbilityScore(),
-    cha: rollAbilityScore(),
+    str: rollAbilityScore(rng),
+    dex: rollAbilityScore(rng),
+    con: rollAbilityScore(rng),
+    int: rollAbilityScore(rng),
+    wis: rollAbilityScore(rng),
+    cha: rollAbilityScore(rng),
   };
 }
 
@@ -58,8 +79,10 @@ export function calculateHP(level: number, con: number, diceType: number): numbe
   return Math.max(hp, 1);
 }
 
-export function randomFromList<T>(list: T[]): T {
-  return list[Math.floor(Math.random() * list.length)];
+export function randomFromList<T>(list: T[], customRng?: SeedableRNG): T {
+  if (list.length === 0) return list[0];
+  const rng = customRng || getFallbackRng();
+  return rng.pick(list);
 }
 
 export const DND_CLASSES = [
@@ -67,11 +90,17 @@ export const DND_CLASSES = [
   'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'
 ];
 
-export const DND_RACES = [
+export const DND_RACES_2014 = [
   'Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Half-Elf', 'Half-Orc', 
-  'Halfling', 'Human', 'Tiefling', 'High Elf', 'Hill Dwarf', 
-  'Lightfoot Halfling', 'Rock Gnome'
+  'Halfling', 'Human', 'Tiefling'
 ];
+
+export const DND_RACES_2024 = [
+  'Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Goliath', 'Halfling',
+  'Human', 'Orc', 'Tiefling'
+];
+
+export const DND_RACES = DND_RACES_2014;
 
 export const DND_ALIGNMENTS = [
   'Lawful Good', 'Neutral Good', 'Chaotic Good',
@@ -90,145 +119,20 @@ export const getModifier = (score: number): number => {
   return Math.floor((score - 10) / 2);
 };
 
+// Fallback CLASS_DATA for backwards compatibility with legacy UI consumers
 export const CLASS_DATA: Record<string, any> = {
-  'Barbarian': {
-    hitDie: 12,
-    primaryStats: ['str', 'con'],
-    savingThrows: ['str', 'con'],
-    startingEquipment: [
-      { type: 'weapon', index: 'greataxe', slot: 'main-hand' },
-      { type: 'weapon', index: 'handaxe', quantity: 2, slot: 'off-hand' }, // One in hand, one in backpack
-      { type: 'pack', index: 'explorers-pack' },
-      { type: 'weapon', index: 'javelin', quantity: 4 }
-    ]
-  },
-  'Bard': {
-    hitDie: 8,
-    primaryStats: ['cha', 'dex'],
-    savingThrows: ['dex', 'cha'],
-    startingEquipment: [
-      { type: 'weapon', index: 'rapier', slot: 'main-hand' },
-      { type: 'pack', index: 'entertainers-pack' },
-      { type: 'instrument', index: 'lute', slot: 'focus' },
-      { type: 'armor', index: 'leather-armor', slot: 'chest' },
-      { type: 'weapon', index: 'dagger', slot: 'off-hand' }
-    ]
-  },
-  'Cleric': {
-    hitDie: 8,
-    primaryStats: ['wis', 'str'],
-    savingThrows: ['wis', 'cha'],
-    startingEquipment: [
-      { type: 'weapon', index: 'mace', slot: 'main-hand' },
-      { type: 'armor', index: 'scale-mail', slot: 'chest' },
-      { type: 'armor', index: 'shield', slot: 'off-hand' },
-      { type: 'pack', index: 'priests-pack' },
-      { type: 'focus', index: 'holy-symbol', slot: 'neck' }
-    ]
-  },
-  'Druid': {
-    hitDie: 8,
-    primaryStats: ['wis', 'con'],
-    savingThrows: ['int', 'wis'],
-    startingEquipment: [
-      { type: 'weapon', index: 'scimitar', slot: 'main-hand' },
-      { type: 'armor', index: 'leather-armor', slot: 'chest' },
-      { type: 'armor', index: 'shield', slot: 'off-hand' },
-      { type: 'pack', index: 'explorers-pack' },
-      { type: 'focus', index: 'druidic-focus', slot: 'focus' }
-    ]
-  },
-  'Fighter': {
-    hitDie: 10,
-    primaryStats: ['str', 'dex'],
-    savingThrows: ['str', 'con'],
-    startingEquipment: [
-      { type: 'armor', index: 'chain-mail', slot: 'chest' },
-      { type: 'weapon', index: 'longsword', slot: 'main-hand' },
-      { type: 'armor', index: 'shield', slot: 'off-hand' },
-      { type: 'weapon', index: 'light-crossbow', slot: 'main-hand' }, // alternative or secondary
-      { type: 'pack', index: 'explorers-pack' }
-    ]
-  },
-  'Monk': {
-    hitDie: 8,
-    primaryStats: ['dex', 'wis'],
-    savingThrows: ['str', 'dex'],
-    startingEquipment: [
-      { type: 'weapon', index: 'shortsword', slot: 'main-hand' },
-      { type: 'pack', index: 'dungeoneers-pack' },
-      { type: 'weapon', index: 'dart', quantity: 10 }
-    ]
-  },
-  'Paladin': {
-    hitDie: 10,
-    primaryStats: ['str', 'cha'],
-    savingThrows: ['wis', 'cha'],
-    startingEquipment: [
-      { type: 'weapon', index: 'longsword', slot: 'main-hand' },
-      { type: 'armor', index: 'shield', slot: 'off-hand' },
-      { type: 'armor', index: 'chain-mail', slot: 'chest' },
-      { type: 'pack', index: 'explorers-pack' },
-      { type: 'focus', index: 'holy-symbol', slot: 'neck' }
-    ]
-  },
-  'Ranger': {
-    hitDie: 10,
-    primaryStats: ['dex', 'wis'],
-    savingThrows: ['str', 'dex'],
-    startingEquipment: [
-      { type: 'armor', index: 'scale-mail', slot: 'chest' },
-      { type: 'weapon', index: 'shortsword', quantity: 2, slot: 'main-hand' },
-      { type: 'weapon', index: 'longbow', slot: 'main-hand' },
-      { type: 'pack', index: 'explorers-pack' }
-    ]
-  },
-  'Rogue': {
-    hitDie: 8,
-    primaryStats: ['dex', 'int'],
-    savingThrows: ['dex', 'int'],
-    startingEquipment: [
-      { type: 'weapon', index: 'rapier', slot: 'main-hand' },
-      { type: 'weapon', index: 'shortbow', slot: 'main-hand' },
-      { type: 'pack', index: 'burglars-pack' },
-      { type: 'armor', index: 'leather-armor', slot: 'chest' },
-      { type: 'weapon', index: 'dagger', quantity: 2, slot: 'off-hand' }
-    ]
-  },
-  'Sorcerer': {
-    hitDie: 6,
-    primaryStats: ['cha', 'con'],
-    savingThrows: ['con', 'cha'],
-    startingEquipment: [
-      { type: 'weapon', index: 'light-crossbow', slot: 'main-hand' },
-      { type: 'focus', index: 'arcane-focus', slot: 'focus' },
-      { type: 'pack', index: 'dungeoneers-pack' },
-      { type: 'weapon', index: 'dagger', quantity: 2, slot: 'off-hand' }
-    ]
-  },
-  'Warlock': {
-    hitDie: 8,
-    primaryStats: ['cha', 'wis'],
-    savingThrows: ['wis', 'cha'],
-    startingEquipment: [
-      { type: 'weapon', index: 'light-crossbow', slot: 'main-hand' },
-      { type: 'focus', index: 'arcane-focus', slot: 'focus' },
-      { type: 'pack', index: 'scholars-pack' },
-      { type: 'armor', index: 'leather-armor', slot: 'chest' },
-      { type: 'weapon', index: 'dagger', quantity: 2, slot: 'off-hand' }
-    ]
-  },
-  'Wizard': {
-    hitDie: 6,
-    primaryStats: ['int', 'wis'],
-    savingThrows: ['int', 'wis'],
-    startingEquipment: [
-      { type: 'weapon', index: 'quarterstaff', slot: 'main-hand' },
-      { type: 'focus', index: 'arcane-focus', slot: 'focus' },
-      { type: 'pack', index: 'scholars-pack' },
-      { type: 'book', index: 'spellbook', slot: 'focus' }
-    ]
-  }
+  'Barbarian': { hitDie: 12, primaryStats: ['str', 'con'], savingThrows: ['str', 'con'] },
+  'Bard': { hitDie: 8, primaryStats: ['cha', 'dex'], savingThrows: ['dex', 'cha'] },
+  'Cleric': { hitDie: 8, primaryStats: ['wis', 'str'], savingThrows: ['wis', 'cha'] },
+  'Druid': { hitDie: 8, primaryStats: ['wis', 'con'], savingThrows: ['int', 'wis'] },
+  'Fighter': { hitDie: 10, primaryStats: ['str', 'dex'], savingThrows: ['str', 'con'] },
+  'Monk': { hitDie: 8, primaryStats: ['dex', 'wis'], savingThrows: ['str', 'dex'] },
+  'Paladin': { hitDie: 10, primaryStats: ['str', 'cha'], savingThrows: ['wis', 'cha'] },
+  'Ranger': { hitDie: 10, primaryStats: ['dex', 'wis'], savingThrows: ['str', 'dex'] },
+  'Rogue': { hitDie: 8, primaryStats: ['dex', 'int'], savingThrows: ['dex', 'int'] },
+  'Sorcerer': { hitDie: 6, primaryStats: ['cha', 'con'], savingThrows: ['con', 'cha'] },
+  'Warlock': { hitDie: 8, primaryStats: ['cha', 'wis'], savingThrows: ['wis', 'cha'] },
+  'Wizard': { hitDie: 6, primaryStats: ['int', 'wis'], savingThrows: ['int', 'wis'] }
 };
 
 export function calculateAC(dex: number, armor: any = null, shield: any = null): number {
@@ -259,9 +163,9 @@ export function calculateInitiative(dex: number): number {
   return getModifier(dex);
 }
 
-export function resolveStartingEquipment(options: any[]): any[] {
+export function resolveStartingEquipment(options: any[], customRng?: SeedableRNG): any[] {
   const items: any[] = [];
-  const randomFromList = (list: any[]) => list[Math.floor(Math.random() * list.length)];
+  const rng = customRng || getFallbackRng();
 
   options.forEach(option => {
     const chooseCount = option.choose || 1;
@@ -269,9 +173,10 @@ export function resolveStartingEquipment(options: any[]): any[] {
 
     for (let i = 0; i < chooseCount; i++) {
         if (fromOptions.length === 0) continue;
-        const selection = randomFromList(fromOptions);
+        const selection: any = rng.pick(fromOptions);
+        if (!selection) continue;
         if (selection.option_type === 'multiple') {
-            selection.items.forEach((it: any) => items.push(it.item || it));
+            selection.items?.forEach((it: any) => items.push(it.item || it));
         } else if (selection.item) {
             items.push(selection.item);
         } else if (selection.of) {
@@ -319,112 +224,239 @@ export const SKIN_TONES = [
   { label: 'Tiefl Purp', hex: '#483d8b' }
 ];
 
-export const BACKGROUND_DATA: Record<string, any> = {
-  'Acolyte': {
-    equipment: [
-      { index: 'holy-symbol', quantity: 1, slot: 'neck' },
-      { index: 'prayer-book', quantity: 1 },
-      { index: 'stick-of-incense', quantity: 5 },
-      { index: 'vestments', quantity: 1 },
-      { index: 'common-clothes', quantity: 1, slot: 'clothes' }
-    ],
-    gold: 15
-  },
-  'Soldier': {
-    equipment: [
-      { index: 'insignia-of-rank', quantity: 1, slot: 'acc-1' },
-      { index: 'trophy-from-fallen-enemy', quantity: 1 },
-      { index: 'bone-dice', quantity: 1 },
-      { index: 'common-clothes', quantity: 1, slot: 'clothes' }
-    ],
-    gold: 10
-  },
-  'Noble': {
-    equipment: [
-        { index: 'fine-clothes', quantity: 1, slot: 'clothes' },
-        { index: 'signet-ring', quantity: 1, slot: 'ring-1' },
-        { index: 'scroll-of-pedigree', quantity: 1 },
-        { index: 'purse', quantity: 1, slot: 'acc-1' }
-    ],
-    gold: 25
-  },
-  'Sage': {
-      equipment: [
-          { index: 'ink_pen', quantity: 1 },
-          { index: 'small-knife', quantity: 1 },
-          { index: 'common-clothes', quantity: 1, slot: 'clothes' }
-      ],
-      gold: 10
-  }
-};
+export const BACKGROUND_DATA: Record<string, any> = {};
 
-let consumerSeedCounter = 0;
+/**
+ * Modernized, canonical NPC generation function that orchestrates Atlas data,
+ * deterministic narrative resolvers, and V2 inventory architecture.
+ */
+export async function generateNPCAsync(partial: any): Promise<any> {
+  const ruleset: '2014' | '2024' = partial.ruleset || '2014';
+  const seed = partial.seed || createConsumerSeed(`npc_gen`);
+  const rng = new SeedableRNG(seed);
 
-export function createConsumerSeed(prefix: string = 'npc_action'): string {
-  consumerSeedCounter = (consumerSeedCounter + 1) % 1000000;
-  return `${prefix}_${Date.now()}_${consumerSeedCounter}`;
-}
+  // Fetch canonical ruleset-aware lists dynamically from Atlas instead of hardcoded arrays
+  const [classesList, speciesList, backgroundsList, alignmentsList] = await Promise.all([
+    fetchClassesList(ruleset),
+    fetchSpeciesList(ruleset),
+    fetchBackgroundsList(ruleset),
+    fetchAlignmentsList()
+  ]);
 
-export function generateNPC(partial: any): any {
-  const className = partial.class || randomFromList(DND_CLASSES);
-  const race = partial.race || randomFromList(DND_RACES);
-  const alignment = partial.alignment || randomFromList(DND_ALIGNMENTS);
-  const background = partial.background || randomFromList(DND_BACKGROUNDS);
-  const level = partial.level || 0;
-  const gender = partial.gender || randomFromList(['Male', 'Female']);
+  const classObj = (partial.class && partial.class !== 'Any')
+    ? { index: partial.class, name: partial.class }
+    : rng.pick(classesList);
+  const speciesObj = (partial.race && partial.race !== 'Any')
+    ? { index: partial.race, name: partial.race }
+    : rng.pick(speciesList);
+  const backgroundObj = (partial.background && partial.background !== 'Any')
+    ? { index: partial.background, name: partial.background }
+    : rng.pick(backgroundsList);
+  const alignmentObj = (partial.alignment && partial.alignment !== 'Any')
+    ? { index: partial.alignment, name: partial.alignment }
+    : rng.pick(alignmentsList);
 
-  const classInfo = CLASS_DATA[className] || CLASS_DATA['Fighter'];
-  
-  // 1. STATS: Assign based on class priority
-  const rolls = generateStandardStats();
-  const pooledStats = Object.values(rolls).sort((a, b) => b - a);
-  const stats: any = {};
-  
-  const priorities = [...(classInfo.primaryStats || ['str', 'dex'])];
-  const others = Object.keys(rolls).filter(s => !priorities.includes(s)).sort(() => Math.random() - 0.5);
-  const finalOrder = [...priorities, ...others];
-  
-  finalOrder.forEach((ability, i) => {
-    stats[ability] = pooledStats[i];
-  });
+  const className = classObj?.name || classObj?.index || 'Fighter';
+  const race = speciesObj?.name || speciesObj?.index || 'Human';
+  const background = backgroundObj?.name || backgroundObj?.index || 'Soldier';
+  const alignment = alignmentObj?.name || alignmentObj?.index || 'True Neutral';
 
-  const hp = calculateHP(level, stats.con, classInfo.hitDie || 8);
+  const level = partial.level !== undefined ? partial.level : 0;
+  const gender = partial.gender && partial.gender !== 'Random' ? partial.gender : rng.pick(['Male', 'Female']);
 
-  // 2. FLAVOR: Randomized traits
-  const traits = partial.traits && partial.traits.length > 0 ? partial.traits : [randomFromList(DND_TRAITS)];
-  const ideals = partial.ideals && partial.ideals.length > 0 ? partial.ideals : [randomFromList(DND_IDEALS)];
-  const bonds = partial.bonds && partial.bonds.length > 0 ? partial.bonds : [randomFromList(DND_BONDS)];
-  const flaws = partial.flaws && partial.flaws.length > 0 ? partial.flaws : [randomFromList(DND_FLAWS)];
-  
-  // 3. APPEARANCE
-  const skin = randomFromList(SKIN_TONES);
+  // Fetch canonical Atlas records for mechanical authority
+  const [classData, backgroundData, speciesData] = await Promise.all([
+    fetchClassData(className, ruleset),
+    fetchBackgroundData(background, ruleset),
+    fetchSpeciesData(race, ruleset)
+  ]);
+
+  // 1. STATS: Thread explicit RNG
+  const stats = partial.stats || NPCChoiceResolver.resolveStats(partial.statGenMethod || 'Rolling', rng.fork('stats'));
+
+  // Hit die and HP calculation from canonical class record
+  const hitDie = classData?.hit_die || CLASS_DATA[className]?.hitDie || 8;
+  const hp = calculateHP(level, stats.con, hitDie);
+
+  // 2. NAME: Canonical Naming Domain resolution
+  const canonicalName = (partial.name && partial.name.trim().length > 0 && partial.name !== 'Random')
+    ? partial.name.trim()
+    : generateName({
+        species: race,
+        gender: gender.toLowerCase(),
+        background,
+        class: className,
+        alignment,
+        seed
+      }).displayName;
+
+  // 3. PERSONALITY: Deterministic narrative resolution from background
+  const resolvedPersonality = resolvePersonality(backgroundData, seed);
+  const traits = (partial.traits && partial.traits.length > 0) ? partial.traits : resolvedPersonality.traits;
+  const ideals = (partial.ideals && partial.ideals.length > 0) ? partial.ideals : resolvedPersonality.ideals;
+  const bonds = (partial.bonds && partial.bonds.length > 0) ? partial.bonds : resolvedPersonality.bonds;
+  const flaws = (partial.flaws && partial.flaws.length > 0) ? partial.flaws : resolvedPersonality.flaws;
+
+  // 4. BACKSTORY: Deterministic backstory prose from character inputs
+  const backstory = (partial.backstory && partial.backstory.trim().length > 0)
+    ? partial.backstory
+    : generateDeterministicBackstory({
+        name: canonicalName,
+        race,
+        subrace: partial.subrace,
+        class: className,
+        subclass: partial.subclass,
+        background,
+        alignment,
+        traits,
+        ideals,
+        bonds,
+        flaws
+      }, seed);
+
+  // 5. APPEARANCE
+  const skin = rng.pick(SKIN_TONES);
   const appearance = partial.appearance || {
-    hairColor: randomFromList(HAIR_COLORS),
-    hairStyle: randomFromList(HAIR_STYLES),
-    bodyType: randomFromList(["Slender", "Athletic", "Heavy-set", "Average", "Wiry"]),
-    eyeColor: randomFromList(EYE_COLORS),
+    hairColor: rng.pick(HAIR_COLORS),
+    hairStyle: rng.pick(HAIR_STYLES),
+    bodyType: rng.pick(["Slender", "Athletic", "Heavy-set", "Average", "Wiry"]),
+    eyeColor: rng.pick(EYE_COLORS),
     skinColor: skin.hex,
-    height: `${Math.floor(Math.random() * 2) + 5}'${Math.floor(Math.random() * 12)}"`,
-    weight: `${Math.floor(Math.random() * 100) + 120} lbs`
+    height: `${rng.nextInt(5, 6)}'${rng.nextInt(0, 11)}"`,
+    weight: `${rng.nextInt(120, 220)} lbs`
   };
 
-  // 4. CHOICES (Level 1)
-  const choices: Record<string, string[]> = {};
-  if (className === 'Ranger') {
-    choices['favored-enemy-1-type'] = [randomFromList(['beasts', 'fey', 'humanoids', 'monstrosities', 'undead'])];
-    choices['natural-explorer-1-terrain-type'] = [randomFromList(['arctic', 'coast', 'desert', 'forest', 'grassland', 'mountain', 'swamp'])];
-  } else if (className === 'Fighter') {
-    choices['fighting-style'] = [randomFromList(['Archery', 'Defense', 'Dueling', 'Great Weapon Fighting', 'Protection', 'Two-Weapon Fighting'])];
-  }
+  // 6. PROFICIENCIES & FEATURES: Thread explicit RNG
+  const proficiencies = partial.proficiencies && partial.proficiencies.length > 0
+    ? partial.proficiencies
+    : NPCChoiceResolver.resolveAllProficiencies(classData, backgroundData, speciesData, rng.fork('proficiencies'));
 
-  // 5. EQUIPMENT: Slot-aware distribution
-  const inventory: Record<string, any> = {};
-  const backpack: any[] = [];
-  
-  const npcId = partial.id || `npc-${Date.now()}`;
+  const features = partial.features || classData?.features || [];
+
+  // 7. SPELLS: Thread explicit RNG
+  const spells = partial.spells || await NPCChoiceResolver.resolveSpells(classData, rng.fork('spells'));
+
+  // 8. EQUIPMENT: Thread explicit RNG for V2 canonical manifestation
+  const startingEquipment = await NPCChoiceResolver.resolveFullStartingEquipment(classData, backgroundData, rng.fork('equipment'));
+
+  // Deterministic ID derived from seed & ruleset without Date.now()
+  const npcId = partial.id || `npc_${ruleset}_${seed}`;
   const npcIndex = npcId.toLowerCase().replace(/\s+/g, '_');
+  const repo = "japiohopman/artificer";
+  const branch = "main";
+  const githubBase = `https://github.com/${repo}/blob/${branch}/`;
 
-  // v2 manifestation logic
+  return {
+    id: npcId,
+    ruleset,
+    saveVersion: 2,
+    name: canonicalName,
+    class: className,
+    race,
+    gender,
+    level,
+    xp: getXPForLevel(level),
+    alignment,
+    background,
+    stats,
+    proficiencies,
+    traits,
+    features,
+    flaws,
+    ideals,
+    bonds,
+    backstory,
+    appearance,
+    inventory: startingEquipment.inventory,
+    backpack: startingEquipment.backpack,
+    // v2 Manifestation
+    items: startingEquipment.v2.items,
+    containers: startingEquipment.v2.containers,
+    equipment: startingEquipment.v2.equipment,
+    spells,
+    choices: partial.choices || {},
+    hp,
+    maxHp: hp,
+    money: partial.money || NPCChoiceResolver.resolveStartingMoney(rng.fork('money')),
+    voiceProfile: partial.voiceProfile || `${className} ${gender} voice`,
+    isNpc: true,
+    isRecruitable: true,
+    dataPath: `${githubBase}public/assets/atlas/character/npc_character_profiles/json/${npcIndex}.json`
+  };
+}
+
+/**
+ * Synchronous generateNPC wrapper for backwards compatibility with legacy callers.
+ */
+export function generateNPC(partial: any): any {
+  const ruleset: '2014' | '2024' = partial.ruleset || '2014';
+  const playableSpecies = ruleset === '2024' ? DND_RACES_2024 : DND_RACES_2014;
+
+  const seed = partial.seed || createConsumerSeed('npc_sync');
+  const rng = new SeedableRNG(seed);
+
+  const className = partial.class && partial.class !== 'Any' ? partial.class : rng.pick(DND_CLASSES);
+  const race = partial.race && partial.race !== 'Any' ? partial.race : rng.pick(playableSpecies);
+  const alignment = partial.alignment && partial.alignment !== 'Any' ? partial.alignment : rng.pick(DND_ALIGNMENTS);
+  const background = partial.background && partial.background !== 'Any' ? partial.background : rng.pick(DND_BACKGROUNDS);
+  const level = partial.level !== undefined ? partial.level : 0;
+  const gender = partial.gender && partial.gender !== 'Random' ? partial.gender : rng.pick(['Male', 'Female']);
+
+  const canonicalName = (partial.name && partial.name.trim().length > 0 && partial.name !== 'Random')
+    ? partial.name.trim()
+    : generateName({
+        species: race,
+        gender: gender.toLowerCase(),
+        background,
+        class: className,
+        alignment,
+        seed
+      }).displayName;
+
+  const stats = partial.stats || generateStandardStats(rng);
+  const classInfo = CLASS_DATA[className] || CLASS_DATA['Fighter'];
+  const hitDie = classInfo.hitDie || 8;
+  const hp = calculateHP(level, stats.con, hitDie);
+
+  const resolvedPersonality = resolvePersonality(null, seed);
+  const traits = (partial.traits && partial.traits.length > 0) ? partial.traits : (resolvedPersonality.traits.length > 0 ? resolvedPersonality.traits : [rng.pick(DND_TRAITS)]);
+  const ideals = (partial.ideals && partial.ideals.length > 0) ? partial.ideals : (resolvedPersonality.ideals.length > 0 ? resolvedPersonality.ideals : [rng.pick(DND_IDEALS)]);
+  const bonds = (partial.bonds && partial.bonds.length > 0) ? partial.bonds : (resolvedPersonality.bonds.length > 0 ? resolvedPersonality.bonds : [rng.pick(DND_BONDS)]);
+  const flaws = (partial.flaws && partial.flaws.length > 0) ? partial.flaws : (resolvedPersonality.flaws.length > 0 ? resolvedPersonality.flaws : [rng.pick(DND_FLAWS)]);
+
+  const backstory = (partial.backstory && partial.backstory.trim().length > 0)
+    ? partial.backstory
+    : generateDeterministicBackstory({
+        name: canonicalName,
+        race,
+        subrace: partial.subrace,
+        class: className,
+        subclass: partial.subclass,
+        background,
+        alignment,
+        traits,
+        ideals,
+        bonds,
+        flaws
+      }, seed);
+
+  const skin = rng.pick(SKIN_TONES);
+  const appearance = partial.appearance || {
+    hairColor: rng.pick(HAIR_COLORS),
+    hairStyle: rng.pick(HAIR_STYLES),
+    bodyType: rng.pick(["Slender", "Athletic", "Heavy-set", "Average", "Wiry"]),
+    eyeColor: rng.pick(EYE_COLORS),
+    skinColor: skin.hex,
+    height: `${rng.nextInt(5, 6)}'${rng.nextInt(0, 11)}"`,
+    weight: `${rng.nextInt(120, 220)} lbs`
+  };
+
+  const npcId = partial.id || `npc_${ruleset}_${seed}`;
+  const npcIndex = npcId.toLowerCase().replace(/\s+/g, '_');
+  const repo = "japiohopman/artificer";
+  const branch = "main";
+  const githubBase = `https://github.com/${repo}/blob/${branch}/`;
+
   const itemsRegistry: Record<string, ItemInstance> = {};
   const v2Backpack: InventoryContainer = {
     id: `backpack_${npcId}`,
@@ -437,86 +469,9 @@ export function generateNPC(partial: any): any {
     slots: [...EQUIPMENT_SLOT_CATALOG].map(s => ({ ...s, itemId: null }))
   };
 
-  const addItemToRegistry = (itemRef: any, slotHint: string | null) => {
-    const id = crypto.randomUUID();
-    itemsRegistry[id] = {
-      id,
-      template: itemRef.index,
-      quantity: itemRef.quantity || 1,
-      addedAt: Date.now()
-    };
-
-    if (slotHint) {
-      const v2SlotId = SLOT_MAP[slotHint] || slotHint;
-      const slot = (v2Equipment.slots as any[]).find(s => s.id === v2SlotId);
-      if (slot && !slot.itemId) {
-        slot.itemId = id;
-        return;
-      }
-    }
-
-    const bagSlot = (v2Backpack.slots as any[]).find(s => s.itemId === null);
-    if (bagSlot) bagSlot.itemId = id;
-  };
-
-  const repo = "japiohopman/artificer";
-  const branch = "main";
-  const githubBase = `https://github.com/${repo}/blob/${branch}/`;
-
-  const createItem = (item: any) => ({
-    id: `${item.index}-${Math.random().toString(36).substr(2, 9)}`,
-    name: (item.name || item.index).replace(/[_-]/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-    index: item.index,
-    _type: item.type === 'book' || item.index === 'spellbook' ? 'books' : 'equipment',
-    weight: item.weight || 1,
-    quantity: item.quantity || 1,
-    dataPath: `${githubBase}public/assets/atlas/equipment/json/${item.index}.json`
-  });
-
-  // Class Gear
-  (classInfo.startingEquipment || []).forEach((item: any) => {
-    const itemObj = createItem(item);
-    addItemToRegistry(item, item.slot);
-    if (item.slot) {
-      if (!inventory[item.slot]) {
-        inventory[item.slot] = { ...itemObj, slot: item.slot };
-      } else if (item.slot === 'main-hand' && !inventory['off-hand']) {
-        inventory['off-hand'] = { ...itemObj, slot: 'off-hand' };
-      } else {
-        backpack.push(itemObj);
-      }
-    } else {
-      backpack.push(itemObj);
-    }
-  });
-
-  // Background Gear
-  const bg = BACKGROUND_DATA[background];
-  if (bg) {
-    bg.equipment.forEach((item: any) => {
-      const itemObj = createItem(item);
-      addItemToRegistry(item, item.slot);
-      if (item.slot && !inventory[item.slot]) {
-        inventory[item.slot] = { ...itemObj, slot: item.slot };
-      } else {
-        backpack.push(itemObj);
-      }
-    });
-  }
-
-  const canonicalName = (partial.name && partial.name.trim().length > 0)
-    ? partial.name
-    : generateName({
-        species: race,
-        gender: gender.toLowerCase(),
-        background,
-        class: className,
-        alignment,
-        seed: partial.seed || createConsumerSeed('quick_randomize')
-      }).displayName;
-
   return {
     id: npcId,
+    ruleset,
     saveVersion: 2,
     name: canonicalName,
     class: className,
@@ -529,23 +484,23 @@ export function generateNPC(partial: any): any {
     stats,
     proficiencies: partial.proficiencies || [],
     traits,
-    features: classInfo.features || [],
+    features: partial.features || classInfo.features || [],
     flaws,
     ideals,
     bonds,
-    backstory: partial.backstory || `A ${race} ${className} born in a remote village, known for their ${traits[0].toLowerCase()}`,
+    backstory,
     appearance,
-    inventory,
-    backpack,
-    // v2 Manifestation
-    items: itemsRegistry,
-    containers: { [v2Backpack.id]: v2Backpack },
-    equipment: v2Equipment,
-    spells: [],
-    choices,
+    inventory: partial.inventory || {},
+    backpack: partial.backpack || [],
+    items: partial.items || itemsRegistry,
+    containers: partial.containers || { [v2Backpack.id]: v2Backpack },
+    equipment: partial.equipment || v2Equipment,
+    spells: partial.spells || [],
+    choices: partial.choices || {},
     hp,
     maxHp: hp,
-    money: { cp: 0, sp: 0, gp: bg?.gold || 10, pp: 0 },
+    money: partial.money || { cp: 0, sp: 0, ep: 0, gp: 10, pp: 0 },
+    voiceProfile: partial.voiceProfile || `${className} ${gender} voice`,
     isNpc: true,
     isRecruitable: true,
     dataPath: `${githubBase}public/assets/atlas/character/npc_character_profiles/json/${npcIndex}.json`
