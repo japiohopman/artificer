@@ -23,11 +23,11 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 | 9 | #383 | Unify feature/ASI/feat/follow-up progression choices | **completed — merged** |
 | 10 | #377 | Restore deterministic non-LLM Character Creator narrative generation | **completed — merged** |
 | 11 | #366 | Define the target DevKit workspace architecture and tab responsibilities | **completed — merged via #410** |
-| 12 | #408 | Extract inline authoring modules and modularize DevKit shell | **next implementation — after #366** |
-| 13 | #367 | Replace split inspectors with unified Atlas and World Explorer | **after #408** |
-| 14 | #368 | Rebuild NPC generator as complete character orchestration pipeline | **after #408 and #377** |
+| 12 | #408 | Extract inline authoring modules and modularize DevKit shell | **completed — merged** |
+| 13 | #367 | Replace split inspectors with unified Atlas and World Explorer | **completed — merged** |
+| 14 | #368 | Rebuild NPC generator as complete character orchestration pipeline | **completed — merged** |
 | 15 | #409 | Remove orphaned DevKit tools and align tester/audio modules | **after #408, #367 and #368** |
-| 16 | #369 | Establish canonical BattleMap schema, edge semantics, hazards and CombatTester integration | **after DevKit architecture sequence** |
+| 16 | #369 | Establish canonical BattleMap schema, edge semantics, hazards and CombatTester integration | **ready — next implementation** |
 | 17 | #372 | Establish canonical dice resolution, seeded RNG and action auditability | **after #369** |
 | 18 | #370 | Build data-driven random encounter tables and travel integration | **after #372** |
 
