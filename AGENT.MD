@@ -1,6 +1,6 @@
 # 🤖 Agent Entry Point
 
-Welcome to Artificer. These instructions define the shared entry point for AI agents working in the repository.
+Welcome to Artificer. These instructions define the shared entry point for implementation agents. Google's Antigravity CLI discovers the root `AGENTS.md`, which points here.
 
 ## Execution hierarchy
 
@@ -16,7 +16,7 @@ The execution contract is determined in this order:
 
 ## 📍 Read in this order
 
-For a dispatched task:
+For an assigned task:
 
 1. Read the complete assigned GitHub Issue.
 2. Read the selected specialist contract in `.github/agents/`.
@@ -43,11 +43,11 @@ The specialist contract is a routing and constraint document, not a competing pr
 
 Older named-agent instruction files such as `jimmy_instructions.md`, `jane_instructions.md`, and `sonny_instructions.md` are retained only as migration/history material unless a current Issue explicitly references one.
 
-They are **not** active Jules routing targets.
+They are **not** active specialist routing targets.
 
 ## 🛠️ General Guidelines
 
-- **Inspect before implementing:** For existing-system work, Jules must inspect current implementation, consumers, tests, canonical ownership, and relevant adjacent architecture before modifying code.
+- **Inspect before implementing:** For existing-system work, AGY (or another explicitly selected implementation agent) must inspect current implementation, consumers, tests, canonical ownership, and relevant adjacent architecture before modifying code.
 - **Adjacent findings must be recorded, not silently absorbed:** Materially adjacent work belongs in a follow-up Issue rather than being silently added to the active task.
 - **Groundedness:** Verify claims and changes against the existing codebase. Documentation can drift; implementation must be inspected directly.
 - **Scope discipline:** Implement only the assigned Issue scope. Record adjacent gaps as follow-up Issues instead of expanding the task opportunistically.
@@ -56,7 +56,7 @@ They are **not** active Jules routing targets.
 - **Documentation:** Update documentation when the change alters an established architectural or workflow contract. Keep it factual rather than aspirational.
 - **Repository hygiene:** Do not add vendored/reference repositories or unverified binary bloat. Follow `AGENT_RULES.md` and the asset registry for asset changes.
 - **Issue/PR linkage:** Keep the GitHub Issue, implementation branch, PR, and verification evidence aligned.
-- **Workflow integrity:** Do not create a parallel task database, revive TASK_BOARD-driven dispatch, or bypass the Issue-first Jules workflow. Jules may update factual completion progress in `ROADMAP.md` for its assigned Issue in its PR without altering task sequence order or inventing new tasks.
+- **Workflow integrity:** Do not create a parallel task database or revive TASK_BOARD-driven dispatch. AGY works locally on the assigned Issue and its dedicated task branch; GitHub Actions never launches or manages local agent sessions. ChatGPT maintains the curated sequence and factual roadmap status with Jaap. AGY may provide evidence for its assigned Issue in the PR but may not reorder the roadmap or invent tasks.
 
 ---
 *Happy building.*

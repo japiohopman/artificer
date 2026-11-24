@@ -67,8 +67,8 @@ This order is intentionally not a raw priority sort. It is the current foundatio
 1. `ROADMAP.md` provides ChatGPT-curated sequence, context, and priority orientation; it is **not** the source of implementation scope.
 2. Every actionable work item must be represented by a **GitHub Issue**.
 3. Implementation details, acceptance criteria, verification, and specialist routing belong in the assigned GitHub Issue and `.github/agents/`.
-4. ChatGPT maintains the intended sequence; Jules reports factual progress for its assigned Issue and does not choose the next Issue.
-5. Automatic readiness advancement is governed by the workflow contract tracked in Issue #387 and must still pass Issue Quality Gate and dependency checks.
+4. ChatGPT maintains the intended sequence with Jaap. AGY reports evidence for its assigned Issue but does not choose the next Issue.
+5. Readiness is curated by ChatGPT with Jaap; no automatic readiness advancement or local-agent dispatcher is active. Every Issue must still pass the Issue Quality Gate and dependency checks before work begins.
 
 ---
 

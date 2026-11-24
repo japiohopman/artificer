@@ -19,7 +19,7 @@ Do not invent missing scope from `ROADMAP.md`, `GOALS.md`, `docs/TASK_BOARD.md`,
 
 - **Inspect before implementing:** For existing-system work, inspect current implementation, consumers, tests, canonical ownership, and relevant adjacent architecture before modifying code.
 - **Adjacent findings must be recorded, not silently absorbed:** Materially adjacent work belongs in a follow-up Issue rather than being silently added to the active task.
-- **Factual roadmap progress reporting:** Jules may update factual completion state for its assigned Issue in `ROADMAP.md` as part of its PR, but must not reorder project work or create new tasks.
+- **Factual roadmap progress reporting:** ChatGPT maintains roadmap order and project status with Jaap. AGY may provide evidence for the assigned Issue in its PR but must not reorder project work or create new tasks.
 
 ## 2. Protect canonical ownership
 
@@ -47,7 +47,7 @@ Specialists are constraints and routing contracts, not parallel project managers
 
 ## 4. Verify before claiming completion
 
-A green build, a passing unit test, or a Jules completion message is not by itself proof that the requested behavior is complete.
+A green build, a passing unit test, or an AGY completion summary is not by itself proof that the requested behavior is complete.
 
 Use the verification specified by the Issue and the applicable repository gates. When runtime verification is required but unavailable, report that limitation explicitly.
 
@@ -68,7 +68,15 @@ When a change establishes or changes an architectural/workflow contract:
 - Keep generated files synchronized with the repository's documented generation process.
 - Do not perform unrelated cleanup during an Issue unless it is required to preserve the architectural contract.
 
-## 7. Handle errors with evidence
+## 7. Local execution and branch safety
+
+- AGY runs locally in Jaap's Windows workspace, normally from PowerShell; it is not dispatched by GitHub Actions.
+- Work only on the assigned Issue and a dedicated task branch. Never edit or commit directly to `main`.
+- Do not push, force-push, open/merge PRs, change GitHub metadata, or run destructive / production commands without explicit Jaap approval.
+- Use reviewed command permissions. Do not switch to automatic execution mode to bypass approval prompts.
+- Use PowerShell-compatible commands for Windows-specific instructions.
+
+## 8. Handle errors with evidence
 
 When a build or runtime error is encountered:
 
@@ -78,7 +86,7 @@ When a build or runtime error is encountered:
 
 Do not replace evidence with an unchecked claim that the problem is resolved.
 
-## 8. Use the Phase Safety Gate for substantial work
+## 9. Use the Phase Safety Gate for substantial work
 
 Architectural, ruleset-sensitive, canonical-data, and other substantial phases must use the persistent Phase Issue/PR contract described in `docs/PHASE_SAFETY_GATE.md`.
 
@@ -89,7 +97,7 @@ The PR must:
 - provide verification evidence;
 - preserve human review before phase completion.
 
-A merged PR or successful Jules run does not replace human review.
+A merged PR or successful AGY run does not replace human review.
 
 ---
 

@@ -3,13 +3,13 @@ import assert from 'node:assert/strict';
 import {
   extractSection,
   extractValueFromText,
-  parseDispatchMetadata,
+  parseExecutionMetadata,
   parseCanonicalReferences,
   specialistPath,
   hasRepositoryEvidence,
   hasForbiddenLegacyQueueReferences,
   validateIssueQualityGate
-} from './jules-issue-validator.mjs';
+} from './issue-quality-gate.mjs';
 
 const tick = '`';
 
@@ -21,7 +21,7 @@ const validBody = [
   'Implement Issue Quality Validator.',
   '',
   '## Current Repository Facts',
-  '- `scripts/jules-issue-selector.mjs` parses issues.',
+  '- `scripts/issue-quality-gate.mjs` parses issues.',
   '',
   '## Investigation Required',
   'Check existing workflow scripts.',
@@ -33,7 +33,7 @@ const validBody = [
   'Do not break existing preflight checks.',
   '',
   '## Scope',
-  '- `scripts/jules-issue-validator.mjs`',
+  '- `scripts/issue-quality-gate.mjs`',
   '',
   '## Acceptance Criteria',
   '1. Validation passes for valid issue.',
@@ -48,12 +48,12 @@ const validBody = [
   '## Out of Scope',
   'Rewriting the dispatcher architecture.',
   '',
-  '## Jules Dispatch Metadata',
+  '## Execution Metadata',
   '- **status:** ready',
   '- **priority:** 10',
   '- **specialist:** architecture',
   '- **depends-on:** none',
-  '- **dispatch-policy:** one issue at a time',
+  '- **execution-policy:** one issue at a time',
   '- **implementation-branch:** required'
 ].join('\n');
 
@@ -63,29 +63,29 @@ test('extractSection parses section content correctly', () => {
 });
 
 test('extractValueFromText parses metadata fields', () => {
-  const metaText = extractSection(validBody, '## Jules Dispatch Metadata');
+  const metaText = extractSection(validBody, '## Execution Metadata');
   assert.equal(extractValueFromText(metaText, 'status'), 'ready');
   assert.equal(extractValueFromText(metaText, 'priority'), '10');
   assert.equal(extractValueFromText(metaText, 'specialist'), 'architecture');
 });
 
-test('parseDispatchMetadata handles valid metadata', () => {
-  const meta = parseDispatchMetadata(validBody);
+test('parseExecutionMetadata handles valid metadata', () => {
+  const meta = parseExecutionMetadata(validBody);
   assert.equal(meta.valid, true);
   assert.equal(meta.status, 'ready');
   assert.equal(meta.priority, 10);
   assert.equal(meta.specialist, 'architecture');
-  assert.equal(meta.dispatchPolicy, 'one issue at a time');
+  assert.equal(meta.executionPolicy, 'one issue at a time');
   assert.equal(meta.implementationBranch, 'required');
   assert.deepEqual(meta.dependsOn, []);
 });
 
-test('parseDispatchMetadata rejects non-ready status or invalid specialist', () => {
+test('parseExecutionMetadata rejects non-ready status or invalid specialist', () => {
   const proposed = validBody.replace('**status:** ready', '**status:** proposed');
-  assert.equal(parseDispatchMetadata(proposed).valid, false);
+  assert.equal(parseExecutionMetadata(proposed).valid, false);
 
   const invalidSpecialist = validBody.replace('**specialist:** architecture', '**specialist:** unknown-agent');
-  assert.equal(parseDispatchMetadata(invalidSpecialist).valid, false);
+  assert.equal(parseExecutionMetadata(invalidSpecialist).valid, false);
 });
 
 test('parseCanonicalReferences extracts backticked paths', () => {
@@ -141,4 +141,11 @@ test('validateIssueQualityGate fails when status is proposed', () => {
   const result = validateIssueQualityGate(proposedBody, { fileExistFn: () => true });
   assert.equal(result.valid, false);
   assert.ok(result.errors.some(err => err.includes('status must be "ready"')));
+});
+
+test('legacy Dispatch Metadata and Jules Dispatch Metadata headings remain supported', () => {
+  const oldDispatch = validBody.replace('## Execution Metadata', '## Dispatch Metadata').replace('execution-policy', 'dispatch-policy');
+  const oldJules = validBody.replace('## Execution Metadata', '## Jules Dispatch Metadata').replace('execution-policy', 'dispatch-policy');
+  assert.equal(parseExecutionMetadata(oldDispatch).valid, true);
+  assert.equal(parseExecutionMetadata(oldJules).valid, true);
 });

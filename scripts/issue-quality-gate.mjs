@@ -45,19 +45,19 @@ export function extractValueFromText(text, key) {
 }
 
 /**
- * Parses dispatch metadata from `## Jules Dispatch Metadata` or `## Dispatch Metadata`.
+ * Parses agent-neutral execution metadata while accepting legacy Issue headings.
  */
-export function parseDispatchMetadata(body) {
-  const text = extractSection(body, ['## Jules Dispatch Metadata', '## Dispatch Metadata']);
+export function parseExecutionMetadata(body) {
+  const text = extractSection(body, ['## Execution Metadata', '## Dispatch Metadata', '## Jules Dispatch Metadata']);
   if (!text) {
     return {
       valid: false,
-      errors: ['Missing required section: ## Jules Dispatch Metadata'],
+      errors: ['Missing required section: ## Execution Metadata (legacy metadata headings are also accepted).'],
       status: null,
       priority: null,
       specialist: null,
       dependsOn: [],
-      dispatchPolicy: null,
+      executionPolicy: null,
       implementationBranch: null
     };
   }
@@ -66,13 +66,13 @@ export function parseDispatchMetadata(body) {
   const priorityText = extractValueFromText(text, 'priority');
   const specialist = extractValueFromText(text, 'specialist');
   const dependsOnText = extractValueFromText(text, 'depends-on') || 'none';
-  const dispatchPolicy = extractValueFromText(text, 'dispatch-policy');
+  const executionPolicy = extractValueFromText(text, 'execution-policy') || extractValueFromText(text, 'dispatch-policy');
   const branchPolicy = extractValueFromText(text, 'implementation-branch');
   const priority = Number(priorityText);
   const errors = [];
 
   if (status !== 'ready') {
-    errors.push(`Dispatch status must be "ready" (found: "${status || 'missing'}").`);
+    errors.push(`Execution status must be "ready" (found: "${status || 'missing'}").`);
   }
   if (!Number.isInteger(priority)) {
     errors.push(`Priority must be an integer (found: "${priorityText || 'missing'}").`);
@@ -82,8 +82,8 @@ export function parseDispatchMetadata(body) {
   } else if (!VALID_SPECIALISTS.has(specialist)) {
     errors.push(`Specialist "${specialist}" is not a recognized specialist agent.`);
   }
-  if (dispatchPolicy !== 'one issue at a time') {
-    errors.push(`dispatch-policy must be "one issue at a time" (found: "${dispatchPolicy || 'missing'}").`);
+  if (executionPolicy !== 'one issue at a time') {
+    errors.push(`execution-policy must be "one issue at a time" (found: "${executionPolicy || 'missing'}").`);
   }
   if (branchPolicy !== 'required') {
     errors.push(`implementation-branch must be "required" (found: "${branchPolicy || 'missing'}").`);
@@ -100,7 +100,7 @@ export function parseDispatchMetadata(body) {
     priority: Number.isInteger(priority) ? priority : null,
     specialist,
     dependsOn,
-    dispatchPolicy,
+    executionPolicy,
     implementationBranch: branchPolicy
   };
 }
@@ -188,7 +188,7 @@ export function validateIssueQualityGate(body, options = {}) {
     { name: 'Verification Plan', headings: ['## Verification Plan'] },
     { name: 'Canonical References', headings: ['## Canonical References'] },
     { name: 'Out of Scope', headings: ['## Out of Scope'] },
-    { name: 'Dispatch Metadata', headings: ['## Jules Dispatch Metadata', '## Dispatch Metadata'] }
+    { name: 'Execution Metadata', headings: ['## Execution Metadata', '## Dispatch Metadata', '## Jules Dispatch Metadata'] }
   ];
 
   for (const req of requiredSections) {
@@ -200,8 +200,8 @@ export function validateIssueQualityGate(body, options = {}) {
     }
   }
 
-  // 2. Dispatch metadata validation
-  const metadata = parseDispatchMetadata(body);
+  // 2. Execution metadata validation
+  const metadata = parseExecutionMetadata(body);
   if (!metadata.valid) {
     errors.push(...metadata.errors);
   }

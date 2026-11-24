@@ -1,170 +1,136 @@
-# 🛠️ Artificer Operating Model & Workflow
+# Artificer Operating Model & Workflow
 
-This document defines the canonical operating model and workflow contracts for Artificer. It serves as the durable source of truth so that the project remains completely understandable and operational even when a chat session, AI model, or personal memory is unavailable.
+This document is the canonical operating contract for humans, ChatGPT, and local implementation agents. GitHub Issues and Pull Requests are the durable record; conversation history is not required to reconstruct the work.
 
 ---
 
-## 1. Canonical Hierarchy & Contract Precedence
-
-Development execution contracts follow a strict, deterministic precedence hierarchy:
+## 1. Canonical hierarchy & contract precedence
 
 ```text
-Assigned GitHub Issue (AUTHORITATIVE EXECUTION CONTRACT)
-  ├─ Selected Specialist Contract (.github/agents/*)
-  ├─ Shared Agent Instructions (AGENT.MD & AGENT_RULES.md)
-  └─ Canonical Reference Context (Source code, tests, & named documentation)
+Assigned GitHub Issue (authoritative implementation contract)
+  ├─ Specialist contract (.github/agents/*)
+  ├─ AGENTS.md (Antigravity workspace entry point)
+  ├─ AGENT.MD and AGENT_RULES.md (shared repository instructions)
+  └─ Canonical source code, tests, and named documentation
 ```
 
-### Precedence Order
-1. **Assigned GitHub Issue**: The persistent, authoritative execution contract for any unit of work. Defines goals, scope, acceptance criteria, constraints, verification steps, and out-of-scope boundaries.
-2. **Selected Specialist Contract (`.github/agents/*`)**: Domain-specific routing and architectural constraints (Architecture, Ruleset/Data, UI, Assets, Gameplay, Verification).
-3. **Shared Agent Instructions (`AGENT.MD` & `AGENT_RULES.md`)**: Repository-wide AI entry point, working rules, groundedness, and safety boundaries.
-4. **Canonical Reference Context**: Implementation source code, tests, and documentation files named by the assigned Issue or specialist contract.
+1. **Assigned GitHub Issue** defines the goal, scope, acceptance criteria, invariants, verification plan, and out-of-scope boundaries.
+2. **Specialist contract** defines applicable domain constraints and review expectations.
+3. **AGENTS.md** is the root workspace instruction file automatically discovered by Google's Antigravity CLI.
+4. **AGENT.MD and AGENT_RULES.md** provide shared repository guidance and safety rules.
+5. **Canonical references** are the implementation, tests, and documentation named by the Issue or specialist.
 
-### Strategic Orientation Documents (Non-Execution Authorities)
-- **`GOALS.md`**: Defines long-term destination and project vision.
-- **`ROADMAP.md`**: Provides ChatGPT-curated strategic priority orientation and feature sequence. It defines execution order while GitHub Issues remain authoritative for implementation scope.
-- **`docs/TASK_BOARD.md`**: Retained strictly as a historical migration reference and audit matrix. It is **not** an active execution queue.
+`CHATGPT.md`, `ROADMAP.md`, `GOALS.md`, and `docs/TASK_BOARD.md` are not execution contracts. The task board is historical; the roadmap describes strategic sequence but never substitutes for an Issue.
 
----
+## 2. Roles & responsibilities
 
-## 2. Roles & Responsibilities
+### Human project owner — Jaap
 
-### Human Project Owner
-- Owns overall project strategy, scope boundaries, and merge authority on `main`.
-- Creates, prioritizes, and assigns GitHub Issues.
-- Performs human code review and final approval on Pull Requests before merging.
+- Owns product direction, task scope, and priority decisions.
+- Approves local agent execution and consequential commands.
+- Performs required manual/product verification.
+- Retains final PR approval and merge authority on `main`.
 
-### AI Implementation Engineer (Jules)
-- Autonomous software engineering agent dispatched against a single assigned GitHub Issue.
-- Operates on a dedicated task branch created for the assigned Issue.
-- Reads task scope exclusively from the assigned GitHub Issue and applicable specialist contracts.
-- Modifies code, runs verification tests, and opens a Pull Request referencing the Issue upon completion.
-- Must treat `CHATGPT.md` as read-only project context and must **not** edit it.
+### ChatGPT — project, architecture & review partner
 
-### Architecture & Review AI Assistant (ChatGPT)
-- Interactive project management, architecture advisor, and review assistant across chat sessions.
-- Maintains root `CHATGPT.md` as durable working project memory across fresh chats.
-- Assists Jaap with design exploration, code review, threat modeling, issue creation, labeling, and project management.
-- **Crucial Rule:** The AI Assistant is **not** an execution authority over Jules and **not** a replacement for GitHub Issues. All execution contracts must exist as assigned GitHub Issues.
+- Reconstructs repository state from GitHub and canonical files.
+- Curates project sequencing with Jaap and maintains `ROADMAP.md` and advisory `CHATGPT.md`.
+- Investigates architecture, prepares and validates GitHub Issues, and records adjacent discoveries as separate Issues.
+- Reviews implementation diffs, CI evidence, safety constraints, and PRs.
+- Maintains repository workflow instructions when the operating model changes.
+- Does not invent test results, make product decisions on Jaap's behalf, or merge PRs.
 
----
+### Google Antigravity CLI (`agy`) — local implementation agent
 
-## 3. Work Cycle & Execution Flow
+- Runs locally in Jaap's Windows repository workspace, normally from PowerShell.
+- Implements only the assigned GitHub Issue and applicable specialist contract.
+- Works on one dedicated task branch and reports exact changes and observed verification.
+- Uses the repository's `AGENTS.md` workspace instructions.
+- Does not choose the next project task, change Issue scope, or modify `CHATGPT.md`.
+- Does not push, create GitHub objects, change settings, force-push, or merge unless Jaap explicitly authorizes the action.
 
-Development follows an evidence-backed lifecycle:
-`proposal → investigation → evidence-backed Issue → human validation → quality gate → ready → dispatch`
+### GitHub Actions — repository gates only
 
-1. **Issue Creation & Quality Gate Validation**
-   - Work begins as an investigation resulting in an evidence-backed GitHub Issue.
-   - The Issue must satisfy **Issue Quality Contract v2** (required sections, valid metadata, existing specialist, canonical references resolving on `main`, concrete repository evidence, acceptance criteria, verification plan, and out-of-scope boundary).
-   - Only Issues passing the Quality Gate become eligible as `status: ready`.
+- Runs normal CI and the Phase Safety Gate.
+- Maintains a non-authoritative ChatGPT PR review-queue signal for eligible same-repository task branches.
+- Does not create, resume, schedule, or clean up local AGY sessions.
 
-2. **Jules Dispatch & Execution**
-   - The active automated dispatcher is `.github/workflows/jules-issue-dispatcher.yml`.
-   - Dispatch pipeline runs preflight checks (`scripts/jules-orchestrator-preflight.mjs`), Issue selection (`scripts/jules-issue-selector.mjs`), and session dispatch (`scripts/jules-issue-dispatch.mjs`).
-   - **Safety Gate:** Live Jules session creation strictly requires explicit manual workflow dispatch confirmation with the exact value `DISPATCH` (`confirmation: DISPATCH`).
-   - Jules executes the task on the designated branch, strictly respecting the Issue contract and specialist constraints.
+## 3. Work cycle
 
-3. **Phase Safety Gate & Pull Request**
-   - Substantial architectural or domain changes submit a Pull Request governed by `docs/PHASE_SAFETY_GATE.md`.
-   - The PR includes implementation summaries, testing/verification evidence, and references the governing GitHub Issue.
+```text
+Repository / product investigation
+  -> evidence-backed GitHub Issue
+  -> Issue Quality Contract v2
+  -> Jaap approves scope and local execution
+  -> AGY plan and implementation on a task branch
+  -> required local verification
+  -> Pull Request
+  -> GitHub CI + Phase Safety Gate
+  -> ChatGPT technical / product review
+  -> Jaap manual acceptance and merge
+```
 
-4. **Human Review & Revision Loop**
-   - CI runs automated test suites (`npm test`, `npm run test:workflow`).
-   - The Human Project Owner (supported by the Architecture & Review AI Assistant) reviews the PR and verification evidence.
-   - If findings or required fixes are identified during review, findings are recorded in the PR review/conversation.
-   - Jules continues work on the existing task using the same implementation branch and PR where possible.
-   - New commits pushed to the branch automatically rerun CI and Phase Safety Gate checks.
-   - The PR is re-reviewed until implementation and verification evidence satisfy requirements.
-   - Upon final approval, only the Human Project Owner merges the PR into `main`, closing the GitHub Issue and clearing the dispatch lock.
+### 3.1. Issue quality contract
 
-### 3.1. Dispatch Boundary & Review Context
+Every actionable task belongs in a GitHub Issue. Substantial Issues must contain:
 
-To preserve execution safety and prevent duplicate session dispatches:
+- Problem / Desired Outcome and Goal.
+- Current Repository Facts and Investigation Required.
+- Canonical Ownership and Known Risks / Invariants.
+- Scope and Acceptance Criteria.
+- Verification Plan and Canonical References.
+- Out of Scope.
+- Execution Metadata: status, priority, specialist, dependencies, one-issue-at-a-time policy, and required implementation branch.
 
-- **Single Execution Context**: Do not start a new Jules dispatch merely because a review identifies required fixes for an open PR. The active Jules task, implementation branch, and open PR remain the active execution context while the PR is open.
-- **New Dispatch Trigger**: A new Issue dispatch is appropriate only after the current task/PR is complete (merged or closed), or when newly requested work materially expands beyond the original Issue contract.
-- **One-at-a-Time Preflight Model**: The orchestrator preflight safety gate enforces a strict one-Issue-at-a-time dispatch model. An active or open PR blocks duplicate dispatches until the active execution context reaches a terminal state.
+The Issue Quality Gate v2 validator preserves older metadata headings for existing Issues while new Issues use agent-neutral Execution Metadata. Only a deliberately approved `status: ready` Issue may be started.
 
-### 3.2. Evidence-Based Discovery Loop
+### 3.2. Local AGY execution
 
-When ready work is low (`ready Issues <= 2 AND no active Discovery Issue`), a controlled Discovery Loop triggers:
+- Jaap opens the repository root in PowerShell and starts `agy --mode=plan` for substantial or unfamiliar work.
+- AGY reads the Issue, specialist contract, `AGENTS.md`, `AGENT.MD`, and `AGENT_RULES.md` before proposing edits.
+- Jaap reviews the plan before execution.
+- Work is performed on a dedicated branch, normally `agent/<issue-number>-<short-slug>`. Conventional `feat/`, `fix/`, `chore/`, `refactor/`, `test/`, `docs/`, `perf/`, `build/`, and `ci/` task branches are also supported.
+- Use reviewed command/tool permissions. Destructive actions, production operations, external writes, and GitHub mutations require explicit Jaap approval.
+- Never work directly on `main`.
 
-- **Audits & Findings**: Discovery audits the repository, cites concrete evidence, explains risk/impact, records rejected findings, and proposes candidate follow-up Issues.
-- **Strict Non-Dispatch Boundary**: Candidate Issues created by discovery begin as `status: proposed`. They require human review before becoming `status: ready`.
-- **No Direct Dispatch**: Discovery findings never dispatch implementation work automatically.
+### 3.3. One active task & scope protection
 
-### 3.3. Scope Protection & Creep Prevention
+One active Issue / implementation branch / PR is the default. Continue review fixes on the same branch and PR. Do not open a second implementation task while the current PR remains active unless Jaap explicitly decides to split independent work.
 
-Review feedback must remain grounded in the original execution contract:
+If review or investigation uncovers materially broader work, record it in a follow-up Issue. Do not silently broaden the assigned contract. No agent may choose or start the next task from the roadmap alone.
 
-- **Scope Boundary**: If review feedback or architectural discussion identifies changes that materially expand beyond the assigned Issue contract, stop expanding the active task.
-- **Decomposition**: Record adjacent or material expansion items as separate, dedicated GitHub Issues rather than allowing PR review iterations to become unbounded scope creep.
-- **Sequential Dispatch Constraint**: Review feedback that materially exceeds the current Issue contract requires a separate GitHub Issue. That new Issue must **NOT** be dispatched while the current Jules task or PR is still active or open. The next Issue becomes dispatchable only after the current execution context is terminal (merged or closed).
+### 3.4. ChatGPT-curated roadmap
 
-### 3.4. ChatGPT-Curated Roadmap Sequencing & Handoff
+- `ROADMAP.md` records strategic order, dependencies, and factual project checkpoints.
+- ChatGPT maintains the intended sequence together with Jaap.
+- The GitHub Issue remains the only source of implementation scope and acceptance criteria.
+- An Issue becomes `ready` only after the Quality Gate and human scope review.
+- No automated readiness promotion or agent dispatch is part of the current workflow.
+- AGY may report evidence about its assigned Issue in the PR; it must not reorder the roadmap, promote unrelated Issues, or create a parallel queue.
 
-To prevent premature dispatch of strategically dependent work, dispatch candidates are evaluated against the `ChatGPT-Curated Execution Sequence` in `ROADMAP.md`:
+## 4. Pull Requests, review relay & safety gates
 
-- **Sequence Enforcement**: ChatGPT defines the sequence in `ROADMAP.md`. The Issue selector selects candidates in sequence order, blocking later sequence items when an earlier sequence item or checkpoint is incomplete.
-- **Authoritative Scope**: `ROADMAP.md` provides sequence order; implementation scope, acceptance criteria, and specialist routing belong exclusively in the assigned GitHub Issue.
-- **Factual Handoff Reporting**: Upon completing an assigned Issue, Jules may update the factual progress status of its completed task in `ROADMAP.md` within its PR. Jules must not reorder tasks, alter other sequence items, or invent new tasks.
-- **Automatic Readiness Advancement**: Merging or closing a completed task permits automation to evaluate the next sequence candidate, which becomes dispatchable only if it is marked `status: ready` and satisfies all Quality Gate and dependency checks.
+Substantial work uses the persistent contract in `docs/PHASE_SAFETY_GATE.md`. PRs target `main`, reference their governing Issue using `Closes #<number>`, `Refs #<number>`, or `Part of #<number>`, and contain the required review sections.
 
----
+The ChatGPT PR Review Relay is only a queue signal. It accepts open, non-draft PRs targeting `main`, from this repository, on recognized task branches, with a governing Issue reference. It records the current HEAD SHA and check status using one stable comment and the `chatgpt-review` label.
 
-## 3.5. Automated ChatGPT PR Review Relay
+The relay does not approve, request changes, merge, close, change Issue readiness, run an LLM, or start local AGY sessions. ChatGPT performs the substantive review; Jaap decides whether to merge.
 
-The review relay is deliberately separate from Jules dispatch. It automates only the handoff signal from an eligible Jules Pull Request to the ChatGPT review queue. The privileged relay runs from the trusted `main` workflow context and never checks out or executes Pull Request code.
+Normal CI and the Phase Safety Gate remain separate required checks. They must not be removed to compensate for a local agent limitation.
 
-### Eligibility
+## 5. Fresh-chat / fresh-agent context recovery
 
-The dedicated `.github/workflows/chatgpt-review-relay.yml` listens to Pull Request lifecycle events. An open PR is eligible only when:
+A new AI session or contributor reconstructs context from the repository:
 
-- the base branch is `main`;
-- the head branch starts with `jules-`;
-- the PR is not a draft;
-- the head repository is this repository;
-- the PR body contains a governing Issue reference using `Closes`, `Fixes`, `Resolves`, `Refs`, or `Part of`.
+1. Identify the active GitHub Issue and any active PR / task branch.
+2. Read the complete Issue.
+3. Read the selected specialist contract.
+4. Read `AGENTS.md`, `AGENT.MD`, `AGENT_RULES.md`, and this document.
+5. Inspect named source files, consumers, tests, and current CI evidence.
+6. Consult `CHATGPT.md` and `ROADMAP.md` only as advisory/strategic context.
 
-### Queue State
-
-Eligible PRs receive the `chatgpt-review` label and one stable relay comment identified by an internal marker. New commits refresh that same comment rather than creating duplicate queue entries. The comment reports the current HEAD SHA, governing Issue, aggregate check state, and Phase Safety Gate state.
-
-Closed PRs have the active `chatgpt-review` label removed and their relay comment is converted to a terminal record.
-
-### Boundary
-
-The relay is **not** an execution queue and does not:
-
-- create or resume Jules sessions;
-- change Issue `status: ready`;
-- change Issue scope or dependencies;
-- approve, request changes, merge, or close Pull Requests;
-- invoke an LLM or external review service.
-
-ChatGPT remains responsible for inspecting the PR and its governing Issue and producing the review verdict. Jaap remains the final merge authority.
-
-## 4. New AI / New Chat Context Recovery & Repository Autonomy
-
-A fresh contributor or AI agent (ChatGPT, Jules, or any AI session) must reconstruct the current Artificer workflow and repository state using **only** the repository itself.
-
-### 4.1. Reading Order for Fresh AI Sessions
-
-When starting or recovering a session, read files in this exact order:
-
-1. **Assigned GitHub Issue**: The single persistent execution contract (or query open GitHub Issues / open PRs via GitHub API).
-2. **Selected Specialist Contract**: Read the applicable contract under `.github/agents/`.
-3. **`AGENT.MD` & `AGENT_RULES.md`**: Shared repository entry point, working rules, and safety boundaries.
-4. **Canonical Reference Context**: Read implementation files, tests, and canonical documentation named by the Issue or specialist contract.
-5. **Inspect Source Code Directly**: Always inspect source code and existing tests directly before making modifications.
-
-### 4.2. Context Authority Rules
-
-- **Do Not Infer Missing Context From Chat Memory**: Chat session history or external chat memory is optional context, never a required source or execution authority. An AI session must never invent task scope or override repository rules based on chat history.
-- **Durable Advisory Memory (`CHATGPT.md`)**: Root `CHATGPT.md` is maintained by ChatGPT for durable working memory across chats. It is advisory project memory only and must never override an assigned Issue, specialist contract, `AGENT.MD`, `AGENT_RULES.md`, or repository source code.
-- **Historical Artifacts Are Non-Executable**: `docs/TASK_BOARD.md`, former Jules Queue Orchestrator files (`jules-orchestrator.mjs`, `jules-queue-state.json`), and old named-agent instruction files are historical references only. They are not active execution queues or context recovery sources.
+Never infer missing acceptance criteria from chat memory or a roadmap sentence. When context is missing, stop and ask Jaap.
 
 ---
-*Authoritative Artificer Workflow Specification.*
+
+*Authoritative Artificer workflow specification.*

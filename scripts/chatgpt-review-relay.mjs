@@ -3,6 +3,12 @@
 export const RELAY_LABEL = 'chatgpt-review';
 export const RELAY_MARKER = '<!-- chatgpt-review-relay -->';
 
+export const TASK_BRANCH_PREFIXES = ['agent/', 'feat/', 'fix/', 'chore/', 'refactor/', 'test/', 'docs/', 'perf/', 'build/', 'ci/'];
+
+export function isTaskBranch(ref) {
+  return typeof ref === 'string' && TASK_BRANCH_PREFIXES.some(prefix => ref.startsWith(prefix) && ref.length > prefix.length);
+}
+
 export function findGoverningIssue(text) {
   const match = String(text || '').match(/(?:Closes|Fixes|Resolves|Refs|Part of)\s+#(\d+)\b/i);
   return match ? Number(match[1]) : null;
@@ -11,8 +17,8 @@ export function findGoverningIssue(text) {
 export function isEligiblePullRequest(pr, repository) {
   if (!pr || pr.state !== 'open' || pr.draft) return false;
   if (pr.base?.ref !== 'main') return false;
-  if (!pr.head?.ref?.startsWith('jules-')) return false;
-  if (pr.head?.repo?.full_name && repository && pr.head.repo.full_name !== repository) return false;
+  if (!repository || pr.head?.repo?.full_name !== repository) return false;
+  if (!isTaskBranch(pr.head?.ref)) return false;
   return findGoverningIssue(pr.body || '') !== null;
 }
 
@@ -38,7 +44,7 @@ export function formatClosedRelayComment(pr) {
     'PR #' + pr.number + ' is closed' + (pr.merged ? ' and merged' : '') + '.',
     '',
     'The active ChatGPT review queue entry has been cleared.'
-  ].join('\\n');
+  ].join('\n');
 }
 
 export function formatRelayComment(pr, checks, phaseSafety) {

@@ -2,8 +2,8 @@
 
 > **MAINTENANCE & AUTHORITY NOTICE FOR ALL AGENTS AND CONTRIBUTORS**
 > - **Maintained by ChatGPT**: This file is a durable project-memory note maintained by ChatGPT across chat sessions. Jaap is not expected to maintain it manually.
-> - **Read-Only for Implementation Agents**: Jules and other automated implementation agents must treat `CHATGPT.md` as **read-only** and must **NOT** edit, mutate, or update this file.
-> - **Non-Authoritative / Advisory Only**: This file provides non-authoritative working context and architectural memory. It is **NOT** an execution queue, task database, source of implementation scope, or dispatch contract for Jules.
+> - **Read-Only for Implementation Agents**: Antigravity CLI (AGY) and other implementation agents must treat `CHATGPT.md` as **read-only** and must **NOT** edit, mutate, or update this file.
+> - **Non-Authoritative / Advisory Only**: This file provides non-authoritative working context and architectural memory. It is **NOT** an execution queue, task database, source of implementation scope, or implementation contract for local AGY work.
 > - **Precedence Boundary**: This file must **NEVER** override an assigned GitHub Issue, specialist contract (`.github/agents/*`), `AGENT.MD`, `AGENT_RULES.md`, or repository source code. Chat history and memory are optional context, never a required source of truth.
 
 ---
@@ -19,7 +19,7 @@ ChatGPT acts as Jaap's interactive architecture advisor and project management a
 - **Comments & Context**: Add Issue or PR comments, maintain review notes, and summarize technical discussions.
 - **Inspection**: Inspect Issues, PRs, implementation branches, workflow runs, and repository files to perform management tasks safely.
 
-**Key Rule:** These capabilities are **project-management functions**, not execution authority over Jules. Implementation scope for Jules exists strictly within assigned GitHub Issues passing the Issue Quality Gate.
+**Key Rule:** These are project-management functions. Implementation scope belongs strictly in an assigned GitHub Issue that passes the Issue Quality Gate. AGY executes locally on the approved task branch; ChatGPT manages sequencing and review.
 
 ---
 
@@ -89,18 +89,22 @@ A passing technical implementation is not automatically a passing product implem
 ## 🤝 Operational Workflow & Collaboration Conventions
 
 1. **Issue-First Execution**:
-   - GitHub Issues passing Issue Quality Gate v2 serve as the authoritative contract for Jules.
-   - One-at-a-time preflight model prevents duplicate session dispatches (`.github/workflows/jules-issue-dispatcher.yml`).
-   - Live session creation requires manual workflow dispatch with exact confirmation `DISPATCH`.
-2. **Review & PR Lifecycle**:
-   - Review fixes remain on the active task branch and open PR.
-   - Material scope expansion requires a separate GitHub Issue created for sequential dispatch after the active task reaches a terminal state (merged or closed).
-   - Only Jaap merges Pull Requests into `main`.
-3. **Context Recovery**:
-   - Fresh AI chats reconstruct repository state by reading: Assigned GitHub Issue → Specialist Contract (`.github/agents/*`) → `AGENT.MD` & `AGENT_RULES.md` → Canonical Reference Context → Source code.
-   - Missing context is never inferred from chat memory.
-
----
+   - The GitHub Issue is the only authoritative implementation contract.
+   - Issue Quality Contract v2 validates required scope, acceptance criteria, specialist routing, canonical references, and execution metadata.
+   - `AGENTS.md` is the root workspace instruction file automatically discovered by Google's Antigravity CLI.
+2. **Local Implementation**:
+   - AGY runs locally from the Artificer repository, normally through Windows PowerShell.
+   - Start substantial work in planning mode (`agy --mode=plan`), review the proposed plan, then execute with normal approval prompts.
+   - Work on one dedicated Issue branch at a time. Never edit or commit directly to `main`.
+   - GitHub Actions never launches or manages local AGY sessions.
+3. **Review & PR Lifecycle**:
+   - AGY reports exact changes and verification evidence on the same task branch.
+   - PRs reference the governing Issue and must pass CI and the Phase Safety Gate.
+   - ChatGPT performs the technical / architectural PR review; Jaap performs product acceptance and retains final merge authority.
+   - Do not push, force-push, change GitHub metadata, or merge without Jaap's explicit approval.
+4. **Context Recovery**:
+   - Fresh sessions reconstruct repository state from: assigned Issue → specialist contract → `AGENTS.md` → `AGENT.MD` / `AGENT_RULES.md` → named source and tests.
+   - `CHATGPT.md` is advisory only; it is not an execution contract.
 
 ## 📜 Key Architectural History & Lessons Learned
 - **Foundry Enemy Parity Audit (#358)**: Enemy data is mapped 1:1 with Foundry source records (`14` and `24`), retaining WebP images as shared media while maintaining token artwork under `/enemies/tokens/`.
@@ -111,61 +115,37 @@ A passing technical implementation is not automatically a passing product implem
 
 ---
 
-## 🧭 Current Project Control & Sequencing Model — 2026-09-29
+## 🧭 Current Project Control & Sequencing Model — 2026-11-24
 
-### ChatGPT-owned sequencing
+### Active operating model
 
-ChatGPT is the project sequencing and review layer for Artificer together with Jaap. The durable execution contract remains the GitHub Issue. ChatGPT may determine which well-formed Issue should become the next `ready` candidate after inspecting repository evidence, dependencies, open PRs, and current architectural state.
+ChatGPT and Jaap curate the project sequence. GitHub Issues remain the authoritative task contracts. Google Antigravity CLI (`agy`) performs local implementation on Jaap's Windows workstation. GitHub Actions provides CI, the Phase Safety Gate, and the PR review relay only; it does not dispatch local agents.
 
-The important distinction is:
+### Current verified repository state
 
-- **ROADMAP.md** records the curated project order and factual progress.
-- **GitHub Issue** contains the authoritative implementation contract, acceptance criteria, verification plan, and specialist routing.
-- **`status: ready`** means an Issue has passed the Issue Quality Gate and is intentionally released for dispatch.
-- **Jules** implements only its assigned Issue and may report factual progress for that Issue; Jules does not choose the next project task.
-- **Automation** may advance the next pre-approved Issue only after the current execution context is verified terminal and the next Issue still passes all gates.
+- Last commit on `main`: `be3e790` on 2026-10-08 (`docs(roadmap): advance execution sequence after NPC pipeline`).
+- PR #386 is an abandoned Draft and is not to be resumed or merged. Issue #381 was closed as `not_planned`.
+- The replacement level-up implementation is complete: Issue #401 / PR #403, canonical HP dice integration #382 / PR #404, and ASI / feat / follow-up choices #383 / PR #405.
+- Character Creator / 2024 foundation work #365, #376, #396, and #393 is complete.
+- DevKit foundations #366, #408, #367, and #368 are complete through PRs #410–413.
+- Issue #409 remains proposed backlog work for DevKit housekeeping.
+- The curated roadmap identifies #369 (canonical BattleMap schema and edge semantics) as the next implementation, followed by #372 (canonical deterministic dice resolution), then #370 (random encounters).
+- Issue #415 tracks the migration from Jules to ChatGPT + local Antigravity CLI. Complete and verify this workflow before starting the next implementation Issue.
 
-The roadmap therefore becomes a sequencing aid, not a second task database or source of implementation scope.
+### Level-up review lessons retained from #386–405
 
-### Current foundation sequence
+- Keep player-controlled progression separate from automatic eligibility and canonical state commits.
+- Derive grants and choices from structured, versioned Atlas data rather than feature-description heuristics.
+- Validate a fresh canonical progression step at the store commit boundary; do not trust mutable presentation-session state.
+- HP dice must have one authoritative result; presentation must never reroll or override the mechanical result.
+- Tests must exercise the real store / persistence entry point as well as pure helpers.
+- Review the actual branch diff and CI evidence; stale PR descriptions and unverifiable test claims are review defects.
 
-The current character/ruleset lane is intentionally ordered as follows:
+### Project sequencing rules
 
-1. **#387 — Roadmap sequencing & automatic readiness handoff** — completed and merged workflow foundation.
-2. **#365 — 2024 species source parity** — completed and merged.
-3. **#376 — Remaining 2024 runtime gaps** — completed and merged.
-4. **#396 — Restore runtime Species selection data loading** — active discovered blocker; must be resolved before #393.
-5. **#393 — Character Creator stability checkpoint** — blocked until #396 is resolved and the real runtime flow is re-verified.
-6. **#381 — Player-controlled level-up lifecycle** — resume only after the foundation and creator flow are stable.
-7. **#382 — Canonical level-up HP/dice integration** — build on #381 without mixing dice-engine redesign into the lifecycle work.
-8. **#383 — Canonical feature/ASI/feat/follow-up choices** — follow #382 and consume its canonical HP/session result boundary.
-
-This order is deliberately different from simply sorting all `ready` Issues by numeric priority. A technically valid Issue can still be strategically premature because an upstream foundation is incomplete.
-
-### Level-up work parked
-
-PR #386 is intentionally parked as a Draft. Its implementation contains useful lifecycle groundwork, but the complete feature should not be merged into `main` while the 2024 ruleset foundation and Character Creator stability are still being established.
-
-Observed lessons from the #386 review loop:
-
-- shared Character UI changes can affect Character Creator navigation and therefore need end-to-end browser regression coverage;
-- automatic progression gains, player choices, and canonical resource state must be kept distinct;
-- showing a calculated spell-slot change without committing the canonical `Character.spellSlots` state is an incomplete feature, not merely a presentation issue;
-- level-up HP should begin with the player's method choice, then resolve the authoritative roll once, without presenting reroll as an arbitrary extra gameplay decision;
-- fail-closed helper tests should also prove the real store entrypoint, not only an isolated pure/helper function;
-- stale PR descriptions and test-count claims are review defects and should be corrected before approval.
-
-### Dispatcher lesson
-
-The Issue-first sequencing model from **#387** is now active. The current lesson is that a newly discovered blocking Issue must also be inserted into the curated sequence when the live selector needs to dispatch it; otherwise a valid `ready` Issue outside the sequence is intentionally not selected. The current sequence therefore places the completed #396/#393 foundation before **#401**, with #401 now completed and #382 as the next implementation, followed by #383. Workflow hardening in #402 is tracked separately so process improvements do not block active game development.
-
-### Jules handoff convention
-
-For future implementation PRs, the Jules handoff should explicitly state:
-
-- what was completed for the assigned Issue;
-- what verification actually passed;
-- what roadmap checkpoint was updated, when applicable;
-- any newly discovered follow-up Issue numbers.
-
-Jules must not silently reorder the roadmap, promote unrelated Issues to `ready`, or create a new execution queue.
+- `ROADMAP.md` records strategic order and factual progress, not detailed implementation scope.
+- Every active task is represented by a GitHub Issue with explicit acceptance and verification criteria.
+- ChatGPT may recommend sequencing after inspecting dependencies and repository evidence; Jaap approves product direction and scope.
+- AGY implements only the assigned Issue and must not reorder the roadmap or promote unrelated work.
+- Keep one active implementation Issue / branch / PR by default.
+- No direct commits to `main`, no automated dispatch, and no merge without Jaap's explicit approval.
