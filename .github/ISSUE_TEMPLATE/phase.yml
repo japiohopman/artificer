@@ -1,5 +1,5 @@
 name: Engineering Phase
-description: Define a multi-step engineering phase for Jules with explicit safety gates.
+description: Define a multi-step engineering phase with explicit human and automated safety gates.
 title: "phase: "
 labels:
   - phase
@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         Use this template for substantial work that may contain multiple implementation steps.
-        The issue is the persistent execution contract for Jules; the PR is the implementation record.
+        The GitHub Issue is the persistent implementation contract; the PR records changes and verification evidence.
 
   - type: textarea
     id: goal
@@ -105,5 +105,26 @@ body:
       label: Canonical References
       description: Link or name the authoritative repository/data/documentation references used for this phase.
       placeholder: Official source, existing canonical implementation, or repository path.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Execution Metadata
+        Keep these values in the exact key/value format below.
+
+  - type: textarea
+    id: execution_metadata
+    attributes:
+      label: Metadata fields
+      description: Agent-neutral routing and readiness metadata. Keep one implementation task active at a time.
+      placeholder: |
+        - **status:** proposed
+        - **priority:** 100
+        - **specialist:** architecture
+        - **depends-on:** none
+        - **execution-policy:** one issue at a time
+        - **implementation-branch:** required
     validations:
       required: true

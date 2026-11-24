@@ -37,7 +37,7 @@ jobs:
         # index/filename consistency, and asset path existence.
         run: npm run validate:assets
 
-      - name: Verify workflow preflight
+      - name: Verify workflow contracts
         run: npm run test:workflow
 
       - name: Build

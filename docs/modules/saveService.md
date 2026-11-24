@@ -4,7 +4,7 @@
 `saveService.ts` and `storageService.ts` handle the persistence of character data, campaign states, and the retrieval of the Atlas index.
 
 ## Owner
-Jules Agent
+Artificer project maintainers
 
 ## Dependencies
 - Firebase Firestore (for user profiles)

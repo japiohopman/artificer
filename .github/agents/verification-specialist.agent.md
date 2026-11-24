@@ -31,10 +31,10 @@ Verification is evidence gathering, not a substitute for human approval.
 ## Verification invariants
 
 - A passing build does not prove behavioral correctness by itself.
-- A Jules completion message does not prove the Issue is complete.
+- An agent completion summary does not prove the Issue is complete.
 - A merged PR does not replace human review.
 - Tests must reflect the canonical behavior and should not merely assert implementation details that can drift.
-- Workflow tests must never invoke the live Jules API.
+- Workflow tests must never invoke live external agent APIs.
 - Duplicate dispatch and stale-session paths must fail safely.
 - Safety gates must not trust PR origin as a bypass condition.
 
@@ -52,7 +52,7 @@ For Issue-first orchestration, verify that:
 - Disabling or weakening a gate merely to make CI green.
 - Treating snapshots or superficial file existence checks as sufficient proof of behavior.
 - Introducing test-only alternate state sources.
-- Calling external Jules APIs from unit/dry-run tests.
+- Calling external APIs or launching local agent sessions from unit/dry-run tests.
 
 ## Verification
 

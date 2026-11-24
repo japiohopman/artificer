@@ -575,7 +575,7 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Dependencies:** Canvas API, `battleMapStorage.ts`
 
 #### G5. Verification Tools & Test Harnesses
-- **Current Canonical Module:** `src/components/devkit/CombatTester.tsx`, `npc_tester.tsx`, `Simulator.tsx`, `tests/*.test.ts`, `scripts/jules-orchestrator-preflight.mjs`
+- **Current Canonical Module:** `src/components/devkit/CombatTester.tsx`, `npc_tester.tsx`, `Simulator.tsx`, `tests/*.test.ts`, `scripts/issue-quality-gate.mjs`
 - **Primary Functions / Hooks / Selectors:** `spawnMonster()`, `nextTurn()`, `updateCharacter()`, `npm test`, `npx vitest run tests/`, `npm run test:workflow`.
 - **Source-of-Truth Data:** `useGameStore`, `useCharacterStore`, test suites in `tests/`, workflow tests (`node --test`).
 - **Derived / Presentation Consumers:** DevKit Tester tab, CI workflows (`.github/workflows/ci.yml`, `phase-safety-gate.yml`).

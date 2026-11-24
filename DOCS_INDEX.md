@@ -8,11 +8,14 @@ Development execution contracts follow a strict precedence hierarchy:
 
 1. **Assigned GitHub Issue** → authoritative execution contract
 2. **Specialist contract (`.github/agents/*`)** → domain constraints and routing
-3. **`AGENT.MD` & `AGENT_RULES.md`** → shared agent guidance and safety rules
-4. **Canonical reference context** → source code, tests, and named documentation
-5. **`GOALS.md` & `ROADMAP.md`** → strategic priority and long-term vision context (non-execution authorities)
+3. **`AGENTS.md`** → Antigravity CLI workspace entry point
+4. **`AGENT.MD` & `AGENT_RULES.md`** → shared agent guidance and safety rules
+5. **Canonical reference context** → source code, tests, and named documentation
+6. **`GOALS.md` & `ROADMAP.md`** → strategic priority and long-term vision context (non-execution authorities)
 
 `docs/WORKFLOW.md` defines the authoritative operating model.
+
+`AGENTS.md` is the root workspace instruction file auto-discovered by Google's Antigravity CLI. See [Antigravity CLI Quick Start](./docs/ANTIGRAVITY_CLI.md).
 
 `docs/TASK_BOARD.md` is retained strictly as a historical migration/reference document and is **not** an active execution queue.
 
@@ -21,6 +24,7 @@ Development execution contracts follow a strict precedence hierarchy:
 ## 🗺️ Navigation
 
 - **[Operating Model & Workflow](./docs/WORKFLOW.md)** - 🛠️ **Authoritative workflow, role contracts, and repository autonomy guide.**
+- **[Antigravity CLI Quick Start](./docs/ANTIGRAVITY_CLI.md)** - Local AGY setup and Windows PowerShell workflow.
 - **[ChatGPT Project Memory](./CHATGPT.md)** - 🧠 **ChatGPT-maintained advisory project memory & working context (non-authoritative).**
 - **[Master Project Goals](./GOALS.md)** - 🎯 Long-term project direction.
 - **[Project Hub](./docs/PROJECT_HUB.md)** - Main documentation navigation and system index.

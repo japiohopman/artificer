@@ -4,7 +4,7 @@
 The Skill Database module defines, loads, and manages the 18 standard skill proficiencies from D&D 5.5e. It integrates database JSON schema definitions with Character Creation (`SkillsStep.tsx`), Level-Up systems, and character sheet modifiers to enable real-time, rule-compliant attribute checks.
 
 ## Owner
-Jules Agent
+Artificer project maintainers
 
 ## Dependencies
 - `src/services/atlasService.ts`: Core data loader for the Skill database.

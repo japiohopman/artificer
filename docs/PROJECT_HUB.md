@@ -5,6 +5,7 @@ Central navigation for Artificer documentation. This page points agents and deve
 ## 📌 Start here
 
 - [Operating Model & Workflow](./WORKFLOW.md) - 🛠️ Authoritative workflow, role contracts, and repository autonomy guide.
+- [Antigravity CLI Quick Start](./ANTIGRAVITY_CLI.md) - Local AGY setup and Windows PowerShell workflow.
 - [ChatGPT Durable Memory](../CHATGPT.md) - 🧠 ChatGPT-maintained advisory project memory & working context (non-authoritative).
 - [Architecture & Capability Map](./ARCHITECTURE_CAPABILITY_MAP.md) - 🏛️ Authoritative domain, capability, gameplay-gap, and specialist-agent map.
 - [Architecture Status](./ARCHITECTURE_STATUS.md) - 🧭 Current architectural boundaries and runtime ownership.
@@ -29,7 +30,7 @@ Central navigation for Artificer documentation. This page points agents and deve
 
 ## 🤖 Specialist agent contracts
 
-Active Issue-first routing is defined by `.github/agents/`:
+AGY loads the root `AGENTS.md`; specialist routing is defined by `.github/agents/`:
 
 - [Architecture Specialist](../.github/agents/architecture-specialist.agent.md)
 - [Ruleset & Data Specialist](../.github/agents/ruleset-data-specialist.agent.md)
