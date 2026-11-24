@@ -13,6 +13,7 @@ const chatgpt = read('../CHATGPT.md');
 const issueForm = read('../.github/ISSUE_TEMPLATE/phase.yml');
 const docsIndex = read('../DOCS_INDEX.md');
 const packageJson = JSON.parse(read('../package.json'));
+const roadmap = read('../ROADMAP.md');
 
 test('Antigravity discovers the root workspace instructions and reads shared contracts', () => {
   assert.equal(existsSync(new URL('../AGENTS.md', import.meta.url)), true);
@@ -94,4 +95,17 @@ test('Jules dispatch and session management are fully retired from active script
     const content = read('../.github/workflows/' + name);
     assert.doesNotMatch(content, /JULES_API_KEY|jules-issue-dispatcher|jules-session-cleanup/i);
   }
+});
+
+test('roadmap describes advisory curated sequence without automated dispatcher claims', () => {
+  assert.match(roadmap, /ChatGPT together with Jaap/);
+  assert.match(roadmap, /The roadmap is advisory and does not launch or dispatch implementation work/);
+  assert.match(roadmap, /no automated dispatcher consumes the roadmap/);
+  assert.match(roadmap, /Issue quality and dependencies are checked, and Jaap approves the task before local AGY execution/);
+
+  const introMatch = roadmap.match(/## ChatGPT-Curated Execution Sequence\s*\n\s*>([^\n]+)/);
+  assert.ok(introMatch, 'ChatGPT-Curated Execution Sequence blockquote must exist');
+  const introText = introMatch[1];
+  assert.doesNotMatch(introText, /Issue-first dispatcher consumes/i);
+  assert.doesNotMatch(introText, /live dispatch safety gate/i);
 });

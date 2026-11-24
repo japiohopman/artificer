@@ -8,7 +8,7 @@ Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/W
 
 ## ChatGPT-Curated Execution Sequence
 
-> This sequence is project-management guidance maintained by ChatGPT together with the human project owner. GitHub Issues remain the authoritative execution contracts. The Issue-first dispatcher consumes this sequence only to determine order; Issue Quality Gate, dependency checks, and the live dispatch safety gate still control execution.
+> This sequence is advisory project-management guidance curated by ChatGPT together with Jaap. The roadmap is advisory and does not launch or dispatch implementation work, and no automated dispatcher consumes the roadmap. GitHub Issues define authoritative implementation scope. Issue quality and dependencies are checked, and Jaap approves the task before local AGY execution.
 
 | Order | Issue / checkpoint | Purpose | Current state |
 |---|---|---|---|
