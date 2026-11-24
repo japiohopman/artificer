@@ -54,7 +54,7 @@ test('ChatGPT memory remains advisory and records the current 2026 project state
 
 test('new phase template uses agent-neutral Execution Metadata', () => {
   assert.match(issueForm, /Execution Metadata/);
-  assert.match(issueForm, /execution-policy: one issue at a time/);
+  assert.match(issueForm, /\*\*execution-policy:\*\* one issue at a time/);
   assert.doesNotMatch(issueForm, /execution contract for Jules/);
 });
 
