@@ -183,7 +183,7 @@ interface GameState {
   nextTurn: () => void;
   startCombat: () => Promise<void>;
   resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
-  executeMonsterTurn: (monsterId: string) => Promise<void>;
+  executeMonsterTurn: (monsterId: string, equipmentDataLookup?: (index: string, ruleset?: '2014' | '2024') => Promise<any>) => Promise<void>;
   setCombatMapBackground: (combatMapBackground: string | null) => void;
 }
 
@@ -652,7 +652,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     startTurnForIndex(nextIndex);
   },
 
-  executeMonsterTurn: async (monsterId: string) => {
+  executeMonsterTurn: async (monsterId: string, equipmentDataLookup) => {
     const { combatState, addLog, resolveCombatAction } = get();
     const currentMonster = combatState.monsters.find(m => m.id === monsterId);
     if (!currentMonster || currentMonster.hp <= 0) {
@@ -739,7 +739,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       const targetPos = targetPc ? targetPcPos : playerPos;
 
       // Canonical Atlas Action Selection: resolve weapon ranges via equipment metadata
-      const { fetchEquipmentData } = await import('../services/storageService');
+      const fetchEquipmentData = equipmentDataLookup ?? (await import('../services/storageService')).fetchEquipmentData;
       const currentRuleset = get().ruleset || '2014';
       const monsterActions = updatedMonster.actions || [];
 

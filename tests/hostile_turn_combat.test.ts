@@ -198,6 +198,31 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
   });
 
   describe('3. Hostile AI Turn Execution & Lifecycle Safeguards', () => {
+    // Pause the AI at the real asynchronous equipment boundary so stale-turn tests
+    // cannot accidentally invalidate the initial 600ms timer before lookup begins.
+    const createDeferredEquipmentLookup = () => {
+      let releaseLookup!: () => void;
+      let signalLookupStarted!: () => void;
+      const lookupStarted = new Promise<void>((resolve) => {
+        signalLookupStarted = resolve;
+      });
+      const lookupGate = new Promise<void>((resolve) => {
+        releaseLookup = resolve;
+      });
+
+      const lookup = async (_weaponName: string) => {
+        signalLookupStarted();
+        await lookupGate;
+        return {
+          weapon_range: 'Melee',
+          properties: [],
+          range: { normal: 5 }
+        };
+      };
+
+      return { lookup, lookupStarted, releaseLookup };
+    };
+
     beforeEach(() => {
       // Set up UI and Character Store with a healthy active PC
       useUIStore.setState({ gameMode: 'combat' });
@@ -877,9 +902,10 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
       expect(useGameStore.getState().combatState.initiativeOrder.length).toBe(2); // Hero + Goblin
     });
 
-    it('invalidating turn during async lookup prevents monster movement and attack', async () => {
+    it('invalidating a hostile turn during an awaited equipment lookup prevents movement and attack', async () => {
       useUIStore.setState({ gameMode: 'combat' });
       let actionResolved = false;
+      const equipment = createDeferredEquipmentLookup();
 
       useGameStore.setState({
         ruleset: '2014',
@@ -897,7 +923,7 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
               hp: 7,
               maxHp: 7,
               x: 2,
-              y: 6, // Distance 4 from target at (2,2)
+              y: 6, // Outside melee reach; a stale continuation would try to move closer
               speed: 6,
               viewDirection: 0,
               awareness: 'combat',
@@ -915,27 +941,30 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
         }
       });
 
-      // Start monster turn
-      useGameStore.getState().executeMonsterTurn('goblin-lookup-stale');
+      // Wait until the monster turn has passed its initial timer and is suspended
+      // inside the asynchronous Atlas equipment lookup.
+      await useGameStore.getState().executeMonsterTurn('goblin-lookup-stale', equipment.lookup);
+      await equipment.lookupStarted;
 
-      // Invalidate turn while execution is in-flight (before movement is committed)
-      await new Promise(r => setTimeout(r, 50));
+      // Invalidate the turn while the lookup is genuinely still pending.
       useGameStore.getState().nextTurn();
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
 
-      // Wait for original turn timeout to elapse
-      await new Promise(r => setTimeout(r, 750));
+      // Allow the stale continuation to resume; it must not commit movement or attack.
+      equipment.releaseLookup();
+      await new Promise(r => setTimeout(r, 50));
 
       const monster = useGameStore.getState().combatState.monsters.find(m => m.id === 'goblin-lookup-stale');
-      // Monster must NOT have moved to target
       expect(monster?.x).toBe(2);
       expect(monster?.y).toBe(6);
-      // Monster must NOT have attacked
       expect(actionResolved).toBe(false);
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
     });
 
-    it('completeCombat called while monster turn is pending immediately invalidates callback and prevents any combat mutations', async () => {
+    it('completeCombat immediately invalidates a monster suspended in equipment lookup', async () => {
       useUIStore.setState({ gameMode: 'combat' });
       let actionResolved = false;
+      const equipment = createDeferredEquipmentLookup();
 
       useGameStore.setState({
         ruleset: '2014',
@@ -971,30 +1000,27 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
         }
       });
 
-      // Start monster turn
-      useGameStore.getState().executeMonsterTurn('goblin-complete-stale');
+      await useGameStore.getState().executeMonsterTurn('goblin-complete-stale', equipment.lookup);
+      await equipment.lookupStarted;
 
-      // Complete combat while monster turn is in-flight
-      await new Promise(r => setTimeout(r, 50));
-      await useGameStore.getState().completeCombat(true);
-
-      // Verify immediate invalidation
+      // completeCombat must invalidate the encounter synchronously, before its XP await.
+      const completion = useGameStore.getState().completeCombat(true);
       expect(useUIStore.getState().gameMode).toBe('exploration');
       expect(useGameStore.getState().combatState.initiativeOrder).toEqual([]);
       expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
 
-      // Wait for any remaining timeout to elapse
-      await new Promise(r => setTimeout(r, 750));
+      // Resume the pending equipment lookup after combat has already ended.
+      equipment.releaseLookup();
+      await new Promise(r => setTimeout(r, 50));
+      await completion;
 
       const monster = useGameStore.getState().combatState.monsters.find(m => m.id === 'goblin-complete-stale');
-      // Position unchanged
       expect(monster?.x).toBe(2);
       expect(monster?.y).toBe(6);
-      // No attack executed
       expect(actionResolved).toBe(false);
-      // Mode remains exploration, initiative remains empty
       expect(useUIStore.getState().gameMode).toBe('exploration');
       expect(useGameStore.getState().combatState.initiativeOrder).toEqual([]);
     });
+
   });
 });
