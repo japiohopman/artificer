@@ -444,6 +444,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       id,
       name: monster.name,
       type: monster.type || 'monster',
+      size: monster.size || 'Medium',
       hp: monster.hit_points || monster.hp || 10,
       maxHp: monster.hit_points || monster.maxHp || monster.hp || 10,
       x,
@@ -489,13 +490,31 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   },
 
-  removeMonsterFromCombat: (id) => set((state) => ({
-    combatState: {
-      ...state.combatState,
-      monsters: state.combatState.monsters.filter(m => m.id !== id),
-      initiativeOrder: state.combatState.initiativeOrder.filter(i => i.id !== id)
+  removeMonsterFromCombat: (id) => set((state) => {
+    const prevOrder = state.combatState.initiativeOrder;
+    const removedIndex = prevOrder.findIndex(i => i.id === id);
+    const newOrder = prevOrder.filter(i => i.id !== id);
+
+    let newActiveIndex = state.combatState.activeTurnIndex;
+    if (removedIndex !== -1 && newOrder.length > 0) {
+      if (removedIndex < state.combatState.activeTurnIndex) {
+        newActiveIndex = Math.max(0, state.combatState.activeTurnIndex - 1);
+      } else if (removedIndex === state.combatState.activeTurnIndex) {
+        newActiveIndex = newActiveIndex % newOrder.length;
+      }
+    } else if (newOrder.length === 0) {
+      newActiveIndex = 0;
     }
-  })),
+
+    return {
+      combatState: {
+        ...state.combatState,
+        monsters: state.combatState.monsters.filter(m => m.id !== id),
+        initiativeOrder: newOrder,
+        activeTurnIndex: newActiveIndex
+      }
+    };
+  }),
 
   toggleDoor: (x, y, edgeId) => set((state) => {
     let nextOpen = false;
@@ -596,27 +615,57 @@ export const useGameStore = create<GameState>((set, get) => ({
   executeMonsterTurn: async (monsterId: string) => {
     const { combatState, addLog, resolveCombatAction } = get();
     const currentMonster = combatState.monsters.find(m => m.id === monsterId);
-    if (!currentMonster) {
+    if (!currentMonster || currentMonster.hp <= 0) {
       get().nextTurn();
       return;
     }
 
+    const turnActorId = monsterId;
+    const turnIndex = combatState.activeTurnIndex;
+
+    const isValidTurnContext = (): boolean => {
+      const state = get();
+      if (state.combatState.initiativeOrder.length === 0) return false;
+      if (useUIStore.getState().gameMode !== 'combat') return false;
+      if (state.combatState.activeTurnIndex !== turnIndex) return false;
+      const currentActor = state.combatState.initiativeOrder[turnIndex];
+      if (!currentActor || currentActor.id !== turnActorId) return false;
+      const actorMonster = state.combatState.monsters.find(m => m.id === turnActorId);
+      if (!actorMonster || actorMonster.hp <= 0) return false;
+      return true;
+    };
+
+    let turnAdvanced = false;
+    const advanceTurnOnce = () => {
+      if (turnAdvanced) return;
+      if (!isValidTurnContext()) return;
+      turnAdvanced = true;
+      get().nextTurn();
+    };
+
     setTimeout(async () => {
-      // Re-fetch current state inside timeout to ensure we have fresh data
+      if (!isValidTurnContext()) return;
+
       const { combatState: currentCombatState } = get();
       const freshMonster = currentCombatState.monsters.find(m => m.id === monsterId);
-      if (!freshMonster) {
-        get().nextTurn();
+      if (!freshMonster || freshMonster.hp <= 0) {
+        advanceTurnOnce();
         return;
       }
 
-      const { checkLoS, isInViewCone, findPath, getDistance } = combatUtils;
+      const { checkLoS, findPath, getDistance } = combatUtils;
       const playerPos = currentCombatState.playerPos;
 
       let updatedMonster = { ...freshMonster };
       let stateChanged = false;
 
-      // Find the closest PC to target and check awareness (only active PCs, not unconscious or dead)
+      // Active combat participants are alert and focused in combat
+      if (updatedMonster.awareness !== 'combat') {
+        updatedMonster.awareness = 'combat';
+        stateChanged = true;
+      }
+
+      // Find the closest active, conscious PC to target
       const activeParty = useCharacterStore.getState().characters.filter((c: any) =>
         c && c.name !== 'Empty Slot' &&
         (!c.isNpc || c.isRecruitable) &&
@@ -627,12 +676,11 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (activeParty.length === 0) {
         addLog(`${updatedMonster.name} searches, but all opponents are incapacitated!`, 'info');
-        get().nextTurn();
+        advanceTurnOnce();
         return;
       }
 
       const pcPositions = currentCombatState.pcPositions || {};
-      
       let targetPc: any = null;
       let minDistance = Infinity;
       let targetPcPos = playerPos;
@@ -649,119 +697,108 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       const targetPos = targetPc ? targetPcPos : playerPos;
 
-      // 1. Awareness Check
-      if (updatedMonster.awareness !== 'combat') {
-        const hasLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid);
-        const inCone = isInViewCone(updatedMonster, targetPos);
-
-        if (hasLoS && inCone) {
-          updatedMonster.awareness = 'combat';
-          addLog(`${updatedMonster.name} spotted ${targetPc ? targetPc.name : 'you'}!`, 'warning');
-          stateChanged = true;
-        } else if (hasLoS && getDistance(updatedMonster, targetPos) <= 3) {
-           // Passive perception check (simplified: close proximity = alert)
-           updatedMonster.awareness = 'alert';
-           updatedMonster.lastKnownPlayerPos = { ...targetPos };
-           stateChanged = true;
-        }
-      }
-
-      // 2. State-based Action selection
-      const monsterSpeed = updatedMonster.speed || 6;
+      // Canonical Atlas Action Selection: resolve weapon ranges via equipment metadata
+      const { fetchEquipmentData } = await import('../services/storageService');
+      const currentRuleset = get().ruleset || '2014';
       const monsterActions = updatedMonster.actions || [];
-      
-      let chosenAction = null;
-      let chosenRange = 1.5;
 
-      if (monsterActions.length > 0) {
-        const currentDist = getDistance(updatedMonster, targetPos);
-        for (const act of monsterActions) {
-          const isRanged = act.desc?.toLowerCase().includes('ranged') || 
-                          act.desc?.toLowerCase().includes('range') || 
-                          act.name?.toLowerCase().includes('bow') || 
-                          act.name?.toLowerCase().includes('bolt');
-          const range = isRanged ? 12 : 1.5;
-          if (currentDist <= range) {
-            chosenAction = act;
-            chosenRange = range;
-            break;
-          }
-        }
-        if (!chosenAction) {
-          chosenAction = monsterActions[0];
-          const isRanged = chosenAction.desc?.toLowerCase().includes('ranged') || 
-                          chosenAction.desc?.toLowerCase().includes('range') || 
-                          chosenAction.name?.toLowerCase().includes('bow') || 
-                          chosenAction.name?.toLowerCase().includes('bolt');
-          chosenRange = isRanged ? 12 : 1.5;
-        }
+      interface AttackCandidate {
+        action: any;
+        range: number;
+        isRanged: boolean;
       }
 
-      const attackAction = chosenAction ? {
-        name: chosenAction.name,
-        attack_bonus: chosenAction.attack_bonus || 4,
-        damage: chosenAction.damage || [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }]
-      } : {
-        name: updatedMonster.type === 'archer' ? 'Longbow' : (updatedMonster.type === 'mage' ? 'Fire Bolt' : 'Claw/Bite'),
-        attack_bonus: 4,
-        damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }]
+      const validAttackCandidates: AttackCandidate[] = [];
+
+      for (const act of monsterActions) {
+        // Strict requirement: action must possess damage dice array
+        if (!Array.isArray(act.damage) || act.damage.length === 0 || !act.damage[0]?.damage_dice) {
+          continue;
+        }
+
+        const weaponName = (act.name || '').toLowerCase().trim();
+        const weaponData = await fetchEquipmentData(weaponName, currentRuleset);
+
+        const isThrown = Boolean(weaponData?.properties?.some((p: any) => p.index === 'thrown' || p.name?.toLowerCase() === 'thrown'));
+        const isRanged = weaponData?.weapon_range === 'Ranged' || isThrown;
+        const hasReach = Boolean(weaponData?.properties?.some((p: any) => p.index === 'reach' || p.name?.toLowerCase() === 'reach'));
+
+        let attackRange = 1;
+        if (isRanged && weaponData?.range?.normal) {
+          attackRange = Math.max(1, Math.floor(weaponData.range.normal / 5));
+        } else if (hasReach) {
+          attackRange = 2;
+        } else {
+          attackRange = 1;
+        }
+
+        validAttackCandidates.push({
+          action: act,
+          range: attackRange,
+          isRanged
+        });
+      }
+
+      const selectAttackForDistance = (candidates: AttackCandidate[], currentDist: number, hasClearLoS: boolean): AttackCandidate | null => {
+        if (candidates.length === 0) return null;
+
+        // In melee reach (dist <= 1): prefer melee attack if LoS is clear
+        if (currentDist <= 1 && hasClearLoS) {
+          const melee = candidates.find(c => !c.isRanged && currentDist <= c.range);
+          if (melee) return melee;
+        }
+
+        // Outside melee reach: prefer ranged/thrown attack within normal range if LoS is clear
+        if (hasClearLoS) {
+          const ranged = candidates.find(c => c.isRanged && currentDist <= c.range);
+          if (ranged) return ranged;
+        }
+
+        // If neither is immediately usable, choose for approach intention: prefer ranged if present, else melee
+        return candidates.find(c => c.isRanged) || candidates[0];
       };
 
-      const attackRange = chosenRange;
+      let dist = getDistance(updatedMonster, targetPos);
+      let directLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.walls);
 
-      if (updatedMonster.awareness === 'combat') {
-        let dist = getDistance(updatedMonster, targetPos);
-        
-        // If not in attack range, move towards target first
-        if (dist > attackRange) {
-          const path = findPath(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.monsters, currentCombatState.pcPositions || playerPos);
-          if (path && path.length > 1) {
-            // Move up to speed, but stop before overlapping the target
-            const moveSteps = Math.min(path.length - 1, monsterSpeed);
-            const moveTarget = path[moveSteps - 1];
+      let chosenCandidate = selectAttackForDistance(validAttackCandidates, dist, directLoS);
+      const attackRange = chosenCandidate ? chosenCandidate.range : 1;
+      const monsterSpeed = typeof updatedMonster.speed === 'number' ? updatedMonster.speed : 6;
 
-            updatedMonster.x = moveTarget.x;
-            updatedMonster.y = moveTarget.y;
+      // If out of range OR obstructed by walls/doors, pathfind around obstacles
+      if (dist > attackRange || !directLoS) {
+        const normalizedSize: 'Medium' | 'Large' = (updatedMonster.size === 'Large') ? 'Large' : 'Medium';
+        const path = findPath(
+          updatedMonster,
+          targetPos,
+          currentCombatState.grid,
+          currentCombatState.monsters,
+          currentCombatState.pcPositions || playerPos,
+          normalizedSize,
+          currentCombatState.walls
+        );
 
-            // Update view direction based on movement
-            const firstStep = path[0];
-            if (firstStep.x > freshMonster.x) updatedMonster.viewDirection = 1;
-            else if (firstStep.x < freshMonster.x) updatedMonster.viewDirection = 3;
-            else if (firstStep.y > freshMonster.y) updatedMonster.viewDirection = 2;
-            else if (firstStep.y < freshMonster.y) updatedMonster.viewDirection = 0;
-            stateChanged = true;
-            
-            // Re-calculate distance after movement
-            dist = getDistance(updatedMonster, targetPos);
-          }
-        }
-
-        // If now in range, execute the selected action!
-        if (dist <= attackRange) {
-          await resolveCombatAction(
-            updatedMonster,
-            targetPc ? { id: targetPc.id, name: targetPc.name, stats: targetPc.stats, ac: targetPc.stats?.ac || targetPc.ac } : { id: 'player', name: 'Hero' },
-            attackAction
-          );
-        }
-      } else if (updatedMonster.awareness === 'alert' && updatedMonster.lastKnownPlayerPos) {
-        const path = findPath(updatedMonster, updatedMonster.lastKnownPlayerPos, currentCombatState.grid, currentCombatState.monsters, currentCombatState.pcPositions || playerPos);
-        if (path && path.length > 0) {
-          const moveSteps = Math.min(path.length, monsterSpeed);
+        if (path && path.length > 1) {
+          const moveSteps = Math.min(path.length - 1, monsterSpeed);
           const moveTarget = path[moveSteps - 1];
+
           updatedMonster.x = moveTarget.x;
           updatedMonster.y = moveTarget.y;
+
+          const firstStep = path[0];
+          if (firstStep.x > freshMonster.x) updatedMonster.viewDirection = 1;
+          else if (firstStep.x < freshMonster.x) updatedMonster.viewDirection = 3;
+          else if (firstStep.y > freshMonster.y) updatedMonster.viewDirection = 2;
+          else if (firstStep.y < freshMonster.y) updatedMonster.viewDirection = 0;
           stateChanged = true;
-          if (updatedMonster.x === updatedMonster.lastKnownPlayerPos.x && updatedMonster.y === updatedMonster.lastKnownPlayerPos.y) {
-             updatedMonster.awareness = 'idle';
-             updatedMonster.lastKnownPlayerPos = undefined;
-          }
+
+          dist = getDistance(updatedMonster, targetPos);
+          directLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.walls);
         }
-      } else {
-        // Idle patrol (very simple: rotate)
-        updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
-        stateChanged = true;
       }
+
+      // Re-evaluate candidate attack after movement
+      chosenCandidate = selectAttackForDistance(validAttackCandidates, dist, directLoS);
 
       if (stateChanged) {
         set(state => ({
@@ -772,8 +809,27 @@ export const useGameStore = create<GameState>((set, get) => ({
         }));
       }
 
-      setTimeout(() => get().nextTurn(), 1000);
-    }, 1000);
+      // Execute attack ONLY IF:
+      // 1. A valid attack exists (no fabricated attacks)
+      // 2. Distance is within attackRange
+      // 3. Fresh checkLoS confirms an unobstructed physical line of sight
+      if (chosenCandidate && dist <= chosenCandidate.range && directLoS && isValidTurnContext()) {
+        const attackAction = {
+          name: chosenCandidate.action.name,
+          attack_bonus: chosenCandidate.action.attack_bonus ?? 0,
+          damage: chosenCandidate.action.damage
+        };
+
+        await resolveCombatAction(
+          updatedMonster,
+          targetPc ? { id: targetPc.id, name: targetPc.name, stats: targetPc.stats, ac: targetPc.stats?.ac || targetPc.ac } : { id: 'player', name: 'Hero' },
+          attackAction
+        );
+      }
+
+      if (!isValidTurnContext()) return;
+      setTimeout(() => advanceTurnOnce(), 600);
+    }, 600);
   },
 
   startCombat: async () => {
@@ -844,7 +900,8 @@ export const useGameStore = create<GameState>((set, get) => ({
         initiativeOrder: order,
         activeTurnIndex: 0,
         pcPositions: initialPcPositions,
-        playerPos: initialPcPositions[activeParty[0]?.id] || { x: 2, y: 2 }
+        playerPos: initialPcPositions[activeParty[0]?.id] || { x: 2, y: 2 },
+        monsters: state.combatState.monsters.map(m => m.isAlly ? m : { ...m, awareness: 'combat' as const })
       }
     }));
 

@@ -1,944 +1,831 @@
-  We are finishing the approved documentation correction for PR #416.
+ Thought for 29s
+   Onderzoeksrapport & Implementatieplan: Issue #418
 
-  Jaap authorizes committing and pushing ONLY these two reviewed files:
-  - ROADMAP.md
-  - scripts/agent-contract.test.mjs
-
-  Before committing:
-  1. Confirm the current branch is chore/replace-jules-with-antigravity-415.
-  2. Confirm no other files are modified.
-  3. Inspect the complete diff.
-  4. Run npm run test:workflow.
-  5. Run git diff --check.
-
-  If any unexpected file or change appears, STOP and report it.
-
-  If everything matches:
-  1. Stage only the two authorized files.
-  2. Inspect the staged diff.
-  3. Commit with message:
-     docs(workflow): clarify manual roadmap sequencing
-  4. Push the existing branch to origin.
-
-  Do not:
-  - Switch branches.
-  - Modify any other files.
-  - Change GitHub Issues or PR metadata.
-  - Create another PR.
-  - Merge PR #416.
-  - Touch PR #386.
-
-  Report the commit SHA and push result.
-
-○ Thought for 7.2s (Pre-commit verification is complete. The current branch and modified files match the approved c...)
-● Ran 3 commands (git branch · git add · git push) (ctrl+o to expand)
-
-  Pre-Commit Verification Summary
-
-  1. Current Branch: chore/replace-jules-with-antigravity-415 confirmed.
-  2. File Scope: Only ROADMAP.md and scripts/agent-contract.test.mjs were modified.
-  3. Test Results: npm run test:workflow executed and passed all 37 tests.
-  4. Diff Check: git diff --check executed with zero warnings/errors.
+  │ Governing Issue: #418 https://github.com/japiohopman/artificer/issues/418 — fix(combat): restore edge-aware
+  │ hostile monster turns and attacks
+  │ Specialist Contract: Gameplay Specialist (.github/agents/gameplay-specialist.agent.md)
+  │ Modus: Planning Only (--mode=plan) — Read-Only
+  │ Target Branch: fix/418-edge-aware-monster-turns
   ──────
-  Commit & Push Results
+  1. Bevestigde oorzaken versus hypothesen voor het uitblijven van vijandelijke aanvallen
 
-  • Commit Message: docs(workflow): clarify manual roadmap sequencing
-  • Commit SHA: 7cada31e16a1bdb9d1b11e472fe499ddb1e8773f
-  • Push Destination: origin/chore/replace-jules-with-antigravity-415
-  • Push Output:
-    To https://github.com/japiohopman/artificer.git
-       4054b9320..7cada31e1  chore/replace-jules-with-antigravity-415 -> chore/replace-jules-with-antigravity-415
+  Na een grondige audit van de runtime-lifecycle in src/store/useGameStore.ts, src/components/combat/combatUtils.ts
+  en de canonieke Atlas-data van monsters (o.a. Goblin en Orc), zijn de concrete oorzaken vastgesteld:
 
-  • Working Tree State: Clean; no other files or PRs were modified.
+  Bevestigde oorzaken:
 
-────────────────────────────────────────────────────────────
-> --mode=plan
+  1. Oorzaak 1 (Geometrie): checkLoS ontbeert combatState.walls
+      • In useGameStore.ts (regel 654) wordt aangeroepen:
+        const hasLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid);
 
-▸ Thought for 5s, 362 tokens
+      • De signatuur in combatUtils.ts is checkLoS(start, end, grid, walls?: any[]).
+      • Doordat walls niet wordt meegegeven, valt checkLoS terug op cell-based checks (grid[y][x].type === 'wall' |
+      'door'). Sinds BattleMap v2 (#369) zijn deuren en muren canonieke rand-spines (combatState.walls) en worden
+      cellen niet meer overschreven met cell.type = 'door'. Zichtlijnen 'zien' hierdoor geen enkele randdeur of
+      randmuur.
+  2. Oorzaak 2 (Geometrie): findPath ontbeert argumenten 6 (creatureSize) en 7 (walls)
+      • In useGameStore.ts (regel 717 en 748) wordt aangeroepen:
+        findPath(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.monsters,
+        currentCombatState.pcPositions || playerPos);
 
-  I am now in planning mode (--mode=plan). In this mode, no files will be created or edited.
+      • De signatuur in combatUtils.ts (regel 118) is:
+        findPath(start, end, grid, monsters, pcPositions, creatureSize = 'Medium', walls?)
 
-  Per AGENTS.md, implementation contracts begin strictly from an assigned GitHub Issue.
+      • Argument 6 en 7 ontbreken volledig. Hierdoor is walls altijd undefined. Monsters routeren daardoor dwars door
+      dichte deuren en muren heen, of breken af bij obstakels.
+  3. Oorzaak 3 (AI State Machine): De "Awareness Gate" blokkeert vijanden die niet direct in een 90°-kegel staan
+      • Monsters worden aangemaakt met awareness: 'idle'.
+      • In startCombat() wordt het initiatief gerold, maar de awareness van vijanden blijft 'idle'.
+      • In executeMonsterTurn:
+        if (updatedMonster.awareness !== 'combat') {
+          const hasLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid);
+          const inCone = isInViewCone(updatedMonster, targetPos);
+          ...
+        }
 
-  Which GitHub Issue governs the work we are planning next? Please provide the Issue number or details, and I will:
+      • isInViewCone controleert een strikte 90°-kwadrantkegel op basis van viewDirection (0:N, 1:E, 2:S, 3:W).
+      • Als een monster niet toevallig in de richting van de speler kijkt én de speler verder dan 3 tegels weg staat:
+          • updatedMonster.awareness blijft 'idle'.
+          • De flow springt naar regel 760:
+            } else {
+              // Idle patrol (very simple: rotate)
+              updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
+              stateChanged = true;
+            }
 
-  1. Inspect the assigned Issue and applicable specialist contract in .github/agents/.
-  2. Inspect the current implementation, consumers, canonical ownership, and tests.
-  3. Present a bounded investigation, risk analysis, and step-by-step implementation & verification plan for your
-  review before any edits are made.
+          • Gevolg: Het monster doet niets anders dan 90° draaien op zijn beurt. Er vindt geen beweging en geen
+          aanval plaats.
 
-────────────────────────────────────────────────────────────
->
-  We are starting GitHub Issue #369:
+  4. Oorzaak 4 (Actieselectie): Niet-aanvallende traits (bv. "Nimble Escape", "Aggressive") worden geselecteerd als
+  'aanval'
+      • In useGameStore.ts (regels 676–689) doorloopt een loop alle monsterActions.
+      • Voor een Goblin is actie 0 "nimble escape" (damage: []). Omdat het woord 'ranged' of 'bow' niet in de
+      beschrijving staat, stelt de code range = 1.5. Bij een speler binnen 1.5 vakjes kiest de code "nimble escape"
+      als de primaire aanval in plaats van "scimitar".
+      • Voor een Orc is actie 0 "aggressive" (damage: []), die eveneens als aanval wordt gekozen.
+      • Doordat act.damage een lege array [] is, valt resolveCombatAction terug op verzonnen defaults (1d6 slashing).
+  5. Oorzaak 5 (Validatie): Aanvallen zonder Line-of-Sight check
+      • Als een vijand wél awareness === 'combat' heeft en binnen aanvalsbereik staat (bv. 1 tegel afstand voor melee,
+      of 12 tegels voor boog), controleert de code vóór resolveCombatAction niet of er een dichte deur of muur tussen
+      staat. Zonder LoS-check kan een boogschutter door massieve stenen muren schieten.
 
-  "feat(map): establish canonical BattleMap schema, edge semantics, hazards and CombatTester integration"
 
-  This is an architecture-heavy task. INVESTIGATION AND PLANNING ONLY. Do not edit files yet.
+  Hypothese (Uitgesloten):
 
-  Read:
-  1. The complete GitHub Issue #369.
-  2. The architecture specialist contract.
-  3. AGENTS.md, AGENT.MD, AGENT_RULES.md and docs/WORKFLOW.md.
-  4. docs/ARCHITECTURE_STATUS.md and docs/modules/mapEditor.md.
-  5. All canonical map types, persistence, validation, migration, adapters, runtime consumers and relevant tests.
-
-  Investigate the actual implementation, not just documentation.
-
-  Pay particular attention to:
-  - Current BattleMap v1 structure and wall semantics.
-  - Shared edge identity and deterministic reconciliation.
-  - Movement and line-of-sight consumers.
-  - Existing door state behavior.
-  - Terrain and hazard ownership.
-  - Serialization, persistence and legacy migration.
-  - CombatTester hardcoded terrainMaps and canonical map loading.
-  - Runtime CombatGrid compatibility.
-  - Existing tests and canonical map fixtures.
-
-  IMPORTANT:
-  The documentation currently contradicts itself about how complete the BattleMap Editor is. Establish the real
-  implementation status before proposing documentation changes.
-
-  PLAN REQUIREMENTS:
-
-  1. Describe the current architecture and actual data flow.
-  2. Identify canonical ownership and mutation boundaries.
-  3. Propose a versioned BattleMap schema, including four-direction edges.
-  4. Explain how shared boundaries avoid duplicates or conflicting states.
-  5. Propose a backward-compatible v1 migration strategy.
-  6. Explain how structured hazards reach runtime without creating a second combat rules engine.
-  7. Explain how CombatTester and runtime combat will consume the same canonical maps.
-  8. Identify required specialist handoffs (architecture, gameplay, ruleset/data, UI and verification).
-  9. Propose implementation phases in dependency order.
-  10. List exact files likely to change and tests required.
-  11. Identify unresolved design decisions that require Jaap's input.
-
-  SAFETY:
-  - Do not modify files.
-  - Do not generate or rewrite map assets.
-  - Do not invent damage values, conditions or D&D mechanics.
-  - Do not change GitHub Issues or PRs.
-  - Do not commit or push.
-  - Do not merge.
-  - Do not begin implementation until Jaap has reviewed the plan.
-
-  Return a clear, practical implementation plan and wait for approval.
-
-○ Thought for 1m 32s (The API directly handles JSON files within the specified directory. Examining the user prompt...)
-● Ran 2 commands (git log · Invoke-RestMethod -U...)
-● Explored 9 files (architecture-specialist.agent.md, ARCHITECTURE_STATUS.md, mapEditor.md, +6)
-… 31 more actions (22 reads, 9 commands) …
-● Explored 1 file (CombatGrid.tsx)
-● Ran 3 commands (+2 · Select-String -Path "server.ts" -Pattern "combat-maps" -Context 2,20) (ctrl+o to expand)
-
-   Architectural Investigation & Implementation Plan
-
-  GitHub Issue #369: Establish Canonical BattleMap Schema, Edge Semantics, Hazards & CombatTester Integration
-
-  │ Mode: Planning Only (--mode=plan)
-  │ Target Branch: feat/369-canonical-battlemap
-  │ Status: No files modified; awaiting Jaap's review.
+  • Hypothese: resolveCombatAction of het 3D-dobbelsteensysteem blokkeert de afhandeling.
+  Bevinding: Uitgesloten. resolveCombatAction werkt naar behoren zodra het wordt aangeroepen. Het probleem is dat de
+  aanroep nooit bereikt wordt of met ongeldige data wordt gevoed.
   ──────
-  Audit: BattleMap Editor Documentation vs. Actual Code Status
+  2. De exacte aanroepketen en beïnvloede functies
 
-  An audit was conducted across documentation and implementation to resolve the contradiction between
-  docs/modules/mapEditor.md and docs/ARCHITECTURE_STATUS.md:
-
-  • docs/modules/mapEditor.md: Claims the editor is "fully implemented with a hardened, production-ready
-architecture...
-  All primary systems are fully operational, architecturally sound, and thoroughly tested."
-  • docs/ARCHITECTURE_STATUS.md: Contradicts this, stating that tools are "scaffolding, not completed features.
-  Agents must not mark Wall, Room, Door, Terrain, Object, Token, Layers, Inspector or Undo/Redo as implemented merely
-  because a placeholder exists."
-  • Verified Code Reality:
-      1. The editor has a working React/Canvas architecture
-      (src/components/devkit/BattleMapEditor/BattleMapEditor.tsx,
-      src/components/devkit/BattleMapEditor/components/MapViewport.tsx,
-      src/components/devkit/BattleMapEditor/rendering/renderMap.ts,
-      src/components/devkit/BattleMapEditor/state/editorStore.ts).
-      2. Command-based undo/redo is genuinely implemented for wall, room, terrain, object, token, label, and marker
-      additions/removals.
-      3. Wall and door snapping works geometrically via grid boundary lines (getWallSnap).
-      4. The Critical Flaw: The authoring schema and runtime adapter are shallow:
-          • Cells have no concept of directional boundary spines (North, East, South, West).
-          • At runtime, src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts turns the
-          underlying tile into cell.type = 'door', overwriting the underlying terrain (stone, grass, etc.) and
-          treating an edge boundary as an occupied cell.
-          • src/components/combat/CombatGrid.tsx does not render combatState.walls on canvas; it only renders filled
-          tiles for cell.type === 'wall' | 'door', while consulting combatState.walls invisibly for movement/LoS.
-          • Hazards, pits, and environmental effects do not exist in the schema at all.
-          • src/components/devkit/CombatTester.tsx maintains a parallel hardcoded list of background PNGs
-          (terrainMaps) that bypasses canonical map loading.
-
-  • Resolution: The documentation in docs/modules/mapEditor.md overclaims production-readiness. It will be updated as
-  part of this Issue to reflect that the editor is a functional authoring shell whose core spatial contracts (four-
-  way spine edges, cell hazards, and unified runtime loading) are being established in Issue #369.
+    [Encounter Start]
+    useGameStore.startCombat()
+       └─ Rolt initiatief voor party + monsters.
+       └─ Indien eerste actor hostile monster is: roept direct executeMonsterTurn(firstActor.id) aan.
+            │
+    [Turn Advancement]
+    useGameStore.nextTurn()
+       └─ Bepaalt nextActor via activeTurnIndex.
+       └─ Identificeert hostile monster: !nextActor.isPlayer && (!nextMonster || !nextMonster.isAlly).
+       └─ Roept executeMonsterTurn(nextActor.id) aan.
+            │
+    [Hostile Turn Lifecycle]
+    useGameStore.executeMonsterTurn(monsterId)
+       ├─ Zoekt target: actief party-lid met minimale Chebyshev-afstand (targetPos).
+       ├─ 1. Awareness Check:
+       │     ├─ checkLoS(updatedMonster, targetPos, grid) ⚠️ [Mist walls]
+       │     └─ isInViewCone(updatedMonster, targetPos) ⚠️ [Blokkeert actie als speler buiten 90° kegel staat]
+       ├─ 2. Actieselectie:
+       │     └─ Itereert over monsterActions ⚠️ [Filtert niet op daadwerkelijke aanvallen met damage/attack_bonus]
+       │     └─ Verzonnen fallback (Claw/Bite, Longbow, Fire Bolt met 1d6+2) ⚠️ [Schendt Atlas-integriteit]
+       ├─ 3. Beweging & Pathfinding:
+       │     └─ findPath(updatedMonster, targetPos, grid, monsters, pcPositions) ⚠️ [Mist creatureSize en walls]
+       │     └─ Beweegt maximaal monsterSpeed stappen richting doel.
+       ├─ 4. Aanvalsuitvoering:
+       │     └─ if (dist <= attackRange) ⚠️ [Mist LoS-verificatie met walls]
+       │     └─ resolveCombatAction(updatedMonster, target, attackAction)
+       └─ 5. Einde beurt:
+             └─ setTimeout(() => get().nextTurn(), 1000) ⚠️ [Risico op dubbele advancement bij actieve timers]
   ──────
-  1. Current Architecture and Actual Data Flow
+  3. Heeft #369 een regressie veroorzaakt of een ouder probleem blootgelegd?
 
-    [Authoring Surface]
-    BattleMapEditor Canvas (MapViewport)
-           ↓ (editorStore.ts / mapCommands.ts)
-    [Persistence Layer]
-    JSON serialization (public/assets/atlas/combat/combat_maps/*.json)
-           ↓ (battleMapStorage.ts: validateBattleMap -> migrateBattleMap)
-    [Adapter Boundary]
-    battleMapToCombatGrid(battleMap)
-           ↓
-    [Runtime Game State]
-    useGameStore.combatState:
-      ├─ grid: TacticalCell[][] (flat cell array; doors overwrite cell type)
-      ├─ walls: WallSegment[] (horizontal/vertical lines used for LoS and pathfinding)
-      ├─ monsters: CombatMonster[] (resolved from Atlas)
-      ├─ combatMapBackground: string
-      └─ playerPos: { x, y } (from player token or entrance marker)
-           ↓
-    [Presentation & Execution]
-    CombatGrid.tsx (canvas rendering, click handling, A* movement, LoS checks)
-    CombatTester.tsx (DevKit testbed with hardcoded background selector)
+  Beide:
+
+  1. Regressie door #369:
+  Vóór #369 werden deuren en sommige muren direct als cellen (cell.type = 'door' | 'wall') op het grid gestempeld.
+  Functies zoals checkLoS en findPath zagen daardoor via de cell-fallback nog enige obstructie. In #369 zijn deuren
+  en muren conform de canonieke BattleMap v2 architectuur gemigreerd naar boundary edges (combatState.walls) en
+  worden vloeren niet meer overschreven. Omdat executeMonsterTurn niet werd geüpdatet om combatState.walls mee te
+  sturen, verloren monsters per direct alle geometrische obstakel-detectie.
+  2. Ouder blootgelegd probleem:
+  De 'awareness gate' (waarbij monsters in actieve combat rondjes draaien in plaats van bewegen/aanvallen als ze niet
+  in de 90°-kegel kijken), het selecteren van niet-aanvallende traits (nimble escape, aggressive), en de verzonnen
+  fallback-statistieken waren al aanwezig in de monster-AI en zijn nu aan het licht gekomen.
   ──────
-  2. Canonical Ownership and Mutation Boundaries
+  4. Gefaseerd implementatieplan
 
-  1. Authored Map Invariants (Static Asset Boundary):
-      • Authoritative source files live under public/assets/atlas/combat/combat_maps/.
-      • Validated by validateBattleMap, migrated by migrateBattleMap, and served via /api/combat-maps.
-      • The editor owns authoring data (metadata, dimensions, layers, labels, editor selection). It must never
-      execute combat logic.
-  2. Runtime Combat State (Dynamic Session Boundary):
-      • useGameStore.combatState is the sole canonical owner of active combat execution (grid occupancy, active door
-      open/closed status, initiative, monster HP).
-      • src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts is the pure, unidirectional
-      transformation boundary converting static BattleMap into runtime combat state.
-  3. Ruleset & Mechanics Boundary:
-      • Spatial hazard effects (e.g. fire surface, grease save) must be resolved by the combat engine and gameplay
-      rules resolvers, not evaluated or calculated inside the editor.
+  Fase 1: Edge-Aware Geometrie in de AI Lifecycle
+
+  • Bestand: src/store/useGameStore.ts
+  • Wijzigingen:
+      • In executeMonsterTurn:
+          • Geef currentCombatState.walls door aan checkLoS(updatedMonster, targetPos, currentCombatState.grid,
+          currentCombatState.walls).
+          • Geef updatedMonster.size || 'Medium' én currentCombatState.walls door aan findPath:
+            findPath(
+              updatedMonster,
+              targetPos,
+              currentCombatState.grid,
+              currentCombatState.monsters,
+              currentCombatState.pcPositions || playerPos,
+              updatedMonster.size || 'Medium',
+              currentCombatState.walls
+            );
+
+
+
+
+  Fase 2: Betrouwbare Awareness in Gevechtssessies
+
+  • Bestand: src/store/useGameStore.ts
+  • Wijzigingen:
+      • Zodra startCombat() wordt aangeroepen of een monster actief in de beurtvolgorde van een lopend gevecht aan de
+      beurt is:
+          • Hostile monsters die deelnemen aan een gevecht moeten in awareness: 'combat' staan (of direct hun doelwit
+          engageren mits LoS/pathfinding bestaat), in plaats van vast te lopen in een idle patrol-rotatie.
+          • Bij executeMonsterTurn: als een monster in een actief gevecht zit, zoekt het de dichtstbijzijnde geldige
+          PC op basis van pathfinding/LoS.
+
+
+
+  Fase 3: Canonieke Atlas-actieselectie zonder verzonnen statistieken
+
+  • Bestand: src/store/useGameStore.ts
+  • Wijzigingen:
+      • Filter monsterActions strikt op daadwerkelijke aanvallen: acties met Array.isArray(act.damage) && act.damage.
+      length > 0 of een gedefinieerde aanvalsbonus/aanvalsmechaniek.
+      • Sorteer/kies de meest geschikte aanval op basis van afstand:
+          • Melee: range <= 1.5 (bv. Scimitar, Greataxe).
+          • Ranged: range <= 12 (bv. Shortbow, Javelin), mits er LoS is.
+      • Verwijder de verzonnen fallbacks (Longbow, Fire Bolt, Claw/Bite met 1d6+2 piercing). Als een entiteit geen
+      aanvalsacties heeft in Atlas, voert deze geen verzonnen aanval uit.
+
+
+  Fase 4: Aanvalsvalidatie met Line-of-Sight & Dekking
+
+  • Bestand: src/store/useGameStore.ts
+  • Wijzigingen:
+      • Vóór het aanroepen van resolveCombatAction controleren dat:
+          1. De afstand kleiner of gelijk is aan het bereik van de geselecteerde aanval (dist <= attackRange).
+          2. Er een ongehinderde zichtlijn is (checkLoS(updatedMonster, targetPos, currentCombatState.grid,
+          currentCombatState.walls)).
+      • Als een vijand binnen bereik staat maar gescheiden is door een dichte deur of muur, mag er niet door de muur
+      aangevallen worden.
+
+
+  Fase 5: Asynchrone Timing en Turn Advancement Veiligheid
+
+  • Bestand: src/store/useGameStore.ts
+  • Wijzigingen:
+      • Voorkom race conditions bij timeouts:
+          • Controleer in de timeout-callbacks of het gevecht nog steeds actief is (combatState.initiativeOrder.
+          length > 0), of het monster nog leeft (freshMonster.hp > 0) en of de actieve beurtindex nog steeds
+          overeenkomt met de huidige actor.
+          • Voorkom dubbele nextTurn()-aanroepen wanneer een monster tussentijds sterft of de speler handmatig op
+          'End Turn' klikt.
+
 
   ──────
-  3. Proposed Versioned BattleMap Schema (v2)
+  5. Gerichte regressietests (tests/hostile_turn_combat.test.ts)
 
-  To satisfy the four-direction boundary requirement without turning cells into walls, we transition BattleMap from
-  version: 1 to version: 2:
+  Een nieuw testbestand toevoegen met gerichte tests:
 
-    export type EdgeOrientation = 'horizontal' | 'vertical';
-    export type EdgeBoundaryType =
-      | 'wall'           // Full wall (blocks movement & vision)
-      | 'low-wall'       // Half cover (blocks movement, allows vision)
-      | 'door'           // Standard hinged door
-      | 'secret-door'    // Concealed door
-      | 'bars'           // Iron portcullis/grate (blocks movement, allows vision)
-      | 'window'         // Glass/opening (blocks movement, allows vision)
-      | 'chasm-edge';    // Drop-off/ledge
-
-    export type DoorState = 'open' | 'closed' | 'locked';
-
-    export interface MapEdge {
-      id: string; // Deterministic spine key: e.g. "h:5,5" or "v:5,6"
-      orientation: EdgeOrientation;
-      x: number;
-      y: number;
-      type: EdgeBoundaryType;
-      doorState?: DoorState;
-      // Optional metadata for gameplay/ruleset inspection
-      secretDC?: number;   // Perception DC to detect
-      lockDC?: number;     // Thieves' Tools DC to pick
-      keyId?: string;      // Key item required to unlock
-    }
-
-    export type HazardCategory = 'surface' | 'cloud' | 'pit' | 'trap';
-
-    export interface CellHazard {
-      id: string;
-      category: HazardCategory;
-      type: 'fire' | 'grease' | 'acid' | 'poison' | 'ice' | 'web' | 'pit' | 'spike';
-      damageType?: 'fire' | 'acid' | 'poison' | 'piercing' | 'cold';
-      trigger: 'on-enter' | 'on-turn-start' | 'on-turn-end';
-      difficultTerrain?: boolean;
-    }
-
-    export interface TerrainCellV2 {
-      x: number;
-      y: number;
-      type: string;             // 'stone' | 'wood' | 'grass' | 'water' | 'mud' | 'ice' | 'lava' | 'dirt'
-      elevation?: number;       // Elevation in grid units (0 = base floor, -1 = pit, +1 = platform)
-      movementCost?: number;    // 1 = normal, 2 = difficult terrain (calculated or authored)
-      hazards?: CellHazard[];   // Structured environmental effects on this tile
-    }
-
-    export interface MapPortal {
-      id: string;
-      type: 'entrance' | 'exit' | 'transition';
-      name: string;
-      x: number;
-      y: number;
-      facing?: 'north' | 'east' | 'south' | 'west';
-      targetMapId?: string;
-    }
-
-    export interface BattleMapV2 {
-      version: 2;
-      id: string;
-      name: string;
-      metadata: {
-        description?: string;
-        author?: string;
-        createdAt: string;
-        updatedAt: string;
-        theme?: string;
-        recommendedLevel?: string;
-        environment?: string;
-      };
-      dimensions: {
-        width: number;
-        height: number;
-      };
-      grid: {
-        type: 'square' | 'hex';
-        cellSize: number;
-        unit: 'ft' | 'm';
-        scale: number;
-        visible: boolean;
-        snap: boolean;
-      };
-      background: {
-        type: 'color' | 'texture' | 'image';
-        value: string;
-        opacity: number;
-      };
-      terrain: TerrainCellV2[];
-      edges: MapEdge[];          // Authoritative four-direction boundary spines
-      portals: MapPortal[];      // Explicit entrance and exit locations
-      objects: MapObject[];
-      tokens: MapToken[];
-      labels: MapLabel[];
-      markers: MapMarker[];
-      fogOfWar?: FogDefinition;
-      layers: MapLayer[];
-    }
+  1. Canonieke Atlas-aanvalselectie:
+  Bewijs dat een Goblin met nimble escape, scimitar en shortbow in melee-bereik de scimitar kiest (met de
+  bijbehorende canonieke slashing damage uit Atlas) en op afstand de shortbow, en nooit nimble escape als aanval
+  kiest.
+  2. Geen verzonnen statistieken:
+  Bewijs dat een monster zonder aanvalsacties geen verzonnen 1d6+2 aanval uitvoert.
+  3. Muur- en deurbarrière in pathfinding:
+  Bewijs dat findPath met combatState.walls een route plant om een gesloten muurgrens heen, en niet dwars door de
+  muur loopt.
+  4. LoS-blokkering bij aanvallen:
+  Bewijs dat een monster gescheiden van de speler door een gesloten muur of dichte deur resolveCombatAction niet
+  aanroept, zelfs als de Chebyshev-afstand 1 tegel is.
+  5. Turn-doorloop en levenscyclus:
+  Bewijs dat een in-range vijand met een geldige aanval resolveCombatAction bereikt en de beurt ordentelijk doorgeeft
+  aan de volgende actor.
   ──────
-  4. Shared Boundaries and Deterministic Edge Reconciliation
+  6. Risico's en mitigaties
 
-  In an orthogonal grid, cells share boundaries:
-
-  • A horizontal edge at (x, y) sits along grid line y between x and x + 1. It is the North spine of cell (x, y) and
-  the South spine of cell (x, y - 1).
-  • A vertical edge at (x, y) sits along grid line x between y and y + 1. It is the West spine of cell (x, y) and the
-  East spine of cell (x - 1, y).
-
-  Deterministic Edge Key Scheme
-
-  Every edge is keyed deterministically by its orientation and grid coordinate:
-
-  • h:${x},${y} for horizontal spines
-  • v:${x},${y} for vertical spines
-
-  Reconciliation Guarantee:
-
-  1. Single Source of Truth: Edges are stored in a canonical keyed array/map. Duplicate edges at the same
-  orientation:x:y are rejected at the store and validator level.
-  2. Directional Accessor Helper:
-    export function getCellEdges(x: number, y: number, edgeMap: Map<string, MapEdge>) {
-      return {
-        north: edgeMap.get(`h:${x},${y}`),
-        south: edgeMap.get(`h:${x},${y + 1}`),
-        west:  edgeMap.get(`v:${x},${y}`),
-        east:  edgeMap.get(`v:${x + 1},${y}`)
-      };
-    }
-
-  3. Zero Inconsistency: When a door on h:5,5 is toggled open, both cell (5, 5) looking North and cell (5, 4) looking
-  South immediately observe the exact same door state.
+   Risico            │ Impact                                     │ Mitigatie
+  ───────────────────┼────────────────────────────────────────────┼──────────────────────────────────────────────────
+   Ghost Turn bij    │ Een monster dat tijdens de 1000ms timeout  │ Check freshMonster && freshMonster.hp > 0 direct
+   verslagen monster │ wordt verslagen, voert alsnog een aanval   │ binnen de timeout alvorens acties uit te voeren.
+                     │ uit.                                       │
+   Dubbele Turn      │ Als nextTurn() handmatig wordt getriggerd  │ Valideer dat state.combatState.activeTurnIndex
+   Advancement       │ terwijl de timeout loopt, slaat het        │ nog steeds matcht met de actor ID voordat
+                     │ gevecht een beurt over.                    │ nextTurn() wordt aangeroepen.
+   Targeting van     │ Monsters blijven aanvallen op personages   │ Behoud en versterk het filter dat alleen actieve
+   bewusteloze PCs   │ met 0 HP.                                  │ party-leden met hp > 0 target.
+   Oneindige loop    │ Monster kan de speler niet bereiken en     │ Als findPath null retourneert (volledig
+   bij onbereikbaar  │ blijft hangen.                             │ ingesloten), beweegt het monster niet en
+   doelwit           │                                            │ beëindigt het direct zijn beurt via nextTurn().
   ──────
-  5. Backward-Compatible v1 Migration Strategy
+  7. Verificatieopdrachten
 
-  In src/components/devkit/BattleMapEditor/persistence/battleMapMigration.ts:
+  Conform package.json uit te voeren na implementatie:
 
-  1. Version Detection:
-      • If data.version === 2, return immediately.
-      • If data.version === 1:
-          • Convert walls: WallSegment[] into edges: MapEdge[]:
-              • Deterministic ID: ${w.orientation[0]}:${w.x},${w.y}.
-              • Preserve type (wall, door, secret-door), orientation, and doorState.
-              • Deduplicate by key if legacy data contained overlapping segments.
-          • Convert terrain: TerrainCell[] into TerrainCellV2[]:
-              • Preserve existing x, y, type.
-              • Add default movementCost: (type === 'mud' || type === 'water') ? 2 : 1.
-              • Initialize empty hazards: [].
-          • Extract portals: MapPortal[] from markers of type 'entrance' | 'exit' and tokens of type 'player'.
-          • Set version: 2.
-      • If !data.version (legacy unversioned pre-v1 format), run legacy migration to v1 first, then run v1 to v2.
-
-  ──────
-  6. Hazard Integration Without Duplicating the Combat Engine
-
-  • Authoring Duty (Editor): The editor only records the presence of a hazard:
-      • e.g. { id: 'hz-1', category: 'surface', type: 'fire', trigger: 'on-enter', damageType: 'fire' }
-      • It does not roll damage, prompt saving throws, or apply conditions.
-  • Runtime Duty (Tactical Combat Engine):
-      • src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts maps cell hazards into
-      TacticalCell.hazards.
-      • When a character or monster executes a move in src/store/useGameStore.ts / CombatGrid.tsx, the existing
-      action/damage pipeline checks grid[y][x].hazards.
-      • Triggering events (on-enter, on-turn-start) dispatch to the standard combat log and character damage resolver
-      (takeDamage).
-      • Difficult terrain directly doubles movement cost in getReachableCells and findPath.
-
-  ──────
-  7. Unified Map Loading in CombatTester & Runtime Combat
-
-  1. Retire Parallel terrainMaps Array:
-      • Remove the hardcoded 6-image terrainMaps array in src/components/devkit/CombatTester.tsx.
-  2. Canonical Map Selection:
-      • Make the server map selector the primary and only map picker.
-      • Ship canonical authored maps in public/assets/atlas/combat/combat_maps/ for testing:
-          • canonical_integration_map.json
-          • fey_forest.json
-          • dungeon_crypt.json
-
-  3. Execution Parity:
-      • Both CombatTester and the in-game deployment invoke the exact same function: battleMapToCombatGrid(battleMap).
-      • This populates grid, walls, monsters, partySpawnPos, and background texture identically.
-
-  ──────
-  8. Specialist Handoffs
-
-  • Architecture Specialist (Current): Owns data contracts, schemas, persistence, migration, and boundary isolation.
-  • Gameplay Specialist: Owns runtime movement costs in findPath / getReachableCells, door interaction triggers, and
-  combat hazard damage resolution on enter/turn.
-  • Ruleset & Data Specialist: Ensures hazard damage types and conditions reference standard 2014/2024 ruleset
-  constants without hardcoded drift.
-  • UI Specialist: Owns visual rendering of edge boundaries and hazards on the canvas in both MapViewport and
-  CombatGrid (rendering physical wall lines, door icons, and hazard overlays).
-  • Verification Specialist: Authors automated regression tests verifying edge collision, LoS through open doors,
-  schema validation, and migration integrity.
-  ──────
-  9. Proposed Implementation Phases
-
-  1. Phase 1: Canonical Schema, Types & Edge Geometry Helpers
-      • Update types/battleMap.ts to BattleMapV2, MapEdge, TerrainCellV2, CellHazard, and MapPortal.
-      • Create edge coordinate utilities and directional accessors in geometry/coordinates.ts.
-  2. Phase 2: Validation, Serialization & Migration
-      • Update battleMapValidator.ts (enforce deterministic edge keys, dimension bounds).
-      • Update battleMapMigration.ts (flawless v1 -> v2 migration preserving all existing maps).
-      • Write comprehensive unit tests for schema validation and migration.
-  3. Phase 3: Runtime Adapter & Combat Integration
-      • Update battleMapToCombatGrid.ts to output v2 edges, hazard data, and correct door states without wiping cell
-      terrain.
-      • Update combatUtils.ts (isMoveBlockedByWalls, checkLoS, findPath) to consume v2 edge models.
-      • Update useGameStore.toggleDoor to toggle the boundary edge rather than overwriting cell types.
-  4. Phase 4: CombatTester & Editor Alignment
-      • Refactor CombatTester.tsx to remove hardcoded terrainMaps in favor of canonical map loading.
-      • Ensure public/assets/atlas/combat/combat_maps/*.json files are upgraded to v2.
-      • Update renderMap.ts and CombatGrid.tsx to render edge walls and hazard markers.
-  5. Phase 5: Documentation Synchronization & Full Verification
-      • Align docs/modules/mapEditor.md and docs/ARCHITECTURE_STATUS.md.
-      • Run npm test, npm run test:workflow, and tests/combat_integration.test.ts.
-
-  ──────
-  10. Files Likely to Change & Verification Required
-
-  Files to Modify:
-
-  • src/components/devkit/BattleMapEditor/types/battleMap.ts
-  • src/components/devkit/BattleMapEditor/persistence/battleMapValidator.ts
-  • src/components/devkit/BattleMapEditor/persistence/battleMapMigration.ts
-  • src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts
-  • src/components/devkit/BattleMapEditor/geometry/coordinates.ts
-  • src/components/devkit/BattleMapEditor/geometry/lineOfSight.ts
-  • src/components/devkit/BattleMapEditor/state/editorStore.ts
-  • src/components/devkit/BattleMapEditor/rendering/renderMap.ts
-  • src/components/devkit/CombatTester.tsx
-  • src/components/combat/combatUtils.ts
-  • src/components/combat/CombatGrid.tsx
-  • src/store/useGameStore.ts
-  • docs/modules/mapEditor.md
-  • docs/ARCHITECTURE_STATUS.md
-  • public/assets/atlas/combat/combat_maps/*.json
-
-  Tests to Add/Update:
-
-  • tests/battle_map_v2_schema.test.ts (unit tests for v2 validation, deterministic edge keys, v1->v2 migration)
-  • tests/combat_integration.test.ts (updated for v2 edge semantics, door state preservation, and hazard translation)
-  ──────
-  11. Unresolved Design Decisions for Jaap
-
-  1. Door Click Target:
-      • In v1, clicking the cell toggles the door because the cell was stamped as type: 'door'.
-      • In v2, the door is an edge. Should clicking anywhere in either of the two adjacent cells (within 5ft) toggle
-      the door, or should interaction require clicking near the edge line/doorway sprite itself?
-      (Recommendation: Clicking the doorway area or selecting either adjacent cell while adjacent triggers door
-      interaction).
-  2. Hazard Representation in the Canvas Viewport:
-      • Should cell hazards be drawn as translucent colored overlays (e.g. orange for fire, green for acid/poison,
-      white/blue for ice) with small indicator glyphs, or should they rely solely on painted terrain textures?
-      (Recommendation: Translucent overlay with subtle border styling so hazards remain visually distinct from base
-      floor textures).
-  3. Canonical Fixture Scope for CombatTester:
-      • Should we convert the 6 backgrounds currently in terrainMaps (fey_forest, dungeon_crypt, frozen_tundra,
-      temple_ruins, abyssal_chasm, forgotten_oasis) into pre-authored canonical JSON battle maps shipped in the
-      repository?
-      (Recommendation: Yes, provide fully authored, minimal v2 JSON fixtures for each of these 6 themes so
-      CombatTester immediately has rich test scenarios).
-
-  ──────
-  Awaiting Jaap's review and approval before proceeding with implementation.
-
-────────────────────────────────────────────────────────────
-> Refine the Issue #369 implementation plan before any code changes.
-
-  The overall architecture and phased approach are approved, subject to these design constraints:
-
-  1. **Edge coordinates**
-     - Audit the existing `getWallSnap()` implementation and all legacy `WallSegment` coordinate conventions before
-  defining the v1-to-v2 mapping.
-     - Explicitly define valid horizontal and vertical edge coordinate ranges, including map boundaries.
-     - Add tests proving that one shared edge is represented exactly once and is returned consistently from both
-  adjacent cells.
-     - Never assume legacy x/y coordinates already match the new spine coordinate convention.
-
-  2. **Terrain and hazard mechanics**
-     - Do not infer `movementCost: 2` for water or mud during migration.
-     - Preserve authored terrain data without inventing gameplay mechanics.
-     - Hazard data must remain structured and serializable, with a clear boundary to canonical gameplay resolvers.
-     - Do not invent damage values, saving throw rules, conditions or trigger behavior.
-     - Where applicable, use canonical mechanic references and parameters rather than embedding rule resolution inside
-  the editor or adapter.
-
-  3. **Portals and player tokens**
-     - Migrate existing entrance and exit markers into the canonical portal representation.
-     - Do not convert player tokens into portals.
-     - Preserve player token positions and their existing spawn semantics.
-     - Avoid duplicate or conflicting representations of entrances and exits.
-
-  4. **CombatTester background selection**
-     - Inspect every actual consumer of `terrainMaps`.
-     - Distinguish background/theme selection from canonical BattleMap selection.
-     - Remove parallel hardcoded map definitions where they duplicate canonical map loading.
-     - Preserve independent background selection if it remains useful.
-     - Do not create six complete BattleMaps merely because six background images exist.
-     - Define the smallest set of canonical JSON fixtures needed to prove the shared map pipeline.
-
-  5. **Edge types and scope**
-     - Start with the edge types and door states genuinely required by the existing implementation and Issue #369.
-     - Do not introduce unimplemented mechanics for bars, windows, chasm edges or other speculative edge types.
-     - Preserve geometry needed by a future cover resolver without implementing the full cover system.
-
-  6. **Schema and compatibility**
-     - Reuse existing metadata, object, token, label, fog and layer types wherever possible.
-     - Identify all consumers of the legacy `walls` property and document how they move to the canonical edge
-  representation.
-     - Ensure v2 data is still validated; unknown future schema versions must be rejected rather than silently
-  accepted.
-     - Preserve all existing canonical map data during migration.
-
-  7. **Verification**
-     - Include round-trip tests for existing canonical JSON maps.
-     - Test shared edges, outer map boundaries, door state, migration, hazards, portals, player token positions and
-  adapter output.
-     - Verify actual package scripts before selecting the final test commands.
-
-  Return the revised phased implementation plan, exact files and tests, and any remaining decisions that genuinely
-  require product input.
-
-  Planning only. Do not edit, create, delete, commit, push or modify any files or GitHub resources.
-
-○ Thought for 1m 2s (`DevKit.tsx` imports from a modular directory, indicating potential architectural design. The...)
-● Ran 4 commands, checked 2 tasks, killed 1 task (Get-Content public/assets/atlas/combat/combat_maps/untitled_battl...)
-● Explored 1 file (task-247.log)
-● Ran 5 commands, checked 2 tasks, killed 1 task (git grep "walls" src/ · git grep "BattleMapE...) (ctrl+o to expand)
-▸ Thought for 9s
-
-   Refined Architectural Implementation Plan
-
-  GitHub Issue #369: Canonical BattleMap Schema, Edge Semantics, Hazards & CombatTester Integration
-
-  │ Execution Contract: GitHub Issue #369
-  │ Specialist Contract: .github/agents/architecture-specialist.agent.md
-  │ Mode: Planning Only (--mode=plan) — Read-Only
-  │ Implementation Branch: feat/369-canonical-battlemap
-  ──────
-  1. Edge Coordinates & Boundary Audit
-
-  A. Auditing getWallSnap() & Legacy WallSegment
-
-  In src/components/devkit/BattleMapEditor/geometry/coordinates.ts:
-
-    // For a mouse click inside cell (cellX, cellY):
-    if (minDist === distToTop)    return { x: cellX, y: cellY,     orientation: 'horizontal' };
-    if (minDist === distToBottom) return { x: cellX, y: cellY + 1, orientation: 'horizontal' };
-    if (minDist === distToLeft)   return { x: cellX, y: cellY,     orientation: 'vertical' };
-    if (minDist === distToRight)  return { x: cellX + 1, y: cellY, orientation: 'vertical' };
-
-  In src/components/combat/combatUtils.ts:
-
-  • A horizontal wall at (x, y) is treated as a segment from (x, y) to (x + 1, y).
-  • A vertical wall at (x, y) is treated as a segment from (x, y) to (x, y + 1).
-
-  B. Explicit Valid Coordinate Ranges
-
-  For a map of width W and height H, with cells x ∈ [0, W - 1] and y ∈ [0, H - 1]:
-
-   Spine        │ Spine Line  │ Segment Span    │ Valid x Range │ Valid y Range │ Total       │ Outer Boundary
-   Orientation  │             │                 │               │               │ Possible    │ Coordinates
-                │             │                 │               │               │ Positions   │
-  ──────────────┼─────────────┼─────────────────┼───────────────┼───────────────┼─────────────┼──────────────────────
-   Horizontal   │ Grid line y │ from (x, y) to  │ 0 ≤ x ≤ W - 1 │ 0 ≤ y ≤ H     │ W × (H + 1) │ North border: y =
-   (h)          │             │ (x + 1, y)      │               │               │             │ 0South border: y = H
-   Vertical (v) │ Grid line x │ from (x, y) to  │ 0 ≤ x ≤ W     │ 0 ≤ y ≤ H - 1 │ (W + 1) × H │ West border: x =
-                │             │ (x, y + 1)      │               │               │             │ 0East border: x = W
-
-  C. Deterministic Edge ID & Shared Boundary Mathematical Proof
-
-  Every edge is assigned a deterministic ID based on its orientation and anchor coordinate:
-
-  • Horizontal: h:${x},${y}
-  • Vertical: v:${x},${y}
-
-  For any cell C(x, y) within the map bounds:
-
-  • North spine: h:${x},${y}
-  • South spine: h:${x},${y + 1}
-  • West spine: v:${x},${y}
-  • East spine: v:${x + 1},${y}
-
-  Proof of Exact-Once Representation Across Shared Boundaries:
-
-  1. Vertical Boundary between C(x, y) and East Neighbor C(x + 1, y):
-      • East spine of C(x, y) is v:${x + 1},${y}.
-      • West spine of C(x + 1, y) is v:${x + 1},${y}.
-      • Both evaluate to the exact same string v:${x + 1},${y}.
-  2. Horizontal Boundary between C(x, y) and South Neighbor C(x, y + 1):
-      • South spine of C(x, y) is h:${x},${y + 1}.
-      • North spine of C(x, y + 1) is h:${x},${y + 1}.
-      • Both evaluate to the exact same string h:${x},${y + 1}.
-
-
-  D. v1-to-v2 Edge Migration Mapping
-
-  Legacy WallSegment objects specify { id, orientation, x, y, type, doorState }.
-
-  • We do not assume legacy IDs match the spine scheme.
-  • Each legacy segment is transformed by reading its orientation, x, and y:
-    const prefix = wall.orientation === 'horizontal' ? 'h' : 'v';
-    const edgeId = `${prefix}:${wall.x},${wall.y}`;
-
-  • If duplicate legacy entries exist at the same coordinate/orientation, they are merged deterministically
-  (preserving door properties if either entry was a door).
-  ──────
-  2. Terrain and Hazard Contracts
-
-  A. Authored Terrain Invariants
-
-  • Terrain cells retain authored properties: { x, y, type }.
-  • Constraint Compliance: Migration must NOT infer movementCost: 2 or difficult terrain for water, mud, or any other
-  terrain. Authored values are preserved as authored. If a cell does not explicitly specify a custom movementCost,
-  the property is omitted.
-  • The tactical combat engine evaluates movement penalties dynamically through its existing ruleset mechanisms
-  rather than hardcoded static map data.
-
-  B. Structured Hazard Schema
-
-  Hazards are authored as pure declarative data:
-
-    export type HazardCategory = 'surface' | 'cloud' | 'pit' | 'trap';
-
-    export interface CellHazard {
-      id: string;
-      category: HazardCategory;
-      type: string;             // e.g. 'fire', 'grease', 'acid', 'poison', 'ice', 'web', 'pit', 'spike'
-      damageType?: string;      // Canonical reference: 'fire' | 'acid' | 'poison' | 'cold' | 'piercing'
-      trigger?: 'on-enter' | 'on-turn-start' | 'on-turn-end';
-    }
-
-  • Boundary Guarantee: The editor and adapter never invent damage dice (e.g. 1d6), saving throw formulas (e.g. DC 13
-  Dex), or condition durations.
-  • Runtime Consumption: The adapter passes cell.hazards to TacticalCell. When a character moves into a cell or
-  starts/ends a turn in combat, the tactical combat engine detects the hazard descriptor and resolves mechanics
-  through the canonical ruleset domain.
-  ──────
-  3. Portals and Player Tokens
-
-  A. Portals Representation
-
-    export interface MapPortal {
-      id: string;
-      type: 'entrance' | 'exit';
-      name: string;
-      x: number;
-      y: number;
-      facing?: 'north' | 'east' | 'south' | 'west';
-      description?: string;
-    }
-
-  B. Migration Rules
-
-  1. Existing markers with type === 'entrance' | 'exit' migrate into portals: MapPortal[].
-  2. Existing markers with other types (encounter, trap, clue) remain in markers: MapMarker[].
-  3. Player Tokens: Tokens with type === 'player' remain strictly in tokens: MapToken[]. They are never converted
-  into portals.
-  4. Spawn Resolution Order in src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts:
-      • If a player token (type === 'player') exists, its position defines the tactical partySpawnPos.
-      • If no player token exists, the first entrance portal (type === 'entrance') provides the default partySpawnPos.
-      • Player tokens do not create active combatant monster records.
-
-  ──────
-  4. CombatTester Background & Map Selection
-
-  A. Consumer Audit of terrainMaps
-
-  • Audit confirmed that src/components/devkit/CombatTester.tsx is the only consumer of terrainMaps in the entire
-  repository.
-  • It was used solely to populate a <select> that calls setCombatMapBackground(e.target.value). It does not load
-  walls, terrain, or spawns.
-
-  B. Refactored UI Architecture in CombatTester
-
-  1. Primary Selector (BattleMap): The existing "Custom Map" dropdown is promoted to the primary selector labeled
-  "BattleMap:". It fetches from /api/combat-maps and invokes the canonical loadBattleMapFromServer and
-  battleMapToCombatGrid pipeline.
-  2. Secondary Selector (Backdrop Override): The existing terrainMaps dropdown is retained but clearly relabeled as
-  "Backdrop:" or "Theme Image:". It operates purely as a visual canvas background override.
-  3. Canonical Fixtures: We do not generate 6 empty BattleMaps. The existing
-  public/assets/atlas/combat/combat_maps/canonical_integration_map.json is upgraded to v2 to serve as the
-  authoritative integration test fixture.
-  ──────
-  5. Bounded Edge Types & Cover Foundation
-
-  To prevent speculative complexity, edge types and door states are strictly bounded to verified requirements:
-
-    export type EdgeType = 'wall' | 'low-wall' | 'door' | 'secret-door';
-    export type DoorState = 'open' | 'closed' | 'locked';
-
-    export interface MapEdge {
-      id: string;               // "h:5,5" or "v:5,6"
-      orientation: 'horizontal' | 'vertical';
-      x: number;
-      y: number;
-      type: EdgeType;
-      doorState?: DoorState;    // defined for 'door' and 'secret-door'
-    }
-
-  • Collision & LoS Semantics:
-      • 'wall': Blocks movement and Line-of-Sight.
-      • 'low-wall': Blocks movement; allows Line-of-Sight (foundational for half cover in lineOfSight.ts).
-      • 'door' (closed / locked): Blocks movement and Line-of-Sight.
-      • 'door' (open): Allows movement and Line-of-Sight.
-      • 'secret-door': Treated as 'wall' until discovered/opened.
-  • No unneeded types (bars, window, chasm-edge) will be introduced.
-  ──────
-  6. Schema, Consumers of walls, & Backward Compatibility
-
-  A. Versioned Schema (version: 2)
-
-    export interface BattleMapV2 {
-      version: 2;
-      id: string;
-      name: string;
-      metadata: MapMetadata;
-      dimensions: { width: number; height: number };
-      grid: GridConfiguration;
-      background: MapBackground;
-      terrain: TerrainCell[];
-      edges: MapEdge[];          // Replaces legacy walls array
-      portals: MapPortal[];      // Migrated entrance/exit portals
-      objects: MapObject[];
-      tokens: MapToken[];
-      labels: MapLabel[];
-      markers: MapMarker[];
-      fogOfWar?: FogDefinition;
-      layers: MapLayer[];
-    }
-
-  B. Legacy walls Consumer Transition
-
-   Consumer File                         │ Current Usage                    │ Updated v2 Usage
-  ───────────────────────────────────────┼──────────────────────────────────┼────────────────────────────────────────
-   src/components/devkit/BattleMapEditor │ Validates map.walls array        │ Validates map.edges array; verifies
-   /persistence/battleMapValidator.ts    │                                  │ coordinates match orientation bounds;
-                                         │                                  │ rejects duplicate keys; rejects
-                                         │                                  │ unsupported versions
-   src/components/devkit/BattleMapEditor │ Returns walls: map.walls, stamps │ Returns walls: map.edges (or edge
-   /persistence/battleMapToCombatGrid.ts │ doors onto cells                 │ representation); stops overwriting
-                                         │                                  │ cell terrain with doors
-   src/components/combat/combatUtils.ts  │ isMoveBlockedByWalls, checkLoS   │ Consumes MapEdge (or boundary geometry
-                                         │ iterate over walls               │ with orientation/coords/doorState)
-   src/components/devkit/BattleMapEditor │ drawWallsAndDoors(rc, map.walls) │ drawEdges(rc, map.edges) rendering
-   /rendering/renderMap.ts               │                                  │ physical lines and door markers
-   src/components/devkit/BattleMapEditor │ addWall, removeWall, updateWall  │ addEdge, removeEdge, updateEdge using
-   /state/editorStore.ts                 │                                  │ deterministic keys
-   src/store/useGameStore.ts             │ toggleDoor(x, y)                 │ Toggles doorState on the corresponding
-                                         │                                  │ edge boundary
-
-  C. Strict Schema Version Validation
-
-  In battleMapValidator.ts:
-
-  • If map.version !== 1 && map.version !== 2, reject immediately with "Unsupported map schema version: ${map.
-  version}".
-  • Ensure v2 maps contain valid dimensions (≥ 4 × 4), valid edge coordinates, and required metadata.
-  ──────
-  7. Phased Implementation Plan
-
-  │ Diagram exceeds terminal width (243 > 119 cols)
-  │ Displayed as code block. Widen terminal to view inline.
-
-    flowchart TD
-        P1["Phase 1: Canonical Types & Edge Geometry"] --> P2["Phase 2: Validation, Migration & Unit Tests"]
-        P2 --> P3["Phase 3: Runtime Adapter & Combat Integration"]
-        P3 --> P4["Phase 4: CombatTester & Editor Alignment"]
-        P4 --> P5["Phase 5: Documentation & Canonical Map Fixtures"]
-
-  Phase 1: Canonical Types & Edge Geometry
-
-  • Update src/components/devkit/BattleMapEditor/types/battleMap.ts:
-      • Define BattleMapV2, MapEdge, EdgeType, DoorState, CellHazard, and MapPortal.
-      • Maintain type compatibility aliases during migration where required.
-  • Update src/components/devkit/BattleMapEditor/geometry/coordinates.ts:
-      • Add getCellEdges(x, y, edgeMap) helper.
-      • Add isValidEdgeCoordinate(orientation, x, y, width, height) validator.
-
-
-  Phase 2: Validation, Migration & Unit Tests
-
-  • Update src/components/devkit/BattleMapEditor/persistence/battleMapValidator.ts:
-      • Reject unknown schema versions.
-      • Validate edge coordinate bounds and enforce deterministic key formats (h:x,y, v:x,y).
-  • Update src/components/devkit/BattleMapEditor/persistence/battleMapMigration.ts:
-      • Implement lossless v1 -> v2 migration.
-      • Convert walls to edges without duplicate keys.
-      • Migrate entrance/exit markers to portals without converting player tokens.
-      • Preserve terrain without inferred movement costs.
-  • Create tests/battle_map_v2_schema.test.ts:
-      • Test valid/invalid edge coordinate ranges, including outer borders (x = W, y = H).
-      • Test that shared edges are represented once and accessed symmetrically from adjacent cells.
-      • Test round-trip serialization and migration of existing canonical maps.
-
-
-  Phase 3: Runtime Adapter & Combat Integration
-
-  • Update src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts:
-      • Map edges to runtime boundary segments.
-      • Map cell.hazards to TacticalCell.hazards.
-      • Stop stamping doors over terrain cells; preserve cell.type as the underlying floor/terrain.
-      • Resolve partySpawnPos from player tokens first, falling back to entrance portals.
-  • Update src/components/combat/combatUtils.ts:
-      • Support low-wall LoS pass-through in checkLoS.
-      • Ensure door crossing checks properly test boundaries between adjacent cells.
-  • Update src/store/useGameStore.ts:
-      • Update toggleDoor to toggle the boundary edge state without requiring a destructive cell type overwrite.
-
-
-  Phase 4: CombatTester & Editor Alignment
-
-  • Update src/components/devkit/CombatTester.tsx:
-      • Promote map loader to "BattleMap:".
-      • Relabel background selector to "Backdrop Image:".
-  • Update src/components/devkit/BattleMapEditor/rendering/renderMap.ts:
-      • Draw edge walls, low walls, and door state indicators.
-  • Update src/components/devkit/BattleMapEditor/state/editorStore.ts:
-      • Use deterministic edge keys for addEdge, removeEdge, updateEdge.
-
-
-  Phase 5: Documentation & Canonical Map Fixtures
-
-  • Upgrade public/assets/atlas/combat/combat_maps/canonical_integration_map.json to v2.
-  • Update docs/modules/mapEditor.md and docs/ARCHITECTURE_STATUS.md to accurately document v2 edge semantics, portal
-  separation, and real editor status.
-  ──────
-  8. Exact Files and Verification Commands
-
-  Exact Files to Modify/Add:
-
-  1. src/components/devkit/BattleMapEditor/types/battleMap.ts
-  2. src/components/devkit/BattleMapEditor/geometry/coordinates.ts
-  3. src/components/devkit/BattleMapEditor/persistence/battleMapValidator.ts
-  4. src/components/devkit/BattleMapEditor/persistence/battleMapMigration.ts
-  5. src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts
-  6. src/components/devkit/BattleMapEditor/state/editorStore.ts
-  7. src/components/devkit/BattleMapEditor/rendering/renderMap.ts
-  8. src/components/devkit/CombatTester.tsx
-  9. src/components/combat/combatUtils.ts
-  10. src/store/useGameStore.ts
-  11. public/assets/atlas/combat/combat_maps/canonical_integration_map.json
-  12. docs/modules/mapEditor.md
-  13. docs/ARCHITECTURE_STATUS.md
-  14. tests/combat_integration.test.ts (updated)
-  15. tests/battle_map_v2_schema.test.ts (new)
-
-  Verified Verification Commands:
-
+  • bun test tests/hostile_turn_combat.test.ts
   • bun test tests/combat_integration.test.ts
   • bun test tests/battle_map_v2_schema.test.ts
   • npm run test:workflow
   • npm run lint
-  • npm run validate:assets
   • git diff --check
   ──────
-  9. Remaining Product Decisions for Jaap
+  8. Documentatie-updates
 
-  1. Door Interaction in CombatGrid:
-      • Now that a door is an edge rather than an entire cell, a player standing at (5, 5) wants to open the door at
-      the North edge h:5,5 (between (5, 5) and (5, 4)).
-      • Question: Should clicking either adjacent cell ((5, 5) or (5, 4)) while adjacent trigger the door toggle, or
-      should clicking the doorway threshold/line directly trigger it?
-      • Recommendation: Clicking either adjacent cell within 5ft range toggles the door, preserving seamless
-      clickability on canvas without requiring micro-precision pixel clicks on a 2-pixel line.
+  Na goedkeuring en implementatie:
+
+  • docs/systems/TACTICAL_COMBAT_ENGINE.md: Paragraaf AI Combat updaten met de randbewuste geometrie (combatState.
+  walls), canonieke Atlas-actieselectie en beurtcyclus-contracten.
+  • docs/ARCHITECTURE_STATUS.md: Status van Issue #418 documenteren.
+  ──────
+  Dit plan is puur onderzoek en planning (--mode=plan). Er zijn geen bestanden gewijzigd. Ik wacht op je review en
+  akkoord alvorens over te gaan naar implementatie.
+
+────────────────────────────────────────────────────────────
+> Revise your Issue #418 implementation plan before any implementation.
+  Planning only. Do not edit files.
+
+  The initial investigation is accepted, but tighten these points:
+
+  1. Combat awareness:
+  - A hostile monster participating in the active initiative order must not waste its turn merely because the target is
+  outside its 90-degree view cone.
+  - Do not introduce wall-penetrating vision or attacks.
+  - Preserve canonical wall and closed-door obstruction for line of sight and attacks.
+  - Explain exactly how awareness should behave during an active encounter.
+  - Do not introduce a new stealth or surprise system.
+
+  2. Canonical Atlas attacks:
+  - Inspect the actual Atlas action schema and representative Goblin and Orc data.
+  - Identify exactly which fields establish that an action is a valid attack.
+  - Nimble Escape, Aggressive, and other non-attack traits must never be selected as attacks.
+  - Do not assume attack_bonus alone makes an action a valid attack.
+  - Do not invent damage, attack bonuses, spells, or fallback actions.
+  - Determine attack range from canonical Atlas data and documented conversions.
+  - Do not introduce generic hardcoded melee/ranged ranges such as 1.5 or 12 tiles unless those values are explicitly
+  supported by the canonical data or an existing documented rules contract.
+  - If a monster has no valid attack, it must not fabricate one.
+
+  3. Turn lifecycle:
+  - Keep timeout and advancement safeguards minimal and local to executeMonsterTurn.
+  - Ensure an actor cannot advance the same turn twice.
+  - Ensure a dead monster or ended encounter cannot execute a stale scheduled turn.
+  - Avoid introducing a general timer framework.
+
+  4. Tests:
+  - Use real canonical Atlas monster data where practical.
+  - Prove a Goblin selects Scimitar in melee and Shortbow at valid ranged distance, based on actual stored attack data.
+  - Prove non-attack traits are rejected.
+  - Prove missing attack data never produces invented damage.
+  - Prove walls and closed doors block movement and ranged attacks.
+  - Prove an in-range valid hostile attack reaches resolveCombatAction.
+  - Prove one hostile turn advances exactly once.
+
+  5. Scope:
+  - Keep the two findPath call sites and checkLoS wall propagation in scope.
+  - No BattleMap Editor changes.
+  - No full action-economy redesign.
+  - No Issue #371 implementation.
+  - No unrelated combat or Atlas refactoring.
+
+  Return the revised plan, exact files, confirmed Atlas field semantics, test strategy, and any remaining
+  uncertainties.
+
+  Planning only. Wait for review.
+
+○ Thought for 23.9s (Initial hypothesis: ranged attacks are determined by weapon properties. Examining how the appl...)
+● Ran (git grep -n "range" src/components/combat/)
+● Explored 1 file (TokenActionHUD.tsx)
+● Ran 5 commands (Get-ChildItem -Path ... ×3 · Get-Content public\a... ×2) (ctrl+o to expand)
+
+▸ Thought for 28s
+   Herzien Onderzoeks- & Implementatieplan: Issue #418
+
+  │ Governing Issue: #418 https://github.com/japiohopman/artificer/issues/418 — fix(combat): restore edge-aware
+  │ hostile monster turns and attacks
+  │ Specialist Contract: Gameplay Specialist (.github/agents/gameplay-specialist.agent.md)
+  │ Modus: Planning Only (--mode=plan) — Geen bestandswijzigingen
+  │ Target Branch: fix/418-edge-aware-monster-turns
+  ──────
+  1. Combat Awareness in Actieve Gevechten
+
+  Gedrag tijdens een actief gevecht
+
+  • Geen beurtverlies door 90°-zichtkegel:
+  Zodra een gevecht actief is (startCombat is uitgevoerd en het initiatief loopt), bevinden alle deelnemende vijanden
+  zich in actieve gevechtstoestand (awareness: 'combat'). Ze verspillen hun beurt niet langer aan een nutteloze 'idle
+  patrol rotation' van 90° enkel omdat de speler zich niet toevallig in hun initiële kijkkwadrant bevindt.
+  • Volledige obstructie door muren en gesloten deuren:
+  Combat awareness geeft nooit röntgenzicht door muren. Zowel zichtlijnen als aanvallen worden strikt geblokkeerd
+  door canonieke randen (combatState.walls).
+      • checkLoS(monster, targetPos, grid, walls) bepaalt of er ongehinderd zicht is tussen het monster en het
+      doelwit.
+      • Een gesloten deur (doorState !== 'open') of muur (type === 'wall') blokkeert de zichtlijn volledig.
+      • Als er geen directe zichtlijn is (doelwit bevindt zich achter een muur of gesloten deur), ziet het monster
+      het doelwit niet en kan het niet aanvallen.
+      • Het monster gebruikt findPath met combatState.walls om een fysiek geldige route om de muur heen of door open
+      deuren te bepalen richting de spelerpositie. Als er geen geldige route bestaat (speler zit achter dichte deuren
+      zonder doorgang), kan het monster niet dichterbij komen en beëindigt het ordentelijk zijn beurt.
+  • Geen nieuw stealth- of surprise-systeem:
+  We introduceren geen nieuw stealth- of verrassingssysteem; we herstellen louter het correcte gedrag dat vijanden in
+  de beurtvolgorde hun beurt daadwerkelijk uitvoeren met respect voor de fysieke map-geometrie.
+  ──────
+  2. Canonieke Atlas-aanvallen en Bereikbepaling
+
+  A. Identificatie van geldige aanvallen in het Atlas-schema
+
+  Uit inspectie van tjwqogi3a4ual7lc.json (Goblin), hb49mcovbxwwekwq.json (Orc) en 8px2jhwuptnnrbvx.json (Gibbering
+  Mouther) blijkt het exacte schema:
+
+  • Eigenschappen van acties: name, desc, attack_bonus, damage, actions.
+  • Waarom attack_bonus alleen onvoldoende is:
+  Niet-aanvallende traits bevatten in Atlas vaak óók een numerieke attack_bonus (bijv. Goblin Nimble Escape heeft
+  attack_bonus: 2, Gibbering Mouther Aberrant Ground heeft attack_bonus: -2, Orc Aggressive heeft attack_bonus: 0).
+  • Het doorslaggevende veld:
+  Een actie is uitsluitend een geldige aanval als:
+    Array.isArray(action.damage) &&
+    action.damage.length > 0 &&
+    Boolean(action.damage[0]?.damage_dice)
+
+  • Afwijzing van niet-aanvallende traits:
+  Acties zoals Nimble Escape, Aggressive, Multiattack, Aberrant Ground hebben damage: []. Deze worden per definitie
+  uitgesloten van aanvalsselectie.
+
+  B. Geen verzonnen schade of fallback-aanvallen
+
+  • De bestaande verzonnen defaults (name: 'Longbow' | 'Fire Bolt' | 'Claw/Bite', attack_bonus: 4, damage_dice: '1d6+
+  2') worden volledig verwijderd.
+  • Indien een monster geen acties met geldige schadedata bezit, selecteert het null en fabriceert het geen aanval.
+
+  C. Bereikbepaling vanuit canonieke data en gedocumenteerde grid-conversie
+
+  Conform docs/systems/TACTICAL_COMBAT_ENGINE.md geldt: 1 rastercel = 5 voet (Chebyshev-afstand: aangrenzend = 1 cel
+  = 5 ft reach).
+
+  • Melee-aanvallen:
+  Standaard bereik is 1 cel (5 ft). Indien de actiebeschrijving expliciet een groter bereik vermeldt (bijv. reach 10
+  ft.), is het bereik reach/5 (2 cellen).
+  • Ranged-aanvallen:
+  Een aanval is ranged als de naam of beschrijving overeenkomt met een canoniek afstandswapen (zoals shortbow,
+  longbow, javelin, crossbow, dart, sling) of expliciet range X/Y ft. bevat:
+      • Shortbow: normale dracht 80 ft → ⌊80/5⌋ = 16 cellen.
+      • Javelin: normale dracht 30 ft → ⌊30/5⌋ = 6 cellen.
+      • Longbow: normale dracht 150 ft → ⌊150/5⌋ = 30 cellen.
+      • Indien een getal in de beschrijving staat (bijv. range 30 ft. of range 30/120 ft.): normale dracht in voet
+      gedeeld door 5.
+  • Selectielogica op basis van afstand:
+      • Monster kiest de meest effectieve aanval die past bij de huidige afstand tot het doelwit:
+          • Staat het monster aangrenzend (dist <= 1) en heeft het een melee-aanval (bijv. Scimitar of Greataxe), dan
+          kiest het die aanval.
+          • Staat het monster op afstand (dist > 1) en heeft het een afstandswapen (bijv. Shortbow of Javelin) met
+          dist <= weaponRange én ongehinderde LoS, dan selecteert het die afstandsaanval.
+
 
   ──────
-  This refined plan is complete and read-only. No files were modified. Ready for Jaap's approval to begin Phase 1.
+  3. Beurt-levenscyclus en Minimale Asynchrone Beveiliging
+
+  Om timingproblemen te voorkomen zonder een zwaar generiek timer-framework te bouwen, houden we alle bewaking lokaal
+  binnen executeMonsterTurn:
+
+  1. Beurt-identificatie:
+  Bij het aanroepen van executeMonsterTurn(monsterId) leggen we de context vast:
+  const turnActorId = monsterId;
+  const turnIndex = get().combatState.activeTurnIndex;
+  2. Gegarandeerd eenmalige beurt-doorgifte (advanceTurnOnce):
+  Een lokale sentinel voorkomt dat dezelfde beurt twee keer kan worden doorgegeven:
+    let turnAdvanced = false;
+    const advanceTurnOnce = () => {
+      if (turnAdvanced) return;
+      turnAdvanced = true;
+      get().nextTurn();
+    };
+
+  3. Validatie bij timer-afloop:
+  Vóór het uitvoeren van verplaatsing of aanval binnen de setTimeout:
+      • Controleer of het gevecht nog actief is (state.combatState.initiativeOrder.length > 0 en actieve gameMode).
+      • Controleer of de actieve beurtindex nog steeds overeenkomt met deze actor (state.combatState.activeTurnIndex
+      === turnIndex en actor ID klopt).
+      • Controleer of het monster nog bestaat en in leven is (freshMonster && freshMonster.hp > 0). Indien verslagen:
+      roep direct advanceTurnOnce() aan en stop.
+  4. LoS-verificatie vóór de klap:
+  resolveCombatAction wordt pas aangeroepen nadat expliciet is geverifieerd dat checkLoS(updatedMonster, targetPos,
+  currentCombatState.grid, currentCombatState.walls) waar is.
+  ──────
+  4. Teststrategie (tests/hostile_turn_combat.test.ts)
+
+  We maken een gerichte testsuite die de canonieke Atlas-bestanden direct inlaadt:
+
+  1. Goblin Atlas-aanvalselectie (Melee vs Ranged):
+      • Met echte data uit public/assets/atlas/enemies/json/14/humanoid/tjwqogi3a4ual7lc.json:
+          • Op afstand 1 cel selecteert de Goblin scimitar (1d6-1 slashing, bereik 1) en verwerpt nimble escape.
+          • Op afstand 5 cellen selecteert de Goblin shortbow (1d6-1 piercing, bereik 16) en verwerpt nimble escape.
+
+  2. Orc Atlas-aanvalselectie:
+      • Met echte data uit public/assets/atlas/enemies/json/14/humanoid/hb49mcovbxwwekwq.json:
+          • Verwerpt aggressive (damage: []).
+          • Kiest greataxe op 1 cel afstand (1d12+3 slashing).
+          • Kiest javelin op afstand (1d6+3 piercing, bereik 6).
+
+  3. Uitsluiting van verzonnen schade:
+      • Een monster zonder schadewaarden in zijn acties (lege array actions: [] of acties met damage: []) resulteert
+      in null en voert geen aanval uit (geen verzonnen 1d6+2).
+  4. Muren en gesloten deuren blokkeren zicht en schoten:
+      • Een vijand en speler op afstand 1 of 5 cellen, gescheiden door een randmuur of dichte deur:
+          • checkLoS(monster, player, grid, walls) retourneert false.
+          • De vijand valt niet aan door de muur/deur.
+          • findPath(monster, player, grid, monsters, pcPositions, size, walls) leidt het monster langs de muur naar
+          de opening.
+
+  5. Aanvalsuitvoering bereikt resolveCombatAction:
+      • Een in-range vijand met zichtlijn en een canonieke aanval roept resolveCombatAction succesvol aan.
+  6. Beurt-doorgifte:
+      • Een hostile turn advanceert exact één keer naar de volgende index in de initiativeOrder.
+      • Een verslagen vijand tijdens de beurt voert geen aanval meer uit en triggert geen dubbele advancement.
+
+  ──────
+  5. Bepaling van Scope en Exacte Bestanden
+
+  Bestanden die worden aangepast:
+
+  1. src/store/useGameStore.ts:
+      • startCombat: zet actieve vijanden in awareness: 'combat'.
+      • executeMonsterTurn:
+          • Beide findPath call-sites voorzien van creatureSize en currentCombatState.walls.
+          • checkLoS voorzien van currentCombatState.walls.
+          • Canonieke actiefiltering (act.damage.length > 0) en bereikberekening.
+          • Verwijderen van verzonnen fallbacks (Longbow/Fire Bolt/Claw/Bite).
+          • LoS-check vóór het afvuren/slaan in resolveCombatAction.
+          • Lokale safeguards tegen dubbele beurt-advancement en stale timers.
+
+  2. tests/hostile_turn_combat.test.ts (nieuw):
+      • De gerichte testsuite zoals hierboven beschreven.
+  3. docs/systems/TACTICAL_COMBAT_ENGINE.md:
+      • Documenteren van de randbewuste AI-lifecycle en canonieke Atlas-actieselectie.
+  4. docs/ARCHITECTURE_STATUS.md:
+      • Statusupdate voor Issue #418.
+
+
+  Buiten Scope:
+
+  • Geen wijzigingen aan de BattleMap Editor.
+  • Geen herontwerp van de algehele actie-economie (acties/bonusacties/reacties blijven zoals ze zijn).
+  • Geen implementatie van Issue #371 (conditiesysteem).
+  • Geen wijzigingen aan Atlas JSON-bestanden.
+  ──────
+  6. Verificatie-opdrachten
+
+  1. bun test tests/hostile_turn_combat.test.ts
+  2. bun test tests/combat_integration.test.ts
+  3. bun test tests/battle_map_v2_schema.test.ts
+  4. npm run test:workflow
+  5. npm run lint
+  6. git diff --check
+  ──────
+  Dit herziene plan is volledig opgesteld in planning-modus (--mode=plan). Er zijn geen bestanden gewijzigd. Ik wacht
+  op je akkoord om over te gaan naar de implementatie.
+
+────────────────────────────────────────────────────────────
+> Final planning corrections for Issue #418. Planning only; no edits.
+
+  1. Weapon range source:
+  The monster action descriptions in the actual Goblin and Orc Atlas JSON
+  are template placeholders:
+  "[[/attack extended]]. [[/damage extended]]."
+
+  Do not parse these descriptions for range.
+
+  Use the existing canonical Atlas equipment JSON instead:
+  - public/assets/atlas/equipment/json/{ruleset}/weapon/{weapon-index}.json
+
+  Relevant metadata includes:
+  - weapon_range
+  - range.normal
+  - range.long
+  - properties (including thrown and reach)
+
+  Resolve the monster action name to its matching canonical equipment
+  record using the existing Atlas loading/data-access conventions.
+
+  Use range.normal / 5 for the normal attack range in grid cells.
+  Do not use long range until the combat resolver supports its rules,
+  including disadvantage.
+
+  For thrown weapons such as Javelin, respect the canonical thrown
+  property and range metadata even when weapon_range is "Melee".
+
+  Keep attack_bonus and damage sourced from the monster action itself.
+  Do not replace monster damage with generic equipment damage.
+  If weapon metadata cannot be resolved, do not invent a range.
+
+  Update the Goblin and Orc tests to load both their real monster action
+  data and the corresponding real equipment metadata.
+
+  2. Pathfinding creature size:
+  The current findPath signature accepts only 'Medium' | 'Large'.
+  Normalize Small to Medium for this existing footprint implementation,
+  or propose a minimal justified type extension if required.
+  Do not pass unsupported sizes blindly.
+
+  3. Turn advancement:
+  The actor/turn-index/encounter validation must happen immediately
+  before every actual nextTurn call, including after awaited
+  resolveCombatAction and inside delayed callbacks.
+
+  advanceTurnOnce must not advance a stale turn merely because its
+  local boolean sentinel has not yet been set.
+  A manually advanced turn, ended encounter, or removed/dead actor
+  must invalidate the pending callback.
+
+  4. Active combat and obstructed targets:
+  Clarify the intended distinction:
+  - Active encounter state may use the active party member's position
+    for pathfinding around an obstruction.
+  - It must not grant line of sight through walls or closed doors.
+  - An attack is only permitted after a fresh canonical LoS check.
+
+  Keep the implementation within Issue #418 scope.
+
+  Return the final revised plan and exact file list.
+  Do not implement yet.
+
+○ Thought for 8.0s (The initial parsing incorrectly extracted weapon range from monster action descriptions; these...)
+● Ran 2 commands (git grep -n "weapon" src/store/useAtlasStore.ts: failed · git grep -n "equipment" src/services/ s...)
+● Explored 2 files (storageService.ts, storageService.ts) (ctrl+o to expand)
+
+▸ Thought for 18s
+
+   Definitief Herzien Implementatieplan: Issue #418
+
+  │ Governing Issue: #418 https://github.com/japiohopman/artificer/issues/418 — fix(combat): restore edge-aware
+  │ hostile monster turns and attacks
+  │ Specialist: Gameplay Specialist (.github/agents/gameplay-specialist.agent.md)
+  │ Modus: Planning Only (--mode=plan) — Geen bestandswijzigingen
+  │ Target Branch: fix/418-edge-aware-monster-turns
+  ──────
+  1. Bron voor Wapenbereik: Canonieke Atlas Equipment Resolutie
+
+  A. Geen parsing van sjabloon-beschrijvingen
+
+  De desc-velden van monsteracties in public/assets/atlas/enemies/json/ bevatten sjabloon-placeholders (zoals
+  "[[/attack extended]]. [[/damage extended]]."). We parsen deze strings niet voor bereik.
+
+  B. Resolutie via canonieke Atlas Equipment JSON
+
+  In plaats daarvan koppelen we de actienaam (bijv. "scimitar", "shortbow", "greataxe", "javelin") aan het
+  overeenkomstige canonieke uitrustingsrecord via de bestaande dataconventies (fetchEquipmentData in
+  src/services/storageService.ts, die zowel in Node/test als in browseromgevingen werkt):
+
+  • Bronbestand: public/assets/atlas/equipment/json/{ruleset}/weapon/{weapon-index}.json
+  • Relevante metadata:
+      • weapon_range: "Melee" | "Ranged"
+      • properties: array met o.a. { index: "thrown" }, { index: "reach" }
+      • range.normal: normale dracht in voet (bijv. 80 voor Shortbow, 30 voor Javelin, 150 voor Longbow)
+      • range.long: lange dracht in voet (blijft buiten beschouwing zolang nadeel/disadvantage nog niet ondersteund
+      wordt)
+
+
+  C. Formule voor bereik in rastercellen
+
+  • Conform docs/systems/TACTICAL_COMBAT_ENGINE.md geldt: 1 rastercel = 5 voet.
+  • Normaal bereik:
+
+    attackRange = max(1, ⌊range.normal/5⌋)
+
+  • Specifiek voor geworpen wapens (Thrown):
+  Wapens zoals Javelin hebben weapon_range: "Melee", maar bezitten de eigenschap thrown met range: { normal: 30,
+  long: 120 }.
+  Als properties de eigenschap thrown bevat, wordt het normale werpbereik gerespecteerd:
+
+    ⌊30/5⌋ = 6 cellen
+
+  • Melee zonder thrown:
+      • Indien reach eigenschap aanwezig: ⌊10/5⌋ = 2 cellen.
+      • Standaard melee: 5/5 = 1 cel.
+  • Geen verzonnen bereik:
+  Als de wapenmetadata niet kan worden herleid (bijv. natuurlijke aanvallen zoals Bite of Claw die niet in equipment
+  staan):
+      • Natuurlijke aanvallen behouden standaard melee-bereik (1 cel = 5 ft reach).
+      • Er wordt geen fictief afstandsbereik gefabriceerd.
+  • Behoud van monster-aanvalsdata:
+  attack_bonus en damage (dobbelsteen en type) blijven 100% afkomstig uit de monsteractie zelf in Atlas (action.
+  attack_bonus en action.damage). We vervangen monsterschade nooit door generieke uitrustingsschade.
+  ──────
+  2. Normalisatie van Creature Size voor Pathfinding
+
+  De signatuur van findPath in src/components/combat/combatUtils.ts accepteert:
+
+    creatureSize: 'Medium' | 'Large' = 'Medium'
+
+  • In 5e regels en rastertactiek bezetten zowel Small (zoals de Goblin) als Medium wezens een voetafdruk van 1 × 1
+  cel (5 ft space).
+  • Large wezens bezetten een voetafdruk van 2 × 2 cellen (10 ft space).
+  • We normaliseren updatedMonster.size voorafgaand aan findPath:
+    const normalizedSize: 'Medium' | 'Large' = (updatedMonster.size === 'Large') ? 'Large' : 'Medium';
+  Hierdoor geven we nooit ongevalideerde strings door en blijft de voetafdrukcontrole van findPath wiskundig correct.
+  ──────
+  3. Beurt-levenscyclus en Strikt Lokale Contextvalidatie
+
+  Om beurtverloop deterministisch te houden zonder een zwaar globaal timer-framework te introduceren, valideren we de
+  actieve gevechtscontext direct vóór elke actie en vóór elke nextTurn aanroep:
+
+  Context-validator (isValidTurnContext)
+
+    const turnActorId = monsterId;
+    const turnIndex = currentCombatState.activeTurnIndex;
+
+    const isValidTurnContext = (): boolean => {
+      const state = get();
+      // 1. Gevecht moet actief zijn
+      if (state.combatState.initiativeOrder.length === 0) return false;
+      if (useUIStore.getState().gameMode !== 'combat') return false;
+      // 2. Beurtindex en actor moeten exact overeenkomen met het moment van dispatch
+      if (state.combatState.activeTurnIndex !== turnIndex) return false;
+      const currentActor = state.combatState.initiativeOrder[turnIndex];
+      if (!currentActor || currentActor.id !== turnActorId) return false;
+      // 3. Monster moet nog bestaan en in leven zijn
+      const freshMonster = state.combatState.monsters.find(m => m.id === turnActorId);
+      if (!freshMonster || freshMonster.hp <= 0) return false;
+      return true;
+    };
+
+  Veilige eenmalige doorgifte (advanceTurnOnce)
+
+    let turnAdvanced = false;
+    const advanceTurnOnce = () => {
+      if (turnAdvanced) return;
+      // Een handmatig doorgegeven beurt, beëindigd gevecht of verslagen actor invalideert de aanroep
+      if (!isValidTurnContext()) return;
+      turnAdvanced = true;
+      get().nextTurn();
+    };
+
+  Validatie-momenten:
+
+  1. Bij het binnengaan van de timeout: if (!isValidTurnContext()) return;
+  2. Vóór verplaatsing: Controleer isValidTurnContext().
+  3. Vóór resolveCombatAction: Controleer isValidTurnContext().
+  4. Na await resolveCombatAction: Controleer isValidTurnContext().
+  5. Bij beurt-afronding: advanceTurnOnce().
+  ──────
+  4. Actief Gevecht vs. Geblokkeerde Doelwitten: De Cruciale Scheiding
+
+  We maken een strikt onderscheid tussen doellocatie voor navigatie en fysieke zichtlijn voor aanvallen:
+
+    [Actieve Gevechtsstatus]
+    Monster kent globale positie van actieve PC's (targetPos)
+           │
+           ▼
+    [Pathfinding / Navigatie]
+    findPath(monsterPos, targetPos, grid, monsters, pcPositions, normalizedSize, combatState.walls)
+       ├─ Muren en gesloten deuren BLOKKEREN directe oversteek.
+       ├─ Route zoekt fysieke doorgang om muurgrenzen heen en door open deuren.
+       └─ Monster beweegt langs de legale route tot maximale snelheid.
+           │
+           ▼
+    [Gevechtsinteractie & Aanval]
+    checkLoS(updatedMonsterPos, targetPos, grid, combatState.walls)
+       ├─ Randmuren (type: 'wall') en gesloten deuren (doorState !== 'open') BLOKKEREN de straal.
+       ├─ Actieve gevechtsstatus geeft GEEN zicht door muren of gesloten deuren.
+       └─ Aanval mag UITSLUITEND worden uitgevoerd indien:
+             1. Afstand <= attackRange (Chebyshev)
+             2. checkLoS === true (volledig ongehinderde zichtlijn)
+  ──────
+  5. Gerichte Regressietests (tests/hostile_turn_combat.test.ts)
+
+  De testsuite laadt zowel de echte Atlas monster-JSON als de echte Atlas equipment-JSON:
+
+  1. Goblin Atlas & Equipment Integratie:
+      • Laadt tjwqogi3a4ual7lc.json (Goblin) en equipment/json/14/weapon/scimitar.json + shortbow.json.
+      • Bewijst dat Nimble Escape (damage: []) wordt verworpen als aanval.
+      • Bewijst dat op afstand 1 cel Scimitar wordt geselecteerd met monsterschade 1d6-1 slashing en bereik 1 cel.
+      • Bewijst dat op afstand 4 cellen Shortbow wordt geselecteerd met monsterschade 1d6-1 piercing en bereik ⌊80/5⌋
+      = 16 cellen.
+  2. Orc Atlas & Equipment Integratie (Thrown Javelin):
+      • Laadt hb49mcovbxwwekwq.json (Orc) en equipment/json/14/weapon/greataxe.json + javelin.json.
+      • Bewijst dat Aggressive (damage: []) wordt verworpen.
+      • Bewijst dat op afstand 1 cel Greataxe wordt geselecteerd (1d12+3 slashing, bereik 1).
+      • Bewijst dat op afstand 4 cellen Javelin wordt geselecteerd met het werpbereik ⌊30/5⌋ = 6 cellen (ondanks
+      weapon_range: "Melee").
+  3. Uitsluiting van verzonnen schade:
+      • Bewijst dat een entiteit zonder geldige schadedata in acties resulteert in null en geen fictieve aanval
+      fabriceert.
+  4. Muren en gesloten deuren:
+      • Bewijst dat checkLoS met combatState.walls false retourneert door muren en gesloten deuren.
+      • Bewijst dat findPath met combatState.walls een route plant door de deuropening en niet door de muur.
+      • Bewijst dat een vijand binnen wapenbereik maar gescheiden door een muur geen aanval uitvoert.
+  5. Aanvalsuitvoering:
+      • Bewijst dat een vijand met LoS binnen bereik resolveCombatAction bereikt.
+  6. Beurt-doorgifte en Invalidering:
+      • Bewijst dat een hostile turn exact één keer advanceert.
+      • Bewijst dat een verslagen monster of beëindigd gevecht de hangende timeout invalideert zonder spookaanval of
+      dubbele advance.
+
+  ──────
+  6. Exacte Bestandenlijst
+
+  1. src/store/useGameStore.ts
+      • startCombat: zet actieve vijanden in awareness: 'combat'.
+      • executeMonsterTurn:
+          • Doorgeven van currentCombatState.walls aan checkLoS.
+          • Doorgeven van normalizedSize en currentCombatState.walls aan beide findPath call-sites.
+          • Canonieke Atlas equipment-resolutie voor wapenbereik (fetchEquipmentData).
+          • Strikt filteren van acties op aanwezigheid van damage[0].damage_dice.
+          • Verwijderen van alle verzonnen fallbacks (Longbow, Fire Bolt, Claw/Bite).
+          • Verse LoS-verificatie met combatState.walls direct vóór aanval.
+          • Lokale isValidTurnContext en advanceTurnOnce beveiligingen.
+
+  2. tests/hostile_turn_combat.test.ts (nieuw testbestand)
+      • De 6 hierboven gedefinieerde regressietests met echte Atlas-bestanden.
+  3. docs/systems/TACTICAL_COMBAT_ENGINE.md
+      • Bijwerken van de sectie AI combat met de randbewuste geometrie, canonieke equipment-resolutie en
+      beurtlevenscyclus.
+  4. docs/ARCHITECTURE_STATUS.md
+      • Statusupdate voor Issue #418 onder Tactical Combat Engine.
+
+  ──────
+  7. Verificatie-opdrachten
+
+  • bun test tests/hostile_turn_combat.test.ts
+  • bun test tests/combat_integration.test.ts
+  • bun test tests/battle_map_v2_schema.test.ts
+  • npm run test:workflow
+  • npm run lint
+  • git diff --check
+  ──────
+  Dit plan is gereed en strikt afgebakend binnen Issue #418. Ik wacht op je review en formele goedkeuring om over te
+  gaan naar de implementatiefase.
 
 > /config
   ⎿  Exited /config command
 
 ────────────────────────────────────────────────────────────
-> Issue #369 is approved for implementation. Use the refined architectural plan from the preceding planning session as
-  the implementation contract.
+> The final Issue #418 plan is approved.
 
-  Do not repeat the planning phase or redo the completed architecture audit.
+  Switch to Default/Execute mode with approval prompts and implement
+  the approved plan on:
 
-  **Important: preserve the findings for future sessions.**
+  fix/418-edge-aware-monster-turns
 
-  Before changing implementation code:
+  Additional implementation constraints:
 
-  1. Inspect the existing documentation structure.
-  2. Create a durable BattleMap v2 architecture/design document in the appropriate `docs/` location.
-  3. Record the verified architecture audit, ownership boundaries, v2 schema decisions, edge coordinate conventions,
-  migration rules, hazard boundaries, portal/token separation, CombatTester map/background distinction, scope
-  restrictions and verification requirements.
-  4. Link this document from `docs/modules/mapEditor.md` and `docs/ARCHITECTURE_STATUS.md`.
-  5. Correct the inaccurate production-readiness claims immediately. Clearly distinguish existing working
-  functionality, scaffolding and planned v2 functionality. Never describe unimplemented functionality as complete.
+  1. Preserve canonical monster size:
+  - addMonsterToCombat currently maps Atlas data into CombatMonster.
+  - Ensure the Atlas monster size is preserved in the runtime monster.
+  - Normalize Small to Medium only when calling the existing findPath API.
+  - Large creatures must retain their Large footprint.
 
-  The documentation must be committed as part of this Issue's implementation, not left in the chat or terminal session.
+  2. Equipment ruleset:
+  - Resolve equipment through fetchEquipmentData(index, ruleset).
+  - Use the correct active/source ruleset consistently.
+  - Do not hardcode a ruleset or bypass the existing Atlas lookup.
 
-  Use the approved design decisions:
-  - No inferred terrain movement costs or invented hazard mechanics.
-  - Player tokens remain separate from portals.
-  - Only entrance/exit markers migrate to portals.
-  - Preserve independent backdrop selection while using canonical BattleMaps for map loading.
-  - Keep edge types limited to the agreed scope.
-  - Represent doors as edges, never by overwriting terrain cells.
-  - Door interaction uses a generous edge-centered hitbox; the active character must be within 5 ft.
-  - Preserve geometry for future cover resolution without implementing the full cover system.
+  3. Attack selection:
+  - Prefer a valid melee attack when the target is within melee reach.
+  - Prefer a valid ranged/thrown attack when the target is outside melee reach and within normal range.
+  - Do not make the result accidentally depend on Atlas array ordering.
+  - Keep attack_bonus and damage from the monster action itself.
 
-  Then implement the refined plan in its agreed phases, keeping all work within Issue #369.
+  4. Initiative removal:
+  - Inspect removeMonsterFromCombat and activeTurnIndex handling.
+  - Ensure removing the active monster cannot leave initiative stuck or point at the wrong actor.
+  - Keep this correction minimal and local to the existing combat lifecycle.
+  - Do not allow a stale asynchronous callback to advance a newer actor's turn.
 
-  Run the verified tests and checks. Update the documentation again to reflect the actual implementation and test
-  results.
+  Implementation requirements:
+  - Follow the approved plan and Gameplay Specialist contract.
+  - Use real Atlas monster and equipment data in regression tests.
+  - Keep all changes within Issue #418 scope.
+  - Do not modify BattleMap Editor or Atlas JSON.
+  - Do not redesign the full action economy or implement Issue #371.
+  - Update the two specified documentation files.
+  - Run all six verification commands from the plan.
+  - Report exact changed files, test results, and any remaining limitations.
 
-  One Issue, one implementation branch, one PR. No unrelated Atlas or Magic Items work. Do not invent gameplay rules or
-  silently omit acceptance criteria.
+  Do not merge anything.
+  Stop after implementation and verification so the changes can be reviewed.
 
-  Jaap retains final review and merge authority.
+○ Thought for 2m 36s (Edge-aware hostile turn lifecycle details need documenting within the specified file. The 'Aw...)
+● Ran 2 commands (git status · git log -n 3 --oneline)
+● Explored 1 file (useGameStore.ts)
+… 19 more actions (7 reads, 8 edits, 4 commands: 1 failed) …
+● Explored 2 files (TACTICAL_COMBAT_ENGINE.md, ARCHITECTURE_STATUS.md)
+● Edited 2 files (TACTICAL_COMBAT_ENGINE.md, ARCHITECTURE_STATUS.md) (ctrl+o to expand)
 
-○ Thought for 5m 35s (The `createAddWallCommand` function constructs a command object for adding a wall segment to...)
-● Ran 2 commands (+1 · Get-ChildItem -Path docs/architecture -Name; Get-ChildItem -Path docs/systems -Name)
-● Explored 1 file (MAP_SYSTEM_SPEC.md)
-… 48 more actions (22 reads, 21 edits, 5 commands: 1 failed) …
-● Explored 2 files (editorStore.ts, mapCommands.ts)
-● Edited 1 file (mapCommands.ts) (ctrl+o to expand)
-
-⚠ Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 145h21m14s.
-Error ID: 6abe02a2-1da1-43f7-983e-70dda655b310-430
+⚠ Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 162h21m5s.
+Error ID: 6218ae34-18e1-4a2f-a045-a8ecddd71983-401
 
  How's the CLI experience so far? Help us improve:
  [1] Good  [2] Fine  [3] Bad  [0] Skip
