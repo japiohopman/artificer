@@ -73,7 +73,7 @@ The Battle Map Editor may contain authoring-only information such as DM notes, h
 
 ## Battle Map Editor
 
-The editor now lives under:
+The editor lives under:
 
 ```text
 src/components/devkit/BattleMapEditor/
@@ -81,9 +81,8 @@ src/components/devkit/BattleMapEditor/
 
 `BattleMapEditor.tsx` is the composition root. Supporting code belongs in the module's `components`, `state`, `types`, `tools`, `rendering`, `geometry`, `commands` and `persistence` areas as appropriate.
 
-The current editor contains early UI/tool placeholders. These are **scaffolding, not completed features**. Agents must not mark Wall, Room, Door, Terrain, Object, Token, Layers, Inspector or Undo/Redo as implemented merely because a placeholder exists.
-
-See `docs/modules/mapEditor.md` for the authoritative Battle Map Editor design.
+- **Status & In-Progress Contracts:** The editor provides working canvas authoring, command history (undo/redo), wall/door snapping, and terrain painting. In Issue #369, the spatial foundation transitions to **BattleMap v2**: explicit four-direction boundary spines (`MapEdge`), non-destructive door edge toggling, structured cell hazards, explicit portals, and unified CombatTester loading.
+- **Authoritative Specification:** See [`docs/architecture/BATTLE_MAP_V2_SPECIFICATION.md`](./architecture/BATTLE_MAP_V2_SPECIFICATION.md) and [`docs/modules/mapEditor.md`](./modules/mapEditor.md) for the complete data model, boundary rules, and migration contracts.
 
 ## Geometry rule
 

@@ -303,6 +303,7 @@ export const checkLoS = (start: Point, end: Point, grid: TacticalCell[][], walls
 
     for (const w of walls) {
       if (w.type === 'door' && w.doorState === 'open') continue;
+      if (w.type === 'low-wall') continue; // low-wall provides half cover without blocking Line of Sight
 
       let w0: Point;
       let w1: Point;

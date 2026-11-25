@@ -1,19 +1,61 @@
 import { Command } from './command';
-import { BattleMap, WallSegment, MapObject, MapToken, TerrainCell, MapLabel, MapMarker } from '../types/battleMap';
+import { BattleMap, WallSegment, MapEdge, MapObject, MapToken, TerrainCell, MapLabel, MapMarker } from '../types/battleMap';
+import { getEdgeId } from '../geometry/coordinates';
 
-// 1. Walls
-export const createAddWallCommand = (wall: WallSegment): Command => ({
-  id: `add-wall-${wall.id}`,
-  description: `Add Wall at (${wall.x}, ${wall.y})`,
-  execute: (map) => ({ ...map, walls: [...map.walls, wall] }),
-  undo: (map) => ({ ...map, walls: map.walls.filter(w => w.id !== wall.id) })
-});
+// 1. Walls & Edges
+export const createAddWallCommand = (wall: WallSegment): Command => {
+  const edge: MapEdge = {
+    id: wall.id,
+    orientation: wall.orientation,
+    x: wall.x,
+    y: wall.y,
+    type: wall.type as any,
+    doorState: wall.doorState
+  };
+
+  return {
+    id: `add-wall-${wall.id}`,
+    description: `Add Wall at (${wall.x}, ${wall.y})`,
+    execute: (map) => {
+      const existingWalls = map.walls || [];
+      const existingEdges = map.edges || [];
+      return {
+        ...map,
+        walls: [...existingWalls.filter(w => w.id !== wall.id), wall],
+        edges: [...existingEdges.filter(e => e.id !== wall.id), edge]
+      };
+    },
+    undo: (map) => ({
+      ...map,
+      walls: (map.walls || []).filter(w => w.id !== wall.id),
+      edges: (map.edges || []).filter(e => e.id !== wall.id)
+    })
+  };
+};
 
 export const createRemoveWallCommand = (wall: WallSegment): Command => ({
   id: `remove-wall-${wall.id}`,
   description: `Remove Wall at (${wall.x}, ${wall.y})`,
-  execute: (map) => ({ ...map, walls: map.walls.filter(w => w.id !== wall.id) }),
-  undo: (map) => ({ ...map, walls: [...map.walls, wall] })
+  execute: (map) => ({
+    ...map,
+    walls: (map.walls || []).filter(w => w.id !== wall.id),
+    edges: (map.edges || []).filter(e => e.id !== wall.id)
+  }),
+  undo: (map) => {
+    const edge: MapEdge = {
+      id: wall.id,
+      orientation: wall.orientation,
+      x: wall.x,
+      y: wall.y,
+      type: wall.type as any,
+      doorState: wall.doorState
+    };
+    return {
+      ...map,
+      walls: [...(map.walls || []), wall],
+      edges: [...(map.edges || []).filter(e => e.id !== wall.id), edge]
+    };
+  }
 });
 
 export const createUpdateWallCommand = (id: string, oldUpdates: Partial<WallSegment>, newUpdates: Partial<WallSegment>): Command => ({
@@ -21,11 +63,13 @@ export const createUpdateWallCommand = (id: string, oldUpdates: Partial<WallSegm
   description: `Update Wall ${id}`,
   execute: (map) => ({
     ...map,
-    walls: map.walls.map(w => w.id === id ? { ...w, ...newUpdates } : w)
+    walls: (map.walls || []).map(w => w.id === id ? { ...w, ...newUpdates } : w),
+    edges: (map.edges || []).map(e => e.id === id ? { ...e, ...newUpdates } as any : e)
   }),
   undo: (map) => ({
     ...map,
-    walls: map.walls.map(w => w.id === id ? { ...w, ...oldUpdates } : w)
+    walls: (map.walls || []).map(w => w.id === id ? { ...w, ...oldUpdates } : w),
+    edges: (map.edges || []).map(e => e.id === id ? { ...e, ...oldUpdates } as any : e)
   })
 });
 

@@ -4,13 +4,28 @@ The Battle Map Editor is the Artificer DevKit authoring environment for creating
 
 ## Status
 
-The Battle Map Editor is fully implemented with a hardened, production-ready architecture. The modular components reside under:
+The Battle Map Editor is an active DevKit authoring module located under:
 
 ```text
 src/components/devkit/BattleMapEditor/
 ```
 
-All primary systems (Walls, Rooms, Doors, Terrain painting, Stamp objects, Spawn tokens, Layers, Property inspector, and Command-based Undo/Redo) are fully operational, architecturally sound, and thoroughly tested.
+### Verified Implementation State
+- **Operational Working Features:**
+  - Modular React/HTML Canvas architecture (`BattleMapEditor.tsx`, `MapViewport.tsx`, `renderMap.ts`).
+  - Command-pattern Undo/Redo (`command.ts`, `mapCommands.ts`, `editorStore.ts`).
+  - Wall and door snap drawing to grid boundaries (`getWallSnap` in `coordinates.ts`).
+  - Terrain painting (`commitPaintTerrain`), stamp object placement, token placement, and basic layer/inspector UI.
+  - Server persistence and listing via `/api/combat-maps`.
+
+- **Scaffolding & Identified Gaps (Addressed in Issue #369):**
+  - Legacy v1 maps represent boundaries as arbitrary line segments without directional spine awareness per cell.
+  - Runtime adapter (`battleMapToCombatGrid.ts`) previously overwrote cell terrain with `type: 'door'`, destroying underlying floor data.
+  - Lack of structured environmental hazards, elevation, and explicit portals.
+  - `CombatTester.tsx` maintained an independent hardcoded background selector that bypassed canonical map loading.
+
+- **Canonical Architecture:**
+  - See the authoritative [BattleMap v2 Architecture Specification](../architecture/BATTLE_MAP_V2_SPECIFICATION.md) for the complete v2 schema contract, four-direction spine geometry, portal separation, and hazard modeling.
 
 ## Architecture
 

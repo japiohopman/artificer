@@ -422,7 +422,7 @@ export const CombatTester: React.FC = () => {
           </div>
           {customMaps.length > 0 && (
             <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
-              <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Custom Map:</span>
+              <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">BattleMap:</span>
               <select
                 value={selectedCustomMapId}
                 onChange={(e) => {
@@ -431,7 +431,7 @@ export const CombatTester: React.FC = () => {
                 }}
                 className="bg-transparent text-white text-[10px] font-bold focus:outline-none cursor-pointer uppercase tracking-widest"
               >
-                <option value="" className="bg-stone-900 text-white text-xs">-- Select Map --</option>
+                <option value="" className="bg-stone-900 text-white text-xs">-- Select BattleMap --</option>
                 {customMaps.map(m => (
                   <option key={m.id} value={m.id} className="bg-stone-900 text-white text-xs">
                     {m.name.toUpperCase()}
@@ -441,7 +441,7 @@ export const CombatTester: React.FC = () => {
             </div>
           )}
           <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
-            <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Terrain:</span>
+            <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Backdrop:</span>
             <select
               value={combatState.combatMapBackground || 'fay_forest.png'}
               onChange={(e) => {

@@ -265,6 +265,34 @@ export const CombatGrid: React.FC = () => {
           ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
         }
 
+        // 2a. Draw Cell Hazards (surfaces, clouds, pits)
+        if (isVisible && cell.hazards && cell.hazards.length > 0) {
+          for (const h of cell.hazards) {
+            ctx.save();
+            if (h.type === 'fire') {
+              ctx.fillStyle = 'rgba(239, 68, 68, 0.25)';
+              ctx.strokeStyle = 'rgba(239, 68, 68, 0.6)';
+            } else if (h.type === 'acid') {
+              ctx.fillStyle = 'rgba(34, 197, 94, 0.25)';
+              ctx.strokeStyle = 'rgba(34, 197, 94, 0.6)';
+            } else if (h.type === 'ice') {
+              ctx.fillStyle = 'rgba(56, 189, 248, 0.25)';
+              ctx.strokeStyle = 'rgba(56, 189, 248, 0.6)';
+            } else if (h.type === 'poison') {
+              ctx.fillStyle = 'rgba(168, 85, 247, 0.25)';
+              ctx.strokeStyle = 'rgba(168, 85, 247, 0.6)';
+            } else {
+              ctx.fillStyle = 'rgba(245, 158, 11, 0.25)';
+              ctx.strokeStyle = 'rgba(245, 158, 11, 0.6)';
+            }
+            ctx.fillRect(x * cellSize + 2, y * cellSize + 2, cellSize - 4, cellSize - 4);
+            ctx.lineWidth = 1;
+            ctx.setLineDash([2, 2]);
+            ctx.strokeRect(x * cellSize + 2, y * cellSize + 2, cellSize - 4, cellSize - 4);
+            ctx.restore();
+          }
+        }
+
         // Fog of War / Visibility Overlay
         if (!isVisible) {
           ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
@@ -272,6 +300,47 @@ export const CombatGrid: React.FC = () => {
         }
       });
     });
+
+    // 2b. Draw Physical Boundary Walls and Doors
+    if (combatState.walls && combatState.walls.length > 0) {
+      ctx.save();
+      for (const w of combatState.walls) {
+        const startX = w.x * cellSize;
+        const startY = w.y * cellSize;
+        const endX = w.orientation === 'horizontal' ? (w.x + 1) * cellSize : w.x * cellSize;
+        const endY = w.orientation === 'vertical' ? (w.y + 1) * cellSize : w.y * cellSize;
+
+        ctx.save();
+        if (w.type === 'wall') {
+          ctx.strokeStyle = '#d7ccc8';
+          ctx.lineWidth = 4;
+          ctx.lineCap = 'round';
+          ctx.beginPath();
+          ctx.moveTo(startX, startY);
+          ctx.lineTo(endX, endY);
+          ctx.stroke();
+        } else if (w.type === 'low-wall') {
+          ctx.strokeStyle = '#a8a29e';
+          ctx.lineWidth = 3;
+          ctx.setLineDash([4, 4]);
+          ctx.beginPath();
+          ctx.moveTo(startX, startY);
+          ctx.lineTo(endX, endY);
+          ctx.stroke();
+        } else if (w.type === 'door' || w.type === 'secret-door') {
+          const isOpen = w.doorState === 'open';
+          ctx.strokeStyle = isOpen ? '#22c55e' : '#d97706';
+          ctx.lineWidth = 4;
+          ctx.lineCap = 'round';
+          ctx.beginPath();
+          ctx.moveTo(startX, startY);
+          ctx.lineTo(endX, endY);
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+      ctx.restore();
+    }
 
     // 3. Draw Range Highlights
     if (isTargeting) {
@@ -359,13 +428,26 @@ export const CombatGrid: React.FC = () => {
     const cell = grid[y][x];
     const activePcPos = pcPositions?.[activeCharacterId] || playerPos;
 
-    // Interaction check for doors
-    if (cell.type === 'door') {
-      const dist = getDistance(activePcPos, { x, y });
+    // Interaction check for doors: either legacy cell-type door OR canonical edge boundary door
+    const boundaryDoor = (combatState.walls || []).find(w =>
+      (w.type === 'door' || w.type === 'secret-door') && (
+        (w.x === x && w.y === y) ||
+        (w.orientation === 'horizontal' && w.x === x && (w.y === y || w.y === y + 1)) ||
+        (w.orientation === 'vertical' && w.y === y && (w.x === x || w.x === x + 1))
+      )
+    );
+
+    if (cell.type === 'door' || boundaryDoor) {
+      const doorIsOpen = boundaryDoor ? boundaryDoor.doorState === 'open' : !!cell.isOpen;
+      const dist = Math.min(
+        getDistance(activePcPos, { x, y }),
+        boundaryDoor ? getDistance(activePcPos, { x: boundaryDoor.x, y: boundaryDoor.y }) : Infinity
+      );
+
       if (dist <= 1) {
-        toggleDoor(x, y);
-        addLog(`${cell.isOpen ? 'Closed' : 'Opened'} the door.`, 'info');
-        if (cell.isOpen) {
+        toggleDoor(x, y, boundaryDoor?.id);
+        addLog(`${doorIsOpen ? 'Closed' : 'Opened'} the door.`, 'info');
+        if (doorIsOpen) {
           soundService.playEffect('DOOR_CLOSE');
         } else {
           soundService.playEffect('DOOR_OPEN');

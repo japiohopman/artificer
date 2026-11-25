@@ -132,8 +132,8 @@ export const MapViewport: React.FC = () => {
     // 5. Render tactical top-down tokens
     drawTokens(rc, map.tokens);
 
-    // 6. Draw wall & door line segments
-    drawWallsAndDoors(rc, map.walls);
+    // 6. Draw wall & door line segments / boundary edges
+    drawWallsAndDoors(rc, (map.edges && map.edges.length > 0 ? (map.edges as any) : (map.walls || [])));
 
     // 7. Draw active selection bounding box overlays
     if (selection.ids.length > 0) {

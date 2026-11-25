@@ -28,9 +28,12 @@ export interface CoinFlipState {
 export interface TacticalCell {
   x: number;
   y: number;
-  type: 'floor' | 'wall' | 'door';
+  type: string;
   isOpen?: boolean;
   explored?: boolean;
+  elevation?: number;
+  movementCost?: number;
+  hazards?: any[];
 }
 
 export interface CombatMonster {
@@ -174,7 +177,7 @@ interface GameState {
   addMonsterToCombat: (monster: any, x?: number, y?: number) => void;
   spawnMonster: (index: string, x?: number, y?: number) => Promise<void>;
   removeMonsterFromCombat: (id: string) => void;
-  toggleDoor: (x: number, y: number) => void;
+  toggleDoor: (x: number, y: number, edgeId?: string) => void;
   completeCombat: (victory: boolean) => Promise<void>;
   nextTurn: () => void;
   startCombat: () => Promise<void>;
@@ -494,24 +497,36 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   })),
 
-  toggleDoor: (x, y) => set((state) => {
-    const newGrid = [...state.combatState.grid];
+  toggleDoor: (x, y, edgeId) => set((state) => {
     let nextOpen = false;
-    if (newGrid[y]?.[x] && newGrid[y][x].type === 'door') {
-      newGrid[y] = [...newGrid[y]];
-      newGrid[y][x] = { ...newGrid[y][x], isOpen: !newGrid[y][x].isOpen };
+    let toggled = false;
 
-      // Mark as explored if player opens it
-      newGrid[y][x].explored = true;
-      nextOpen = !!newGrid[y][x].isOpen;
-    }
-
+    // 1. If edgeId or matching boundary door exists, toggle it
     const newWalls = (state.combatState.walls || []).map(w => {
-      if (w.x === x && w.y === y && (w.type === 'door' || w.type === 'secret-door')) {
+      const isDoorType = w.type === 'door' || w.type === 'secret-door';
+      if (!isDoorType) return w;
+
+      const matches = edgeId ? w.id === edgeId : (
+        (w.x === x && w.y === y) ||
+        (w.orientation === 'horizontal' && w.x === x && (w.y === y || w.y === y + 1)) ||
+        (w.orientation === 'vertical' && w.y === y && (w.x === x || w.x === x + 1))
+      );
+
+      if (matches && !toggled) {
+        const isOpen = w.doorState === 'open';
+        nextOpen = !isOpen;
+        toggled = true;
         return { ...w, doorState: nextOpen ? 'open' : 'closed' };
       }
       return w;
     });
+
+    // 2. Backward compatibility: if cell was stamped as legacy 'door' type
+    const newGrid = [...state.combatState.grid];
+    if (newGrid[y]?.[x] && newGrid[y][x].type === 'door') {
+      newGrid[y] = [...newGrid[y]];
+      newGrid[y][x] = { ...newGrid[y][x], isOpen: toggled ? nextOpen : !newGrid[y][x].isOpen, explored: true };
+    }
 
     return {
       combatState: {
