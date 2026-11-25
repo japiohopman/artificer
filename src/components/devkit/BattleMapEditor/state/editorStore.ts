@@ -260,17 +260,30 @@ export const useEditorStore = create<EditorState>((set, get) => {
       }
 
       // Prevent duplicates in the same coordinate/orientation
-      const exists = currentMap.walls.some(
+      const exists = (currentMap.walls || []).some(
         (w) => w.x === wall.x && w.y === wall.y && w.orientation === wall.orientation
       );
       if (exists) return;
 
-      const id = `wall-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
+      const prefix = wall.orientation === 'horizontal' ? 'h' : 'v';
+      const id = `${prefix}:${wall.x},${wall.y}`;
       const fullWall = { ...wall, id };
 
       if (skipHistory) {
+        const edge = {
+          id,
+          orientation: wall.orientation,
+          x: wall.x,
+          y: wall.y,
+          type: wall.type as any,
+          doorState: wall.doorState
+        };
         set({
-          map: { ...currentMap, walls: [...currentMap.walls, fullWall] }
+          map: {
+            ...currentMap,
+            walls: [...(currentMap.walls || []), fullWall],
+            edges: [...(currentMap.edges || []).filter(e => e.id !== id), edge]
+          }
         });
       } else {
         get().executeCommand(createAddWallCommand(fullWall));
@@ -279,9 +292,9 @@ export const useEditorStore = create<EditorState>((set, get) => {
 
     removeWall: (id) => {
       const currentMap = get().map;
-      const wall = currentMap.walls.find((w) => w.id === id);
+      const wall = (currentMap.walls || []).find((w) => w.id === id) || (currentMap.edges || []).find(e => e.id === id);
       if (!wall) return;
-      get().executeCommand(createRemoveWallCommand(wall));
+      get().executeCommand(createRemoveWallCommand(wall as any));
     },
 
     updateWall: (id, updates) => {

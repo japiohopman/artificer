@@ -89,6 +89,33 @@ export function drawTerrain(rc: RenderContext, terrain: TerrainCell[]) {
         ctx.fillStyle = '#3a3a3a';
         ctx.fillRect(x, y, cellSize, cellSize);
     }
+
+    // Draw structured hazards on this terrain cell
+    if (t.hazards && t.hazards.length > 0) {
+      for (const h of t.hazards) {
+        ctx.save();
+        if (h.type === 'fire') {
+          ctx.fillStyle = 'rgba(239, 68, 68, 0.3)';
+          ctx.strokeStyle = 'rgba(239, 68, 68, 0.7)';
+        } else if (h.type === 'acid') {
+          ctx.fillStyle = 'rgba(34, 197, 94, 0.3)';
+          ctx.strokeStyle = 'rgba(34, 197, 94, 0.7)';
+        } else if (h.type === 'ice') {
+          ctx.fillStyle = 'rgba(56, 189, 248, 0.3)';
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.7)';
+        } else if (h.type === 'poison') {
+          ctx.fillStyle = 'rgba(168, 85, 247, 0.3)';
+          ctx.strokeStyle = 'rgba(168, 85, 247, 0.7)';
+        } else {
+          ctx.fillStyle = 'rgba(245, 158, 11, 0.3)';
+          ctx.strokeStyle = 'rgba(245, 158, 11, 0.7)';
+        }
+        ctx.fillRect(x + 2, y + 2, cellSize - 4, cellSize - 4);
+        ctx.lineWidth = 1;
+        ctx.strokeRect(x + 2, y + 2, cellSize - 4, cellSize - 4);
+        ctx.restore();
+      }
+    }
     ctx.restore();
   }
 
@@ -123,7 +150,7 @@ export function drawGrid(rc: RenderContext, map: BattleMap) {
   ctx.restore();
 }
 
-export function drawWallsAndDoors(rc: RenderContext, walls: WallSegment[]) {
+export function drawWallsAndDoors(rc: RenderContext, walls: (WallSegment | any)[]) {
   const { ctx, cellSize } = rc;
   ctx.save();
 
@@ -143,6 +170,14 @@ export function drawWallsAndDoors(rc: RenderContext, walls: WallSegment[]) {
       ctx.shadowOffsetX = 1;
       ctx.shadowOffsetY = 1;
 
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.lineTo(endX, endY);
+      ctx.stroke();
+    } else if (w.type === 'low-wall') {
+      ctx.strokeStyle = '#a8a29e';
+      ctx.lineWidth = 4;
+      ctx.setLineDash([4, 4]);
       ctx.beginPath();
       ctx.moveTo(startX, startY);
       ctx.lineTo(endX, endY);

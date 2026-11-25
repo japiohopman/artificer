@@ -1,6 +1,18 @@
 export type WallSegmentType = 'wall' | 'door' | 'secret-door';
 export type DoorState = 'open' | 'closed' | 'locked';
 
+export type EdgeOrientation = 'horizontal' | 'vertical';
+export type EdgeType = 'wall' | 'low-wall' | 'door' | 'secret-door';
+
+export interface MapEdge {
+  id: string; // Deterministic ID: "h:x,y" or "v:x,y"
+  orientation: EdgeOrientation;
+  x: number;
+  y: number;
+  type: EdgeType;
+  doorState?: DoorState;
+}
+
 export interface WallSegment {
   id: string;
   orientation: 'horizontal' | 'vertical';
@@ -10,10 +22,33 @@ export interface WallSegment {
   doorState?: DoorState;
 }
 
+export type HazardCategory = 'surface' | 'cloud' | 'pit' | 'trap';
+
+export interface CellHazard {
+  id: string;
+  category: HazardCategory;
+  type: string; // e.g., 'fire', 'grease', 'acid', 'poison', 'ice', 'web', 'pit', 'spike'
+  damageType?: string; // Canonical damage type: 'fire', 'acid', 'poison', 'piercing', 'cold'
+  trigger?: 'on-enter' | 'on-turn-start' | 'on-turn-end';
+}
+
 export interface TerrainCell {
   x: number;
   y: number;
   type: string; // e.g., 'stone', 'wood', 'water', 'grass', 'sand', 'lava', 'ice', 'mud'
+  elevation?: number; // Visual / spatial floor elevation (0 = base floor, -1 = pit, +1 = platform)
+  movementCost?: number; // Optional explicit traversal cost multiplier (1 = normal; difficult terrain resolved by ruleset)
+  hazards?: CellHazard[]; // Structured environmental hazard descriptors
+}
+
+export interface MapPortal {
+  id: string;
+  type: 'entrance' | 'exit';
+  name: string;
+  x: number;
+  y: number;
+  facing?: 'north' | 'east' | 'south' | 'west';
+  description?: string;
 }
 
 export interface MapObject {
@@ -79,7 +114,7 @@ export interface FogDefinition {
 }
 
 export interface BattleMap {
-  version: 1;
+  version: 1 | 2;
   id: string;
   name: string;
   metadata: {
@@ -112,13 +147,21 @@ export interface BattleMap {
     opacity: number;
   };
   terrain: TerrainCell[];
-  walls: WallSegment[];
+  edges?: MapEdge[]; // Canonical v2 directional boundary spines
+  walls: WallSegment[]; // Legacy v1 boundary segments for backward compatibility
+  portals?: MapPortal[]; // Canonical v2 entrance and exit portals
   objects: MapObject[];
   tokens: MapToken[];
   labels: MapLabel[];
   markers: MapMarker[];
   fogOfWar?: FogDefinition;
   layers: MapLayer[];
+}
+
+export interface BattleMapV2 extends BattleMap {
+  version: 2;
+  edges: MapEdge[];
+  portals: MapPortal[];
 }
 
 export type EditorTool =

@@ -1,4 +1,4 @@
-import { BattleMap, WallSegment } from '../types/battleMap';
+import { BattleMap, MapEdge, WallSegment, MapPortal } from '../types/battleMap';
 import { TacticalCell, CombatMonster } from '../../../../store/useGameStore';
 import { useAtlasStore } from '../../../../store/useAtlasStore';
 
@@ -6,8 +6,9 @@ export interface CombatGridRepresentation {
   grid: TacticalCell[][];
   monsters: CombatMonster[];
   background: string | null;
-  walls: WallSegment[];
+  walls: (WallSegment | MapEdge)[];
   partySpawnPos: { x: number; y: number } | null;
+  portals?: MapPortal[];
 }
 
 /**
@@ -31,24 +32,41 @@ export function battleMapToCombatGrid(map: BattleMap): CombatGridRepresentation 
     grid.push(row);
   }
 
-  // 2. Map painted cell terrain (stone, grass, wood, water, mud, ice, lava, sand, etc.)
+  // 2. Map painted cell terrain (stone, grass, wood, water, mud, ice, lava, sand, etc.) and hazards
   if (map.terrain && Array.isArray(map.terrain)) {
     for (const t of map.terrain) {
       if (t.x >= 0 && t.x < width && t.y >= 0 && t.y < height) {
         grid[t.y][t.x].type = (t.type || 'floor') as any;
+        if (t.elevation !== undefined) grid[t.y][t.x].elevation = t.elevation;
+        if (t.movementCost !== undefined) grid[t.y][t.x].movementCost = t.movementCost;
+        if (t.hazards && t.hazards.length > 0) grid[t.y][t.x].hazards = t.hazards;
       }
     }
   }
 
-  // 3. Map doors onto the grid for interactability while leaving walls as boundary line segments
-  if (map.walls && Array.isArray(map.walls)) {
+  // 3. Resolve boundary edges / walls for movement and LoS without destroying cell terrain
+  const walls: (WallSegment | MapEdge)[] = [];
+  if (map.edges && Array.isArray(map.edges) && map.edges.length > 0) {
+    for (const e of map.edges) {
+      walls.push({
+        id: e.id,
+        orientation: e.orientation,
+        x: e.x,
+        y: e.y,
+        type: e.type,
+        doorState: e.doorState
+      });
+    }
+  } else if (map.walls && Array.isArray(map.walls)) {
     for (const w of map.walls) {
-      if (w.x >= 0 && w.x < width && w.y >= 0 && w.y < height) {
-        if (w.type === 'door' || w.type === 'secret-door') {
-          grid[w.y][w.x].type = 'door';
-          grid[w.y][w.x].isOpen = w.doorState === 'open';
-        }
-      }
+      walls.push({
+        id: w.id,
+        orientation: w.orientation,
+        x: w.x,
+        y: w.y,
+        type: w.type,
+        doorState: w.doorState
+      });
     }
   }
 
@@ -98,7 +116,15 @@ export function battleMapToCombatGrid(map: BattleMap): CombatGridRepresentation 
     }
   }
 
-  // Check map markers for explicit entry/entrance point if partySpawnPos not found in tokens
+  // Check explicit portals for entrance point if partySpawnPos not found in tokens
+  if (!partySpawnPos && map.portals && Array.isArray(map.portals)) {
+    const entrancePortal = map.portals.find(p => p.type === 'entrance');
+    if (entrancePortal) {
+      partySpawnPos = { x: entrancePortal.x, y: entrancePortal.y };
+    }
+  }
+
+  // Check map markers for explicit entry/entrance point if still not found
   if (!partySpawnPos && map.markers && Array.isArray(map.markers)) {
     const entranceMarker = map.markers.find(m => m.type === 'entrance' || m.name.toLowerCase().includes('entrance') || m.name.toLowerCase().includes('spawn'));
     if (entranceMarker) {
@@ -107,13 +133,14 @@ export function battleMapToCombatGrid(map: BattleMap): CombatGridRepresentation 
   }
 
   // 5. Resolve background
-  const background = map.metadata.theme ? `${map.metadata.theme}.png` : 'fay_forest.png';
+  const background = map.metadata?.theme ? `${map.metadata.theme}.png` : 'fay_forest.png';
 
   return {
     grid,
     monsters,
     background,
-    walls: map.walls || [],
-    partySpawnPos
+    walls,
+    partySpawnPos,
+    portals: map.portals || []
   };
 }

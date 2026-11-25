@@ -13,7 +13,7 @@ export const DEFAULT_LAYERS: MapLayer[] = [
 export const createDefaultMap = (width = 24, height = 16): BattleMap => {
   const id = `map-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   return {
-    version: 1,
+    version: 2,
     id,
     name: 'Untitled Battle Map',
     metadata: {
@@ -44,6 +44,8 @@ export const createDefaultMap = (width = 24, height = 16): BattleMap => {
       opacity: 1
     },
     terrain: [],
+    edges: [],
+    portals: [],
     walls: [],
     objects: [],
     tokens: [],

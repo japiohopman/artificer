@@ -80,6 +80,7 @@ describe('Combat Integration v1 — BattleMap -> CombatGrid Adapter Unit Tests',
       const mapNoSpawn = {
         ...map,
         tokens: map.tokens.filter(t => t.type !== 'player'),
+        portals: [],
         markers: []
       };
       const converted = battleMapToCombatGrid(mapNoSpawn);
@@ -99,13 +100,48 @@ describe('Combat Integration v1 — BattleMap -> CombatGrid Adapter Unit Tests',
       expect(goblin.hp).toBeGreaterThan(0);
     });
 
-    it('maps doors to interactive tactical cells on the grid', () => {
+    it('preserves boundary edge doors without overwriting underlying cell terrain', () => {
       const map = migrateBattleMap(deserializeBattleMap(rawJson));
       const converted = battleMapToCombatGrid(map);
 
-      const doorCell = converted.grid[6][5];
-      expect(doorCell.type).toBe('door');
-      expect(doorCell.isOpen).toBe(false);
+      // Door exists as boundary edge
+      const doorEdge = converted.walls.find(w => w.type === 'door');
+      expect(doorEdge).toBeDefined();
+      expect(doorEdge!.doorState).toBe('closed');
+
+      // The cell itself is NOT converted to type 'door' - terrain is preserved
+      expect(converted.grid[6][5].type).not.toBe('door');
+    });
+
+    it('preserves cell hazards and explicit portal definitions in adapter output', () => {
+      const map = migrateBattleMap(deserializeBattleMap(rawJson));
+      // Add a structured hazard to cell (2, 2)
+      map.terrain = map.terrain.map(t => {
+        if (t.x === 2 && t.y === 2) {
+          return {
+            ...t,
+            hazards: [{
+              id: 'hz-fire-1',
+              category: 'surface',
+              type: 'fire',
+              damageType: 'fire',
+              trigger: 'on-enter'
+            }]
+          };
+        }
+        return t;
+      });
+
+      const converted = battleMapToCombatGrid(map);
+      expect(converted.grid[2][2].hazards).toBeDefined();
+      expect(converted.grid[2][2].hazards!.length).toBe(1);
+      expect(converted.grid[2][2].hazards![0].type).toBe('fire');
+      expect(converted.grid[2][2].hazards![0].damageType).toBe('fire');
+
+      // Portals output
+      expect(converted.portals).toBeDefined();
+      expect(converted.portals!.length).toBe(1);
+      expect(converted.portals![0].type).toBe('entrance');
     });
   });
 
@@ -139,10 +175,23 @@ describe('Combat Integration v1 — BattleMap -> CombatGrid Adapter Unit Tests',
 
       expect(checkLoS(posA, posB, [], walls)).toBe(false);
 
+      // Door boundary at x: 5, y: 6 (vertical line between (4,6) and (5,6))
+      const doorWest = { x: 4, y: 6 };
+      const doorEast = { x: 5, y: 6 };
+
+      // Closed door blocks LoS and movement
+      expect(checkLoS(doorWest, doorEast, [], walls)).toBe(false);
+      expect(isMoveBlockedByWalls(doorWest, doorEast, walls)).toBe(true);
+
+      // Open door allows LoS and movement
       const openWalls = walls.map(w => w.type === 'door' ? { ...w, doorState: 'open' } : w);
-      const doorFrom = { x: 5, y: 6 };
-      const doorTo = { x: 6, y: 6 };
-      expect(checkLoS(doorFrom, doorTo, [], openWalls)).toBe(true);
+      expect(checkLoS(doorWest, doorEast, [], openWalls)).toBe(true);
+      expect(isMoveBlockedByWalls(doorWest, doorEast, openWalls)).toBe(false);
+
+      // Low-wall allows LoS (half cover) but blocks movement
+      const lowWallList = [...walls, { id: 'h:1,1', orientation: 'horizontal', x: 1, y: 1, type: 'low-wall' }];
+      expect(checkLoS({ x: 1, y: 1 }, { x: 1, y: 0 }, [], lowWallList)).toBe(true);
+      expect(isMoveBlockedByWalls({ x: 1, y: 1 }, { x: 1, y: 0 }, lowWallList)).toBe(true);
     });
 
     it('pathfinding respects boundary wall crossings', () => {
