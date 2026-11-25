@@ -100,7 +100,7 @@ Automated enemy tactical behaviour is integrated into the runtime combat loop (`
 - **Edge-Aware Pathfinding:** `findPath` takes `combatState.walls` and normalized creature footprints (Small normalized to Medium $1 \times 1$ footprint, Large $2 \times 2$ footprint) to navigate corridors and doorways.
 - **Canonical Atlas Attack & Equipment Resolution:** Monster actions are filtered strictly for valid attack definitions (`action.damage[0]?.damage_dice`). Non-attack traits (e.g. *Nimble Escape*, *Aggressive*) are rejected. Normal attack ranges are resolved from canonical Atlas equipment records (`range.normal / 5`), respecting properties such as `thrown` (e.g. Javelin 30 ft = 6 cells) and reach. Missing attacks or damage values are never fabricated.
 - **Fresh LoS Verification Before Attack:** Attacks are only permitted if a fresh `checkLoS(monster, target, grid, walls)` evaluates to true. Enemies cannot strike or shoot through solid boundary walls or closed doors.
-- **Turn Lifecycle Safeguards:** Asynchronous turn advancement and timers are guarded locally against stale callbacks, deceased actors (`hp <= 0`), ended encounters, or duplicate `nextTurn` increments.
+- **Turn Lifecycle Safeguards:** Asynchronous turn advancement and timers are guarded locally against stale callbacks, deceased actors (`hp <= 0`), ended encounters, or duplicate `nextTurn` increments. Removing the active combatant (`removeMonsterFromCombat`) automatically initializes and dispatches the turn for the incoming actor in the initiative order without stalling combat.
 
 ## Area of effect
 

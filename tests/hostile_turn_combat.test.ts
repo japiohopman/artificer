@@ -409,5 +409,592 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
       // Turn advanced cleanly to next actor without looping or getting stuck
       expect(useGameStore.getState().combatState.activeTurnIndex).toBe((initialTurnIndex + 1) % 2);
     });
+
+    it('removing the active hostile during its pending timeout starts the correct next player actor', async () => {
+      let goblinAttacked = false;
+
+      // Exhaust player action economy initially with canonical structure
+      const hero = useCharacterStore.getState().characters.find(c => c.id === 'char-hero');
+      if (hero) {
+        hero.actionEconomy = {
+          actions: { current: 0, max: 1 },
+          bonusActions: { current: 0, max: 1 },
+          reactions: { current: 0, max: 1 },
+          movement: { current: 0, max: 30 },
+          objectInteractions: { current: 0, max: 1 }
+        };
+      }
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-active-removed',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-active-removed', name: 'Goblin', value: 15, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0,
+          activeConditions: {}
+        },
+        resolveCombatAction: async () => {
+          goblinAttacked = true;
+        }
+      });
+
+      // Start hostile turn
+      useGameStore.getState().executeMonsterTurn('goblin-active-removed');
+
+      // Remove the active hostile during pending timeout
+      await new Promise(r => setTimeout(r, 50));
+      useGameStore.getState().removeMonsterFromCombat('goblin-active-removed');
+
+      // Verify that removal immediately dispatched the turn for char-hero
+      const stateAfterRemoval = useGameStore.getState();
+      expect(stateAfterRemoval.combatState.initiativeOrder.length).toBe(1);
+      expect(stateAfterRemoval.combatState.initiativeOrder[0].id).toBe('char-hero');
+      expect(stateAfterRemoval.combatState.activeTurnIndex).toBe(0);
+      expect(useCharacterStore.getState().activeCharacterId).toBe('char-hero');
+      expect(useCharacterStore.getState().characters.find(c => c.id === 'char-hero')?.actionEconomy.actions.current).toBe(1);
+
+      // Wait for original 600ms timeout to elapse
+      await new Promise(r => setTimeout(r, 750));
+
+      // Removed goblin must not attack
+      expect(goblinAttacked).toBe(false);
+      // Active index must remain 0 (pointing to Hero), no duplicate or ghost advance
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+      expect(useGameStore.getState().combatState.initiativeOrder[0].id).toBe('char-hero');
+    });
+
+    it('removing the active hostile starts the next hostile actor when applicable', async () => {
+      let goblin2Attacked = false;
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-1',
+              name: 'Goblin 1',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            },
+            {
+              id: 'goblin-2',
+              name: 'Goblin 2',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-1', name: 'Goblin 1', value: 15, isPlayer: false, isAlly: false },
+            { id: 'goblin-2', name: 'Goblin 2', value: 12, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0,
+          activeConditions: {}
+        },
+        resolveCombatAction: async (actor) => {
+          if (actor.id === 'goblin-2') {
+            goblin2Attacked = true;
+          }
+        }
+      });
+
+      // Start turn for goblin-1
+      useGameStore.getState().executeMonsterTurn('goblin-1');
+
+      // Remove active goblin-1 mid-turn
+      await new Promise(r => setTimeout(r, 50));
+      useGameStore.getState().removeMonsterFromCombat('goblin-1');
+
+      // Goblin 2 is now at index 0 and its turn must have been dispatched
+      expect(useGameStore.getState().combatState.initiativeOrder[0].id).toBe('goblin-2');
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+
+      // Wait for goblin-2 turn execution
+      await new Promise(r => setTimeout(r, 750));
+      expect(goblin2Attacked).toBe(true);
+    });
+
+    it('removing a combatant before the active index preserves the same active actor', () => {
+      useGameStore.setState({
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            { id: 'goblin-0', name: 'Goblin 0', type: 'enemy', hp: 7, maxHp: 7, x: 1, y: 1 },
+            { id: 'goblin-2', name: 'Goblin 2', type: 'enemy', hp: 7, maxHp: 7, x: 3, y: 3 }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-0', name: 'Goblin 0', value: 20, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 15, isPlayer: true, isAlly: false },
+            { id: 'goblin-2', name: 'Goblin 2', value: 10, isPlayer: false, isAlly: false }
+          ],
+          activeTurnIndex: 1 // Hero is active
+        }
+      });
+
+      useGameStore.getState().removeMonsterFromCombat('goblin-0');
+
+      const state = useGameStore.getState();
+      expect(state.combatState.initiativeOrder.length).toBe(2);
+      expect(state.combatState.activeTurnIndex).toBe(0);
+      expect(state.combatState.initiativeOrder[0].id).toBe('char-hero');
+    });
+
+    it('a dead active monster still in initiative advances exactly once', async () => {
+      let goblinAttacked = false;
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-dying',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7, // alive at start
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-dying', name: 'Goblin', value: 15, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0
+        },
+        resolveCombatAction: async () => {
+          goblinAttacked = true;
+        }
+      });
+
+      // Start turn while monster is alive
+      useGameStore.getState().executeMonsterTurn('goblin-dying');
+
+      // Monster drops to 0 HP during the pending timeout (e.g. from environmental damage or reaction)
+      await new Promise(r => setTimeout(r, 50));
+      useGameStore.setState(s => ({
+        combatState: {
+          ...s.combatState,
+          monsters: s.combatState.monsters.map(m => m.id === 'goblin-dying' ? { ...m, hp: 0 } : m)
+        }
+      }));
+
+      // Wait for turn timeout to fire
+      await new Promise(r => setTimeout(r, 750));
+
+      // Dead monster does not attack
+      expect(goblinAttacked).toBe(false);
+      // Turn advances safely to next actor (Hero at index 1)
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
+      expect(useGameStore.getState().combatState.initiativeOrder[1].id).toBe('char-hero');
+
+      // Wait another 500ms to verify no second advance occurs
+      await new Promise(r => setTimeout(r, 500));
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
+    });
+
+    it('a manually advanced turn invalidates the old pending callback', async () => {
+      let goblinAttacked = false;
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-manual',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-manual', name: 'Goblin', value: 15, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0
+        },
+        resolveCombatAction: async () => {
+          goblinAttacked = true;
+        }
+      });
+
+      // Start turn
+      useGameStore.getState().executeMonsterTurn('goblin-manual');
+
+      // User manually clicks Next Turn before 600ms timeout
+      await new Promise(r => setTimeout(r, 50));
+      useGameStore.getState().nextTurn();
+
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
+
+      // Wait for original timeout to elapse
+      await new Promise(r => setTimeout(r, 750));
+
+      // Goblin does not attack
+      expect(goblinAttacked).toBe(false);
+      // Turn remains on index 1, not double-advanced to 0
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
+    });
+
+    it('startCombat ensures gameMode is combat and dispatches first hostile turn', async () => {
+      useUIStore.setState({ gameMode: 'exploration' });
+
+      let actionExecuted = false;
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: {},
+          monsters: [
+            {
+              id: 'goblin-first',
+              name: 'Goblin Fast',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              stats: { dex: 30 }, // Very high dex ensures goblin rolls higher initiative
+              viewDirection: 0,
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [],
+          activeTurnIndex: 0
+        },
+        resolveCombatAction: async () => {
+          actionExecuted = true;
+        }
+      });
+
+      // Start combat from exploration
+      await useGameStore.getState().startCombat();
+
+      // UI gameMode must now be combat
+      expect(useUIStore.getState().gameMode).toBe('combat');
+
+      // First actor should be the high-dex goblin
+      const firstActor = useGameStore.getState().combatState.initiativeOrder[0];
+      if (firstActor.id === 'goblin-first') {
+        // Wait for turn execution
+        await new Promise(r => setTimeout(r, 750));
+        expect(actionExecuted).toBe(true);
+      }
+    });
+
+    it('completeCombat clears initiativeOrder and activeTurnIndex when returning to exploration', async () => {
+      useUIStore.setState({ gameMode: 'combat' });
+      useGameStore.setState({
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: {},
+          monsters: [],
+          initiativeOrder: [
+            { id: 'hero-1', name: 'Hero', value: 15, isPlayer: true, isAlly: false },
+            { id: 'goblin-1', name: 'Goblin', value: 10, isPlayer: false, isAlly: false }
+          ],
+          activeTurnIndex: 1
+        }
+      });
+
+      await useGameStore.getState().completeCombat(true);
+
+      expect(useUIStore.getState().gameMode).toBe('exploration');
+      expect(useGameStore.getState().combatState.initiativeOrder).toEqual([]);
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+    });
+
+    it('direct startCombat invocation does not trigger a duplicate startCombat through HUD-like effect', async () => {
+      useUIStore.setState({ gameMode: 'exploration' });
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: {},
+          monsters: [
+            {
+              id: 'goblin-single-roll',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [],
+          activeTurnIndex: 0
+        }
+      });
+
+      let secondaryStartTriggered = 0;
+      let startCombatCalls = 0;
+      const originalStartCombat = useGameStore.getState().startCombat;
+
+      // Simulate HUD effect subscriber: fires when gameMode transitions to combat
+      let prevGameMode = useUIStore.getState().gameMode;
+      const unsubscribe = useUIStore.subscribe((state) => {
+        if (state.gameMode === 'combat' && prevGameMode !== 'combat') {
+          prevGameMode = state.gameMode;
+          // Guard matching HUD.tsx: auto-start only if initiativeOrder is empty
+          const currentStore = useGameStore.getState();
+          if (currentStore.combatState.initiativeOrder.length === 0) {
+            secondaryStartTriggered++;
+            currentStore.startCombat();
+          }
+        } else {
+          prevGameMode = state.gameMode;
+        }
+      });
+
+      try {
+        await useGameStore.getState().startCombat();
+
+        // The HUD guard must prevent secondary startCombat
+        expect(secondaryStartTriggered).toBe(0);
+        expect(useUIStore.getState().gameMode).toBe('combat');
+        expect(useGameStore.getState().combatState.initiativeOrder.length).toBeGreaterThan(0);
+      } finally {
+        unsubscribe();
+      }
+    });
+
+    it('reroll initiative during existing combat rerolls exactly once and stays in combat mode', async () => {
+      useUIStore.setState({ gameMode: 'combat' });
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: {},
+          monsters: [
+            {
+              id: 'goblin-reroll',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-reroll', name: 'Goblin', value: 10, isPlayer: false, isAlly: false }
+          ],
+          activeTurnIndex: 0
+        }
+      });
+
+      await useGameStore.getState().startCombat();
+
+      expect(useUIStore.getState().gameMode).toBe('combat');
+      expect(useGameStore.getState().combatState.initiativeOrder.length).toBe(2); // Hero + Goblin
+    });
+
+    it('invalidating turn during async lookup prevents monster movement and attack', async () => {
+      useUIStore.setState({ gameMode: 'combat' });
+      let actionResolved = false;
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-lookup-stale',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 6, // Distance 4 from target at (2,2)
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-lookup-stale', name: 'Goblin', value: 15, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0
+        },
+        resolveCombatAction: async () => {
+          actionResolved = true;
+        }
+      });
+
+      // Start monster turn
+      useGameStore.getState().executeMonsterTurn('goblin-lookup-stale');
+
+      // Invalidate turn while execution is in-flight (before movement is committed)
+      await new Promise(r => setTimeout(r, 50));
+      useGameStore.getState().nextTurn();
+
+      // Wait for original turn timeout to elapse
+      await new Promise(r => setTimeout(r, 750));
+
+      const monster = useGameStore.getState().combatState.monsters.find(m => m.id === 'goblin-lookup-stale');
+      // Monster must NOT have moved to target
+      expect(monster?.x).toBe(2);
+      expect(monster?.y).toBe(6);
+      // Monster must NOT have attacked
+      expect(actionResolved).toBe(false);
+    });
+
+    it('completeCombat called while monster turn is pending immediately invalidates callback and prevents any combat mutations', async () => {
+      useUIStore.setState({ gameMode: 'combat' });
+      let actionResolved = false;
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-complete-stale',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 6,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-complete-stale', name: 'Goblin', value: 15, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0
+        },
+        resolveCombatAction: async () => {
+          actionResolved = true;
+        }
+      });
+
+      // Start monster turn
+      useGameStore.getState().executeMonsterTurn('goblin-complete-stale');
+
+      // Complete combat while monster turn is in-flight
+      await new Promise(r => setTimeout(r, 50));
+      await useGameStore.getState().completeCombat(true);
+
+      // Verify immediate invalidation
+      expect(useUIStore.getState().gameMode).toBe('exploration');
+      expect(useGameStore.getState().combatState.initiativeOrder).toEqual([]);
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+
+      // Wait for any remaining timeout to elapse
+      await new Promise(r => setTimeout(r, 750));
+
+      const monster = useGameStore.getState().combatState.monsters.find(m => m.id === 'goblin-complete-stale');
+      // Position unchanged
+      expect(monster?.x).toBe(2);
+      expect(monster?.y).toBe(6);
+      // No attack executed
+      expect(actionResolved).toBe(false);
+      // Mode remains exploration, initiative remains empty
+      expect(useUIStore.getState().gameMode).toBe('exploration');
+      expect(useGameStore.getState().combatState.initiativeOrder).toEqual([]);
+    });
   });
 });
