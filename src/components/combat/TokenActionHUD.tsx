@@ -24,7 +24,7 @@ const RADIAL_ACTIONS: RadialAction[] = [
   { id: 'Spell', label: 'Spell', icon: 'spells', tone: 'text-purple-200 border-purple-400/60 bg-purple-950/90' },
   { id: 'Move', label: 'Move', icon: 'footsteps', tone: 'text-blue-200 border-blue-400/60 bg-blue-950/90' },
   { id: 'Backpack', label: 'Backpack', icon: 'package', tone: 'text-amber-200 border-amber-400/60 bg-amber-950/90' },
-  { id: 'End Turn', label: 'End Turn', icon: 'check', tone: 'text-stone-950 border-dragon-gold bg-dragon-gold' }
+  { id: 'End Turn', label: 'End Turn', icon: 'chevron_right', tone: 'text-stone-950 border-dragon-gold bg-dragon-gold' }
 ];
 
 export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }) => {
