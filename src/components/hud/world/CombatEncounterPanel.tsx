@@ -1,6 +1,5 @@
 import React from 'react';
 import { useGameStore } from '../../store/useGameStore';
-import { useCharacterStore } from '../../store/useCharacterStore';
 import { useUIStore } from '../../store/useUIStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -8,7 +7,6 @@ import { fetchMonsterData } from '../../services/storageService';
 
 export const CombatEncounterPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const combatState = useGameStore(state => state.combatState);
-  const characters = useCharacterStore(state => state.characters);
   const { setFocusedItem, setIsMonsterProfileOpen } = useUIStore();
 
   const activeActor = combatState.initiativeOrder[combatState.activeTurnIndex];
@@ -148,18 +146,9 @@ export const CombatEncounterPanel: React.FC<{ onClose: () => void }> = ({ onClos
         })}
       </div>
 
-      <div className="shrink-0 border-t border-white/10 bg-black/30 px-4 py-3">
-        <div className="flex items-center justify-between text-[8px] uppercase tracking-widest text-white/30">
-          <span>Combat state</span>
-          <span className="text-dragon-gold">{combatState.initiativeOrder.length} in initiative</span>
-        </div>
-        <div className="mt-2 flex flex-wrap gap-1.5">
-          {characters.filter(character => character && character.name !== 'Empty Slot').map(character => (
-            <span key={character.id} className="px-2 py-1 rounded bg-blue-500/10 border border-blue-400/20 text-[8px] font-bold uppercase text-blue-200">
-              {character.name}
-            </span>
-          ))}
-        </div>
+      <div className="shrink-0 border-t border-white/10 bg-black/30 px-4 py-3 flex items-center justify-between text-[8px] uppercase tracking-widest text-white/30">
+        <span>Combat state</span>
+        <span className="text-dragon-gold">{combatState.initiativeOrder.length} in initiative</span>
       </div>
     </div>
   );
