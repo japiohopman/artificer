@@ -49,7 +49,8 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
     const available: RadialAction[] = [RADIAL_ACTIONS[0]];
 
     if ((activeChar.knownSpells?.length || 0) > 0) available.push(RADIAL_ACTIONS[1]);
-    if ((activeChar.actionEconomy?.movement?.current ?? 0) > 0) available.push(RADIAL_ACTIONS[2]);
+    // Keep Move in the first layer even when movement is spent; the detail panel explains its unavailable state.
+    available.push(RADIAL_ACTIONS[2]);
 
     const equippedIds = new Set((activeChar.equipment?.slots || []).map(slot => slot.itemId).filter(Boolean));
     const hasBackpackItems =
