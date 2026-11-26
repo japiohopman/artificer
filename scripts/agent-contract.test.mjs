@@ -74,7 +74,7 @@ test('Issue quality and PR relay tests are the only workflow test entry points',
 });
 
 test('ChatGPT PR review relay has PR-scoped write permission for PR label mutations', () => {
-  const permissions = reviewRelayWorkflow.match(/^permissions:\\n((?:  .*\\n)+)/m)?.[1] || '';
+  const permissions = reviewRelayWorkflow.match(/^permissions:\n((?:  .*\n)+)/m)?.[1] || '';
   assert.match(permissions, /issues: write/);
   assert.match(permissions, /pull-requests: write/);
   assert.match(permissions, /checks: read/);
