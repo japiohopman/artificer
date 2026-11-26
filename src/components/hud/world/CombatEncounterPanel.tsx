@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGameStore } from '../../store/useGameStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
 import { useUIStore } from '../../store/useUIStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -7,7 +8,7 @@ import { fetchMonsterData } from '../../services/storageService';
 
 export const CombatEncounterPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const combatState = useGameStore(state => state.combatState);
-  const characters = useGameStore(state => state.characters);
+  const characters = useCharacterStore(state => state.characters);
   const { setFocusedItem, setIsMonsterProfileOpen } = useUIStore();
 
   const activeActor = combatState.initiativeOrder[combatState.activeTurnIndex];
