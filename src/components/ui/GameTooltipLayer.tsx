@@ -25,6 +25,10 @@ export const GameTooltipLayer: FC = () => {
 
       if (!element.hasAttribute('title')) {
         delete element.dataset.gameTooltip;
+        if (element.dataset.gameTooltipDescriptionManaged === 'true') {
+          element.removeAttribute('aria-description');
+          delete element.dataset.gameTooltipDescriptionManaged;
+        }
         internalTitleClears.current.delete(element);
         return;
       }
@@ -32,6 +36,12 @@ export const GameTooltipLayer: FC = () => {
       const title = element.getAttribute('title') || '';
       if (title.trim()) {
         element.dataset.gameTooltip = title;
+        // Preserve the title's descriptive value for assistive technology after
+        // clearing the browser-native title popover.
+        if (!element.hasAttribute('aria-description') || element.dataset.gameTooltipDescriptionManaged === 'true') {
+          element.setAttribute('aria-description', title);
+          element.dataset.gameTooltipDescriptionManaged = 'true';
+        }
         internalTitleClears.current.add(element);
         element.setAttribute('title', '');
       } else if (internalTitleClears.current.has(element)) {
@@ -40,6 +50,10 @@ export const GameTooltipLayer: FC = () => {
       } else {
         // An intentionally empty React title clears any previous tooltip.
         delete element.dataset.gameTooltip;
+        if (element.dataset.gameTooltipDescriptionManaged === 'true') {
+          element.removeAttribute('aria-description');
+          delete element.dataset.gameTooltipDescriptionManaged;
+        }
       }
     };
 
@@ -48,8 +62,6 @@ export const GameTooltipLayer: FC = () => {
       hydrateTitle(node);
       node.querySelectorAll('[title]').forEach(hydrateTitle);
     };
-
-    document.querySelectorAll('[title]').forEach(hydrateTitle);
 
     const observer = new MutationObserver(records => {
       records.forEach(record => {
@@ -68,6 +80,8 @@ export const GameTooltipLayer: FC = () => {
       attributes: true,
       attributeFilter: ['title']
     });
+
+    document.querySelectorAll('[title]').forEach(hydrateTitle);
 
     const getTooltipTarget = (target: EventTarget | null): HTMLElement | null => {
       if (!(target instanceof Element)) return null;
