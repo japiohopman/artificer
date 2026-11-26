@@ -72,6 +72,8 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('character.spellSlots');
     expect(source).toContain('Party action economy');
     expect(source).toContain('Hostile turn');
+    expect(source).toContain("setGameMode('exploration')");
+    expect(source).toContain('Withdraw');
   });
 
   it('keeps radial category selection UI-only and resets it between turns', () => {
