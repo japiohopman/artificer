@@ -82,9 +82,10 @@ export const GameIcon: React.FC<GameIconProps> = ({
         strokeWidth={strokeWidth}
         className={className}
         xmlns="http://www.w3.org/2000/svg"
+        title={title}
+        aria-label={title}
         {...props}
       >
-        {title && <title>{title}</title>}
         <path d={iconEntry} />
       </svg>
     );
@@ -138,10 +139,10 @@ export const GameIcon: React.FC<GameIconProps> = ({
         strokeWidth={strokeWidth}
         className={className}
         xmlns="http://www.w3.org/2000/svg"
+        title={title}
+        aria-label={title}
         {...props}
-      >
-        {title && <title>{title}</title>}
-      </svg>
+      />
     );
   }
 
@@ -155,7 +156,9 @@ export const GameIcon: React.FC<GameIconProps> = ({
       strokeWidth={strokeWidth}
       className={className}
       xmlns="http://www.w3.org/2000/svg"
-      dangerouslySetInnerHTML={{ __html: (title ? `<title>${title}</title>` : '') + innerHtml }}
+      title={title}
+      aria-label={title}
+      dangerouslySetInnerHTML={{ __html: innerHtml }}
       {...props}
     />
   );
