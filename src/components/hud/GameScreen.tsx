@@ -19,6 +19,7 @@ import { cn } from '../../lib/utils';
 import { AdvancedRoller } from '../dice/DiceRollerPanel';
 
 import { ActionView } from './game/ActionView';
+import { ActionPanel } from './game/ActionPanel';
 
 export const GameScreen: React.FC = () => {
   const { 
@@ -148,19 +149,24 @@ export const GameScreen: React.FC = () => {
         </AnimatePresence>
       </div>
 
-      {/* 4. Legend & Chat Overlay Layer */}
+      {/* 4. Bottom workspace: combat actions replace the chat/dice footer during encounters */}
       <div className={cn(
         "absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none",
         gameMode === 'combat' && "z-[60]"
       )}>
-        <div className="w-full max-w-5xl px-4 pb-2 flex justify-start">
-           <AdvancedRoller />
-        </div>
-
-        {gameMode !== 'combat' && (
-          <div className="w-full pointer-events-auto relative">
-             <ChatPanel isCollapsed={!chatExpanded} />
+        {gameMode === 'combat' ? (
+          <div className="w-full max-w-5xl px-4 pb-3 pointer-events-auto">
+            <ActionPanel />
           </div>
+        ) : (
+          <>
+            <div className="w-full max-w-5xl px-4 pb-2 flex justify-start">
+              <AdvancedRoller />
+            </div>
+            <div className="w-full pointer-events-auto relative">
+              <ChatPanel isCollapsed={!chatExpanded} />
+            </div>
+          </>
         )}
       </div>
 
