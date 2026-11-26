@@ -235,6 +235,8 @@ const getAttackSvgPath = (actionName: string): string => {
 };
 
 let isStartingCombat = false;
+// Invalidates delayed hostile-turn callbacks whenever initiative advances or an encounter changes.
+let turnExecutionVersion = 0;
 
 export const useGameStore = create<GameState>((set, get) => ({
   ruleset: '2014',
@@ -569,6 +571,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   completeCombat: async (victory) => {
     const { combatState, addLog } = get();
+    turnExecutionVersion += 1;
 
     // 1. Calculate XP from current monster state before clearing combat state
     const totalXp = victory
@@ -607,6 +610,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     const normalizedIndex = targetIndex % combatState.initiativeOrder.length;
     const currentActor = combatState.initiativeOrder[normalizedIndex];
     if (!currentActor) return;
+
+    // Every turn start receives a unique generation, even if the same actor returns to the same slot.
+    turnExecutionVersion += 1;
 
     // Refresh action economy for player characters on turn start
     if (currentActor.isPlayer) {
@@ -662,10 +668,12 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     const turnActorId = monsterId;
     const turnIndex = combatState.activeTurnIndex;
+    const executionVersion = turnExecutionVersion;
 
     // 1. Current-turn identity verification (active encounter, slot ownership, matching turn index and actor ID)
     const isCurrentTurn = (): boolean => {
       const state = get();
+      if (turnExecutionVersion !== executionVersion) return false;
       if (state.combatState.initiativeOrder.length === 0) return false;
       if (useUIStore.getState().gameMode !== 'combat') return false;
       if (state.combatState.activeTurnIndex !== turnIndex) return false;
@@ -966,6 +974,8 @@ export const useGameStore = create<GameState>((set, get) => ({
         addLog(`Encounter started! Round 1 - Turn begins: ${firstActor.name}`, firstActor.isPlayer || firstActor.isAlly ? 'success' : 'warning');
       }
 
+      // Starting or rerolling initiative invalidates all pending callbacks from the prior encounter order.
+      turnExecutionVersion += 1;
       set((state) => ({
         combatState: {
           ...state.combatState,
