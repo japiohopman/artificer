@@ -88,9 +88,12 @@ describe('Combat HUD layout contract (#420)', () => {
   it('mounts a shared adventure-style tooltip layer for native title attributes', () => {
     const app = readSource('src/App.tsx');
     const layer = readSource('src/components/ui/GameTooltipLayer.tsx');
+    const icons = readSource('src/game_icons.tsx');
     const styles = readSource('src/index.css');
 
     expect(app).toContain('<GameTooltipLayer />');
+    expect(icons).toContain('title={title}');
+    expect(icons).not.toContain('<title>{title}</title>');
     expect(layer).toContain("const TOOLTIP_SELECTOR = '[data-game-tooltip]'");
     expect(layer).toContain("element.dataset.gameTooltip = title");
     expect(layer).toContain('role="tooltip"');
