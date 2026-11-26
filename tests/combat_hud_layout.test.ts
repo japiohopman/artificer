@@ -59,6 +59,20 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('activeTurnActor.isAlly ? [RADIAL_ACTIONS[4]] : []');
   });
 
+  it('keeps the radial action layer anchored to the actor center while animating only its inner layer', () => {
+    const source = readSource('src/components/combat/TokenActionHUD.tsx');
+    const anchorStart = source.indexOf('<div\\n      className="absolute z-[130] pointer-events-none"');
+    const animatedLayerStart = source.indexOf('<motion.div', anchorStart);
+
+    expect(anchorStart).toBeGreaterThan(-1);
+    expect(animatedLayerStart).toBeGreaterThan(anchorStart);
+
+    const anchorMarkup = source.slice(anchorStart, animatedLayerStart);
+    expect(anchorMarkup).toContain('left: x * cellSize + cellSize / 2');
+    expect(anchorMarkup).toContain('top: y * cellSize + cellSize / 2');
+    expect(anchorMarkup).toContain("transform: 'translate(-50%, -50%)'");
+  });
+
   it('routes selected categories to the bottom workspace and summarizes resources for all playable party members', () => {
     const source = readSource('src/components/hud/game/ActionPanel.tsx');
     const screen = readSource('src/components/hud/GameScreen.tsx');
