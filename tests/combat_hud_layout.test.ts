@@ -64,6 +64,9 @@ describe('Combat HUD layout contract (#420)', () => {
 
     expect(screen).toContain('<ActionPanel />');
     expect(source).toContain("case 'Attack':");
+    expect(source).toContain('const attackActions = useMemo<ActionHudAction[]>');
+    expect(source).toContain('getEquippedWeapons(activeChar)');
+    expect(source).toContain('Unarmed Strike');
     expect(source).toContain("case 'Spell':");
     expect(source).toContain("case 'Move':");
     expect(source).toContain("case 'Backpack':");
