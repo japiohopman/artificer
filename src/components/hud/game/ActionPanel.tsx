@@ -1,55 +1,107 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { useActiveCharacter } from '../../../lib/character';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { getCharacterActions, ActionHudAction } from '../../../lib/tokenActionHud';
 import { DeathSavesPanel } from './DeathSavesPanel';
-import { calculateWeaponAttackBonus } from '../../../lib/statCalculations';
+import { calculateWeaponAttackBonus, getEquippedWeapons } from '../../../lib/statCalculations';
+
+const resourceValue = (resource?: { current: number; max: number }) =>
+  resource && Number.isFinite(resource.current) && Number.isFinite(resource.max)
+    ? `${resource.current}/${resource.max}`
+    : '—';
 
 export const ActionPanel: React.FC = () => {
   const {
-    setGameMode,
-    setIsAdvancedRollerOpen,
+    gameMode,
+    combatActionCategory,
+    setCombatActionCategory,
     setIsTargeting,
     setTargetingAction,
     isTargeting,
     targetingAction
   } = useUIStore();
-  const { addLog, nextTurn } = useGameStore();
-  const activeChar = useActiveCharacter();
-  const activeCharacterId = activeChar?.id || '';
 
-  // Downed State check
-  const isDowned = activeChar && activeChar.hp <= 0;
+  const combatState = useGameStore(state => state.combatState);
+  const addLog = useGameStore(state => state.addLog);
+  const nextTurn = useGameStore(state => state.nextTurn);
+  const characters = useCharacterStore(state => state.characters);
+  const consumeAction = useCharacterStore(state => state.consumeAction);
 
-  // Dynamic actions based on tokenActionHud logic
-  const allActions = useMemo(() => getCharacterActions(activeChar || null), [activeChar]);
+  const activeTurnActor = combatState.initiativeOrder[combatState.activeTurnIndex];
+  const activeChar = useMemo(
+    () => activeTurnActor ? characters.find(character => character.id === activeTurnActor.id) : undefined,
+    [activeTurnActor, characters]
+  );
 
-  if (isDowned && activeChar) {
-    return (
-      <DeathSavesPanel
-        activeChar={activeChar}
-        onEndTurn={() => {
-          addLog(`${activeChar.name} passes their turn while downed.`, 'success');
-          nextTurn();
-        }}
-      />
-    );
-  }
+  useEffect(() => {
+    setCombatActionCategory(null);
+  }, [activeTurnActor?.id, setCombatActionCategory]);
 
-  // Group actions by category
-  const categories = useMemo(() => {
-    const groups: Record<string, ActionHudAction[]> = {};
-    allActions.forEach(action => {
-      if (!groups[action.category]) groups[action.category] = [];
-      groups[action.category].push(action);
+  const allActions = useMemo(
+    () => getCharacterActions(activeChar || null),
+    [activeChar]
+  );
+
+  const backpackActions = useMemo<ActionHudAction[]>(() => {
+    if (!activeChar) return [];
+    const items = new Map<string, any>();
+    const addItem = (item: any, fallbackId: string) => {
+      if (!item) return;
+      const id = String(item.id || item.index || fallbackId);
+      items.set(id, item);
+    };
+
+    (activeChar.backpack || []).forEach((item: any, index: number) => {
+      addItem(item, `backpack-${index}`);
     });
-    return groups;
-  }, [allActions]);
+
+    const equippedIds = new Set((activeChar.equipment?.slots || []).map(slot => slot.itemId).filter(Boolean));
+    Object.values(activeChar.items || {}).forEach((item: any, index) => {
+      if (item && !equippedIds.has(item.id)) addItem(item, `stored-${index}`);
+    });
+
+    Object.entries(activeChar.inventory || {}).forEach(([slot, item]) => {
+      if (['main_hand', 'off_hand', 'main-hand', 'off-hand', 'chest'].includes(slot)) return;
+      addItem(item, `legacy-${slot}`);
+    });
+
+    return Array.from(items.entries()).map(([id, item]) => ({
+      id: `item-${id}`,
+      name: item.customName || item.name || item.template || 'Unnamed item',
+      icon: 'package',
+      color: 'bg-amber-700',
+      description: item.description || `Use ${item.customName || item.name || item.template || 'this item'}.`,
+      range: 4,
+      category: 'Items',
+      actionType: 'objectInteractions',
+      data: item
+    }));
+  }, [activeChar]);
+
+  const displayedActions = useMemo(() => {
+    switch (combatActionCategory) {
+      case 'Attack':
+        return allActions.filter(action => action.id === 'attack');
+      case 'Spell':
+        return allActions.filter(action => action.category === 'Spells');
+      case 'Move':
+        return allActions.filter(action => action.id === 'move');
+      case 'Backpack':
+        return backpackActions;
+      default:
+        return [];
+    }
+  }, [allActions, backpackActions, combatActionCategory]);
+
+  const playableCharacters = characters.filter(character =>
+    character &&
+    character.name !== 'Empty Slot' &&
+    (!character.isNpc || character.isRecruitable)
+  );
 
   const handleActionClick = (action: ActionHudAction) => {
     const isActive = targetingAction?.id === action.id;
@@ -57,25 +109,25 @@ export const ActionPanel: React.FC = () => {
     if (isActive) {
       setIsTargeting(false);
       setTargetingAction(null);
+      setCombatActionCategory(null);
       addLog(`Action cancelled: ${action.name}`, 'warning');
       return;
     }
 
-    // Check action economy
-    if (action.actionType && activeChar?.actionEconomy) {
-      const remaining = activeChar.actionEconomy[action.actionType].current;
-      if (remaining <= 0) {
+    if (!activeChar) return;
+
+    if (action.actionType && activeChar.actionEconomy) {
+      const remaining = activeChar.actionEconomy[action.actionType]?.current;
+      if (typeof remaining === 'number' && remaining <= 0) {
         addLog(`You don't have enough ${action.actionType.replace('bonusActions', 'bonus actions')}!`, 'error');
         return;
       }
     }
 
-    // Check spell slots
-    if (action.category === 'Spells' && action.data?.level > 0 && activeChar?.spellSlots) {
-      const level = action.data.level;
-      const slots = activeChar.spellSlots[level.toString()];
+    if (action.category === 'Spells' && action.data?.level > 0) {
+      const slots = activeChar.spellSlots?.[String(action.data.level)];
       if (!slots || slots.current <= 0) {
-        addLog(`You don't have any level ${level} spell slots remaining!`, 'error');
+        addLog(`You don't have any level ${action.data.level} spell slots remaining!`, 'error');
         return;
       }
     }
@@ -83,213 +135,191 @@ export const ActionPanel: React.FC = () => {
     addLog(`Action selected: ${action.name}`, 'info');
 
     if (action.id === 'attack') {
-      setIsTargeting(true);
-
-      // Dynamically calculate attack bonus and damage from equipped weapon / active character
-      let equippedWeapon: any = null;
-      if (activeChar?.equipment && activeChar?.items) {
-        const weaponSlot = activeChar.equipment.slots.find(s => s.id === 'main_hand' || s.id === 'off_hand');
-        if (weaponSlot?.itemId) {
-          equippedWeapon = activeChar.items[weaponSlot.itemId];
-        }
-      }
-
+      const equippedWeapon = getEquippedWeapons(activeChar)[0]?.item || null;
       const calculatedBonus = calculateWeaponAttackBonus(activeChar, equippedWeapon);
-      const damageDice = equippedWeapon?.damage || '1d4';
-      const damageType = equippedWeapon?.damageType || 'slashing';
+      const damageDice = equippedWeapon?.damage?.damage_dice || equippedWeapon?.damage || '1d4';
+      const damageType = equippedWeapon?.damage?.damage_type?.name || equippedWeapon?.damageType || 'slashing';
 
       setTargetingAction({
         ...action,
         attack_bonus: calculatedBonus,
         damage: [{ damage_dice: damageDice, damage_type: { name: damageType } }]
       });
-      addLog("Select a target on the grid.", 'info');
+      setIsTargeting(true);
+      setCombatActionCategory(null);
+      addLog('Select a target on the grid.', 'info');
     } else if (action.id === 'move') {
-      setIsTargeting(true);
       setTargetingAction({ ...action });
-      addLog("Select destination on the grid.", 'info');
+      setIsTargeting(true);
+      setCombatActionCategory(null);
+      addLog('Select a destination on the grid.', 'info');
     } else if (action.category === 'Spells') {
-      setIsTargeting(true);
       setTargetingAction({ ...action });
-      addLog(`Casting ${action.name}. Select target.`, 'info');
+      setIsTargeting(true);
+      setCombatActionCategory(null);
+      addLog(`Casting ${action.name}. Select a target on the grid.`, 'info');
+    } else if (action.category === 'Items') {
+      setTargetingAction({ ...action });
+      setIsTargeting(true);
+      setCombatActionCategory(null);
+      addLog(`Using ${action.name}. Select a target on the grid.`, 'info');
     } else if (action.id === 'defend') {
-      const { consumeAction } = useCharacterStore.getState();
-      consumeAction(activeCharacterId, 'actions');
-      const actorId = activeCharacterId || 'player';
+      consumeAction(activeChar.id, 'actions');
       useGameStore.setState(state => ({
         combatState: {
           ...state.combatState,
           activeConditions: {
             ...state.combatState.activeConditions,
-            [actorId]: [...(state.combatState.activeConditions[actorId] || []), 'defending']
+            [activeChar.id]: [...(state.combatState.activeConditions[activeChar.id] || []), 'defending']
           }
         }
       }));
-      addLog(`${activeChar?.name || 'Player'} adopts a defensive stance! (+2 AC)`, 'success');
+      addLog(`${activeChar.name} adopts a defensive stance! (+2 AC)`, 'success');
+      setCombatActionCategory(null);
       nextTurn();
-    } else if (action.category === 'Items') {
-      setIsTargeting(true);
-      setTargetingAction({ ...action });
-      addLog(`Using ${action.name}. Select target.`, 'info');
-    } else if (action.category === 'Skills') {
-      addLog(`Using ${action.name}.`, 'info');
-      // Resolve skill logic
     }
   };
 
+  if (
+    gameMode !== 'combat' ||
+    !activeTurnActor ||
+    !activeChar ||
+    activeChar.id !== activeTurnActor.id ||
+    !(activeTurnActor.isPlayer || activeTurnActor.isAlly)
+  ) {
+    return null;
+  }
+
   return (
-    <div className="w-full flex flex-col bg-stone-950 border-t-2 border-dragon-gold overflow-hidden shadow-2xl font-serif">
-      {/* Header / Info bar */}
-      <div className="px-4 py-2 bg-black/60 border-b border-white/5 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-dragon-red animate-pulse" />
-          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 font-elan">Tactical Action Matrix</span>
+    <div className="w-full overflow-hidden rounded-xl border border-dragon-gold/35 bg-stone-950/95 text-white shadow-[0_8px_30px_rgba(0,0,0,0.65)] backdrop-blur-md font-serif">
+      <div className="flex items-center justify-between gap-3 border-b border-white/10 bg-black/40 px-4 py-2">
+        <div className="min-w-0 flex items-center gap-2">
+          <span className="h-2 w-2 shrink-0 rounded-full bg-dragon-gold shadow-[0_0_8px_rgba(212,175,55,0.7)]" />
+          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-dragon-gold">Action workspace</span>
+          <span className="truncate text-[10px] font-bold uppercase tracking-wider text-white/70">{activeChar.name}</span>
+          <span className="hidden sm:inline truncate text-[8px] uppercase tracking-widest text-white/35">Level {activeChar.level} {activeChar.class}</span>
         </div>
-        
-        {/* Action Economy Tracker */}
-        {activeChar?.actionEconomy && (
-          <div className="flex items-center gap-4 bg-black/40 px-4 py-1 rounded-full border border-white/5">
-            <div className="flex items-center gap-1.5" title="Actions">
-              <div className={cn("w-1.5 h-1.5 rounded-full", activeChar.actionEconomy.actions.current > 0 ? "bg-green-500" : "bg-red-500")} />
-              <span className="text-[8px] font-bold text-white/60 uppercase">ACT: {activeChar.actionEconomy.actions.current}</span>
-            </div>
-            <div className="flex items-center gap-1.5" title="Bonus Actions">
-              <div className={cn("w-1.5 h-1.5 rounded-full", activeChar.actionEconomy.bonusActions.current > 0 ? "bg-blue-500" : "bg-red-500")} />
-              <span className="text-[8px] font-bold text-white/60 uppercase">BNS: {activeChar.actionEconomy.bonusActions.current}</span>
-            </div>
-            <div className="flex items-center gap-1.5" title="Reactions">
-              <div className={cn("w-1.5 h-1.5 rounded-full", activeChar.actionEconomy.reactions.current > 0 ? "bg-purple-500" : "bg-red-500")} />
-              <span className="text-[8px] font-bold text-white/60 uppercase">REA: {activeChar.actionEconomy.reactions.current}</span>
-            </div>
-            <div className="flex items-center gap-1.5" title="Movement">
-              <span className="text-[8px] font-bold text-white/60 uppercase">MOV: {activeChar.actionEconomy.movement.current}ft</span>
-            </div>
-          </div>
-        )}
-
-        <div className="flex items-center gap-4">
-           {activeChar && (
-              <div className="flex items-center gap-2 px-3 py-0.5 bg-dragon-gold/10 border border-dragon-gold/20 rounded-full">
-                 <span className="text-[9px] font-black text-dragon-gold uppercase tracking-widest">{activeChar.name}</span>
-                 <span className="text-[8px] font-bold text-dragon-gold/60 uppercase">Lvl {activeChar.level} {activeChar.class}</span>
-              </div>
-           )}
-           <button 
-            onClick={() => setGameMode('exploration')}
-            className="text-[9px] font-black uppercase text-dragon-red hover:text-white transition-colors border border-dragon-red/30 px-2 py-0.5 rounded bg-dragon-red/10 font-elan"
+        {combatActionCategory && (
+          <button
+            onClick={() => setCombatActionCategory(null)}
+            aria-label="Close action choices"
+            className="shrink-0 rounded border border-white/10 px-2 py-1 text-[8px] font-black uppercase tracking-widest text-white/50 hover:bg-white/10 hover:text-white"
           >
-            Withdraw
+            Close
           </button>
-        </div>
-      </div>
-
-      <div className="flex-1 overflow-x-auto custom-scrollbar p-4">
-        <div className="flex gap-8 min-w-max">
-           {Object.entries(categories).map(([category, actions]) => (
-             <div key={category} className="flex flex-col gap-3">
-                <span className="text-[8px] font-black text-white/20 uppercase tracking-[0.3em] border-b border-white/5 pb-1">{category}</span>
-                <div className="flex gap-3">
-                  {actions.map((action) => {
-                    const isActive = targetingAction?.id === action.id;
-                    return (
-                      <motion.button
-                        key={action.id}
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => handleActionClick(action)}
-                        className="flex flex-col items-center group relative"
-                        title={action.description}
-                      >
-                        <div className={cn(
-                          "w-12 h-12 rounded-xl flex items-center justify-center border-2 transition-all shadow-lg group-hover:border-white/30",
-                          action.color || 'bg-stone-800',
-                          isActive ? "border-dragon-gold ring-4 ring-dragon-gold/20 scale-110" : "border-white/10"
-                        )}>
-                          <GameIcon name={action.icon} size={20} color="#FFF" />
-                        </div>
-                        <span className={cn(
-                          "mt-1.5 text-[9px] font-black uppercase tracking-widest transition-colors max-w-[64px] text-center leading-tight",
-                          isActive ? "text-dragon-gold" : "text-white/60 group-hover:text-white"
-                        )}>{action.name}</span>
-                      </motion.button>
-                    );
-                  })}
-                </div>
-             </div>
-           ))}
-
-           {/* Spell Slots */}
-           {activeChar?.spellSlots && Object.keys(activeChar.spellSlots).length > 0 && (
-             <div className="flex flex-col gap-3 pl-8 border-l border-white/10">
-               <span className="text-[8px] font-black text-white/20 uppercase tracking-[0.3em] border-b border-white/5 pb-1">Spell_Slots</span>
-               <div className="flex gap-2">
-                  {Object.entries(activeChar.spellSlots).map(([lvl, slot]: [string, any]) => (
-                    <div key={lvl} className="flex flex-col items-center gap-1">
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: slot.max }).map((_, i) => (
-                          <div 
-                            key={i} 
-                            className={cn(
-                              "w-1.5 h-3 rounded-sm border border-purple-500/30",
-                              i < slot.current ? "bg-purple-500 shadow-[0_0_5px_rgba(168,85,247,0.5)]" : "bg-black/40"
-                            )} 
-                          />
-                        ))}
-                      </div>
-                      <span className="text-[7px] font-black text-purple-400/60 uppercase tracking-tighter">L{lvl}</span>
-                    </div>
-                  ))}
-               </div>
-             </div>
-           )}
-
-           {/* Turn Controls */}
-           <div className="ml-auto flex items-center pl-8 border-l border-white/10">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  addLog(`${activeChar?.name || 'Player'} has ended their turn.`, 'success');
-                  nextTurn();
-                }}
-                className="px-8 py-4 bg-dragon-gold text-stone-900 rounded-sm font-header font-black uppercase tracking-[0.2em] text-xs shadow-xl hover:brightness-110 transition-all border-2 border-white/20"
-              >
-                End Turn
-              </motion.button>
-           </div>
-        </div>
-      </div>
-
-      {/* Action Details Tray */}
-      <div className="px-4 py-1.5 bg-black/80 border-t border-white/5 min-h-[24px] flex items-center justify-between">
-        {isTargeting ? (
-          <div className="flex items-center gap-2">
-            <span className="text-[8px] font-black text-dragon-gold uppercase animate-pulse">Targeting Mode:</span>
-            <span className="text-[8px] font-bold text-white/60 uppercase tracking-widest italic">
-              {targetingAction?.description || "Select a target on the grid."}
-            </span>
-          </div>
-        ) : (
-          <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest italic font-elan">
-            Select an action from your token matrix to deploy tactical capabilities.
-          </p>
         )}
-        
-        <div className="flex items-center gap-4">
-           {targetingAction?.range !== undefined && (
-             <div className="flex items-center gap-1.5 text-blue-400">
-                <GameIcon name="footsteps" size={10} color="currentColor" />
-                <span className="text-[8px] font-black uppercase tracking-widest">Range: {targetingAction.range * 5}ft</span>
-             </div>
-           )}
-           {targetingAction?.radius !== undefined && (
-             <div className="flex items-center gap-1.5 text-dragon-red">
-                <GameIcon name="magic_effect" size={10} color="currentColor" />
-                <span className="text-[8px] font-black uppercase tracking-widest">Radius: {targetingAction.radius * 5}ft</span>
-             </div>
-           )}
+      </div>
+
+      {activeChar.hp <= 0 ? (
+        <div className="p-3">
+          <DeathSavesPanel
+            activeChar={activeChar}
+            onEndTurn={() => {
+              addLog(`${activeChar.name} passes their turn while downed.`, 'success');
+              nextTurn();
+            }}
+          />
+        </div>
+      ) : combatActionCategory ? (
+        <div className="max-h-36 overflow-y-auto custom-scrollbar px-3 py-2">
+          {displayedActions.length > 0 ? (
+            <div className="flex flex-wrap gap-2">
+              {displayedActions.map(action => {
+                const isActive = targetingAction?.id === action.id;
+                const isUnavailable = Boolean(
+                  action.actionType &&
+                  activeChar.actionEconomy &&
+                  typeof activeChar.actionEconomy[action.actionType]?.current === 'number' &&
+                  activeChar.actionEconomy[action.actionType].current <= 0
+                );
+                return (
+                  <motion.button
+                    key={action.id}
+                    whileHover={!isUnavailable ? { y: -1 } : undefined}
+                    whileTap={!isUnavailable ? { scale: 0.98 } : undefined}
+                    disabled={isUnavailable}
+                    onClick={() => handleActionClick(action)}
+                    className={cn(
+                      "min-w-[150px] max-w-[260px] flex-1 flex items-center gap-2 rounded-lg border px-3 py-2 text-left transition-colors",
+                      isUnavailable
+                        ? "cursor-not-allowed border-white/5 bg-black/30 text-white/25"
+                        : isActive
+                          ? "border-dragon-gold bg-dragon-gold/10 text-dragon-gold"
+                          : "border-white/10 bg-white/[0.04] text-white/85 hover:border-white/25 hover:bg-white/[0.08]"
+                    )}
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black/30">
+                      <GameIcon name={action.icon} size={16} color="currentColor" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-[10px] font-black uppercase tracking-wider">{action.name}</span>
+                      <span className="mt-0.5 block truncate text-[8px] text-white/40">{action.description}</span>
+                    </span>
+                  </motion.button>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="py-3 text-center text-[9px] uppercase tracking-widest text-white/35">
+              {combatActionCategory === 'Backpack' ? 'No backpack items available' : 'No choices available'}
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="px-4 py-2 text-[9px] uppercase tracking-widest text-white/35">
+          Choose an action around your character to see its available choices here.
+        </div>
+      )}
+
+      <div className="border-t border-white/10 bg-black/35 px-3 py-2">
+        <div className="mb-1.5 flex items-center justify-between gap-2">
+          <span className="text-[8px] font-black uppercase tracking-[0.2em] text-white/35">Party action economy</span>
+          <span className="text-[7px] uppercase tracking-widest text-white/25">Live character state</span>
+        </div>
+        <div className="flex gap-2 overflow-x-auto custom-scrollbar pb-1">
+          {playableCharacters.map(character => {
+            const economy = character.actionEconomy;
+            const slots = Object.entries(character.spellSlots || {})
+              .filter(([, slot]) => slot && slot.max > 0)
+              .sort(([a], [b]) => Number(a) - Number(b))
+              .map(([level, slot]) => `L${level} ${slot.current}/${slot.max}`)
+              .join(' · ');
+            const isCurrent = character.id === activeTurnActor.id;
+
+            return (
+              <div
+                key={character.id}
+                className={cn(
+                  "min-w-[190px] max-w-[250px] rounded-lg border px-2.5 py-2",
+                  isCurrent ? "border-dragon-gold/60 bg-dragon-gold/10" : "border-white/10 bg-white/[0.03]"
+                )}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className={cn("truncate text-[8px] font-black uppercase tracking-wider", isCurrent ? "text-dragon-gold" : "text-white/70")}>{character.name}</span>
+                  {isCurrent && <span className="text-[7px] font-black uppercase tracking-widest text-dragon-gold">Turn</span>}
+                </div>
+                <div className="mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-[8px] font-bold text-white/45">
+                  <span>ACT {resourceValue(economy?.actions)}</span>
+                  <span>BON {resourceValue(economy?.bonusActions)}</span>
+                  <span>REA {resourceValue(economy?.reactions)}</span>
+                  <span>MOV {resourceValue(economy?.movement)}</span>
+                </div>
+                <div className="mt-1 truncate text-[8px] text-purple-200/65" title={slots || 'No spell-slot data'}>
+                  {slots || 'No spell slots'}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
+
+      {isTargeting && (
+        <div className="flex items-center gap-2 border-t border-dragon-gold/20 bg-dragon-gold/5 px-4 py-1.5">
+          <span className="h-1.5 w-1.5 rounded-full bg-dragon-gold animate-pulse" />
+          <span className="text-[8px] font-black uppercase tracking-widest text-dragon-gold">Targeting</span>
+          <span className="truncate text-[8px] text-white/60">{targetingAction?.description || 'Select a target on the grid.'}</span>
+        </div>
+      )}
     </div>
   );
 };
