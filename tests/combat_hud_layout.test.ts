@@ -1,10 +1,11 @@
-import { beforeEach, describe, expect, it } from 'vitest';
-import fs from 'fs';
-import path from 'path';
+// @ts-nocheck
+import { beforeEach, describe, expect, it } from 'bun:test';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import { useUIStore } from '../src/store/useUIStore';
 
 const readSource = (relativePath: string) =>
-  fs.readFileSync(path.join(__dirname, '..', relativePath), 'utf8');
+  readFileSync(join(__dirname, '..', relativePath), 'utf8');
 
 describe('Combat HUD layout contract (#420)', () => {
   beforeEach(() => {
@@ -40,7 +41,7 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('activeActor?.name');
     expect(source).toContain('currentLocation?.name');
     expect(source).toContain('Zoom {mapZoom}');
-    expect(source).toContain("entry.isPlayer || entry.isAlly ? 'ALLY' : 'HOSTILE'");
+    expect(source).toContain("const role = entry.isPlayer ? 'PC' : entry.isAlly ? 'ALLY' : 'HOSTILE'");
   });
 
   it('provides a 3–5 item radial action layer around the current playable actor', () => {
