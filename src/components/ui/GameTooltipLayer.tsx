@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type FC } from 'react';
 
 interface TooltipState {
   text: string;
@@ -14,7 +14,7 @@ const TOOLTIP_SELECTOR = '[data-game-tooltip]';
  * The original title text is retained in data-game-tooltip so React components
  * can continue using the familiar title prop without custom wrappers.
  */
-export const GameTooltipLayer: React.FC = () => {
+export const GameTooltipLayer: FC = () => {
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);
   const activeTarget = useRef<HTMLElement | null>(null);
   const internalTitleClears = useRef(new WeakSet<HTMLElement>());
@@ -91,7 +91,7 @@ export const GameTooltipLayer: React.FC = () => {
       activeTarget.current = target;
       const rect = target.getBoundingClientRect();
       const placement = rect.top >= 56 ? 'top' : 'bottom';
-      const horizontalPadding = 150;
+      const horizontalPadding = Math.min(150, Math.max(12, window.innerWidth / 2 - 12));
       const left = Math.min(
         Math.max(rect.left + rect.width / 2, horizontalPadding),
         Math.max(horizontalPadding, window.innerWidth - horizontalPadding)
