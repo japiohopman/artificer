@@ -1022,5 +1022,70 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
       expect(useGameStore.getState().combatState.initiativeOrder).toEqual([]);
     });
 
+    
+    it('does not execute an old hostile callback when the same actor returns to the same initiative slot', async () => {
+      useUIStore.setState({ gameMode: 'combat' });
+      useCharacterStore.setState({
+        characters: [
+          { id: 'char-hero', name: 'Hero', hp: 30, maxHp: 30, stats: { dex: 10, ac: 10 }, isNpc: false }
+        ]
+      });
+
+      let attackCount = 0;
+      const lookup = async (index: string) => index === 'shortbow'
+        ? { weapon_range: 'Ranged', range: { normal: 80 }, properties: [] }
+        : { weapon_range: 'Melee', range: { normal: 5 }, properties: [] };
+
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { 'char-hero': { x: 2, y: 2, rotation: 0 } },
+          monsters: [
+            {
+              id: 'goblin-reentered',
+              name: 'Goblin',
+              type: 'enemy',
+              size: 'Small',
+              hp: 7,
+              maxHp: 7,
+              x: 2,
+              y: 3,
+              speed: 6,
+              viewDirection: 0,
+              awareness: 'combat',
+              actions: goblinData.actions
+            }
+          ],
+          initiativeOrder: [
+            { id: 'goblin-reentered', name: 'Goblin', value: 15, isPlayer: false, isAlly: false },
+            { id: 'char-hero', name: 'Hero', value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0,
+          activeConditions: {}
+        },
+        resolveCombatAction: async () => {
+          attackCount += 1;
+        }
+      });
+
+      // The first delayed execution is pending.
+      useGameStore.getState().executeMonsterTurn('goblin-reentered', lookup);
+      await new Promise(r => setTimeout(r, 50));
+
+      // Move away and then return to the exact same actor/index before the first timer fires.
+      useGameStore.getState().nextTurn();
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
+      useGameStore.getState().startTurnForIndex(0);
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+
+      // Both timers have had time to fire; only the new turn may attack.
+      await new Promise(r => setTimeout(r, 800));
+      expect(attackCount).toBe(1);
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+    });
+
   });
 });
