@@ -11,7 +11,7 @@ import { cn } from '../../lib/utils';
 import { REGION_NAMES } from '../../data/regions';
 
 export const NotificationWindow: React.FC = () => {
-  const { logs, clearLogs, combatState, startCombat, nextTurn } = useGameStore();
+  const { logs, clearLogs, combatState, startCombat } = useGameStore();
   const { playSound } = useAudioStore();
   const { characters } = useCharacterStore();
 
@@ -54,22 +54,14 @@ export const NotificationWindow: React.FC = () => {
                 </span>
               )}
               {initiativeOrder.length > 0 && (
-                <>
-                  <button
-                    onClick={nextTurn}
-                    className="px-3 py-1.5 bg-dragon-red hover:bg-dragon-darkRed text-white rounded text-[9px] font-black uppercase tracking-widest border border-dragon-gold/30 transition-all shadow-lg active:scale-95"
-                  >
-                    Next Turn
-                  </button>
-                  <button
-                    onClick={startCombat}
-                    className="p-1.5 bg-white/5 hover:bg-white/10 rounded border border-white/10 text-dragon-gold transition-all"
-                    title="Reroll Initiative"
-                    aria-label="Reroll initiative"
-                  >
-                    <GameIcon name="dice" size={15} color="currentColor" />
-                  </button>
-                </>
+                <button
+                  onClick={startCombat}
+                  className="p-1.5 bg-white/5 hover:bg-white/10 rounded border border-white/10 text-dragon-gold transition-all"
+                  title="Reroll Initiative"
+                  aria-label="Reroll initiative"
+                >
+                  <GameIcon name="dice" size={15} color="currentColor" />
+                </button>
               )}
               <button
                 className="p-1.5 text-white/25 hover:text-white/70 transition-colors"
