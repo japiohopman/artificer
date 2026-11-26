@@ -75,6 +75,32 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(anchorMarkup).toContain("transform: 'translate(-50%, -50%)'");
   });
 
+  it('uses a single monochrome visual treatment for every radial action and keeps labels in tooltips', () => {
+    const source = readSource('src/components/combat/TokenActionHUD.tsx');
+
+    expect(source).toContain('border-dragon-gold/45 bg-stone-950/90 text-dragon-gold');
+    expect(source).toContain('<GameIcon name={action.icon} size={17} color="currentColor" />');
+    expect(source).toContain('title={action.label}');
+    expect(source).not.toContain('action.tone');
+    expect(source).not.toContain('{action.label}</span>');
+  });
+
+  it('mounts a shared adventure-style tooltip layer for native title attributes', () => {
+    const app = readSource('src/App.tsx');
+    const layer = readSource('src/components/ui/GameTooltipLayer.tsx');
+    const styles = readSource('src/index.css');
+
+    expect(app).toContain('<GameTooltipLayer />');
+    expect(layer).toContain("const TOOLTIP_SELECTOR = '[data-game-tooltip]'");
+    expect(layer).toContain("element.dataset.gameTooltip = title");
+    expect(layer).toContain('role="tooltip"');
+    expect(layer).toContain('pointerover');
+    expect(layer).toContain('focusin');
+    expect(styles).toContain('.game-tooltip {');
+    expect(styles).toContain('font-family: "Roboto Condensed", "Crimson Text", serif;');
+    expect(styles).toContain('rgba(212, 175, 55, 0.62)');
+  });
+
   it('routes selected categories to the bottom workspace and summarizes resources for all playable party members', () => {
     const source = readSource('src/components/hud/game/ActionPanel.tsx');
     const screen = readSource('src/components/hud/GameScreen.tsx');
