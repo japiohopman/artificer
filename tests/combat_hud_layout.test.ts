@@ -61,9 +61,11 @@ describe('Combat HUD layout contract (#420)', () => {
 
   it('keeps the radial action layer anchored to the actor center while animating only its inner layer', () => {
     const source = readSource('src/components/combat/TokenActionHUD.tsx');
-    const anchorStart = source.indexOf('<div\\n      className="absolute z-[130] pointer-events-none"');
-    const animatedLayerStart = source.indexOf('<motion.div', anchorStart);
+    const anchorClassIndex = source.indexOf('className="absolute z-[130] pointer-events-none"');
+    const anchorStart = source.lastIndexOf('<div', anchorClassIndex);
+    const animatedLayerStart = source.indexOf('<motion.div', anchorClassIndex);
 
+    expect(anchorClassIndex).toBeGreaterThan(-1);
     expect(anchorStart).toBeGreaterThan(-1);
     expect(animatedLayerStart).toBeGreaterThan(anchorStart);
 
