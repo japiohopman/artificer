@@ -94,11 +94,9 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   const angleOffset = -90;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.75 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.75 }}
-      transition={{ duration: 0.16, ease: 'easeOut' }}
+    // Keep the 50% / 50% actor anchor static. Framer Motion animates only the
+    // inner layer so its scale transform can never replace the centering pivot.
+    <div
       className="absolute z-[130] pointer-events-none"
       style={{
         left: x * cellSize + cellSize / 2,
@@ -109,46 +107,54 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
       }}
       aria-label={`Actions for ${activeChar?.name || activeTurnActor.name}`}
     >
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 164 164"
-        className="absolute inset-0 w-full h-full overflow-visible pointer-events-none"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.75 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.75 }}
+        transition={{ duration: 0.16, ease: 'easeOut' }}
+        className="absolute inset-0 pointer-events-none"
       >
-        <circle cx="82" cy="82" r="36" fill="rgba(12,10,8,0.12)" stroke="rgba(212,175,55,0.85)" strokeWidth="2" />
-        <circle cx="82" cy="82" r="54" fill="none" stroke="rgba(212,175,55,0.2)" strokeWidth="1" strokeDasharray="2 5" />
-      </svg>
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 164 164"
+          className="absolute inset-0 w-full h-full overflow-visible pointer-events-none"
+        >
+          <circle cx="82" cy="82" r="36" fill="rgba(12,10,8,0.12)" stroke="rgba(212,175,55,0.85)" strokeWidth="2" />
+          <circle cx="82" cy="82" r="54" fill="none" stroke="rgba(212,175,55,0.2)" strokeWidth="1" strokeDasharray="2 5" />
+        </svg>
 
-      {options.map((action, index) => {
-        const angle = ((angleOffset + index * (360 / options.length)) * Math.PI) / 180;
-        const left = center + Math.cos(angle) * radius;
-        const top = center + Math.sin(angle) * radius;
-        const isSelected = action.id !== 'End Turn' && combatActionCategory === action.id;
+        {options.map((action, index) => {
+          const angle = ((angleOffset + index * (360 / options.length)) * Math.PI) / 180;
+          const left = center + Math.cos(angle) * radius;
+          const top = center + Math.sin(angle) * radius;
+          const isSelected = action.id !== 'End Turn' && combatActionCategory === action.id;
 
-        return (
-          <motion.button
-            key={action.id}
-            type="button"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1, x: left - center, y: top - center }}
-            whileHover={{ scale: 1.12 }}
-            whileTap={{ scale: 0.94 }}
-            onClick={() => handleActionSelect(action)}
-            aria-label={action.label}
-            aria-pressed={isSelected}
-            title={action.label}
-            className={cn(
-              "absolute left-1/2 top-1/2 -ml-[19px] -mt-[19px] w-[38px] h-[38px] rounded-full border shadow-[0_4px_14px_rgba(0,0,0,0.65)] backdrop-blur-md flex items-center justify-center pointer-events-auto transition-colors",
-              action.tone,
-              isSelected && "ring-2 ring-white/80 ring-offset-2 ring-offset-stone-950 scale-110"
-            )}
-          >
-            <GameIcon name={action.icon} size={17} color="currentColor" />
-            <span className="absolute top-full mt-1 whitespace-nowrap rounded bg-stone-950/90 px-1.5 py-0.5 text-[7px] font-black uppercase tracking-wider text-white/85 border border-white/10">
-              {action.label}
-            </span>
-          </motion.button>
-        );
-      })}
-    </motion.div>
+          return (
+            <motion.button
+              key={action.id}
+              type="button"
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1, x: left - center, y: top - center }}
+              whileHover={{ scale: 1.12 }}
+              whileTap={{ scale: 0.94 }}
+              onClick={() => handleActionSelect(action)}
+              aria-label={action.label}
+              aria-pressed={isSelected}
+              title={action.label}
+              className={cn(
+                "absolute left-1/2 top-1/2 -ml-[19px] -mt-[19px] w-[38px] h-[38px] rounded-full border shadow-[0_4px_14px_rgba(0,0,0,0.65)] backdrop-blur-md flex items-center justify-center pointer-events-auto transition-colors",
+                action.tone,
+                isSelected && "ring-2 ring-white/80 ring-offset-2 ring-offset-stone-950 scale-110"
+              )}
+            >
+              <GameIcon name={action.icon} size={17} color="currentColor" />
+              <span className="absolute top-full mt-1 whitespace-nowrap rounded bg-stone-950/90 px-1.5 py-0.5 text-[7px] font-black uppercase tracking-wider text-white/85 border border-white/10">
+                {action.label}
+              </span>
+            </motion.button>
+          );
+        })}
+      </motion.div>
+    </div>
   );
 };
