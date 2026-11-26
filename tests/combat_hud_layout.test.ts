@@ -56,6 +56,7 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('360 / options.length');
     expect(source).toContain('activeTurnActor.id');
     expect(source).toContain('setCombatActionCategory');
+    expect(source).toContain('activeTurnActor.isAlly ? [RADIAL_ACTIONS[4]] : []');
   });
 
   it('routes selected categories to the bottom workspace and summarizes resources for all playable party members', () => {
@@ -75,6 +76,8 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('character.spellSlots');
     expect(source).toContain('Party action economy');
     expect(source).toContain('Hostile turn');
+    expect(source).toContain('Ally turn');
+    expect(source).toContain('End Turn remains available around the actor');
     expect(source).toContain("setGameMode('exploration')");
     expect(source).toContain('Withdraw');
   });
