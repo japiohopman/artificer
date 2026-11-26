@@ -270,7 +270,10 @@ export const ActionPanel: React.FC = () => {
 
       {!activeChar || activeChar.id !== activeTurnActor.id || !(activeTurnActor.isPlayer || activeTurnActor.isAlly) ? (
         <div className="px-4 py-2 text-[9px] uppercase tracking-widest text-white/40">
-          Hostile turn · {activeTurnActor.name}
+          {activeTurnActor.isAlly ? 'Ally turn' : activeTurnActor.isPlayer ? 'Player turn' : 'Hostile turn'} · {activeTurnActor.name}
+          {activeTurnActor.isAlly && !activeChar && (
+            <span className="ml-2 normal-case tracking-normal text-white/25">No playable Character/resource record; End Turn remains available around the actor.</span>
+          )}
         </div>
       ) : activeChar.hp <= 0 ? (
         <div className="p-3">
