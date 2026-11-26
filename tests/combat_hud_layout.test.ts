@@ -38,6 +38,7 @@ describe('Combat HUD layout contract (#420)', () => {
 
     expect(source).toContain('const isCombat = gameMode === \'combat\'');
     expect(source).toContain('Encounter initiative');
+    expect(source).not.toContain('Next Turn');
     expect(source).toContain('activeActor?.name');
     expect(source).toContain('currentLocation?.name');
     expect(source).toContain('Zoom {mapZoom}');
@@ -70,6 +71,7 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('playableCharacters.map');
     expect(source).toContain('character.spellSlots');
     expect(source).toContain('Party action economy');
+    expect(source).toContain('Hostile turn');
   });
 
   it('keeps radial category selection UI-only and resets it between turns', () => {
