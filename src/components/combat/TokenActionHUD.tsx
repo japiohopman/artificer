@@ -16,15 +16,14 @@ type RadialAction = {
   id: 'Attack' | 'Spell' | 'Move' | 'Backpack' | 'End Turn';
   label: string;
   icon: string;
-  tone: string;
 };
 
 const RADIAL_ACTIONS: RadialAction[] = [
-  { id: 'Attack', label: 'Attack', icon: 'melee', tone: 'text-red-200 border-red-400/60 bg-red-950/90' },
-  { id: 'Spell', label: 'Spell', icon: 'spells', tone: 'text-purple-200 border-purple-400/60 bg-purple-950/90' },
-  { id: 'Move', label: 'Move', icon: 'footsteps', tone: 'text-blue-200 border-blue-400/60 bg-blue-950/90' },
-  { id: 'Backpack', label: 'Backpack', icon: 'package', tone: 'text-amber-200 border-amber-400/60 bg-amber-950/90' },
-  { id: 'End Turn', label: 'End Turn', icon: 'chevron_right', tone: 'text-stone-950 border-dragon-gold bg-dragon-gold' }
+  { id: 'Attack', label: 'Attack', icon: 'melee' },
+  { id: 'Spell', label: 'Spell', icon: 'spells' },
+  { id: 'Move', label: 'Move', icon: 'footsteps' },
+  { id: 'Backpack', label: 'Backpack', icon: 'package' },
+  { id: 'End Turn', label: 'End Turn', icon: 'chevron_right' }
 ];
 
 export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }) => {
@@ -142,15 +141,11 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
               aria-pressed={isSelected}
               title={action.label}
               className={cn(
-                "absolute left-1/2 top-1/2 -ml-[19px] -mt-[19px] w-[38px] h-[38px] rounded-full border shadow-[0_4px_14px_rgba(0,0,0,0.65)] backdrop-blur-md flex items-center justify-center pointer-events-auto transition-colors",
-                action.tone,
-                isSelected && "ring-2 ring-white/80 ring-offset-2 ring-offset-stone-950 scale-110"
+                "absolute left-1/2 top-1/2 -ml-[19px] -mt-[19px] w-[38px] h-[38px] rounded-full border border-dragon-gold/45 bg-stone-950/90 text-dragon-gold shadow-[0_4px_14px_rgba(0,0,0,0.65)] backdrop-blur-md flex items-center justify-center pointer-events-auto transition-all hover:bg-stone-800 hover:border-dragon-gold/80 hover:text-[#f3dfaa]",
+                isSelected && "ring-2 ring-dragon-gold/80 ring-offset-2 ring-offset-stone-950 shadow-[0_0_16px_rgba(212,175,55,0.22)]"
               )}
             >
               <GameIcon name={action.icon} size={17} color="currentColor" />
-              <span className="absolute top-full mt-1 whitespace-nowrap rounded bg-stone-950/90 px-1.5 py-0.5 text-[7px] font-black uppercase tracking-wider text-white/85 border border-white/10">
-                {action.label}
-              </span>
             </motion.button>
           );
         })}
