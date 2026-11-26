@@ -45,7 +45,10 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   );
 
   const options = useMemo(() => {
-    if (!activeTurnActor || !activeChar) return [];
+    if (!activeTurnActor) return [];
+    // Allied summons without a playable Character record have no canonical player
+    // action/resource data. Keep turn advancement available without inventing actions.
+    if (!activeChar) return activeTurnActor.isAlly ? [RADIAL_ACTIONS[4]] : [];
     const available: RadialAction[] = [RADIAL_ACTIONS[0]];
 
     if ((activeChar.knownSpells?.length || 0) > 0) available.push(RADIAL_ACTIONS[1]);
@@ -66,8 +69,7 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   const isPlayableTurn = Boolean(
     activeTurnActor &&
     (activeTurnActor.isPlayer || activeTurnActor.isAlly) &&
-    activeChar &&
-    activeChar.hp > 0
+    (activeChar ? activeChar.hp > 0 : activeTurnActor.isAlly)
   );
 
   const handleActionSelect = (action: RadialAction) => {
