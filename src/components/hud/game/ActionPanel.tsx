@@ -187,15 +187,7 @@ export const ActionPanel: React.FC = () => {
     }
   };
 
-  if (
-    gameMode !== 'combat' ||
-    !activeTurnActor ||
-    !activeChar ||
-    activeChar.id !== activeTurnActor.id ||
-    !(activeTurnActor.isPlayer || activeTurnActor.isAlly)
-  ) {
-    return null;
-  }
+  if (gameMode !== 'combat' || !activeTurnActor) return null;
 
   return (
     <div className="w-full overflow-hidden rounded-xl border border-dragon-gold/35 bg-stone-950/95 text-white shadow-[0_8px_30px_rgba(0,0,0,0.65)] backdrop-blur-md font-serif">
@@ -203,8 +195,8 @@ export const ActionPanel: React.FC = () => {
         <div className="min-w-0 flex items-center gap-2">
           <span className="h-2 w-2 shrink-0 rounded-full bg-dragon-gold shadow-[0_0_8px_rgba(212,175,55,0.7)]" />
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-dragon-gold">Action workspace</span>
-          <span className="truncate text-[10px] font-bold uppercase tracking-wider text-white/70">{activeChar.name}</span>
-          <span className="hidden sm:inline truncate text-[8px] uppercase tracking-widest text-white/35">Level {activeChar.level} {activeChar.class}</span>
+          <span className="truncate text-[10px] font-bold uppercase tracking-wider text-white/70">{activeChar?.name || activeTurnActor.name}</span>
+          {activeChar && <span className="hidden sm:inline truncate text-[8px] uppercase tracking-widest text-white/35">Level {activeChar.level} {activeChar.class}</span>}
         </div>
         {combatActionCategory && (
           <button
@@ -217,7 +209,11 @@ export const ActionPanel: React.FC = () => {
         )}
       </div>
 
-      {activeChar.hp <= 0 ? (
+      {!activeChar || activeChar.id !== activeTurnActor.id || !(activeTurnActor.isPlayer || activeTurnActor.isAlly) ? (
+        <div className="px-4 py-2 text-[9px] uppercase tracking-widest text-white/40">
+          Hostile turn · {activeTurnActor.name}
+        </div>
+      ) : activeChar.hp <= 0 ? (
         <div className="p-3">
           <DeathSavesPanel
             activeChar={activeChar}
@@ -233,12 +229,17 @@ export const ActionPanel: React.FC = () => {
             <div className="flex flex-wrap gap-2">
               {displayedActions.map(action => {
                 const isActive = targetingAction?.id === action.id;
-                const isUnavailable = Boolean(
+                const hasNoActionResource = Boolean(
                   action.actionType &&
                   activeChar.actionEconomy &&
                   typeof activeChar.actionEconomy[action.actionType]?.current === 'number' &&
                   activeChar.actionEconomy[action.actionType].current <= 0
                 );
+                const spellSlots = action.category === 'Spells' && action.data?.level > 0
+                  ? activeChar.spellSlots?.[String(action.data.level)]
+                  : null;
+                const hasNoSpellSlot = Boolean(action.category === 'Spells' && action.data?.level > 0 && (!spellSlots || spellSlots.current <= 0));
+                const isUnavailable = hasNoActionResource || hasNoSpellSlot;
                 return (
                   <motion.button
                     key={action.id}
