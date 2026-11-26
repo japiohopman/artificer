@@ -1,7 +1,6 @@
 import React from 'react';
 import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore } from '../../store/useWorldStore';
-import { useGameStore } from '../../store/useGameStore';
 import { useJournalStore } from '../../store/useJournalStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -9,9 +8,11 @@ import ReactMarkdown from 'react-markdown';
 import { Travel } from './game/Travel';
 import { WorldEnvironmentHeader } from './WorldEnvironmentHeader';
 import { ActiveContextPanel } from './world/ActiveContextPanel';
+import { CombatEncounterPanel } from './world/CombatEncounterPanel';
 
 export const WorldPanel: React.FC = () => {
   const { 
+    gameMode,
     isWorldPanelOpen, 
     setIsWorldPanelOpen,
     isInsideSubMap,
@@ -40,6 +41,10 @@ export const WorldPanel: React.FC = () => {
   React.useEffect(() => {
     let isMounted = true;
     const fetchLore = async () => {
+      if (gameMode === 'combat') {
+        if (isMounted) setLoreContent(null);
+        return;
+      }
       if ((displayLocation as any)?.lore) {
         try {
           const res = await fetch((displayLocation as any).lore);
@@ -62,7 +67,11 @@ export const WorldPanel: React.FC = () => {
     };
     fetchLore();
     return () => { isMounted = false; };
-  }, [(displayLocation as any)?.lore, displayLocation?.id]);
+  }, [gameMode, (displayLocation as any)?.lore, displayLocation?.id]);
+
+  if (gameMode === 'combat') {
+    return <CombatEncounterPanel onClose={() => setIsWorldPanelOpen(false)} />;
+  }
 
   return (
     <div className="world-panel h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl">
