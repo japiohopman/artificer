@@ -29,6 +29,8 @@ export const ActionPanel: React.FC = () => {
   const addLog = useGameStore(state => state.addLog);
   const nextTurn = useGameStore(state => state.nextTurn);
   const characters = useCharacterStore(state => state.characters);
+  const activeCharacterId = useCharacterStore(state => state.activeCharacterId);
+  const setActiveCharacter = useCharacterStore(state => state.setActiveCharacter);
   const consumeAction = useCharacterStore(state => state.consumeAction);
 
   const activeTurnActor = combatState.initiativeOrder[combatState.activeTurnIndex];
@@ -39,7 +41,12 @@ export const ActionPanel: React.FC = () => {
 
   useEffect(() => {
     setCombatActionCategory(null);
-  }, [activeTurnActor?.id, setCombatActionCategory]);
+
+    // Keep targeting and combat resolution aligned when an allied party character owns the turn.
+    if (activeTurnActor?.isAlly && activeChar && activeCharacterId !== activeChar.id) {
+      void setActiveCharacter(activeChar.id);
+    }
+  }, [activeTurnActor?.id, activeChar?.id, activeCharacterId, setActiveCharacter, setCombatActionCategory]);
 
   const allActions = useMemo(
     () => getCharacterActions(activeChar || null),
