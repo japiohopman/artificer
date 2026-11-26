@@ -54,6 +54,44 @@ export const ActionPanel: React.FC = () => {
     [activeChar]
   );
 
+  const attackActions = useMemo<ActionHudAction[]>(() => {
+    if (!activeChar) return [];
+
+    const weapons = getEquippedWeapons(activeChar).map(({ slotId, item }) => {
+      const isRanged = item.weapon_range === 'Ranged' || item.category === 'Ranged';
+      const rangeFeet = isRanged ? item.range?.normal : undefined;
+      const range = typeof rangeFeet === 'number' ? Math.max(1, Math.ceil(rangeFeet / 5)) : 1;
+      const damageDice = item.damage?.damage_dice || item.damage_dice || (typeof item.damage === 'string' ? item.damage : null);
+
+      return {
+        id: `attack-${slotId}-${item.id || item.index || 'equipped'}`,
+        name: item.customName || item.name || item.index || `Equipped ${slotId.replace(/_/g, ' ')} weapon`,
+        icon: 'melee',
+        color: 'bg-dragon-red',
+        description: `Equipped ${slotId.replace(/_/g, ' ')}${damageDice ? ` · ${damageDice}` : ''}`,
+        range,
+        category: 'Standard',
+        actionType: 'actions',
+        data: { weapon: item, slotId }
+      } satisfies ActionHudAction;
+    });
+
+    return [
+      ...weapons,
+      {
+        id: 'attack-unarmed',
+        name: 'Unarmed Strike',
+        icon: 'melee',
+        color: 'bg-dragon-red',
+        description: 'Unarmed strike',
+        range: 1,
+        category: 'Standard',
+        actionType: 'actions',
+        data: { unarmed: true }
+      }
+    ];
+  }, [activeChar]);
+
   const backpackActions = useMemo<ActionHudAction[]>(() => {
     if (!activeChar) return [];
     const items = new Map<string, any>();
@@ -93,7 +131,7 @@ export const ActionPanel: React.FC = () => {
   const displayedActions = useMemo(() => {
     switch (combatActionCategory) {
       case 'Attack':
-        return allActions.filter(action => action.id === 'attack');
+        return attackActions;
       case 'Spell':
         return allActions.filter(action => action.category === 'Spells');
       case 'Move':
@@ -103,7 +141,7 @@ export const ActionPanel: React.FC = () => {
       default:
         return [];
     }
-  }, [allActions, backpackActions, combatActionCategory]);
+  }, [allActions, attackActions, backpackActions, combatActionCategory]);
 
   const playableCharacters = characters.filter(character =>
     character &&
@@ -142,11 +180,18 @@ export const ActionPanel: React.FC = () => {
 
     addLog(`Action selected: ${action.name}`, 'info');
 
-    if (action.id === 'attack') {
-      const equippedWeapon = getEquippedWeapons(activeChar)[0]?.item || null;
+    if (action.id === 'attack' || action.id.startsWith('attack-')) {
+      const isUnarmed = action.data?.unarmed === true;
+      const equippedWeapon = isUnarmed ? null : action.data?.weapon || getEquippedWeapons(activeChar)[0]?.item || null;
       const calculatedBonus = calculateWeaponAttackBonus(activeChar, equippedWeapon);
-      const damageDice = equippedWeapon?.damage?.damage_dice || equippedWeapon?.damage || '1d4';
-      const damageType = equippedWeapon?.damage?.damage_type?.name || equippedWeapon?.damageType || 'slashing';
+      const strengthModifier = Math.floor(((activeChar.stats?.str || 10) - 10) / 2);
+      const unarmedDamage = `1${strengthModifier >= 0 ? '+' : ''}${strengthModifier !== 0 ? strengthModifier : ''}`;
+      const damageDice = isUnarmed
+        ? unarmedDamage
+        : equippedWeapon?.damage?.damage_dice || equippedWeapon?.damage_dice || (typeof equippedWeapon?.damage === 'string' ? equippedWeapon.damage : null) || '1d4';
+      const damageType = isUnarmed
+        ? 'bludgeoning'
+        : equippedWeapon?.damage?.damage_type?.name || equippedWeapon?.damageType || equippedWeapon?.damage_type?.name || 'slashing';
 
       setTargetingAction({
         ...action,
