@@ -17,6 +17,7 @@ const resourceValue = (resource?: { current: number; max: number }) =>
 export const ActionPanel: React.FC = () => {
   const {
     gameMode,
+    setGameMode,
     combatActionCategory,
     setCombatActionCategory,
     setIsTargeting,
@@ -198,15 +199,28 @@ export const ActionPanel: React.FC = () => {
           <span className="truncate text-[10px] font-bold uppercase tracking-wider text-white/70">{activeChar?.name || activeTurnActor.name}</span>
           {activeChar && <span className="hidden sm:inline truncate text-[8px] uppercase tracking-widest text-white/35">Level {activeChar.level} {activeChar.class}</span>}
         </div>
-        {combatActionCategory && (
+        <div className="shrink-0 flex items-center gap-2">
+          {combatActionCategory && (
+            <button
+              onClick={() => setCombatActionCategory(null)}
+              aria-label="Close action choices"
+              className="rounded border border-white/10 px-2 py-1 text-[8px] font-black uppercase tracking-widest text-white/50 hover:bg-white/10 hover:text-white"
+            >
+              Close
+            </button>
+          )}
           <button
-            onClick={() => setCombatActionCategory(null)}
-            aria-label="Close action choices"
-            className="shrink-0 rounded border border-white/10 px-2 py-1 text-[8px] font-black uppercase tracking-widest text-white/50 hover:bg-white/10 hover:text-white"
+            onClick={() => {
+              setCombatActionCategory(null);
+              setIsTargeting(false);
+              setTargetingAction(null);
+              setGameMode('exploration');
+            }}
+            className="rounded border border-dragon-red/40 bg-dragon-red/10 px-2 py-1 text-[8px] font-black uppercase tracking-widest text-red-200/80 hover:bg-dragon-red/20 hover:text-white transition-colors"
           >
-            Close
+            Withdraw
           </button>
-        )}
+        </div>
       </div>
 
       {!activeChar || activeChar.id !== activeTurnActor.id || !(activeTurnActor.isPlayer || activeTurnActor.isAlly) ? (
