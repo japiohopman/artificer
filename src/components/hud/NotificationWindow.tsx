@@ -21,6 +21,7 @@ export const NotificationWindow: React.FC = () => {
   } = useWorldStore();
   
   const { playerPos, monsters, initiativeOrder, activeTurnIndex } = combatState;
+  const gameMode = useUIStore((state) => state.gameMode);
 
   // Always show the newest log to keep the window active as requested
   const recentLogs = logs.length > 0 ? logs[0] : null;
@@ -118,7 +119,7 @@ export const NotificationWindow: React.FC = () => {
 
         {/* Right: Actions */}
         <div className="flex items-center gap-4">
-           {initiativeOrder.length > 0 && (
+           {gameMode === 'combat' && initiativeOrder.length > 0 && (
              <div className="flex items-center gap-2">
                <button
                  onClick={nextTurn}

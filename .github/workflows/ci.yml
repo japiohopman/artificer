@@ -27,6 +27,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Run focused combat regression tests
+        run: bun test tests/hostile_turn_combat.test.ts tests/combat_integration.test.ts tests/battle_map_v2_schema.test.ts
+
       - name: Type check
         # Same as `npm run lint` — catches TypeScript/syntax errors like the
         # Token.tsx parse error that caused the white-screen crash.

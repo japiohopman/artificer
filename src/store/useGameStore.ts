@@ -179,10 +179,11 @@ interface GameState {
   removeMonsterFromCombat: (id: string) => void;
   toggleDoor: (x: number, y: number, edgeId?: string) => void;
   completeCombat: (victory: boolean) => Promise<void>;
+  startTurnForIndex: (targetIndex: number) => void;
   nextTurn: () => void;
   startCombat: () => Promise<void>;
   resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
-  executeMonsterTurn: (monsterId: string) => Promise<void>;
+  executeMonsterTurn: (monsterId: string, equipmentDataLookup?: (index: string, ruleset?: '2014' | '2024') => Promise<any>) => Promise<void>;
   setCombatMapBackground: (combatMapBackground: string | null) => void;
 }
 
@@ -232,6 +233,10 @@ const getAttackSvgPath = (actionName: string): string => {
 
   return '/assets/icons/svg/attacks/melee.svg'; // fallback
 };
+
+let isStartingCombat = false;
+// Invalidates delayed hostile-turn callbacks whenever initiative advances or an encounter changes.
+let turnExecutionVersion = 0;
 
 export const useGameStore = create<GameState>((set, get) => ({
   ruleset: '2014',
@@ -444,6 +449,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       id,
       name: monster.name,
       type: monster.type || 'monster',
+      size: monster.size || 'Medium',
       hp: monster.hit_points || monster.hp || 10,
       maxHp: monster.hit_points || monster.maxHp || monster.hp || 10,
       x,
@@ -489,13 +495,39 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   },
 
-  removeMonsterFromCombat: (id) => set((state) => ({
-    combatState: {
-      ...state.combatState,
-      monsters: state.combatState.monsters.filter(m => m.id !== id),
-      initiativeOrder: state.combatState.initiativeOrder.filter(i => i.id !== id)
+  removeMonsterFromCombat: (id) => {
+    const state = get();
+    const prevOrder = state.combatState.initiativeOrder;
+    const removedIndex = prevOrder.findIndex(i => i.id === id);
+    const newOrder = prevOrder.filter(i => i.id !== id);
+
+    let newActiveIndex = state.combatState.activeTurnIndex;
+    const wasActiveActorRemoved = removedIndex !== -1 && removedIndex === state.combatState.activeTurnIndex;
+
+    if (removedIndex !== -1 && newOrder.length > 0) {
+      if (removedIndex < state.combatState.activeTurnIndex) {
+        newActiveIndex = Math.max(0, state.combatState.activeTurnIndex - 1);
+      } else if (removedIndex === state.combatState.activeTurnIndex) {
+        newActiveIndex = newActiveIndex % newOrder.length;
+      }
+    } else if (newOrder.length === 0) {
+      newActiveIndex = 0;
     }
-  })),
+
+    set({
+      combatState: {
+        ...state.combatState,
+        monsters: state.combatState.monsters.filter(m => m.id !== id),
+        initiativeOrder: newOrder,
+        activeTurnIndex: newActiveIndex
+      }
+    });
+
+    // When the active combatant is removed, start the turn for the incoming actor at newActiveIndex
+    if (wasActiveActorRemoved && newOrder.length > 0) {
+      get().startTurnForIndex(newActiveIndex);
+    }
+  },
 
   toggleDoor: (x, y, edgeId) => set((state) => {
     let nextOpen = false;
@@ -539,84 +571,150 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   completeCombat: async (victory) => {
     const { combatState, addLog } = get();
-    
-    if (victory) {
-      const totalXp = combatState.monsters.reduce((acc, m) => acc + (m.isAlly ? 0 : (m.xp || 0)), 0) || 500;
-      await useCharacterStore.getState().addPartyXp(totalXp);
-    } else {
-      addLog("The party has been defeated...", 'error');
-    }
+    turnExecutionVersion += 1;
 
+    // 1. Calculate XP from current monster state before clearing combat state
+    const totalXp = victory
+      ? combatState.monsters.reduce((acc, m) => acc + (m.isAlly ? 0 : (m.xp || 0)), 0) || 500
+      : 0;
+
+    // 2. Immediately invalidate combat state and initiative order synchronously BEFORE any await
+    set((state) => ({
+      combatState: {
+        ...state.combatState,
+        initiativeOrder: [],
+        activeTurnIndex: 0
+      }
+    }));
     useUIStore.getState().setGameMode('exploration');
+
+    // 3. Award XP and log outcome safely, ensuring exploration mode is preserved even if XP payout fails
+    try {
+      if (victory) {
+        await useCharacterStore.getState().addPartyXp(totalXp);
+      } else {
+        addLog("The party has been defeated...", 'error');
+      }
+    } catch (err) {
+      console.error("Error during completeCombat XP payout:", err);
+    }
   },
 
-  nextTurn: () => {
+  startTurnForIndex: (targetIndex: number) => {
     const { combatState, addLog, executeMonsterTurn } = get();
     if (combatState.initiativeOrder.length === 0) {
       addLog("No one is in the initiative order!", "warning");
       return;
     }
-    const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
-    const nextActor = combatState.initiativeOrder[nextIndex];
+
+    const normalizedIndex = targetIndex % combatState.initiativeOrder.length;
+    const currentActor = combatState.initiativeOrder[normalizedIndex];
+    if (!currentActor) return;
+
+    // Every turn start receives a unique generation, even if the same actor returns to the same slot.
+    turnExecutionVersion += 1;
 
     // Refresh action economy for player characters on turn start
-    if (nextActor.isPlayer) {
+    if (currentActor.isPlayer) {
       const { restoreActionEconomy, setActiveCharacter } = useCharacterStore.getState();
-      restoreActionEconomy(nextActor.id, false);
-      setActiveCharacter(nextActor.id);
+      restoreActionEconomy(currentActor.id, false);
+      setActiveCharacter(currentActor.id);
     }
 
-    addLog(`Turn begins: ${nextActor.name}`, nextActor.isPlayer || nextActor.isAlly ? 'success' : 'warning');
+    addLog(`Turn begins: ${currentActor.name}`, currentActor.isPlayer || currentActor.isAlly ? 'success' : 'warning');
 
     set((state) => {
       const newConditions = { ...state.combatState.activeConditions };
       // Clear conditions for the actor starting their turn
-      if (newConditions[nextActor.id]) {
-        delete newConditions[nextActor.id];
+      if (newConditions[currentActor.id]) {
+        delete newConditions[currentActor.id];
       }
 
       return {
         combatState: {
           ...state.combatState,
-          activeTurnIndex: nextIndex,
+          activeTurnIndex: normalizedIndex,
           activeConditions: newConditions
         }
       };
     });
 
     // Advanced Monster AI (Only for hostile/non-ally monsters)
-    const nextMonster = combatState.monsters.find(m => m.id === nextActor.id);
-    const isHostileMonster = !nextActor.isPlayer && (!nextMonster || !nextMonster.isAlly);
+    const currentMonster = combatState.monsters.find(m => m.id === currentActor.id);
+    const isHostileMonster = !currentActor.isPlayer && (!currentMonster || !currentMonster.isAlly);
 
     if (isHostileMonster) {
-      executeMonsterTurn(nextActor.id);
+      executeMonsterTurn(currentActor.id);
     }
   },
 
-  executeMonsterTurn: async (monsterId: string) => {
+  nextTurn: () => {
+    const { combatState, addLog, startTurnForIndex } = get();
+    if (combatState.initiativeOrder.length === 0) {
+      addLog("No one is in the initiative order!", "warning");
+      return;
+    }
+    const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
+    startTurnForIndex(nextIndex);
+  },
+
+  executeMonsterTurn: async (monsterId: string, equipmentDataLookup) => {
     const { combatState, addLog, resolveCombatAction } = get();
     const currentMonster = combatState.monsters.find(m => m.id === monsterId);
-    if (!currentMonster) {
+    if (!currentMonster || currentMonster.hp <= 0) {
       get().nextTurn();
       return;
     }
 
+    const turnActorId = monsterId;
+    const turnIndex = combatState.activeTurnIndex;
+    const executionVersion = turnExecutionVersion;
+
+    // 1. Current-turn identity verification (active encounter, slot ownership, matching turn index and actor ID)
+    const isCurrentTurn = (): boolean => {
+      const state = get();
+      if (turnExecutionVersion !== executionVersion) return false;
+      if (state.combatState.initiativeOrder.length === 0) return false;
+      if (useUIStore.getState().gameMode !== 'combat') return false;
+      if (state.combatState.activeTurnIndex !== turnIndex) return false;
+      const currentActor = state.combatState.initiativeOrder[turnIndex];
+      return Boolean(currentActor && currentActor.id === turnActorId);
+    };
+
+    let turnAdvanced = false;
+    const advanceTurnOnce = () => {
+      if (turnAdvanced) return;
+      if (!isCurrentTurn()) return;
+      turnAdvanced = true;
+      get().nextTurn();
+    };
+
     setTimeout(async () => {
-      // Re-fetch current state inside timeout to ensure we have fresh data
+      // 1. Stale callback verification: is this still the active turn of turnActorId at turnIndex?
+      if (!isCurrentTurn()) return;
+
+      // 2. Actor eligibility verification: does the monster still exist and is it alive?
       const { combatState: currentCombatState } = get();
       const freshMonster = currentCombatState.monsters.find(m => m.id === monsterId);
-      if (!freshMonster) {
-        get().nextTurn();
+      if (!freshMonster || freshMonster.hp <= 0) {
+        // A dead actor that still owns the current initiative slot advances safely
+        advanceTurnOnce();
         return;
       }
 
-      const { checkLoS, isInViewCone, findPath, getDistance } = combatUtils;
+      const { checkLoS, findPath, getDistance } = combatUtils;
       const playerPos = currentCombatState.playerPos;
 
       let updatedMonster = { ...freshMonster };
       let stateChanged = false;
 
-      // Find the closest PC to target and check awareness (only active PCs, not unconscious or dead)
+      // Active combat participants are alert and focused in combat
+      if (updatedMonster.awareness !== 'combat') {
+        updatedMonster.awareness = 'combat';
+        stateChanged = true;
+      }
+
+      // Find the closest active, conscious PC to target
       const activeParty = useCharacterStore.getState().characters.filter((c: any) =>
         c && c.name !== 'Empty Slot' &&
         (!c.isNpc || c.isRecruitable) &&
@@ -627,12 +725,11 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (activeParty.length === 0) {
         addLog(`${updatedMonster.name} searches, but all opponents are incapacitated!`, 'info');
-        get().nextTurn();
+        advanceTurnOnce();
         return;
       }
 
       const pcPositions = currentCombatState.pcPositions || {};
-      
       let targetPc: any = null;
       let minDistance = Infinity;
       let targetPcPos = playerPos;
@@ -649,212 +746,262 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       const targetPos = targetPc ? targetPcPos : playerPos;
 
-      // 1. Awareness Check
-      if (updatedMonster.awareness !== 'combat') {
-        const hasLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid);
-        const inCone = isInViewCone(updatedMonster, targetPos);
-
-        if (hasLoS && inCone) {
-          updatedMonster.awareness = 'combat';
-          addLog(`${updatedMonster.name} spotted ${targetPc ? targetPc.name : 'you'}!`, 'warning');
-          stateChanged = true;
-        } else if (hasLoS && getDistance(updatedMonster, targetPos) <= 3) {
-           // Passive perception check (simplified: close proximity = alert)
-           updatedMonster.awareness = 'alert';
-           updatedMonster.lastKnownPlayerPos = { ...targetPos };
-           stateChanged = true;
-        }
-      }
-
-      // 2. State-based Action selection
-      const monsterSpeed = updatedMonster.speed || 6;
+      // Canonical Atlas Action Selection: resolve weapon ranges via equipment metadata
+      const fetchEquipmentData = equipmentDataLookup ?? (await import('../services/storageService')).fetchEquipmentData;
+      const currentRuleset = get().ruleset || '2014';
       const monsterActions = updatedMonster.actions || [];
-      
-      let chosenAction = null;
-      let chosenRange = 1.5;
 
-      if (monsterActions.length > 0) {
-        const currentDist = getDistance(updatedMonster, targetPos);
-        for (const act of monsterActions) {
-          const isRanged = act.desc?.toLowerCase().includes('ranged') || 
-                          act.desc?.toLowerCase().includes('range') || 
-                          act.name?.toLowerCase().includes('bow') || 
-                          act.name?.toLowerCase().includes('bolt');
-          const range = isRanged ? 12 : 1.5;
-          if (currentDist <= range) {
-            chosenAction = act;
-            chosenRange = range;
-            break;
-          }
-        }
-        if (!chosenAction) {
-          chosenAction = monsterActions[0];
-          const isRanged = chosenAction.desc?.toLowerCase().includes('ranged') || 
-                          chosenAction.desc?.toLowerCase().includes('range') || 
-                          chosenAction.name?.toLowerCase().includes('bow') || 
-                          chosenAction.name?.toLowerCase().includes('bolt');
-          chosenRange = isRanged ? 12 : 1.5;
-        }
+      interface AttackCandidate {
+        action: any;
+        range: number;
+        isRanged: boolean;
       }
 
-      const attackAction = chosenAction ? {
-        name: chosenAction.name,
-        attack_bonus: chosenAction.attack_bonus || 4,
-        damage: chosenAction.damage || [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }]
-      } : {
-        name: updatedMonster.type === 'archer' ? 'Longbow' : (updatedMonster.type === 'mage' ? 'Fire Bolt' : 'Claw/Bite'),
-        attack_bonus: 4,
-        damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }]
+      const validAttackCandidates: AttackCandidate[] = [];
+
+      for (const act of monsterActions) {
+        // Strict requirement: action must possess damage dice array
+        if (!Array.isArray(act.damage) || act.damage.length === 0 || !act.damage[0]?.damage_dice) {
+          continue;
+        }
+
+        const weaponName = (act.name || '').toLowerCase().trim();
+        const weaponData = await fetchEquipmentData(weaponName, currentRuleset);
+
+        const isThrown = Boolean(weaponData?.properties?.some((p: any) => p.index === 'thrown' || p.name?.toLowerCase() === 'thrown'));
+        const isRanged = weaponData?.weapon_range === 'Ranged' || isThrown;
+        const hasReach = Boolean(weaponData?.properties?.some((p: any) => p.index === 'reach' || p.name?.toLowerCase() === 'reach'));
+
+        let attackRange = 1;
+        if (isRanged && weaponData?.range?.normal) {
+          attackRange = Math.max(1, Math.floor(weaponData.range.normal / 5));
+        } else if (hasReach) {
+          attackRange = 2;
+        } else {
+          attackRange = 1;
+        }
+
+        validAttackCandidates.push({
+          action: act,
+          range: attackRange,
+          isRanged
+        });
+      }
+
+      // Re-validate turn identity and actor eligibility immediately after async equipment lookups
+      if (!isCurrentTurn()) return;
+      const monsterAfterLookups = get().combatState.monsters.find(m => m.id === monsterId);
+      if (!monsterAfterLookups || monsterAfterLookups.hp <= 0) {
+        advanceTurnOnce();
+        return;
+      }
+
+      // Synchronize with fresh monster state before pathfinding or movement
+      updatedMonster = {
+        ...monsterAfterLookups,
+        awareness: 'combat'
       };
 
-      const attackRange = chosenRange;
+      const selectAttackForDistance = (candidates: AttackCandidate[], currentDist: number, hasClearLoS: boolean): AttackCandidate | null => {
+        if (candidates.length === 0) return null;
 
-      if (updatedMonster.awareness === 'combat') {
-        let dist = getDistance(updatedMonster, targetPos);
-        
-        // If not in attack range, move towards target first
-        if (dist > attackRange) {
-          const path = findPath(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.monsters, currentCombatState.pcPositions || playerPos);
-          if (path && path.length > 1) {
-            // Move up to speed, but stop before overlapping the target
-            const moveSteps = Math.min(path.length - 1, monsterSpeed);
-            const moveTarget = path[moveSteps - 1];
-
-            updatedMonster.x = moveTarget.x;
-            updatedMonster.y = moveTarget.y;
-
-            // Update view direction based on movement
-            const firstStep = path[0];
-            if (firstStep.x > freshMonster.x) updatedMonster.viewDirection = 1;
-            else if (firstStep.x < freshMonster.x) updatedMonster.viewDirection = 3;
-            else if (firstStep.y > freshMonster.y) updatedMonster.viewDirection = 2;
-            else if (firstStep.y < freshMonster.y) updatedMonster.viewDirection = 0;
-            stateChanged = true;
-            
-            // Re-calculate distance after movement
-            dist = getDistance(updatedMonster, targetPos);
-          }
+        // In melee reach (dist <= 1): prefer melee attack if LoS is clear
+        if (currentDist <= 1 && hasClearLoS) {
+          const melee = candidates.find(c => !c.isRanged && currentDist <= c.range);
+          if (melee) return melee;
         }
 
-        // If now in range, execute the selected action!
-        if (dist <= attackRange) {
-          await resolveCombatAction(
-            updatedMonster,
-            targetPc ? { id: targetPc.id, name: targetPc.name, stats: targetPc.stats, ac: targetPc.stats?.ac || targetPc.ac } : { id: 'player', name: 'Hero' },
-            attackAction
-          );
+        // Outside melee reach: prefer ranged/thrown attack within normal range if LoS is clear
+        if (hasClearLoS) {
+          const ranged = candidates.find(c => c.isRanged && currentDist <= c.range);
+          if (ranged) return ranged;
         }
-      } else if (updatedMonster.awareness === 'alert' && updatedMonster.lastKnownPlayerPos) {
-        const path = findPath(updatedMonster, updatedMonster.lastKnownPlayerPos, currentCombatState.grid, currentCombatState.monsters, currentCombatState.pcPositions || playerPos);
-        if (path && path.length > 0) {
-          const moveSteps = Math.min(path.length, monsterSpeed);
+
+        // If neither is immediately usable, choose for approach intention: prefer ranged if present, else melee
+        return candidates.find(c => c.isRanged) || candidates[0];
+      };
+
+      let dist = getDistance(updatedMonster, targetPos);
+      let directLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.walls);
+
+      let chosenCandidate = selectAttackForDistance(validAttackCandidates, dist, directLoS);
+      const attackRange = chosenCandidate ? chosenCandidate.range : 1;
+      const monsterSpeed = typeof updatedMonster.speed === 'number' ? updatedMonster.speed : 6;
+
+      // If out of range OR obstructed by walls/doors, pathfind around obstacles
+      if (dist > attackRange || !directLoS) {
+        const normalizedSize: 'Medium' | 'Large' = (updatedMonster.size === 'Large') ? 'Large' : 'Medium';
+        const path = findPath(
+          updatedMonster,
+          targetPos,
+          currentCombatState.grid,
+          currentCombatState.monsters,
+          currentCombatState.pcPositions || playerPos,
+          normalizedSize,
+          currentCombatState.walls
+        );
+
+        if (path && path.length > 1) {
+          const moveSteps = Math.min(path.length - 1, monsterSpeed);
           const moveTarget = path[moveSteps - 1];
+
           updatedMonster.x = moveTarget.x;
           updatedMonster.y = moveTarget.y;
+
+          const firstStep = path[0];
+          if (firstStep.x > monsterAfterLookups.x) updatedMonster.viewDirection = 1;
+          else if (firstStep.x < monsterAfterLookups.x) updatedMonster.viewDirection = 3;
+          else if (firstStep.y > monsterAfterLookups.y) updatedMonster.viewDirection = 2;
+          else if (firstStep.y < monsterAfterLookups.y) updatedMonster.viewDirection = 0;
           stateChanged = true;
-          if (updatedMonster.x === updatedMonster.lastKnownPlayerPos.x && updatedMonster.y === updatedMonster.lastKnownPlayerPos.y) {
-             updatedMonster.awareness = 'idle';
-             updatedMonster.lastKnownPlayerPos = undefined;
-          }
+
+          dist = getDistance(updatedMonster, targetPos);
+          directLoS = checkLoS(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.walls);
         }
-      } else {
-        // Idle patrol (very simple: rotate)
-        updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
-        stateChanged = true;
       }
 
+      // Re-evaluate candidate attack after movement
+      chosenCandidate = selectAttackForDistance(validAttackCandidates, dist, directLoS);
+
       if (stateChanged) {
+        // Re-validate turn identity and live status before committing movement state
+        if (!isCurrentTurn()) return;
         set(state => ({
           combatState: {
             ...state.combatState,
-            monsters: state.combatState.monsters.map(m => m.id === monsterId ? updatedMonster : m)
+            monsters: state.combatState.monsters.map(m =>
+              m.id === monsterId
+                ? {
+                    ...m,
+                    x: updatedMonster.x,
+                    y: updatedMonster.y,
+                    viewDirection: updatedMonster.viewDirection,
+                    awareness: updatedMonster.awareness
+                  }
+                : m
+            )
           }
         }));
       }
 
-      setTimeout(() => get().nextTurn(), 1000);
-    }, 1000);
+      // Execute attack ONLY IF:
+      // 1. A valid attack exists (no fabricated attacks)
+      // 2. Distance is within attackRange
+      // 3. Fresh checkLoS confirms an unobstructed physical line of sight
+      // 4. Turn is still current and monster is alive
+      const liveMonster = get().combatState.monsters.find(m => m.id === monsterId);
+      if (chosenCandidate && dist <= chosenCandidate.range && directLoS && isCurrentTurn() && liveMonster && liveMonster.hp > 0) {
+        const attackAction = {
+          name: chosenCandidate.action.name,
+          attack_bonus: chosenCandidate.action.attack_bonus ?? 0,
+          damage: chosenCandidate.action.damage
+        };
+
+        await resolveCombatAction(
+          updatedMonster,
+          targetPc ? { id: targetPc.id, name: targetPc.name, stats: targetPc.stats, ac: targetPc.stats?.ac || targetPc.ac } : { id: 'player', name: 'Hero' },
+          attackAction
+        );
+      }
+
+      if (!isCurrentTurn()) return;
+      setTimeout(() => advanceTurnOnce(), 600);
+    }, 600);
   },
 
   startCombat: async () => {
-    const { combatState, addLog } = get();
-    const charStore = useCharacterStore.getState();
-    const activeParty = charStore.characters.filter((c: any) => c && c.name !== 'Empty Slot' && (!c.isNpc || c.isRecruitable));
+    if (isStartingCombat) return;
+    isStartingCombat = true;
+    try {
+      const { combatState, addLog } = get();
+      const charStore = useCharacterStore.getState();
+      const activeParty = charStore.characters.filter((c: any) => c && c.name !== 'Empty Slot' && (!c.isNpc || c.isRecruitable));
 
-    if (activeParty.length === 0) {
-      addLog("Cannot start combat without active party members!", "error");
-      return;
-    }
-
-    // Initialize individual PC positions (ensuring no overlaps with pre-existing monsters)
-    const initialPcPositions: Record<string, { x: number; y: number; rotation: number }> = {};
-    activeParty.forEach((c: any, index: number) => {
-      let x = 2 + Math.floor(index / 3);
-      let y = 2 + (index % 3);
-
-      const occupiedPositions = new Set();
-      combatState.monsters.forEach(m => occupiedPositions.add(`${m.x},${m.y}`));
-      Object.values(initialPcPositions).forEach(pos => occupiedPositions.add(`${pos.x},${pos.y}`));
-
-      while (occupiedPositions.has(`${x},${y}`)) {
-        y++;
-        if (y > 6) { y = 2; x++; }
+      if (activeParty.length === 0) {
+        addLog("Cannot start combat without active party members!", "error");
+        return;
       }
 
-      initialPcPositions[c.id] = { x, y, rotation: 0 };
-    });
+      // Initialize individual PC positions (ensuring no overlaps with pre-existing monsters)
+      const initialPcPositions: Record<string, { x: number; y: number; rotation: number }> = {};
+      activeParty.forEach((c: any, index: number) => {
+        let x = 2 + Math.floor(index / 3);
+        let y = 2 + (index % 3);
 
-    // Roll initiative for everyone
-    const order = [
-      ...activeParty.map((c: any) => ({
-        id: c.id,
-        name: c.name,
-        value: Math.floor(Math.random() * 20) + 1 + (Math.floor(((c.stats?.dex || 10) - 10) / 2) || 0),
-        isPlayer: true,
-        isAlly: false
-      })),
-      ...combatState.monsters.map(m => ({
-        id: m.id,
-        name: m.name,
-        value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0),
-        isPlayer: m.isAlly || false, // Treat allies/summons as player-controlled in the turn order
-        isAlly: m.isAlly || false
-      }))
-    ].sort((a, b) => b.value - a.value);
+        const occupiedPositions = new Set();
+        combatState.monsters.forEach(m => occupiedPositions.add(`${m.x},${m.y}`));
+        Object.values(initialPcPositions).forEach(pos => occupiedPositions.add(`${pos.x},${pos.y}`));
 
-    // Reset action economy for everyone at combat start
-    activeParty.forEach((c: any) => {
-      charStore.restoreActionEconomy(c.id, true);
-    });
+        while (occupiedPositions.has(`${x},${y}`)) {
+          y++;
+          if (y > 6) { y = 2; x++; }
+        }
 
-    // Set first actor active at Round 1 start
-    const firstActor = order[0];
-    if (firstActor && firstActor.isPlayer) {
-      charStore.setActiveCharacter(firstActor.id);
-      charStore.restoreActionEconomy(firstActor.id, false);
-    }
+        initialPcPositions[c.id] = { x, y, rotation: 0 };
+      });
 
-    if (firstActor) {
-      addLog(`Encounter started! Round 1 - Turn begins: ${firstActor.name}`, firstActor.isPlayer || firstActor.isAlly ? 'success' : 'warning');
-    }
+      // Roll initiative for everyone
+      const order = [
+        ...activeParty.map((c: any) => ({
+          id: c.id,
+          name: c.name,
+          value: Math.floor(Math.random() * 20) + 1 + (Math.floor(((c.stats?.dex || 10) - 10) / 2) || 0),
+          isPlayer: true,
+          isAlly: false
+        })),
+        ...combatState.monsters.map(m => ({
+          id: m.id,
+          name: m.name,
+          value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0),
+          isPlayer: m.isAlly || false, // Treat allies/summons as player-controlled in the turn order
+          isAlly: m.isAlly || false
+        }))
+      ].sort((a, b) => b.value - a.value);
 
-    set((state) => ({
-      combatState: {
-        ...state.combatState,
-        initiativeOrder: order,
-        activeTurnIndex: 0,
-        pcPositions: initialPcPositions,
-        playerPos: initialPcPositions[activeParty[0]?.id] || { x: 2, y: 2 }
+      // Reset action economy for everyone at combat start
+      activeParty.forEach((c: any) => {
+        charStore.restoreActionEconomy(c.id, true);
+      });
+
+      // Set first actor active at Round 1 start
+      const firstActor = order[0];
+      if (firstActor && firstActor.isPlayer) {
+        charStore.setActiveCharacter(firstActor.id);
+        charStore.restoreActionEconomy(firstActor.id, false);
       }
-    }));
 
-    // If first actor is a hostile monster, immediately kick off their turn execution!
-    if (firstActor) {
-      const firstMonster = combatState.monsters.find(m => m.id === firstActor.id);
-      const isHostileMonster = !firstActor.isPlayer && (!firstMonster || !firstMonster.isAlly);
-      if (isHostileMonster) {
-        get().executeMonsterTurn(firstActor.id);
+      if (firstActor) {
+        addLog(`Encounter started! Round 1 - Turn begins: ${firstActor.name}`, firstActor.isPlayer || firstActor.isAlly ? 'success' : 'warning');
       }
+
+      // Starting or rerolling initiative invalidates all pending callbacks from the prior encounter order.
+      turnExecutionVersion += 1;
+      set((state) => ({
+        combatState: {
+          ...state.combatState,
+          initiativeOrder: order,
+          activeTurnIndex: 0,
+          pcPositions: initialPcPositions,
+          playerPos: initialPcPositions[activeParty[0]?.id] || { x: 2, y: 2 },
+          monsters: state.combatState.monsters.map(m => m.isAlly ? m : { ...m, awareness: 'combat' as const })
+        }
+      }));
+
+      // Ensure active encounter gameMode is set to 'combat' after initiative order is stored
+      if (useUIStore.getState().gameMode !== 'combat') {
+        useUIStore.getState().setGameMode('combat');
+      }
+
+      // If first actor is a hostile monster, immediately kick off their turn execution!
+      if (firstActor) {
+        const firstMonster = combatState.monsters.find(m => m.id === firstActor.id);
+        const isHostileMonster = !firstActor.isPlayer && (!firstMonster || !firstMonster.isAlly);
+        if (isHostileMonster) {
+          get().executeMonsterTurn(firstActor.id);
+        }
+      }
+    } finally {
+      isStartingCombat = false;
     }
   },
 

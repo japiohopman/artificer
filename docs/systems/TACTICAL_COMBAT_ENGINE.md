@@ -93,15 +93,14 @@ The editor's persisted `BattleMap` schema is intentionally different from combat
 
 ## AI combat
 
-Automated enemy tactical behaviour is **planned work**, not a completed system. The intended direction includes:
+Automated enemy tactical behaviour is integrated into the runtime combat loop (`executeMonsterTurn` in `useGameStore.ts`):
 
-- target selection
-- A* movement during enemy turns
-- attack/spell resolution
-- tactical priorities
-- perception/visibility checks
-
-Do not claim an enemy AI state machine is implemented until the corresponding runtime logic exists and is tested.
+- **Active Encounter Awareness:** In active combat (`startCombat`), participating hostile combatants are in gevecht awareness. Turns are not lost or restricted to 90° view-cone patrol rotations.
+- **Physical Edge Obstruction:** Boundary edges and closed doors (`combatState.walls`) physically obstruct Line of Sight (`checkLoS`) and pathfinding (`findPath`). Active combat allows pathfinding around obstacles toward player coordinates, but **never** grants line of sight through walls or closed doors.
+- **Edge-Aware Pathfinding:** `findPath` takes `combatState.walls` and normalized creature footprints (Small normalized to Medium $1 \times 1$ footprint, Large $2 \times 2$ footprint) to navigate corridors and doorways.
+- **Canonical Atlas Attack & Equipment Resolution:** Monster actions are filtered strictly for valid attack definitions (`action.damage[0]?.damage_dice`). Non-attack traits (e.g. *Nimble Escape*, *Aggressive*) are rejected. Normal attack ranges are resolved from canonical Atlas equipment records (`range.normal / 5`), respecting properties such as `thrown` (e.g. Javelin 30 ft = 6 cells) and reach. Missing attacks or damage values are never fabricated.
+- **Fresh LoS Verification Before Attack:** Attacks are only permitted if a fresh `checkLoS(monster, target, grid, walls)` evaluates to true. Enemies cannot strike or shoot through solid boundary walls or closed doors.
+- **Turn Lifecycle Safeguards:** Asynchronous turn advancement and timers are guarded locally against stale callbacks, deceased actors (`hp <= 0`), ended encounters, or duplicate `nextTurn` increments. Removing the active combatant (`removeMonsterFromCombat`) automatically initializes and dispatches the turn for the incoming actor in the initiative order without stalling combat.
 
 ## Area of effect
 

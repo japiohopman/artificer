@@ -38,9 +38,11 @@ export const HUD: React.FC = () => {
       setIsInventoryOpen(true);
       setActiveCharacterTab('party');
       
-      // Auto-start initiative
-      const { startCombat } = useGameStore.getState();
-      startCombat();
+      // Auto-start initiative if combat is not already active
+      const { startCombat, combatState } = useGameStore.getState();
+      if (combatState.initiativeOrder.length === 0) {
+        startCombat();
+      }
     }
   }, [gameMode, setIsWorldPanelOpen, setIsCharacterPanelOpen, setIsInventoryOpen, setActiveCharacterTab]);
 

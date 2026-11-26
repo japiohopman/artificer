@@ -68,6 +68,7 @@ CombatGrid
 - **Adapter Ownership:** `battleMapToCombatGrid.ts` converts authoring data into runtime `TacticalCell[][]` grid, monster references, background, and player entry points (`partySpawnPos`).
 - **Wall Semantics:** Walls are represented as boundary line segments in `combatState.walls`, keeping cells navigable while enforcing physical edge collisions for movement and line-of-sight.
 - **Terrain Semantics:** Authoring cell terrain types (stone, grass, wood, mud, water, ice, etc.) survive conversion into `TacticalCell.type`.
+- **Hostile Monster Turns (#418):** `executeMonsterTurn` consumes canonical `combatState.walls` for pathfinding and line-of-sight, resolves attack ranges from canonical Atlas equipment records (respecting `thrown` and reach), forbids wall-penetrating attacks, and prevents duplicate/stale turn advancement.
 
 The Battle Map Editor may contain authoring-only information such as DM notes, hidden objects, layers, generator metadata and editing state. Runtime combat should receive only the information it needs.
 
