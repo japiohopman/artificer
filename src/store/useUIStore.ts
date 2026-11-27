@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport' | 'gods';
-export type CombatActionCategory = 'Attack' | 'Spell' | 'Move' | 'Backpack' | null;
+export type CombatActionCategory = 'Attack' | 'Spell' | 'Move' | 'Backpack' | 'Defend' | null;
 
 interface UIState {
   // Navigation
