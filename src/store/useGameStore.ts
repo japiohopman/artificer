@@ -1021,7 +1021,71 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
 
     const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
-    const { modifyHp } = useCharacterStore.getState();
+    const characterStore = useCharacterStore.getState();
+    const { modifyHp } = characterStore;
+
+    // Ordinary weapon attacks from player/ally Characters are charged here, not in
+    // the UI. This makes action consumption authoritative and prevents double-spend.
+    const attackingCharacter = characterStore.characters.find(character => character.id === actor?.id);
+    const isCharacterWeaponAttack = Boolean(
+      attackingCharacter &&
+      typeof action?.id === 'string' &&
+      (action.id === 'attack' || action.id.startsWith('attack-'))
+    );
+
+    if (isCharacterWeaponAttack && attackingCharacter) {
+      const currentCombatState = get().combatState;
+      const targetCombatant = target?.id
+        ? currentCombatState.monsters.find(monster => monster.id === target.id)
+        : undefined;
+
+      if (!targetCombatant || targetCombatant.isAlly || targetCombatant.hp <= 0) {
+        addLog('Invalid attack target. Select an active hostile combatant.', 'error');
+        return;
+      }
+
+      const actorPosition = currentCombatState.pcPositions?.[actor.id] || currentCombatState.playerPos;
+      const targetFootprint = targetCombatant.size === 'Large' ? 2 : 1;
+      const attackRange = typeof action.range === 'number' && Number.isFinite(action.range)
+        ? Math.max(0, action.range)
+        : 1;
+      let hasValidTargetCell = false;
+
+      for (let fy = 0; fy < targetFootprint && !hasValidTargetCell; fy++) {
+        for (let fx = 0; fx < targetFootprint && !hasValidTargetCell; fx++) {
+          const targetPosition = { x: targetCombatant.x + fx, y: targetCombatant.y + fy };
+          const distance = combatUtils.getDistance(actorPosition, targetPosition);
+          const hasLineOfSight = combatUtils.checkLoS(
+            actorPosition,
+            targetPosition,
+            currentCombatState.grid,
+            currentCombatState.walls || []
+          );
+
+          hasValidTargetCell = distance <= attackRange && hasLineOfSight;
+        }
+      }
+
+      if (!hasValidTargetCell) {
+        addLog('Target is out of range or blocked by an obstacle.', 'warning');
+        return;
+      }
+
+      const availableAction = attackingCharacter.actionEconomy?.actions;
+      if (!availableAction || !Number.isFinite(availableAction.current)) {
+        addLog('Cannot resolve this attack because the character action resource is unavailable.', 'error');
+        return;
+      }
+
+      if (availableAction.current <= 0) {
+        addLog("You don't have any actions remaining!", 'error');
+        return;
+      }
+
+      // Use the canonical current combatant snapshot for hit/damage resolution.
+      target = targetCombatant;
+      characterStore.consumeAction(actor.id, 'actions');
+    }
 
     // Rotate actor to face target
     const { combatState } = get();
