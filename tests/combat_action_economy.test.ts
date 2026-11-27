@@ -254,7 +254,9 @@ describe('Canonical player weapon action economy (#421)', () => {
     const weaponsBeforeEquip = getEquippedWeapons(hero);
     expect(weaponsBeforeEquip).toHaveLength(0);
 
-    hero.equipment?.slots.find(slot => slot.id === 'main_hand')!.itemId = 'dagger-instance';
+    const mainHandSlot = hero.equipment?.slots.find(slot => slot.id === 'main_hand');
+    expect(mainHandSlot).toBeDefined();
+    if (mainHandSlot) mainHandSlot.itemId = 'dagger-instance';
     const equipped = getEquippedWeapons(hero);
 
     expect(equipped).toHaveLength(1);
