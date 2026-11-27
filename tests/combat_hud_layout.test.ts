@@ -92,7 +92,7 @@ describe('Combat HUD layout contract (#420)', () => {
     const styles = readSource('src/index.css');
 
     expect(app).toContain('<GameTooltipLayer />');
-    expect(icons).toContain('title={title}');
+    expect(icons).toContain('data-game-tooltip={title}');
     expect(icons).not.toContain('<title>{title}</title>');
     expect(layer).toContain("const TOOLTIP_SELECTOR = '[data-game-tooltip]'");
     expect(layer).toContain("element.dataset.gameTooltip = title");
