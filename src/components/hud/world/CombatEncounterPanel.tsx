@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useGameStore } from '../../../store/useGameStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon } from '../../../game_icons';
@@ -8,15 +8,24 @@ import { fetchMonsterData } from '../../../services/storageService';
 export const CombatEncounterPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const combatState = useGameStore(state => state.combatState);
   const { setFocusedItem, setIsMonsterProfileOpen } = useUIStore();
+  const profileRequestId = useRef(0);
+
+  useEffect(() => () => {
+    profileRequestId.current += 1;
+  }, []);
 
   const activeActor = combatState.initiativeOrder[combatState.activeTurnIndex];
   const hostiles = combatState.monsters.filter(monster => !monster.isAlly);
 
   const openEnemyProfile = async (monster: (typeof hostiles)[number]) => {
+    const requestId = ++profileRequestId.current;
     // Only resolve through Atlas when the combatant carries its canonical index.
     // Older runtime records are still inspectable, but are never looked up by creature type.
-    const canonicalIndex = (monster as typeof monster & { index?: string }).index;
+    const canonicalIndex = monster.index;
     const profile = canonicalIndex ? await fetchMonsterData(canonicalIndex) : null;
+
+    // Drop stale results after another selection, panel unmount, or leaving combat.
+    if (requestId !== profileRequestId.current || useUIStore.getState().gameMode !== 'combat') return;
 
     setFocusedItem(profile || {
       ...monster,
