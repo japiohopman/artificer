@@ -31,7 +31,7 @@ jobs:
         uses: oven-sh/setup-bun@v2
 
       - name: Run focused combat regression tests
-        run: bun test tests/hostile_turn_combat.test.ts tests/combat_integration.test.ts tests/battle_map_v2_schema.test.ts tests/combat_hud_layout.test.ts
+        run: bun test tests/hostile_turn_combat.test.ts tests/combat_integration.test.ts tests/battle_map_v2_schema.test.ts tests/combat_hud_layout.test.ts tests/combat_action_economy.test.ts
 
       - name: Type check
         # Same as `npm run lint` — catches TypeScript/syntax errors like the
