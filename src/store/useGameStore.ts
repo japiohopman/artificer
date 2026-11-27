@@ -1044,7 +1044,17 @@ export const useGameStore = create<GameState>((set, get) => ({
         return;
       }
 
-      const actorPosition = currentCombatState.pcPositions?.[actor.id] || currentCombatState.playerPos;
+      // Keep canonical PC position data first. Allied NPC combatants may not have a
+      // pcPositions entry, so use their live encounter coordinates before the legacy
+      // player-position fallback.
+      const alliedActorCombatant = currentCombatState.monsters.find(
+        monster => monster.id === actor.id && monster.isAlly
+      );
+      const actorPosition = currentCombatState.pcPositions?.[actor.id] || (
+        alliedActorCombatant
+          ? { x: alliedActorCombatant.x, y: alliedActorCombatant.y }
+          : currentCombatState.playerPos
+      );
       const targetFootprint = targetCombatant.size === 'Large' ? 2 : 1;
       const attackRange = typeof action.range === 'number' && Number.isFinite(action.range)
         ? Math.max(0, action.range)
