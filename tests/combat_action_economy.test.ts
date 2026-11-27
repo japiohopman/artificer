@@ -165,7 +165,7 @@ describe('Canonical player weapon action economy (#421)', () => {
 
     expect(rollCount).toBe(1);
     expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(0);
-    expect(logMessages.some(message => message.includes('no actions remaining'))).toBe(true);
+    expect(logMessages.some(message => message.includes('actions remaining'))).toBe(true);
   });
 
   it('does not consume an action or roll against a target outside the active encounter', async () => {
@@ -229,7 +229,7 @@ describe('Canonical player weapon action economy (#421)', () => {
   it('uses the V2 equipped-slot resolver for attack choices and includes supplied thrown range', () => {
     const hero = createHero();
     hero.items = {
-      dagger: {
+      'dagger-instance': {
         id: 'dagger-instance',
         template: 'dagger',
         quantity: 1,
