@@ -13,6 +13,7 @@ const chatgpt = read('../CHATGPT.md');
 const issueForm = read('../.github/ISSUE_TEMPLATE/phase.yml');
 const docsIndex = read('../DOCS_INDEX.md');
 const packageJson = JSON.parse(read('../package.json'));
+const reviewRelayWorkflow = read('../.github/workflows/chatgpt-review-relay.yml');
 const roadmap = read('../ROADMAP.md');
 
 test('Antigravity discovers the root workspace instructions and reads shared contracts', () => {
@@ -70,6 +71,15 @@ test('Issue quality and PR relay tests are the only workflow test entry points',
   assert.match(packageJson.scripts['test:workflow'], /chatgpt-review-relay\.test\.mjs/);
   assert.doesNotMatch(packageJson.scripts['test:workflow'], /jules-/);
   assert.equal(packageJson.scripts['workflow:issue-dry-run'], undefined);
+});
+
+test('ChatGPT PR review relay has PR-scoped write permission for PR label mutations', () => {
+  const permissions = reviewRelayWorkflow.match(/^permissions:\n((?:  .*\n)+)/m)?.[1] || '';
+  assert.match(permissions, /issues: write/);
+  assert.match(permissions, /pull-requests: write/);
+  assert.match(permissions, /checks: read/);
+  assert.match(permissions, /contents: read/);
+  assert.doesNotMatch(permissions, /contents: write/);
 });
 
 test('all six specialist contracts remain available', () => {
