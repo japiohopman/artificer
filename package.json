@@ -18,7 +18,8 @@
     "generate:enemy-index": "node tools/generateEnemyIndex.cjs",
     "normalize:assets": "node tools/normalizeAllAssets.cjs",
     "check:assets": "npm run generate:icon-registry && npm run normalize:assets && npm run validate:assets",
-    "test": "npm run lint && npm run check:assets && npx playwright test tests/",
+    "test": "npm run lint && npm run check:assets && npx playwright test tests/ --test-match='**/*.spec.ts',
+    "test:unit": "bun test tests/*.test.ts",
     "test:workflow": "node --test scripts/issue-quality-gate.test.mjs scripts/agent-contract.test.mjs scripts/chatgpt-review-relay.test.mjs"
   },
   "dependencies": {
