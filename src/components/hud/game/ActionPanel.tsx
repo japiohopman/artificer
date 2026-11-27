@@ -59,8 +59,14 @@ export const ActionPanel: React.FC = () => {
 
     const weapons = getEquippedWeapons(activeChar).map(({ slotId, item }) => {
       const isRanged = item.weapon_range === 'Ranged' || item.category === 'Ranged';
-      const rangeFeet = isRanged ? item.range?.normal : undefined;
-      const range = typeof rangeFeet === 'number' ? Math.max(1, Math.ceil(rangeFeet / 5)) : 1;
+      const isThrown = (item.properties || []).some((property: any) => {
+        const propertyName = typeof property === 'string' ? property : property?.index || property?.name;
+        return String(propertyName || '').toLowerCase() === 'thrown';
+      });
+      const rangeFeet = isRanged || isThrown ? Number(item.range?.normal) : Number.NaN;
+      const range = Number.isFinite(rangeFeet) && rangeFeet > 0
+        ? Math.max(1, Math.ceil(rangeFeet / 5))
+        : 1;
       const damageDice = item.damage?.damage_dice || item.damage_dice || (typeof item.damage === 'string' ? item.damage : null);
 
       return {
