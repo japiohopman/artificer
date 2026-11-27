@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 
 export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport' | 'gods';
+export type CombatActionCategory = 'Attack' | 'Spell' | 'Move' | 'Backpack' | 'Defend' | null;
 
 interface UIState {
   // Navigation
@@ -40,6 +41,9 @@ interface UIState {
   isSettingsOpen: boolean;
   isGameOver: boolean;
   searchQuery: string;
+
+  // Combat presentation selection (UI-only; gameplay state remains in the domain stores)
+  combatActionCategory: CombatActionCategory;
 
   // Targeting State
   isTargeting: boolean;
@@ -99,6 +103,7 @@ interface UIState {
   setIsSettingsOpen: (isOpen: boolean) => void;
   setIsTargeting: (isTargeting: boolean) => void;
   setTargetingAction: (action: any | null) => void;
+  setCombatActionCategory: (category: CombatActionCategory) => void;
 }
 
 export const useUIStore = create<UIState>((set) => ({
@@ -137,6 +142,7 @@ export const useUIStore = create<UIState>((set) => ({
   isGameOver: false,
   searchQuery: '',
 
+  combatActionCategory: null,
   isTargeting: false,
   targetingAction: null,
   
@@ -183,6 +189,7 @@ export const useUIStore = create<UIState>((set) => ({
   setIsGameOver: (isGameOver) => set({ isGameOver }),
   setIsTargeting: (isTargeting) => set({ isTargeting }),
   setTargetingAction: (targetingAction) => set({ targetingAction }),
+  setCombatActionCategory: (combatActionCategory) => set({ combatActionCategory }),
 }));
 
 if (typeof window !== 'undefined') {

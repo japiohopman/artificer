@@ -425,3 +425,75 @@
     radial-gradient(circle at 2px 2px, rgba(139, 0, 0, 0.15) 1px, transparent 0);
   background-size: 60px 60px;
 }
+
+
+/* Shared in-game tooltip layer: dark enamel, warm ink and restrained gold detail. */
+@keyframes adventure-tooltip-arrive {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+    translate: 0 3px;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    translate: 0 0;
+  }
+}
+
+.game-tooltip {
+  position: fixed;
+  z-index: 30000;
+  max-width: min(280px, calc(100vw - 24px));
+  padding: 7px 11px 8px;
+  color: #f3e8ce;
+  background:
+    linear-gradient(135deg, rgba(38, 31, 23, 0.97), rgba(11, 11, 12, 0.98) 72%),
+    radial-gradient(circle at 0 0, rgba(212, 175, 55, 0.18), transparent 55%);
+  border: 1px solid rgba(212, 175, 55, 0.62);
+  border-radius: 3px;
+  box-shadow:
+    0 9px 26px rgba(0, 0, 0, 0.62),
+    inset 0 1px 0 rgba(255, 242, 205, 0.08),
+    0 0 12px rgba(212, 175, 55, 0.1);
+  font-family: "Roboto Condensed", "Crimson Text", serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.035em;
+  text-align: center;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+  animation: adventure-tooltip-arrive 120ms ease-out both;
+}
+
+.game-tooltip::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  top: 2px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.72), transparent);
+}
+
+.game-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #17130f;
+  border-right: 1px solid rgba(212, 175, 55, 0.62);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.62);
+}
+
+.game-tooltip[data-placement="top"]::after {
+  bottom: -4px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.game-tooltip[data-placement="bottom"]::after {
+  top: -4px;
+  transform: translateX(-50%) rotate(225deg);
+}

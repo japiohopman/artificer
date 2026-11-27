@@ -62,7 +62,11 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
         }
 
         return (
-          <div key={cat.id} className="relative group">
+          <div
+            key={cat.id}
+            className="relative"
+            title={`${cat.label} ${!isVisible ? `(Requires Level ${zoomReq})` : ''}`.trim()}
+          >
             <motion.div
               whileHover={{ scale: 1.1 }}
               className={`
@@ -76,11 +80,7 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
                 color={isVisible ? cat.color : '#475569'}
               />
             </motion.div>
-            
-            {/* Tooltip */}
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-parchment-900 text-parchment-100 text-[9px] font-bold uppercase tracking-widest rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-[2000] border border-dragon-gold/30 shadow-xl">
-              {cat.label} {!isVisible && `(Requires Level ${zoomReq})`}
-            </div>
+
           </div>
         );
       })}
