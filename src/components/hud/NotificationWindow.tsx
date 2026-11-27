@@ -78,8 +78,9 @@ export const NotificationWindow: React.FC = () => {
             <div className="flex items-stretch gap-2 overflow-x-auto custom-scrollbar pb-1">
               {initiativeOrder.map((entry, idx) => {
                 const isActive = idx === activeTurnIndex;
-                const char = characters.find(c => c.id === entry.id || c.name === entry.name);
-                const monster = monsters.find(m => m.id === entry.id);
+                const isPlayableEntry = entry.isPlayer || entry.isAlly;
+                const char = isPlayableEntry ? characters.find(character => character.id === entry.id) : undefined;
+                const monster = !char ? monsters.find(combatant => combatant.id === entry.id) : undefined;
                 const avatar = char?.avatarUrl || char?.tokenUrl || monster?.imageUrl;
                 const role = entry.isPlayer ? 'PC' : entry.isAlly ? 'ALLY' : 'HOSTILE';
 
@@ -173,8 +174,10 @@ export const NotificationWindow: React.FC = () => {
                 <div className="flex items-center gap-3 py-1 px-4 bg-black/60 rounded-full border border-white/10 shadow-inner">
                   {initiativeOrder.map((entry, idx) => {
                     const isActive = idx === activeTurnIndex;
-                    const char = characters.find(c => c.id === entry.id || c.name === entry.name);
-                    const avatar = char?.avatarUrl;
+                    const isPlayableEntry = entry.isPlayer || entry.isAlly;
+                    const char = isPlayableEntry ? characters.find(character => character.id === entry.id) : undefined;
+                    const monster = !char ? monsters.find(combatant => combatant.id === entry.id) : undefined;
+                    const avatar = char?.avatarUrl || char?.tokenUrl || monster?.imageUrl;
 
                     return (
                       <motion.div
