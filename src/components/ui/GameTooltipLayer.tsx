@@ -20,15 +20,32 @@ export const GameTooltipLayer: FC = () => {
   const internalTitleClears = useRef(new WeakSet<HTMLElement>());
 
   useEffect(() => {
+    const syncTooltipDescription = (element: HTMLElement, text: string) => {
+      if (!text.trim()) return;
+      // Preserve the description for assistive technology after suppressing the
+      // browser-native title popover. Never overwrite an authored description.
+      if (!element.hasAttribute('aria-description') || element.dataset.gameTooltipDescriptionManaged === 'true') {
+        element.setAttribute('aria-description', text);
+        element.dataset.gameTooltipDescriptionManaged = 'true';
+      }
+    };
+
+    const clearManagedDescription = (element: HTMLElement) => {
+      if (element.dataset.gameTooltipDescriptionManaged === 'true') {
+        element.removeAttribute('aria-description');
+        delete element.dataset.gameTooltipDescriptionManaged;
+      }
+    };
+
     const hydrateTitle = (element: Element) => {
       if (!(element instanceof HTMLElement)) return;
 
       if (!element.hasAttribute('title')) {
-        delete element.dataset.gameTooltip;
-        if (element.dataset.gameTooltipDescriptionManaged === 'true') {
-          element.removeAttribute('aria-description');
-          delete element.dataset.gameTooltipDescriptionManaged;
-        }
+        // GameIcon SVGs supply their description directly because SVG title is
+        // not part of React's SVG attribute typings.
+        const explicitTooltip = element.dataset.gameTooltip?.trim();
+        if (explicitTooltip) syncTooltipDescription(element, explicitTooltip);
+        else clearManagedDescription(element);
         internalTitleClears.current.delete(element);
         return;
       }
@@ -36,12 +53,7 @@ export const GameTooltipLayer: FC = () => {
       const title = element.getAttribute('title') || '';
       if (title.trim()) {
         element.dataset.gameTooltip = title;
-        // Preserve the title's descriptive value for assistive technology after
-        // clearing the browser-native title popover.
-        if (!element.hasAttribute('aria-description') || element.dataset.gameTooltipDescriptionManaged === 'true') {
-          element.setAttribute('aria-description', title);
-          element.dataset.gameTooltipDescriptionManaged = 'true';
-        }
+        syncTooltipDescription(element, title);
         internalTitleClears.current.add(element);
         element.setAttribute('title', '');
       } else if (internalTitleClears.current.has(element)) {
@@ -50,17 +62,14 @@ export const GameTooltipLayer: FC = () => {
       } else {
         // An intentionally empty React title clears any previous tooltip.
         delete element.dataset.gameTooltip;
-        if (element.dataset.gameTooltipDescriptionManaged === 'true') {
-          element.removeAttribute('aria-description');
-          delete element.dataset.gameTooltipDescriptionManaged;
-        }
+        clearManagedDescription(element);
       }
     };
 
     const hydrateTree = (node: Node) => {
       if (!(node instanceof Element)) return;
       hydrateTitle(node);
-      node.querySelectorAll('[title]').forEach(hydrateTitle);
+      node.querySelectorAll('[title], [data-game-tooltip]').forEach(hydrateTitle);
     };
 
     const observer = new MutationObserver(records => {
@@ -78,10 +87,10 @@ export const GameTooltipLayer: FC = () => {
       subtree: true,
       childList: true,
       attributes: true,
-      attributeFilter: ['title']
+      attributeFilter: ['title', 'data-game-tooltip']
     });
 
-    document.querySelectorAll('[title]').forEach(hydrateTitle);
+    document.querySelectorAll('[title], [data-game-tooltip]').forEach(hydrateTitle);
 
     const getTooltipTarget = (target: EventTarget | null): HTMLElement | null => {
       if (!(target instanceof Element)) return null;
