@@ -82,7 +82,7 @@ export const GameIcon: React.FC<GameIconProps> = ({
         strokeWidth={strokeWidth}
         className={className}
         xmlns="http://www.w3.org/2000/svg"
-        title={title}
+        data-game-tooltip={title}
         aria-label={title}
         {...props}
       >
@@ -139,7 +139,7 @@ export const GameIcon: React.FC<GameIconProps> = ({
         strokeWidth={strokeWidth}
         className={className}
         xmlns="http://www.w3.org/2000/svg"
-        title={title}
+        data-game-tooltip={title}
         aria-label={title}
         {...props}
       />
@@ -156,7 +156,7 @@ export const GameIcon: React.FC<GameIconProps> = ({
       strokeWidth={strokeWidth}
       className={className}
       xmlns="http://www.w3.org/2000/svg"
-      title={title}
+      data-game-tooltip={title}
       aria-label={title}
       dangerouslySetInnerHTML={{ __html: innerHtml }}
       {...props}
