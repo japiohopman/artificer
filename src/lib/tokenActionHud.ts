@@ -16,6 +16,42 @@ export interface ActionHudAction {
   data?: any;
 }
 
+export interface BackpackItemEntry {
+  id: string;
+  item: any;
+}
+
+/**
+ * Returns only usable stored items shown by the combat Backpack workspace.
+ * Equipped hand slots and chest armor are deliberately excluded.
+ */
+export const getBackpackItems = (character: Character | null | undefined): BackpackItemEntry[] => {
+  if (!character) return [];
+
+  const items = new Map<string, any>();
+  const addItem = (item: any, fallbackId: string) => {
+    if (!item) return;
+    const id = String(item.id || item.index || fallbackId);
+    items.set(id, item);
+  };
+
+  (character.backpack || []).forEach((item: any, index: number) => {
+    addItem(item, `backpack-${index}`);
+  });
+
+  const equippedIds = new Set((character.equipment?.slots || []).map(slot => slot.itemId).filter(Boolean));
+  Object.values(character.items || {}).forEach((item: any, index) => {
+    if (item && !equippedIds.has(item.id)) addItem(item, `stored-${index}`);
+  });
+
+  Object.entries(character.inventory || {}).forEach(([slot, item]) => {
+    if (['main_hand', 'off_hand', 'main-hand', 'off-hand', 'chest'].includes(slot)) return;
+    addItem(item, `legacy-${slot}`);
+  });
+
+  return Array.from(items.entries()).map(([id, item]) => ({ id, item }));
+};
+
 /**
  * Dynamically generates a list of actions available to a character
  * based on their class, spells, and equipment.
