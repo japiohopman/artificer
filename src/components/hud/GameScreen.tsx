@@ -154,19 +154,24 @@ export const GameScreen: React.FC = () => {
         "absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none",
         gameMode === 'combat' && "z-[60]"
       )}>
-        {gameMode === 'combat' ? (
+        {gameMode === 'combat' && (
           <div className="w-full max-w-5xl px-4 pb-3 pointer-events-auto">
             <ActionPanel />
           </div>
-        ) : (
-          <>
-            <div className="w-full max-w-5xl px-4 pb-2 flex justify-start">
-              <AdvancedRoller />
-            </div>
-            <div className="w-full pointer-events-auto relative">
-              <ChatPanel isCollapsed={!chatExpanded} />
-            </div>
-          </>
+        )}
+        <div
+          className={cn(
+            "w-full max-w-5xl px-4 pb-2 flex justify-start",
+            gameMode === 'combat' && "hidden"
+          )}
+          aria-hidden={gameMode === 'combat'}
+        >
+          <AdvancedRoller />
+        </div>
+        {gameMode !== 'combat' && (
+          <div className="w-full pointer-events-auto relative">
+            <ChatPanel isCollapsed={!chatExpanded} />
+          </div>
         )}
       </div>
 
