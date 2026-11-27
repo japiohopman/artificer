@@ -38,6 +38,7 @@ export interface TacticalCell {
 
 export interface CombatMonster {
   id: string;
+  index?: string;
   name: string;
   type: string;
   hp: number;
@@ -447,6 +448,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     const newMonster: CombatMonster = {
       id,
+      index: monster.index || undefined,
       name: monster.name,
       type: monster.type || 'monster',
       size: monster.size || 'Medium',
@@ -613,6 +615,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     // Every turn start receives a unique generation, even if the same actor returns to the same slot.
     turnExecutionVersion += 1;
+    useUIStore.getState().setCombatActionCategory(null);
 
     // Refresh action economy for player characters on turn start
     if (currentActor.isPlayer) {
@@ -974,8 +977,12 @@ export const useGameStore = create<GameState>((set, get) => ({
         addLog(`Encounter started! Round 1 - Turn begins: ${firstActor.name}`, firstActor.isPlayer || firstActor.isAlly ? 'success' : 'warning');
       }
 
-      // Starting or rerolling initiative invalidates all pending callbacks from the prior encounter order.
+      // Starting or rerolling initiative invalidates pending combat selections and callbacks.
       turnExecutionVersion += 1;
+      const uiState = useUIStore.getState();
+      uiState.setIsTargeting(false);
+      uiState.setTargetingAction(null);
+      uiState.setCombatActionCategory(null);
       set((state) => ({
         combatState: {
           ...state.combatState,
