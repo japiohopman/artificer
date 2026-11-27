@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it } from 'bun:test';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { useUIStore } from '../src/store/useUIStore';
+import { useGameStore } from '../src/store/useGameStore';
 
 const readSource = (relativePath: string) =>
   readFileSync(join(__dirname, '..', relativePath), 'utf8');
@@ -45,18 +46,20 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain("const role = entry.isPlayer ? 'PC' : entry.isAlly ? 'ALLY' : 'HOSTILE'");
   });
 
-  it('provides a 3–5 item radial action layer around the current playable actor', () => {
+  it('provides a 3–6 item radial action layer around the current playable actor', () => {
     const source = readSource('src/components/combat/TokenActionHUD.tsx');
 
     expect(source).toContain("id: 'Attack'");
     expect(source).toContain("id: 'Spell'");
     expect(source).toContain("id: 'Move'");
     expect(source).toContain("id: 'Backpack'");
+    expect(source).toContain("id: 'Defend'");
     expect(source).toContain("id: 'End Turn'");
     expect(source).toContain('360 / options.length');
     expect(source).toContain('activeTurnActor.id');
     expect(source).toContain('setCombatActionCategory');
-    expect(source).toContain('activeTurnActor.isAlly ? [RADIAL_ACTIONS[4]] : []');
+    expect(source).toContain('activeTurnActor.isAlly ? [RADIAL_ACTIONS[5]] : []');
+    expect(source).toContain('getBackpackItems(activeChar).length > 0');
   });
 
   it('keeps the radial action layer anchored to the actor center while animating only its inner layer', () => {
@@ -104,6 +107,64 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(styles).toContain('rgba(212, 175, 55, 0.62)');
   });
 
+  it('uses the same Backpack item selector in the radial layer and action workspace', () => {
+    const radial = readSource('src/components/combat/TokenActionHUD.tsx');
+    const panel = readSource('src/components/hud/game/ActionPanel.tsx');
+    const selector = readSource('src/lib/tokenActionHud.ts');
+
+    expect(radial).toContain('getBackpackItems(activeChar).length > 0');
+    expect(panel).toContain('getBackpackItems(activeChar).map');
+    expect(selector).toContain("['main_hand', 'off_hand', 'main-hand', 'off-hand', 'chest']");
+  });
+
+  it('keeps combat action damage and spell-slot states unambiguous', () => {
+    const source = readSource('src/components/hud/game/ActionPanel.tsx');
+
+    expect(source).toContain("strengthModifier === 0 ? '1'");
+    expect(source).toContain("'Spell slots unavailable'");
+    expect(source).toContain("'No spell slots'");
+  });
+
+  it('exposes Defend and preserves pending dice drafts while combat hides the roller', () => {
+    const panel = readSource('src/components/hud/game/ActionPanel.tsx');
+    const grid = readSource('src/components/combat/TokenActionHUD.tsx');
+    const screen = readSource('src/components/hud/GameScreen.tsx');
+
+    expect(panel).toContain("case 'Defend':");
+    expect(panel).toContain("action.id === 'defend'");
+    expect(grid).toContain("id: 'Defend'");
+    expect(screen).toContain('<AdvancedRoller />');
+    expect(screen).toContain('&& "hidden"');
+  });
+
+  it('clears pending targeting when initiative is started or rerolled', () => {
+    const source = readSource('src/store/useGameStore.ts');
+
+    expect(source).toContain('uiState.setIsTargeting(false)');
+    expect(source).toContain('uiState.setTargetingAction(null)');
+  });
+
+  it('resolves initiative portraits and enemy profile selection by combatant identity', () => {
+    const notification = readSource('src/components/hud/NotificationWindow.tsx');
+    const encounter = readSource('src/components/hud/world/CombatEncounterPanel.tsx');
+    const store = readSource('src/store/useGameStore.ts');
+    const mapAdapter = readSource('src/components/devkit/BattleMapEditor/persistence/battleMapToCombatGrid.ts');
+
+    expect(notification).not.toContain('c.name === entry.name');
+    expect(notification).toContain('characters.find(character => character.id === entry.id)');
+    expect(encounter).toContain('const requestId = ++profileRequestId.current');
+    expect(encounter).toContain("useUIStore.getState().gameMode !== 'combat'");
+    expect(store).toContain('index: monster.index || undefined');
+    expect(mapAdapter).toContain('index: foundMonster?.index || t.index');
+  });
+
+  it('keeps Bun test suites separate from the Playwright spec run', () => {
+    const packageJson = readSource('package.json');
+
+    expect(packageJson).toContain("--test-match='**/*.spec.ts'");
+    expect(packageJson).toContain('"test:unit": "bun test tests/*.test.ts"');
+  });
+
   it('routes selected categories to the bottom workspace and summarizes resources for all playable party members', () => {
     const source = readSource('src/components/hud/game/ActionPanel.tsx');
     const screen = readSource('src/components/hud/GameScreen.tsx');
@@ -127,13 +188,45 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('Withdraw');
   });
 
-  it('keeps radial category selection UI-only and resets it between turns', () => {
-    const store = useUIStore.getState();
+  it('resets the selected action category through production initiative advancement', () => {
+    const originalCombatState = useGameStore.getState().combatState;
+    const alliedIds = ['test-ally-one', 'test-ally-two'];
+    const alliedMonsters = alliedIds.map((id, index) => ({
+      id,
+      name: id,
+      type: 'npc',
+      hp: 10,
+      maxHp: 10,
+      x: index,
+      y: 0,
+      awareness: 'combat' as const,
+      viewDirection: 0,
+      perception: 10,
+      speed: 6,
+      isAlly: true
+    }));
 
-    expect(store.combatActionCategory).toBeNull();
-    store.setCombatActionCategory('Spell');
-    expect(useUIStore.getState().combatActionCategory).toBe('Spell');
-    store.setCombatActionCategory(null);
+    useGameStore.setState(state => ({
+      combatState: {
+        ...state.combatState,
+        monsters: alliedMonsters as any,
+        initiativeOrder: alliedIds.map((id, index) => ({
+          id,
+          name: id,
+          value: 20 - index,
+          isPlayer: false,
+          isAlly: true
+        })),
+        activeTurnIndex: 0
+      }
+    }));
+    useUIStore.getState().setCombatActionCategory('Spell');
+
+    useGameStore.getState().nextTurn();
+
+    expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
     expect(useUIStore.getState().combatActionCategory).toBeNull();
+
+    useGameStore.setState(state => ({ combatState: originalCombatState }));
   });
 });
