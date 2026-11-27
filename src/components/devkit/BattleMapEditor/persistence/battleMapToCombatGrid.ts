@@ -89,6 +89,7 @@ export function battleMapToCombatGrid(map: BattleMap): CombatGridRepresentation 
 
       monsters.push({
         id: t.id,
+        index: foundMonster?.index || t.index,
         name: t.name,
         type: t.type === 'enemy' ? 'enemy' : (t.type === 'npc' ? 'npc' : 'neutral'),
         hp: foundMonster?.hit_points || 30,
