@@ -87,6 +87,24 @@ const createGoblin = (overrides: Record<string, unknown> = {}) => ({
   ...overrides
 });
 
+const createAllyCharacter = (): Character => ({
+  ...createHero(),
+  id: 'ally-action-test',
+  name: 'Allied Companion'
+});
+
+const createAllyCombatant = () => ({
+  id: 'ally-action-test',
+  name: 'Allied Companion',
+  type: 'npc',
+  x: 8,
+  y: 2,
+  size: 'Medium',
+  hp: 20,
+  maxHp: 20,
+  isAlly: true
+});
+
 const weaponAttack = {
   id: 'attack-unarmed',
   name: 'Unarmed Strike',
@@ -151,11 +169,75 @@ afterEach(() => {
 });
 
 describe('Canonical player weapon action economy (#421)', () => {
+  it('uses the allied combatant position when pcPositions has no entry', async () => {
+    const ally = createAllyCombatant();
+    const target = createGoblin({ x: 9, y: 2 });
+
+    useCharacterStore.setState({
+      characters: [createAllyCharacter()],
+      activeCharacterId: ally.id
+    });
+    useGameStore.setState(state => ({
+      activeCharacterId: ally.id,
+      combatState: {
+        ...state.combatState,
+        playerPos: { x: 2, y: 2 },
+        pcPositions: {},
+        monsters: [ally, target]
+      }
+    }));
+
+    await useGameStore.getState().resolveCombatAction(
+      { id: ally.id, name: ally.name },
+      target,
+      weaponAttack
+    );
+
+    expect(rollCount).toBe(1);
+    expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(0);
+  });
+
+  it('does not use playerPos to accept a target far from an ally without pcPositions', async () => {
+    const ally = createAllyCombatant();
+    // This hostile is adjacent to playerPos (2,2), but five cells from the ally at (8,2).
+    const target = createGoblin({ x: 3, y: 2 });
+
+    useCharacterStore.setState({
+      characters: [createAllyCharacter()],
+      activeCharacterId: ally.id
+    });
+    useGameStore.setState(state => ({
+      activeCharacterId: ally.id,
+      combatState: {
+        ...state.combatState,
+        playerPos: { x: 2, y: 2 },
+        pcPositions: {},
+        monsters: [ally, target]
+      }
+    }));
+
+    await useGameStore.getState().resolveCombatAction(
+      { id: ally.id, name: ally.name },
+      target,
+      weaponAttack
+    );
+
+    expect(rollCount).toBe(0);
+    expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(1);
+  });
+
   it('consumes exactly one action at resolution, including on a miss, and rejects a second attack', async () => {
     const actor = { id: 'hero-action-test', name: 'Test Hero' };
     const target = useGameStore.getState().combatState.monsters[0];
 
-    await useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
+    const originalRandom = Math.random;
+    try {
+      // A fixed non-natural-20 roll guarantees a miss against the fixture's AC 99.
+      Math.random = () => 0.5;
+      await useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
+    } finally {
+      Math.random = originalRandom;
+    }
 
     expect(rollCount).toBe(1);
     expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(0);
