@@ -5,6 +5,7 @@ import { useGameStore } from '../../store/useGameStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import { getBackpackItems } from '../../lib/tokenActionHud';
 
 interface TokenActionHUDProps {
   x: number;
@@ -13,7 +14,7 @@ interface TokenActionHUDProps {
 }
 
 type RadialAction = {
-  id: 'Attack' | 'Spell' | 'Move' | 'Backpack' | 'End Turn';
+  id: 'Attack' | 'Spell' | 'Move' | 'Backpack' | 'Defend' | 'End Turn';
   label: string;
   icon: string;
 };
@@ -23,6 +24,7 @@ const RADIAL_ACTIONS: RadialAction[] = [
   { id: 'Spell', label: 'Spell', icon: 'spells' },
   { id: 'Move', label: 'Move', icon: 'footsteps' },
   { id: 'Backpack', label: 'Backpack', icon: 'package' },
+  { id: 'Defend', label: 'Defend', icon: 'shield' },
   { id: 'End Turn', label: 'End Turn', icon: 'chevron_right' }
 ];
 
@@ -47,21 +49,16 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
     if (!activeTurnActor) return [];
     // Allied summons without a playable Character record have no canonical player
     // action/resource data. Keep turn advancement available without inventing actions.
-    if (!activeChar) return activeTurnActor.isAlly ? [RADIAL_ACTIONS[4]] : [];
+    if (!activeChar) return activeTurnActor.isAlly ? [RADIAL_ACTIONS[5]] : [];
     const available: RadialAction[] = [RADIAL_ACTIONS[0]];
 
     if ((activeChar.knownSpells?.length || 0) > 0) available.push(RADIAL_ACTIONS[1]);
     // Keep Move in the first layer even when movement is spent; the detail panel explains its unavailable state.
     available.push(RADIAL_ACTIONS[2]);
 
-    const equippedIds = new Set((activeChar.equipment?.slots || []).map(slot => slot.itemId).filter(Boolean));
-    const hasBackpackItems =
-      (activeChar.backpack?.length || 0) > 0 ||
-      Object.values(activeChar.inventory || {}).some(Boolean) ||
-      Object.values(activeChar.items || {}).some(item => !equippedIds.has(item.id));
-
-    if (hasBackpackItems) available.push(RADIAL_ACTIONS[3]);
+    if (getBackpackItems(activeChar).length > 0) available.push(RADIAL_ACTIONS[3]);
     available.push(RADIAL_ACTIONS[4]);
+    available.push(RADIAL_ACTIONS[5]);
     return available;
   }, [activeTurnActor, activeChar]);
 
