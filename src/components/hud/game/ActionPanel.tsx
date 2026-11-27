@@ -5,7 +5,7 @@ import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion } from 'framer-motion';
-import { getCharacterActions, ActionHudAction } from '../../../lib/tokenActionHud';
+import { getCharacterActions, getBackpackItems, ActionHudAction } from '../../../lib/tokenActionHud';
 import { DeathSavesPanel } from './DeathSavesPanel';
 import { calculateWeaponAttackBonus, getEquippedWeapons } from '../../../lib/statCalculations';
 
@@ -92,30 +92,8 @@ export const ActionPanel: React.FC = () => {
     ];
   }, [activeChar]);
 
-  const backpackActions = useMemo<ActionHudAction[]>(() => {
-    if (!activeChar) return [];
-    const items = new Map<string, any>();
-    const addItem = (item: any, fallbackId: string) => {
-      if (!item) return;
-      const id = String(item.id || item.index || fallbackId);
-      items.set(id, item);
-    };
-
-    (activeChar.backpack || []).forEach((item: any, index: number) => {
-      addItem(item, `backpack-${index}`);
-    });
-
-    const equippedIds = new Set((activeChar.equipment?.slots || []).map(slot => slot.itemId).filter(Boolean));
-    Object.values(activeChar.items || {}).forEach((item: any, index) => {
-      if (item && !equippedIds.has(item.id)) addItem(item, `stored-${index}`);
-    });
-
-    Object.entries(activeChar.inventory || {}).forEach(([slot, item]) => {
-      if (['main_hand', 'off_hand', 'main-hand', 'off-hand', 'chest'].includes(slot)) return;
-      addItem(item, `legacy-${slot}`);
-    });
-
-    return Array.from(items.entries()).map(([id, item]) => ({
+  const backpackActions = useMemo<ActionHudAction[]>(() =>
+    getBackpackItems(activeChar).map(({ id, item }) => ({
       id: `item-${id}`,
       name: item.customName || item.name || item.template || 'Unnamed item',
       icon: 'package',
@@ -125,8 +103,9 @@ export const ActionPanel: React.FC = () => {
       category: 'Items',
       actionType: 'objectInteractions',
       data: item
-    }));
-  }, [activeChar]);
+    })),
+    [activeChar]
+  );
 
   const displayedActions = useMemo(() => {
     switch (combatActionCategory) {
@@ -138,6 +117,8 @@ export const ActionPanel: React.FC = () => {
         return allActions.filter(action => action.id === 'move');
       case 'Backpack':
         return backpackActions;
+      case 'Defend':
+        return allActions.filter(action => action.id === 'defend');
       default:
         return [];
     }
@@ -185,7 +166,7 @@ export const ActionPanel: React.FC = () => {
       const equippedWeapon = isUnarmed ? null : action.data?.weapon || getEquippedWeapons(activeChar)[0]?.item || null;
       const calculatedBonus = calculateWeaponAttackBonus(activeChar, equippedWeapon);
       const strengthModifier = Math.floor(((activeChar.stats?.str || 10) - 10) / 2);
-      const unarmedDamage = `1${strengthModifier >= 0 ? '+' : ''}${strengthModifier !== 0 ? strengthModifier : ''}`;
+      const unarmedDamage = strengthModifier === 0 ? '1' : `1${strengthModifier > 0 ? '+' : ''}${strengthModifier}`;
       const damageDice = isUnarmed
         ? unarmedDamage
         : equippedWeapon?.damage?.damage_dice || equippedWeapon?.damage_dice || (typeof equippedWeapon?.damage === 'string' ? equippedWeapon.damage : null) || '1d4';
@@ -349,11 +330,15 @@ export const ActionPanel: React.FC = () => {
         <div className="flex gap-2 overflow-x-auto custom-scrollbar pb-1">
           {playableCharacters.map(character => {
             const economy = character.actionEconomy;
+            const hasSpellSlotData = character.spellSlots !== undefined && character.spellSlots !== null;
             const slots = Object.entries(character.spellSlots || {})
               .filter(([, slot]) => slot && slot.max > 0)
               .sort(([a], [b]) => Number(a) - Number(b))
               .map(([level, slot]) => `L${level} ${slot.current}/${slot.max}`)
               .join(' · ');
+            const spellSlotSummary = !hasSpellSlotData
+              ? 'Spell slots unavailable'
+              : slots || 'No spell slots';
             const isCurrent = character.id === activeTurnActor.id;
 
             return (
@@ -374,8 +359,8 @@ export const ActionPanel: React.FC = () => {
                   <span>REA {resourceValue(economy?.reactions)}</span>
                   <span>MOV {resourceValue(economy?.movement)}</span>
                 </div>
-                <div className="mt-1 truncate text-[8px] text-purple-200/65" title={slots || 'No spell-slot data'}>
-                  {slots || 'No spell slots'}
+                <div className="mt-1 truncate text-[8px] text-purple-200/65" title={spellSlotSummary}>
+                  {spellSlotSummary}
                 </div>
               </div>
             );
