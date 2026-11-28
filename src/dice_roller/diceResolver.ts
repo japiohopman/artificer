@@ -76,33 +76,40 @@ export const createSeededRandom = (seed: string | number): (() => number) => {
 
 const extractRolls = (parsedResult: any): DiceResult["rolls"] => {
   const rolls: DiceResult["rolls"] = [];
+  const visited = new WeakSet<object>();
 
   const walk = (node: any): void => {
-    if (!node || typeof node !== "object") return;
+    if (!node || typeof node !== "object" || visited.has(node)) return;
+    visited.add(node);
 
     if (node.type === "die" && Array.isArray(node.rolls)) {
-      const sides = node.sides?.value ?? node.sides ?? 20;
+      // dice-roller-parser represents a dice group with a `die` descriptor
+      // and exposes each individual face as DieRollBase.roll.
+      const sides = node.die?.value ?? node.die ?? node.sides?.value ?? node.sides ?? 20;
       node.rolls.forEach((roll: any) => {
         rolls.push({
           die: Number(sides),
-          result: Number(roll.value),
+          result: Number(roll.roll ?? roll.value),
           valid: roll.valid !== false
         });
       });
     } else if (node.type === "roll") {
       rolls.push({
-        die: Number(node.die ?? 20),
-        result: Number(node.value),
+        die: Number(node.die?.value ?? node.die ?? 20),
+        result: Number(node.roll ?? node.value),
         valid: node.valid !== false
       });
     }
 
+    if (Array.isArray(node.dice)) node.dice.forEach(walk);
+    if (Array.isArray(node.rolls) && node.type !== "die") node.rolls.forEach(walk);
     if (Array.isArray(node.ops)) node.ops.forEach(walk);
     else if (node.ops) walk(node.ops);
     if (node.left) walk(node.left);
     if (node.right) walk(node.right);
     if (node.head) walk(node.head);
-    if (Array.isArray(node.tails)) {
+    if (node.expr) walk(node.expr);
+    if (node.tails && Array.isArray(node.tails)) {
       node.tails.forEach((tail: any) => {
         if (Array.isArray(tail) && tail[1]) walk(tail[1]);
         else walk(tail);
