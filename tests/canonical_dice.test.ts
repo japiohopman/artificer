@@ -1,5 +1,6 @@
 import { describe, expect, it } from "bun:test";
 import { createSeededRandom, resolveDiceNotation } from "../src/dice_roller/diceResolver";
+import { useGameStore } from "../src/store/useGameStore";
 
 describe("Canonical dice resolver", () => {
   it("reproduces the same full result for a supplied seed", () => {
@@ -40,4 +41,32 @@ describe("Canonical dice resolver", () => {
       result.rolls.filter(roll => roll.valid !== false).reduce((total, roll) => total + roll.result, 0)
     );
   });
+  it("publishes background results and roll provenance to the shared game history", async () => {
+    const originalRolls = useGameStore.getState().recentRolls;
+    const context = {
+      actionId: "test-attack",
+      actorId: "hero-1",
+      actorName: "Test Hero",
+      targetId: "goblin-1",
+      targetName: "Goblin",
+      sourceSystem: "combat",
+      ruleset: "2024" as const
+    };
+
+    try {
+      const result = await useGameStore.getState().rollDiceBackground(
+        "1d20+4",
+        "Attack Test",
+        context,
+        "combat-test-seed"
+      );
+
+      expect(useGameStore.getState().recentRolls[0]).toEqual(result);
+      expect(result.context).toEqual(context);
+      expect(result.seed).toBe("combat-test-seed");
+    } finally {
+      useGameStore.setState({ recentRolls: originalRolls });
+    }
+  });
+
 });
