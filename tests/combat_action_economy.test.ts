@@ -240,14 +240,8 @@ describe('Canonical player weapon action economy (#421)', () => {
     const actor = { id: 'hero-action-test', name: 'Test Hero' };
     const target = useGameStore.getState().combatState.monsters[0];
 
-    const originalRandom = Math.random;
-    try {
-      // A fixed non-natural-20 roll guarantees a miss against the fixture's AC 99.
-      Math.random = () => 0.5;
-      await useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
-    } finally {
-      Math.random = originalRandom;
-    }
+    // The test double returns an authoritative visible d20 result of 11.
+    await useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
 
     expect(rollCount).toBe(1);
     expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(0);
