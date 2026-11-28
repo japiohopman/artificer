@@ -131,6 +131,16 @@ beforeEach(() => {
     activeCharacterId: 'hero-action-test',
     rollDice3D: async () => {
       rollCount += 1;
+      return {
+        id: `attack-roll-${rollCount}`,
+        notation: '1d20',
+        total: 11,
+        label: 'Mock Attack',
+        rolls: [{ die: 20, result: 11, valid: true }],
+        modifier: 0,
+        timestamp: Date.now(),
+        source: '3d' as const
+      };
     },
     addLog: (message: string) => {
       logMessages.push(message);
