@@ -1340,7 +1340,8 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   rollDiceBackground: async (notation, label, context, seed) => {
     const { diceService } = await import('../dice_roller/diceService');
-    const result = diceService.rollBackground(notation, label, { context, seed });
+    const rollContext = context || { sourceSystem: 'manual', ruleset: get().ruleset };
+    const result = diceService.rollBackground(notation, label, { context: rollContext, seed });
     set(state => ({
       recentRolls: [result, ...state.recentRolls].slice(0, 5)
     }));
@@ -1358,12 +1359,13 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
 
     try {
+      const rollContext = context || { sourceSystem: 'manual', ruleset: get().ruleset };
       const result = await diceService.roll3D(
         notation,
         label,
         theme || selectedDiceTheme,
         color || selectedDiceColor,
-        context
+        rollContext
       );
       if (!result) return null;
 
