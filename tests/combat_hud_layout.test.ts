@@ -144,6 +144,32 @@ describe('Combat HUD layout contract (#420)', () => {
     expect(source).toContain('uiState.setTargetingAction(null)');
   });
 
+  it('shows structured recent dice rolls in the NotificationWindow without a duplicate overlay', () => {
+    const notification = readSource('src/components/hud/NotificationWindow.tsx');
+    const overlay = readSource('src/dice_roller/DiceRollOverlay.tsx');
+
+    expect(notification).toContain('recentRolls');
+    expect(notification).toContain('Recent dice rolls');
+    expect(notification).toContain('selectedRoll.rolls');
+    expect(notification).toContain('Dropped from the final total');
+    expect(notification).toContain('selectedRoll.outcome.status');
+    expect(notification).toContain('clearRoll()');
+    expect(overlay).toContain('recentRolls.map');
+  });
+
+  it('uses the visible weapon d20 result as the only hit-resolution roll', () => {
+    const source = readSource('src/store/useGameStore.ts');
+    const start = source.indexOf('// 1. Roll to Hit');
+    const end = source.indexOf('// Apply conditions', start);
+    const attackResolution = source.slice(start, end);
+
+    expect(start).toBeGreaterThan(-1);
+    expect(attackResolution).toContain('const hitRoll = await rollDice3D');
+    expect(attackResolution).toContain('const totalHit = hitRoll.total');
+    expect(attackResolution).not.toContain('Math.random');
+    expect(attackResolution).toContain('updateRollOutcome(hitRoll.id');
+  });
+
   it('resolves initiative portraits and enemy profile selection by combatant identity', () => {
     const notification = readSource('src/components/hud/NotificationWindow.tsx');
     const encounter = readSource('src/components/hud/world/CombatEncounterPanel.tsx');
