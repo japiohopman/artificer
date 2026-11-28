@@ -302,8 +302,18 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
 
     const session = await evaluateNextLevelStep(char);
     if (session) {
-      const { diceService } = await import('../dice_roller/diceService');
-      const rollResult = diceService.rollBackground(`1d${session.classHitDie}`, 'Level Up HP Roll');
+      const { useGameStore } = await import('./useGameStore');
+      const rollResult = await useGameStore.getState().rollDiceBackground(
+        `1d${session.classHitDie}`,
+        'Level Up HP Roll',
+        {
+          actionId: 'level-up-hp',
+          actorId: characterId,
+          actorName: char.name,
+          sourceSystem: 'level-up',
+          ruleset: char.ruleset || useGameStore.getState().ruleset
+        }
+      );
       const rawRollVal = (rollResult.rolls && rollResult.rolls[0]?.result) ?? rollResult.total;
       const hpRollResult = (typeof rawRollVal === 'number' && rawRollVal >= 1 && rawRollVal <= session.classHitDie)
         ? rawRollVal
