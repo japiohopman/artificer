@@ -295,6 +295,8 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
     });
 
     it('keeps the hostile turn active when its attack resolver reports an unresolved roll', async () => {
+      const originalResolver = useGameStore.getState().resolveCombatAction;
+      const originalGameMode = useUIStore.getState().gameMode;
       const hero: any = {
         id: 'hero-pending-attack',
         name: 'Hero',
@@ -340,10 +342,13 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
       });
 
       await useGameStore.getState().executeMonsterTurn(goblin.id);
-      await new Promise(resolve => setTimeout(resolve, 750));
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
       expect(useGameStore.getState().combatState.initiativeOrder[0].id).toBe(goblin.id);
+
+      useGameStore.setState({ resolveCombatAction: originalResolver });
+      useUIStore.setState({ gameMode: originalGameMode });
     });
 
     it('hostile selects Shortbow when target is outside melee reach but in ranged distance', async () => {
