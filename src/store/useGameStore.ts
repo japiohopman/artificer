@@ -3,6 +3,7 @@ import { useUIStore } from './useUIStore';
 import { useCharacterStore } from './useCharacterStore';
 import * as combatUtils from '../components/combat/combatUtils';
 import { soundService } from '../services/soundService';
+import type { DiceResult, DiceRollContext, DiceRollOutcome } from '../dice_roller/diceResolver';
 
 export interface RpsState {
   status: 'ritual' | 'result';
@@ -122,7 +123,7 @@ interface GameState {
   // Dice History
   isDiceReady: boolean;
   isRolling3D: boolean;
-  recentRolls: any[];
+  recentRolls: DiceResult[];
 
   // Game flow
   isGameStarted: boolean;
@@ -152,7 +153,10 @@ interface GameState {
 
   // Dice Actions
   rollDice: (label: string, modifier: number, dieType?: number) => void;
-  rollDice3D: (notation: string, label: string, theme?: string, color?: string) => Promise<void>;
+  rollDice3D: (notation: string, label: string, theme?: string, color?: string, context?: DiceRollContext) => Promise<DiceResult | null>;
+  rollDiceBackground: (notation: string, label: string, context?: DiceRollContext, seed?: string | number) => Promise<DiceResult>;
+  updateRollOutcome: (rollId: string, outcome: DiceRollOutcome) => void;
+  applyRollModifier: (rollId: string, modifier: number) => DiceResult | null;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
@@ -183,7 +187,7 @@ interface GameState {
   startTurnForIndex: (targetIndex: number) => void;
   nextTurn: () => void;
   startCombat: () => Promise<void>;
-  resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
+  resolveCombatAction: (actor: any, target: any, action: any, turnContext?: { executionVersion: number; turnIndex: number; actorId: string }) => Promise<boolean | void>;
   executeMonsterTurn: (monsterId: string, equipmentDataLookup?: (index: string, ruleset?: '2014' | '2024') => Promise<any>) => Promise<void>;
   setCombatMapBackground: (combatMapBackground: string | null) => void;
 }
@@ -900,11 +904,22 @@ export const useGameStore = create<GameState>((set, get) => ({
           damage: chosenCandidate.action.damage
         };
 
-        await resolveCombatAction(
+        const attackResolved = await resolveCombatAction(
           updatedMonster,
           targetPc ? { id: targetPc.id, name: targetPc.name, stats: targetPc.stats, ac: targetPc.stats?.ac || targetPc.ac } : { id: 'player', name: 'Hero' },
-          attackAction
+          attackAction,
+          { executionVersion, turnIndex, actorId: turnActorId }
         );
+
+        // A DiceBox-busy hostile attack is handled by the background dice resolver.
+        // If a real resolution failure still occurs, keep this turn active instead
+        // of silently dropping the attack and advancing initiative.
+        if (attackResolved === false) {
+          if (isCurrentTurn()) {
+            addLog(`${updatedMonster.name}'s attack could not be resolved. The turn remains active.`, 'warning');
+          }
+          return;
+        }
       }
 
       if (!isCurrentTurn()) return;
@@ -943,23 +958,58 @@ export const useGameStore = create<GameState>((set, get) => ({
         initialPcPositions[c.id] = { x, y, rotation: 0 };
       });
 
-      // Roll initiative for everyone
-      const order = [
-        ...activeParty.map((c: any) => ({
-          id: c.id,
-          name: c.name,
-          value: Math.floor(Math.random() * 20) + 1 + (Math.floor(((c.stats?.dex || 10) - 10) / 2) || 0),
-          isPlayer: true,
-          isAlly: false
-        })),
-        ...combatState.monsters.map(m => ({
-          id: m.id,
-          name: m.name,
-          value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0),
-          isPlayer: m.isAlly || false, // Treat allies/summons as player-controlled in the turn order
-          isAlly: m.isAlly || false
-        }))
-      ].sort((a, b) => b.value - a.value);
+      // Resolve initiative through the canonical dice service so the displayed
+      // d20 values and the initiative order always share the same results.
+      const initiativeEntries = await Promise.all([
+        ...activeParty.map(async (character: any) => {
+          const dexterityModifier = Math.floor(((character.stats?.dex || 10) - 10) / 2);
+          const roll = await get().rollDiceBackground(
+            `1d20${dexterityModifier >= 0 ? '+' : ''}${dexterityModifier}`,
+            `Initiative: ${character.name}`,
+            {
+              actionId: 'initiative',
+              actorId: String(character.id),
+              actorName: character.name,
+              sourceSystem: 'initiative',
+              ruleset: get().ruleset
+            }
+          );
+
+          return {
+            id: character.id,
+            name: character.name,
+            value: roll.total,
+            isPlayer: true,
+            isAlly: false
+          };
+        }),
+        ...combatState.monsters.map(async monster => {
+          const dexterityModifier = monster.stats?.dex
+            ? Math.floor((monster.stats.dex - 10) / 2)
+            : 0;
+          const roll = await get().rollDiceBackground(
+            `1d20${dexterityModifier >= 0 ? '+' : ''}${dexterityModifier}`,
+            `Initiative: ${monster.name}`,
+            {
+              actionId: 'initiative',
+              actorId: String(monster.id),
+              actorName: monster.name,
+              sourceSystem: 'initiative',
+              ruleset: get().ruleset
+            }
+          );
+
+          return {
+            id: monster.id,
+            name: monster.name,
+            value: roll.total,
+            isPlayer: monster.isAlly || false,
+            isAlly: monster.isAlly || false
+          };
+        })
+      ]);
+
+      const order = initiativeEntries.sort((a, b) => b.value - a.value);
 
       // Reset action economy for everyone at combat start
       activeParty.forEach((c: any) => {
@@ -1012,15 +1062,37 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   },
 
-  resolveCombatAction: async (actor, target, action) => {
+  resolveCombatAction: async (actor, target, action, suppliedTurnContext) => {
+    const combatStateAtStart = get().combatState;
+    const activeTurnActorAtStart = combatStateAtStart.initiativeOrder[combatStateAtStart.activeTurnIndex];
+    const turnContext = suppliedTurnContext || (
+      activeTurnActorAtStart?.id === actor?.id
+        ? {
+            executionVersion: turnExecutionVersion,
+            turnIndex: combatStateAtStart.activeTurnIndex,
+            actorId: actor.id
+          }
+        : undefined
+    );
+    const isActionTurnCurrent = () => {
+      if (!turnContext) return true;
+      const state = get();
+      return (
+        turnExecutionVersion === turnContext.executionVersion &&
+        state.combatState.activeTurnIndex === turnContext.turnIndex &&
+        state.combatState.initiativeOrder[turnContext.turnIndex]?.id === turnContext.actorId
+      );
+    };
+
     // Dispatch boundary: Route spell category actions directly to canonical domain spell resolver
     if (action.category === 'Spells') {
+      if (!isActionTurnCurrent()) return false;
       const { resolveSpellAction } = await import('../domain/spells/spellResolver');
-      await resolveSpellAction(actor, target, action, action.data?.level);
-      return;
+      const result = await resolveSpellAction(actor, target, action, action.data?.level);
+      return isActionTurnCurrent() && result.success;
     }
 
-    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
+    const { addLog, rollDice3D, rollDiceBackground, updateRollOutcome, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
     const characterStore = useCharacterStore.getState();
     const { modifyHp } = characterStore;
 
@@ -1032,6 +1104,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       typeof action?.id === 'string' &&
       (action.id === 'attack' || action.id.startsWith('attack-'))
     );
+    const actorCombatant = get().combatState.monsters.find(monster => monster.id === actor?.id);
+    const isHostileMonsterAttack = Boolean(actorCombatant && !actorCombatant.isAlly && !isCharacterWeaponAttack);
 
     if (isCharacterWeaponAttack && attackingCharacter) {
       const currentCombatState = get().combatState;
@@ -1041,7 +1115,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (!targetCombatant || targetCombatant.isAlly || targetCombatant.hp <= 0) {
         addLog('Invalid attack target. Select an active hostile combatant.', 'error');
-        return;
+        return false;
       }
 
       // Keep canonical PC position data first. Allied NPC combatants may not have a
@@ -1078,23 +1152,27 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (!hasValidTargetCell) {
         addLog('Target is out of range or blocked by an obstacle.', 'warning');
-        return;
+        return false;
       }
 
       const availableAction = attackingCharacter.actionEconomy?.actions;
       if (!availableAction || !Number.isFinite(availableAction.current)) {
         addLog('Cannot resolve this attack because the character action resource is unavailable.', 'error');
-        return;
+        return false;
       }
 
       if (availableAction.current <= 0) {
         addLog("You don't have any actions remaining!", 'error');
-        return;
+        return false;
+      }
+
+      if (get().isRolling3D) {
+        addLog('The dice are still rolling. Finish the current roll before attacking again.', 'warning');
+        return false;
       }
 
       // Use the canonical current combatant snapshot for hit/damage resolution.
       target = targetCombatant;
-      characterStore.consumeAction(actor.id, 'actions');
     }
 
     // Rotate actor to face target
@@ -1171,11 +1249,49 @@ export const useGameStore = create<GameState>((set, get) => ({
     // Play weapon attack swing sound effect
     soundService.playEffect('COMBAT_SLASH');
 
-    // We'll use a simulated 3D roll for the hit
-    await rollDice3D(toHitNotation, `Attack: ${action.name}`);
+    // The visible DiceBox result is authoritative when available. Hostile NPCs
+    // use the same canonical background resolver if DiceBox is already busy, so
+    // their attack is not silently discarded and no second RNG path is introduced.
+    const rollContext = {
+      actionId: String(action.id || 'monster-attack'),
+      actorId: String(actor.id),
+      actorName: actor.name,
+      targetId: String(target.id),
+      targetName: target.name,
+      sourceSystem: 'combat',
+      ruleset: get().ruleset
+    };
+    let hitRoll = await rollDice3D(toHitNotation, `Attack: ${action.name}`, undefined, undefined, rollContext);
 
-    const d20 = Math.floor(Math.random() * 20) + 1;
-    const totalHit = d20 + attackBonus;
+    if (!hitRoll && isHostileMonsterAttack) {
+      hitRoll = await rollDiceBackground(toHitNotation, `Attack: ${action.name}`, rollContext);
+    }
+
+    if (!isActionTurnCurrent()) {
+      if (hitRoll) {
+        updateRollOutcome(hitRoll.id, {
+          status: 'CANCELLED',
+          detail: 'The initiating turn ended before the attack was resolved.'
+        });
+      }
+      addLog(`${actor.name}'s attack was cancelled because their turn ended before the roll resolved.`, 'warning');
+      return false;
+    }
+
+    if (!hitRoll || hitRoll.label.endsWith('(Failed)')) {
+      addLog('The attack roll could not be completed. No attack result was applied.', 'error');
+      return false;
+    }
+
+    // Spend the player's action only when the result is still attached to the
+    // turn that initiated it. A late result from an earlier turn is discarded.
+    if (isCharacterWeaponAttack) {
+      characterStore.consumeAction(actor.id, 'actions');
+    }
+
+    const d20 = hitRoll.rolls.find(roll => roll.die === 20 && roll.valid !== false)?.result
+      ?? Math.max(1, Math.min(20, hitRoll.total - attackBonus));
+    const totalHit = hitRoll.total;
 
     // Get target AC from Atlas-compatible data
     let targetAC = 10;
@@ -1205,7 +1321,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
 
     const isCrit = d20 === 20;
-    const isHit = isCrit || totalHit >= targetAC;
+    const isHit = isCrit || (d20 !== 1 && totalHit >= targetAC);
 
     if (isHit) {
       // Play weapon impact hit sound effect
@@ -1220,10 +1336,34 @@ export const useGameStore = create<GameState>((set, get) => ({
       // Double dice for crits (simplified)
       const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
 
-      // We'll use rollBackground for damage to not overlap 3D dice too much
-      const { diceService } = await import('../dice_roller/diceService');
-      const damageRoll = diceService.rollBackground(finalDice, 'Damage');
+      // Damage uses the same canonical resolver and is published to the in-game roll history.
+      const damageRoll = await rollDiceBackground(finalDice, 'Damage', {
+        actionId: String(action.id || 'weapon-attack'),
+        actorId: String(actor.id),
+        actorName: actor.name,
+        targetId: String(target.id),
+        targetName: target.name,
+        sourceSystem: 'combat-damage',
+        ruleset: get().ruleset
+      });
 
+      if (!isActionTurnCurrent()) {
+        updateRollOutcome(hitRoll.id, {
+          status: 'CANCELLED',
+          detail: 'The initiating turn ended before damage was applied.'
+        });
+        updateRollOutcome(damageRoll.id, {
+          status: 'CANCELLED',
+          detail: 'The initiating turn ended before damage was applied.'
+        });
+        addLog(`${actor.name}'s damage was discarded because their turn ended during resolution.`, 'warning');
+        return false;
+      }
+
+      updateRollOutcome(hitRoll.id, {
+        status: isCrit ? 'CRITICAL HIT' : 'HIT',
+        detail: `${totalHit} vs AC ${targetAC}`
+      });
       addLog(`${target.name} takes ${damageRoll.total} ${damageType} damage.`, 'error');
 
       // 3. Update HP
@@ -1248,8 +1388,14 @@ export const useGameStore = create<GameState>((set, get) => ({
         }
       }
     } else {
+      updateRollOutcome(hitRoll.id, {
+        status: 'MISS',
+        detail: `${totalHit} vs AC ${targetAC}`
+      });
       addLog(`MISS! (${totalHit} vs AC ${targetAC})`, 'warning');
     }
+
+    return true;
   },
 
   setIsGameStarted: (isGameStarted) => set({ isGameStarted }),
@@ -1266,59 +1412,78 @@ export const useGameStore = create<GameState>((set, get) => ({
   clearLogs: () => set({ logs: [] }),
 
   rollDice: (label, modifier, dieType = 20) => {
-    import('../dice_roller/diceService').then(({ diceService }) => {
-      const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
-      const result = diceService.rollBackground(notation, label);
-
-      const rollDetails = result.rolls
-        .filter(r => r.valid !== false)
-        .map(r => r.result)
-        .join(' + ');
-      const modStr = result.modifier !== 0 ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}` : '';
-      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      get().addLog(`${label}: ${result.notation} ${detailStr} = ${result.total}`, 'info');
-
-      set((state) => ({ 
-        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
-      }));
-    });
+    const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
+    void get().rollDiceBackground(notation, label);
   },
 
-  rollDice3D: async (notation, label, theme, color) => {
+  rollDiceBackground: async (notation, label, context, seed) => {
+    const { diceService } = await import('../dice_roller/diceService');
+    const rollContext = context || { sourceSystem: 'manual', ruleset: get().ruleset };
+    const result = diceService.rollBackground(notation, label, { context: rollContext, seed });
+    set(state => ({
+      recentRolls: [result, ...state.recentRolls].slice(0, 5)
+    }));
+    return result;
+  },
+
+  rollDice3D: async (notation, label, theme, color, context) => {
     const { diceService } = await import('../dice_roller/diceService');
     const selectedDiceTheme = 'default';
     const selectedDiceColor = '#8b0000';
-    
-    if (diceService.isRolling) {
+
+    if (diceService.isRolling || get().isRolling3D) {
       console.warn("[GameStore] Roll request ignored: DiceService is currently rolling.");
-      return;
+      return null;
     }
 
+    set({ isRolling3D: true });
     try {
-      const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
-      if (!result) return;
-      
-      // Create detailed log message
-      const rollDetails = result.rolls
-        .filter(r => r.valid !== false)
-        .map(r => r.result)
-        .join(' + ');
-      
-      const modStr = result.modifier !== 0 
-        ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}`
-        : '';
-        
-      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      const message = `${label}: ${result.notation} ${detailStr} = ${result.total}`;
-      
-      get().addLog(message, 'info');
+      const rollContext = context || { sourceSystem: 'manual', ruleset: get().ruleset };
+      const result = await diceService.roll3D(
+        notation,
+        label,
+        theme || selectedDiceTheme,
+        color || selectedDiceColor,
+        rollContext
+      );
+      if (!result) return null;
 
-      set((state) => ({ 
-        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      set(state => ({
+        recentRolls: [result, ...state.recentRolls].slice(0, 5)
       }));
+      return result;
     } catch (error) {
       console.error("Roll failed", error);
+      return null;
+    } finally {
+      set({ isRolling3D: false });
     }
+  },
+
+  updateRollOutcome: (rollId, outcome) => set(state => ({
+    recentRolls: state.recentRolls.map(roll =>
+      roll.id === rollId ? { ...roll, outcome } : roll
+    )
+  })),
+
+  applyRollModifier: (rollId, modifier) => {
+    if (!Number.isFinite(modifier) || modifier === 0) {
+      return get().recentRolls.find(roll => roll.id === rollId) || null;
+    }
+
+    let updatedRoll: DiceResult | null = null;
+    set(state => ({
+      recentRolls: state.recentRolls.map(roll => {
+        if (roll.id !== rollId) return roll;
+        updatedRoll = {
+          ...roll,
+          total: roll.total + modifier,
+          modifier: roll.modifier + modifier
+        };
+        return updatedRoll;
+      })
+    }));
+    return updatedRoll;
   },
 
   removeRoll: (id) => set((state) => ({

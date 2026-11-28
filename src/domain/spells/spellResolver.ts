@@ -1,4 +1,3 @@
-import { diceService } from '../../dice_roller/diceService';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useGameStore } from '../../store/useGameStore';
 
@@ -263,8 +262,17 @@ export async function resolveSpellAction(
     }
 
     const dicePart = healFormula.replace('+ MOD', '').trim();
-    const roll = diceService.rollBackground(dicePart, `Healing (${spellAction.name})`);
-    const totalHeal = roll.total + spellStats.modifier;
+    const roll = await gameStore.rollDiceBackground(dicePart, `Healing (${spellAction.name})`, {
+      actionId: spellAction.id,
+      actorId: String(actor.id),
+      actorName,
+      targetId: target?.id ? String(target.id) : undefined,
+      targetName,
+      sourceSystem: 'spell-healing',
+      ruleset: characterRuleset
+    });
+    const adjustedHealingRoll = gameStore.applyRollModifier(roll.id, spellStats.modifier) || roll;
+    const totalHeal = adjustedHealingRoll.total;
 
     if (target) {
       const isTargetPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
@@ -309,8 +317,20 @@ export async function resolveSpellAction(
       return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
     }
 
-    const d20Roll = diceService.rollBackground('1d20', `Spell Attack (${spellAction.name})`);
-    const totalToHit = d20Roll.total + spellStats.attackBonus;
+    const d20Roll = await gameStore.rollDiceBackground('1d20', `Spell Attack (${spellAction.name})`, {
+      actionId: spellAction.id,
+      actorId: String(actor.id),
+      actorName,
+      targetId: target?.id ? String(target.id) : undefined,
+      targetName,
+      sourceSystem: 'spell-attack',
+      ruleset: characterRuleset
+    });
+    // Preserve the raw d20 face for natural 1/20 checks, while making the
+    // shared history total include the exact attack bonus used by gameplay.
+    const d20Face = d20Roll.rolls.find(roll => roll.die === 20 && roll.valid !== false)?.result ?? d20Roll.total;
+    const adjustedAttackRoll = gameStore.applyRollModifier(d20Roll.id, spellStats.attackBonus) || d20Roll;
+    const totalToHit = adjustedAttackRoll.total;
 
     let targetAC = 10;
     if (target) {
@@ -320,10 +340,23 @@ export async function resolveSpellAction(
       else if (target.stats?.dex) targetAC = 10 + Math.floor((target.stats.dex - 10) / 2);
     }
 
-    const isHit = totalToHit >= targetAC || d20Roll.total === 20;
+    const isCrit = d20Face === 20;
+    const isHit = isCrit || (d20Face !== 1 && totalToHit >= targetAC);
+    gameStore.updateRollOutcome(d20Roll.id, {
+      status: isCrit ? 'CRITICAL HIT' : isHit ? 'HIT' : 'MISS',
+      detail: `${totalToHit} vs AC ${targetAC}`
+    });
 
     if (isHit) {
-      const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+      const dmgRoll = await gameStore.rollDiceBackground(damageDice, `Spell Damage (${spellAction.name})`, {
+        actionId: spellAction.id,
+        actorId: String(actor.id),
+        actorName,
+        targetId: target?.id ? String(target.id) : undefined,
+        targetName,
+        sourceSystem: 'spell-damage',
+        ruleset: characterRuleset
+      });
       const damageTotal = dmgRoll.total;
 
       if (target) {
@@ -391,13 +424,34 @@ export async function resolveSpellAction(
       targetSaveMod = Math.floor((target.stats[dcType] - 10) / 2);
     }
 
-    const saveRoll = diceService.rollBackground('1d20', `Saving Throw vs ${spellAction.name}`);
-    const totalSave = saveRoll.total + targetSaveMod;
+    const saveRoll = await gameStore.rollDiceBackground('1d20', `Saving Throw vs ${spellAction.name}`, {
+      actionId: spellAction.id,
+      actorId: target?.id ? String(target.id) : undefined,
+      actorName: targetName,
+      targetId: String(actor.id),
+      targetName: actorName,
+      sourceSystem: 'spell-save',
+      ruleset: characterRuleset
+    });
+    const adjustedSaveRoll = gameStore.applyRollModifier(saveRoll.id, targetSaveMod) || saveRoll;
+    const totalSave = adjustedSaveRoll.total;
     const passedSave = totalSave >= spellStats.saveDC;
+    gameStore.updateRollOutcome(saveRoll.id, {
+      status: passedSave ? 'SAVED' : 'FAILED SAVE',
+      detail: `${totalSave} vs DC ${spellStats.saveDC}`
+    });
 
     let finalDamage = 0;
     if (damageDice) {
-      const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+      const dmgRoll = await gameStore.rollDiceBackground(damageDice, `Spell Damage (${spellAction.name})`, {
+        actionId: spellAction.id,
+        actorId: String(actor.id),
+        actorName,
+        targetId: target?.id ? String(target.id) : undefined,
+        targetName,
+        sourceSystem: 'spell-damage',
+        ruleset: characterRuleset
+      });
       finalDamage = dmgRoll.total;
       if (passedSave) {
         finalDamage = spellData.dc.dc_success === 'half' ? Math.floor(finalDamage / 2) : 0;
@@ -453,7 +507,15 @@ export async function resolveSpellAction(
       return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
     }
 
-    const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+    const dmgRoll = await gameStore.rollDiceBackground(damageDice, `Spell Damage (${spellAction.name})`, {
+        actionId: spellAction.id,
+        actorId: String(actor.id),
+        actorName,
+        targetId: target?.id ? String(target.id) : undefined,
+        targetName,
+        sourceSystem: 'spell-damage',
+        ruleset: characterRuleset
+      });
     const damageTotal = dmgRoll.total;
 
     if (target) {

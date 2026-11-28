@@ -10,6 +10,8 @@ const readSource = (relativePath: string) =>
 
 const originalCombatState = useGameStore.getState().combatState;
 const originalRollDice3D = useGameStore.getState().rollDice3D;
+const originalRollDiceBackground = useGameStore.getState().rollDiceBackground;
+const originalIsRolling3D = useGameStore.getState().isRolling3D;
 const originalAddLog = useGameStore.getState().addLog;
 const originalCharacters = useCharacterStore.getState().characters;
 const originalActiveCharacterId = useCharacterStore.getState().activeCharacterId;
@@ -131,6 +133,16 @@ beforeEach(() => {
     activeCharacterId: 'hero-action-test',
     rollDice3D: async () => {
       rollCount += 1;
+      return {
+        id: `attack-roll-${rollCount}`,
+        notation: '1d20',
+        total: 11,
+        label: 'Mock Attack',
+        rolls: [{ die: 20, result: 11, valid: true }],
+        modifier: 0,
+        timestamp: Date.now(),
+        source: '3d' as const
+      };
     },
     addLog: (message: string) => {
       logMessages.push(message);
@@ -160,6 +172,8 @@ afterEach(() => {
   useGameStore.setState({
     combatState: originalCombatState,
     rollDice3D: originalRollDice3D,
+    rollDiceBackground: originalRollDiceBackground,
+    isRolling3D: originalIsRolling3D,
     addLog: originalAddLog
   });
   useCharacterStore.setState({
@@ -230,14 +244,8 @@ describe('Canonical player weapon action economy (#421)', () => {
     const actor = { id: 'hero-action-test', name: 'Test Hero' };
     const target = useGameStore.getState().combatState.monsters[0];
 
-    const originalRandom = Math.random;
-    try {
-      // A fixed non-natural-20 roll guarantees a miss against the fixture's AC 99.
-      Math.random = () => 0.5;
-      await useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
-    } finally {
-      Math.random = originalRandom;
-    }
+    // The test double returns an authoritative visible d20 result of 11.
+    await useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
 
     expect(rollCount).toBe(1);
     expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(0);
@@ -248,6 +256,117 @@ describe('Canonical player weapon action economy (#421)', () => {
     expect(rollCount).toBe(1);
     expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(0);
     expect(logMessages.some(message => message.includes('actions remaining'))).toBe(true);
+  });
+
+  it('discards a pending weapon result when the initiating turn has ended', async () => {
+    const actor = { id: 'hero-action-test', name: 'Test Hero' };
+    const target = createGoblin({ armor_class: 1 });
+    const nextHero = { ...createHero(), id: 'next-hero-action-test', name: 'Next Hero' };
+    let releaseRoll!: (result: any) => void;
+
+    useCharacterStore.setState({
+      characters: [createHero(), nextHero],
+      activeCharacterId: 'hero-action-test'
+    });
+    useGameStore.setState(state => ({
+      combatState: {
+        ...state.combatState,
+        monsters: [target],
+        initiativeOrder: [
+          { id: 'hero-action-test', name: 'Test Hero', value: 15, isPlayer: true, isAlly: false },
+          { id: nextHero.id, name: nextHero.name, value: 10, isPlayer: true, isAlly: false }
+        ],
+        activeTurnIndex: 0
+      },
+      rollDice3D: async () => new Promise(resolve => {
+        releaseRoll = resolve;
+      })
+    }));
+
+    const pendingAttack = useGameStore.getState().resolveCombatAction(actor, target, weaponAttack);
+    expect(releaseRoll).toBeDefined();
+
+    // Advance before DiceBox settles. The previous turn generation is now invalid.
+    useGameStore.getState().nextTurn();
+    releaseRoll({
+      id: 'late-attack-roll',
+      notation: '1d20',
+      total: 15,
+      label: 'Attack: Unarmed Strike',
+      rolls: [{ die: 20, result: 15, valid: true }],
+      modifier: 0,
+      timestamp: Date.now(),
+      source: '3d'
+    });
+
+    await pendingAttack;
+
+    expect(useGameStore.getState().combatState.activeTurnIndex).toBe(1);
+    expect(useGameStore.getState().combatState.monsters[0].hp).toBe(12);
+    expect(useCharacterStore.getState().characters.find(char => char.id === actor.id)?.actionEconomy?.actions.current).toBe(1);
+  });
+
+  it('resolves a hostile attack through the canonical background resolver while DiceBox is busy', async () => {
+    const hero = createHero();
+    const monster = {
+      id: 'monster-busy-dice-test',
+      name: 'Goblin',
+      type: 'enemy',
+      x: 3,
+      y: 2,
+      size: 'Small',
+      hp: 12,
+      maxHp: 12,
+      armor_class: 12,
+      isAlly: false
+    };
+    const backgroundRolls: string[] = [];
+
+    useCharacterStore.setState({ characters: [hero], activeCharacterId: hero.id });
+    useGameStore.setState(state => ({
+      isRolling3D: true,
+      rollDice3D: async () => null,
+      rollDiceBackground: async (notation: string, label: string) => {
+        backgroundRolls.push(notation);
+        const isAttack = notation.startsWith('1d20');
+        return {
+          id: `monster-roll-${backgroundRolls.length}`,
+          notation,
+          total: isAttack ? 18 : 4,
+          label,
+          rolls: isAttack
+            ? [{ die: 20, result: 14, valid: true }]
+            : [{ die: 6, result: 4, valid: true }],
+          modifier: isAttack ? 4 : 0,
+          timestamp: Date.now(),
+          source: 'background' as const
+        };
+      },
+      combatState: {
+        ...state.combatState,
+        monsters: [monster],
+        pcPositions: { [hero.id]: { x: 2, y: 2, rotation: 0 } },
+        initiativeOrder: [
+          { id: monster.id, name: monster.name, value: 15, isPlayer: false, isAlly: false },
+          { id: hero.id, name: hero.name, value: 10, isPlayer: true, isAlly: false }
+        ],
+        activeTurnIndex: 0
+      }
+    }));
+
+    const resolved = await useGameStore.getState().resolveCombatAction(
+      { id: monster.id, name: monster.name, x: monster.x, y: monster.y },
+      { id: hero.id, name: hero.name, x: 2, y: 2, armor_class: 12, stats: hero.stats },
+      {
+        name: 'Scimitar',
+        attack_bonus: 4,
+        damage: [{ damage_dice: '1d6', damage_type: { name: 'slashing' } }]
+      }
+    );
+
+    expect(resolved).toBe(true);
+    expect(backgroundRolls).toEqual(['1d20+4', '1d6']);
+    expect(useCharacterStore.getState().characters.find(char => char.id === hero.id)?.hp).toBe(16);
   });
 
   it('does not consume an action or roll against a target outside the active encounter', async () => {

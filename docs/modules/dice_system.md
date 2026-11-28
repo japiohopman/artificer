@@ -20,8 +20,18 @@ The system uses ONE dice runtime.
 - The system exclusively uses the dependencies from `node_modules`. No upstream internals (like `WorldFacade.js`) are manually vendored.
 
 ## Result Handling & Fallback
-- `DiceService` owns all result interpretation using `@3d-dice/dice-parser-interface`. 
-- If WebGL or WASM initialization fails, or if a roll fails to produce results, `DiceService` seamlessly falls back to a background random number generation. The application uses `rollBackground` ensuring the game state continues without interruption.
+- `src/dice_roller/diceResolver.ts` provides browser-independent dice resolution through `@3d-dice/dice-roller-parser`.
+- Background rolls can receive a seed. Identical notation and seed values produce identical dice faces and totals.
+- When DiceBox is available, the settled 3D result is authoritative. `DiceService` returns the parsed faces and total, and gameplay consumes that same result; combat must not perform a second hidden d20 roll.
+- If WebGL/WASM initialization fails, or the 3D result cannot be produced, `DiceService` falls back to the pure background resolver so gameplay can continue.
+- The installed DiceBox 1.x API does not expose a documented way to force arbitrary predetermined die faces. Do not claim that a pre-resolved result can be animated as a forced 3D result.
+
+## Gameplay Roll History & Notifications
+- `useGameStore.rollDice3D()` and `useGameStore.rollDiceBackground()` publish structured `DiceResult` objects to the shared `recentRolls` history.
+- Roll records retain notation, total, individual faces, dropped-die state, modifier, source, optional seed, and provenance (action, actor, target, ruleset and source system).
+- `NotificationWindow.tsx` presents recent results and lets the player inspect a specific roll. Combat and spell attack rolls also retain their outcome (HIT, MISS, CRITICAL HIT, SAVED or FAILED SAVE).
+- The old `DiceRollOverlay.tsx` remains a legacy presentation component and is not mounted as a second notification surface.
+- Clear Notifications clears both ordinary system logs and the recent roll history.
 
 ## Character Creator API
 - **4d6 Drop-Lowest**: Character Creator rolls ability scores using the `diceService.rollAbilityScore()` API.

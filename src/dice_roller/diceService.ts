@@ -1,34 +1,22 @@
 import DiceBox from "@3d-dice/dice-box";
-import * as DiceRollerParser from "@3d-dice/dice-roller-parser";
 import DiceParserInterface from "@3d-dice/dice-parser-interface";
-
-// Handle potential CJS/ESM interop issues for dice-roller-parser
-const DiceRoller = (DiceRollerParser as any).DiceRoller || 
-                   (DiceRollerParser as any).default?.DiceRoller || 
-                   (DiceRollerParser as any).default;
+import {
+  resolveDiceNotation,
+  extractDiceRolls,
+  type DiceResult,
+  type DiceRollContext,
+  type DiceResolveOptions
+} from "./diceResolver";
 
 // Handle potential CJS/ESM interop issues for dice-parser-interface
 const DiceParser = (DiceParserInterface as any).default || DiceParserInterface;
 
-export interface DiceResult {
-  id: string;
-  notation: string;
-  total: number;
-  label: string;
-  rolls: {
-    die: number;
-    result: number;
-    valid?: boolean;
-  }[];
-  modifier: number;
-  timestamp: number;
-}
+export type { DiceResult } from "./diceResolver";
 
 export type DiceServiceStatus = 'idle' | 'rolling';
 
 class DiceService {
   private diceBox: any;
-  private roller: any;
   private parser: any;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
@@ -36,8 +24,6 @@ class DiceService {
   private listeners: Set<(status: DiceServiceStatus) => void> = new Set();
 
   constructor() {
-    // Some versions of dice-roller-parser require a random callback
-    this.roller = new DiceRoller();
     this.parser = new DiceParser();
   }
 
@@ -146,7 +132,13 @@ class DiceService {
   /**
    * Roll dice with 3D animation.
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
+  async roll3D(
+    notation: string,
+    label = "Roll",
+    theme?: string,
+    color?: string,
+    context?: DiceRollContext
+  ): Promise<DiceResult | null> {
     if (this.isRolling) {
       console.warn(`[DiceService] Roll request ignored: dice system is busy (${this.status}).`);
       return null;
@@ -169,7 +161,7 @@ class DiceService {
 
       if (!this.initialized || !this.diceBox) {
         console.warn("[DiceService] DiceBox not initialized, returning fallback.");
-        return this.rollBackground(notation, label);
+        return this.rollBackground(notation, label, { context });
       }
 
       // 3D Roll - Ensure theme and color are passed correctly
@@ -190,7 +182,7 @@ class DiceService {
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
         console.warn("[DiceService] No results from 3D roll, returning fallback.");
-        return this.rollBackground(notation, label);
+        return this.rollBackground(notation, label, { context });
       }
 
       // Use the parser to get the final computed result object
@@ -209,7 +201,9 @@ class DiceService {
         label,
         rolls,
         modifier,
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        source: "3d",
+        ...(context ? { context } : {})
       };
 
       // Centralized short visual delay so physical dice remain visible briefly after settling
@@ -218,82 +212,19 @@ class DiceService {
       return diceResult;
     } catch (error) {
       console.error("[DiceService] roll3D execution failed:", error);
-      return this.rollBackground(notation, label);
+      return this.rollBackground(notation, label, { context });
     } finally {
       this.safeClear();
       this.setStatus('idle');
     }
   }
 
-  private extractRolls(parsedResult: any): any[] {
-    const rolls: any[] = [];
-    const walk = (node: any) => {
-      if (!node) return;
-      
-      // If it's a die node, it contains the individual rolls
-      if (node.type === "die" && node.rolls) {
-        const sides = node.sides?.value ?? node.sides ?? 20;
-        node.rolls.forEach((r: any) => {
-          rolls.push({ die: sides, result: r.value, valid: r.valid !== false });
-        });
-      } 
-      // Some versions of the parser might have 'roll' nodes directly
-      else if (node.type === "roll") {
-        rolls.push({ die: node.die ?? 20, result: node.value, valid: node.valid !== false });
-      }
-      // Recursive cases for expressions/groups
-      if (node.ops) {
-        if (Array.isArray(node.ops)) {
-            node.ops.forEach(walk);
-        } else {
-            walk(node.ops);
-        }
-      }
-      if (node.left) walk(node.left);
-      if (node.right) walk(node.right);
-      if (node.head) walk(node.head);
-      if (node.tails && Array.isArray(node.tails)) {
-        node.tails.forEach((t: any) => {
-            if (Array.isArray(t) && t[1]) walk(t[1]);
-            else walk(t);
-        });
-      }
-    };
-    walk(parsedResult);
-    return rolls;
+  private extractRolls(parsedResult: any): DiceResult["rolls"] {
+    return extractDiceRolls(parsedResult);
   }
 
-  rollBackground(notation: string, label = "Roll"): DiceResult {
-    try {
-      const parsedResult = this.roller.roll(notation);
-      const allRolls = this.extractRolls(parsedResult);
-
-      // Calculate modifier
-      let rollSum = 0;
-      allRolls.forEach(r => rollSum += r.result);
-      const modifier = parsedResult.value - rollSum;
-
-      return {
-        id: crypto.randomUUID(),
-        notation,
-        total: parsedResult.value,
-        label,
-        rolls: allRolls.map(r => ({ die: r.die, result: r.result, valid: r.valid })),
-        modifier,
-        timestamp: Date.now()
-      };
-    } catch (error) {
-      console.error("[DiceService] Background roll failed:", error);
-      return {
-        id: crypto.randomUUID(),
-        notation,
-        total: 0,
-        label: `${label} (Failed)`,
-        rolls: [],
-        modifier: 0,
-        timestamp: Date.now()
-      };
-    }
+  rollBackground(notation: string, label = "Roll", options: DiceResolveOptions = {}): DiceResult {
+    return resolveDiceNotation(notation, label, options);
   }
 
   async rollAbilityScore(label = "Ability Score"): Promise<DiceResult | null> {

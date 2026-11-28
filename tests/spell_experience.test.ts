@@ -12,6 +12,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
     useGameStore.getState().setRuleset('2014');
     useGameStore.setState({
       logs: [],
+      recentRolls: [],
       combatState: {
         playerPos: { x: 2, y: 2 },
         monsters: [],
@@ -272,6 +273,13 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(updatedChar?.hp).toBeGreaterThan(5);
       expect(updatedChar?.spellSlots['1'].current).toBe(1); // Deducted exactly 1 slot
       expect(updatedChar?.actionEconomy?.actions.current).toBe(0); // Deducted exactly 1 action
+
+      const healingRoll = useGameStore.getState().recentRolls.find(roll => roll.context?.sourceSystem === 'spell-healing');
+      expect(healingRoll).toBeDefined();
+      expect(healingRoll?.modifier).toBe(3); // Cleric's WIS modifier is included in the shared history.
+      expect(healingRoll?.total).toBe(
+        (healingRoll?.rolls.filter(roll => roll.valid !== false).reduce((sum, roll) => sum + roll.result, 0) || 0) + 3
+      );
     });
 
     it('8. C: Failure case (Insufficient spell slot) → NO slot consumed and NO HP change', async () => {
