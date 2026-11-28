@@ -271,7 +271,8 @@ export async function resolveSpellAction(
       sourceSystem: 'spell-healing',
       ruleset: characterRuleset
     });
-    const totalHeal = roll.total + spellStats.modifier;
+    const adjustedHealingRoll = gameStore.applyRollModifier(roll.id, spellStats.modifier) || roll;
+    const totalHeal = adjustedHealingRoll.total;
 
     if (target) {
       const isTargetPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
@@ -325,7 +326,11 @@ export async function resolveSpellAction(
       sourceSystem: 'spell-attack',
       ruleset: characterRuleset
     });
-    const totalToHit = d20Roll.total + spellStats.attackBonus;
+    // Preserve the raw d20 face for natural 1/20 checks, while making the
+    // shared history total include the exact attack bonus used by gameplay.
+    const d20Face = d20Roll.rolls.find(roll => roll.die === 20 && roll.valid !== false)?.result ?? d20Roll.total;
+    const adjustedAttackRoll = gameStore.applyRollModifier(d20Roll.id, spellStats.attackBonus) || d20Roll;
+    const totalToHit = adjustedAttackRoll.total;
 
     let targetAC = 10;
     if (target) {
@@ -335,7 +340,6 @@ export async function resolveSpellAction(
       else if (target.stats?.dex) targetAC = 10 + Math.floor((target.stats.dex - 10) / 2);
     }
 
-    const d20Face = d20Roll.rolls.find(roll => roll.die === 20 && roll.valid !== false)?.result ?? d20Roll.total;
     const isCrit = d20Face === 20;
     const isHit = isCrit || (d20Face !== 1 && totalToHit >= targetAC);
     gameStore.updateRollOutcome(d20Roll.id, {
@@ -429,7 +433,8 @@ export async function resolveSpellAction(
       sourceSystem: 'spell-save',
       ruleset: characterRuleset
     });
-    const totalSave = saveRoll.total + targetSaveMod;
+    const adjustedSaveRoll = gameStore.applyRollModifier(saveRoll.id, targetSaveMod) || saveRoll;
+    const totalSave = adjustedSaveRoll.total;
     const passedSave = totalSave >= spellStats.saveDC;
     gameStore.updateRollOutcome(saveRoll.id, {
       status: passedSave ? 'SAVED' : 'FAILED SAVE',
