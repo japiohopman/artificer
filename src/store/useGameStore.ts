@@ -946,23 +946,58 @@ export const useGameStore = create<GameState>((set, get) => ({
         initialPcPositions[c.id] = { x, y, rotation: 0 };
       });
 
-      // Roll initiative for everyone
-      const order = [
-        ...activeParty.map((c: any) => ({
-          id: c.id,
-          name: c.name,
-          value: Math.floor(Math.random() * 20) + 1 + (Math.floor(((c.stats?.dex || 10) - 10) / 2) || 0),
-          isPlayer: true,
-          isAlly: false
-        })),
-        ...combatState.monsters.map(m => ({
-          id: m.id,
-          name: m.name,
-          value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0),
-          isPlayer: m.isAlly || false, // Treat allies/summons as player-controlled in the turn order
-          isAlly: m.isAlly || false
-        }))
-      ].sort((a, b) => b.value - a.value);
+      // Resolve initiative through the canonical dice service so the displayed
+      // d20 values and the initiative order always share the same results.
+      const initiativeEntries = await Promise.all([
+        ...activeParty.map(async (character: any) => {
+          const dexterityModifier = Math.floor(((character.stats?.dex || 10) - 10) / 2);
+          const roll = await get().rollDiceBackground(
+            `1d20${dexterityModifier >= 0 ? '+' : ''}${dexterityModifier}`,
+            `Initiative: ${character.name}`,
+            {
+              actionId: 'initiative',
+              actorId: String(character.id),
+              actorName: character.name,
+              sourceSystem: 'initiative',
+              ruleset: get().ruleset
+            }
+          );
+
+          return {
+            id: character.id,
+            name: character.name,
+            value: roll.total,
+            isPlayer: true,
+            isAlly: false
+          };
+        }),
+        ...combatState.monsters.map(async monster => {
+          const dexterityModifier = monster.stats?.dex
+            ? Math.floor((monster.stats.dex - 10) / 2)
+            : 0;
+          const roll = await get().rollDiceBackground(
+            `1d20${dexterityModifier >= 0 ? '+' : ''}${dexterityModifier}`,
+            `Initiative: ${monster.name}`,
+            {
+              actionId: 'initiative',
+              actorId: String(monster.id),
+              actorName: monster.name,
+              sourceSystem: 'initiative',
+              ruleset: get().ruleset
+            }
+          );
+
+          return {
+            id: monster.id,
+            name: monster.name,
+            value: roll.total,
+            isPlayer: monster.isAlly || false,
+            isAlly: monster.isAlly || false
+          };
+        })
+      ]);
+
+      const order = initiativeEntries.sort((a, b) => b.value - a.value);
 
       // Reset action economy for everyone at combat start
       activeParty.forEach((c: any) => {
