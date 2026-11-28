@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { createSeededRandom, resolveDiceNotation } from "../src/dice_roller/diceResolver";
+import { createSeededRandom, extractDiceRolls, resolveDiceNotation } from "../src/dice_roller/diceResolver";
 import { useGameStore } from "../src/store/useGameStore";
 
 describe("Canonical dice resolver", () => {
@@ -64,6 +64,74 @@ describe("Canonical dice resolver", () => {
       expect(useGameStore.getState().recentRolls[0]).toEqual(result);
       expect(result.context).toEqual(context);
       expect(result.seed).toBe("combat-test-seed");
+    } finally {
+      useGameStore.setState({ recentRolls: originalRolls });
+    }
+  });
+
+  it("extracts visible expression dice from the parser dice collection and reads die.value", () => {
+    const parserResult = {
+      type: "expressionroll",
+      value: 17,
+      dice: [
+        {
+          type: "die",
+          die: { type: "number", value: 20 },
+          rolls: [{ roll: 12, valid: true }]
+        }
+      ]
+    };
+
+    expect(extractDiceRolls(parserResult)).toEqual([
+      { die: 20, result: 12, valid: true }
+    ]);
+  });
+
+  it("preserves dropped faces while extracting visible multi-die results", () => {
+    const parserResult = {
+      type: "expressionroll",
+      value: 8,
+      dice: [
+        {
+          type: "die",
+          die: { value: 6 },
+          rolls: [
+            { roll: 1, valid: false },
+            { roll: 2, valid: true },
+            { roll: 6, valid: true }
+          ]
+        }
+      ]
+    };
+
+    expect(extractDiceRolls(parserResult)).toEqual([
+      { die: 6, result: 1, valid: false },
+      { die: 6, result: 2, valid: true },
+      { die: 6, result: 6, valid: true }
+    ]);
+  });
+
+  it("keeps gameplay modifiers in the shared roll total without changing the raw d20 face", () => {
+    const originalRolls = useGameStore.getState().recentRolls;
+    const baseRoll = {
+      id: "modifier-roll-test",
+      notation: "1d20",
+      total: 12,
+      label: "Spell Attack",
+      rolls: [{ die: 20, result: 12, valid: true }],
+      modifier: 0,
+      timestamp: Date.now(),
+      source: "background" as const
+    };
+
+    try {
+      useGameStore.setState({ recentRolls: [baseRoll] });
+      const adjusted = useGameStore.getState().applyRollModifier(baseRoll.id, 5);
+
+      expect(adjusted?.total).toBe(17);
+      expect(adjusted?.modifier).toBe(5);
+      expect(adjusted?.rolls[0].result).toBe(12);
+      expect(useGameStore.getState().recentRolls[0]).toEqual(adjusted);
     } finally {
       useGameStore.setState({ recentRolls: originalRolls });
     }
