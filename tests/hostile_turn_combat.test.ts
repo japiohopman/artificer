@@ -294,6 +294,58 @@ describe('Hostile Turn & Edge-Aware Combat AI Regression Tests (#418)', () => {
       expect(resolvedActionName).toBe('scimitar');
     });
 
+    it('keeps the hostile turn active when its attack resolver reports an unresolved roll', async () => {
+      const hero: any = {
+        id: 'hero-pending-attack',
+        name: 'Hero',
+        class: 'Fighter',
+        isNpc: false,
+        hp: 20,
+        maxHp: 20,
+        stats: { str: 12, dex: 12, con: 12, int: 10, wis: 10, cha: 10 }
+      };
+      const goblin = {
+        id: 'goblin-pending-attack',
+        name: 'Goblin',
+        type: 'enemy',
+        size: 'Small',
+        hp: 7,
+        maxHp: 7,
+        x: 3,
+        y: 2,
+        speed: 0,
+        awareness: 'combat',
+        viewDirection: 0,
+        actions: goblinData.actions,
+        isAlly: false
+      };
+
+      useCharacterStore.setState({ characters: [hero], activeCharacterId: hero.id });
+      useUIStore.setState({ gameMode: 'combat' });
+      useGameStore.setState({
+        ruleset: '2014',
+        combatState: {
+          grid: Array(10).fill(null).map((_, y) => Array(10).fill(null).map((_, x) => ({ x, y, type: 'floor' }))),
+          walls: [],
+          playerPos: { x: 2, y: 2 },
+          pcPositions: { [hero.id]: { x: 2, y: 2, rotation: 0 } },
+          monsters: [goblin],
+          initiativeOrder: [
+            { id: goblin.id, name: goblin.name, value: 15, isPlayer: false, isAlly: false },
+            { id: hero.id, name: hero.name, value: 10, isPlayer: true, isAlly: false }
+          ],
+          activeTurnIndex: 0
+        },
+        resolveCombatAction: async () => false
+      });
+
+      await useGameStore.getState().executeMonsterTurn(goblin.id);
+      await new Promise(resolve => setTimeout(resolve, 750));
+
+      expect(useGameStore.getState().combatState.activeTurnIndex).toBe(0);
+      expect(useGameStore.getState().combatState.initiativeOrder[0].id).toBe(goblin.id);
+    });
+
     it('hostile selects Shortbow when target is outside melee reach but in ranged distance', async () => {
       let resolvedActionName = '';
 
