@@ -181,7 +181,7 @@ class DiceService {
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
         console.warn("[DiceService] No results from 3D roll, returning fallback.");
-        return this.rollBackground(notation, label);
+        return this.rollBackground(notation, label, { context });
       }
 
       // Use the parser to get the final computed result object
@@ -211,7 +211,7 @@ class DiceService {
       return diceResult;
     } catch (error) {
       console.error("[DiceService] roll3D execution failed:", error);
-      return this.rollBackground(notation, label);
+      return this.rollBackground(notation, label, { context });
     } finally {
       this.safeClear();
       this.setStatus('idle');
