@@ -11,7 +11,8 @@ import { cn } from '../../lib/utils';
 import { REGION_NAMES } from '../../data/regions';
 
 export const NotificationWindow: React.FC = () => {
-  const { logs, clearLogs, combatState, startCombat } = useGameStore();
+  const { logs, clearLogs, combatState, startCombat, recentRolls, clearRoll } = useGameStore();
+  const [selectedRollId, setSelectedRollId] = React.useState<string | null>(null);
   const { playSound } = useAudioStore();
   const { characters } = useCharacterStore();
 
@@ -27,6 +28,12 @@ export const NotificationWindow: React.FC = () => {
 
   // Always show the newest log to keep the window active as requested
   const recentLogs = logs.length > 0 ? logs[0] : null;
+  const selectedRoll = recentRolls.find(roll => roll.id === selectedRollId) || recentRolls[0] || null;
+  const clearNotifications = () => {
+    clearLogs();
+    clearRoll();
+    setSelectedRollId(null);
+  };
 
   const categoryIcon = currentLocation ? CategoryIcons[currentLocation.category]?.icon : null;
   const categoryColor = currentLocation ? CategoryIcons[currentLocation.category]?.color : 'currentColor';
@@ -65,7 +72,7 @@ export const NotificationWindow: React.FC = () => {
               )}
               <button
                 className="p-1.5 text-white/25 hover:text-white/70 transition-colors"
-                onClick={() => clearLogs()}
+                onClick={clearNotifications}
                 title="Clear System Logs"
                 aria-label="Clear system logs"
               >
@@ -213,44 +220,134 @@ export const NotificationWindow: React.FC = () => {
 
           {/* Right: Actions */}
           <div className="flex items-center gap-4">
-             <button className="text-white/10 hover:text-white/40 transition-colors p-2" onClick={() => clearLogs()} title="Clear System Logs">
+             <button className="text-white/10 hover:text-white/40 transition-colors p-2" onClick={clearNotifications} title="Clear System Logs">
               <GameIcon name="x" size={14} />
             </button>
           </div>
         </div>
       )}
 
-      {/* Bottom Section: Message Logs */}
-      <div className="h-12 px-6 flex items-center overflow-hidden bg-black/20">
-         <AnimatePresence mode="wait">
-            {recentLogs && (
-              <motion.div
-                key={recentLogs.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="flex items-center gap-3 w-full"
-              >
-                <div className={cn(
-                  "shrink-0 p-1.5 rounded bg-white/5",
-                  recentLogs.type === 'error' ? 'text-red-400' :
-                  recentLogs.type === 'success' ? 'text-emerald-400' :
-                  recentLogs.type === 'warning' ? 'text-amber-400' : 'text-cyan-400'
-                )}>
-                  {recentLogs.type === 'error' ? <GameIcon name="shield_alert" size={14} /> :
-                   recentLogs.type === 'success' ? <GameIcon name="magic_effect" size={14} /> :
-                   recentLogs.type === 'warning' ? <GameIcon name="bell" size={14} /> : <GameIcon name="info" size={14} />}
+      {/* Bottom Section: Structured Dice Results + Message Logs */}
+      <div className="flex flex-col gap-2 px-4 py-3 bg-black/20 min-w-0">
+        {recentRolls.length > 0 && (
+          <div className="flex flex-col gap-1.5 min-w-0">
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-[8px] font-black uppercase tracking-[0.28em] text-dragon-gold/70">Recent dice rolls</span>
+              <span className="text-[8px] font-mono text-white/25">{recentRolls.length} / 5</span>
+            </div>
+
+            <div className="flex items-center gap-1.5 overflow-x-auto custom-scrollbar pb-0.5">
+              {recentRolls.map(roll => {
+                const isSelected = selectedRoll?.id === roll.id;
+                return (
+                  <button
+                    key={roll.id}
+                    type="button"
+                    onClick={() => setSelectedRollId(roll.id)}
+                    aria-pressed={isSelected}
+                    title={`${roll.label}: ${roll.notation} = ${roll.total}`}
+                    className={cn(
+                      "shrink-0 flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-left transition-colors max-w-[190px]",
+                      isSelected
+                        ? "bg-dragon-gold/15 border-dragon-gold/50 text-dragon-gold"
+                        : "bg-white/[0.03] border-white/10 text-white/55 hover:bg-white/[0.07] hover:text-white/80"
+                    )}
+                  >
+                    <span className="text-[8px] font-bold uppercase tracking-wide truncate max-w-[125px]">{roll.label}</span>
+                    <span className="text-sm font-black tabular-nums">{roll.total}</span>
+                    {roll.outcome && (
+                      <span className="text-[7px] font-black uppercase tracking-wide">{roll.outcome.status}</span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {selectedRoll && (
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 min-w-0" aria-live="polite">
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="text-[9px] font-black uppercase tracking-wider text-white/80">{selectedRoll.label}</span>
+                  <span className="text-[8px] font-mono text-white/35">{selectedRoll.notation}</span>
                 </div>
-                
-                <div className="text-sm font-mono uppercase tracking-widest text-white/90 font-medium leading-tight pt-0.5 drop-shadow-sm">
-                  <DiceText>{recentLogs.message}</DiceText>
+
+                <div className="flex flex-wrap items-center gap-1">
+                  {selectedRoll.rolls.length > 0 ? selectedRoll.rolls.map((die, index) => {
+                    const isNaturalTwenty = die.die === 20 && die.result === 20 && die.valid !== false;
+                    const isNaturalOne = die.die === 20 && die.result === 1 && die.valid !== false;
+                    return (
+                      <span
+                        key={`${selectedRoll.id}-${index}`}
+                        title={die.valid === false ? "Dropped from the final total" : `d${die.die}`}
+                        className={cn(
+                          "inline-flex items-center gap-1 rounded border px-1.5 py-0.5 font-mono",
+                          die.valid === false && "opacity-35 line-through border-white/10 bg-white/[0.02]",
+                          isNaturalTwenty && "border-amber-400/60 bg-amber-400/15 text-amber-200",
+                          isNaturalOne && "border-red-400/60 bg-red-400/15 text-red-200",
+                          !isNaturalTwenty && !isNaturalOne && die.valid !== false && "border-white/10 bg-white/[0.04] text-white/75"
+                        )}
+                      >
+                        <strong className="text-[11px]">{die.result}</strong>
+                        <span className="text-[7px] text-current/55">d{die.die}</span>
+                      </span>
+                    );
+                  }) : (
+                    <span className="text-[9px] font-mono text-white/45">No individual dice recorded</span>
+                  )}
                 </div>
-              </motion.div>
+
+                {selectedRoll.modifier !== 0 && (
+                  <span className="text-[9px] font-mono text-white/55">
+                    {selectedRoll.modifier > 0 ? '+' : ''}{selectedRoll.modifier} modifier
+                  </span>
+                )}
+
+                <span className="text-sm font-black tabular-nums text-white">= {selectedRoll.total}</span>
+
+                {selectedRoll.outcome && (
+                  <span className={cn(
+                    "rounded px-2 py-0.5 text-[8px] font-black uppercase tracking-[0.12em]",
+                    selectedRoll.outcome.status === 'MISS' || selectedRoll.outcome.status === 'FAILED SAVE'
+                      ? "bg-red-500/15 text-red-300"
+                      : selectedRoll.outcome.status === 'CRITICAL HIT'
+                        ? "bg-amber-400/15 text-amber-200"
+                        : "bg-emerald-500/15 text-emerald-300"
+                  )}>
+                    {selectedRoll.outcome.status}
+                    {selectedRoll.outcome.detail ? ` · ${selectedRoll.outcome.detail}` : ''}
+                  </span>
+                )}
+              </div>
             )}
-            {!recentLogs && (
-              <div className="text-[10px] font-mono uppercase text-white/20 tracking-[0.3em]">System_Idle // No active notifications</div>
-            )}
-          </AnimatePresence>
+          </div>
+        )}
+
+        <AnimatePresence mode="wait">
+          {recentLogs ? (
+            <motion.div
+              key={recentLogs.id}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              className="flex items-center gap-3 w-full min-w-0"
+            >
+              <div className={cn(
+                "shrink-0 p-1.5 rounded bg-white/5",
+                recentLogs.type === 'error' ? 'text-red-400' :
+                recentLogs.type === 'success' ? 'text-emerald-400' :
+                recentLogs.type === 'warning' ? 'text-amber-400' : 'text-cyan-400'
+              )}>
+                {recentLogs.type === 'error' ? <GameIcon name="shield_alert" size={14} /> :
+                 recentLogs.type === 'success' ? <GameIcon name="magic_effect" size={14} /> :
+                 recentLogs.type === 'warning' ? <GameIcon name="bell" size={14} /> : <GameIcon name="info" size={14} />}
+              </div>
+              <div className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-white/75 font-medium leading-tight min-w-0">
+                <DiceText>{recentLogs.message}</DiceText>
+              </div>
+            </motion.div>
+          ) : !selectedRoll ? (
+            <div className="text-[9px] font-mono uppercase text-white/20 tracking-[0.25em]">System_Idle // No active notifications</div>
+          ) : null}
+        </AnimatePresence>
       </div>
 
       {/* Subtle Atmospheric Scanning Line */}
