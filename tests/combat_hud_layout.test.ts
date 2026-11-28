@@ -160,7 +160,7 @@ describe('Combat HUD layout contract (#420)', () => {
   it('uses the visible weapon d20 result as the only hit-resolution roll', () => {
     const source = readSource('src/store/useGameStore.ts');
     const start = source.indexOf('// 1. Roll to Hit');
-    const end = source.indexOf('// Apply conditions', start);
+    const end = source.indexOf('if (isHit) {', start);
     const attackResolution = source.slice(start, end);
 
     expect(start).toBeGreaterThan(-1);
