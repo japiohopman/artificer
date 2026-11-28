@@ -187,7 +187,7 @@ interface GameState {
   startTurnForIndex: (targetIndex: number) => void;
   nextTurn: () => void;
   startCombat: () => Promise<void>;
-  resolveCombatAction: (actor: any, target: any, action: any, turnContext?: { executionVersion: number; turnIndex: number; actorId: string }) => Promise<boolean>;
+  resolveCombatAction: (actor: any, target: any, action: any, turnContext?: { executionVersion: number; turnIndex: number; actorId: string }) => Promise<boolean | void>;
   executeMonsterTurn: (monsterId: string, equipmentDataLookup?: (index: string, ruleset?: '2014' | '2024') => Promise<any>) => Promise<void>;
   setCombatMapBackground: (combatMapBackground: string | null) => void;
 }
