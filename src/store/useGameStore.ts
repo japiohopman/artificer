@@ -1137,7 +1137,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       // Use the canonical current combatant snapshot for hit/damage resolution.
       target = targetCombatant;
-      characterStore.consumeAction(actor.id, 'actions');
     }
 
     // Rotate actor to face target
@@ -1225,9 +1224,15 @@ export const useGameStore = create<GameState>((set, get) => ({
       ruleset: get().ruleset
     });
 
-    if (!hitRoll) {
+    if (!hitRoll || hitRoll.label.endsWith('(Failed)')) {
       addLog('The attack roll could not be completed. No attack result was applied.', 'error');
       return;
+    }
+
+    // Consume the action only after the canonical roll has started and completed.
+    // The synchronous isRolling3D guard prevents two attacks from resolving concurrently.
+    if (isCharacterWeaponAttack) {
+      characterStore.consumeAction(actor.id, 'actions');
     }
 
     const d20 = hitRoll.rolls.find(roll => roll.die === 20 && roll.valid !== false)?.result
@@ -1353,11 +1358,12 @@ export const useGameStore = create<GameState>((set, get) => ({
     const selectedDiceTheme = 'default';
     const selectedDiceColor = '#8b0000';
 
-    if (diceService.isRolling) {
+    if (diceService.isRolling || get().isRolling3D) {
       console.warn("[GameStore] Roll request ignored: DiceService is currently rolling.");
       return null;
     }
 
+    set({ isRolling3D: true });
     try {
       const rollContext = context || { sourceSystem: 'manual', ruleset: get().ruleset };
       const result = await diceService.roll3D(
@@ -1376,6 +1382,8 @@ export const useGameStore = create<GameState>((set, get) => ({
     } catch (error) {
       console.error("Roll failed", error);
       return null;
+    } finally {
+      set({ isRolling3D: false });
     }
   },
 
