@@ -438,7 +438,15 @@ export async function resolveSpellAction(
 
     let finalDamage = 0;
     if (damageDice) {
-      const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+      const dmgRoll = await gameStore.rollDiceBackground(damageDice, `Spell Damage (${spellAction.name})`, {
+        actionId: spellAction.id,
+        actorId: String(actor.id),
+        actorName,
+        targetId: target?.id ? String(target.id) : undefined,
+        targetName,
+        sourceSystem: 'spell-damage',
+        ruleset: characterRuleset
+      });
       finalDamage = dmgRoll.total;
       if (passedSave) {
         finalDamage = spellData.dc.dc_success === 'half' ? Math.floor(finalDamage / 2) : 0;
@@ -494,7 +502,15 @@ export async function resolveSpellAction(
       return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
     }
 
-    const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+    const dmgRoll = await gameStore.rollDiceBackground(damageDice, `Spell Damage (${spellAction.name})`, {
+        actionId: spellAction.id,
+        actorId: String(actor.id),
+        actorName,
+        targetId: target?.id ? String(target.id) : undefined,
+        targetName,
+        sourceSystem: 'spell-damage',
+        ruleset: characterRuleset
+      });
     const damageTotal = dmgRoll.total;
 
     if (target) {
