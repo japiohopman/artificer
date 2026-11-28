@@ -3,6 +3,7 @@ import { useUIStore } from './useUIStore';
 import { useCharacterStore } from './useCharacterStore';
 import * as combatUtils from '../components/combat/combatUtils';
 import { soundService } from '../services/soundService';
+import type { DiceResult, DiceRollContext, DiceRollOutcome } from '../dice_roller/diceResolver';
 
 export interface RpsState {
   status: 'ritual' | 'result';
@@ -122,7 +123,7 @@ interface GameState {
   // Dice History
   isDiceReady: boolean;
   isRolling3D: boolean;
-  recentRolls: any[];
+  recentRolls: DiceResult[];
 
   // Game flow
   isGameStarted: boolean;
@@ -152,7 +153,9 @@ interface GameState {
 
   // Dice Actions
   rollDice: (label: string, modifier: number, dieType?: number) => void;
-  rollDice3D: (notation: string, label: string, theme?: string, color?: string) => Promise<void>;
+  rollDice3D: (notation: string, label: string, theme?: string, color?: string, context?: DiceRollContext) => Promise<DiceResult | null>;
+  rollDiceBackground: (notation: string, label: string, context?: DiceRollContext, seed?: string | number) => Promise<DiceResult>;
+  updateRollOutcome: (rollId: string, outcome: DiceRollOutcome) => void;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
@@ -1020,7 +1023,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       return;
     }
 
-    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
+    const { addLog, rollDice3D, rollDiceBackground, updateRollOutcome, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
     const characterStore = useCharacterStore.getState();
     const { modifyHp } = characterStore;
 
@@ -1089,6 +1092,11 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (availableAction.current <= 0) {
         addLog("You don't have any actions remaining!", 'error');
+        return;
+      }
+
+      if (get().isRolling3D) {
+        addLog('The dice are still rolling. Finish the current roll before attacking again.', 'warning');
         return;
       }
 
@@ -1171,11 +1179,25 @@ export const useGameStore = create<GameState>((set, get) => ({
     // Play weapon attack swing sound effect
     soundService.playEffect('COMBAT_SLASH');
 
-    // We'll use a simulated 3D roll for the hit
-    await rollDice3D(toHitNotation, `Attack: ${action.name}`);
+    // The visible DiceBox result is the authoritative attack roll. Never roll a second d20 for game logic.
+    const hitRoll = await rollDice3D(toHitNotation, `Attack: ${action.name}`, undefined, undefined, {
+      actionId: String(action.id || 'weapon-attack'),
+      actorId: String(actor.id),
+      actorName: actor.name,
+      targetId: String(target.id),
+      targetName: target.name,
+      sourceSystem: 'combat',
+      ruleset: get().ruleset
+    });
 
-    const d20 = Math.floor(Math.random() * 20) + 1;
-    const totalHit = d20 + attackBonus;
+    if (!hitRoll) {
+      addLog('The attack roll could not be completed. No attack result was applied.', 'error');
+      return;
+    }
+
+    const d20 = hitRoll.rolls.find(roll => roll.die === 20 && roll.valid !== false)?.result
+      ?? Math.max(1, Math.min(20, hitRoll.total - attackBonus));
+    const totalHit = hitRoll.total;
 
     // Get target AC from Atlas-compatible data
     let targetAC = 10;
@@ -1205,7 +1227,11 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
 
     const isCrit = d20 === 20;
-    const isHit = isCrit || totalHit >= targetAC;
+    const isHit = isCrit || (d20 !== 1 && totalHit >= targetAC);
+    updateRollOutcome(hitRoll.id, {
+      status: isCrit ? 'CRITICAL HIT' : isHit ? 'HIT' : 'MISS',
+      detail: `${totalHit} vs AC ${targetAC}`
+    });
 
     if (isHit) {
       // Play weapon impact hit sound effect
@@ -1220,9 +1246,16 @@ export const useGameStore = create<GameState>((set, get) => ({
       // Double dice for crits (simplified)
       const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
 
-      // We'll use rollBackground for damage to not overlap 3D dice too much
-      const { diceService } = await import('../dice_roller/diceService');
-      const damageRoll = diceService.rollBackground(finalDice, 'Damage');
+      // Damage uses the same canonical resolver and is published to the in-game roll history.
+      const damageRoll = await rollDiceBackground(finalDice, 'Damage', {
+        actionId: String(action.id || 'weapon-attack'),
+        actorId: String(actor.id),
+        actorName: actor.name,
+        targetId: String(target.id),
+        targetName: target.name,
+        sourceSystem: 'combat-damage',
+        ruleset: get().ruleset
+      });
 
       addLog(`${target.name} takes ${damageRoll.total} ${damageType} damage.`, 'error');
 
@@ -1266,60 +1299,54 @@ export const useGameStore = create<GameState>((set, get) => ({
   clearLogs: () => set({ logs: [] }),
 
   rollDice: (label, modifier, dieType = 20) => {
-    import('../dice_roller/diceService').then(({ diceService }) => {
-      const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
-      const result = diceService.rollBackground(notation, label);
-
-      const rollDetails = result.rolls
-        .filter(r => r.valid !== false)
-        .map(r => r.result)
-        .join(' + ');
-      const modStr = result.modifier !== 0 ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}` : '';
-      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      get().addLog(`${label}: ${result.notation} ${detailStr} = ${result.total}`, 'info');
-
-      set((state) => ({ 
-        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
-      }));
-    });
+    const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
+    void get().rollDiceBackground(notation, label);
   },
 
-  rollDice3D: async (notation, label, theme, color) => {
+  rollDiceBackground: async (notation, label, context, seed) => {
+    const { diceService } = await import('../dice_roller/diceService');
+    const result = diceService.rollBackground(notation, label, { context, seed });
+    set(state => ({
+      recentRolls: [result, ...state.recentRolls].slice(0, 5)
+    }));
+    return result;
+  },
+
+  rollDice3D: async (notation, label, theme, color, context) => {
     const { diceService } = await import('../dice_roller/diceService');
     const selectedDiceTheme = 'default';
     const selectedDiceColor = '#8b0000';
-    
+
     if (diceService.isRolling) {
       console.warn("[GameStore] Roll request ignored: DiceService is currently rolling.");
-      return;
+      return null;
     }
 
     try {
-      const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
-      if (!result) return;
-      
-      // Create detailed log message
-      const rollDetails = result.rolls
-        .filter(r => r.valid !== false)
-        .map(r => r.result)
-        .join(' + ');
-      
-      const modStr = result.modifier !== 0 
-        ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}`
-        : '';
-        
-      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      const message = `${label}: ${result.notation} ${detailStr} = ${result.total}`;
-      
-      get().addLog(message, 'info');
+      const result = await diceService.roll3D(
+        notation,
+        label,
+        theme || selectedDiceTheme,
+        color || selectedDiceColor,
+        context
+      );
+      if (!result) return null;
 
-      set((state) => ({ 
-        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
+      set(state => ({
+        recentRolls: [result, ...state.recentRolls].slice(0, 5)
       }));
+      return result;
     } catch (error) {
       console.error("Roll failed", error);
+      return null;
     }
   },
+
+  updateRollOutcome: (rollId, outcome) => set(state => ({
+    recentRolls: state.recentRolls.map(roll =>
+      roll.id === rollId ? { ...roll, outcome } : roll
+    )
+  })),
 
   removeRoll: (id) => set((state) => ({
     recentRolls: state.recentRolls.filter(r => r.id !== id)
