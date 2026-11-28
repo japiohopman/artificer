@@ -73,8 +73,8 @@ export const NotificationWindow: React.FC = () => {
               <button
                 className="p-1.5 text-white/25 hover:text-white/70 transition-colors"
                 onClick={clearNotifications}
-                title="Clear System Logs"
-                aria-label="Clear system logs"
+                title="Clear Notifications"
+                aria-label="Clear notifications"
               >
                 <GameIcon name="x" size={14} />
               </button>
@@ -220,7 +220,7 @@ export const NotificationWindow: React.FC = () => {
 
           {/* Right: Actions */}
           <div className="flex items-center gap-4">
-             <button className="text-white/10 hover:text-white/40 transition-colors p-2" onClick={clearNotifications} title="Clear System Logs">
+             <button className="text-white/10 hover:text-white/40 transition-colors p-2" onClick={clearNotifications} title="Clear Notifications">
               <GameIcon name="x" size={14} />
             </button>
           </div>
