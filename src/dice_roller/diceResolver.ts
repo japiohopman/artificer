@@ -74,7 +74,7 @@ export const createSeededRandom = (seed: string | number): (() => number) => {
   };
 };
 
-const extractRolls = (parsedResult: any): DiceResult["rolls"] => {
+export const extractDiceRolls = (parsedResult: any): DiceResult["rolls"] => {
   const rolls: DiceResult["rolls"] = [];
   const visited = new WeakSet<object>();
 
@@ -140,7 +140,7 @@ export const resolveDiceNotation = (
       throw new Error("The dice parser returned an invalid result.");
     }
 
-    const rolls = extractRolls(parsedResult);
+    const rolls = extractDiceRolls(parsedResult);
     const validRollTotal = rolls
       .filter(roll => roll.valid !== false)
       .reduce((total, roll) => total + roll.result, 0);
