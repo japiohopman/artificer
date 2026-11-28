@@ -1268,6 +1268,12 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
 
     if (!isActionTurnCurrent()) {
+      if (hitRoll) {
+        updateRollOutcome(hitRoll.id, {
+          status: 'CANCELLED',
+          detail: 'The initiating turn ended before the attack was resolved.'
+        });
+      }
       addLog(`${actor.name}'s attack was cancelled because their turn ended before the roll resolved.`, 'warning');
       return false;
     }
@@ -1316,10 +1322,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     const isCrit = d20 === 20;
     const isHit = isCrit || (d20 !== 1 && totalHit >= targetAC);
-    updateRollOutcome(hitRoll.id, {
-      status: isCrit ? 'CRITICAL HIT' : isHit ? 'HIT' : 'MISS',
-      detail: `${totalHit} vs AC ${targetAC}`
-    });
 
     if (isHit) {
       // Play weapon impact hit sound effect
@@ -1346,10 +1348,22 @@ export const useGameStore = create<GameState>((set, get) => ({
       });
 
       if (!isActionTurnCurrent()) {
+        updateRollOutcome(hitRoll.id, {
+          status: 'CANCELLED',
+          detail: 'The initiating turn ended before damage was applied.'
+        });
+        updateRollOutcome(damageRoll.id, {
+          status: 'CANCELLED',
+          detail: 'The initiating turn ended before damage was applied.'
+        });
         addLog(`${actor.name}'s damage was discarded because their turn ended during resolution.`, 'warning');
         return false;
       }
 
+      updateRollOutcome(hitRoll.id, {
+        status: isCrit ? 'CRITICAL HIT' : 'HIT',
+        detail: `${totalHit} vs AC ${targetAC}`
+      });
       addLog(`${target.name} takes ${damageRoll.total} ${damageType} damage.`, 'error');
 
       // 3. Update HP
@@ -1374,6 +1388,10 @@ export const useGameStore = create<GameState>((set, get) => ({
         }
       }
     } else {
+      updateRollOutcome(hitRoll.id, {
+        status: 'MISS',
+        detail: `${totalHit} vs AC ${targetAC}`
+      });
       addLog(`MISS! (${totalHit} vs AC ${targetAC})`, 'warning');
     }
 
