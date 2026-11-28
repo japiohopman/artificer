@@ -156,6 +156,7 @@ interface GameState {
   rollDice3D: (notation: string, label: string, theme?: string, color?: string, context?: DiceRollContext) => Promise<DiceResult | null>;
   rollDiceBackground: (notation: string, label: string, context?: DiceRollContext, seed?: string | number) => Promise<DiceResult>;
   updateRollOutcome: (rollId: string, outcome: DiceRollOutcome) => void;
+  applyRollModifier: (rollId: string, modifier: number) => DiceResult | null;
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
@@ -1392,6 +1393,26 @@ export const useGameStore = create<GameState>((set, get) => ({
       roll.id === rollId ? { ...roll, outcome } : roll
     )
   })),
+
+  applyRollModifier: (rollId, modifier) => {
+    if (!Number.isFinite(modifier) || modifier === 0) {
+      return get().recentRolls.find(roll => roll.id === rollId) || null;
+    }
+
+    let updatedRoll: DiceResult | null = null;
+    set(state => ({
+      recentRolls: state.recentRolls.map(roll => {
+        if (roll.id !== rollId) return roll;
+        updatedRoll = {
+          ...roll,
+          total: roll.total + modifier,
+          modifier: roll.modifier + modifier
+        };
+        return updatedRoll;
+      })
+    }));
+    return updatedRoll;
+  },
 
   removeRoll: (id) => set((state) => ({
     recentRolls: state.recentRolls.filter(r => r.id !== id)
