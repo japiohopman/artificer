@@ -164,7 +164,7 @@ describe('Combat HUD layout contract (#420)', () => {
     const attackResolution = source.slice(start, end);
 
     expect(start).toBeGreaterThan(-1);
-    expect(attackResolution).toContain('const hitRoll = await rollDice3D');
+    expect(attackResolution).toContain('let hitRoll = await rollDice3D');
     expect(attackResolution).toContain('const totalHit = hitRoll.total');
     expect(attackResolution).not.toContain('Math.random');
     expect(attackResolution).toContain('updateRollOutcome(hitRoll.id');
