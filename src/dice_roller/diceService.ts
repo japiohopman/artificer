@@ -2,6 +2,7 @@ import DiceBox from "@3d-dice/dice-box";
 import DiceParserInterface from "@3d-dice/dice-parser-interface";
 import {
   resolveDiceNotation,
+  extractDiceRolls,
   type DiceResult,
   type DiceRollContext,
   type DiceResolveOptions
@@ -218,42 +219,8 @@ class DiceService {
     }
   }
 
-  private extractRolls(parsedResult: any): any[] {
-    const rolls: any[] = [];
-    const walk = (node: any) => {
-      if (!node) return;
-      
-      // If it's a die node, it contains the individual rolls
-      if (node.type === "die" && node.rolls) {
-        const sides = node.sides?.value ?? node.sides ?? 20;
-        node.rolls.forEach((r: any) => {
-          rolls.push({ die: sides, result: r.value, valid: r.valid !== false });
-        });
-      } 
-      // Some versions of the parser might have 'roll' nodes directly
-      else if (node.type === "roll") {
-        rolls.push({ die: node.die ?? 20, result: node.value, valid: node.valid !== false });
-      }
-      // Recursive cases for expressions/groups
-      if (node.ops) {
-        if (Array.isArray(node.ops)) {
-            node.ops.forEach(walk);
-        } else {
-            walk(node.ops);
-        }
-      }
-      if (node.left) walk(node.left);
-      if (node.right) walk(node.right);
-      if (node.head) walk(node.head);
-      if (node.tails && Array.isArray(node.tails)) {
-        node.tails.forEach((t: any) => {
-            if (Array.isArray(t) && t[1]) walk(t[1]);
-            else walk(t);
-        });
-      }
-    };
-    walk(parsedResult);
-    return rolls;
+  private extractRolls(parsedResult: any): DiceResult["rolls"] {
+    return extractDiceRolls(parsedResult);
   }
 
   rollBackground(notation: string, label = "Roll", options: DiceResolveOptions = {}): DiceResult {
