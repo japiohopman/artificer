@@ -262,7 +262,7 @@ describe('Canonical player weapon action economy (#421)', () => {
     const actor = { id: 'hero-action-test', name: 'Test Hero' };
     const target = createGoblin({ armor_class: 1 });
     const nextHero = { ...createHero(), id: 'next-hero-action-test', name: 'Next Hero' };
-    let releaseRoll: ((result: any) => void) | null = null;
+    let releaseRoll!: (result: any) => void;
 
     useCharacterStore.setState({
       characters: [createHero(), nextHero],
@@ -288,7 +288,7 @@ describe('Canonical player weapon action economy (#421)', () => {
 
     // Advance before DiceBox settles. The previous turn generation is now invalid.
     useGameStore.getState().nextTurn();
-    releaseRoll?.({
+    releaseRoll({
       id: 'late-attack-roll',
       notation: '1d20',
       total: 15,
