@@ -308,9 +308,11 @@ export const NotificationWindow: React.FC = () => {
                     "rounded px-2 py-0.5 text-[8px] font-black uppercase tracking-[0.12em]",
                     selectedRoll.outcome.status === 'MISS' || selectedRoll.outcome.status === 'FAILED SAVE'
                       ? "bg-red-500/15 text-red-300"
-                      : selectedRoll.outcome.status === 'CRITICAL HIT'
-                        ? "bg-amber-400/15 text-amber-200"
-                        : "bg-emerald-500/15 text-emerald-300"
+                      : selectedRoll.outcome.status === 'CANCELLED'
+                        ? "bg-white/10 text-white/45"
+                        : selectedRoll.outcome.status === 'CRITICAL HIT'
+                          ? "bg-amber-400/15 text-amber-200"
+                          : "bg-emerald-500/15 text-emerald-300"
                   )}>
                     {selectedRoll.outcome.status}
                     {selectedRoll.outcome.detail ? ` · ${selectedRoll.outcome.detail}` : ''}
